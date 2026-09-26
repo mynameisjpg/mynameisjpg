@@ -26,7 +26,7 @@
   font-size: 0.65rem;
   color: var(--text-muted);
   letter-spacing: 0.1em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,6 +37,183 @@
 }
 
 .grid-header-kicker .filter-status {
+  color: var(--accent-coral);
+}
+
+/* ==============================================================================
+   COMPONENT: MATRIX CONTROLS BAR (FILTER & SORTING TOOLBAR)
+   ============================================================================== */
+.matrix-controls-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  margin-bottom: 1.8rem;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.matrix-controls-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.btn-matrix-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-body);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all var(--transition-fast);
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+.btn-matrix-pill:hover,
+.btn-matrix-pill.active {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: var(--accent-coral);
+  color: var(--text-bright);
+}
+
+.btn-matrix-pill .pill-label {
+  color: var(--text-muted);
+  font-weight: var(--weight-medium);
+}
+
+.btn-matrix-pill .pill-value {
+  color: var(--text-bright);
+  font-weight: var(--weight-semibold);
+}
+
+.btn-matrix-pill .pill-arrow {
+  font-size: 0.55rem;
+  color: var(--accent-coral);
+  transition: transform 0.2s ease;
+}
+
+.btn-matrix-pill[aria-expanded="true"] .pill-arrow {
+  transform: rotate(180deg);
+}
+
+/* Custom Dropdown Styling */
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 100;
+  background: #121212;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(232, 74, 95, 0.2);
+  min-width: 170px;
+  display: none;
+  flex-direction: column;
+  padding: 0.35rem;
+  gap: 0.2rem;
+  animation: dropdownFade 0.15s ease-out;
+}
+
+@keyframes dropdownFade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.custom-select-dropdown.open {
+  display: flex;
+}
+
+.dropdown-opt {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 0.45rem 0.75rem;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+  letter-spacing: 0.03em;
+}
+
+.dropdown-opt:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--text-bright);
+}
+
+.dropdown-opt.active {
+  background: rgba(232, 74, 95, 0.15);
+  color: var(--accent-coral);
+  font-weight: var(--weight-semibold);
+}
+
+/* Quick Search Input */
+.matrix-search-box {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-faint);
+  border-radius: var(--radius-sm);
+  padding: 0.3rem 0.6rem;
+  gap: 0.4rem;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  min-width: 180px;
+}
+
+.matrix-search-box:focus-within {
+  border-color: var(--accent-coral);
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.matrix-search-box .search-icon {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.matrix-search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-bright);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  width: 100%;
+  letter-spacing: 0.02em;
+}
+
+.matrix-search-box input::placeholder {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.matrix-search-box #clear-search-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  cursor: pointer;
+  padding: 0 0.2rem;
+}
+
+.matrix-search-box #clear-search-btn:hover {
   color: var(--accent-coral);
 }
 

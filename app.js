@@ -29,6 +29,61 @@ if (typeof window !== "undefined" && window.DYNAMIC_POSTS) {
 
 let activePostId = "2026-09-25-turing-queer-ai";
 let activeFilter = "all";
+let activeSort = "recent";
+let searchQuery = "";
+
+/**
+ * Filter & Sort Helper for Dispatches
+ */
+function getFilteredAndSortedPosts() {
+  const uniquePosts = [];
+  const seen = new Set();
+
+  Object.values(POSTS_DATABASE).forEach(post => {
+    const uniqueKey = post.slug || post.id || post.sys_id;
+    if (uniqueKey && !seen.has(uniqueKey) && post.status !== "draft") {
+      seen.add(uniqueKey);
+      uniquePosts.push(post);
+    }
+  });
+
+  // Filter by Format & Search Query
+  let filtered = uniquePosts.filter(post => {
+    const format = (post.format || "ESSAY").toLowerCase();
+    if (activeFilter !== "all" && format !== activeFilter) return false;
+
+    if (searchQuery.trim() !== "") {
+      const q = searchQuery.toLowerCase().trim();
+      const matchTitle = (post.title || "").toLowerCase().includes(q);
+      const matchSubtitle = (post.subtitle || "").toLowerCase().includes(q);
+      const matchExcerpt = (post.excerpt || "").toLowerCase().includes(q);
+      const matchPillar = (post.pillar || "").toLowerCase().includes(q);
+      const matchSubtopic = (post.subtopic || "").toLowerCase().includes(q);
+      const matchCategory = (post.category || "").toLowerCase().includes(q);
+      if (!matchTitle && !matchSubtitle && !matchExcerpt && !matchPillar && !matchSubtopic && !matchCategory) {
+        return false;
+      }
+    }
+    return true;
+  });
+
+  // Sort
+  filtered.sort((a, b) => {
+    if (activeSort === "recent") {
+      return (b.date || "").localeCompare(a.date || "");
+    } else if (activeSort === "oldest") {
+      return (a.date || "").localeCompare(b.date || "");
+    } else if (activeSort === "readtime") {
+      const parseTime = (str) => parseInt((str || "").replace(/\D/g, "")) || 0;
+      return parseTime(b.read_time) - parseTime(a.read_time);
+    } else if (activeSort === "title") {
+      return (a.title || "").localeCompare(b.title || "");
+    }
+    return 0;
+  });
+
+  return filtered;
+}
 
 /**
  * Fallback Geometric Art Vectors for Card Matrix
@@ -83,22 +138,25 @@ function renderCardMatrix() {
   const container = document.getElementById("card-matrix");
   if (!container) return;
 
-  // Collect unique posts
-  const uniquePosts = [];
-  const seen = new Set();
-  
-  Object.values(POSTS_DATABASE).forEach(post => {
-    const uniqueKey = post.slug || post.id || post.sys_id;
-    if (uniqueKey && !seen.has(uniqueKey) && post.status !== "draft") {
-      seen.add(uniqueKey);
-      uniquePosts.push(post);
-    }
-  });
+  const displayPosts = getFilteredAndSortedPosts();
+
+  if (displayPosts.length === 0) {
+    container.innerHTML = `
+      <div style="grid-column: 1 / -1; padding: 3rem 1.5rem; text-align: center; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.78rem; border: 1px dashed var(--border-subtle); border-radius: var(--radius-md);">
+        [NO DISPATCHES FOUND MATCHING SELECTION]
+        <br><br>
+        <button type="button" onclick="resetMatrixFilters()" style="background: rgba(232,74,95,0.15); border: 1px solid var(--accent-coral); color: var(--text-bright); padding: 0.4rem 0.8rem; font-family: inherit; font-size: 0.72rem; cursor: pointer; border-radius: 2px;">
+          RESET FILTERS
+        </button>
+      </div>
+    `;
+    return;
+  }
 
   const ratios = ["h-tall-1", "h-tall-2", "h-med", "h-square", "h-wide", "h-tall-1"];
   const fallbackArts = ["coral", "charcoal", "eye", "circle", "charcoal", "coral"];
 
-  container.innerHTML = uniquePosts.map((post, idx) => {
+  container.innerHTML = displayPosts.map((post, idx) => {
     const key = post.slug || post.id || post.sys_id;
     const ratio = post.aspect_ratio || ratios[idx % ratios.length];
     const format = (post.format || "ESSAY").toLowerCase();
@@ -107,10 +165,8 @@ function renderCardMatrix() {
     const artKey = fallbackArts[idx % fallbackArts.length];
     const isSelected = key === activePostId || post.sys_id === activePostId;
 
-    const isVisible = activeFilter === "all" || format === activeFilter;
-
     return `
-      <article class="grid-card ${isFeatured ? 'card-featured' : ''} ${isSelected ? 'selected-active' : ''}" data-id="${key}" data-format="${format}" style="display: ${isVisible ? 'flex' : 'none'};" tabindex="0" role="button" aria-pressed="${isSelected}">
+      <article class="grid-card ${isFeatured ? 'card-featured' : ''} ${isSelected ? 'selected-active' : ''}" data-id="${key}" data-format="${format}" tabindex="0" role="button" aria-pressed="${isSelected}">
         <div class="card-art-box ${ratio}">
           <span class="card-type-chip ${isEssay ? 'chip-essay' : ''}">[${post.format}]</span>
           ${isFeatured ? `<span class="card-featured-badge">★ FEATURED</span>` : ''}
@@ -142,6 +198,21 @@ function renderCardMatrix() {
       }
     });
   });
+}
+
+function resetMatrixFilters() {
+  activeFilter = "all";
+  activeSort = "recent";
+  searchQuery = "";
+
+  const searchInput = document.getElementById("matrix-search-input");
+  const clearBtn = document.getElementById("clear-search-btn");
+  if (searchInput) searchInput.value = "";
+  if (clearBtn) clearBtn.style.display = "none";
+
+  applyCategoryFilter("all");
+  updateSortSelection("recent", "MOST RECENT");
+  renderCardMatrix();
 }
 
 /**
@@ -417,7 +488,7 @@ document.addEventListener("DOMContentLoaded", () => {
   navLinks.forEach(link => {
     link.addEventListener("click", () => {
       const filter = link.getAttribute("data-filter") || "all";
-      
+
       // Toggle active filter off if clicked again
       if (link.classList.contains("active")) {
         applyCategoryFilter("all");
@@ -426,7 +497,116 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Filter Pill Button & Dropdown
+  const filterBtn = document.getElementById("filter-pill-btn");
+  const filterDropdown = document.getElementById("filter-dropdown");
+
+  if (filterBtn && filterDropdown) {
+    filterBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = filterDropdown.classList.contains("open");
+      closeAllControlDropdowns();
+      if (!isOpen) {
+        filterDropdown.classList.add("open");
+        filterBtn.setAttribute("aria-expanded", "true");
+        filterBtn.classList.add("active");
+      }
+    });
+
+    filterDropdown.querySelectorAll(".dropdown-opt").forEach(opt => {
+      opt.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const selectedFilter = opt.getAttribute("data-filter") || "all";
+        applyCategoryFilter(selectedFilter);
+        closeAllControlDropdowns();
+      });
+    });
+  }
+
+  // Sort Pill Button & Dropdown
+  const sortBtn = document.getElementById("sort-pill-btn");
+  const sortDropdown = document.getElementById("sort-dropdown");
+
+  if (sortBtn && sortDropdown) {
+    sortBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = sortDropdown.classList.contains("open");
+      closeAllControlDropdowns();
+      if (!isOpen) {
+        sortDropdown.classList.add("open");
+        sortBtn.setAttribute("aria-expanded", "true");
+        sortBtn.classList.add("active");
+      }
+    });
+
+    sortDropdown.querySelectorAll(".dropdown-opt").forEach(opt => {
+      opt.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const selectedSort = opt.getAttribute("data-sort") || "recent";
+        const labelText = opt.textContent.replace(/^\[|\]$/g, '');
+        updateSortSelection(selectedSort, labelText);
+        closeAllControlDropdowns();
+      });
+    });
+  }
+
+  // Quick Search Input Handler
+  const searchInput = document.getElementById("matrix-search-input");
+  const clearSearchBtn = document.getElementById("clear-search-btn");
+
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      searchQuery = e.target.value;
+      if (clearSearchBtn) {
+        clearSearchBtn.style.display = searchQuery.trim() !== "" ? "inline-block" : "none";
+      }
+      renderCardMatrix();
+    });
+  }
+
+  if (clearSearchBtn) {
+    clearSearchBtn.addEventListener("click", () => {
+      if (searchInput) searchInput.value = "";
+      searchQuery = "";
+      clearSearchBtn.style.display = "none";
+      renderCardMatrix();
+    });
+  }
+
+  // Close dropdowns on outside click
+  document.addEventListener("click", () => {
+    closeAllControlDropdowns();
+  });
 });
+
+function closeAllControlDropdowns() {
+  document.querySelectorAll(".custom-select-dropdown").forEach(d => d.classList.remove("open"));
+  document.querySelectorAll(".btn-matrix-pill").forEach(b => {
+    b.setAttribute("aria-expanded", "false");
+    b.classList.remove("active");
+  });
+}
+
+function updateSortSelection(sortKey, sortLabel) {
+  activeSort = sortKey;
+  const sortValLabel = document.getElementById("current-sort-val");
+  const sortDropdown = document.getElementById("sort-dropdown");
+
+  if (sortValLabel) {
+    sortValLabel.textContent = sortLabel;
+  }
+  if (sortDropdown) {
+    sortDropdown.querySelectorAll(".dropdown-opt").forEach(o => {
+      if (o.getAttribute("data-sort") === sortKey) {
+        o.classList.add("active");
+      } else {
+        o.classList.remove("active");
+      }
+    });
+  }
+  renderCardMatrix();
+}
 
 /**
  * Filter Cards by Format
@@ -435,6 +615,8 @@ function applyCategoryFilter(filter) {
   activeFilter = filter;
   const navLinks = document.querySelectorAll("#category-filter-nav .nav-link-item");
   const filterLabel = document.getElementById("active-filter-label");
+  const filterValLabel = document.getElementById("current-filter-val");
+  const filterDropdown = document.getElementById("filter-dropdown");
 
   navLinks.forEach(l => {
     const lFilter = l.getAttribute("data-filter");
@@ -445,19 +627,32 @@ function applyCategoryFilter(filter) {
     }
   });
 
+  if (filterValLabel) {
+    const labels = {
+      all: "ALL POSTS",
+      essay: "ESSAYS",
+      note: "NOTES",
+      bookmark: "BOOKMARKS",
+      resource: "RESOURCES"
+    };
+    filterValLabel.textContent = labels[filter] || filter.toUpperCase();
+  }
+
+  if (filterDropdown) {
+    filterDropdown.querySelectorAll(".dropdown-opt").forEach(opt => {
+      if (opt.getAttribute("data-filter") === filter) {
+        opt.classList.add("active");
+      } else {
+        opt.classList.remove("active");
+      }
+    });
+  }
+
   if (filterLabel) {
     filterLabel.textContent = `[MODE: ${filter.toUpperCase()}_DISPATCHES]`;
   }
 
-  const cards = document.querySelectorAll(".grid-card");
-  cards.forEach(card => {
-    const format = card.getAttribute("data-format");
-    if (filter === "all" || format === filter) {
-      card.style.display = "flex";
-    } else {
-      card.style.display = "none";
-    }
-  });
+  renderCardMatrix();
 }
 
 /**
