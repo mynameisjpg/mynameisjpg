@@ -1,54 +1,49 @@
 /* ==============================================================================
-   UNTITLED.JPG — ARCHIVE COMPONENT STYLESHEET (ITERATION 5 - CENTERED TIMELINE)
-   Supports 50-50 Split Layout:
-   - Offset by 48px sidebar rail without horizontal scroll overflow
-   - Left 50%: Centered Timeline Axis with 120px height thumbnails and inline metadata
-   - Right 50%: Clean empty panel container for future node map integration
+   UNTITLED.JPG — ARCHIVE COMPONENT STYLESHEET (ITERATION 6 - CENTERED VIEWPORT)
+   - Offset by 48px sidebar rail
+   - Single centered timeline container with max-width: 680px
+   - Zero horizontal overflow
    ============================================================================== */
 
-/* Main Archive Shell Layout: Use width: calc(100% - 48px) to prevent horizontal scroll */
-.archive-split-shell {
+/* Main Archive Shell Layout */
+.archive-shell {
   margin-left: var(--sidebar-width, 48px);
   width: calc(100% - var(--sidebar-width, 48px));
   height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  overflow: hidden;
-  background-color: var(--neutral-bg, #121212);
-  flex: 1;
-}
-
-/* ==============================================================================
-   LEFT COLUMN: TIMELINE STRATIGRAPHY AXIS
-   ============================================================================== */
-.timeline-column {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100%;
-  border-right: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
-  background-color: var(--neutral-bg, #121212);
-  overflow: hidden;
   align-items: center;
+  overflow: hidden;
+  background-color: var(--neutral-bg, #121212);
+  position: relative;
 }
 
+/* Centered Timeline Wrapper (Max-width 680px) */
+.timeline-container {
+  width: 100%;
+  max-width: 680px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border-left: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.06));
+  border-right: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.06));
+  background-color: var(--neutral-bg, #121212);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Timeline Header Group */
 .timeline-header-group {
-  padding: 0.85rem 1.5rem;
+  padding: 1.25rem 1.5rem 1rem 1.5rem;
   border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
   background-color: var(--neutral-surface, #161616);
-  z-index: 10;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.timeline-header-content {
-  max-width: 540px;
-  margin: 0 auto;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.75rem;
+  z-index: 10;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .timeline-header-top {
@@ -86,7 +81,7 @@
   background-color: var(--neutral-bg, #121212);
   border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.12));
   border-radius: var(--rounded-sm, 1px);
-  padding: 0.35rem 0.6rem;
+  padding: 0.4rem 0.75rem;
 }
 
 .timeline-search-box input {
@@ -103,36 +98,34 @@
   color: var(--text-faint, #555555);
 }
 
+/* Timeline Scroll Container */
 .timeline-scroll-container {
   flex: 1;
   overflow-y: auto;
-  padding: 1.25rem 1.5rem 3rem 1.5rem;
+  padding: 1.5rem 1.5rem 4rem 1.5rem;
   position: relative;
   scroll-behavior: smooth;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Vertical Timeline Spine Line & List - Centered strictly inside 50% left column */
-.timeline-list {
-  position: relative;
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 540px;
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Vertical Line Axis - Positioned cleanly between Date (Left) and Node */
+/* Timeline List */
+.timeline-list {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Vertical Spine Line */
 .timeline-list::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 62px; /* 54px date + 9px center of 18px node col */
+  left: 73px; /* 64px date + 10px center of 20px node col - 1px */
   width: 2px;
   background: linear-gradient(
     180deg,
@@ -143,19 +136,14 @@
   z-index: 1;
 }
 
-/* Individual Timeline Row Grid Layout:
-   Column 1: 54px Date
-   Column 2: 18px Node Dot & Spine
-   Column 3: 84px Thumbnail
-   Column 4: 1fr Text Payload (with min-width: 0 to prevent overflow)
-*/
+/* Timeline Item Row */
 .timeline-item {
   position: relative;
   display: grid;
-  grid-template-columns: 54px 18px 84px 1fr;
-  gap: 0.65rem;
+  grid-template-columns: 64px 20px 84px 1fr;
+  gap: 0.75rem;
   align-items: flex-start;
-  padding: 1.25rem 0;
+  padding: 1.35rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   transition: background-color 0.2s ease;
   min-width: 0;
@@ -167,12 +155,7 @@
   background-color: rgba(255, 255, 255, 0.015);
 }
 
-.timeline-item.active-highlight {
-  background-color: rgba(232, 74, 95, 0.04);
-  border-bottom-color: rgba(232, 74, 95, 0.2);
-}
-
-/* Left Date Label */
+/* Left Date Column */
 .timeline-date-col {
   text-align: right;
   padding-right: 0.2rem;
@@ -181,7 +164,7 @@
 
 .timeline-date-day {
   font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   font-weight: 500;
   color: var(--text-bright, #F5F5F5);
   line-height: 1.2;
@@ -189,12 +172,12 @@
 
 .timeline-date-year {
   font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.56rem;
+  font-size: 0.58rem;
   color: var(--text-muted, #888888);
   letter-spacing: 0.05em;
 }
 
-/* Center Node Dot on Spine */
+/* Center Node Dot */
 .timeline-node-col {
   display: flex;
   justify-content: center;
@@ -212,8 +195,7 @@
   transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.timeline-item:hover .timeline-node,
-.timeline-item.active-highlight .timeline-node {
+.timeline-item:hover .timeline-node {
   background-color: var(--primary, #E84A5F);
   transform: scale(1.35);
   box-shadow: 0 0 8px rgba(232, 74, 95, 0.6);
@@ -253,19 +235,19 @@
   filter: contrast(115%) grayscale(0%);
 }
 
-/* Right Content Payload - min-width: 0 prevents grid item blowout */
+/* Content Payload Column */
 .timeline-content-col {
-  padding-left: 0.2rem;
-  padding-right: 0.2rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
   min-width: 0;
   overflow: hidden;
 }
 
-/* Top Metadata Above Title: No chip boxes, text truncated cleanly with ellipsis */
+/* Top Metadata Above Title */
 .timeline-meta-top-text {
   font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.56rem;
-  letter-spacing: 0.06em;
+  font-size: 0.58rem;
+  letter-spacing: 0.07em;
   color: var(--text-muted, #888888);
   white-space: nowrap;
   overflow: hidden;
@@ -294,11 +276,11 @@
 
 .timeline-title {
   font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.92rem;
+  font-size: 0.98rem;
   font-weight: 400;
   color: var(--text-bright, #F5F5F5);
   line-height: 1.35;
-  margin: 0 0 0.4rem 0;
+  margin: 0 0 0.45rem 0;
   text-decoration: none;
   display: block;
   transition: color 0.15s ease;
@@ -312,11 +294,11 @@
 
 .timeline-excerpt {
   font-family: var(--font-serif, 'Platypi', Georgia, serif);
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 300;
   color: var(--text-body, #D4D4D4);
-  line-height: 1.5;
-  margin: 0 0 0.65rem 0;
+  line-height: 1.55;
+  margin: 0 0 0.75rem 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -324,14 +306,14 @@
   word-break: break-word;
 }
 
-/* Bottom Metadata: Ordered by Read Dispatch Button, Reading Time, Author */
+/* Bottom Metadata */
 .timeline-meta-bottom {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.45rem 0.6rem;
+  gap: 0.55rem 0.75rem;
   font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.6rem;
+  font-size: 0.62rem;
   color: var(--text-muted, #888888);
   letter-spacing: 0.05em;
   min-width: 0;
@@ -351,24 +333,23 @@
   font-weight: 400;
 }
 
-/* Read Dispatch Button: Prominent matching share button & chip scale */
 .timeline-read-btn {
   font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.62rem;
+  font-size: 0.64rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--primary, #E84A5F);
   text-decoration: none;
   background: rgba(232, 74, 95, 0.12);
   border: 1px solid var(--accent-coral-border, rgba(232, 74, 95, 0.35));
-  padding: 0.3rem 0.65rem;
+  padding: 0.35rem 0.75rem;
   border-radius: var(--rounded-sm, 2px);
   transition: all 0.15s ease;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 26px;
+  height: 28px;
   box-sizing: border-box;
 }
 
@@ -378,44 +359,15 @@
   border-color: var(--primary, #E84A5F);
 }
 
-
-/* ==============================================================================
-   RIGHT COLUMN: CLEAN EMPTY PANEL (RESERVED FOR FUTURE USE)
-   ============================================================================== */
-.archive-right-panel {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100%;
-  background-color: var(--neutral-bg, #121212);
-  color: var(--text-muted, #888888);
-  overflow: hidden;
-  position: relative;
-}
-
-.empty-panel-container {
-  flex: 1;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.012) 0%, transparent 70%);
-}
-
-/* Responsive Stacking for Mobile/Tablet */
-@media (max-width: 980px) {
-  .archive-split-shell {
-    grid-template-columns: 1fr;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .archive-shell {
     margin-left: 0;
     width: 100vw;
-    height: auto;
-    overflow-y: auto;
   }
-  .timeline-column,
-  .archive-right-panel {
-    height: auto;
-    min-height: 100vh;
+  .timeline-container {
+    max-width: 100%;
+    border-left: none;
+    border-right: none;
   }
 }
-
