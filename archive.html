@@ -83,48 +83,25 @@
       </div>
     </section>
 
-    <!-- RIGHT 50%: CALENDAR DENSITY MATRIX & INTERACTIVE PREVIEW -->
-    <section class="calendar-column" aria-label="Calendar Density Matrix">
-      <div class="calendar-header-group">
-        <div class="calendar-header-top">
-          <span class="calendar-legend">SYS_LOG // CALENDAR_DENSITY_MATRIX</span>
-          <button type="button" id="clear-date-filter-btn" class="timeline-read-btn" style="display: none;">[ CLEAR DATE FILTER ]</button>
+    <!-- RIGHT 50%: INTERACTIVE TAG & PILLAR NODE MAP -->
+    <section class="nodemap-column" aria-label="Interactive Taxonomy Node Map">
+      <div class="nodemap-header-group">
+        <div class="nodemap-header-top">
+          <span class="nodemap-legend">SYS_LOG // INTERACTIVE_TAXONOMY_NODE_MAP</span>
+          <button type="button" id="clear-node-filter-btn" class="timeline-read-btn" style="display: none;">[ CLEAR NODE FILTER ]</button>
         </div>
-
-        <!-- Month Navigation Bar -->
-        <div class="calendar-nav-bar">
-          <button type="button" class="calendar-nav-btn" id="calendar-prev-month">[ ← PREV ]</button>
-          <span class="calendar-current-month" id="calendar-current-month">SEPTEMBER 2026</span>
-          <button type="button" class="calendar-nav-btn" id="calendar-next-month">[ NEXT → ]</button>
-          
-          <div class="calendar-year-pills">
-            <button type="button" class="year-pill-btn active" data-year="2026">2026</button>
-            <button type="button" class="year-pill-btn" data-year="2025">2025</button>
-            <button type="button" class="year-pill-btn" data-year="ALL">ALL</button>
-          </div>
+        <div class="nodemap-subtitle">
+          <span id="nodemap-status-label">EXPLORE TAG NODES & CONCEPTUAL VECTORS</span>
         </div>
       </div>
 
-      <div class="calendar-body-padding">
-        <!-- 7-Column Day Names -->
-        <div class="calendar-days-header">
-          <div class="day-name-cell">SUN</div>
-          <div class="day-name-cell">MON</div>
-          <div class="day-name-cell">TUE</div>
-          <div class="day-name-cell">WED</div>
-          <div class="day-name-cell">THU</div>
-          <div class="day-name-cell">FRI</div>
-          <div class="day-name-cell">SAT</div>
-        </div>
-
-        <!-- 35/42 Interactive Day Grid Cells -->
-        <div class="calendar-grid-cells" id="calendar-grid-cells">
-          <!-- Rendered dynamically by js/archive.js -->
-        </div>
-
-        <!-- Fixed Height Inspection Dock (No Layout Shifting or Scrollbars) -->
-        <div class="calendar-fixed-preview-dock" id="calendar-hover-preview">
-          <!-- Dynamically populated by js/archive.js -->
+      <div class="nodemap-canvas-wrapper" id="nodemap-canvas-wrapper">
+        <canvas id="nodemap-canvas"></canvas>
+        
+        <!-- Interactive Inspection Dock at Bottom -->
+        <div class="nodemap-hover-dock" id="nodemap-hover-dock">
+          <div class="dock-node-title" id="dock-node-title">[ NODE MAP ACTIVE ]</div>
+          <div class="dock-node-desc" id="dock-node-desc">Hover over any tag or pillar node to highlight connected dispatches. Click to filter.</div>
         </div>
       </div>
     </section>
