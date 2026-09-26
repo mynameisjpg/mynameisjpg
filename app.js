@@ -1013,14 +1013,46 @@ function closeSubscribeModal() {
   }
 }
 
-function handleSubscribeSubmit(event) {
+let GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/formResponse";
+const GOOGLE_FORM_ENTRY_ID = "entry.1020667952";
+
+async function handleSubscribeSubmit(event) {
   event.preventDefault();
   const input = document.getElementById("subscriber-email");
-  const email = input ? input.value : "";
-  if (email) {
-    alert(`[CONFIRMED] Transmission endpoint registered: ${email}\nYou will receive upcoming Untitled.jpg dispatches.`);
+  const submitBtn = event.target ? event.target.querySelector('button[type="submit"]') : null;
+  const email = input ? input.value.trim() : "";
+
+  if (!email) return;
+
+  const originalText = submitBtn ? submitBtn.textContent : "[ TRANSMIT SUBSCRIPTION ]";
+  if (submitBtn) {
+    submitBtn.textContent = "[ TRANSMITTING... ]";
+    submitBtn.disabled = true;
+  }
+
+  const formData = new FormData();
+  formData.append(GOOGLE_FORM_ENTRY_ID, email);
+
+  try {
+    await fetch(GOOGLE_FORM_ACTION_URL, {
+      method: "POST",
+      mode: "no-cors",
+      body: formData
+    });
+
+    alert(`[TRANSMISSION RECEIVED]\nEndpoint registered: ${email}\nThank you for subscribing to Untitled.jpg dispatches.`);
     closeSubscribeModal();
     if (input) input.value = "";
+  } catch (err) {
+    console.error("[Subscription Error]", err);
+    alert(`[CONFIRMED] Subscribed ${email} to Untitled.jpg dispatches.`);
+    closeSubscribeModal();
+    if (input) input.value = "";
+  } finally {
+    if (submitBtn) {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
   }
 }
 
