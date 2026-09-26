@@ -56,32 +56,41 @@
   </aside>
 
   <!-- ====================================================================
-       MAIN ARCHIVE SHELL (Centered Viewport Layout, max-width 680px)
+       COMPONENT 2: SPLIT 50-50 LAYOUT (Timeline Axis & Detail Panel)
        ==================================================================== -->
-  <main class="archive-shell">
-    <div class="timeline-container">
-      <!-- HEADER GROUP -->
+  <main class="archive-split-shell">
+
+    <!-- LEFT 50%: TIMELINE STRATIGRAPHY AXIS (Centered Timeline Frame) -->
+    <section class="timeline-column" aria-label="Chronological Timeline">
       <div class="timeline-header-group">
-        <div class="timeline-header-top">
-          <span class="timeline-legend">SYS_LOG // CHRONOLOGICAL_TIMELINE_AXIS</span>
-          <span class="timeline-active-filter" id="timeline-active-filter-label">DISPATCHES: LOADING...</span>
-        </div>
-        <div class="timeline-controls-row">
-          <div class="timeline-search-box">
-            <svg class="search-icon-svg" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:0.4rem; color:var(--text-muted);">
-              <circle cx="6.5" cy="6.5" r="4.5"/>
-              <line x1="10" y1="10" x2="14" y2="14"/>
-            </svg>
-            <input type="text" id="archive-search-input" placeholder="SEARCH TIMELINE DISPATCHES..." aria-label="Search timeline dispatches" autocomplete="off" />
+        <div class="timeline-header-content">
+          <div class="timeline-header-top">
+            <span class="timeline-legend">SYS_LOG // CHRONOLOGICAL_TIMELINE_AXIS</span>
+            <span class="timeline-active-filter" id="timeline-active-filter-label">DISPATCHES: LOADING...</span>
+          </div>
+          <div class="timeline-controls-row">
+            <div class="timeline-search-box">
+              <svg class="search-icon-svg" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:0.4rem; color:var(--text-muted);">
+                <circle cx="6.5" cy="6.5" r="4.5"/>
+                <line x1="10" y1="10" x2="14" y2="14"/>
+              </svg>
+              <input type="text" id="archive-search-input" placeholder="SEARCH TIMELINE DISPATCHES..." aria-label="Search timeline dispatches" autocomplete="off" />
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- SCROLLABLE LIST CONTAINER -->
       <div class="timeline-scroll-container" id="timeline-list-container">
         <!-- Rendered dynamically by js/archive.js -->
       </div>
-    </div>
+    </section>
+
+    <!-- RIGHT 50%: EMPTY PANEL FRAME (CLEARED FOR FUTURE USE) -->
+    <section class="archive-right-panel" aria-label="Archive Detail Panel">
+      <div class="empty-panel-container">
+        <!-- Kept empty as requested -->
+      </div>
+    </section>
   </main>
 
   <!-- ====================================================================

@@ -1,55 +1,63 @@
 /* ==============================================================================
-   UNTITLED.JPG — ARCHIVE COMPONENT STYLESHEET (ITERATION 6 - CENTERED VIEWPORT)
+   UNTITLED.JPG — ARCHIVE COMPONENT STYLESHEET (ITERATION 8 - 50/50 SPLIT)
+   - Left 50%: Timeline panel with timeline frame centered inside it
+   - Right 50%: Empty panel frame
    - Offset by 48px sidebar rail
-   - Single centered timeline container with max-width: 680px
-   - Zero horizontal overflow
    ============================================================================== */
 
-/* Main Archive Shell Layout */
-.archive-shell {
+/* Main Archive Split Shell Layout */
+.archive-split-shell {
   margin-left: var(--sidebar-width, 48px);
   width: calc(100% - var(--sidebar-width, 48px));
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   overflow: hidden;
   background-color: var(--neutral-bg, #121212);
-  position: relative;
-}
-
-/* Centered Timeline Wrapper (Max-width 680px) */
-.timeline-container {
-  width: 100%;
-  max-width: 680px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  border-left: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.06));
-  border-right: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.06));
-  background-color: var(--neutral-bg, #121212);
-  overflow: hidden;
   box-sizing: border-box;
 }
 
-/* Timeline Header Group */
+/* ==============================================================================
+   LEFT 50% PANEL: TIMELINE COLUMN WITH CENTERED TIMELINE FRAME
+   ============================================================================== */
+.timeline-column {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  border-right: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  background-color: var(--neutral-bg, #121212);
+  overflow: hidden;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Header Group Spanning Top of Left Panel, Content Centered */
 .timeline-header-group {
-  padding: 1.25rem 1.5rem 1rem 1.5rem;
+  padding: 0.85rem 1.25rem;
   border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
   background-color: var(--neutral-surface, #161616);
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
   z-index: 10;
   width: 100%;
+  display: flex;
+  justify-content: center;
   box-sizing: border-box;
+}
+
+.timeline-header-content {
+  max-width: 520px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
 }
 
 .timeline-header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .timeline-legend {
@@ -58,6 +66,7 @@
   letter-spacing: 0.12em;
   color: var(--text-muted, #888888);
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .timeline-active-filter {
@@ -65,6 +74,7 @@
   font-size: 0.62rem;
   color: var(--primary, #E84A5F);
   letter-spacing: 0.08em;
+  white-space: nowrap;
 }
 
 .timeline-controls-row {
@@ -82,6 +92,7 @@
   border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.12));
   border-radius: var(--rounded-sm, 1px);
   padding: 0.4rem 0.75rem;
+  min-width: 0;
 }
 
 .timeline-search-box input {
@@ -98,23 +109,28 @@
   color: var(--text-faint, #555555);
 }
 
-/* Timeline Scroll Container */
+/* Timeline Scroll Container Centered in Left 50% Panel */
 .timeline-scroll-container {
   flex: 1;
   overflow-y: auto;
-  padding: 1.5rem 1.5rem 4rem 1.5rem;
+  overflow-x: hidden;
+  padding: 1.25rem 1rem 3rem 1rem;
   position: relative;
   scroll-behavior: smooth;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   box-sizing: border-box;
 }
 
-/* Timeline List */
+/* Timeline List Frame Centered inside Left Panel */
 .timeline-list {
   position: relative;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 520px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -125,7 +141,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 73px; /* 64px date + 10px center of 20px node col - 1px */
+  left: 60px; /* 52px date + 9px center of 18px node col - 1px */
   width: 2px;
   background: linear-gradient(
     180deg,
@@ -136,14 +152,14 @@
   z-index: 1;
 }
 
-/* Timeline Item Row */
+/* Timeline Item Row - minmax(0, 1fr) prevents overflow inside left panel */
 .timeline-item {
   position: relative;
   display: grid;
-  grid-template-columns: 64px 20px 84px 1fr;
-  gap: 0.75rem;
+  grid-template-columns: 52px 18px 84px minmax(0, 1fr);
+  gap: 0.65rem;
   align-items: flex-start;
-  padding: 1.35rem 0;
+  padding: 1.25rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   transition: background-color 0.2s ease;
   min-width: 0;
@@ -164,7 +180,7 @@
 
 .timeline-date-day {
   font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 500;
   color: var(--text-bright, #F5F5F5);
   line-height: 1.2;
@@ -172,7 +188,7 @@
 
 .timeline-date-year {
   font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.58rem;
+  font-size: 0.56rem;
   color: var(--text-muted, #888888);
   letter-spacing: 0.05em;
 }
@@ -237,8 +253,8 @@
 
 /* Content Payload Column */
 .timeline-content-col {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
   min-width: 0;
   overflow: hidden;
 }
@@ -246,8 +262,8 @@
 /* Top Metadata Above Title */
 .timeline-meta-top-text {
   font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.58rem;
-  letter-spacing: 0.07em;
+  font-size: 0.56rem;
+  letter-spacing: 0.06em;
   color: var(--text-muted, #888888);
   white-space: nowrap;
   overflow: hidden;
@@ -276,11 +292,11 @@
 
 .timeline-title {
   font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.98rem;
+  font-size: 0.92rem;
   font-weight: 400;
   color: var(--text-bright, #F5F5F5);
   line-height: 1.35;
-  margin: 0 0 0.45rem 0;
+  margin: 0 0 0.4rem 0;
   text-decoration: none;
   display: block;
   transition: color 0.15s ease;
@@ -294,11 +310,11 @@
 
 .timeline-excerpt {
   font-family: var(--font-serif, 'Platypi', Georgia, serif);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 300;
   color: var(--text-body, #D4D4D4);
-  line-height: 1.55;
-  margin: 0 0 0.75rem 0;
+  line-height: 1.5;
+  margin: 0 0 0.65rem 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -311,9 +327,9 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.55rem 0.75rem;
+  gap: 0.45rem 0.6rem;
   font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   color: var(--text-muted, #888888);
   letter-spacing: 0.05em;
   min-width: 0;
@@ -335,21 +351,21 @@
 
 .timeline-read-btn {
   font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.64rem;
+  font-size: 0.62rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--primary, #E84A5F);
   text-decoration: none;
   background: rgba(232, 74, 95, 0.12);
   border: 1px solid var(--accent-coral-border, rgba(232, 74, 95, 0.35));
-  padding: 0.35rem 0.75rem;
+  padding: 0.3rem 0.65rem;
   border-radius: var(--rounded-sm, 2px);
   transition: all 0.15s ease;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 28px;
+  height: 26px;
   box-sizing: border-box;
 }
 
@@ -359,15 +375,42 @@
   border-color: var(--primary, #E84A5F);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .archive-shell {
+/* ==============================================================================
+   RIGHT 50% PANEL: CLEAN EMPTY PANEL (RESERVED FOR FUTURE NODE MAP)
+   ============================================================================== */
+.archive-right-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--neutral-bg, #121212);
+  color: var(--text-muted, #888888);
+  overflow: hidden;
+  position: relative;
+}
+
+.empty-panel-container {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.012) 0%, transparent 70%);
+}
+
+/* Responsive Stacking for Mobile/Tablet */
+@media (max-width: 980px) {
+  .archive-split-shell {
+    grid-template-columns: 1fr;
     margin-left: 0;
     width: 100vw;
+    height: auto;
+    overflow-y: auto;
   }
-  .timeline-container {
-    max-width: 100%;
-    border-left: none;
-    border-right: none;
+  .timeline-column,
+  .archive-right-panel {
+    height: auto;
+    min-height: 100vh;
   }
 }
