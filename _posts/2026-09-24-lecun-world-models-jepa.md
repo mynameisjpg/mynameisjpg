@@ -131,14 +131,6 @@ If the probability of producing an error at step $t$ is $\epsilon$, the probabil
 
 $$P(\text{Valid Plan}) = (1 - \epsilon)^N$$
 
-```text
-COMPOUNDING DRIFT ACROSS MULTI-STEP REASONING:
-Step 1:   (0.99)Â¹   = 99.0% accuracy
-Step 10:  (0.99)Â¹â�°  = 90.4% accuracy
-Step 50:  (0.99)â�µâ�°  = 60.5% accuracy
-Step 100: (0.99)Â¹â�°â�° = 36.6% accuracy  <â”€â”€ Total logical collapse
-```
-
 Because LLMs have no internal world simulator to evaluate whether intermediate steps are physically plausible, errors accumulate monotonically. This is why LLMs can generate fluid poetry yet fail at simple spatial navigation or multi-step chess puzzles without search trees.
 
 ---
