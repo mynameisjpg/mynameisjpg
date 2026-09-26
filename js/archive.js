@@ -53,6 +53,66 @@ function ingestArchivePosts(postsArray) {
 
   renderTimelineList();
   buildNodeMapData();
+  checkUrlTagParameters();
+}
+
+function checkUrlTagParameters() {
+  const urlParams = new URLSearchParams(window.location.search);
+  let tag = urlParams.get("tag") || urlParams.get("node") || urlParams.get("topic") || urlParams.get("filter");
+
+  if (!tag && window.location.hash) {
+    const hash = window.location.hash.replace(/^#tag-?/i, "").replace(/^#/, "");
+    if (hash && hash !== "archive" && !hash.startsWith("dispatch-") && hash !== "nodemap-canvas-wrapper") {
+      tag = decodeURIComponent(hash);
+    }
+  }
+
+  if (tag) {
+    applyTagFilterDirectly(tag);
+  }
+}
+
+function applyTagFilterDirectly(tag) {
+  if (!tag) return;
+  activeTagFilter = tag.trim();
+
+  const clearNodeBtn = document.getElementById("clear-node-filter-btn");
+  const statusLabel = document.getElementById("nodemap-status-label");
+  if (clearNodeBtn) clearNodeBtn.style.display = "inline-flex";
+  if (statusLabel) statusLabel.textContent = `FILTERED BY NODE: ${activeTagFilter.toUpperCase()}`;
+
+  const tagLower = activeTagFilter.toLowerCase();
+  if (typeof threeNodes !== "undefined" && threeNodes && threeNodes.length > 0) {
+    const match = threeNodes.find(n => {
+      const d = n.data;
+      if (!d) return false;
+      const l = (d.label || "").toLowerCase().replace(/^#/, "");
+      const raw = (d.rawTag || "").toLowerCase();
+      return l === tagLower || raw === tagLower;
+    });
+    if (match) activeNodeFilter = match.data;
+  } else if (typeof nodes !== "undefined" && nodes && nodes.length > 0) {
+    const match = nodes.find(n => {
+      const l = (n.label || "").toLowerCase().replace(/^#/, "");
+      const raw = (n.rawTag || "").toLowerCase();
+      return l === tagLower || raw === tagLower;
+    });
+    if (match) activeNodeFilter = match;
+  }
+
+  renderTimelineList();
+
+  setTimeout(() => {
+    const canvasWrapper = document.getElementById("nodemap-canvas-wrapper");
+    if (canvasWrapper) {
+      canvasWrapper.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, 150);
+
+  const archiveShell = document.querySelector(".archive-split-shell");
+  if (archiveShell && window.innerWidth <= 980) {
+    archiveShell.classList.add("nodemap-active");
+  }
 }
 
 async function fetchArchivePostsJson() {
@@ -117,6 +177,22 @@ function initArchiveListeners() {
       resetNodeHighlights();
     });
   }
+
+  // Live tag link click interceptor when already on archive.html
+  document.addEventListener("click", (e) => {
+    const tagLink = e.target.closest("a[href*='archive.html?tag='], a[href*='?tag=']");
+    if (tagLink) {
+      try {
+        const url = new URL(tagLink.href, window.location.origin);
+        const tag = url.searchParams.get("tag");
+        if (tag) {
+          e.preventDefault();
+          history.pushState(null, "", tagLink.href);
+          applyTagFilterDirectly(tag);
+        }
+      } catch (err) {}
+    }
+  });
 
   // Close top navbar dropdowns when clicking outside
   document.addEventListener("click", (e) => {

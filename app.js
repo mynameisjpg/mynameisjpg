@@ -439,10 +439,10 @@ function renderPost(postId) {
     <!-- TIER 1: ABOVE TITLE ARCHIVAL BADGES -->
     <header class="post-header-meta-top">
       <span class="meta-chip chip-primary">[${post.format}]</span>
-      ${post.category ? `<a href="#cat-${post.category.toLowerCase()}" class="meta-chip meta-chip-category" onclick="event.preventDefault(); applyCategoryFilter('${post.category.toLowerCase()}')" title="Filter by category: ${post.category}">[${post.category}]</a>` : ''}
+      ${post.category ? `<a href="archive.html?tag=${encodeURIComponent(post.category)}" class="meta-chip meta-chip-category" title="Explore ${post.category} in Archive Network Map">[${post.category}]</a>` : ''}
       ${post.media ? `<span class="meta-chip meta-chip-media">[MEDIA: ${post.media}]</span>` : ''}
-      <span class="meta-chip">[${post.pillar}]</span>
-      ${post.subtopic ? `<span class="meta-chip">[${post.subtopic}]</span>` : ''}
+      ${post.pillar ? `<a href="archive.html?tag=${encodeURIComponent(post.pillar)}" class="meta-chip" title="Explore ${post.pillar} in Archive Network Map">[${post.pillar}]</a>` : ''}
+      ${post.subtopic ? `<a href="archive.html?tag=${encodeURIComponent(post.subtopic)}" class="meta-chip" title="Explore ${post.subtopic} in Archive Network Map">[${post.subtopic}]</a>` : ''}
     </header>
 
     <!-- TITLE & SUBTITLE -->
@@ -510,7 +510,7 @@ function renderPost(postId) {
         <section class="footer-block footer-tags">
           <h3 class="footer-block-title">// TAXONOMY_INDEX</h3>
           <div class="tags-group">
-            ${post.tags.map(t => `<a href="#tag-${t}" class="tag-pill">#${t}</a>`).join('')}
+            ${post.tags.map(t => `<a href="archive.html?tag=${encodeURIComponent(t)}" class="tag-pill" title="Explore #${t} in Archive Network Map">#${t}</a>`).join('')}
           </div>
         </section>
       ` : ''}
