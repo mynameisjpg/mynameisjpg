@@ -202,15 +202,17 @@
 }
 
 .matrix-search-box:focus-within {
-  border-color: var(--accent-coral);
+  border-color: var(--accent-coral) !important;
   background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 0 1px rgba(232, 74, 95, 0.4);
 }
 
 .matrix-search-box .search-icon-svg {
   width: 12px;
   height: 12px;
-  color: var(--text-muted);
-  opacity: 0.7;
+  color: var(--accent-coral) !important;
+  stroke: var(--accent-coral) !important;
+  opacity: 1 !important;
   flex-shrink: 0;
   transition: color 0.2s ease, opacity 0.2s ease;
 }

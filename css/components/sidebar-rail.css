@@ -151,13 +151,14 @@
 .top-inline-search-box:focus-within {
   border-color: var(--accent-coral, #E84A5F);
   background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 1px rgba(232, 74, 95, 0.4);
 }
 
 .top-inline-search-box .search-icon-svg {
   width: 14px;
   height: 14px;
   fill: none;
-  stroke: var(--text-muted, #888888);
+  stroke: var(--accent-coral, #E84A5F);
   stroke-width: 2;
   flex-shrink: 0;
 }
@@ -312,6 +313,12 @@
   padding: 0.5rem 0.75rem;
   border-radius: 2px;
   outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.top-dropdown-panel input:focus {
+  border-color: var(--accent-coral, #E84A5F);
+  box-shadow: 0 0 0 1px rgba(232, 74, 95, 0.4);
 }
 
 .dropdown-option {
