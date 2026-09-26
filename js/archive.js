@@ -200,9 +200,9 @@ function renderTimelineList() {
           <div class="timeline-node"></div>
         </div>
 
-        <!-- Column 3: Thumbnail Box (Fixed 120px Height) -->
+        <!-- Column 3: Thumbnail Box (Fixed 120px Height, Clickable Lightbox) -->
         <div class="timeline-thumb-col">
-          <div class="timeline-thumb-box">
+          <div class="timeline-thumb-box" onclick="openImageLightbox('${imageSrc}', '${post.title.replace(/'/g, "\\'")}')" title="Click to view full image">
             <img src="${imageSrc}" alt="${post.title}" class="timeline-thumb-img" onerror="this.src='assets/images/turing1.png'" />
           </div>
         </div>

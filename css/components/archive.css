@@ -236,6 +236,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  cursor: zoom-in;
 }
 
 .timeline-thumb-img {
@@ -244,6 +245,7 @@
   object-fit: cover;
   filter: contrast(105%) grayscale(15%);
   transition: transform 0.25s ease, filter 0.25s ease;
+  cursor: zoom-in;
 }
 
 .timeline-item:hover .timeline-thumb-img {
@@ -490,4 +492,91 @@
     height: auto;
     min-height: 100vh;
   }
+}
+
+/* ==============================================================================
+   FULL VIEWPORT IMAGE LIGHTBOX MODAL OVERLAY
+   ============================================================================== */
+.image-lightbox-dialog {
+  padding: 0;
+  border: none;
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.image-lightbox-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(16px);
+}
+
+.image-lightbox-content {
+  position: relative;
+  max-width: 92vw;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-lightbox-img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.image-lightbox-close-btn {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--neutral-surface, #1e1e1e);
+  color: var(--primary, #E84A5F);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 1.4rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100000;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.image-lightbox-close-btn:hover {
+  background: var(--primary, #E84A5F);
+  color: #121212;
+  transform: scale(1.1);
+}
+
+.image-lightbox-caption {
+  margin-top: 0.85rem;
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.72rem;
+  color: var(--text-body, #D4D4D4);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 90vw;
 }

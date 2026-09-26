@@ -131,6 +131,17 @@
     </div>
   </dialog>
 
+  <!-- ====================================================================
+       IMAGE LIGHTBOX MODAL DIALOG
+       ==================================================================== -->
+  <dialog id="image-lightbox-modal" class="image-lightbox-dialog" aria-label="Full Resolution Image Lightbox" onclick="handleLightboxBackdropClick(event)">
+    <div class="image-lightbox-content" onclick="event.stopPropagation()">
+      <button type="button" class="image-lightbox-close-btn" onclick="closeImageLightbox()" aria-label="Close Preview">&times;</button>
+      <img id="image-lightbox-img" src="" alt="Full Resolution Preview" class="image-lightbox-img" />
+      <div id="image-lightbox-caption" class="image-lightbox-caption"></div>
+    </div>
+  </dialog>
+
   <script>
     function openSubscribeModal() {
       const modal = document.getElementById("subscribe-modal");
@@ -144,6 +155,28 @@
       e.preventDefault();
       alert("[SUBSCRIPTION CONFIRMED] Transmission endpoint registered.");
       closeSubscribeModal();
+    }
+
+    /* Lightbox Modal Helper Functions */
+    function openImageLightbox(src, captionText) {
+      const modal = document.getElementById("image-lightbox-modal");
+      const img = document.getElementById("image-lightbox-img");
+      const caption = document.getElementById("image-lightbox-caption");
+      if (modal && img) {
+        img.src = src;
+        if (caption) caption.textContent = captionText || "";
+        if (modal.showModal) modal.showModal();
+      }
+    }
+    function closeImageLightbox() {
+      const modal = document.getElementById("image-lightbox-modal");
+      if (modal) modal.close();
+    }
+    function handleLightboxBackdropClick(e) {
+      const modal = document.getElementById("image-lightbox-modal");
+      if (e.target === modal) {
+        closeImageLightbox();
+      }
     }
   </script>
 
