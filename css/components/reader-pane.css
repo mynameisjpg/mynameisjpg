@@ -177,8 +177,24 @@
   margin: 0 !important;
 }
 
-.math-inline .katex {
-  font-size: 1.05em;
+.post-body-content p code.math-inline,
+.post-body-content li code.math-inline,
+.essay-body-content p code.math-inline,
+.essay-body-content li code.math-inline,
+code.math-inline {
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.15em 0.45em;
+  border-radius: 2px;
+  color: var(--accent-coral);
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+code.math-inline .katex {
+  font-size: 0.98em;
+  color: inherit;
 }
 
 /* ==============================================================================

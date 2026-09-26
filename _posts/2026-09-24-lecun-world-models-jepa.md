@@ -87,7 +87,7 @@ Why? Because language is merely a tiny, compressed, lossy projection of physical
 
 ## 02. The Sensory Bandwidth Paradox
 
-The fundamental limitation of LLMs is not computeâ€”it is **information bandwidth**:
+The fundamental limitation of LLMs is not compute, it is **information bandwidth**:
 
 ```mermaid
 flowchart TD
