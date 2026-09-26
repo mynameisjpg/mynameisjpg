@@ -498,6 +498,7 @@
    FULL VIEWPORT IMAGE LIGHTBOX MODAL OVERLAY
    ============================================================================== */
 .image-lightbox-dialog {
+  display: none;
   padding: 0;
   border: none;
   background: rgba(10, 10, 10, 0.92);
@@ -512,10 +513,13 @@
   top: 0;
   left: 0;
   z-index: 99999;
+  box-sizing: border-box;
+}
+
+.image-lightbox-dialog[open] {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
 }
 
 .image-lightbox-dialog::backdrop {
