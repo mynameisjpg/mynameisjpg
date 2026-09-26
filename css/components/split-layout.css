@@ -144,7 +144,7 @@
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(232, 74, 95, 0.2);
-  min-width: 170px;
+  min-width: 160px;
   display: none;
   flex-direction: column;
   padding: 0.35rem;

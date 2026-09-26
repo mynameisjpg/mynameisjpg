@@ -457,31 +457,20 @@
 }
 
 /* ==============================================================================
-   LIGHT MODE OVERRIDES (.theme-light)
+   LIGHT MODE OVERRIDES (.post-column.theme-light, .essay-column.theme-light)
    ============================================================================== */
 .post-column.theme-light,
-.essay-column.theme-light,
-.theme-light {
-  background-color: var(--bg-light-mode) !important;
-  color: #1F2937 !important;
+.essay-column.theme-light {
+  background-color: var(--bg-light-mode);
+  color: var(--text-light-body);
 }
 
-/* 1. Light Mode Headings (#111827 Deep Charcoal) */
-.theme-light .post-title,
-.theme-light .essay-title,
+/* 1. Light Mode Headings (#121212 Deep Charcoal) */
 .post-column.theme-light .post-title,
 .essay-column.theme-light .essay-title {
-  color: #111827 !important;
+  color: var(--text-light-h);
 }
 
-.theme-light .post-section-kicker,
-.theme-light .post-subheading,
-.theme-light .essay-section-kicker,
-.theme-light .essay-subheading,
-.theme-light h1,
-.theme-light h2,
-.theme-light h3,
-.theme-light h4,
 .post-column.theme-light .post-section-kicker,
 .post-column.theme-light .post-subheading,
 .post-column.theme-light h1,
@@ -494,102 +483,79 @@
 .essay-column.theme-light h2,
 .essay-column.theme-light h3,
 .essay-column.theme-light h4 {
-  color: #111827 !important;
+  color: var(--text-light-h);
 }
 
-.theme-light .post-subtitle,
-.theme-light .essay-subtitle,
 .post-column.theme-light .post-subtitle,
 .essay-column.theme-light .essay-subtitle {
-  color: var(--accent-coral) !important;
+  color: var(--accent-coral);
 }
 
-/* 2. Light Mode Body Text & Lists (High Contrast Slate #1F2937) */
-.theme-light .post-paragraph,
-.theme-light .post-list,
-.theme-light .essay-paragraph,
-.theme-light .essay-list,
-.theme-light p,
-.theme-light li,
+/* 2. Light Mode Body Text (Platypi 400/500 Weight & Rich Dark Contrast) */
 .post-column.theme-light .post-paragraph,
 .post-column.theme-light .post-list,
 .essay-column.theme-light .essay-paragraph,
 .essay-column.theme-light .essay-list {
-  color: #1F2937 !important;
+  color: var(--text-light-body);
   font-weight: var(--weight-regular);
 }
 
-.theme-light strong,
-.theme-light b,
 .post-column.theme-light .post-paragraph strong,
 .post-column.theme-light .post-list li strong,
 .essay-column.theme-light .essay-paragraph strong,
 .essay-column.theme-light .essay-list li strong {
-  color: #111827 !important;
+  color: var(--text-light-h);
   font-weight: var(--weight-semibold);
 }
 
-.theme-light .post-quote,
-.theme-light .essay-quote,
-.theme-light blockquote,
 .post-column.theme-light .post-quote,
 .essay-column.theme-light .essay-quote {
-  color: #111827 !important;
-  border-left-color: var(--accent-coral) !important;
+  color: var(--text-light-h);
+  border-left-color: var(--accent-coral);
 }
 
-.theme-light .post-divider,
-.theme-light .essay-divider,
-.theme-light hr,
 .post-column.theme-light .post-divider,
 .essay-column.theme-light .essay-divider {
-  border-top-color: rgba(0, 0, 0, 0.15) !important;
+  border-top-color: var(--border-light);
 }
 
-.theme-light pre,
 .post-column.theme-light .post-body-content pre,
 .essay-column.theme-light .essay-body-content pre {
-  background: #E4ECF0 !important;
-  border-color: rgba(0, 0, 0, 0.15) !important;
+  background: #E4ECF0;
+  border-color: var(--border-light);
 }
 
-.theme-light pre code,
 .post-column.theme-light .post-body-content pre code,
 .essay-column.theme-light .essay-body-content pre code {
-  color: #111827 !important;
+  color: #121212;
 }
 
-.theme-light p code,
-.theme-light li code,
 .post-column.theme-light .post-body-content p code,
 .post-column.theme-light .post-body-content li code,
 .essay-column.theme-light .essay-body-content p code,
 .essay-column.theme-light .essay-body-content li code {
-  background: rgba(0, 0, 0, 0.07) !important;
-  color: #B22234 !important;
+  background: rgba(0, 0, 0, 0.06);
+  color: #B22234;
 }
 
-.theme-light .math-block,
 .post-column.theme-light .math-block,
 .essay-column.theme-light .math-block {
-  background: rgba(0, 0, 0, 0.04) !important;
-  border-left-color: var(--accent-coral) !important;
-  color: #111827 !important;
+  background: rgba(0, 0, 0, 0.04);
+  border-left-color: var(--accent-coral);
+  color: var(--text-light-h);
 }
 
-.theme-light table th,
 .post-column.theme-light .post-table th,
 .essay-column.theme-light .essay-table th {
-  background: rgba(0, 0, 0, 0.05) !important;
-  color: #111827 !important;
-  border-color: rgba(0, 0, 0, 0.12) !important;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-light-h);
+  border-color: var(--border-light);
 }
 
-.theme-light table td,
 .post-column.theme-light .post-table td,
 .essay-column.theme-light .essay-table td {
-  border-color: rgba(0, 0, 0, 0.12) !important;
-  color: #1F2937 !important;
+  border-color: var(--border-light);
+  color: var(--text-light-body);
 }
 
 /* Responsive adjustments */
