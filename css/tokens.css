@@ -28,10 +28,14 @@
 
   /* 2. Light Theme Tokens (Per-Post Mode Adaptation) */
   --bg-light-mode: #DEE6E9;
-  --text-light-mode-title: #1B2427;
-  --text-light-mode-body: #2D3748;
-  --text-light-mode-muted: #64748B;
-  --border-light-mode: rgba(0, 0, 0, 0.1);
+  --bg-light-card: #D4DFE3;
+  --bg-light-card-hover: #C5D3DA;
+  --text-light-h: #1B2427;
+  --text-light-body: #2D3748;
+  --text-light-muted: #4A5568;
+  --text-light-secondary: #4A5568;
+  --border-light: rgba(0, 0, 0, 0.12);
+  --border-light-subtle: rgba(0, 0, 0, 0.08);
 
   /* 3. Typography Tokens */
   --font-mono: 'Azeret Mono', monospace;

@@ -345,53 +345,78 @@
 /* ==============================================================================
    LIGHT THEME OVERRIDES FOR 3-TIER METADATA (.essay-column.theme-light)
    ============================================================================== */
+/* ==============================================================================
+   LIGHT THEME OVERRIDES FOR 3-TIER METADATA (.theme-light)
+   ============================================================================== */
+.theme-light .meta-chip,
+.post-column.theme-light .meta-chip,
 .essay-column.theme-light .meta-chip {
   color: var(--text-light-muted);
   background: rgba(0, 0, 0, 0.06);
   border-color: var(--border-light-subtle);
 }
 
+.theme-light .meta-chip.chip-primary,
+.post-column.theme-light .meta-chip.chip-primary,
 .essay-column.theme-light .meta-chip.chip-primary {
   color: var(--accent-coral);
   background: var(--accent-coral-subtle);
   border-color: var(--accent-coral-border);
 }
 
+.theme-light .post-header-meta-bottom,
+.post-column.theme-light .post-header-meta-bottom,
 .essay-column.theme-light .post-header-meta-bottom {
   color: var(--text-light-muted);
   border-bottom-color: var(--border-light);
 }
 
+.theme-light .post-header-meta-bottom .meta-sep,
+.post-column.theme-light .post-header-meta-bottom .meta-sep,
 .essay-column.theme-light .post-header-meta-bottom .meta-sep {
   color: var(--text-light-muted);
 }
 
+.theme-light .post-header-meta-bottom .meta-author,
+.post-column.theme-light .post-header-meta-bottom .meta-author,
 .essay-column.theme-light .post-header-meta-bottom .meta-author {
   color: var(--text-light-h);
 }
 
+.theme-light .post-header-meta-bottom .meta-readtime,
+.post-column.theme-light .post-header-meta-bottom .meta-readtime,
 .essay-column.theme-light .post-header-meta-bottom .meta-readtime {
   color: var(--accent-coral);
 }
 
+.theme-light .post-header-meta-bottom code,
+.post-column.theme-light .post-header-meta-bottom code,
 .essay-column.theme-light .post-header-meta-bottom code {
   color: var(--text-light-muted);
 }
 
+.theme-light .post-footer-section,
+.post-column.theme-light .post-footer-section,
 .essay-column.theme-light .post-footer-section {
   border-top-color: var(--border-light);
 }
 
 /* 3. Light Mode Referenced Resources Labels & Captions */
+.theme-light .resource-card,
+.post-column.theme-light .resource-card,
 .essay-column.theme-light .resource-card {
   background: var(--bg-light-card);
   border-color: var(--border-light);
 }
 
+.theme-light .resource-card:hover,
+.post-column.theme-light .resource-card:hover,
 .essay-column.theme-light .resource-card:hover {
   background: var(--bg-light-card-hover);
 }
 
+.theme-light .resource-card .meta-chip,
+.post-column.theme-light .resource-card .meta-chip,
 .essay-column.theme-light .resource-card .meta-chip {
   color: var(--accent-coral);
   background: var(--accent-coral-subtle);
@@ -399,32 +424,46 @@
   font-weight: var(--weight-semibold);
 }
 
+.theme-light .resource-card a,
+.post-column.theme-light .resource-card a,
 .essay-column.theme-light .resource-card a {
   color: var(--text-light-h);
   font-weight: var(--weight-semibold);
 }
 
+.theme-light .resource-card a:hover,
+.post-column.theme-light .resource-card a:hover,
 .essay-column.theme-light .resource-card a:hover {
   color: var(--accent-coral);
 }
 
+.theme-light .resource-card p,
+.post-column.theme-light .resource-card p,
 .essay-column.theme-light .resource-card p {
   color: var(--text-light-secondary);
   font-weight: var(--weight-regular);
 }
 
+.theme-light .backlinks-list,
+.post-column.theme-light .backlinks-list,
 .essay-column.theme-light .backlinks-list {
   color: var(--text-light-secondary);
 }
 
+.theme-light .backlinks-list a,
+.post-column.theme-light .backlinks-list a,
 .essay-column.theme-light .backlinks-list a {
   color: var(--accent-coral);
 }
 
+.theme-light .backlinks-list em,
+.post-column.theme-light .backlinks-list em,
 .essay-column.theme-light .backlinks-list em {
   color: var(--text-light-muted);
 }
 
+.theme-light .tag-pill,
+.post-column.theme-light .tag-pill,
 .essay-column.theme-light .tag-pill {
   color: var(--text-light-h);
   background: rgba(0, 0, 0, 0.06);
@@ -432,17 +471,23 @@
   font-weight: var(--weight-medium);
 }
 
+.theme-light .tag-pill:hover,
+.post-column.theme-light .tag-pill:hover,
 .essay-column.theme-light .tag-pill:hover {
   color: var(--accent-coral);
   border-color: var(--accent-coral);
   background: var(--accent-coral-subtle);
 }
 
+.theme-light .share-caption,
+.post-column.theme-light .share-caption,
 .essay-column.theme-light .share-caption {
   color: var(--text-light-h);
   font-weight: var(--weight-semibold);
 }
 
+.theme-light .btn-share,
+.post-column.theme-light .btn-share,
 .essay-column.theme-light .btn-share {
   color: var(--text-light-h);
   border-color: var(--border-light);
@@ -450,12 +495,16 @@
   font-weight: var(--weight-medium);
 }
 
+.theme-light .btn-share:hover,
+.post-column.theme-light .btn-share:hover,
 .essay-column.theme-light .btn-share:hover {
   color: var(--accent-coral);
   border-color: var(--accent-coral);
   background: var(--accent-coral-subtle);
 }
 
+.theme-light .post-signoff,
+.post-column.theme-light .post-signoff,
 .essay-column.theme-light .post-signoff {
   color: var(--text-light-muted);
 }
