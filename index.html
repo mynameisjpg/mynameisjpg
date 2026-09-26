@@ -278,11 +278,22 @@
         </article>
 
       </div>
+
+      <!-- Animated Swipe Indicator Button (Mobile / Narrow Screens) -->
+      <button type="button" class="swipe-indicator-btn" id="swipe-to-reader-btn" onclick="showReaderPaneMobile()" aria-label="Open Reader View">
+        <span class="swipe-text">[ SWIPE / CLICK FOR READ PANE ]</span>
+        <span class="swipe-arrow">➔</span>
+      </button>
     </section>
 
     <!-- COMPONENT 4: ESSAY READER PANE & 3-TIER METADATA (50% Column)
          Files: css/components/reader-pane.css, css/components/metadata-tiers.css -->
     <article class="post-column essay-column" id="essay-reading-pane" data-component="reader-pane" aria-label="Post Reader View">
+      <!-- Return to Grid Feed Button (Mobile / Narrow Screens) -->
+      <button type="button" class="btn-return-grid" onclick="showGridFeedMobile()" aria-label="Return to Grid Feed">
+        <span class="return-arrow">◄</span>
+        <span class="return-text">[ RETURN TO GRID FEED ]</span>
+      </button>
       <!-- Hydrated dynamically by app.js -->
     </article>
 

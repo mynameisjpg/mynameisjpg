@@ -336,6 +336,57 @@ function resetPage() {
 }
 
 /**
+ * Mobile Sliding Viewport Functions (< 980px Width or Short Height)
+ */
+function showReaderPaneMobile() {
+  const splitLayout = document.querySelector(".split-layout");
+  if (splitLayout) {
+    splitLayout.classList.add("mobile-reader-active");
+  }
+}
+
+function showGridFeedMobile() {
+  const splitLayout = document.querySelector(".split-layout");
+  if (splitLayout) {
+    splitLayout.classList.remove("mobile-reader-active");
+  }
+}
+
+// Touch swipe gesture listeners
+let touchStartX = 0;
+let touchStartY = 0;
+
+document.addEventListener("touchstart", (e) => {
+  if (e.touches && e.touches.length > 0) {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }
+}, { passive: true });
+
+document.addEventListener("touchend", (e) => {
+  if (e.changedTouches && e.changedTouches.length > 0) {
+    const touchEndX = e.changedTouches[0].clientX;
+    const touchEndY = e.changedTouches[0].clientY;
+    const diffX = touchEndX - touchStartX;
+    const diffY = touchEndY - touchStartY;
+
+    if (Math.abs(diffX) > 60 && Math.abs(diffX) > Math.abs(diffY) * 1.4) {
+      if (diffX < 0) {
+        showReaderPaneMobile();
+      } else {
+        showGridFeedMobile();
+      }
+    }
+  }
+}, { passive: true });
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    showGridFeedMobile();
+  }
+});
+
+/**
  * Select a Card and Render in Reader Pane
  */
 function selectAndRenderPost(postId) {
@@ -354,6 +405,10 @@ function selectAndRenderPost(postId) {
   });
 
   renderPost(postId);
+
+  if (window.innerWidth <= 980) {
+    showReaderPaneMobile();
+  }
 }
 
 /**
@@ -375,6 +430,12 @@ function renderPost(postId) {
 
   // Construct 3-Tier DOM Template
   pane.innerHTML = `
+    <!-- Mobile Return to Grid Feed Button -->
+    <button type="button" class="btn-return-grid" onclick="showGridFeedMobile()" aria-label="Return to Grid Feed">
+      <span class="return-arrow">◄</span>
+      <span class="return-text">[ RETURN TO GRID FEED ]</span>
+    </button>
+
     <!-- TIER 1: ABOVE TITLE ARCHIVAL BADGES -->
     <header class="post-header-meta-top">
       <span class="meta-chip chip-primary">[${post.format}]</span>
