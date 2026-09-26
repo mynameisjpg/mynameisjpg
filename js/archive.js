@@ -208,20 +208,37 @@ function renderTimelineList() {
     const yearFull = !isNaN(d.getTime()) ? d.getFullYear() : "----";
     const sysId = post.sys_id || "0x00";
 
+    // Image path resolution
+    let imageSrc = "assets/images/turing1.png";
+    if (post.image) {
+      if (typeof post.image === "object" && post.image.path) {
+        imageSrc = post.image.path;
+      } else if (typeof post.image === "string") {
+        imageSrc = post.image;
+      }
+    }
+
     return `
       <li class="timeline-item ${activeDateFilter && post.date.substring(0,10) === activeDateFilter ? 'active-highlight' : ''}" id="timeline-item-${post.slug}">
-        <!-- Left Date Column -->
+        <!-- Column 1: Date -->
         <div class="timeline-date-col">
           <div class="timeline-date-day">${dayNum} ${monthShort}</div>
           <div class="timeline-date-year">${yearFull}</div>
         </div>
 
-        <!-- Center Node on Spine -->
+        <!-- Column 2: Center Node on Spine -->
         <div class="timeline-node-col">
           <div class="timeline-node"></div>
         </div>
 
-        <!-- Right Content Payload Column -->
+        <!-- Column 3: Dithered Thumbnail -->
+        <div class="timeline-thumb-col">
+          <div class="timeline-thumb-box">
+            <img src="${imageSrc}" alt="${post.title}" class="timeline-thumb-img" onerror="this.src='assets/images/turing1.png'" />
+          </div>
+        </div>
+
+        <!-- Column 4: Text Content Payload -->
         <div class="timeline-content-col">
           <div class="timeline-meta-top">
             <span class="meta-chip chip-primary">[${(post.format || "ESSAY").toUpperCase()}]</span>
@@ -329,7 +346,7 @@ function renderCalendarGrid() {
     `;
   }
 
-  // Next month leading days to complete grid rows (35 or 42 cells total)
+  // Next month leading days to complete 35 cells
   const totalRendered = firstDayIndex + totalDaysInMonth;
   const remainingCells = (totalRendered <= 35 ? 35 : 42) - totalRendered;
 
@@ -343,8 +360,11 @@ function renderCalendarGrid() {
 
   gridContainer.innerHTML = cellsHtml;
 
-  // Attach Hover Listener for Preview Tooltip Box
+  // Attach Hover Listener for Fixed Bottom Dock Preview
   attachCalendarHoverEvents(postsByDay);
+
+  // Set default initial preview content if no cell is hovered
+  setInitialDockPreview();
 }
 
 function handleCalendarDayClick(dateStr, hasPosts) {
@@ -368,10 +388,47 @@ function handleCalendarDayClick(dateStr, hasPosts) {
   if (scrollCol) scrollCol.scrollTop = 0;
 }
 
+function setInitialDockPreview() {
+  const dock = document.getElementById("calendar-hover-preview");
+  if (!dock) return;
+
+  if (activeDateFilter) {
+    const matchingPosts = ARCHIVE_POSTS.filter(p => p.date.substring(0, 10) === activeDateFilter);
+    if (matchingPosts.length > 0) {
+      dock.innerHTML = `
+        <div class="dock-date-title">
+          <span>[ FILTERED DATE: ${activeDateFilter} ]</span>
+          <span>${matchingPosts.length} DISPATCH${matchingPosts.length > 1 ? 'ES' : ''}</span>
+        </div>
+        <div class="dock-post-item">
+          <a href="index.html#dispatch-${matchingPosts[0].slug}" class="dock-post-title">${matchingPosts[0].title}</a>
+          <div class="dock-post-meta">
+            <span>[${(matchingPosts[0].format || 'ESSAY').toUpperCase()}]</span> • 
+            <span>${matchingPosts[0].read_time || '8 MIN READ'}</span> • 
+            <span>${matchingPosts[0].pillar || ''}</span>
+          </div>
+        </div>
+      `;
+      return;
+    }
+  }
+
+  // Fallback default dock message
+  dock.innerHTML = `
+    <div class="dock-date-title">
+      <span>[ CALENDAR DENSITY MATRIX ]</span>
+      <span>INSPECTION DOCK</span>
+    </div>
+    <div class="dock-post-item">
+      <span class="dock-post-title" style="color:var(--text-muted); font-size:0.75rem;">Hover or click any illuminated day cell to inspect dispatch details.</span>
+    </div>
+  `;
+}
+
 function attachCalendarHoverEvents(postsByDay) {
   const cells = document.querySelectorAll(".calendar-day-cell.has-posts");
-  const previewBox = document.getElementById("calendar-hover-preview");
-  if (!previewBox) return;
+  const dock = document.getElementById("calendar-hover-preview");
+  if (!dock) return;
 
   cells.forEach(cell => {
     cell.addEventListener("mouseenter", () => {
@@ -380,24 +437,25 @@ function attachCalendarHoverEvents(postsByDay) {
       const posts = postsByDay[day] || [];
 
       if (posts.length > 0) {
-        previewBox.style.display = "flex";
-        previewBox.innerHTML = `
-          <div class="preview-date-title">
+        dock.innerHTML = `
+          <div class="dock-date-title">
             <span>[ DATE: ${dateStr} ]</span>
             <span>${posts.length} DISPATCH${posts.length > 1 ? 'ES' : ''}</span>
           </div>
-          ${posts.map(p => `
-            <div class="preview-post-item">
-              <a href="index.html#dispatch-${p.slug}" class="preview-post-title">${p.title}</a>
-              <div class="preview-post-meta">
-                <span>[${(p.format || 'ESSAY').toUpperCase()}]</span> • 
-                <span>${p.read_time || '8 MIN READ'}</span> • 
-                <span>${p.pillar || ''}</span>
-              </div>
+          <div class="dock-post-item">
+            <a href="index.html#dispatch-${posts[0].slug}" class="dock-post-title">${posts[0].title}</a>
+            <div class="dock-post-meta">
+              <span>[${(posts[0].format || 'ESSAY').toUpperCase()}]</span> • 
+              <span>${posts[0].read_time || '8 MIN READ'}</span> • 
+              <span>${posts[0].pillar || ''}</span>
             </div>
-          `).join("")}
+          </div>
         `;
       }
+    });
+
+    cell.addEventListener("mouseleave", () => {
+      setInitialDockPreview();
     });
   });
 }
