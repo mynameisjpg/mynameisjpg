@@ -18,7 +18,7 @@ tags:
   - "archeology"
   - "taxonomy"
 theme: "dark"
-featured: true
+featured: false
 reading_time: "Curated Read"
 image:
   path: "assets/images/excavatingai1.png"
