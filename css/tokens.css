@@ -33,6 +33,15 @@
   --text-light-mode-muted: #64748B;
   --border-light-mode: rgba(0, 0, 0, 0.1);
 
+  /* Light Theme Aliases */
+  --text-light-h: #111827;
+  --text-light-body: #1F2937;
+  --text-light-secondary: #374151;
+  --text-light-muted: #4B5563;
+  --text-light-faint: #6B7280;
+  --border-light: rgba(0, 0, 0, 0.12);
+  --border-light-subtle: rgba(0, 0, 0, 0.08);
+
   /* 3. Typography Tokens */
   --font-mono: 'Azeret Mono', monospace;
   --font-serif: 'Platypi', Georgia, serif;

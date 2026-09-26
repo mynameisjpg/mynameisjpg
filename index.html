@@ -65,51 +65,53 @@
          File: css/components/card-matrix.css -->
     <section class="grid-column" data-component="dispatch-matrix" aria-label="Dispatch Grid Matrix">
 
-      <header class="grid-header-kicker">
-        <span>SYS_LOG // ASYMMETRIC_DISPATCH_MATRIX</span>
-        <span class="filter-status" id="active-filter-label">[MODE: ALL_DISPATCHES]</span>
-      </header>
-
-      <!-- MATRIX CONTROLS TOOLBAR (FILTER, SORTING & SEARCH) -->
-      <div class="matrix-controls-bar" id="matrix-controls-bar">
-        <div class="matrix-controls-left">
-          <!-- FORMAT FILTER PILL DROPDOWN -->
-          <div class="custom-select-wrapper">
-            <button type="button" class="btn-matrix-pill" id="filter-pill-btn" aria-haspopup="true" aria-expanded="false" title="Filter by format">
-              <span class="pill-label">FILTER:</span>
-              <span class="pill-value" id="current-filter-val">ALL POSTS</span>
-              <span class="pill-arrow">▼</span>
-            </button>
-            <div class="custom-select-dropdown" id="filter-dropdown" role="menu">
-              <button type="button" class="dropdown-opt active" data-filter="all" role="menuitem">[ALL POSTS]</button>
-              <button type="button" class="dropdown-opt" data-filter="essay" role="menuitem">[ESSAYS]</button>
-              <button type="button" class="dropdown-opt" data-filter="note" role="menuitem">[NOTES]</button>
-              <button type="button" class="dropdown-opt" data-filter="bookmark" role="menuitem">[BOOKMARKS]</button>
-              <button type="button" class="dropdown-opt" data-filter="resource" role="menuitem">[RESOURCES]</button>
+      <!-- UNIFIED MATRIX HEADER (LEGEND & CONTROLS ALIGNED) -->
+      <div class="matrix-header-group">
+        <!-- LEFT COLUMN: TITLE & FILTER/SORT DROPDOWNS -->
+        <div class="header-col-left">
+          <div class="header-legend">SYS_LOG // ASYMMETRIC_DISPATCH_MATRIX</div>
+          <div class="controls-row-left">
+            <!-- FORMAT FILTER PILL DROPDOWN -->
+            <div class="custom-select-wrapper flex-pill">
+              <button type="button" class="btn-matrix-pill" id="filter-pill-btn" aria-haspopup="true" aria-expanded="false" title="Filter by format">
+                <span class="pill-label">FILTER:</span>
+                <span class="pill-value" id="current-filter-val">ALL POSTS</span>
+                <span class="pill-arrow">▼</span>
+              </button>
+              <div class="custom-select-dropdown" id="filter-dropdown" role="menu">
+                <button type="button" class="dropdown-opt active" data-filter="all" role="menuitem">[ALL POSTS]</button>
+                <button type="button" class="dropdown-opt" data-filter="essay" role="menuitem">[ESSAYS]</button>
+                <button type="button" class="dropdown-opt" data-filter="note" role="menuitem">[NOTES]</button>
+                <button type="button" class="dropdown-opt" data-filter="bookmark" role="menuitem">[BOOKMARKS]</button>
+                <button type="button" class="dropdown-opt" data-filter="resource" role="menuitem">[RESOURCES]</button>
+              </div>
             </div>
-          </div>
 
-          <!-- SORT ORDER PILL DROPDOWN -->
-          <div class="custom-select-wrapper">
-            <button type="button" class="btn-matrix-pill" id="sort-pill-btn" aria-haspopup="true" aria-expanded="false" title="Sort dispatches">
-              <span class="pill-label">SORT:</span>
-              <span class="pill-value" id="current-sort-val">MOST RECENT</span>
-              <span class="pill-arrow">▼</span>
-            </button>
-            <div class="custom-select-dropdown" id="sort-dropdown" role="menu">
-              <button type="button" class="dropdown-opt active" data-sort="recent" role="menuitem">[MOST RECENT]</button>
-              <button type="button" class="dropdown-opt" data-sort="oldest" role="menuitem">[OLDEST]</button>
-              <button type="button" class="dropdown-opt" data-sort="readtime" role="menuitem">[READING TIME]</button>
-              <button type="button" class="dropdown-opt" data-sort="title" role="menuitem">[TITLE A-Z]</button>
+            <!-- SORT ORDER PILL DROPDOWN -->
+            <div class="custom-select-wrapper flex-pill">
+              <button type="button" class="btn-matrix-pill" id="sort-pill-btn" aria-haspopup="true" aria-expanded="false" title="Sort dispatches">
+                <span class="pill-label">SORT:</span>
+                <span class="pill-value" id="current-sort-val">MOST RECENT</span>
+                <span class="pill-arrow">▼</span>
+              </button>
+              <div class="custom-select-dropdown" id="sort-dropdown" role="menu">
+                <button type="button" class="dropdown-opt active" data-sort="recent" role="menuitem">[MOST RECENT]</button>
+                <button type="button" class="dropdown-opt" data-sort="oldest" role="menuitem">[OLDEST]</button>
+                <button type="button" class="dropdown-opt" data-sort="readtime" role="menuitem">[READING TIME]</button>
+                <button type="button" class="dropdown-opt" data-sort="title" role="menuitem">[TITLE A-Z]</button>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- QUICK SEARCH BOX -->
-        <div class="matrix-search-box">
-          <span class="search-icon">🔍</span>
-          <input type="text" id="matrix-search-input" placeholder="SEARCH DISPATCHES..." aria-label="Search dispatches" autocomplete="off" />
-          <button type="button" id="clear-search-btn" style="display: none;" title="Clear search">✕</button>
+        <!-- RIGHT COLUMN: STATUS & MATCHING SEARCH BOX -->
+        <div class="header-col-right">
+          <div class="header-legend filter-status" id="active-filter-label">[MODE: ALL_DISPATCHES]</div>
+          <div class="matrix-search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="matrix-search-input" placeholder="SEARCH DISPATCHES..." aria-label="Search dispatches" autocomplete="off" />
+            <button type="button" id="clear-search-btn" style="display: none;" title="Clear search">✕</button>
+          </div>
         </div>
       </div>
 

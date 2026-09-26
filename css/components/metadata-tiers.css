@@ -345,40 +345,56 @@
 /* ==============================================================================
    LIGHT THEME OVERRIDES FOR 3-TIER METADATA (.essay-column.theme-light)
    ============================================================================== */
-.essay-column.theme-light .meta-chip {
+.post-column.theme-light .meta-chip,
+.essay-column.theme-light .meta-chip,
+.theme-light .meta-chip {
   color: var(--text-light-muted);
   background: rgba(0, 0, 0, 0.06);
   border-color: var(--border-light-subtle);
 }
 
-.essay-column.theme-light .meta-chip.chip-primary {
+.post-column.theme-light .meta-chip.chip-primary,
+.essay-column.theme-light .meta-chip.chip-primary,
+.theme-light .meta-chip.chip-primary {
   color: var(--accent-coral);
   background: var(--accent-coral-subtle);
   border-color: var(--accent-coral-border);
 }
 
-.essay-column.theme-light .post-header-meta-bottom {
+.post-column.theme-light .post-header-meta-bottom,
+.essay-column.theme-light .post-header-meta-bottom,
+.theme-light .post-header-meta-bottom {
   color: var(--text-light-muted);
   border-bottom-color: var(--border-light);
 }
 
-.essay-column.theme-light .post-header-meta-bottom .meta-sep {
+.post-column.theme-light .post-header-meta-bottom .meta-sep,
+.essay-column.theme-light .post-header-meta-bottom .meta-sep,
+.theme-light .post-header-meta-bottom .meta-sep {
   color: var(--text-light-muted);
 }
 
-.essay-column.theme-light .post-header-meta-bottom .meta-author {
+.post-column.theme-light .post-header-meta-bottom .meta-author,
+.essay-column.theme-light .post-header-meta-bottom .meta-author,
+.theme-light .post-header-meta-bottom .meta-author {
   color: var(--text-light-h);
 }
 
-.essay-column.theme-light .post-header-meta-bottom .meta-readtime {
+.post-column.theme-light .post-header-meta-bottom .meta-readtime,
+.essay-column.theme-light .post-header-meta-bottom .meta-readtime,
+.theme-light .post-header-meta-bottom .meta-readtime {
   color: var(--accent-coral);
 }
 
-.essay-column.theme-light .post-header-meta-bottom code {
+.post-column.theme-light .post-header-meta-bottom code,
+.essay-column.theme-light .post-header-meta-bottom code,
+.theme-light .post-header-meta-bottom code {
   color: var(--text-light-muted);
 }
 
-.essay-column.theme-light .post-footer-section {
+.post-column.theme-light .post-footer-section,
+.essay-column.theme-light .post-footer-section,
+.theme-light .post-footer-section {
   border-top-color: var(--border-light);
 }
 
