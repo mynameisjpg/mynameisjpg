@@ -29,18 +29,21 @@
   border-right: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
   background-color: var(--neutral-bg, #121212);
   overflow: hidden;
+  align-items: center;
 }
 
 .timeline-header-group {
-  padding: 0.85rem 1.25rem;
+  padding: 0.85rem 1.5rem;
   border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
   background-color: var(--neutral-surface, #161616);
   z-index: 10;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .timeline-header-content {
-  max-width: 580px;
+  max-width: 540px;
   margin: 0 auto;
   width: 100%;
   display: flex;
@@ -103,20 +106,24 @@
 .timeline-scroll-container {
   flex: 1;
   overflow-y: auto;
-  padding: 1.25rem 1.5rem 3rem 1.25rem;
+  padding: 1.25rem 1.5rem 3rem 1.5rem;
   position: relative;
   scroll-behavior: smooth;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Vertical Timeline Spine Line & List - Centered nicely inside 50% left column */
+/* Vertical Timeline Spine Line & List - Centered strictly inside 50% left column */
 .timeline-list {
   position: relative;
   list-style: none;
   padding: 0;
   margin: 0 auto;
-  max-width: 580px;
+  max-width: 540px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 /* Vertical Line Axis - Positioned cleanly between Date (Left) and Node */
@@ -125,7 +132,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 69px; /* 60px date + 9px center of 18px node col */
+  left: 62px; /* 54px date + 9px center of 18px node col */
   width: 2px;
   background: linear-gradient(
     180deg,
@@ -137,20 +144,23 @@
 }
 
 /* Individual Timeline Row Grid Layout:
-   Column 1: 60px Date
+   Column 1: 54px Date
    Column 2: 18px Node Dot & Spine
    Column 3: 84px Thumbnail
-   Column 4: 1fr Text Payload
+   Column 4: 1fr Text Payload (with min-width: 0 to prevent overflow)
 */
 .timeline-item {
   position: relative;
   display: grid;
-  grid-template-columns: 60px 18px 84px 1fr;
+  grid-template-columns: 54px 18px 84px 1fr;
   gap: 0.65rem;
   align-items: flex-start;
   padding: 1.25rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   transition: background-color 0.2s ease;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .timeline-item:hover {
@@ -243,26 +253,27 @@
   filter: contrast(115%) grayscale(0%);
 }
 
-/* Right Content Payload */
+/* Right Content Payload - min-width: 0 prevents grid item blowout */
 .timeline-content-col {
   padding-left: 0.2rem;
-  padding-right: 0.5rem;
+  padding-right: 0.2rem;
+  min-width: 0;
+  overflow: hidden;
 }
 
-/* Top Metadata Above Title: No chip boxes, just text on 1 single line */
+/* Top Metadata Above Title: No chip boxes, text truncated cleanly with ellipsis */
 .timeline-meta-top-text {
   font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.58rem;
-  letter-spacing: 0.07em;
+  font-size: 0.56rem;
+  letter-spacing: 0.06em;
   color: var(--text-muted, #888888);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 0.35rem;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+  display: block;
   text-transform: uppercase;
+  max-width: 100%;
 }
 
 .meta-format-text {
@@ -278,11 +289,12 @@
 .meta-sep-dot {
   color: var(--text-faint, #555555);
   font-size: 0.5rem;
+  margin: 0 0.2rem;
 }
 
 .timeline-title {
   font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.94rem;
+  font-size: 0.92rem;
   font-weight: 400;
   color: var(--text-bright, #F5F5F5);
   line-height: 1.35;
@@ -290,6 +302,8 @@
   text-decoration: none;
   display: block;
   transition: color 0.15s ease;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .timeline-title:hover {
@@ -307,6 +321,7 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  word-break: break-word;
 }
 
 /* Bottom Metadata: Ordered by Read Dispatch Button, Reading Time, Author */
@@ -314,11 +329,12 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.45rem 0.6rem;
   font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   color: var(--text-muted, #888888);
   letter-spacing: 0.05em;
+  min-width: 0;
 }
 
 .timeline-meta-bottom .meta-sep {
@@ -338,21 +354,21 @@
 /* Read Dispatch Button: Prominent matching share button & chip scale */
 .timeline-read-btn {
   font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.64rem;
+  font-size: 0.62rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--primary, #E84A5F);
   text-decoration: none;
   background: rgba(232, 74, 95, 0.12);
   border: 1px solid var(--accent-coral-border, rgba(232, 74, 95, 0.35));
-  padding: 0.35rem 0.75rem;
+  padding: 0.3rem 0.65rem;
   border-radius: var(--rounded-sm, 2px);
   transition: all 0.15s ease;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 28px;
+  height: 26px;
   box-sizing: border-box;
 }
 
