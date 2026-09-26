@@ -206,11 +206,18 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
-.matrix-search-box .search-icon {
-  font-size: 0.65rem;
+.matrix-search-box .search-icon-svg {
+  width: 12px;
+  height: 12px;
   color: var(--text-muted);
   opacity: 0.7;
   flex-shrink: 0;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.matrix-search-box:focus-within .search-icon-svg {
+  color: var(--accent-coral);
+  opacity: 1;
 }
 
 .matrix-search-box input {
