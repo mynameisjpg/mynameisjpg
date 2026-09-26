@@ -18,6 +18,25 @@ function ingestPostList(postsArray) {
       if (p.sys_id) POSTS_DATABASE[p.sys_id] = p;
       if (p.slug) POSTS_DATABASE[p.slug] = p;
       if (p.id) POSTS_DATABASE[p.id] = p;
+
+      // Map static/legacy card data-id aliases
+      const s = (p.slug || "").toLowerCase();
+      if (s.includes("turing")) {
+        POSTS_DATABASE["post-turing"] = p;
+        POSTS_DATABASE["turing"] = p;
+      }
+      if (s.includes("foucault")) {
+        POSTS_DATABASE["post-foucault"] = p;
+        POSTS_DATABASE["foucault"] = p;
+      }
+      if (s.includes("jepa") || s.includes("lecun")) {
+        POSTS_DATABASE["post-jepa"] = p;
+        POSTS_DATABASE["jepa"] = p;
+      }
+      if (s.includes("excavating")) {
+        POSTS_DATABASE["post-excavating"] = p;
+        POSTS_DATABASE["excavating"] = p;
+      }
     }
   });
 }
@@ -553,9 +572,28 @@ if (typeof marked !== "undefined" && marked.use) {
 /**
  * Initialize Interactive Behaviors & Category Filter Nav
  */
-document.addEventListener("DOMContentLoaded", () => {
+function initApp() {
+  if (typeof window !== "undefined" && window.DYNAMIC_POSTS) {
+    ingestPostList(window.DYNAMIC_POSTS);
+  }
+
   // Load dynamic posts & initialize UI
   loadDynamicPosts();
+
+  // Attach click handlers to any existing static cards in DOM
+  document.querySelectorAll(".grid-card").forEach(card => {
+    const handler = () => {
+      const postId = card.getAttribute("data-id");
+      selectAndRenderPost(postId);
+    };
+    card.addEventListener("click", handler);
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        handler();
+      }
+    });
+  });
 
   // Reset filter on brand logo click
   const brandLogo = document.querySelector(".brand-logo-v");
@@ -661,7 +699,14 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", () => {
     closeAllControlDropdowns();
   });
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initApp);
+} else {
+  initApp();
+}
+
 
 function closeAllControlDropdowns() {
   document.querySelectorAll(".custom-select-dropdown").forEach(d => d.classList.remove("open"));
