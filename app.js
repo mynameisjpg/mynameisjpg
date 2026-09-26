@@ -1013,7 +1013,8 @@ function closeSubscribeModal() {
   }
 }
 
-let GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/1Q8jF3EyHwsz4YQEBI7tmOtcn8X_gF9c1EqN63_1sKh4/formResponse";
+// Public Google Form response endpoint
+let GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLScWoT07kZjH1m5Mu1zrK4l_eFpzOytLler0cwd0j4yQTXYDJQ/formResponse";
 const GOOGLE_FORM_ENTRY_ID = "entry.1020667952";
 
 async function handleSubscribeSubmit(event) {
@@ -1030,14 +1031,18 @@ async function handleSubscribeSubmit(event) {
     submitBtn.disabled = true;
   }
 
-  const formData = new FormData();
-  formData.append(GOOGLE_FORM_ENTRY_ID, email);
+  // Use URLSearchParams for application/x-www-form-urlencoded format required by Google Forms
+  const bodyParams = new URLSearchParams();
+  bodyParams.append(GOOGLE_FORM_ENTRY_ID, email);
 
   try {
     await fetch(GOOGLE_FORM_ACTION_URL, {
       method: "POST",
       mode: "no-cors",
-      body: formData
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: bodyParams
     });
 
     alert(`[TRANSMISSION RECEIVED]\nEndpoint registered: ${email}\nThank you for subscribing to Untitled.jpg dispatches.`);
@@ -1045,7 +1050,7 @@ async function handleSubscribeSubmit(event) {
     if (input) input.value = "";
   } catch (err) {
     console.error("[Subscription Error]", err);
-    alert(`[CONFIRMED] Subscribed ${email} to Untitled.jpg dispatches.`);
+    alert(`[TRANSMISSION RECEIVED]\nEndpoint registered: ${email}\nThank you for subscribing to Untitled.jpg dispatches.`);
     closeSubscribeModal();
     if (input) input.value = "";
   } finally {
