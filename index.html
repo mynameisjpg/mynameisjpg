@@ -345,6 +345,10 @@
       
       <form class="modal-form" method="dialog" onsubmit="handleSubscribeSubmit(event)">
         <div class="modal-input-group">
+          <label for="subscriber-name" class="modal-input-label">IDENTITY (NAME):</label>
+          <input type="text" id="subscriber-name" class="modal-input" placeholder="Your Name / Alias" autocomplete="name">
+        </div>
+        <div class="modal-input-group">
           <label for="subscriber-email" class="modal-input-label">TRANSMISSION_ENDPOINT (EMAIL):</label>
           <input type="email" id="subscriber-email" class="modal-input" placeholder="reader@domain.xyz" required autocomplete="email">
         </div>

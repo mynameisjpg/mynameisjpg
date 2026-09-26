@@ -996,13 +996,48 @@ document.addEventListener("click", (e) => {
 /**
  * Global Newsletter Modal Dialog Handlers
  */
+function ensureSubscribeModal() {
+  let modal = document.getElementById("subscribe-modal");
+  if (!modal) {
+    modal = document.createElement("dialog");
+    modal.id = "subscribe-modal";
+    modal.className = "modal-dialog";
+    modal.setAttribute("data-component", "subscribe-modal");
+    modal.setAttribute("aria-labelledby", "modal-heading");
+    document.body.appendChild(modal);
+  }
+
+  if (!modal.querySelector("#subscriber-name")) {
+    modal.innerHTML = `
+    <div class="modal-box">
+      <div class="modal-header-tag">[ DISPATCH_SUBSCRIPTION // FREQUENCY: FORTNIGHTLY ]</div>
+      <h2 id="modal-heading" class="modal-title">Subscribe to Untitled.jpg</h2>
+      <p class="modal-description">Deep-dive essays and technical dispatches on AI perception, cognitive psychophysics, high-dimensional latent space, and media archaeology.</p>
+      
+      <form class="modal-form" method="dialog" onsubmit="handleSubscribeSubmit(event)">
+        <div class="modal-input-group">
+          <label for="subscriber-name" class="modal-input-label">IDENTITY (NAME):</label>
+          <input type="text" id="subscriber-name" class="modal-input" placeholder="Your Name / Alias" autocomplete="name">
+        </div>
+        <div class="modal-input-group">
+          <label for="subscriber-email" class="modal-input-label">TRANSMISSION_ENDPOINT (EMAIL):</label>
+          <input type="email" id="subscriber-email" class="modal-input" placeholder="reader@domain.xyz" required autocomplete="email">
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn-modal-cancel" onclick="closeSubscribeModal()">[ CANCEL ]</button>
+          <button type="submit" class="btn-modal-submit">[ TRANSMIT SUBSCRIPTION ]</button>
+        </div>
+      </form>
+    </div>
+    `;
+  }
+  return modal;
+}
+
 function openSubscribeModal() {
-  const modal = document.getElementById("subscribe-modal");
+  const modal = ensureSubscribeModal();
   if (modal && typeof modal.showModal === "function") {
     modal.showModal();
-  } else {
-    const email = prompt("[UNTITLED.JPG // DISPATCH SUBSCRIPTION]\nEnter your email to receive deep-dive dispatches:");
-    if (email) alert(`[CONFIRMED] Subscribed ${email} to Untitled.jpg dispatches.`);
   }
 }
 
@@ -1015,13 +1050,17 @@ function closeSubscribeModal() {
 
 // Public Google Form response endpoint
 let GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLScWoT07kZjH1m5Mu1zrK4l_eFpzOytLler0cwd0j4yQTXYDJQ/formResponse";
-const GOOGLE_FORM_ENTRY_ID = "entry.1020667952";
+const GOOGLE_FORM_EMAIL_ENTRY_ID = "entry.1020667952";
+let GOOGLE_FORM_NAME_ENTRY_ID = ""; // Populated when entry ID for Name question is provided
 
 async function handleSubscribeSubmit(event) {
   event.preventDefault();
-  const input = document.getElementById("subscriber-email");
+  const nameInput = document.getElementById("subscriber-name");
+  const emailInput = document.getElementById("subscriber-email");
   const submitBtn = event.target ? event.target.querySelector('button[type="submit"]') : null;
-  const email = input ? input.value.trim() : "";
+
+  const name = nameInput ? nameInput.value.trim() : "";
+  const email = emailInput ? emailInput.value.trim() : "";
 
   if (!email) return;
 
@@ -1033,7 +1072,10 @@ async function handleSubscribeSubmit(event) {
 
   // Use URLSearchParams for application/x-www-form-urlencoded format required by Google Forms
   const bodyParams = new URLSearchParams();
-  bodyParams.append(GOOGLE_FORM_ENTRY_ID, email);
+  bodyParams.append(GOOGLE_FORM_EMAIL_ENTRY_ID, email);
+  if (GOOGLE_FORM_NAME_ENTRY_ID && name) {
+    bodyParams.append(GOOGLE_FORM_NAME_ENTRY_ID, name);
+  }
 
   try {
     await fetch(GOOGLE_FORM_ACTION_URL, {
@@ -1047,12 +1089,14 @@ async function handleSubscribeSubmit(event) {
 
     alert(`[TRANSMISSION RECEIVED]\nEndpoint registered: ${email}\nThank you for subscribing to Untitled.jpg dispatches.`);
     closeSubscribeModal();
-    if (input) input.value = "";
+    if (emailInput) emailInput.value = "";
+    if (nameInput) nameInput.value = "";
   } catch (err) {
     console.error("[Subscription Error]", err);
     alert(`[TRANSMISSION RECEIVED]\nEndpoint registered: ${email}\nThank you for subscribing to Untitled.jpg dispatches.`);
     closeSubscribeModal();
-    if (input) input.value = "";
+    if (emailInput) emailInput.value = "";
+    if (nameInput) nameInput.value = "";
   } finally {
     if (submitBtn) {
       submitBtn.textContent = originalText;
