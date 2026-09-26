@@ -57,28 +57,37 @@ def parse_yaml_frontmatter(text):
         if not stripped or stripped.startswith("#"):
             continue
         
-        kv_match = re.match(r"^([a-zA-Z0-9_-]+):\s*(.*)$", line)
-        if kv_match and not line.startswith(" ") and not line.startswith("\t"):
-            key = kv_match.group(1)
-            val = kv_match.group(2).strip().strip('"\'')
+        indented_kv = re.match(r"^\s+([a-zA-Z0-9_-]+):\s*(.*)$", line)
+        top_kv = re.match(r"^([a-zA-Z0-9_-]+):\s*(.*)$", line)
+        
+        if line.startswith("  - ") or line.startswith("- "):
+            item = stripped.lstrip("- ").strip('"\'')
+            if current_key:
+                if not isinstance(metadata.get(current_key), list):
+                    metadata[current_key] = []
+                metadata[current_key].append(item)
+        elif indented_kv and current_key:
+            sub_key = indented_kv.group(1)
+            sub_val = indented_kv.group(2).strip().strip('"\'')
+            if not isinstance(metadata.get(current_key), dict):
+                metadata[current_key] = {}
+            metadata[current_key][sub_key] = sub_val
+        elif top_kv and not line.startswith(" ") and not line.startswith("\t"):
+            key = top_kv.group(1)
+            val = top_kv.group(2).strip().strip('"\'')
             current_key = key
             
             if val == "":
-                metadata[key] = []
+                metadata[key] = {}
             elif val.lower() == "true":
                 metadata[key] = True
             elif val.lower() == "false":
                 metadata[key] = False
             else:
                 metadata[key] = val
-        elif line.startswith("  - ") or line.startswith("- "):
-            item = stripped.lstrip("- ").strip('"\'')
-            if current_key:
-                if not isinstance(metadata.get(current_key), list):
-                    metadata[current_key] = []
-                metadata[current_key].append(item)
     
     return metadata, body_text
+
 
 def format_inline_markdown(text):
     """Transforms inline Markdown: bold, italic, code, math, links."""

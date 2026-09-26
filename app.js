@@ -27,9 +27,15 @@ if (typeof window !== "undefined" && window.DYNAMIC_POSTS) {
   ingestPostList(window.DYNAMIC_POSTS);
 }
 
+let activePostId = "";
+let activeFilter = "all";
+let activeSort = "recent";
+let searchQuery = "";
+
 let matrixVisibleCount = 9;
 const MATRIX_BATCH_SIZE = 9;
 let matrixObserver = null;
+
 
 /**
  * Filter & Sort Helper for Dispatches
