@@ -208,6 +208,69 @@
   stroke: var(--accent-coral, #E84A5F);
 }
 
+/* ==============================================================================
+   SUBSCRIBE ICON PHONE RING & VIBRATION ANIMATION (3 Bursts over 4.5s)
+   ============================================================================== */
+@keyframes subscribePhoneRing {
+  /* Burst 1: 0.0s - 0.7s */
+  0% { transform: scale(1) rotate(0deg); }
+  2.5% { transform: scale(1.28) rotate(-22deg); }
+  5.0% { transform: scale(1.28) rotate(22deg); }
+  7.5% { transform: scale(1.28) rotate(-18deg); }
+  10.0% { transform: scale(1.28) rotate(18deg); }
+  12.5% { transform: scale(1.28) rotate(-12deg); }
+  14.0% { transform: scale(1.28) rotate(12deg); }
+  15.5% { transform: scale(1) rotate(0deg); }
+
+  /* Pause 1 */
+  33.3% { transform: scale(1) rotate(0deg); }
+
+  /* Burst 2: 1.5s - 2.2s */
+  35.8% { transform: scale(1.28) rotate(-22deg); }
+  38.3% { transform: scale(1.28) rotate(22deg); }
+  40.8% { transform: scale(1.28) rotate(-18deg); }
+  43.3% { transform: scale(1.28) rotate(18deg); }
+  45.8% { transform: scale(1.28) rotate(-12deg); }
+  47.3% { transform: scale(1.28) rotate(12deg); }
+  48.8% { transform: scale(1) rotate(0deg); }
+
+  /* Pause 2 */
+  66.6% { transform: scale(1) rotate(0deg); }
+
+  /* Burst 3: 3.0s - 3.7s */
+  69.1% { transform: scale(1.28) rotate(-22deg); }
+  71.6% { transform: scale(1.28) rotate(22deg); }
+  74.1% { transform: scale(1.28) rotate(-18deg); }
+  76.6% { transform: scale(1.28) rotate(18deg); }
+  79.1% { transform: scale(1.28) rotate(-12deg); }
+  80.6% { transform: scale(1.28) rotate(12deg); }
+  82.2% { transform: scale(1) rotate(0deg); }
+
+  /* Final Rest */
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+a.subscribe-ring-vibrate,
+.subscribe-ring-vibrate svg,
+#sidebar-subscribe-btn.subscribe-ring-vibrate svg {
+  display: inline-block !important;
+  transform-origin: center center !important;
+  transform-box: fill-box !important;
+  stroke: var(--accent-coral, #E84A5F) !important;
+  animation: subscribePhoneRing 4.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) forwards !important;
+  filter: drop-shadow(0 0 8px var(--accent-coral-glow, rgba(232, 74, 95, 0.85))) !important;
+}
+
+a.subscribe-coral-active,
+a.subscribe-coral-active svg,
+.subscribe-coral-active svg,
+#sidebar-subscribe-btn.subscribe-coral-active svg {
+  stroke: var(--accent-coral, #E84A5F) !important;
+  transition: stroke 0.3s ease;
+}
+
+
+
 /* Top Navbar SVG Action Button Group (Hidden on Desktop Tall) */
 .top-nav-controls-group {
   display: none;

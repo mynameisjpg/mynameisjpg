@@ -789,12 +789,19 @@ function initApp() {
   document.addEventListener("click", () => {
     closeAllControlDropdowns();
   });
+
+  // Start 6s post-load subscribe icon callout animation
+  initSubscribeAnimation();
 }
 
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initApp);
+  document.addEventListener("DOMContentLoaded", () => {
+    initApp();
+    initSubscribeAnimation();
+  });
 } else {
   initApp();
+  initSubscribeAnimation();
 }
 
 
@@ -1035,10 +1042,51 @@ function ensureSubscribeModal() {
 }
 
 function openSubscribeModal() {
+  const subscribeBtn = document.getElementById("sidebar-subscribe-btn") ||
+                       document.querySelector('a[aria-label="Subscribe"]');
+  if (subscribeBtn) {
+    subscribeBtn.classList.remove("subscribe-ring-vibrate");
+    subscribeBtn.classList.add("subscribe-coral-active");
+  }
   const modal = ensureSubscribeModal();
   if (modal && typeof modal.showModal === "function") {
     modal.showModal();
   }
+}
+
+let isSubscribeAnimScheduled = false;
+
+function initSubscribeAnimation() {
+  if (isSubscribeAnimScheduled) return;
+  isSubscribeAnimScheduled = true;
+
+  const DELAY_MS = 6000;
+  const ANIMATION_DURATION_MS = 4500;
+
+  setTimeout(() => {
+    const subscribeTargets = document.querySelectorAll('#sidebar-subscribe-btn, a[aria-label="Subscribe"], a[title*="Subscribe"]');
+    if (!subscribeTargets || subscribeTargets.length === 0) return;
+
+    subscribeTargets.forEach(el => {
+      el.classList.add("subscribe-ring-vibrate");
+      const svg = el.querySelector("svg");
+      if (svg) svg.classList.add("subscribe-ring-vibrate");
+    });
+
+    const onAnimationDone = () => {
+      subscribeTargets.forEach(el => {
+        el.classList.remove("subscribe-ring-vibrate");
+        el.classList.add("subscribe-coral-active");
+        const svg = el.querySelector("svg");
+        if (svg) {
+          svg.classList.remove("subscribe-ring-vibrate");
+          svg.classList.add("subscribe-coral-active");
+        }
+      });
+    };
+
+    setTimeout(onAnimationDone, ANIMATION_DURATION_MS + 100);
+  }, DELAY_MS);
 }
 
 function closeSubscribeModal() {

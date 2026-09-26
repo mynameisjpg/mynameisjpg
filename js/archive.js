@@ -31,6 +31,42 @@ function initArchiveApp() {
   fetchArchivePostsJson();
   initArchiveListeners();
   initNodeMapCanvas();
+  initSubscribeAnimation();
+}
+
+let isArchiveSubscribeAnimScheduled = false;
+
+function initSubscribeAnimation() {
+  if (isArchiveSubscribeAnimScheduled) return;
+  isArchiveSubscribeAnimScheduled = true;
+
+  const DELAY_MS = 6000;
+  const ANIMATION_DURATION_MS = 4500;
+
+  setTimeout(() => {
+    const subscribeTargets = document.querySelectorAll('#sidebar-subscribe-btn, a[aria-label="Subscribe"], a[title*="Subscribe"]');
+    if (!subscribeTargets || subscribeTargets.length === 0) return;
+
+    subscribeTargets.forEach(el => {
+      el.classList.add("subscribe-ring-vibrate");
+      const svg = el.querySelector("svg");
+      if (svg) svg.classList.add("subscribe-ring-vibrate");
+    });
+
+    const onAnimationDone = () => {
+      subscribeTargets.forEach(el => {
+        el.classList.remove("subscribe-ring-vibrate");
+        el.classList.add("subscribe-coral-active");
+        const svg = el.querySelector("svg");
+        if (svg) {
+          svg.classList.remove("subscribe-ring-vibrate");
+          svg.classList.add("subscribe-coral-active");
+        }
+      });
+    };
+
+    setTimeout(onAnimationDone, ANIMATION_DURATION_MS + 100);
+  }, DELAY_MS);
 }
 
 function ingestArchivePosts(postsArray) {
