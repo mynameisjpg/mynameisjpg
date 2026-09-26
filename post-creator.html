@@ -106,7 +106,9 @@
 
           <div class="form-group">
             <label class="form-label">SUBTOPIC / DOMAIN:</label>
-            <input type="text" id="field-subtopic" class="form-input" placeholder="e.g. Synthetic Identity & Normative Machines">
+            <select id="field-subtopic" class="form-select">
+              <!-- Populated dynamically based on chosen pillar -->
+            </select>
           </div>
 
           <!-- FORMAT SPECIFIC DYNAMIC FIELDS -->
@@ -124,6 +126,7 @@
             <label class="form-label">BOOKMARK MEDIA TYPE:</label>
             <select id="field-bookmark-media" class="form-select">
               <option value="article">article</option>
+              <option value="article">essay</option>
               <option value="book">book</option>
               <option value="video">video</option>
               <option value="movie">movie</option>

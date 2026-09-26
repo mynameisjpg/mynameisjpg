@@ -30,7 +30,7 @@
   <aside class="sidebar-rail" data-component="sidebar-rail" aria-label="Main Navigation Rail">
     <!-- Top Brand & Menu -->
     <div class="sidebar-top-section">
-      <a href="../index.html" class="brand-logo-v" title="Untitled.jpg">[ UNTITLED.JPG ]</a>
+      <a href="javascript:void(0)" class="brand-logo-v" id="brand-logo-btn" title="Untitled.jpg">[ UNTITLED.JPG ]</a>
     </div>
 
     <!-- Stacked Vertical Route Links -->
@@ -41,10 +41,13 @@
       <a href="javascript:void(0)" class="nav-link-item" data-filter="resource">_RESOURCES</a>
     </nav>
 
-    <!-- Bottom Pinned Icons: Home, Subscribe, LinkedIn -->
+    <!-- Bottom Pinned Icons: Home, Archive, Subscribe, LinkedIn -->
     <div class="sidebar-bottom-icons">
-      <a href="#" title="Home" aria-label="Home">
+      <a href="javascript:void(0)" id="sidebar-home-btn" title="Home Feed" aria-label="Home">
         <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      </a>
+      <a href="archive.html" title="Chronological Archive" aria-label="Archive">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
       </a>
       <a href="javascript:void(0)" onclick="openSubscribeModal()" title="Subscribe to Dispatches" aria-label="Subscribe">
         <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>

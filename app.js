@@ -318,6 +318,24 @@ function resetMatrixFilters() {
 }
 
 /**
+ * Full Page Reset (Brand Logo & Home Icon)
+ * Resets category filter, search query, sort order, matrix scroll, and selects top dispatch
+ */
+function resetPage() {
+  resetMatrixFilters();
+
+  const matrixCol = document.querySelector(".matrix-column");
+  if (matrixCol) matrixCol.scrollTop = 0;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
+  const posts = getFilteredAndSortedPosts();
+  if (posts.length > 0) {
+    const firstPostId = posts[0].slug || posts[0].id || posts[0].sys_id;
+    selectAndRenderPost(firstPostId);
+  }
+}
+
+/**
  * Select a Card and Render in Reader Pane
  */
 function selectAndRenderPost(postId) {
@@ -598,12 +616,20 @@ function initApp() {
     });
   });
 
-  // Reset filter on brand logo click
+  // Reset page on brand logo or home icon click
   const brandLogo = document.querySelector(".brand-logo-v");
   if (brandLogo) {
     brandLogo.addEventListener("click", (e) => {
       e.preventDefault();
-      applyCategoryFilter("all");
+      resetPage();
+    });
+  }
+
+  const homeBtn = document.getElementById("sidebar-home-btn");
+  if (homeBtn) {
+    homeBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      resetPage();
     });
   }
 

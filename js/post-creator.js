@@ -8,6 +8,70 @@ let currentFormat = "essay";
 let currentFilename = "";
 let loadedPostsList = [];
 
+const PILLAR_SUBTOPICS = {
+  "Visual Perception & Psychology of Seeing": [
+    "Anatomy and psychophysics of vision",
+    "Visual illusions and optical paradoxes",
+    "Cognitive and Visual Biases",
+    "Perceptual mechanics and Gestalt",
+    "Multi-sensory integration and cross-modal perception",
+    "Attention and trained perception"
+  ],
+  "AI Perception, Culture & Representation": [
+    "Synthetic and statistical images (\"the mean image\")",
+    "Latent spaces and AI archives",
+    "Generative technologies and prompt engineering",
+    "Computer vision vs. human perception",
+    "The political economy of synthetic media and digital labor",
+    "Societal and algorithmic biases",
+    "Synthetic Identity & Normative Machines"
+  ],
+  "Language, LLMs & Artificial Intelligence": [
+    "LLM architectures and mechanics",
+    "Human vs. machine intelligence and benchmarking",
+    "Language, meaning and symbolic grounding",
+    "Agentic systems and human agency",
+    "Conversational voice AI and speech processing",
+    "AI safety, alignment and extreme risk evaluation"
+  ],
+  "Philosophy of the Image, Tech & Visual Culture": [
+    "Modes of seeing and visual semiotics",
+    "Photography, truth and simulation",
+    "Epistemology of representation",
+    "Aesthetics as ideology and interface politics",
+    "Media ecology and psychological projection",
+    "The archival impulse and digital memory systems"
+  ]
+};
+
+function updateSubtopicsDropdown(targetSubtopic = null) {
+  const pillarSelect = document.getElementById("field-pillar");
+  const subtopicSelect = document.getElementById("field-subtopic");
+  if (!pillarSelect || !subtopicSelect) return;
+
+  const pillarVal = pillarSelect.value || "";
+  const normalizedPillarVal = pillarVal.toLowerCase().replace(/&/g, "and").trim();
+
+  const pillarKey = Object.keys(PILLAR_SUBTOPICS).find(k => 
+    k.toLowerCase().replace(/&/g, "and").trim() === normalizedPillarVal
+  ) || Object.keys(PILLAR_SUBTOPICS)[0];
+
+  const subtopics = PILLAR_SUBTOPICS[pillarKey] || [];
+  
+  subtopicSelect.innerHTML = subtopics.map(st => `<option value="${st}">${st}</option>`).join("");
+
+  if (targetSubtopic) {
+    const exists = subtopics.some(st => st.toLowerCase() === targetSubtopic.toLowerCase());
+    if (!exists && targetSubtopic.trim() !== "") {
+      const opt = document.createElement("option");
+      opt.value = targetSubtopic;
+      opt.textContent = targetSubtopic;
+      subtopicSelect.appendChild(opt);
+    }
+    subtopicSelect.value = targetSubtopic;
+  }
+}
+
 const FORMAT_TEMPLATES = {
   essay: {
     format: "essay",
@@ -106,20 +170,20 @@ Explain what this observation might mean:
     subtitle: "Editorial commentary expanding on why this bookmark is essential reading.",
     excerpt: "A concise summary of the external discovery and its core thesis.",
     media: "article",
-    source: "Stanford AI Lab / Fei-Fei Li",
-    url: "https://hai.stanford.edu/news/spatial-intelligence",
+    source: "source",
+    url: "https://",
     pillar: "Language, LLMs & Artificial Intelligence",
     subtopic: "World Models & Spatial Intelligence",
-    tags: "spatial-intelligence, curated-read, fei-fei-li, world-models",
-    reading_time: "Curated Read",
+    tags: "ai, ",
+    reading_time: "10 minutes",
     theme: "dark",
     featured: false,
     status: "published",
-    image: "assets/images/foucault1.png",
+    image: "assets/images/[image].png",
     image_alt: "Spatial intelligence conceptual artwork",
     content: `## 01. Archival Excerpt
 
-> _"Spatial intelligence is not merely the ability to generate pixels on a screen. It is the capacity of embodied organisms to infer physical geometry, anticipate dynamics, and act purposefully within 3D space."_ — Fei-Fei Li
+> _"Important Quote."_ — Author
 
 ---
 
@@ -127,16 +191,16 @@ Explain what this observation might mean:
 
 Provide your own analysis of why this external piece is significant:
 
-- **What does it challenge?** The prevailing assumption that language alone is sufficient for general intelligence.
-- **What does it introduce?** The requirement for embodied 3D causal grounding.
-- **Where does it connect?** Yann LeCun's world model framework and Gibsonian visual affordances.
+- **What does it challenge?** [Answer].
+- **What does it introduce?** [Answer].
+- **Where does it connect?** [Answer].
 
 ---
 
 ## 03. Key Takeaways
 
-1. **Pixel Generation ≠ Spatial Reasoning:** Diffusion models generate photorealistic 2D textures without understanding 3D collision boundaries.
-2. **The Embodiment Gap:** True spatial perception requires continuous feedback between sensory perception and physical action.`
+1. **Takeaway1:** One sentence.
+2. **Takeaway2:** One sentence.`
   },
 
   resource: {
@@ -145,7 +209,7 @@ Provide your own analysis of why this external piece is significant:
     subtitle: "High-level summary of what this tool, dataset, or utility accomplishes.",
     excerpt: "A direct description of the codebase, package, or download artifact.",
     category: "tool/software",
-    url: "https://github.com/username/repository-name",
+    url: "https://...",
     pillar: "Philosophy of the Image, Tech & Visual Culture",
     subtopic: "Aesthetics & Interface Politics",
     tags: "toolkit, web-graphics, dithering, canvas-api",
@@ -153,7 +217,7 @@ Provide your own analysis of why this external piece is significant:
     theme: "dark",
     featured: false,
     status: "published",
-    image: "assets/images/ailook1.png",
+    image: "assets/images/[image].png",
     image_alt: "Dithered toolkit interface graphic",
     content: `## 01. Overview & Capability
 
@@ -243,7 +307,7 @@ function loadFormatTemplate(fmt) {
 
   document.getElementById("field-author").value = "Juan P. Giusepponi";
   document.getElementById("field-pillar").value = tmpl.pillar || "AI Perception, Culture & Representation";
-  document.getElementById("field-subtopic").value = tmpl.subtopic || "";
+  updateSubtopicsDropdown(tmpl.subtopic || "");
   document.getElementById("field-tags").value = tmpl.tags || "";
   document.getElementById("field-readtime").value = tmpl.reading_time || "8 min read";
   document.getElementById("field-theme").value = tmpl.theme || "dark";
@@ -285,6 +349,14 @@ function toggleFormatSpecificFields(fmt, data = {}) {
 }
 
 function initFormListeners() {
+  const pillarSelect = document.getElementById("field-pillar");
+  if (pillarSelect) {
+    pillarSelect.addEventListener("change", () => {
+      updateSubtopicsDropdown();
+      updatePreview();
+    });
+  }
+
   const inputs = document.querySelectorAll(".form-input, .form-select, .form-textarea, #field-content");
   inputs.forEach(input => {
     input.addEventListener("input", updatePreview);
@@ -510,7 +582,9 @@ async function loadPostFromFile(filename) {
 
         if (meta.topic) {
           document.getElementById("field-pillar").value = meta.topic.pillar || "";
-          document.getElementById("field-subtopic").value = meta.topic.subtopic || "";
+          updateSubtopicsDropdown(meta.topic.subtopic || "");
+        } else {
+          updateSubtopicsDropdown();
         }
 
         document.getElementById("field-tags").value = Array.isArray(meta.tags) ? meta.tags.join(", ") : (meta.tags || "");
