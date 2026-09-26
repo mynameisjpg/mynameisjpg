@@ -90,10 +90,9 @@
 
 .btn-prominent-action .action-url-text {
   font-family: var(--font-mono);
-  font-weight: 400;
+  font-weight: 500;
   font-size: 0.62rem;
-  opacity: 0.85;
-  background: rgba(0, 0, 0, 0.15);
+  background: var(--accent-rose);
   padding: 2px 6px;
   border-radius: 2px;
   max-width: 300px;
@@ -482,7 +481,7 @@
 .theme-light .share-caption,
 .post-column.theme-light .share-caption,
 .essay-column.theme-light .share-caption {
-  color: var(--text-light-h);
+  color: var(--accent-coral);
   font-weight: var(--weight-semibold);
 }
 

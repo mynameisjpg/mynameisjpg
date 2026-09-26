@@ -523,7 +523,7 @@ function renderPost(postId) {
             <!-- Copy URL Button -->
             <button type="button" class="btn-share" onclick="copyPostUrl()" title="Copy Link to Clipboard">
               <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-              <span>[ COPY URL ]</span>
+              <span>COPY URL</span>
             </button>
 
             <!-- Embed Card Button -->
@@ -537,7 +537,7 @@ function renderPost(postId) {
             <!-- X / Twitter -->
             <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title + ' — Untitled.jpg')}&url=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on X / Twitter">
               <svg viewBox="0 0 24 24"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
-              <span>X / TWITTER ↗</span>
+              <span>X ↗</span>
             </a>
 
             <!-- LinkedIn -->
@@ -549,13 +549,13 @@ function renderPost(postId) {
             <!-- Facebook -->
             <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on Facebook">
               <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-              <span>FACEBOOK ↗</span>
+              <span>FB ↗</span>
             </a>
 
             <!-- Instagram Stories -->
             <button type="button" class="btn-share" onclick="shareInstagram('${postId}')" title="Copy for Instagram Stories">
               <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              <span>INSTAGRAM ↗</span>
+              <span>IG ↗</span>
             </button>
           </div>
         </section>
