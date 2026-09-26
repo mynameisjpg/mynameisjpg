@@ -376,27 +376,103 @@
 }
 
 /* ==============================================================================
-   RIGHT 50% PANEL: CLEAN EMPTY PANEL (RESERVED FOR FUTURE NODE MAP)
+   RIGHT 50% PANEL: INTERACTIVE TAXONOMY NODE MAP
    ============================================================================== */
-.archive-right-panel {
+.nodemap-column {
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100%;
   background-color: var(--neutral-bg, #121212);
-  color: var(--text-muted, #888888);
+  color: #FFFFFF;
   overflow: hidden;
   position: relative;
+  box-sizing: border-box;
 }
 
-.empty-panel-container {
+.nodemap-header-group {
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  background-color: var(--neutral-surface, #161616);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  z-index: 10;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.nodemap-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nodemap-legend {
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted, #888888);
+  text-transform: uppercase;
+}
+
+.nodemap-subtitle {
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.6rem;
+  color: var(--primary, #E84A5F);
+  letter-spacing: 0.08em;
+}
+
+.nodemap-canvas-wrapper {
+  position: relative;
   flex: 1;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 100%);
+}
+
+#nodemap-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.nodemap-hover-dock {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 3rem);
+  max-width: 440px;
+  background: rgba(18, 18, 18, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 3px solid var(--primary, #E84A5F);
+  border-radius: var(--rounded-sm, 2px);
+  padding: 0.75rem 1rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.012) 0%, transparent 70%);
+  flex-direction: column;
+  gap: 0.25rem;
+  z-index: 20;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  transition: all 0.2s ease;
+}
+
+.dock-node-title {
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--primary, #E84A5F);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dock-node-desc {
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.62rem;
+  color: var(--text-body, #CCCCCC);
+  line-height: 1.45;
 }
 
 /* Responsive Stacking for Mobile/Tablet */
@@ -409,7 +485,7 @@
     overflow-y: auto;
   }
   .timeline-column,
-  .archive-right-panel {
+  .nodemap-column {
     height: auto;
     min-height: 100vh;
   }

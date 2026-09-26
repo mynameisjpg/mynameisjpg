@@ -1,14 +1,23 @@
 /* ==============================================================================
    UNTITLED.JPG — CHRONOLOGICAL ARCHIVE ENGINE (js/archive.js)
    Handles:
-   - Left 50% Timeline Axis with 120px thumbnails & text metadata
-   - Right 50% Empty Panel (Cleared for future iteration)
+   - Left 50%: Compact Timeline Axis with centered 520px frame, 120px thumbnails & text metadata
+   - Right 50%: Interactive Taxonomy Node Map canvas
    ============================================================================== */
 
 let ARCHIVE_POSTS = [];
 let filteredTimelinePosts = [];
 let activeFormatFilter = "all";
+let activeTagFilter = null;
 let searchQuery = "";
+
+// Node Map Canvas State
+let canvas, ctx;
+let nodes = [];
+let connections = [];
+let hoveredNode = null;
+let activeNodeFilter = null;
+let animFrameId = null;
 
 document.addEventListener("DOMContentLoaded", () => {
   initArchiveApp();
@@ -21,6 +30,7 @@ function initArchiveApp() {
 
   fetchArchivePostsJson();
   initArchiveListeners();
+  initNodeMapCanvas();
 }
 
 function ingestArchivePosts(postsArray) {
@@ -42,6 +52,7 @@ function ingestArchivePosts(postsArray) {
   ARCHIVE_POSTS.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   renderTimelineList();
+  buildNodeMapData();
 }
 
 async function fetchArchivePostsJson() {
@@ -81,6 +92,20 @@ function initArchiveListeners() {
       renderTimelineList();
     });
   });
+
+  // Clear Node Filter button
+  const clearNodeBtn = document.getElementById("clear-node-filter-btn");
+  if (clearNodeBtn) {
+    clearNodeBtn.addEventListener("click", () => {
+      activeTagFilter = null;
+      activeNodeFilter = null;
+      clearNodeBtn.style.display = "none";
+      const statusLabel = document.getElementById("nodemap-status-label");
+      if (statusLabel) statusLabel.textContent = "EXPLORE TAG NODES & CONCEPTUAL VECTORS";
+      renderTimelineList();
+      resetNodeHighlights();
+    });
+  }
 }
 
 /**
@@ -97,7 +122,20 @@ function renderTimelineList() {
     const fmt = (post.format || "ESSAY").toLowerCase();
     if (activeFormatFilter !== "all" && fmt !== activeFormatFilter) return false;
 
-    // 2. Search query
+    // 2. Tag / Pillar Node Filter
+    if (activeTagFilter) {
+      const tagLower = activeTagFilter.toLowerCase();
+      const pillar = (post.pillar || "").toLowerCase();
+      const subtopic = (post.subtopic || "").toLowerCase();
+      const tags = (post.tags || []).map(t => t.toLowerCase());
+      
+      const matchesPillar = pillar === tagLower;
+      const matchesSubtopic = subtopic === tagLower;
+      const matchesTag = tags.includes(tagLower);
+      if (!matchesPillar && !matchesSubtopic && !matchesTag) return false;
+    }
+
+    // 3. Search query
     if (searchQuery !== "") {
       const title = (post.title || "").toLowerCase();
       const subtitle = (post.subtitle || "").toLowerCase();
@@ -114,6 +152,7 @@ function renderTimelineList() {
   // Update Status Label
   if (filterStatusLabel) {
     let label = `DISPATCHES: ${filteredTimelinePosts.length} TOTAL`;
+    if (activeTagFilter) label += ` // NODE: ${activeTagFilter.toUpperCase()}`;
     if (activeFormatFilter !== "all") label += ` // FORMAT: ${activeFormatFilter.toUpperCase()}`;
     filterStatusLabel.textContent = label;
   }
@@ -198,9 +237,315 @@ function renderTimelineList() {
 
 function clearAllFilters() {
   activeFormatFilter = "all";
+  activeTagFilter = null;
+  activeNodeFilter = null;
   searchQuery = "";
   const searchInput = document.getElementById("archive-search-input");
   if (searchInput) searchInput.value = "";
+  const clearNodeBtn = document.getElementById("clear-node-filter-btn");
+  if (clearNodeBtn) clearNodeBtn.style.display = "none";
   document.querySelectorAll("#category-filter-nav .nav-link-item").forEach(l => l.classList.remove("active"));
+  const statusLabel = document.getElementById("nodemap-status-label");
+  if (statusLabel) statusLabel.textContent = "EXPLORE TAG NODES & CONCEPTUAL VECTORS";
   renderTimelineList();
+  resetNodeHighlights();
+}
+
+/**
+ * ==============================================================================
+ * RIGHT COLUMN: INTERACTIVE TAXONOMY NODE MAP ENGINE
+ * ==============================================================================
+ */
+
+function initNodeMapCanvas() {
+  canvas = document.getElementById("nodemap-canvas");
+  const wrapper = document.getElementById("nodemap-canvas-wrapper");
+  if (!canvas || !wrapper) return;
+
+  ctx = canvas.getContext("2d");
+
+  function resizeCanvas() {
+    canvas.width = wrapper.clientWidth;
+    canvas.height = wrapper.clientHeight;
+  }
+
+  resizeCanvas();
+  window.addEventListener("resize", resizeCanvas);
+
+  // Canvas Interactions: Hover & Click
+  canvas.addEventListener("mousemove", handleCanvasMouseMove);
+  canvas.addEventListener("click", handleCanvasClick);
+  canvas.addEventListener("mouseleave", handleCanvasMouseLeave);
+
+  startNodeAnimationLoop();
+}
+
+function buildNodeMapData() {
+  if (!canvas) return;
+
+  const w = canvas.width || 500;
+  const h = canvas.height || 500;
+  const cx = w / 2;
+  const cy = h / 2;
+
+  nodes = [];
+  connections = [];
+
+  // Core Central Root Node
+  const rootNode = {
+    id: "root",
+    label: "UNTITLED.JPG",
+    type: "root",
+    x: cx,
+    y: cy,
+    vx: 0,
+    vy: 0,
+    radius: 18,
+    color: "#E84A5F",
+    postsCount: ARCHIVE_POSTS.length
+  };
+  nodes.push(rootNode);
+
+  // Extract Unique Pillars
+  const pillarMap = {};
+  ARCHIVE_POSTS.forEach(p => {
+    const pil = p.pillar || "GENERAL";
+    if (!pillarMap[pil]) pillarMap[pil] = [];
+    pillarMap[pil].push(p);
+  });
+
+  const pillarKeys = Object.keys(pillarMap);
+  const pillarCount = pillarKeys.length;
+
+  pillarKeys.forEach((pilName, idx) => {
+    const angle = (idx / pillarCount) * Math.PI * 2;
+    const distance = Math.min(w, h) * 0.26;
+    const px = cx + Math.cos(angle) * distance;
+    const py = cy + Math.sin(angle) * distance;
+
+    const pillarNode = {
+      id: `pillar_${idx}`,
+      label: pilName,
+      type: "pillar",
+      x: px,
+      y: py,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
+      radius: 12,
+      color: "#FF6579",
+      postsCount: pillarMap[pilName].length,
+      postSlugs: pillarMap[pilName].map(p => p.slug)
+    };
+    nodes.push(pillarNode);
+
+    // Connect Root to Pillar
+    connections.push({ from: rootNode, to: pillarNode, weight: 2 });
+
+    // Extract Tags for this pillar
+    const tagSet = new Set();
+    pillarMap[pilName].forEach(p => {
+      if (p.tags && Array.isArray(p.tags)) {
+        p.tags.forEach(t => tagSet.add(t));
+      }
+    });
+
+    const pillarTags = Array.from(tagSet).slice(0, 4);
+    const tagCount = pillarTags.length;
+
+    pillarTags.forEach((tag, tIdx) => {
+      const tagAngle = angle + ((tIdx - (tagCount - 1) / 2) * 0.45);
+      const tagDistance = distance + 90;
+      const tx = cx + Math.cos(tagAngle) * tagDistance;
+      const ty = cy + Math.sin(tagAngle) * tagDistance;
+
+      const tagNode = {
+        id: `tag_${idx}_${tIdx}`,
+        label: `#${tag}`,
+        rawTag: tag,
+        type: "tag",
+        x: tx,
+        y: ty,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        radius: 8,
+        color: "#38BDF8",
+        postsCount: pillarMap[pilName].filter(p => p.tags && p.tags.includes(tag)).length
+      };
+      nodes.push(tagNode);
+
+      // Connect Pillar to Tag
+      connections.push({ from: pillarNode, to: tagNode, weight: 1 });
+    });
+  });
+}
+
+function startNodeAnimationLoop() {
+  function animate() {
+    if (ctx && canvas) {
+      updatePhysics();
+      drawNodeGraph();
+    }
+    animFrameId = requestAnimationFrame(animate);
+  }
+
+  if (animFrameId) cancelAnimationFrame(animFrameId);
+  animate();
+}
+
+function updatePhysics() {
+  if (!canvas || nodes.length === 0) return;
+
+  const w = canvas.width;
+  const h = canvas.height;
+
+  nodes.forEach(n => {
+    if (n.type === "root") return; // Root stays centered
+
+    n.x += n.vx;
+    n.y += n.vy;
+
+    // Soft bounds bouncing
+    const margin = 35;
+    if (n.x < margin || n.x > w - margin) n.vx *= -1;
+    if (n.y < margin || n.y > h - margin) n.vy *= -1;
+
+    // Slight dampening & subtle floating
+    n.vx += (Math.random() - 0.5) * 0.02;
+    n.vy += (Math.random() - 0.5) * 0.02;
+    n.vx *= 0.98;
+    n.vy *= 0.98;
+  });
+}
+
+function drawNodeGraph() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Draw Lines
+  connections.forEach(conn => {
+    const isHighlighted = (hoveredNode && (conn.from === hoveredNode || conn.to === hoveredNode)) ||
+                          (activeNodeFilter && (conn.from === activeNodeFilter || conn.to === activeNodeFilter));
+
+    ctx.beginPath();
+    ctx.moveTo(conn.from.x, conn.from.y);
+    ctx.lineTo(conn.to.x, conn.to.y);
+    ctx.lineWidth = isHighlighted ? 2.5 : 1;
+    ctx.strokeStyle = isHighlighted ? "rgba(232, 74, 95, 0.85)" : "rgba(255, 255, 255, 0.12)";
+    ctx.stroke();
+  });
+
+  // Draw Nodes
+  nodes.forEach(node => {
+    const isHovered = hoveredNode === node;
+    const isActive = activeNodeFilter === node;
+    const isConnected = hoveredNode && connections.some(c => (c.from === hoveredNode && c.to === node) || (c.to === hoveredNode && c.from === node));
+
+    const r = isHovered || isActive ? node.radius * 1.3 : node.radius;
+
+    // Glow Effect
+    if (isHovered || isActive || isConnected) {
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, r + 8, 0, Math.PI * 2);
+      ctx.fillStyle = node.type === "tag" ? "rgba(56, 189, 248, 0.25)" : "rgba(232, 74, 95, 0.3)";
+      ctx.fill();
+    }
+
+    // Node Circle Outer Border
+    ctx.beginPath();
+    ctx.arc(node.x, node.y, r, 0, Math.PI * 2);
+    ctx.fillStyle = isActive ? "#FFFFFF" : "#141414";
+    ctx.fill();
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = isHovered || isActive ? "#FFFFFF" : node.color;
+    ctx.stroke();
+
+    // Inner Dot
+    ctx.beginPath();
+    ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
+    ctx.fillStyle = node.color;
+    ctx.fill();
+
+    // Text Label
+    ctx.font = `${isHovered || isActive ? "600" : "400"} 10px 'Azeret Mono', monospace`;
+    ctx.fillStyle = isHovered || isActive ? "#FFFFFF" : (isConnected ? "#D4D4D4" : "#A0A0A0");
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(node.label, node.x, node.y + r + 14);
+  });
+}
+
+function handleCanvasMouseMove(e) {
+  if (!canvas || nodes.length === 0) return;
+
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+
+  let found = null;
+  nodes.forEach(n => {
+    const dist = Math.hypot(n.x - mx, n.y - my);
+    if (dist < n.radius + 10) {
+      found = n;
+    }
+  });
+
+  hoveredNode = found;
+  canvas.style.cursor = found ? "pointer" : "default";
+
+  // Update Dock Text
+  const dockTitle = document.getElementById("dock-node-title");
+  const dockDesc = document.getElementById("dock-node-desc");
+
+  if (found && dockTitle && dockDesc) {
+    dockTitle.textContent = `[ NODE: ${found.label} ]`;
+    if (found.type === "root") {
+      dockDesc.textContent = `Central taxonomy core connecting ${ARCHIVE_POSTS.length} dispatches across conceptual pillars.`;
+    } else if (found.type === "pillar") {
+      dockDesc.textContent = `Pillar category with ${found.postsCount} dispatch${found.postsCount > 1 ? 'es' : ''}. Click to filter timeline.`;
+    } else {
+      dockDesc.textContent = `Conceptual tag node with ${found.postsCount} dispatch${found.postsCount > 1 ? 'es' : ''}. Click to filter timeline.`;
+    }
+  } else if (!activeNodeFilter && dockTitle && dockDesc) {
+    dockTitle.textContent = "[ NODE MAP ACTIVE ]";
+    dockDesc.textContent = "Hover over any tag or pillar node to highlight connected dispatches. Click to filter timeline.";
+  }
+}
+
+function handleCanvasClick(e) {
+  if (!hoveredNode) return;
+
+  const clearNodeBtn = document.getElementById("clear-node-filter-btn");
+  const statusLabel = document.getElementById("nodemap-status-label");
+
+  if (activeNodeFilter === hoveredNode) {
+    // Toggle off
+    activeNodeFilter = null;
+    activeTagFilter = null;
+    if (clearNodeBtn) clearNodeBtn.style.display = "none";
+    if (statusLabel) statusLabel.textContent = "EXPLORE TAG NODES & CONCEPTUAL VECTORS";
+  } else {
+    activeNodeFilter = hoveredNode;
+    if (hoveredNode.type === "pillar") {
+      activeTagFilter = hoveredNode.label;
+    } else if (hoveredNode.type === "tag") {
+      activeTagFilter = hoveredNode.rawTag;
+    } else {
+      activeTagFilter = null;
+    }
+
+    if (clearNodeBtn) clearNodeBtn.style.display = "inline-block";
+    if (statusLabel && activeTagFilter) {
+      statusLabel.textContent = `FILTERED BY NODE: ${activeTagFilter.toUpperCase()}`;
+    }
+  }
+
+  renderTimelineList();
+}
+
+function handleCanvasMouseLeave() {
+  hoveredNode = null;
+}
+
+function resetNodeHighlights() {
+  activeNodeFilter = null;
+  hoveredNode = null;
 }

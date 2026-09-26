@@ -85,10 +85,26 @@
       </div>
     </section>
 
-    <!-- RIGHT 50%: EMPTY PANEL FRAME (CLEARED FOR FUTURE USE) -->
-    <section class="archive-right-panel" aria-label="Archive Detail Panel">
-      <div class="empty-panel-container">
-        <!-- Kept empty as requested -->
+    <!-- RIGHT 50%: INTERACTIVE TAXONOMY NODE MAP -->
+    <section class="nodemap-column" aria-label="Interactive Taxonomy Node Map">
+      <div class="nodemap-header-group">
+        <div class="nodemap-header-top">
+          <span class="nodemap-legend">SYS_LOG // INTERACTIVE_TAXONOMY_NODE_MAP</span>
+          <button type="button" id="clear-node-filter-btn" class="timeline-read-btn" style="display: none;">[ CLEAR NODE FILTER ]</button>
+        </div>
+        <div class="nodemap-subtitle">
+          <span id="nodemap-status-label">EXPLORE TAG NODES & CONCEPTUAL VECTORS</span>
+        </div>
+      </div>
+
+      <div class="nodemap-canvas-wrapper" id="nodemap-canvas-wrapper">
+        <canvas id="nodemap-canvas"></canvas>
+        
+        <!-- Interactive Inspection Dock at Bottom -->
+        <div class="nodemap-hover-dock" id="nodemap-hover-dock">
+          <div class="dock-node-title" id="dock-node-title">[ NODE MAP ACTIVE ]</div>
+          <div class="dock-node-desc" id="dock-node-desc">Hover over any tag or pillar node to highlight connected dispatches. Click to filter timeline.</div>
+        </div>
       </div>
     </section>
   </main>
