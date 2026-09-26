@@ -269,15 +269,99 @@ filter.apply(canvas);
   }
 };
 
+let customOptionsStore = {
+  note_categories: ["reflection", "observations", "journal entry", "catharsis"],
+  bookmark_media: ["article", "essay", "book", "video", "movie", "paper", "tool", "website", "event"],
+  resource_categories: ["tool/software", "download", "article/paper/book", "tutorial", "link", "document", "video", "course/career"]
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   initFormatPickers();
   initFormListeners();
   initToolbar();
+  fetchCustomOptions();
   loadFormatTemplate("essay");
 
   // Fetch list of existing posts
   fetchPostsList();
 });
+
+async function fetchCustomOptions() {
+  try {
+    const res = await fetch("/api/custom-options");
+    if (res.ok) {
+      const data = await res.json();
+      if (data.success && data.options) {
+        customOptionsStore = data.options;
+        populateCustomOptionsDropdowns();
+      }
+    }
+  } catch (e) {
+    console.log("Running with local custom options.");
+    populateCustomOptionsDropdowns();
+  }
+}
+
+function populateCustomOptionsDropdowns() {
+  updateSelectOptions("field-note-category", customOptionsStore.note_categories || []);
+  updateSelectOptions("field-bookmark-media", customOptionsStore.bookmark_media || []);
+  updateSelectOptions("field-resource-category", customOptionsStore.resource_categories || []);
+}
+
+function updateSelectOptions(selectId, optionsArray) {
+  const select = document.getElementById(selectId);
+  if (!select) return;
+  const currentVal = select.value;
+  const uniqueOpts = Array.from(new Set([...optionsArray, currentVal].filter(Boolean)));
+  select.innerHTML = uniqueOpts.map(opt => `<option value="${opt}">${opt}</option>`).join("");
+  if (currentVal && uniqueOpts.includes(currentVal)) {
+    select.value = currentVal;
+  }
+}
+
+async function promptAddNewCategory(storeKey, selectId) {
+  const labelMap = {
+    note_categories: 'Note Category',
+    bookmark_media: 'Bookmark Media Type',
+    resource_categories: 'Resource Category'
+  };
+  const labelName = labelMap[storeKey] || 'Category';
+  const newVal = prompt(`Enter new ${labelName}:`);
+  if (!newVal || !newVal.trim()) return;
+
+  const formatted = newVal.trim().toLowerCase();
+  if (!customOptionsStore[storeKey]) customOptionsStore[storeKey] = [];
+  if (!customOptionsStore[storeKey].includes(formatted)) {
+    customOptionsStore[storeKey].push(formatted);
+  }
+
+  updateSelectOptions(selectId, customOptionsStore[storeKey]);
+  document.getElementById(selectId).value = formatted;
+  updatePreview();
+
+  try {
+    await fetch("/api/custom-options", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(customOptionsStore)
+    });
+  } catch (e) {
+    console.log("Could not persist custom option to server.");
+  }
+}
+
+function toggleMetadataPanel() {
+  const grid = document.getElementById("meta-form-grid");
+  const hint = document.getElementById("meta-toggle-hint");
+  if (!grid) return;
+  if (grid.style.display === "none") {
+    grid.style.display = "grid";
+    if (hint) hint.textContent = "[ COMPACT • CLICK TO TOGGLE ]";
+  } else {
+    grid.style.display = "none";
+    if (hint) hint.textContent = "[ HIDDEN • CLICK TO EXPAND ]";
+  }
+}
 
 function initFormatPickers() {
   const cards = document.querySelectorAll(".btn-format-card");
@@ -339,12 +423,19 @@ function toggleFormatSpecificFields(fmt, data = {}) {
   resourceCategoryBox.style.display = fmt === "resource" ? "flex" : "none";
   urlBox.style.display = (fmt === "bookmark" || fmt === "resource") ? "flex" : "none";
 
-  if (fmt === "note") document.getElementById("field-note-category").value = data.category || "reflection";
+  if (fmt === "note") {
+    updateSelectOptions("field-note-category", customOptionsStore.note_categories || []);
+    document.getElementById("field-note-category").value = data.category || "reflection";
+  }
   if (fmt === "bookmark") {
+    updateSelectOptions("field-bookmark-media", customOptionsStore.bookmark_media || []);
     document.getElementById("field-bookmark-media").value = data.media || "article";
     document.getElementById("field-bookmark-source").value = data.source || "";
   }
-  if (fmt === "resource") document.getElementById("field-resource-category").value = data.category || "tool/software";
+  if (fmt === "resource") {
+    updateSelectOptions("field-resource-category", customOptionsStore.resource_categories || []);
+    document.getElementById("field-resource-category").value = data.category || "tool/software";
+  }
   if (fmt === "bookmark" || fmt === "resource") document.getElementById("field-url").value = data.url || (data.bookmark_url || data.resource_url || "");
 }
 
@@ -372,12 +463,12 @@ function initToolbar() {
     h2: ["\n## ", ""],
     h3: ["\n### ", ""],
     quote: ["\n> ", ""],
-    code: ["\`", "\`"],
-    codeblock: ["\n\`\`\`text\n", "\n\`\`\`"],
+    code: ["`", "`"],
+    codeblock: ["\n```text\n", "\n```"],
     list: ["\n- ", ""],
     table: ["\n| Header 1 | Header 2 |\n| :--- | :--- |\n| Cell 1 | Cell 2 |\n", ""],
     math: ["\n$$\n", "\n$$\n"],
-    action: ["\n[ACTION BUTTON](https://example.com)\n", ""]
+    break: ["<br>\n", ""]
   };
 
   Object.keys(tools).forEach(id => {
@@ -389,10 +480,18 @@ function initToolbar() {
       });
     }
   });
+
+  const actionBtn = document.getElementById("btn-tool-action");
+  if (actionBtn) {
+    actionBtn.addEventListener("click", insertActionLink);
+  }
 }
 
 function insertMarkdown(prefix, suffix) {
   const textarea = document.getElementById("field-content");
+  if (!textarea) return;
+
+  const scrollTop = textarea.scrollTop;
   const start = textarea.selectionStart;
   const end = textarea.selectionEnd;
   const selectedText = textarea.value.substring(start, end);
@@ -402,6 +501,42 @@ function insertMarkdown(prefix, suffix) {
   textarea.focus();
   textarea.selectionStart = start + prefix.length;
   textarea.selectionEnd = start + prefix.length + (selectedText.length || 4);
+  textarea.scrollTop = scrollTop;
+  updatePreview();
+}
+
+function insertActionLink() {
+  const textarea = document.getElementById("field-content");
+  if (!textarea) return;
+
+  const scrollTop = textarea.scrollTop;
+  const start = textarea.selectionStart;
+  const end = textarea.selectionEnd;
+  const selectedText = textarea.value.substring(start, end).trim();
+
+  let replacement = "";
+  let selStart = start;
+  let selEnd = end;
+
+  if (selectedText.startsWith("http://") || selectedText.startsWith("https://")) {
+    replacement = `[LINK TITLE](${selectedText})`;
+    selStart = start + 1;
+    selEnd = start + 11;
+  } else if (selectedText.length > 0) {
+    replacement = `[${selectedText}](https://example.com)`;
+    selStart = start + selectedText.length + 3;
+    selEnd = selStart + 19;
+  } else {
+    replacement = `[ACTION BUTTON](https://example.com)`;
+    selStart = start + 1;
+    selEnd = start + 14;
+  }
+
+  textarea.value = textarea.value.substring(0, start) + replacement + textarea.value.substring(end);
+  textarea.focus();
+  textarea.selectionStart = selStart;
+  textarea.selectionEnd = selEnd;
+  textarea.scrollTop = scrollTop;
   updatePreview();
 }
 
@@ -479,41 +614,80 @@ function updatePreview() {
       ${parsedHtml}
     </div>
   `;
+
+  // KaTeX Math Rendering
+  if (typeof renderMathInElement === "function") {
+    try {
+      renderMathInElement(previewContainer, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "\\(", right: "\\)", display: false }
+        ],
+        throwOnError: false
+      });
+    } catch (e) {}
+  }
+
+  // Mermaid Diagram Rendering
+  if (typeof mermaid !== "undefined") {
+    try {
+      previewContainer.querySelectorAll("pre code.language-mermaid").forEach(el => {
+        const pre = el.parentElement;
+        const raw = el.textContent;
+        const div = document.createElement("div");
+        div.className = "mermaid-diagram-box";
+        div.innerHTML = `<pre class="mermaid">\n${raw}\n</pre>`;
+        pre.replaceWith(div);
+      });
+      mermaid.run({ nodes: previewContainer.querySelectorAll(".mermaid") });
+    } catch (e) {}
+  }
 }
 
 function renderMarkdownToHtml(md) {
   if (!md) return "";
 
-  let html = md;
-  // Headings
-  html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
-  html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
-  html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+  let html = "";
+  if (typeof marked !== "undefined" && marked.parse) {
+    html = marked.parse(md);
+  } else {
+    html = md
+      .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+      .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+      .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+      .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
+      .replace(/```([a-z]*)\n([\s\S]*?)```/gim, '<pre><code>$2</code></pre>')
+      .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
+      .replace(/\*(.*?)\*/gim, '<em>$1</em>')
+      .replace(/\[(.*?)\]\((.*?)\)/gim, '<a href="$2" target="_blank">$1</a>')
+      .replace(/^---$/gim, '<hr>');
 
-  // Blockquotes
-  html = html.replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>');
+    const paragraphs = html.split(/\n\n+/);
+    html = paragraphs.map(p => {
+      if (p.startsWith('<h') || p.startsWith('<blockquote') || p.startsWith('<pre') || p.startsWith('<hr')) return p;
+      return `<p>${p.replace(/\n/g, '<br>')}</p>`;
+    }).join('\n');
+  }
 
-  // Codeblocks
-  html = html.replace(/```([a-z]*)\n([\s\S]*?)```/gim, '<pre><code>$2</code></pre>');
+  // Inject exact website CSS classes for 100% accurate visual rendering
+  html = html
+    .replace(/<h1>/g, '<h1 class="post-title essay-title">')
+    .replace(/<h2>/g, '<h2 class="post-section-kicker essay-section-kicker">')
+    .replace(/<h3>/g, '<h3 class="post-subheading essay-subheading">')
+    .replace(/<p>/g, '<p class="post-paragraph essay-paragraph">')
+    .replace(/<blockquote>/g, '<blockquote class="post-quote essay-quote">')
+    .replace(/<hr>/g, '<hr class="post-divider essay-divider">')
+    .replace(/<ul>/g, '<ul class="post-list essay-list">')
+    .replace(/<ol>/g, '<ol class="post-list essay-list">')
+    .replace(/<table>/g, '<div class="table-responsive"><table class="post-table essay-table">')
+    .replace(/<\/table>/g, '</table></div>');
 
-  // Bold & Italic
-  html = html.replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>');
-  html = html.replace(/\*(.*?)\*/gim, '<em>$1</em>');
+  // Math blocks
+  html = html.replace(/\$\$\n?([\s\S]*?)\n?\$\$/g, '<div class="math-block">$$$1$$</div>');
 
-  // Links
-  html = html.replace(/\[(.*?)\]\((.*?)\)/gim, '<a href="$2" target="_blank">$1</a>');
-
-  // Horizontal rules
-  html = html.replace(/^---$/gim, '<hr>');
-
-  // Paragraphs
-  const paragraphs = html.split(/\n\n+/);
-  return paragraphs.map(p => {
-    if (p.startsWith('<h') || p.startsWith('<blockquote') || p.startsWith('<pre') || p.startsWith('<hr')) {
-      return p;
-    }
-    return `<p>${p.replace(/\n/g, '<br>')}</p>`;
-  }).join('\n');
+  return html;
 }
 
 /**

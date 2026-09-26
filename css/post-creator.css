@@ -152,53 +152,85 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
-/* METADATA COLLAPSIBLE SECTION */
+/* METADATA COMPACT COLLAPSIBLE SECTION */
 .metadata-panel {
   background: var(--bg-panel);
   border-bottom: 1px solid var(--border-subtle);
-  padding: 1rem 1.2rem;
+  padding: 0.5rem 0.8rem;
+  flex-shrink: 0;
 }
 
 .panel-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.4rem;
   cursor: pointer;
   user-select: none;
 }
 
 .panel-title {
   color: var(--accent-coral);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   letter-spacing: 0.08em;
   font-weight: 600;
-
 }
 
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
+  gap: 0.5rem;
+}
+
+.form-grid.compact-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.35rem 0.45rem;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.15rem;
 }
 
-.form-group.span-2 {
-  grid-column: span 2;
+.form-group.span-1 { grid-column: span 1; }
+.form-group.span-2 { grid-column: span 2; }
+.form-group.span-3 { grid-column: span 3; }
+.form-group.span-4 { grid-column: span 4; }
+
+.label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+}
+
+.btn-add-custom-opt {
+  background: rgba(232, 74, 95, 0.15);
+  border: 1px solid var(--accent-coral);
+  color: var(--accent-coral);
+  font-family: inherit;
+  font-size: 0.55rem;
+  font-weight: 600;
+  padding: 0.05rem 0.3rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-add-custom-opt:hover {
+  background: var(--accent-coral);
+  color: #ffffff;
 }
 
 .form-label {
   color: var(--text-muted);
-  font-size: 0.62rem;
-  letter-spacing: 0.06em;
+  font-size: 0.58rem;
+  letter-spacing: 0.05em;
+  font-weight: 600;
 }
 
 .form-input, .form-select, .form-textarea {
@@ -206,8 +238,8 @@ body {
   border: 1px solid var(--border-subtle);
   color: var(--text-bright);
   font-family: inherit;
-  font-size: 0.74rem;
-  padding: 0.4rem 0.6rem;
+  font-size: 0.7rem;
+  padding: 0.22rem 0.45rem;
   border-radius: var(--radius-sm);
   outline: none;
   transition: border-color var(--transition-fast);
@@ -220,13 +252,13 @@ body {
 .form-checkbox-group {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding-top: 0.4rem;
+  gap: 0.4rem;
+  padding-top: 0.15rem;
 }
 
 .form-checkbox-label {
   color: var(--text-bright);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   cursor: pointer;
 }
 
@@ -234,20 +266,21 @@ body {
 .formatting-toolbar {
   background: #181818;
   border-bottom: 1px solid var(--border-subtle);
-  padding: 0.4rem 1rem;
+  padding: 0.3rem 0.8rem;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.3rem;
+  gap: 0.25rem;
+  flex-shrink: 0;
 }
 
 .btn-tool {
   background: transparent;
   border: 1px solid var(--border-subtle);
   color: var(--text-body);
-  padding: 0.25rem 0.5rem;
+  padding: 0.2rem 0.45rem;
   font-family: inherit;
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -261,9 +294,9 @@ body {
 
 .toolbar-sep {
   width: 1px;
-  height: 16px;
+  height: 14px;
   background: var(--border-subtle);
-  margin: 0 0.2rem;
+  margin: 0 0.15rem;
 }
 
 /* MARKDOWN CONTENT TEXTAREA */
@@ -272,21 +305,25 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 350px;
+  min-height: 200px;
+  height: 100%;
+  overflow: hidden;
 }
 
 .markdown-editor {
   flex: 1;
   width: 100%;
+  height: 100%;
   background: #121212;
   color: #E2E2E2;
   font-family: 'JetBrains Mono', 'Azeret Mono', monospace;
   font-size: 0.78rem;
   line-height: 1.6;
-  padding: 1.2rem;
+  padding: 0.8rem 1rem;
   border: none;
   outline: none;
   resize: none;
+  overflow-y: auto;
 }
 
 /* RIGHT COLUMN: READER PANE LIVE PREVIEW */

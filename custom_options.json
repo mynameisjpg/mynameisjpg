@@ -1,0 +1,29 @@
+{
+  "note_categories": [
+    "reflection",
+    "observations",
+    "journal entry",
+    "catharsis"
+  ],
+  "bookmark_media": [
+    "article",
+    "essay",
+    "book",
+    "video",
+    "movie",
+    "paper",
+    "tool",
+    "website",
+    "event"
+  ],
+  "resource_categories": [
+    "tool/software",
+    "download",
+    "article/paper/book",
+    "tutorial",
+    "link",
+    "document",
+    "video",
+    "course/career"
+  ]
+}

@@ -142,6 +142,27 @@ def run_sync_posts():
     return False, "sync_posts.py not found."
 
 
+CUSTOM_OPTIONS_FILE = BASE_DIR / "custom_options.json"
+
+def load_custom_options():
+    if CUSTOM_OPTIONS_FILE.exists():
+        try:
+            return json.loads(CUSTOM_OPTIONS_FILE.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+    return {
+        "note_categories": ["reflection", "observations", "journal entry", "catharsis"],
+        "bookmark_media": ["article", "essay", "book", "video", "movie", "paper", "tool", "website", "event"],
+        "resource_categories": ["tool/software", "download", "article/paper/book", "tutorial", "link", "document", "video"]
+    }
+
+def save_custom_options(data):
+    try:
+        CUSTOM_OPTIONS_FILE.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+        return True
+    except Exception as e:
+        return False
+
 class PostCreatorRequestHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(BASE_DIR), **kwargs)
@@ -156,6 +177,8 @@ class PostCreatorRequestHandler(SimpleHTTPRequestHandler):
         elif path == "/api/post":
             filename = query.get("file", [""])[0]
             self.handle_get_post(filename)
+        elif path == "/api/custom-options":
+            self.send_json_response({"success": True, "options": load_custom_options()})
         else:
             super().do_GET()
 
@@ -167,8 +190,22 @@ class PostCreatorRequestHandler(SimpleHTTPRequestHandler):
             self.handle_save_post()
         elif path == "/api/delete":
             self.handle_delete_post()
+        elif path == "/api/custom-options":
+            self.handle_save_custom_options()
         else:
             self.send_error(404, "Endpoint not found")
+
+    def handle_save_custom_options(self):
+        try:
+            content_length = int(self.headers.get('Content-Length', 0))
+            raw_body = self.rfile.read(content_length)
+            payload = json.loads(raw_body.decode('utf-8'))
+            if save_custom_options(payload):
+                self.send_json_response({"success": True, "options": load_custom_options()})
+            else:
+                self.send_json_response({"success": False, "error": "Could not save custom options"}, status=500)
+        except Exception as e:
+            self.send_json_response({"success": False, "error": str(e)}, status=500)
 
     def handle_list_posts(self):
         """List all markdown posts in _posts/ with metadata summary."""

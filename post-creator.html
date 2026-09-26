@@ -8,6 +8,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;500;600;700&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  
+  <!-- Markdown, Math & Diagram Rendering (Matches main website engine) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 </head>
 <body>
 
@@ -57,14 +64,14 @@
     <!-- LEFT COLUMN: METADATA & EDITOR -->
     <section class="editor-pane-left">
 
-      <!-- METADATA ACCORDION FORM -->
+      <!-- METADATA COMPACT PANEL -->
       <div class="metadata-panel">
-        <div class="panel-header" onclick="document.getElementById('meta-form-grid').style.display = document.getElementById('meta-form-grid').style.display === 'none' ? 'grid' : 'none'">
-          <span class="panel-title">// DISPATCH METADATA & TEMPLATE CONFIGURATION</span>
-          <span style="color:var(--text-muted); font-size:0.7rem;">▼ TOGGLE FIELDS</span>
+        <div class="panel-header" onclick="toggleMetadataPanel()">
+          <span class="panel-title">// DISPATCH METADATA &amp; TEMPLATE CONFIGURATION</span>
+          <span id="meta-toggle-hint" style="color:var(--text-muted); font-size:0.64rem;">[ COMPACT • CLICK TO TOGGLE ]</span>
         </div>
 
-        <div class="form-grid" id="meta-form-grid">
+        <div class="form-grid compact-grid" id="meta-form-grid">
 
           <!-- TITLE & SUBTITLE -->
           <div class="form-group span-2">
@@ -77,24 +84,13 @@
             <input type="text" id="field-subtitle" class="form-input" placeholder="Subtitle expanding on thesis..." autocomplete="off">
           </div>
 
-          <div class="form-group span-2">
-            <label class="form-label">EXCERPT (CARD PREVIEW & SEARCH SUMMARY):</label>
-            <textarea id="field-excerpt" class="form-textarea" rows="2" placeholder="2-sentence preview summary..."></textarea>
-          </div>
-
-          <!-- DATE & AUTHOR -->
-          <div class="form-group">
-            <label class="form-label">DATE & TIME:</label>
-            <input type="text" id="field-date" class="form-input" placeholder="2026-09-26 12:00:00 -0300">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">AUTHOR:</label>
-            <input type="text" id="field-author" class="form-input" value="Juan P. Giusepponi">
+          <div class="form-group span-4">
+            <label class="form-label">EXCERPT (PREVIEW &amp; SEARCH SUMMARY):</label>
+            <input type="text" id="field-excerpt" class="form-input" placeholder="2-sentence preview summary..." autocomplete="off">
           </div>
 
           <!-- PILLAR & SUBTOPIC -->
-          <div class="form-group">
+          <div class="form-group span-2">
             <label class="form-label">THEMATIC PILLAR:</label>
             <select id="field-pillar" class="form-select">
               <option value="AI Perception, Culture & Representation">AI Perception, Culture & Representation</option>
@@ -104,7 +100,7 @@
             </select>
           </div>
 
-          <div class="form-group">
+          <div class="form-group span-2">
             <label class="form-label">SUBTOPIC / DOMAIN:</label>
             <select id="field-subtopic" class="form-select">
               <!-- Populated dynamically based on chosen pillar -->
@@ -112,8 +108,11 @@
           </div>
 
           <!-- FORMAT SPECIFIC DYNAMIC FIELDS -->
-          <div class="form-group" id="box-note-category" style="display: none;">
-            <label class="form-label">NOTE CATEGORY:</label>
+          <div class="form-group span-2" id="box-note-category" style="display: none;">
+            <div class="label-row">
+              <label class="form-label">NOTE CATEGORY:</label>
+              <button type="button" class="btn-add-custom-opt" onclick="promptAddNewCategory('note_categories', 'field-note-category')">+ NEW CATEGORY</button>
+            </div>
             <select id="field-note-category" class="form-select">
               <option value="reflection">reflection</option>
               <option value="observations">observations</option>
@@ -122,11 +121,14 @@
             </select>
           </div>
 
-          <div class="form-group" id="box-bookmark-media" style="display: none;">
-            <label class="form-label">BOOKMARK MEDIA TYPE:</label>
+          <div class="form-group span-2" id="box-bookmark-media" style="display: none;">
+            <div class="label-row">
+              <label class="form-label">BOOKMARK MEDIA TYPE:</label>
+              <button type="button" class="btn-add-custom-opt" onclick="promptAddNewCategory('bookmark_media', 'field-bookmark-media')">+ NEW MEDIA</button>
+            </div>
             <select id="field-bookmark-media" class="form-select">
               <option value="article">article</option>
-              <option value="article">essay</option>
+              <option value="essay">essay</option>
               <option value="book">book</option>
               <option value="video">video</option>
               <option value="movie">movie</option>
@@ -137,13 +139,16 @@
             </select>
           </div>
 
-          <div class="form-group" id="box-bookmark-source" style="display: none;">
+          <div class="form-group span-2" id="box-bookmark-source" style="display: none;">
             <label class="form-label">BOOKMARK SOURCE / ORIGIN:</label>
             <input type="text" id="field-bookmark-source" class="form-input" placeholder="e.g. Stanford AI Lab / Fei-Fei Li">
           </div>
 
-          <div class="form-group" id="box-resource-category" style="display: none;">
-            <label class="form-label">RESOURCE CATEGORY:</label>
+          <div class="form-group span-2" id="box-resource-category" style="display: none;">
+            <div class="label-row">
+              <label class="form-label">RESOURCE CATEGORY:</label>
+              <button type="button" class="btn-add-custom-opt" onclick="promptAddNewCategory('resource_categories', 'field-resource-category')">+ NEW CATEGORY</button>
+            </div>
             <select id="field-resource-category" class="form-select">
               <option value="tool/software">tool/software</option>
               <option value="download">download</option>
@@ -152,38 +157,49 @@
               <option value="link">link</option>
               <option value="document">document</option>
               <option value="video">video</option>
+              <option value="course/career">course/career</option>
             </select>
           </div>
 
-          <div class="form-group span-2" id="box-url" style="display: none;">
+          <div class="form-group span-4" id="box-url" style="display: none;">
             <label class="form-label">PROMINENT DESTINATION URL:</label>
             <input type="text" id="field-url" class="form-input" placeholder="https://external-resource-or-paper.com">
           </div>
 
           <!-- TAGS & READING TIME -->
-          <div class="form-group">
+          <div class="form-group span-3">
             <label class="form-label">TAGS (COMMA SEPARATED):</label>
             <input type="text" id="field-tags" class="form-input" placeholder="epistemology, latent-space">
           </div>
 
-          <div class="form-group">
-            <label class="form-label">READING TIME / SPECS:</label>
+          <div class="form-group span-1">
+            <label class="form-label">READING TIME:</label>
             <input type="text" id="field-readtime" class="form-input" value="8 min read">
           </div>
 
           <!-- IMAGE & ARTWORK -->
-          <div class="form-group">
+          <div class="form-group span-2">
             <label class="form-label">IMAGE PATH:</label>
             <input type="text" id="field-image-path" class="form-input" value="assets/images/turing1.png">
           </div>
 
-          <div class="form-group">
+          <div class="form-group span-2">
             <label class="form-label">IMAGE ALT TEXT:</label>
             <input type="text" id="field-image-alt" class="form-input" value="Dithered duotone artwork description">
           </div>
 
-          <!-- SPECS & FEATURED -->
-          <div class="form-group">
+          <!-- DATE, AUTHOR, SPECS & FEATURED -->
+          <div class="form-group span-1">
+            <label class="form-label">DATE &amp; TIME:</label>
+            <input type="text" id="field-date" class="form-input" placeholder="2026-09-26 12:00:00 -0300">
+          </div>
+
+          <div class="form-group span-1">
+            <label class="form-label">AUTHOR:</label>
+            <input type="text" id="field-author" class="form-input" value="Juan P. Giusepponi">
+          </div>
+
+          <div class="form-group span-1">
             <label class="form-label">THEME MODE:</label>
             <select id="field-theme" class="form-select">
               <option value="dark">dark (Midnight Slate)</option>
@@ -191,7 +207,7 @@
             </select>
           </div>
 
-          <div class="form-group">
+          <div class="form-group span-1">
             <label class="form-label">PUBLICATION STATUS:</label>
             <select id="field-status" class="form-select">
               <option value="published">published</option>
@@ -199,7 +215,7 @@
             </select>
           </div>
 
-          <div class="form-group span-2 form-checkbox-group">
+          <div class="form-group span-4 form-checkbox-group">
             <input type="checkbox" id="field-featured">
             <label for="field-featured" class="form-checkbox-label">★ FEATURED DISPATCH (Occupies 2 columns on homepage matrix)</label>
           </div>
@@ -222,7 +238,8 @@
         <button type="button" class="btn-tool" id="btn-tool-list" title="Bullet List [-]">• List</button>
         <button type="button" class="btn-tool" id="btn-tool-table" title="Markdown Table">Table</button>
         <button type="button" class="btn-tool" id="btn-tool-math" title="LaTeX Math [$$]">Math $$</button>
-        <button type="button" class="btn-tool" id="btn-tool-action" title="Prominent Action Link">Action Link</button>
+        <button type="button" class="btn-tool" id="btn-tool-break" title="Line Break (<br>)">↵ Line Break</button>
+        <button type="button" class="btn-tool" id="btn-tool-action" title="Hyperlink / Action Link">🔗 Action Link</button>
       </div>
 
       <!-- CONTENT EDITOR TEXTAREA -->
