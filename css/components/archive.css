@@ -1,20 +1,21 @@
 /* ==============================================================================
-   UNTITLED.JPG — ARCHIVE COMPONENT STYLESHEET (ITERATION 4 - NODE MAP & POLISH)
+   UNTITLED.JPG — ARCHIVE COMPONENT STYLESHEET (ITERATION 5 - CENTERED TIMELINE)
    Supports 50-50 Split Layout:
-   - Offset by 48px sidebar rail
-   - Left 50%: Compact Timeline Axis with 120px height thumbnails and inline metadata
-   - Right 50%: Interactive Taxonomy Node Map canvas
+   - Offset by 48px sidebar rail without horizontal scroll overflow
+   - Left 50%: Centered Timeline Axis with 120px height thumbnails and inline metadata
+   - Right 50%: Clean empty panel container for future node map integration
    ============================================================================== */
 
-/* Main Archive Shell Layout */
+/* Main Archive Shell Layout: Use width: calc(100% - 48px) to prevent horizontal scroll */
 .archive-split-shell {
   margin-left: var(--sidebar-width, 48px);
-  width: calc(100vw - var(--sidebar-width, 48px));
+  width: calc(100% - var(--sidebar-width, 48px));
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
   background-color: var(--neutral-bg, #121212);
+  flex: 1;
 }
 
 /* ==============================================================================
@@ -34,10 +35,17 @@
   padding: 0.85rem 1.25rem;
   border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
   background-color: var(--neutral-surface, #161616);
+  z-index: 10;
+  width: 100%;
+}
+
+.timeline-header-content {
+  max-width: 580px;
+  margin: 0 auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
-  z-index: 10;
 }
 
 .timeline-header-top {
@@ -98,15 +106,16 @@
   padding: 1.25rem 1.5rem 3rem 1.25rem;
   position: relative;
   scroll-behavior: smooth;
+  width: 100%;
 }
 
-/* Vertical Timeline Spine Line & List */
+/* Vertical Timeline Spine Line & List - Centered nicely inside 50% left column */
 .timeline-list {
   position: relative;
   list-style: none;
   padding: 0;
   margin: 0 auto;
-  max-width: 640px;
+  max-width: 580px;
   width: 100%;
 }
 
@@ -355,101 +364,27 @@
 
 
 /* ==============================================================================
-   RIGHT COLUMN: INTERACTIVE TAXONOMY NODE MAP
+   RIGHT COLUMN: CLEAN EMPTY PANEL (RESERVED FOR FUTURE USE)
    ============================================================================== */
-.nodemap-column {
+.archive-right-panel {
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  background-color: var(--bg-deep, #121212);
-  color: #FFFFFF;
+  background-color: var(--neutral-bg, #121212);
+  color: var(--text-muted, #888888);
   overflow: hidden;
   position: relative;
 }
 
-.nodemap-header-group {
-  padding: 0.85rem 1.25rem;
-  border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
-  background-color: var(--neutral-surface, #161616);
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  z-index: 10;
-  flex-shrink: 0;
-}
-
-.nodemap-header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nodemap-legend {
-  font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
-  color: var(--text-muted, #888888);
-  text-transform: uppercase;
-}
-
-.nodemap-subtitle {
-  font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.6rem;
-  color: var(--primary, #E84A5F);
-  letter-spacing: 0.08em;
-}
-
-.nodemap-canvas-wrapper {
-  position: relative;
+.empty-panel-container {
   flex: 1;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  background: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 100%);
-}
-
-#nodemap-canvas {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.nodemap-hover-dock {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 3rem);
-  max-width: 460px;
-  background: rgba(18, 18, 18, 0.92);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-left: 3px solid var(--primary, #E84A5F);
-  border-radius: var(--rounded-sm, 2px);
-  padding: 0.75rem 1rem;
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  z-index: 20;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-  transition: all 0.2s ease;
-}
-
-.dock-node-title {
-  font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--primary, #E84A5F);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.dock-node-desc {
-  font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.62rem;
-  color: var(--text-body, #CCCCCC);
-  line-height: 1.45;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.012) 0%, transparent 70%);
 }
 
 /* Responsive Stacking for Mobile/Tablet */
@@ -462,7 +397,7 @@
     overflow-y: auto;
   }
   .timeline-column,
-  .nodemap-column {
+  .archive-right-panel {
     height: auto;
     min-height: 100vh;
   }

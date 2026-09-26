@@ -63,17 +63,19 @@
     <!-- LEFT 50%: TIMELINE STRATIGRAPHY AXIS -->
     <section class="timeline-column" aria-label="Chronological Timeline">
       <div class="timeline-header-group">
-        <div class="timeline-header-top">
-          <span class="timeline-legend">SYS_LOG // CHRONOLOGICAL_TIMELINE_AXIS</span>
-          <span class="timeline-active-filter" id="timeline-active-filter-label">DISPATCHES: LOADING...</span>
-        </div>
-        <div class="timeline-controls-row">
-          <div class="timeline-search-box">
-            <svg class="search-icon-svg" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:0.4rem; color:var(--text-muted);">
-              <circle cx="6.5" cy="6.5" r="4.5"/>
-              <line x1="10" y1="10" x2="14" y2="14"/>
-            </svg>
-            <input type="text" id="archive-search-input" placeholder="SEARCH TIMELINE DISPATCHES..." aria-label="Search timeline dispatches" autocomplete="off" />
+        <div class="timeline-header-content">
+          <div class="timeline-header-top">
+            <span class="timeline-legend">SYS_LOG // CHRONOLOGICAL_TIMELINE_AXIS</span>
+            <span class="timeline-active-filter" id="timeline-active-filter-label">DISPATCHES: LOADING...</span>
+          </div>
+          <div class="timeline-controls-row">
+            <div class="timeline-search-box">
+              <svg class="search-icon-svg" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:0.4rem; color:var(--text-muted);">
+                <circle cx="6.5" cy="6.5" r="4.5"/>
+                <line x1="10" y1="10" x2="14" y2="14"/>
+              </svg>
+              <input type="text" id="archive-search-input" placeholder="SEARCH TIMELINE DISPATCHES..." aria-label="Search timeline dispatches" autocomplete="off" />
+            </div>
           </div>
         </div>
       </div>
@@ -83,26 +85,10 @@
       </div>
     </section>
 
-    <!-- RIGHT 50%: INTERACTIVE TAG & PILLAR NODE MAP -->
-    <section class="nodemap-column" aria-label="Interactive Taxonomy Node Map">
-      <div class="nodemap-header-group">
-        <div class="nodemap-header-top">
-          <span class="nodemap-legend">SYS_LOG // INTERACTIVE_TAXONOMY_NODE_MAP</span>
-          <button type="button" id="clear-node-filter-btn" class="timeline-read-btn" style="display: none;">[ CLEAR NODE FILTER ]</button>
-        </div>
-        <div class="nodemap-subtitle">
-          <span id="nodemap-status-label">EXPLORE TAG NODES & CONCEPTUAL VECTORS</span>
-        </div>
-      </div>
-
-      <div class="nodemap-canvas-wrapper" id="nodemap-canvas-wrapper">
-        <canvas id="nodemap-canvas"></canvas>
-        
-        <!-- Interactive Inspection Dock at Bottom -->
-        <div class="nodemap-hover-dock" id="nodemap-hover-dock">
-          <div class="dock-node-title" id="dock-node-title">[ NODE MAP ACTIVE ]</div>
-          <div class="dock-node-desc" id="dock-node-desc">Hover over any tag or pillar node to highlight connected dispatches. Click to filter.</div>
-        </div>
+    <!-- RIGHT 50%: EMPTY PANEL (CLEARED FOR FUTURE NODE MAP) -->
+    <section class="archive-right-panel" aria-label="Archive Detail Panel">
+      <div class="empty-panel-container">
+        <!-- Kept clean and empty as requested -->
       </div>
     </section>
   </main>
