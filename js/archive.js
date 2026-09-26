@@ -128,12 +128,22 @@ function initArchiveListeners() {
   });
 }
 
+function toggleDispatchLogDropdown() {
+  closeAllTopDropdowns("dispatch-log-dropdown");
+  const panel = document.getElementById("dispatch-log-dropdown");
+  const btn = document.getElementById("dispatch-log-btn");
+  if (!panel) return;
+  const isHidden = panel.style.display === "none" || !panel.style.display;
+  panel.style.display = isHidden ? "flex" : "none";
+  if (btn) btn.classList.toggle("active", isHidden);
+}
+
 function toggleTopSearchDropdown() {
   closeAllTopDropdowns("top-search-dropdown");
   const panel = document.getElementById("top-search-dropdown");
   const btn = document.getElementById("top-navbar-search-btn");
   if (!panel) return;
-  const isHidden = panel.style.display === "none";
+  const isHidden = panel.style.display === "none" || !panel.style.display;
   panel.style.display = isHidden ? "block" : "none";
   if (btn) btn.classList.toggle("active", isHidden);
   if (isHidden) {
@@ -147,7 +157,7 @@ function toggleTopFilterDropdown() {
   const panel = document.getElementById("top-filter-dropdown");
   const btn = document.getElementById("top-navbar-filter-btn");
   if (!panel) return;
-  const isHidden = panel.style.display === "none";
+  const isHidden = panel.style.display === "none" || !panel.style.display;
   panel.style.display = isHidden ? "flex" : "none";
   if (btn) btn.classList.toggle("active", isHidden);
 }
@@ -157,14 +167,14 @@ function toggleTopSortDropdown() {
   const panel = document.getElementById("top-sort-dropdown");
   const btn = document.getElementById("top-navbar-sort-btn");
   if (!panel) return;
-  const isHidden = panel.style.display === "none";
+  const isHidden = panel.style.display === "none" || !panel.style.display;
   panel.style.display = isHidden ? "flex" : "none";
   if (btn) btn.classList.toggle("active", isHidden);
 }
 
 function closeAllTopDropdowns(exceptId = null) {
-  const dropdowns = ["top-search-dropdown", "top-filter-dropdown", "top-sort-dropdown"];
-  const btns = ["top-navbar-search-btn", "top-navbar-filter-btn", "top-navbar-sort-btn"];
+  const dropdowns = ["dispatch-log-dropdown", "top-search-dropdown", "top-filter-dropdown", "top-sort-dropdown"];
+  const btns = ["dispatch-log-btn", "top-navbar-search-btn", "top-navbar-filter-btn", "top-navbar-sort-btn"];
 
   dropdowns.forEach((id, idx) => {
     if (id !== exceptId) {
@@ -176,11 +186,40 @@ function closeAllTopDropdowns(exceptId = null) {
   });
 }
 
+function handleTopInlineSearch(val) {
+  searchQuery = (val || "").toLowerCase().trim();
+
+  // Sync inputs
+  const inlineInput = document.getElementById("top-inline-search-input");
+  const modalInput = document.getElementById("top-search-input");
+  if (inlineInput && inlineInput.value !== val) inlineInput.value = val;
+  if (modalInput && modalInput.value !== val) modalInput.value = val;
+
+  renderTimelineList();
+}
+
 function applyTopFilter(formatKey) {
   activeFormatFilter = formatKey;
-  document.querySelectorAll("#top-filter-dropdown .dropdown-option").forEach(opt => {
-    opt.classList.toggle("active", opt.getAttribute("onclick").includes(`'${formatKey}'`));
+
+  // Highlight dropdown options
+  document.querySelectorAll("#top-filter-dropdown .dropdown-option, #dispatch-log-dropdown .dropdown-option").forEach(opt => {
+    const clickAttr = opt.getAttribute("onclick") || "";
+    opt.classList.toggle("active", clickAttr.includes(`'${formatKey}'`));
   });
+
+  // Sync category nav links
+  document.querySelectorAll("#category-filter-nav .nav-link-item").forEach(link => {
+    const f = link.getAttribute("data-filter");
+    link.classList.toggle("active", f === formatKey);
+  });
+
+  // Update dispatch log dropdown button label
+  const btn = document.getElementById("dispatch-log-btn");
+  if (btn) {
+    const label = formatKey === "all" ? "_DISPATCH_LOG" : `_${formatKey.toUpperCase()}S`;
+    btn.innerHTML = `${label} &#9660;`;
+  }
+
   renderTimelineList();
   closeAllTopDropdowns();
 }
@@ -188,7 +227,8 @@ function applyTopFilter(formatKey) {
 function applyTopSort(sortOrder) {
   activeSortOrder = sortOrder;
   document.querySelectorAll("#top-sort-dropdown .dropdown-option").forEach(opt => {
-    opt.classList.toggle("active", opt.getAttribute("onclick").includes(`'${sortOrder}'`));
+    const clickAttr = opt.getAttribute("onclick") || "";
+    opt.classList.toggle("active", clickAttr.includes(`'${sortOrder}'`));
   });
   renderTimelineList();
   closeAllTopDropdowns();
@@ -231,6 +271,7 @@ function renderTimelineList() {
       if (!title.includes(searchQuery) && !subtitle.includes(searchQuery) && !excerpt.includes(searchQuery) && !pillar.includes(searchQuery) && !tags.includes(searchQuery)) {
         return false;
       }
+    }
     return true;
   });
 

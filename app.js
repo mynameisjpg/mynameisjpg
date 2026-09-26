@@ -873,6 +873,126 @@ function applyCategoryFilter(filter) {
   renderCardMatrix();
 }
 
+/* ==============================================================================
+   TOP NAVBAR CONTROLS & DROPDOWN HANDLERS (FEED / INDEX)
+   ============================================================================== */
+function toggleDispatchLogDropdown() {
+  closeAllTopDropdowns("dispatch-log-dropdown");
+  const panel = document.getElementById("dispatch-log-dropdown");
+  const btn = document.getElementById("dispatch-log-btn");
+  if (!panel) return;
+  const isHidden = panel.style.display === "none" || !panel.style.display;
+  panel.style.display = isHidden ? "flex" : "none";
+  if (btn) btn.classList.toggle("active", isHidden);
+}
+
+function toggleTopSearchDropdown() {
+  closeAllTopDropdowns("top-search-dropdown");
+  const panel = document.getElementById("top-search-dropdown");
+  const btn = document.getElementById("top-navbar-search-btn");
+  if (!panel) return;
+  const isHidden = panel.style.display === "none" || !panel.style.display;
+  panel.style.display = isHidden ? "block" : "none";
+  if (btn) btn.classList.toggle("active", isHidden);
+  if (isHidden) {
+    const input = document.getElementById("top-search-input");
+    if (input) input.focus();
+  }
+}
+
+function toggleTopFilterDropdown() {
+  closeAllTopDropdowns("top-filter-dropdown");
+  const panel = document.getElementById("top-filter-dropdown");
+  const btn = document.getElementById("top-navbar-filter-btn");
+  if (!panel) return;
+  const isHidden = panel.style.display === "none" || !panel.style.display;
+  panel.style.display = isHidden ? "flex" : "none";
+  if (btn) btn.classList.toggle("active", isHidden);
+}
+
+function toggleTopSortDropdown() {
+  closeAllTopDropdowns("top-sort-dropdown");
+  const panel = document.getElementById("top-sort-dropdown");
+  const btn = document.getElementById("top-navbar-sort-btn");
+  if (!panel) return;
+  const isHidden = panel.style.display === "none" || !panel.style.display;
+  panel.style.display = isHidden ? "flex" : "none";
+  if (btn) btn.classList.toggle("active", isHidden);
+}
+
+function closeAllTopDropdowns(exceptId = null) {
+  const dropdowns = ["dispatch-log-dropdown", "top-search-dropdown", "top-filter-dropdown", "top-sort-dropdown"];
+  const btns = ["dispatch-log-btn", "top-navbar-search-btn", "top-navbar-filter-btn", "top-navbar-sort-btn"];
+
+  dropdowns.forEach((id, idx) => {
+    if (id !== exceptId) {
+      const panel = document.getElementById(id);
+      const btn = document.getElementById(btns[idx]);
+      if (panel) panel.style.display = "none";
+      if (btn) btn.classList.remove("active");
+    }
+  });
+}
+
+function handleTopInlineSearch(val) {
+  searchQuery = (val || "").trim();
+
+  // Sync inputs
+  const inlineInput = document.getElementById("top-inline-search-input");
+  const modalInput = document.getElementById("top-search-input");
+  if (inlineInput && inlineInput.value !== val) inlineInput.value = val;
+  if (modalInput && modalInput.value !== val) modalInput.value = val;
+
+  matrixVisibleCount = MATRIX_BATCH_SIZE;
+  renderCardMatrix();
+}
+
+function applyTopFilter(formatKey) {
+  activeFilter = formatKey;
+
+  // Highlight dropdown options
+  document.querySelectorAll("#top-filter-dropdown .dropdown-option, #dispatch-log-dropdown .dropdown-option").forEach(opt => {
+    const clickAttr = opt.getAttribute("onclick") || "";
+    opt.classList.toggle("active", clickAttr.includes(`'${formatKey}'`));
+  });
+
+  // Sync category nav links
+  document.querySelectorAll("#category-filter-nav .nav-link-item").forEach(link => {
+    const f = link.getAttribute("data-filter");
+    link.classList.toggle("active", f === formatKey);
+  });
+
+  // Update dispatch log dropdown button label
+  const btn = document.getElementById("dispatch-log-btn");
+  if (btn) {
+    const label = formatKey === "all" ? "_DISPATCH_LOG" : `_${formatKey.toUpperCase()}S`;
+    btn.innerHTML = `${label} &#9660;`;
+  }
+
+  matrixVisibleCount = MATRIX_BATCH_SIZE;
+  renderCardMatrix();
+  closeAllTopDropdowns();
+}
+
+function applyTopSort(sortOrder) {
+  activeSort = sortOrder === "newest" ? "recent" : sortOrder;
+  document.querySelectorAll("#top-sort-dropdown .dropdown-option").forEach(opt => {
+    const clickAttr = opt.getAttribute("onclick") || "";
+    opt.classList.toggle("active", clickAttr.includes(`'${sortOrder}'`));
+  });
+  matrixVisibleCount = MATRIX_BATCH_SIZE;
+  renderCardMatrix();
+  closeAllTopDropdowns();
+}
+
+// Close top dropdowns on click outside
+document.addEventListener("click", (e) => {
+  const isTopNav = e.target.closest(".sidebar-rail") || e.target.closest(".top-dropdown-panel");
+  if (!isTopNav) {
+    closeAllTopDropdowns();
+  }
+});
+
 /**
  * Global Newsletter Modal Dialog Handlers
  */
