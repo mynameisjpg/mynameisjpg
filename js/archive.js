@@ -521,21 +521,68 @@ function createSphereNodeMesh(radius, colorHex, emissiveIntensity = 0.3) {
   return new THREE.Mesh(geo, mat);
 }
 
+function splitTextIntoLines(text, maxCharsPerLine = 22) {
+  if (!text || text.length <= maxCharsPerLine) return [text];
+
+  // If text contains a comma (e.g. "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"), split by comma
+  if (text.includes(",")) {
+    const parts = text.split(",").map(p => p.trim());
+    if (parts.length >= 2) {
+      const line1 = parts[0] + ",";
+      const line2 = parts.slice(1).join(", ");
+      return [line1, line2];
+    }
+  }
+
+  // Otherwise split by space
+  const words = text.split(" ");
+  const lines = [];
+  let currentLine = "";
+
+  words.forEach(w => {
+    if ((currentLine + " " + w).trim().length <= maxCharsPerLine || !currentLine) {
+      currentLine = currentLine ? currentLine + " " + w : w;
+    } else {
+      lines.push(currentLine);
+      currentLine = w;
+    }
+  });
+
+  if (currentLine) lines.push(currentLine);
+  return lines;
+}
+
 function create3DTextSprite(text, colorHexStr, fontSize = 20) {
+  const lines = splitTextIntoLines(text, 22);
+  const lineCount = lines.length;
+
+  const canvasWidth = 440;
+  const canvasHeight = lineCount > 1 ? 110 : 60;
+
   const canvasText = document.createElement("canvas");
-  canvasText.width = 300;
-  canvasText.height = 70;
+  canvasText.width = canvasWidth;
+  canvasText.height = canvasHeight;
+
   const tCtx = canvasText.getContext("2d");
   tCtx.font = `600 ${fontSize}px 'Azeret Mono', monospace`;
   tCtx.fillStyle = colorHexStr;
   tCtx.textAlign = "center";
   tCtx.textBaseline = "middle";
-  tCtx.fillText(text, 150, 35);
+
+  const lineHeight = fontSize * 1.25;
+  const startY = (canvasHeight / 2) - ((lineCount - 1) * lineHeight / 2);
+
+  lines.forEach((l, i) => {
+    tCtx.fillText(l, canvasWidth / 2, startY + (i * lineHeight));
+  });
 
   const texture = new THREE.CanvasTexture(canvasText);
   const spriteMat = new THREE.SpriteMaterial({ map: texture, transparent: true, depthTest: false });
   const sprite = new THREE.Sprite(spriteMat);
-  sprite.scale.set(70, 16, 1);
+
+  const baseScaleY = lineCount > 1 ? 22 : 14;
+  const aspect = canvasWidth / canvasHeight;
+  sprite.scale.set(baseScaleY * aspect, baseScaleY, 1);
   return sprite;
 }
 
@@ -910,12 +957,16 @@ function drawNodeGraph() {
     ctx.fillStyle = node.color;
     ctx.fill();
 
-    // Text Label
+    // Text Label (Supports Multi-line)
     ctx.font = `${isHovered || isActive ? "600" : "400"} 10px 'Azeret Mono', monospace`;
     ctx.fillStyle = isHovered || isActive ? "#FFFFFF" : (isConnected ? "#D4D4D4" : "#A0A0A0");
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText(node.label, node.x, node.y + r + 14);
+
+    const labelLines = splitTextIntoLines(node.label, 20);
+    labelLines.forEach((l, idx) => {
+      ctx.fillText(l, node.x, node.y + r + 14 + (idx * 13));
+    });
   });
 }
 
