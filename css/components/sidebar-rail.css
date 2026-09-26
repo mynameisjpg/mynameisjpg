@@ -460,12 +460,16 @@
     display: none !important;
   }
 
+  /* Remove Filter Button from Top Navbar (Available in Full Viewport) */
+  #top-navbar-filter-btn {
+    display: none !important;
+  }
+
   /* Offset Main Layout for 48px Top Navbar */
   .archive-split-shell,
   .split-layout {
     margin-left: 0 !important;
     margin-top: 48px !important;
-    width: 100vw !important;
     height: calc(100vh - 48px) !important;
   }
 
