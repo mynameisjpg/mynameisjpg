@@ -24,10 +24,29 @@
   <!-- ====================================================================
        COMPONENT 1: ULTRA-THIN LEFT SIDEBAR RAIL (48px)
        ==================================================================== -->
+  <!-- ====================================================================
+       COMPONENT 1: ULTRA-THIN LEFT SIDEBAR RAIL (48px) / TOP NAVBAR
+       ==================================================================== -->
   <aside class="sidebar-rail" data-component="sidebar-rail" aria-label="Main Navigation Rail">
     <!-- Top Brand Logo -->
     <div class="sidebar-top-section">
-      <a href="index.html" class="brand-logo-v" title="Untitled.jpg">[ UNTITLED.JPG ]</a>
+      <a href="index.html" class="brand-logo-v" title="Untitled.jpg">
+        <span class="logo-full">[ UNTITLED.JPG ]</span>
+        <span class="logo-short">[ .JPG ]</span>
+      </a>
+    </div>
+
+    <!-- Top Navbar SVG Control Buttons (Search, Filter, Sort) -->
+    <div class="top-nav-controls-group">
+      <button type="button" class="top-nav-icon-btn" id="top-navbar-search-btn" title="Search Dispatches" onclick="toggleTopSearchDropdown()">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+      <button type="button" class="top-nav-icon-btn" id="top-navbar-filter-btn" title="Filter Formats" onclick="toggleTopFilterDropdown()">
+        <svg viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+      </button>
+      <button type="button" class="top-nav-icon-btn" id="top-navbar-sort-btn" title="Sort Dispatches" onclick="toggleTopSortDropdown()">
+        <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+      </button>
     </div>
 
     <!-- Stacked Vertical Route Links -->
@@ -54,6 +73,27 @@
       </a>
     </div>
   </aside>
+
+  <!-- Interactive Dropdown Overlays attached to Top Navbar -->
+  <div id="top-search-dropdown" class="top-dropdown-panel search-dropdown-panel" style="display:none;">
+    <input type="text" id="top-search-input" placeholder="SEARCH DISPATCHES..." aria-label="Search dispatches" autocomplete="off" />
+  </div>
+
+  <div id="top-filter-dropdown" class="top-dropdown-panel menu-dropdown-panel" style="display:none;">
+    <div class="dropdown-header">[ FILTER BY FORMAT ]</div>
+    <button type="button" class="dropdown-option active" onclick="applyTopFilter('all')">SHOW ALL DISPATCHES</button>
+    <button type="button" class="dropdown-option" onclick="applyTopFilter('essay')">_ESSAYS</button>
+    <button type="button" class="dropdown-option" onclick="applyTopFilter('note')">_NOTES</button>
+    <button type="button" class="dropdown-option" onclick="applyTopFilter('bookmark')">_BOOKMARKS</button>
+    <button type="button" class="dropdown-option" onclick="applyTopFilter('resource')">_RESOURCES</button>
+  </div>
+
+  <div id="top-sort-dropdown" class="top-dropdown-panel menu-dropdown-panel" style="display:none;">
+    <div class="dropdown-header">[ SORT ORDER ]</div>
+    <button type="button" class="dropdown-option active" onclick="applyTopSort('newest')">NEWEST FIRST ↓</button>
+    <button type="button" class="dropdown-option" onclick="applyTopSort('oldest')">OLDEST FIRST ↑</button>
+    <button type="button" class="dropdown-option" onclick="applyTopSort('title')">ALPHABETICAL (A-Z)</button>
+  </div>
 
   <!-- ====================================================================
        COMPONENT 2: SPLIT 50-50 LAYOUT (Timeline Axis & Detail Panel)

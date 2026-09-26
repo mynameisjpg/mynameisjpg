@@ -1,21 +1,23 @@
 /* ==============================================================================
-   COMPONENT: SIDEBAR RAIL (Ultra-Thin 48px Left Navigation)
+   COMPONENT: SIDEBAR RAIL & TOP NAVBAR (Responsive Dual-Mode Navigation)
    ============================================================================== */
 
 .sidebar-rail {
-  width: var(--sidebar-width);
+  width: var(--sidebar-width, 48px);
   height: 100vh;
   position: fixed;
   left: 0;
   top: 0;
-  background-color: var(--bg-panel);
+  background-color: var(--bg-panel, #121212);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 0;
-  z-index: var(--z-sidebar);
-  border-right: 1px solid var(--border-faint);
+  z-index: var(--z-sidebar, 100);
+  border-right: 1px solid var(--border-faint, rgba(255, 255, 255, 0.08));
+  box-sizing: border-box;
+  transition: all 0.25s ease;
 }
 
 .sidebar-top-section {
@@ -26,32 +28,41 @@
 }
 
 .brand-logo-v {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
   font-size: 0.62rem;
   font-weight: 500;
   letter-spacing: 0.14em;
-  color: var(--text-bright);
+  color: var(--text-bright, #F5F5F5);
   text-decoration: none;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   white-space: nowrap;
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast, 0.15s ease);
 }
 
 .brand-logo-v:hover {
-  color: var(--accent-coral);
+  color: var(--accent-coral, #E84A5F);
+}
+
+.logo-full {
+  display: inline-block;
+}
+
+.logo-short {
+  display: none;
 }
 
 .sidebar-top-icon {
-  color: var(--text-muted);
+  color: var(--text-muted, #888888);
   cursor: pointer;
   padding: 4px;
 }
 
 .sidebar-top-icon:hover {
-  color: var(--accent-coral);
+  color: var(--accent-coral, #E84A5F);
 }
 
+/* Vertical Nav Links (Desktop Tall Screen) */
 .nav-stacked-vertical {
   display: flex;
   flex-direction: column;
@@ -61,30 +72,31 @@
 }
 
 .nav-link-item {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
   font-size: 0.62rem;
   font-weight: 400;
   letter-spacing: 0.12em;
-  color: var(--text-muted);
+  color: var(--text-muted, #888888);
   text-decoration: none;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  transition: all var(--transition-fast);
+  transition: all var(--transition-fast, 0.15s ease);
   white-space: nowrap;
   cursor: pointer;
   padding: 4px 0;
 }
 
 .nav-link-item:hover {
-  color: var(--accent-coral);
+  color: var(--accent-coral, #E84A5F);
 }
 
 .nav-link-item.active {
-  color: var(--text-bright);
+  color: var(--text-bright, #F5F5F5);
   font-weight: 600;
-  border-left: 2px solid var(--accent-coral);
+  border-left: 2px solid var(--accent-coral, #E84A5F);
 }
 
+/* Bottom Pinned Icons */
 .sidebar-bottom-icons {
   display: flex;
   flex-direction: column;
@@ -104,11 +116,213 @@
   width: 15px;
   height: 15px;
   fill: none;
-  stroke: var(--text-muted);
+  stroke: var(--text-muted, #888888);
   stroke-width: 1.6;
-  transition: stroke var(--transition-fast);
+  transition: stroke var(--transition-fast, 0.15s ease);
 }
 
-.sidebar-bottom-icons svg:hover {
-  stroke: var(--accent-coral);
+.sidebar-bottom-icons svg:hover,
+.sidebar-bottom-icons a.active svg {
+  stroke: var(--accent-coral, #E84A5F);
+}
+
+/* Top Navbar SVG Action Button Group (Hidden on Desktop Tall) */
+.top-nav-controls-group {
+  display: none;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.top-nav-icon-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--rounded-sm, 2px);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted, #888888);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  padding: 0;
+}
+
+.top-nav-icon-btn:hover,
+.top-nav-icon-btn.active {
+  border-color: var(--accent-coral, #E84A5F);
+  color: var(--accent-coral, #E84A5F);
+  background: rgba(232, 74, 95, 0.12);
+}
+
+.top-nav-icon-btn svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Top Dropdown Panels */
+.top-dropdown-panel {
+  position: fixed;
+  top: 48px;
+  z-index: 9999;
+  background: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 2px solid var(--accent-coral, #E84A5F);
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75);
+  padding: 0.85rem;
+  box-sizing: border-box;
+}
+
+.search-dropdown-panel {
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100vw - 2rem);
+  max-width: 500px;
+}
+
+.menu-dropdown-panel {
+  right: 1rem;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.dropdown-header {
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  color: var(--accent-coral, #E84A5F);
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.top-dropdown-panel input {
+  width: 100%;
+  background: var(--neutral-bg, #121212);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 2px;
+  outline: none;
+}
+
+.dropdown-option {
+  background: transparent;
+  border: none;
+  color: var(--text-body, #D4D4D4);
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.68rem;
+  padding: 0.45rem 0.65rem;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.15s ease;
+}
+
+.dropdown-option:hover,
+.dropdown-option.active {
+  background: rgba(232, 74, 95, 0.18);
+  color: var(--accent-coral, #E84A5F);
+}
+
+/* ==============================================================================
+   BREAKPOINT: SHORT HEIGHT (< 740px) OR NARROW WIDTH (< 980px)
+   Transforms sidebar into a sleek Top Navbar
+   ============================================================================== */
+@media (max-height: 740px), (max-width: 980px) {
+  .sidebar-rail {
+    width: 100vw;
+    height: 48px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.12));
+    background-color: var(--neutral-surface, #161616);
+    z-index: 1000;
+  }
+
+  .sidebar-top-section {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .brand-logo-v {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  .logo-full {
+    display: none;
+  }
+
+  .logo-short {
+    display: inline-block;
+    color: var(--accent-coral, #E84A5F);
+  }
+
+  /* Hide vertical nav links in top bar mode */
+  .nav-stacked-vertical {
+    display: none;
+  }
+
+  /* Show SVG Action Icon Group in Top Navbar */
+  .top-nav-controls-group {
+    display: flex;
+  }
+
+  /* Bottom icons format horizontally on right side */
+  .sidebar-bottom-icons {
+    flex-direction: row;
+    gap: 0.85rem;
+  }
+
+  /* Adjust main container to offset top 48px navbar */
+  .archive-split-shell,
+  .split-layout {
+    margin-left: 0 !important;
+    margin-top: 48px !important;
+    width: 100vw !important;
+    height: calc(100vh - 48px) !important;
+  }
+
+  .timeline-column,
+  .nodemap-column,
+  .grid-column {
+    height: calc(100vh - 48px) !important;
+  }
+
+  /* Hide static header labels on short height/mobile */
+  .timeline-header-top,
+  .matrix-header-group,
+  .header-legend,
+  .timeline-controls-row {
+    display: none !important;
+  }
+
+  .timeline-header-group {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .timeline-scroll-container {
+    padding-top: 1rem;
+  }
 }

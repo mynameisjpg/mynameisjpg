@@ -67,11 +67,22 @@ async function fetchArchivePostsJson() {
   }
 }
 
+let activeSortOrder = "newest";
+
 function initArchiveListeners() {
   // Search input
   const searchInput = document.getElementById("archive-search-input");
   if (searchInput) {
     searchInput.addEventListener("input", (e) => {
+      searchQuery = e.target.value.toLowerCase().trim();
+      renderTimelineList();
+    });
+  }
+
+  // Top navbar search input
+  const topSearchInput = document.getElementById("top-search-input");
+  if (topSearchInput) {
+    topSearchInput.addEventListener("input", (e) => {
       searchQuery = e.target.value.toLowerCase().trim();
       renderTimelineList();
     });
@@ -106,6 +117,81 @@ function initArchiveListeners() {
       resetNodeHighlights();
     });
   }
+
+  // Close top navbar dropdowns when clicking outside
+  document.addEventListener("click", (e) => {
+    const isInsideNavBtn = e.target.closest(".top-nav-icon-btn");
+    const isInsidePanel = e.target.closest(".top-dropdown-panel");
+    if (!isInsideNavBtn && !isInsidePanel) {
+      closeAllTopDropdowns();
+    }
+  });
+}
+
+function toggleTopSearchDropdown() {
+  closeAllTopDropdowns("top-search-dropdown");
+  const panel = document.getElementById("top-search-dropdown");
+  const btn = document.getElementById("top-navbar-search-btn");
+  if (!panel) return;
+  const isHidden = panel.style.display === "none";
+  panel.style.display = isHidden ? "block" : "none";
+  if (btn) btn.classList.toggle("active", isHidden);
+  if (isHidden) {
+    const input = document.getElementById("top-search-input");
+    if (input) input.focus();
+  }
+}
+
+function toggleTopFilterDropdown() {
+  closeAllTopDropdowns("top-filter-dropdown");
+  const panel = document.getElementById("top-filter-dropdown");
+  const btn = document.getElementById("top-navbar-filter-btn");
+  if (!panel) return;
+  const isHidden = panel.style.display === "none";
+  panel.style.display = isHidden ? "flex" : "none";
+  if (btn) btn.classList.toggle("active", isHidden);
+}
+
+function toggleTopSortDropdown() {
+  closeAllTopDropdowns("top-sort-dropdown");
+  const panel = document.getElementById("top-sort-dropdown");
+  const btn = document.getElementById("top-navbar-sort-btn");
+  if (!panel) return;
+  const isHidden = panel.style.display === "none";
+  panel.style.display = isHidden ? "flex" : "none";
+  if (btn) btn.classList.toggle("active", isHidden);
+}
+
+function closeAllTopDropdowns(exceptId = null) {
+  const dropdowns = ["top-search-dropdown", "top-filter-dropdown", "top-sort-dropdown"];
+  const btns = ["top-navbar-search-btn", "top-navbar-filter-btn", "top-navbar-sort-btn"];
+
+  dropdowns.forEach((id, idx) => {
+    if (id !== exceptId) {
+      const panel = document.getElementById(id);
+      const btn = document.getElementById(btns[idx]);
+      if (panel) panel.style.display = "none";
+      if (btn) btn.classList.remove("active");
+    }
+  });
+}
+
+function applyTopFilter(formatKey) {
+  activeFormatFilter = formatKey;
+  document.querySelectorAll("#top-filter-dropdown .dropdown-option").forEach(opt => {
+    opt.classList.toggle("active", opt.getAttribute("onclick").includes(`'${formatKey}'`));
+  });
+  renderTimelineList();
+  closeAllTopDropdowns();
+}
+
+function applyTopSort(sortOrder) {
+  activeSortOrder = sortOrder;
+  document.querySelectorAll("#top-sort-dropdown .dropdown-option").forEach(opt => {
+    opt.classList.toggle("active", opt.getAttribute("onclick").includes(`'${sortOrder}'`));
+  });
+  renderTimelineList();
+  closeAllTopDropdowns();
 }
 
 /**
@@ -145,9 +231,17 @@ function renderTimelineList() {
       if (!title.includes(searchQuery) && !subtitle.includes(searchQuery) && !excerpt.includes(searchQuery) && !pillar.includes(searchQuery) && !tags.includes(searchQuery)) {
         return false;
       }
-    }
     return true;
   });
+
+  // Apply Sort Order
+  if (activeSortOrder === "newest") {
+    filteredTimelinePosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+  } else if (activeSortOrder === "oldest") {
+    filteredTimelinePosts.sort((a, b) => new Date(a.date) - new Date(b.date));
+  } else if (activeSortOrder === "title") {
+    filteredTimelinePosts.sort((a, b) => (a.title || "").localeCompare(b.title || ""));
+  }
 
   // Update Status Label
   if (filterStatusLabel) {
