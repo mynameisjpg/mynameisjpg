@@ -31,16 +31,13 @@ sys_id: "SYS_202609_BOO"
 
 # 01. Archival Excerpts
 
+> "You open up a database of pictures used to train artificial intelligence systems. At first, things seem straightforward. You're met with thousands of images: apples and oranges, birds, dogs, horses, mountains, clouds, houses, and street signs. But as you probe further into the dataset, people begin to appear... Things get strange: A photograph of a woman smiling in a bikini is labeled a ‘slattern, slut, slovenly woman, trollop.’" — Kate Crawford and Trevor Paglen (Excavating AI).
 
-> *"You open up a database of pictures used to train artificial intelligence systems. At first, things seem straightforward. You're met with thousands of images: apples and oranges, birds, dogs, horses, mountains, clouds, houses, and street signs. But as you probe further into the dataset, people begin to appear... Things get strange: A photograph of a woman smiling in a bikini is labeled a ‘slattern, slut, slovenly woman, trollop.’"* — Kate Crawford and Trevor Paglen (Excavating AI).
-
-
-> *"Methodologically, we could call this project an archeology of datasets: we have been digging through the material layers, cataloguing the principles and values by which something was constructed, and analyzing what normative patterns of life were assumed, supported, and reproduced".* — Kate Crawford and Trevor Paglen (Excavating AI).
+> "Methodologically, we could call this project an archeology of datasets: we have been digging through the material layers, cataloguing the principles and values by which something was constructed, and analyzing what normative patterns of life were assumed, supported, and reproduced". — Kate Crawford and Trevor Paglen (Excavating AI).
 
 ---
 
 # 02. Why is it worth your reading time:
-
 
 **- What does it challenge?** The widespread tech-industry myth that AI training data and datasets are neutral, objective, and purely scientific representations of the world.
 

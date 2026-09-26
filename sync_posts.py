@@ -93,8 +93,8 @@ def format_inline_markdown(text):
     """Transforms inline Markdown: bold, italic, code, math, links."""
     # Escape HTML special chars inside text (preserving intentional tags if any)
     out = text
-    # Math inline: $E = mc^2$ -> <code class="math-inline">$E = mc^2$</code>
-    out = re.sub(r'(?<!\\)\$([^\$]+?)\$', r'<code class="math-inline">$\1$</code>', out)
+    # Math inline: $E = mc^2$ -> <span class="math-inline">$E = mc^2$</span>
+    out = re.sub(r'(?<!\\)\$([^\$]+?)\$', r'<span class="math-inline">$\1$</span>', out)
     # Bold + Italic: ***text*** or ___text___
     out = re.sub(r'\*\*\*(.+?)\*\*\*', r'<strong><em>\1</em></strong>', out)
     # Bold: **text**

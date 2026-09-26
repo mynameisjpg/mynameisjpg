@@ -177,22 +177,22 @@
   margin: 0 !important;
 }
 
-.post-body-content p code.math-inline,
-.post-body-content li code.math-inline,
-.essay-body-content p code.math-inline,
-.essay-body-content li code.math-inline,
-code.math-inline {
-  font-family: inherit;
+.post-body-content p .math-inline,
+.post-body-content li .math-inline,
+.essay-body-content p .math-inline,
+.essay-body-content li .math-inline,
+.math-inline {
+  font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace;
   background: rgba(255, 255, 255, 0.08);
   padding: 0.15em 0.45em;
   border-radius: 2px;
   color: var(--accent-coral);
   display: inline-block;
   vertical-align: middle;
-  line-height: 1;
+  line-height: 1.1;
 }
 
-code.math-inline .katex {
+.math-inline .katex {
   font-size: 0.98em;
   color: inherit;
 }
