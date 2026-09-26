@@ -42,7 +42,7 @@
 .essay-section-kicker {
   font-family: var(--font-mono);
   font-size: var(--text-lg);
-  font-weight: var(--weight-medium);
+  font-weight: var(--weight-semibold);
   color: var(--text-bright);
   margin: 2.8rem 0 1rem 0;
   letter-spacing: 0.02em;

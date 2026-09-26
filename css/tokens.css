@@ -42,6 +42,12 @@
   --font-serif: 'Platypi', Georgia, serif;
   --font-display: 'Azeret Mono', monospace;
 
+  /* Font Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
   /* Typography Scale */
   --text-xs: 0.58rem;
   --text-sm: 0.65rem;

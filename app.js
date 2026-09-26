@@ -27,13 +27,16 @@ if (typeof window !== "undefined" && window.DYNAMIC_POSTS) {
   ingestPostList(window.DYNAMIC_POSTS);
 }
 
-let activePostId = "2026-09-25-turing-queer-ai";
-let activeFilter = "all";
-let activeSort = "recent";
-let searchQuery = "";
+let matrixVisibleCount = 9;
+const MATRIX_BATCH_SIZE = 9;
+let matrixObserver = null;
 
 /**
  * Filter & Sort Helper for Dispatches
+ * Rules enforced:
+ * 1. Only "published" status dispatches (excludes "draft" or "archived").
+ * 2. Featured posts ("featured: true") take priority / sort to top.
+ * 3. Applies format filter, search query, and selected sort order.
  */
 function getFilteredAndSortedPosts() {
   const uniquePosts = [];
@@ -41,7 +44,9 @@ function getFilteredAndSortedPosts() {
 
   Object.values(POSTS_DATABASE).forEach(post => {
     const uniqueKey = post.slug || post.id || post.sys_id;
-    if (uniqueKey && !seen.has(uniqueKey) && post.status !== "draft") {
+    const statusStr = (post.status || "published").toLowerCase();
+    const isPublished = statusStr === "published" || statusStr === "active";
+    if (uniqueKey && !seen.has(uniqueKey) && isPublished) {
       seen.add(uniqueKey);
       uniquePosts.push(post);
     }
@@ -67,8 +72,13 @@ function getFilteredAndSortedPosts() {
     return true;
   });
 
-  // Sort
+  // Sort: Featured posts first, then secondary sort
   filtered.sort((a, b) => {
+    const isFeatA = Boolean(a.featured);
+    const isFeatB = Boolean(b.featured);
+    if (isFeatA && !isFeatB) return -1;
+    if (!isFeatA && isFeatB) return 1;
+
     if (activeSort === "recent") {
       return (b.date || "").localeCompare(a.date || "");
     } else if (activeSort === "oldest") {
@@ -127,20 +137,24 @@ async function loadDynamicPosts() {
   }
 
   // Render Matrix Cards and Initial Reader Pane
-  renderCardMatrix();
+  renderCardMatrix(true);
   selectAndRenderPost(activePostId);
 }
 
 /**
  * Dynamically Render the Asymmetric Card Grid Matrix
  */
-function renderCardMatrix() {
+function renderCardMatrix(resetPagination = true) {
   const container = document.getElementById("card-matrix");
   if (!container) return;
 
-  const displayPosts = getFilteredAndSortedPosts();
+  if (resetPagination) {
+    matrixVisibleCount = MATRIX_BATCH_SIZE;
+  }
 
-  if (displayPosts.length === 0) {
+  const allPosts = getFilteredAndSortedPosts();
+
+  if (allPosts.length === 0) {
     container.innerHTML = `
       <div style="grid-column: 1 / -1; padding: 3rem 1.5rem; text-align: center; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.78rem; border: 1px dashed var(--border-subtle); border-radius: var(--radius-md);">
         [NO DISPATCHES FOUND MATCHING SELECTION]
@@ -150,13 +164,16 @@ function renderCardMatrix() {
         </button>
       </div>
     `;
+    updateMatrixSentinel(0, 0);
     return;
   }
+
+  const visiblePosts = allPosts.slice(0, matrixVisibleCount);
 
   const ratios = ["h-tall-1", "h-tall-2", "h-med", "h-square", "h-wide", "h-tall-1"];
   const fallbackArts = ["coral", "charcoal", "eye", "circle", "charcoal", "coral"];
 
-  container.innerHTML = displayPosts.map((post, idx) => {
+  container.innerHTML = visiblePosts.map((post, idx) => {
     const key = post.slug || post.id || post.sys_id;
     const ratio = post.aspect_ratio || ratios[idx % ratios.length];
     const format = (post.format || "ESSAY").toLowerCase();
@@ -198,6 +215,66 @@ function renderCardMatrix() {
       }
     });
   });
+
+  updateMatrixSentinel(visiblePosts.length, allPosts.length);
+}
+
+/**
+ * Infinite Scroll Sentinel Status & Observer
+ */
+function updateMatrixSentinel(loadedCount, totalCount) {
+  let sentinel = document.getElementById("matrix-sentinel");
+  if (!sentinel) {
+    const matrixCol = document.querySelector(".matrix-column");
+    if (matrixCol) {
+      sentinel = document.createElement("div");
+      sentinel.id = "matrix-sentinel";
+      sentinel.className = "matrix-sentinel-loader";
+      matrixCol.appendChild(sentinel);
+    }
+  }
+
+  if (!sentinel) return;
+
+  if (loadedCount === 0) {
+    sentinel.style.display = "none";
+    return;
+  }
+
+  sentinel.style.display = "flex";
+  if (loadedCount < totalCount) {
+    sentinel.innerHTML = `<span class="sentinel-text">[ SCROLL FOR MORE DISPATCHES • ${loadedCount} OF ${totalCount} LOADED ]</span>`;
+    setupSentinelObserver();
+  } else {
+    sentinel.innerHTML = `<span class="sentinel-text">[ ALL DISPATCHES LOADED • ${totalCount} TOTAL ]</span>`;
+    if (matrixObserver) {
+      matrixObserver.disconnect();
+      matrixObserver = null;
+    }
+  }
+}
+
+function setupSentinelObserver() {
+  if (matrixObserver) matrixObserver.disconnect();
+
+  const sentinel = document.getElementById("matrix-sentinel");
+  if (!sentinel) return;
+
+  if ("IntersectionObserver" in window) {
+    matrixObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const allPosts = getFilteredAndSortedPosts();
+          if (matrixVisibleCount < allPosts.length) {
+            matrixVisibleCount += MATRIX_BATCH_SIZE;
+            renderCardMatrix(false);
+          }
+        }
+      });
+    }, { rootMargin: "200px" });
+
+    matrixObserver.observe(sentinel);
+  }
 }
 
 function resetMatrixFilters() {
@@ -212,7 +289,7 @@ function resetMatrixFilters() {
 
   applyCategoryFilter("all");
   updateSortSelection("recent", "MOST RECENT");
-  renderCardMatrix();
+  renderCardMatrix(true);
 }
 
 /**

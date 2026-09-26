@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNTITLED.JPG // DISPATCH_CREATOR_STUDIO</title>
+  <link rel="stylesheet" href="css/post-creator.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;500;600;700&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- TOP CREATOR APP HEADER -->
+  <header class="creator-app-header">
+    <div class="brand-section">
+      <span class="brand-kicker">[ UNTITLED.JPG ]</span>
+      <h1 class="app-title">DISPATCH_CREATOR_STUDIO</h1>
+    </div>
+
+    <!-- FORMAT PICKER CARDS -->
+    <div class="format-picker-group">
+      <button type="button" class="btn-format-card active" data-format="essay" title="Deep-dive theoretical essays">
+        <span class="format-icon">📄</span> [ESSAY]
+      </button>
+      <button type="button" class="btn-format-card" data-format="note" title="Observations & working notes">
+        <span class="format-icon">📝</span> [NOTE]
+      </button>
+      <button type="button" class="btn-format-card" data-format="bookmark" title="Curated reads & external links">
+        <span class="format-icon">🔖</span> [BOOKMARK]
+      </button>
+      <button type="button" class="btn-format-card" data-format="resource" title="Code, toolkits & downloads">
+        <span class="format-icon">🛠️</span> [RESOURCE]
+      </button>
+    </div>
+
+    <!-- HEADER TOP ACTIONS -->
+    <div class="header-actions">
+      <button type="button" class="btn-header-action" onclick="openFileDrawer()" title="Open existing dispatch from _posts/">
+        📂 OPEN DISPATCH
+      </button>
+      <button type="button" class="btn-header-action" onclick="loadFormatTemplate(currentFormat)" title="Reset to empty template">
+        ➕ NEW DISPATCH
+      </button>
+      <button type="button" class="btn-header-action btn-save-draft" onclick="saveDispatch('draft')" title="Save draft without publishing">
+        💾 SAVE DRAFT
+      </button>
+      <button type="button" class="btn-header-action btn-publish" onclick="saveDispatch('published')" title="Publish dispatch and re-sync homepage feed">
+        🚀 PUBLISH DISPATCH
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN EDITOR WORKSPACE -->
+  <main class="creator-workspace">
+
+    <!-- LEFT COLUMN: METADATA & EDITOR -->
+    <section class="editor-pane-left">
+
+      <!-- METADATA ACCORDION FORM -->
+      <div class="metadata-panel">
+        <div class="panel-header" onclick="document.getElementById('meta-form-grid').style.display = document.getElementById('meta-form-grid').style.display === 'none' ? 'grid' : 'none'">
+          <span class="panel-title">// DISPATCH METADATA & TEMPLATE CONFIGURATION</span>
+          <span style="color:var(--text-muted); font-size:0.7rem;">▼ TOGGLE FIELDS</span>
+        </div>
+
+        <div class="form-grid" id="meta-form-grid">
+
+          <!-- TITLE & SUBTITLE -->
+          <div class="form-group span-2">
+            <label class="form-label">TITLE:</label>
+            <input type="text" id="field-title" class="form-input" placeholder="Title of dispatch..." autocomplete="off">
+          </div>
+
+          <div class="form-group span-2">
+            <label class="form-label">SUBTITLE / CONCEPTUAL THESIS:</label>
+            <input type="text" id="field-subtitle" class="form-input" placeholder="Subtitle expanding on thesis..." autocomplete="off">
+          </div>
+
+          <div class="form-group span-2">
+            <label class="form-label">EXCERPT (CARD PREVIEW & SEARCH SUMMARY):</label>
+            <textarea id="field-excerpt" class="form-textarea" rows="2" placeholder="2-sentence preview summary..."></textarea>
+          </div>
+
+          <!-- DATE & AUTHOR -->
+          <div class="form-group">
+            <label class="form-label">DATE & TIME:</label>
+            <input type="text" id="field-date" class="form-input" placeholder="2026-09-26 12:00:00 -0300">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">AUTHOR:</label>
+            <input type="text" id="field-author" class="form-input" value="Juan P. Giusepponi">
+          </div>
+
+          <!-- PILLAR & SUBTOPIC -->
+          <div class="form-group">
+            <label class="form-label">THEMATIC PILLAR:</label>
+            <select id="field-pillar" class="form-select">
+              <option value="AI Perception, Culture & Representation">AI Perception, Culture & Representation</option>
+              <option value="Visual Perception & Psychology of Seeing">Visual Perception & Psychology of Seeing</option>
+              <option value="Language, LLMs & Artificial Intelligence">Language, LLMs & Artificial Intelligence</option>
+              <option value="Philosophy of the Image, Tech & Visual Culture">Philosophy of the Image, Tech & Visual Culture</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">SUBTOPIC / DOMAIN:</label>
+            <input type="text" id="field-subtopic" class="form-input" placeholder="e.g. Synthetic Identity & Normative Machines">
+          </div>
+
+          <!-- FORMAT SPECIFIC DYNAMIC FIELDS -->
+          <div class="form-group" id="box-note-category" style="display: none;">
+            <label class="form-label">NOTE CATEGORY:</label>
+            <select id="field-note-category" class="form-select">
+              <option value="reflection">reflection</option>
+              <option value="observations">observations</option>
+              <option value="journal entry">journal entry</option>
+              <option value="catharsis">catharsis</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="box-bookmark-media" style="display: none;">
+            <label class="form-label">BOOKMARK MEDIA TYPE:</label>
+            <select id="field-bookmark-media" class="form-select">
+              <option value="article">article</option>
+              <option value="book">book</option>
+              <option value="video">video</option>
+              <option value="movie">movie</option>
+              <option value="paper">paper</option>
+              <option value="tool">tool</option>
+              <option value="website">website</option>
+              <option value="event">event</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="box-bookmark-source" style="display: none;">
+            <label class="form-label">BOOKMARK SOURCE / ORIGIN:</label>
+            <input type="text" id="field-bookmark-source" class="form-input" placeholder="e.g. Stanford AI Lab / Fei-Fei Li">
+          </div>
+
+          <div class="form-group" id="box-resource-category" style="display: none;">
+            <label class="form-label">RESOURCE CATEGORY:</label>
+            <select id="field-resource-category" class="form-select">
+              <option value="tool/software">tool/software</option>
+              <option value="download">download</option>
+              <option value="article/paper/book">article/paper/book</option>
+              <option value="tutorial">tutorial</option>
+              <option value="link">link</option>
+              <option value="document">document</option>
+              <option value="video">video</option>
+            </select>
+          </div>
+
+          <div class="form-group span-2" id="box-url" style="display: none;">
+            <label class="form-label">PROMINENT DESTINATION URL:</label>
+            <input type="text" id="field-url" class="form-input" placeholder="https://external-resource-or-paper.com">
+          </div>
+
+          <!-- TAGS & READING TIME -->
+          <div class="form-group">
+            <label class="form-label">TAGS (COMMA SEPARATED):</label>
+            <input type="text" id="field-tags" class="form-input" placeholder="epistemology, latent-space">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">READING TIME / SPECS:</label>
+            <input type="text" id="field-readtime" class="form-input" value="8 min read">
+          </div>
+
+          <!-- IMAGE & ARTWORK -->
+          <div class="form-group">
+            <label class="form-label">IMAGE PATH:</label>
+            <input type="text" id="field-image-path" class="form-input" value="assets/images/turing1.png">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">IMAGE ALT TEXT:</label>
+            <input type="text" id="field-image-alt" class="form-input" value="Dithered duotone artwork description">
+          </div>
+
+          <!-- SPECS & FEATURED -->
+          <div class="form-group">
+            <label class="form-label">THEME MODE:</label>
+            <select id="field-theme" class="form-select">
+              <option value="dark">dark (Midnight Slate)</option>
+              <option value="light">light (Off-White Slate)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">PUBLICATION STATUS:</label>
+            <select id="field-status" class="form-select">
+              <option value="published">published</option>
+              <option value="draft">draft</option>
+            </select>
+          </div>
+
+          <div class="form-group span-2 form-checkbox-group">
+            <input type="checkbox" id="field-featured">
+            <label for="field-featured" class="form-checkbox-label">★ FEATURED DISPATCH (Occupies 2 columns on homepage matrix)</label>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FORMATTING TOOLBAR -->
+      <div class="formatting-toolbar">
+        <button type="button" class="btn-tool" id="btn-tool-bold" title="Bold [**text**]"><b>B</b></button>
+        <button type="button" class="btn-tool" id="btn-tool-italic" title="Italic [*text*]"><i>I</i></button>
+        <div class="toolbar-sep"></div>
+        <button type="button" class="btn-tool" id="btn-tool-h2" title="Heading 2 [##]">H2</button>
+        <button type="button" class="btn-tool" id="btn-tool-h3" title="Heading 3 [###]">H3</button>
+        <div class="toolbar-sep"></div>
+        <button type="button" class="btn-tool" id="btn-tool-quote" title="Blockquote [>]">Quote</button>
+        <button type="button" class="btn-tool" id="btn-tool-code" title="Inline Code [`code`]">Code</button>
+        <button type="button" class="btn-tool" id="btn-tool-codeblock" title="Code Block [```]">Code Block</button>
+        <div class="toolbar-sep"></div>
+        <button type="button" class="btn-tool" id="btn-tool-list" title="Bullet List [-]">• List</button>
+        <button type="button" class="btn-tool" id="btn-tool-table" title="Markdown Table">Table</button>
+        <button type="button" class="btn-tool" id="btn-tool-math" title="LaTeX Math [$$]">Math $$</button>
+        <button type="button" class="btn-tool" id="btn-tool-action" title="Prominent Action Link">Action Link</button>
+      </div>
+
+      <!-- CONTENT EDITOR TEXTAREA -->
+      <div class="content-textarea-box">
+        <textarea id="field-content" class="markdown-editor" placeholder="Write markdown content here..."></textarea>
+      </div>
+
+    </section>
+
+    <!-- RIGHT COLUMN: REAL-TIME READER PANE PREVIEW -->
+    <section class="editor-pane-right">
+      <article class="post-column essay-column" id="essay-reading-pane" aria-label="Live Reader View Preview">
+        <!-- Live hydrated preview -->
+      </article>
+    </section>
+
+  </main>
+
+  <!-- FILE DRAWER MODAL -->
+  <div id="file-drawer-modal" class="file-drawer-modal">
+    <div class="drawer-box">
+      <div class="drawer-header">
+        <h2 class="drawer-title">// SELECT DISPATCH FROM _POSTS/ FOLDER</h2>
+        <button type="button" class="btn-header-action" onclick="closeFileDrawer()">✕ CLOSE</button>
+      </div>
+      <div class="drawer-list" id="drawer-posts-list">
+        <!-- Hydrated dynamically by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/post-creator.js"></script>
+</body>
+</html>

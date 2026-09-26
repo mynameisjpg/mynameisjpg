@@ -204,7 +204,7 @@
   color: var(--text-bright);
   text-decoration: none;
   font-size: 0.85rem;
-  font-weight: var(--weight-semibold);
+  font-weight: var(--weight-medium);
   line-height: 1.35;
   display: inline-flex;
   align-items: center;

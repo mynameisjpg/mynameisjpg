@@ -1,0 +1,414 @@
+/* ==============================================================================
+   UNTITLED.JPG — DISPATCH CREATOR & EDITOR STUDIO STYLES
+   ============================================================================== */
+
+@import url("tokens.css");
+@import url("components/reader-pane.css");
+@import url("components/metadata-tiers.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-body);
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOP APP HEADER */
+.creator-app-header {
+  background-color: var(--bg-panel);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0.6rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  z-index: 100;
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.brand-kicker {
+  color: var(--accent-coral);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+.app-title {
+  color: var(--text-bright);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* FORMAT PICKER CARDS */
+.format-picker-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btn-format-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  padding: 0.35rem 0.65rem;
+  font-family: inherit;
+  font-size: 0.68rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.btn-format-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-strong);
+  color: var(--text-bright);
+}
+
+.btn-format-card.active {
+  background: rgba(232, 74, 95, 0.15);
+  border-color: var(--accent-coral);
+  color: var(--text-bright);
+}
+
+.btn-format-card .format-icon {
+  font-size: 0.85rem;
+}
+
+/* HEADER TOP ACTIONS */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-header-action {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-bright);
+  padding: 0.4rem 0.75rem;
+  font-family: inherit;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-header-action:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--border-strong);
+}
+
+.btn-header-action.btn-save-draft {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--border-strong);
+}
+
+.btn-header-action.btn-publish {
+  background: var(--accent-coral);
+  border-color: var(--accent-coral);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.btn-header-action.btn-publish:hover {
+  background: #ff5c73;
+  box-shadow: 0 0 15px var(--accent-coral-glow);
+}
+
+/* MAIN EDITOR WORKSPACE (SPLIT LAYOUT) */
+.creator-workspace {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: calc(100vh - 46px);
+  overflow: hidden;
+}
+
+/* LEFT COLUMN: EDITOR FORM & TEXTAREA */
+.editor-pane-left {
+  background: var(--bg-deep);
+  border-right: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* METADATA COLLAPSIBLE SECTION */
+.metadata-panel {
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 1rem 1.2rem;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.panel-title {
+  color: var(--accent-coral);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form-group.span-2 {
+  grid-column: span 2;
+}
+
+.form-label {
+  color: var(--text-muted);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+}
+
+.form-input, .form-select, .form-textarea {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-bright);
+  font-family: inherit;
+  font-size: 0.74rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--accent-coral);
+}
+
+.form-checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 0.4rem;
+}
+
+.form-checkbox-label {
+  color: var(--text-bright);
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+/* FORMATTING TOOLBAR */
+.formatting-toolbar {
+  background: #181818;
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0.4rem 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.btn-tool {
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-body);
+  padding: 0.25rem 0.5rem;
+  font-family: inherit;
+  font-size: 0.68rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-tool:hover {
+  background: var(--bg-card);
+  color: var(--text-bright);
+  border-color: var(--border-strong);
+}
+
+.toolbar-sep {
+  width: 1px;
+  height: 16px;
+  background: var(--border-subtle);
+  margin: 0 0.2rem;
+}
+
+/* MARKDOWN CONTENT TEXTAREA */
+.content-textarea-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 350px;
+}
+
+.markdown-editor {
+  flex: 1;
+  width: 100%;
+  background: #121212;
+  color: #E2E2E2;
+  font-family: 'JetBrains Mono', 'Azeret Mono', monospace;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  padding: 1.2rem;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+/* RIGHT COLUMN: READER PANE LIVE PREVIEW */
+.editor-pane-right {
+  background: var(--bg-panel);
+  height: 100%;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+/* MODAL / FILE DRAWER */
+.file-drawer-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+}
+
+.file-drawer-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer-box {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  width: 650px;
+  max-width: 90vw;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.drawer-title {
+  color: var(--accent-coral);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+.drawer-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.8rem;
+}
+
+.drawer-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.drawer-item:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-coral);
+}
+
+.drawer-item-title {
+  color: var(--text-bright);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.drawer-item-meta {
+  color: var(--text-muted);
+  font-size: 0.64rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.status-badge {
+  padding: 0.1rem 0.35rem;
+  border-radius: 2px;
+  font-size: 0.58rem;
+  font-weight: 600;
+}
+
+.status-badge.published {
+  background: rgba(46, 204, 113, 0.15);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.status-badge.draft {
+  background: rgba(241, 196, 15, 0.15);
+  color: #f1c40f;
+  border: 1px solid rgba(241, 196, 15, 0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .creator-workspace {
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+  }
+}

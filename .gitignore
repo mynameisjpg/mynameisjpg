@@ -1,0 +1,8 @@
+# PyInstaller build outputs
+build/
+dist/
+*.spec
+
+# System files
+.DS_Store
+Thumbs.db

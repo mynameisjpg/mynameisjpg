@@ -179,3 +179,22 @@
     gap: 1.2rem;
   }
 }
+
+/* Infinite Scroll Sentinel Status */
+.matrix-sentinel-loader {
+  padding: 2rem 1rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px dashed var(--border-subtle);
+}
+
+.matrix-sentinel-loader .sentinel-text {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
