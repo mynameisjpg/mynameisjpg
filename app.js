@@ -432,7 +432,7 @@ function renderPost(postId) {
   pane.innerHTML = `
     <!-- Mobile Return to Grid Feed Button -->
     <button type="button" class="btn-return-grid" onclick="showGridFeedMobile()" aria-label="Return to Grid Feed">
-      <span class="return-arrow">◄</span>
+      <span class="return-arrow">&lt;&lt;</span>
       <span class="return-text">[ RETURN TO GRID FEED ]</span>
     </button>
 
