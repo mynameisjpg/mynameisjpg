@@ -1013,7 +1013,7 @@ function closeSubscribeModal() {
   }
 }
 
-let GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/formResponse";
+let GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/1Q8jF3EyHwsz4YQEBI7tmOtcn8X_gF9c1EqN63_1sKh4/formResponse";
 const GOOGLE_FORM_ENTRY_ID = "entry.1020667952";
 
 async function handleSubscribeSubmit(event) {
