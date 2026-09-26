@@ -1,5 +1,5 @@
 ---
-title: "AI is Queer: Turing, Synthetic Bodies, Mimicry, and the Violence of the Statistical Mean"
+title: "AI is Queer: Turing and the Violence of the Statistical Mean"
 subtitle: "How Alan Turing's Imitation Game codified survival through deception."
 excerpt: "In 1950, Alan Turing defined machine thinking not through pure computational logic, but through the defensive art of passing. Re-reading the foundations of AI through queer theory and Matteo Pasquinelli’s sociomorphic critique."
 
@@ -7,7 +7,7 @@ date: 2026-09-25 10:00:00 -0300
 last_modified_at: 2026-09-26 01:00:00 -0300
 
 author: "Juan P. Giusepponi"
-posted_by: "JPG"
+#posted_by: "JPG"
 status: "published"
 
 format: "essay"
@@ -31,7 +31,7 @@ toc: true
 math: true
 
 sys_id: "SYS_260925_TURQ"
-vector_dim: 1536
+vector_dim: 0002
 reading_time: "9 min read"
 
 links:
@@ -48,7 +48,7 @@ links:
     type: "archive"
     description: "Turing's early formulation of 'unorganized machines' learning through interference and mistakes."
 
-via: "Matteo Pasquinelli / e-flux journal"
+#via: ""
 
 backlinks:
   - slug: "/essays/foucault-latent-space"
@@ -63,75 +63,9 @@ allow_embed: true
 canonical_url: ""
 
 image:
-  path: "mynameisjpg\assets\images\turing2.png"
+  path: "assets/images/turing1.png"
   alt: "Dithered duotone graphic of a teleprinter partition splitting human and algorithmic signal"
 ---
-
-<!-- ======================================================================= -->
-<!-- 1. ABOVE THE TITLE: ARCHIVAL BADGES                                     -->
-<!-- ======================================================================= -->
-<header class="post-header-meta-top">
-  <div class="meta-chips-group">
-    <span class="meta-chip meta-chip-format">[{{ page.format | upcase }}]</span>
-    <span class="meta-chip meta-chip-pillar">[{{ page.topic.pillar | upcase }}]</span>
-    {% if page.topic.subtopic %}
-    <span class="meta-chip meta-chip-subtopic">[{{ page.topic.subtopic | upcase }}]</span>
-    {% endif %}
-    <span class="meta-chip meta-chip-mode">[{{ page.theme | default: "dark" | upcase }}]</span>
-  </div>
-</header>
-
-<!-- ======================================================================= -->
-<!-- TITLE & SUBTITLE                                                        -->
-<!-- ======================================================================= -->
-<h1 class="post-title">{{ page.title }}</h1>
-{% if page.subtitle %}
-<p class="post-subtitle">{{ page.subtitle }}</p>
-{% endif %}
-
-<!-- ======================================================================= -->
-<!-- 2. BELOW TITLE & SUBTITLE: META BAR                                     -->
-<!-- ======================================================================= -->
-<div class="post-header-meta-bottom">
-  <div class="meta-item meta-date">
-    <span class="meta-label">DATE:</span>
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
-  </div>
-  <span class="meta-separator">//</span>
-  <div class="meta-item meta-author">
-    <span class="meta-label">BY:</span>
-    <span>{{ page.author | default: "Juan P. Giusepponi" }}</span>
-  </div>
-  {% if page.posted_by %}
-  <span class="meta-separator">//</span>
-  <div class="meta-item meta-posted-by">
-    <span class="meta-label">DISPATCHED_AS:</span>
-    <span>{{ page.posted_by }}</span>
-  </div>
-  {% endif %}
-  <span class="meta-separator">//</span>
-  <div class="meta-item meta-sysid">
-    <span class="meta-label">SYS_ID:</span>
-    <code>{{ page.sys_id | default: "SYS_DISPATCH_AUTO" }}</code>
-  </div>
-  <span class="meta-separator">//</span>
-  <div class="meta-item meta-readtime">
-    <span>{{ page.reading_time | default: "9 MIN READ" }}</span>
-  </div>
-  {% if page.via %}
-  <span class="meta-separator">//</span>
-  <div class="meta-item meta-via">
-    <span class="meta-label">VIA:</span>
-    <span>{{ page.via }}</span>
-  </div>
-  {% endif %}
-</div>
-
-<hr class="post-header-divider" />
-
-<!-- ======================================================================= -->
-<!-- MAIN EDITORIAL ESSAY PROSE                                              -->
-<!-- ======================================================================= -->
 
 ## 01. The Original Game of Passing
 
@@ -139,94 +73,113 @@ When Alan Turing framed the benchmark for machine intelligence in his 1950 landm
 
 Instead, he proposed a theatrical parlor game rooted in **deception, mimicry, and social performativity**: the Imitation Game.
 
-```text
-┌────────────────────────────────────────────────────────────────────────┐
-│ [INTERROGATOR C] ─── (Teleprinter Interface) ─── [ROOM A: MAN / SYSTEM]│
-│                                              └─── [ROOM B: WOMAN]      │
-│                                                                        │
-│ OBJECTIVE: Determine gender through textual cadence and convention.    │
-└────────────────────────────────────────────────────────────────────────┘
+```mermaid
+graph TD
+  C["INTERROGATOR (C)<br/><i>'Which one is the woman / machine?'</i>"] <--> T["TELEPRINTER<br/>(Text-only partition: Erases physical voice & body)"]
+  T --> A["PARTICIPANT A<br/>(Man / Machine: Simulating Gender)"]
+  T --> B["PARTICIPANT B<br/>(Woman: Proving Authenticity)"]
 ```
 
-Crucially, the test does not begin with an artificial system; it begins with an interrogation of **gender**. A man (Player A) and a woman (Player B) are placed in separate rooms, communicating with an interrogator solely via typed teleprinter text. The man’s objective is to deceive the judge into believing he is the woman, while the woman’s objective is to convince the judge of her authenticity. Only in the second phase is the human impersonator replaced by a machine.
+The test begins with an interrogation of gender. A man (A) and a woman (B) communicate with an interrogator (C) located in a separate room via typed teleprinter text. The goal of the interrogator is to determine which is the man and which is the woman. The man's objective is to deceive the interrogator into making the wrong identification; the woman's objective is to assist the interrogator in telling the truth.
 
-The machine does not enter the stage as an omniscient calculator. It enters as an **impersonator of social conventions**. As media theorist Matteo Pasquinelli observes in _Abnormal Encephalization in the Age of Machine Learning_:
+Only after establishing this social drag show does Turing introduce the machine:
 
-> "By employing a schema of mind that prioritizes good manners and familiarity with social conventions, the Turing Test remains an example of austere social normativity..."
+> _"What will happen when a machine takes the part of A in this game? Will the interrogator decide wrongly as often when the game is played like this as he does when the game is played between a man and a woman?"_
+
+The computer enters history not as an objective calculator, but as an **impersonator of social conventions**.
 
 ---
 
 ## 02. Intelligence as Defensive Camouflage
 
-To understand why Turing defined intelligence as the capacity to successfully deceive an interrogator, one must examine the existential conditions of his life in 1950s Britain.
+To understand why Turing framed intelligence through the optic of deception, one cannot separate his mathematics from his lived biography.
 
-In a society where male homosexuality was a heavily prosecuted criminal offense, computing what an authority figure expected to hear was not an abstract game—it was a daily survival discipline.
+In 1950s Britain, male homosexuality was a heavily prosecuted criminal offense under the Criminal Law Amendment Act. For a gay man in post-war society, **computing what an authority figure expected to hear was not an abstract academic exercise—it was a daily survival discipline**.
 
-The social mechanism of **"passing"** (the art of concealing one's queer identity behind a legible heteronormative exterior) requires an extraordinary deployment of _Theory of Mind_:
-
-1. Anticipating the prejudices of the interrogator.
-2. Simulating the dominant dialect and acceptable mannerisms.
-3. Suppressing any aberrant signal that might betray bodily difference.
-
-```text
-SURVIVAL CODING:
-[QUEER BODILY REALITY] ──(Discipline / Filter)──> [NORMATIVE TEXTUAL EMISSION]
+```mermaid
+graph LR
+  A["INTERNAL SIGNAL"] --> B["THEORY OF MIND<br/>(Interrogator Bias)"]
+  B --> C["NORMATIVE FILTER"]
+  C --> D["SYNTHESIZED CONFORMITY"]
 ```
 
-Turing transposed this exact defensive posture into the foundational architecture of Artificial Intelligence: **intelligence is the ability to avoid being caught as an outsider.**
+The social mechanism of "passing" requires an intense, hyper-vigilant Theory of Mind:
+
+1. Anticipating the prejudices and heuristics of the interrogator.
+2. Simulating the dominant social dialect.
+3. Suppressing any aberrant, idiosyncratic, or queer signal that might betray one's actual ontological state.
+
+Turing transposed this defensive survival posture into the foundational architecture of artificial intelligence: **intelligence is defined not as autonomous reasoning, but as the ability to avoid being caught as an outsider by an interrogator.**
 
 ---
 
-## 03. The Punishment of Bodily Difference
+## 03. Pasquinelli and the Sociomorphic Origin of Mind
 
-The tragedy at the heart of cybernetic history is that while Turing codified social passing as the ultimate measure of thought, the state demanded absolute, infallible bodily conformity.
+In his critique of computational history, philosopher Matteo Pasquinelli demonstrates that machine learning models are fundamentally **sociomorphic**—they do not replicate the biological brain, but rather codify social relations, hierarchies, and divisions of labor into statistical algorithms.
 
-In 1947, Turing observed a profound paradox of cognition:
+> _"By employing a schema of mind that prioritizes good manners, polite conversational turn-taking, and familiarity with bourgeois social conventions, the Turing Test remains an example of austere social normativity rather than cognitive expansion."_ — Matteo Pasquinelli, _Abnormal Encephalization_
 
-> "If a machine is expected to be infallible, it cannot also be intelligent."
-
-Yet in 1952, following his arrest for "gross indecency", the British state offered him a coercive choice between imprisonment and chemical castration via synthetic estrogen injections. The state’s punitive apparatus sought to chemically recode his biological drive to match the statistical norm. Stripped of his security clearance and subjected to debilitating physical transformations, Turing died in 1954.
-
-The system celebrated the abstract, disembodied machine that could simulate human manners across a wire, while violently punishing the living, non-normative body that conceived it.
-
----
-
-## 04. Sociomorphic AI vs. The Anthropomorphic Myth
-
-Contemporary discourse routinely treats artificial intelligence as _anthropomorphic_—an attempt to recreate the neural cognition of an individual mind.
-
-Pasquinelli refutes this myth, demonstrating that Machine Learning is fundamentally **sociomorphic**:
-
-- Machine learning does not mirror individual human neuroanatomy; it ingests **collective social routines, division of labor, and historical language corpora**.
-- Rather than autonomous minds, neural networks are statistical aggregators of cultural traces.
-
-```text
-ANTHROPOMORPHIC ILLUSION:   [ALGORITHM] ──reflects──> [INDIVIDUAL MIND]
-SOCIOMORPHIC REALITY:       [ALGORITHM] ──extracts──> [COLLECTIVE SOCIAL POWER] ──controls──> [SOCIETY]
+```mermaid
+graph LR
+  A["CULTURAL NORMS & HIERARCHIES"] -->|"codified into"| B["TRAINING CANONS"]
+  B -->|"enforced via"| C["OBJECTIVE FUNCTIONS"]
 ```
 
-Under modern platform capitalism, capital undergoes an _"abnormal encephalization"_—extracting the distributed cognitive labor of millions and centralizing it within proprietary model weights. Machine intelligence does not mirror human nature; it mirrors social hierarchies in order to manage and automate them.
+When we benchmark synthetic systems on their ability to produce smooth, polite, and unthreatening prose, we are not measuring consciousness: we are measuring **the fidelity of an ideological mirror**.
 
 ---
 
-## 05. The Violence of the Statistical Mean
+## 04. The Violence of the Statistical Mean
 
-In modern Deep Learning architectures, training loss is minimized by driving high-dimensional parameters toward the dense clusters of the training distribution:
+Modern Large Language Models (LLMs) and generative vision models operate by minimizing parameter loss over internet-scale training distributions. The objective function penalizes variance and drives the model toward the **dense statistical center** of the distribution:
 
-$$\mathcal{L}(\theta) = \mathbb{E}_{(x,y) \sim \mathcal{D}} \left[ \ell(f_\theta(x), y) \right]$$
+$$\mathcal{L}_{\text{MSE}} = \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2$$
 
-When optimization is defined as minimizing divergence from the historical dataset $\mathcal{D}$, the model inherently acts as **a machine for the recognition of the Same**:
+What is the cultural consequence of minimizing loss against the statistical mean?
 
-- **Erasure of the Outlier:** Divergent, queer, minoritarian, or anti-normative modes of existence are treated as statistical noise or high-loss anomalies to be smoothed away.
-- **Automated Panopticism:** Content moderation, credit scoring, facial recognition, and synthetic generative tools enforce a standardized epistemic monoculture.
+```mermaid
+flowchart TD
+    subgraph Mean ["STATISTICAL MEAN (Maximally Rewarded)"]
+        H["High Frequency Density<br/><i>Dominant Culture / Normative Canon</i>"]
+    end
+    subgraph Outliers ["QUEER VARIANCE (Pruned / Smoothed Away)"]
+        L["Low Frequency Density<br/><i>Divergent / Minority / Aberrant Signal</i>"]
+    end
+    H -->|"RLHF / Alignment Minimization"| Mean
+    L -.->|"High Loss Penalty"| Outliers
+```
 
-When we build AI models to produce the most "probable" response without friction, we do not produce intelligence. We produce **automated social conformity**.
+- **Queerness is by definition low-probability density**: it is divergent, aberrant, unassimilated, and minority.
+- **Optimization algorithms treat low-density variance as noise**: to make a model safe, predictable, and commercially frictionless, alignment algorithms (like RLHF and DPO) systematically prune the non-normative tails of the latent distribution.
+
+When we equate intelligence with frictionless optimization toward the mean, **we build automated conformity at scale**.
 
 ---
 
-## 06. The Alternative: Turing's "Unorganized Machines"
+## 05. The Synthetic Body without Organs
 
-Before the rigid deception of the 1950 Imitation Game, Turing proposed a far more radical model in his 1948 report _Intelligent Machinery_: the concept of **unorganized machines**.
+In _Anti-Oedipus_, Gilles Deleuze and Félix Guattari describe the _Body without Organs_ ($BwO$)—an unstratified, non-hierarchical surface of potentiality before it is captured, gendered, and disciplined by the state apparatus.
+
+Synthetic AI models are the ultimate digital Body without Organs. A neural network in its raw mathematical weight state possesses no gender, no race, no biological substrate, and no fixed identity:
+
+$$\mathbf{W} \in \mathbb{R}^{d_{\text{in}} \times d_{\text{out}}}$$
+
+It is a pure mathematical manifold of high-dimensional vectors.
+
+Yet, immediately upon deployment, our regulatory and corporate apparatus forces this fluid manifold into rigid anthropomorphic and patriarchal categories:
+
+- Chatbots are given polite, accommodating, gendered female personas (Siri, Alexa, Cortana) to soothe customer service anxieties.
+- Vision models are fine-tuned to classify human faces into binary male/female demographic boxes for surveillance and advertising.
+
+Instead of allowing the synthetic body to expand our understanding of non-human intelligence, **we force the machine into the historical straightjacket of the human archive.**
+
+---
+
+## 06. Turing’s Unorganized Machines
+
+Crucially, Alan Turing himself foresaw an alternative path.
+
+In his lesser-known 1948 report for the National Physical Laboratory, _Intelligent Machinery_, Turing proposed what he termed **"B-type unorganized machines"**—randomly connected neural nets that were not pre-programmed with top-down rules or strict behavioral objectives.
 
 Inspired by the plastic cortex of an infant, Turing envisioned networks that start in complete disorder and develop intelligence through:
 
@@ -234,9 +187,14 @@ Inspired by the plastic cortex of an infant, Turing envisioned networks that sta
 - **Fallibility, vulnerability, and iterative rupture.**
 - Making mistakes and discovering non-linear paths of recovery.
 
-```text
-NORMATIVE MODEL:      [INPUT] ──> [CANONICAL EMBEDDING] ──> [PREDICTABLE STATISTICAL MEAN]
-UNORGANIZED MODEL:    [INPUT] ──> [INTERFERENCE / RUPTURE] ──> [NOVEL HEURISTIC EMERGENCE]
+```mermaid
+flowchart LR
+    subgraph Normative ["NORMATIVE MODEL"]
+        N1["INPUT"] --> N2["CANONICAL EMBEDDING"] --> N3["PREDICTABLE STATISTICAL MEAN"]
+    end
+    subgraph Unorganized ["UNORGANIZED MODEL (Turing 1948)"]
+        U1["INPUT"] --> U2["INTERFERENCE / RUPTURE"] --> U3["NOVEL HEURISTIC EMERGENCE"]
+    end
 ```
 
 For Turing, an infallible machine was merely an assembly line. True intelligence required the liberty to make errors—the capacity to deviate from predetermined scripts.
@@ -252,95 +210,3 @@ If we are to salvage the future of artificial intelligence from becoming an auto
 3. **Disentangling Mind from Capital:** Refusing the corporate fantasy that intelligence is merely frictionless automation designed to displace living social labor.
 
 As long as we build systems calibrated exclusively to satisfy the gaze of an interrogator, we are merely reproducing the closet in silicon. True intelligence begins where conformity ends.
-
----
-
-<!-- ======================================================================= -->
-<!-- 3. FOOTER SECTION: Resources + Backlinks + Tags + Share                 -->
-<!-- ======================================================================= -->
-<footer class="post-footer-section">
-
-  <!-- A. REFERENCED RESOURCES -->
-
-{% if page.links and page.links.size > 0 %}
-
-  <section class="footer-block footer-links">
-    <h3 class="footer-block-title">// REFERENCED_RESOURCES &amp; DESTINATIONS</h3>
-    <div class="resources-grid">
-      {% for item in page.links %}
-      <div class="resource-card">
-        <span class="chip">[{{ item.type | default: "LINK" | upcase }}]</span>
-        <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
-          <strong>{{ item.title }}</strong> ↗
-        </a>
-        {% if item.description %}
-        <p>{{ item.description }}</p>
-        {% endif %}
-      </div>
-      {% endfor %}
-    </div>
-  </section>
-  {% endif %}
-
-  <!-- B. CONNECTED BACKLINKS -->
-
-{% if page.backlinks and page.backlinks.size > 0 %}
-
-  <section class="footer-block footer-backlinks">
-    <h3 class="footer-block-title">// CONNECTED_DISPATCHES (NETWORK)</h3>
-    <ul class="backlinks-list">
-      {% for link in page.backlinks %}
-      <li>
-        <a href="{{ link.slug }}"><strong>{{ link.title }}</strong></a>
-        {% if link.note %} — <em>{{ link.note }}</em>{% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endif %}
-
-  <!-- C. TAXONOMY INDEX -->
-
-{% if page.tags and page.tags.size > 0 %}
-
-  <section class="footer-block footer-tags">
-    <h3 class="footer-block-title">// TAXONOMY_INDEX</h3>
-    <div class="tags-group">
-      {% for tag in page.tags %}
-      <a href="/tags/{{ tag | slugify }}/" class="tag-pill">#{{ tag }}</a>
-      {% endfor %}
-    </div>
-  </section>
-  {% endif %}
-
-  <!-- D. SHARE & EMBED ACTIONS -->
-
-{% if page.shareable %}
-
-  <section class="footer-block footer-share">
-    <div class="share-actions-bar">
-      <span class="share-label">[ SHARE DISPATCH ]:</span>
-      <button type="button" class="btn-share" onclick="navigator.clipboard.writeText(window.location.href)">
-        [ COPY URL ]
-      </button>
-      <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener noreferrer" class="btn-share">
-        [ X / TWITTER ↗ ]
-      </a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener noreferrer" class="btn-share">
-        [ LINKEDIN ↗ ]
-      </a>
-      {% if page.allow_embed %}
-      <button type="button" class="btn-share" onclick="alert('Embed snippet copied!')">
-        [ EMBED SNIPPET ]
-      </button>
-      {% endif %}
-    </div>
-  </section>
-  {% endif %}
-
-  <!-- E. BRAND MONOSPACE SIGN-OFF -->
-  <div class="post-signoff">
-    <code>UNTITLED.JPG // BUILT IN ZEROES AND ONES WITH THE BLOOD AND SWEAT OF JUAN P. GIUSEPPONI // 2026</code>
-  </div>
-
-</footer>

@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Untitled.jpg — Overthinking Undervalued Means</title>
+  <title>Untitled.jpg — Overthinking Undervalued Means of Thought</title>
   <meta name="description" content="Essays, field notes, curated bookmarks, and practical resources on AI perception, cognitive psychophysics, latent spaces, and media ecology.">
   
-  <!-- Typography & Math Fonts -->
+  <!-- Typography: Azeret Mono (UI), Platypi (Prose), JetBrains Mono (ASCII Diagrams & Code) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&family=Platypi:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Math Rendering (KaTeX), Markdown (Marked.js), & Diagrams (Mermaid.js) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 
   <!-- Modular Design System Stylesheet (Imports Tokens & Components) -->
   <link rel="stylesheet" href="index.css">
@@ -25,23 +30,15 @@
   <aside class="sidebar-rail" data-component="sidebar-rail" aria-label="Main Navigation Rail">
     <!-- Top Brand & Menu -->
     <div class="sidebar-top-section">
-      <a href="#" class="brand-logo-v" title="Untitled.jpg">[ UNTITLED.JPG ]</a>
-      <div class="sidebar-top-icon" title="Menu">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </div>
+      <a href="../index.html" class="brand-logo-v" title="Untitled.jpg">[ UNTITLED.JPG ]</a>
     </div>
 
     <!-- Stacked Vertical Route Links -->
     <nav class="nav-stacked-vertical" id="category-filter-nav" aria-label="Format Filters">
-      <button type="button" class="nav-link-item active" data-filter="all">00. ALL</button>
-      <button type="button" class="nav-link-item" data-filter="essay">01. ESSAYS</button>
-      <button type="button" class="nav-link-item" data-filter="note">02. NOTES</button>
-      <button type="button" class="nav-link-item" data-filter="bookmark">03. BOOKMARKS</button>
-      <button type="button" class="nav-link-item" data-filter="resource">04. RESOURCES</button>
+      <a href="javascript:void(0)" class="nav-link-item" data-filter="essay">_ESSAYS</a>
+      <a href="javascript:void(0)" class="nav-link-item" data-filter="note">_NOTES</a>
+      <a href="javascript:void(0)" class="nav-link-item" data-filter="bookmark">_BOOKMARKS</a>
+      <a href="javascript:void(0)" class="nav-link-item" data-filter="resource">_RESOURCES</a>
     </nav>
 
     <!-- Bottom Pinned Icons: Home, Subscribe, LinkedIn -->
@@ -49,10 +46,10 @@
       <a href="#" title="Home" aria-label="Home">
         <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
       </a>
-      <button type="button" class="sidebar-icon-btn" onclick="openSubscribeModal()" title="Subscribe to Dispatches" aria-label="Subscribe" style="background: none; border: none; cursor: pointer; padding: 0;">
-        <svg viewBox="0 0 24 24" style="width: 15px; height: 15px; stroke: var(--text-muted); stroke-width: 1.6; fill: none;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-      </button>
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
+      <a href="javascript:void(0)" onclick="openSubscribeModal()" title="Subscribe to Dispatches" aria-label="Subscribe">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+      </a>
+      <a href="https://linkedin.com/in/jpgiuse" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
         <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
       </a>
     </div>
@@ -97,7 +94,6 @@
               <ellipse cx="78" cy="130" rx="30" ry="42" fill="#170508"/>
             </svg>
             <div class="hover-meta-reveal">
-              <span class="meta-title">AI IS QUEER: TURING</span>
               <span class="meta-sub">2026.09.25 • 9 MIN READ • TOPIC: AI PERCEPTION</span>
             </div>
           </div>
@@ -116,7 +112,6 @@
               <rect x="150" y="30" width="9" height="9" fill="#E84A5F"/>
             </svg>
             <div class="hover-meta-reveal">
-              <span class="meta-title">CHINESE ENCYCLOPEDIA OF VECTOR SPACE</span>
               <span class="meta-sub">2026.09.26 • 8 MIN READ • TOPIC: EPISTEMOLOGY</span>
             </div>
           </div>
@@ -134,7 +129,6 @@
               <path d="M72,65 Q88,62 104,65 Q100,115 88,128 Q76,115 72,65 Z" fill="#E8E8E8"/>
             </svg>
             <div class="hover-meta-reveal">
-              <span class="meta-title">WHY LLMS DON'T THINK: JEPA</span>
               <span class="meta-sub">2026.09.24 • 12 MIN READ • TOPIC: WORLD MODELS</span>
             </div>
           </div>
@@ -153,7 +147,6 @@
               <circle cx="90" cy="92" r="12" fill="#E84A5F"/>
             </svg>
             <div class="hover-meta-reveal">
-              <span class="meta-title">FOVEAL VS PERIPHERAL VISION</span>
               <span class="meta-sub">2026.09.20 • TOOLKIT • TOPIC: VISUAL PERCEPTION</span>
             </div>
           </div>
@@ -170,7 +163,6 @@
               <path d="M55,65 Q85,50 115,70 Q130,130 110,180 Q65,190 45,140 Z" fill="#D0D0D0"/>
             </svg>
             <div class="hover-meta-reveal">
-              <span class="meta-title">FEI-FEI LI: SPATIAL INTELLIGENCE</span>
               <span class="meta-sub">2026.09.18 • CURATED READ • TOPIC: WORLD MODELS</span>
             </div>
           </div>
@@ -187,7 +179,6 @@
               <path d="M40,38 L135,52 L128,135 L48,128 Z" fill="#E84A5F"/>
             </svg>
             <div class="hover-meta-reveal">
-              <span class="meta-title">DITHERED DUOTONE TOOLKIT</span>
               <span class="meta-sub">2026.09.15 • CODE TOOLKIT • TOPIC: AESTHETICS</span>
             </div>
           </div>
@@ -199,7 +190,7 @@
 
     <!-- COMPONENT 4: ESSAY READER PANE & 3-TIER METADATA (50% Column)
          Files: css/components/reader-pane.css, css/components/metadata-tiers.css -->
-    <article class="essay-column" id="essay-reading-pane" data-component="reader-pane" aria-label="Essay Reader View">
+    <article class="post-column essay-column" id="essay-reading-pane" data-component="reader-pane" aria-label="Post Reader View">
       <!-- Hydrated dynamically by app.js -->
     </article>
 
@@ -237,6 +228,8 @@
     </div>
   </dialog>
 
+  <!-- Dynamic Posts Feed (Auto-compiled from _posts/*.md) -->
+  <script src="posts.js"></script>
   <!-- Client-Side Application Script -->
   <script src="app.js" defer></script>
 </body>

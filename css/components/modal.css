@@ -62,7 +62,7 @@
 
 .modal-description {
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   color: var(--text-body);
   line-height: var(--leading-normal);
   margin-bottom: 1.75rem;

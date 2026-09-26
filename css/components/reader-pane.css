@@ -1,7 +1,9 @@
 /* ==============================================================================
    COMPONENT: ESSAY READER PANE
+   Supports Coherent Dual-Theme Typography (Dark / Light Post Modes)
    ============================================================================== */
 
+.post-column,
 .essay-column {
   background-color: var(--bg-panel);
   padding: 4.5rem 4.5rem;
@@ -11,59 +13,21 @@
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
-/* Light Theme Mode for Reader Pane */
-.essay-column.theme-light {
-  background-color: var(--bg-light-mode);
-  color: var(--text-light-mode-title);
-}
-
-.essay-column.theme-light .essay-title {
-  color: var(--text-light-mode-title);
-}
-
-.essay-column.theme-light .essay-paragraph {
-  color: var(--text-light-mode-body);
-}
-
-.essay-column.theme-light .post-header-meta-bottom {
-  color: var(--text-light-mode-muted);
-  border-bottom-color: var(--border-light-mode);
-}
-
-.essay-column.theme-light .meta-chip {
-  color: var(--text-light-mode-muted);
-  background: rgba(0, 0, 0, 0.06);
-}
-
-.essay-column.theme-light .essay-quote {
-  color: var(--text-light-mode-title);
-  border-left-color: var(--accent-coral);
-}
-
-.essay-column.theme-light .resource-card {
-  background: rgba(0, 0, 0, 0.04);
-  border-color: var(--border-light-mode);
-}
-
-.essay-column.theme-light .resource-card a {
-  color: var(--text-light-mode-title);
-}
-
-.essay-column.theme-light .post-footer-section {
-  border-top-color: var(--border-light-mode);
-}
-
-/* Reader Typography Hierarchy */
+/* ==============================================================================
+   DARK MODE TYPOGRAPHY HIERARCHY (Default)
+   ============================================================================== */
+.post-title,
 .essay-title {
   font-family: var(--font-mono);
   font-size: var(--text-2xl);
-  font-weight: 500;
+  font-weight: var(--weight-medium);
   line-height: var(--leading-tight);
   color: var(--text-bright);
   margin-bottom: 0.85rem;
   letter-spacing: -0.015em;
 }
 
+.post-subtitle,
 .essay-subtitle {
   font-family: var(--font-serif);
   font-size: var(--text-xl);
@@ -71,46 +35,532 @@
   color: var(--accent-coral);
   line-height: var(--leading-normal);
   margin-bottom: 1.5rem;
+  font-weight: var(--weight-bold);
 }
 
+.post-section-kicker,
 .essay-section-kicker {
   font-family: var(--font-mono);
-  font-size: 1.05rem;
-  font-weight: 500;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-medium);
   color: var(--text-bright);
-  margin: 2.5rem 0 1rem 0;
+  margin: 2.8rem 0 1rem 0;
   letter-spacing: 0.02em;
 }
 
+.post-paragraph,
 .essay-paragraph {
   font-family: var(--font-serif);
-  font-size: var(--text-lg);
+  font-size: var(--text-md);
   line-height: var(--leading-relaxed);
   color: var(--text-body);
-  margin-bottom: 1.5rem;
-  font-weight: 300;
+  margin-bottom: 1.6rem;
+  font-weight: var(--weight-regular); /* Platypi 400 for balanced legibility */
 }
 
+.post-paragraph strong,
 .essay-paragraph strong {
-  font-weight: 600;
+  font-weight: var(--weight-semibold);
   color: var(--text-bright);
 }
 
-.essay-column.theme-light .essay-paragraph strong {
-  color: var(--text-light-mode-title);
+.post-paragraph em,
+.essay-paragraph em {
+  font-style: italic;
 }
 
+.post-quote,
 .essay-quote {
   border-left: 2px solid var(--accent-coral);
   padding-left: 1.5rem;
-  margin: 2rem 0;
+  margin: 2.2rem 0;
   font-style: italic;
-  font-size: 1.18rem;
+  font-size: 1.08rem;
   color: var(--text-bright);
   line-height: 1.65;
+  font-weight: var(--weight-regular);
 }
 
+.post-subheading,
+.essay-subheading {
+  font-family: var(--font-mono);
+  font-size: 0.94rem;
+  font-weight: var(--weight-medium);
+  color: var(--text-bright);
+  margin: 2rem 0 0.8rem 0;
+  letter-spacing: 0.01em;
+}
+
+.post-divider,
+.essay-divider {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: 3rem 0;
+}
+
+.post-list,
+.essay-list {
+  font-family: var(--font-serif);
+  font-size: var(--text-md);
+  line-height: var(--leading-relaxed);
+  color: var(--text-body);
+  margin: 1.2rem 0 1.8rem 1.6rem;
+}
+
+.post-list li,
+.essay-list li {
+  margin-bottom: 0.6rem;
+}
+
+.post-list li strong,
+.essay-list li strong {
+  color: var(--text-bright);
+  font-weight: var(--weight-semibold);
+}
+
+.post-body-content pre,
+.essay-body-content pre {
+  background: #0E0E0E;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1.2rem 1.4rem;
+  margin: 2rem 0;
+  overflow-x: auto;
+  font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', 'SF Mono', Consolas, 'Courier New', monospace;
+  font-size: 0.76rem;
+  line-height: 1.25;
+  letter-spacing: 0;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.post-body-content pre code,
+.essay-body-content pre code {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: #E6E6E6;
+  white-space: pre;
+  tab-size: 2;
+  display: block;
+}
+
+.post-body-content p code,
+.post-body-content li code,
+.essay-body-content p code,
+.essay-body-content li code {
+  font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace;
+  font-size: 0.85em;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.15em 0.4em;
+  border-radius: 2px;
+  color: var(--accent-coral);
+}
+
+.math-block {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1rem;
+  margin: 1.8rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  color: var(--text-bright);
+}
+
+.math-block .katex-display {
+  margin: 0 !important;
+}
+
+.math-inline .katex {
+  font-size: 1.05em;
+}
+
+/* ==============================================================================
+   MERMAID DIAGRAM COMPONENT STYLES
+   ============================================================================== */
+.mermaid-diagram-box {
+  background: #000000 !important;
+  border: none !important;
+  border-radius: var(--radius-sm);
+  padding: 1.75rem 1.25rem;
+  margin: 2.2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  box-shadow: none !important;
+}
+
+.mermaid-diagram-box .mermaid,
+.mermaid-diagram-box pre,
+.mermaid-diagram-box pre.mermaid {
+  font-family: var(--font-mono) !important;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+.mermaid-diagram-box svg {
+  max-width: 100%;
+  height: auto;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* 1. Eliminate double backgrounds & extra boxes: ALL SVG rects/polygons transparent by default */
+.mermaid-diagram-box svg rect,
+.mermaid-diagram-box svg polygon,
+.mermaid-diagram-box svg path:not(.flowchart-link):not(.edgePath path) {
+  fill: transparent !important;
+  stroke: none !important;
+}
+
+/* 2. Hide cluster/subgraph icon & header label-container rects (Fixes floating artifact boxes [-]) */
+.mermaid-diagram-box svg .cluster rect,
+.mermaid-diagram-box svg .cluster-label rect,
+.mermaid-diagram-box svg .cluster-label .label-container,
+.mermaid-diagram-box svg .cluster .node rect,
+.mermaid-diagram-box svg g[id*="cluster"] rect,
+.mermaid-diagram-box svg g[class*="cluster"] rect,
+.mermaid-diagram-box svg .subgraph rect {
+  display: none !important;
+  fill: transparent !important;
+  stroke: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* 3. Subgraph / Cluster titles: clean text only, zero background boxes */
+.mermaid-diagram-box svg .cluster-label text,
+.mermaid-diagram-box svg .cluster-label span,
+.mermaid-diagram-box svg .cluster-label div,
+.mermaid-diagram-box svg .cluster .label text,
+.mermaid-diagram-box svg .cluster .label span,
+.mermaid-diagram-box svg .cluster-label .nodeLabel {
+  fill: var(--text-muted) !important;
+  color: var(--text-muted) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 4. Dark Mode Node Boxes (Default) - explicitly styled ONLY for real diagram nodes */
+.mermaid-diagram-box svg .node:not(.cluster-label):not(.cluster) rect,
+.mermaid-diagram-box svg .node:not(.cluster-label):not(.cluster) circle,
+.mermaid-diagram-box svg .node:not(.cluster-label):not(.cluster) polygon,
+.mermaid-diagram-box svg .node:not(.cluster-label):not(.cluster) path {
+  stroke: rgba(255, 255, 255, 0.22) !important;
+  stroke-width: 1.5px !important;
+  fill: #141414 !important;
+}
+
+.mermaid-diagram-box svg .node:not(.cluster-label):not(.cluster) .label,
+.mermaid-diagram-box svg .node:not(.cluster-label):not(.cluster) label,
+.mermaid-diagram-box svg .node:not(.cluster-label):not(.cluster) text {
+  fill: var(--text-bright) !important;
+  color: var(--text-bright) !important;
+}
+
+/* 5. Edge Label Containers: Keep foreignObject, div, and label-container 100% TRANSPARENT with 0 padding */
+.mermaid-diagram-box svg .edgeLabel,
+.mermaid-diagram-box svg g.edgeLabel,
+.mermaid-diagram-box svg .edgeLabel foreignObject,
+.mermaid-diagram-box svg .edgeLabel div,
+.mermaid-diagram-box svg .edgeLabel .label-container {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+.mermaid-diagram-box svg .edgeLabel rect {
+  fill: transparent !important;
+  stroke: none !important;
+}
+
+/* 6. Dark Mode Edge Labels: Style ONLY non-empty inner span elements */
+.mermaid-diagram-box svg .edgeLabel span:not(:empty) {
+  background-color: #1A1A1A !important;
+  color: var(--text-bright) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 4px 10px !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.72rem !important;
+  font-weight: 500 !important;
+  line-height: 1.3 !important;
+  display: inline-block !important;
+  box-shadow: none !important;
+  white-space: nowrap !important;
+}
+
+.mermaid-diagram-box svg .edgeLabel span:not(:empty) *,
+.mermaid-diagram-box svg .edgeLabel tspan,
+.mermaid-diagram-box svg .edgeLabel text:not(:empty) {
+  fill: var(--text-bright) !important;
+  color: var(--text-bright) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.72rem !important;
+  font-weight: 500 !important;
+}
+
+/* Hide empty spans completely */
+.mermaid-diagram-box svg .edgeLabel span:empty {
+  display: none !important;
+}
+
+/* Light Mode Overrides */
+.theme-light .mermaid-diagram-box,
+.essay-column.theme-light .mermaid-diagram-box,
+.theme-light #essay-reading-pane .mermaid-diagram-box {
+  background: #F1F5F9 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.theme-light .mermaid-diagram-box .mermaid,
+.theme-light .mermaid-diagram-box pre,
+.essay-column.theme-light .mermaid-diagram-box pre {
+  background: transparent !important;
+}
+
+.theme-light .mermaid-diagram-box svg,
+.essay-column.theme-light .mermaid-diagram-box svg,
+.theme-light #essay-reading-pane .mermaid-diagram-box svg {
+  background: transparent !important;
+  border: none !important;
+}
+
+.theme-light .mermaid-diagram-box svg .cluster-label text,
+.theme-light .mermaid-diagram-box svg .cluster-label span,
+.theme-light .mermaid-diagram-box svg .cluster-label div {
+  fill: #64748B !important;
+  color: #64748B !important;
+}
+
+/* Light Mode: White background for node boxes with darker grey border */
+.theme-light .mermaid-diagram-box svg .node rect,
+.theme-light .mermaid-diagram-box svg .node circle,
+.theme-light .mermaid-diagram-box svg .node polygon,
+.theme-light .mermaid-diagram-box svg .node path,
+.essay-column.theme-light .mermaid-diagram-box svg .node rect,
+.essay-column.theme-light .mermaid-diagram-box svg .node circle,
+.essay-column.theme-light .mermaid-diagram-box svg .node polygon,
+.essay-column.theme-light .mermaid-diagram-box svg .node path {
+  stroke: #4A5568 !important;
+  stroke-width: 1.5px !important;
+  fill: #FFFFFF !important;
+}
+
+/* Light Mode: Dark text inside white boxes */
+.theme-light .mermaid-diagram-box svg .node .label,
+.theme-light .mermaid-diagram-box svg .node label,
+.theme-light .mermaid-diagram-box svg .node text,
+.essay-column.theme-light .mermaid-diagram-box svg .node .label,
+.essay-column.theme-light .mermaid-diagram-box svg .node label,
+.essay-column.theme-light .mermaid-diagram-box svg .node text {
+  fill: #1B2427 !important;
+  color: #1B2427 !important;
+  font-weight: 500 !important;
+}
+
+/* Light Mode: Borderless box background for arrow labels containing text */
+.theme-light .mermaid-diagram-box svg .edgeLabel span:not(:empty),
+.essay-column.theme-light .mermaid-diagram-box svg .edgeLabel span:not(:empty) {
+  background-color: #FFFFFF !important;
+  color: #1B2427 !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 4px 10px !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.72rem !important;
+  font-weight: 500 !important;
+  line-height: 1.3 !important;
+  display: inline-block !important;
+  box-shadow: none !important;
+  white-space: nowrap !important;
+}
+
+.theme-light .mermaid-diagram-box svg .edgeLabel span:not(:empty) *,
+.theme-light .mermaid-diagram-box svg .edgeLabel tspan,
+.theme-light .mermaid-diagram-box svg .edgeLabel text:not(:empty),
+.essay-column.theme-light .mermaid-diagram-box svg .edgeLabel tspan,
+.essay-column.theme-light .mermaid-diagram-box svg .edgeLabel text:not(:empty) {
+  fill: #1B2427 !important;
+  color: #1B2427 !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.72rem !important;
+  font-weight: 500 !important;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin: 2.2rem 0;
+}
+
+.post-table,
+.essay-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.post-table th,
+.essay-table th {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-bright);
+  font-weight: var(--weight-semibold);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border: 1px solid var(--border-subtle);
+}
+
+.post-table td,
+.essay-table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-body);
+}
+
+.post-body-content a,
+.essay-body-content a {
+  color: var(--accent-coral);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.post-body-content a:hover,
+.essay-body-content a:hover {
+  color: var(--accent-rose);
+}
+
+/* ==============================================================================
+   LIGHT MODE OVERRIDES (.post-column.theme-light, .essay-column.theme-light)
+   ============================================================================== */
+.post-column.theme-light,
+.essay-column.theme-light {
+  background-color: var(--bg-light-mode);
+  color: var(--text-light-body);
+}
+
+/* 1. Light Mode Headings (#121212 Deep Charcoal) */
+.post-column.theme-light .post-title,
+.essay-column.theme-light .essay-title {
+  color: var(--text-light-h);
+}
+
+.post-column.theme-light .post-section-kicker,
+.post-column.theme-light .post-subheading,
+.post-column.theme-light h1,
+.post-column.theme-light h2,
+.post-column.theme-light h3,
+.post-column.theme-light h4,
+.essay-column.theme-light .essay-section-kicker,
+.essay-column.theme-light .essay-subheading,
+.essay-column.theme-light h1,
+.essay-column.theme-light h2,
+.essay-column.theme-light h3,
+.essay-column.theme-light h4 {
+  color: var(--text-light-h);
+}
+
+.post-column.theme-light .post-subtitle,
+.essay-column.theme-light .essay-subtitle {
+  color: var(--accent-coral);
+}
+
+/* 2. Light Mode Body Text (Platypi 400/500 Weight & Rich Dark Contrast) */
+.post-column.theme-light .post-paragraph,
+.post-column.theme-light .post-list,
+.essay-column.theme-light .essay-paragraph,
+.essay-column.theme-light .essay-list {
+  color: var(--text-light-body);
+  font-weight: var(--weight-regular);
+}
+
+.post-column.theme-light .post-paragraph strong,
+.post-column.theme-light .post-list li strong,
+.essay-column.theme-light .essay-paragraph strong,
+.essay-column.theme-light .essay-list li strong {
+  color: var(--text-light-h);
+  font-weight: var(--weight-semibold);
+}
+
+.post-column.theme-light .post-quote,
+.essay-column.theme-light .essay-quote {
+  color: var(--text-light-h);
+  border-left-color: var(--accent-coral);
+}
+
+.post-column.theme-light .post-divider,
+.essay-column.theme-light .essay-divider {
+  border-top-color: var(--border-light);
+}
+
+.post-column.theme-light .post-body-content pre,
+.essay-column.theme-light .essay-body-content pre {
+  background: #E4ECF0;
+  border-color: var(--border-light);
+}
+
+.post-column.theme-light .post-body-content pre code,
+.essay-column.theme-light .essay-body-content pre code {
+  color: #121212;
+}
+
+.post-column.theme-light .post-body-content p code,
+.post-column.theme-light .post-body-content li code,
+.essay-column.theme-light .essay-body-content p code,
+.essay-column.theme-light .essay-body-content li code {
+  background: rgba(0, 0, 0, 0.06);
+  color: #B22234;
+}
+
+.post-column.theme-light .math-block,
+.essay-column.theme-light .math-block {
+  background: rgba(0, 0, 0, 0.04);
+  border-left-color: var(--accent-coral);
+  color: var(--text-light-h);
+}
+
+.post-column.theme-light .post-table th,
+.essay-column.theme-light .essay-table th {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-light-h);
+  border-color: var(--border-light);
+}
+
+.post-column.theme-light .post-table td,
+.essay-column.theme-light .essay-table td {
+  border-color: var(--border-light);
+  color: var(--text-light-body);
+}
+
+/* Responsive adjustments */
 @media (max-width: 980px) {
+  .post-column,
   .essay-column {
     height: auto;
     overflow-y: visible;

@@ -35,16 +35,16 @@
 
   /* 3. Typography Tokens */
   --font-mono: 'Azeret Mono', monospace;
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-serif: 'Platypi', Georgia, serif;
   --font-display: 'Azeret Mono', monospace;
 
   /* Typography Scale */
   --text-xs: 0.58rem;
   --text-sm: 0.65rem;
   --text-base: 0.74rem;
-  --text-md: 0.95rem;
-  --text-lg: 1.12rem;
-  --text-xl: 1.25rem;
+  --text-md: 0.90rem;
+  --text-lg: 1.05rem;
+  --text-xl: 1.20rem;
   --text-2xl: clamp(1.6rem, 2.5vw, 2.1rem);
 
   /* Line Heights */

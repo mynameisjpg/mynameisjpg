@@ -1,206 +1,179 @@
 /* ==============================================================================
-   UNTITLED.JPG — CLIENT APPLICATION & COMPONENT HYDRATION
+   UNTITLED.JPG — DYNAMIC CLIENT APPLICATION & CONTENT HYDRATION
    Brand: Juan Pablo Giusepponi — "Overthinking Undervalued Means"
    ============================================================================== */
 
 /**
- * Central Post Store / In-Memory Content Database
+ * In-Memory Post Store
+ * Hydrated dynamically from posts.js (window.DYNAMIC_POSTS) and posts.json
  */
-const POSTS_DATABASE = {
-  "post-turing": {
-    theme: "dark",
-    format: "ESSAY",
-    pillar: "AI PERCEPTION, CULTURE & REPRESENTATION",
-    subtopic: "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-    title: "AI is Queer: Turing, Synthetic Bodies, Mimicry, and the Violence of the Statistical Mean",
-    subtitle: "How Alan Turing's Imitation Game codified survival through deception.",
-    date: "2026.09.25",
-    author: "Juan P. Giusepponi",
-    posted_by: "JPG",
-    sys_id: "SYS_260925_TURQ",
-    read_time: "9 MIN READ",
-    via: "Matteo Pasquinelli / e-flux journal",
-    content: `
-      <h2 class="essay-section-kicker">01. The Original Game of Passing</h2>
-      <p class="essay-paragraph">When Alan Turing framed the benchmark for machine intelligence in his 1950 landmark paper <em>Computing Machinery and Intelligence</em>, he did not propose a benchmark of mathematical problem-solving or axiomatic deduction.</p>
-      <p class="essay-paragraph">Instead, he proposed a theatrical parlor game rooted in <strong>deception, mimicry, and social performativity</strong>: the Imitation Game. The test begins with an interrogation of gender across typed teleprinter text. The computer enters not as a calculator, but as an impersonator of social conventions.</p>
-      <blockquote class="essay-quote">"By employing a schema of mind that prioritizes good manners and familiarity with social conventions, the Turing Test remains an example of austere social normativity..." — Matteo Pasquinelli</blockquote>
-      
-      <h2 class="essay-section-kicker">02. Intelligence as Defensive Camouflage</h2>
-      <p class="essay-paragraph">In a society where male homosexuality was a heavily prosecuted criminal offense, computing what an authority figure expected to hear was not an abstract game—it was a daily survival discipline.</p>
-      <p class="essay-paragraph">The social mechanism of "passing" requires an intense Theory of Mind: anticipating the prejudices of the interrogator, simulating the dominant dialect, and suppressing aberrant signal. Turing transposed this defensive posture into the foundational architecture of AI: <strong>intelligence is the ability to avoid being caught as an outsider.</strong></p>
-      
-      <h2 class="essay-section-kicker">03. The Violence of the Statistical Mean</h2>
-      <p class="essay-paragraph">In modern deep learning architectures, parameter loss is minimized by driving models toward the dense statistical center of the training corpus. Divergent, queer, or minority expressions become outliers to be smoothed away. When we build models purely for frictionless output, we build automated conformity.</p>
-      
-      <h2 class="essay-section-kicker">04. Unorganized Machines & The Glitch</h2>
-      <p class="essay-paragraph">In his 1948 report <em>Intelligent Machinery</em>, Turing envisioned networks that start in disorder and develop through fallibility, vulnerability, and iterative rupture. For Turing, an infallible machine was merely an assembly line. True intelligence requires the liberty to make errors.</p>
-    `,
-    links: [
-      { type: "PAPER", title: "e-flux journal: Abnormal Encephalization in the Age of Machine Learning", url: "https://www.e-flux.com/journal/75/67133/abnormal-encephalization-in-the-age-of-machine-learning/", desc: "Matteo Pasquinelli's foundational essay on the sociomorphic origins of machine intelligence (Issue #75)." },
-      { type: "ARCHIVE", title: "Computing Machinery and Intelligence (Mind, 1950)", url: "https://doi.org/10.1093/mind/LIX.236.433", desc: "Alan Turing's original text introducing the Imitation Game." }
-    ],
-    backlinks: [
-      { title: "The 'Chinese Encyclopedia' of Vector Space", slug: "#post-foucault", note: "Continuous metric spaces and high-dimensional classification." },
-      { title: "Why LLMs Don't Think: Yann LeCun's World Models", slug: "#post-jepa", note: "Critique of token prediction versus structural representation." }
-    ],
-    tags: ["alan-turing", "queer-theory", "imitation-game", "sociomorphic-ai", "pasquinelli", "episteme"]
-  },
+let POSTS_DATABASE = {};
 
-  "post-foucault": {
-    theme: "light",
-    format: "ESSAY",
-    pillar: "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-    subtopic: "EPISTEMOLOGY OF REPRESENTATION",
-    title: "The 'Chinese Encyclopedia' of Vector Space: Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-    subtitle: "How continuous metric spaces replace discrete tables of representation—and why building a vector database is fundamentally an epistemological act.",
-    date: "2026.09.26",
-    author: "Juan P. Giusepponi",
-    posted_by: "JPG",
-    sys_id: "SYS_260926_FBVEC",
-    read_time: "8 MIN READ",
-    via: "Michel Foucault / Les Mots et les Choses",
-    content: `
-      <h2 class="essay-section-kicker">01. The Laughter of Borges and the Spatial Grid</h2>
-      <p class="essay-paragraph">In the preface to <em>The Order of Things</em> (1966), Michel Foucault references a fictional taxonomy by Jorge Luis Borges: an ancient Chinese encyclopedia dividing animals into 'belonging to the Emperor', 'sucking pigs', 'frenzied', and 'drawn with a fine camelhair brush'.</p>
-      <p class="essay-paragraph">Foucault used this absurdity to ask: what is the invisible table (<em>la grille</em>) upon which a culture orders its concepts? Today, high-dimensional embedding spaces and vector databases are the digital manifestation of Foucault’s episteme.</p>
-      <blockquote class="essay-quote">"To build a vector database is not merely to optimize search queries; it is an epistemological act of defining the order of things."</blockquote>
-      
-      <h2 class="essay-section-kicker">02. From Renaissance Resemblance to Metric Topologies</h2>
-      <p class="essay-paragraph">In vector space, classification is not a rigid tree hierarchy (like relational SQL). It is continuous geometric proximity: Cosine Similarity and Euclidean distance in 1536-dimensional space.</p>
-      <p class="essay-paragraph">When an AI system retrieves information via semantic search, it is effectively asking: <em>'Under what spatial order do these ideas belong together?'</em></p>
-    `,
-    links: [
-      { type: "PAPER", title: "The Order of Things: An Archaeology of the Human Sciences", url: "https://monoskop.org", desc: "Michel Foucault's landmark inquiry into historical systems of representation." },
-      { type: "ARCHIVE", title: "The Analytical Language of John Wilkins (Borges)", url: "https://alamut.com", desc: "Original essay introducing the Celestial Emporium taxonomy." }
-    ],
-    backlinks: [
-      { title: "AI is Queer: Turing & Synthetic Bodies", slug: "#post-turing", note: "Statistical optimization as the normalization of identity." }
-    ],
-    tags: ["foucault", "borges", "vector-databases", "embeddings", "episteme", "rag"]
-  },
+function ingestPostList(postsArray) {
+  if (!Array.isArray(postsArray)) return;
+  postsArray.forEach(p => {
+    const key = p.slug || p.id || p.sys_id;
+    if (key) {
+      POSTS_DATABASE[key] = p;
+      if (p.sys_id) POSTS_DATABASE[p.sys_id] = p;
+      if (p.slug) POSTS_DATABASE[p.slug] = p;
+      if (p.id) POSTS_DATABASE[p.id] = p;
+    }
+  });
+}
 
-  "post-jepa": {
-    theme: "dark",
-    format: "ESSAY",
-    pillar: "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-    subtopic: "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
-    title: "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-    subtitle: "A 4-year-old child has ingested 100x more sensory data than all text on the internet. Why predicting the next token is an evolutionary dead end for AGI.",
-    date: "2026.09.24",
-    author: "Juan P. Giusepponi",
-    posted_by: "JPG",
-    sys_id: "SYS_260924_JEPA",
-    read_time: "12 MIN READ",
-    via: "Yann LeCun / Meta AI Research",
-    content: `
-      <h2 class="essay-section-kicker">01. The Sensory Bandwidth Paradox</h2>
-      <p class="essay-paragraph">All written human text equals ~10^12 bytes of data (1–2 Terabytes). A 4-year-old child’s visual cortex has ingested ~10^14 bytes of high-bandwidth sensory reality through optic nerve input at 20 Megabytes/second.</p>
-      <p class="essay-paragraph">Human children learn intuitive physics, spatial continuity, cause-and-effect, and object permanence long before acquiring grammar. LLMs attempt the inverse: mastering syntax without ever grounding symbols in physical reality.</p>
-      <blockquote class="essay-quote">"Language is not thought. Language is a compressed, lossy projection of a world model."</blockquote>
+// Ingest immediate global feed if loaded via posts.js (Works 100% offline & on file:///)
+if (typeof window !== "undefined" && window.DYNAMIC_POSTS) {
+  ingestPostList(window.DYNAMIC_POSTS);
+}
 
-      <h2 class="essay-section-kicker">02. Exponential Error Accumulation in Token Prediction</h2>
-      <p class="essay-paragraph">Autoregressive LLMs predict the probability distribution of the next token. Because each token is fed back into the context window as ground truth, multi-step reasoning suffers from exponential decay: (0.99)^100 ≈ 36.6% accuracy over a 100-step chain.</p>
-      
-      <h2 class="essay-section-kicker">03. Joint Embedding Predictive Architecture (JEPA)</h2>
-      <p class="essay-paragraph">Instead of generating surface pixels or words, JEPA predicts abstract representations directly within continuous latent space Z, preventing representation collapse via VICReg (Variance-Invariance-Covariance Regularization).</p>
-    `,
-    links: [
-      { type: "PAPER", title: "A Path Towards Autonomous Machine Intelligence (Yann LeCun)", url: "https://openreview.net/pdf?id=BZ5a1r-kVsf", desc: "Position paper outlining the 6-module architecture for autonomous agents." },
-      { type: "PAPER", title: "I-JEPA: Self-Supervised Learning from Images (CVPR 2023)", url: "https://arxiv.org/abs/2301.08243", desc: "Non-generative representation prediction in latent space." }
-    ],
-    backlinks: [
-      { title: "The 'Chinese Encyclopedia' of Vector Space", slug: "#post-foucault", note: "Latent space representations." },
-      { title: "AI is Queer: Turing & Synthetic Bodies", slug: "#post-turing", note: "Statistical optimization vs. structural understanding." }
-    ],
-    tags: ["yann-lecun", "jepa", "world-models", "llms", "symbol-grounding", "vicreg"]
-  },
+let activePostId = "2026-09-25-turing-queer-ai";
+let activeFilter = "all";
 
-  "post-foveal": {
-    theme: "light",
-    format: "RESOURCE",
-    pillar: "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-    subtopic: "COMPRESSION & BANDWIDTH",
-    title: "Foveal vs. Peripheral Vision: Human vs. Machine Bandwidth",
-    subtitle: "A psychophysics reference guide on biological gaze compression vs. convolutional vision transformers.",
-    date: "2026.09.20",
-    author: "Juan P. Giusepponi",
-    posted_by: "JPG",
-    sys_id: "SYS_260920_FOVL",
-    read_time: "Toolkit Guide",
-    via: "Visual Psychophysics Lab",
-    content: `
-      <h2 class="essay-section-kicker">01. The Biological Fovea</h2>
-      <p class="essay-paragraph">Human visual clarity is confined to a tiny 2-degree foveal center. The peripheral visual field is low-resolution, high-motion statistical inference. Vision transformers, by contrast, process uniform spatial grids.</p>
-      <blockquote class="essay-quote">"The brain does not render a 4K bitmap; it stitches together a continuous hallucination anchored by foveal fixations."</blockquote>
-    `,
-    links: [
-      { type: "DATASET", title: "Foveated Vision Acuity Benchmarks", url: "https://github.com", desc: "Open psychophysics visual acuity dataset." }
-    ],
-    backlinks: [],
-    tags: ["fovea", "psychophysics", "visual-perception", "vision-transformers"]
-  },
-
-  "post-spatial": {
-    theme: "dark",
-    format: "BOOKMARK",
-    pillar: "AI PERCEPTION, CULTURE & REPRESENTATION",
-    subtopic: "WORLD MODELS & 3D EMBODIMENT",
-    title: "Spatial Intelligence & World Models (Fei-Fei Li)",
-    subtitle: "Moving beyond 2D pixel generation toward spatial intelligence that perceives 3D geometry and physical affordances.",
-    date: "2026.09.18",
-    author: "Juan P. Giusepponi",
-    posted_by: "JPG",
-    sys_id: "SYS_260918_SPAT",
-    read_time: "Curated Read",
-    via: "Fei-Fei Li / Stanford AI Lab",
-    content: `
-      <h2 class="essay-section-kicker">01. Seeing Beyond Pixels</h2>
-      <p class="essay-paragraph">Spatial intelligence is the missing link in artificial perception: the ability of systems to infer physical 3D affordances, spatial causality, and embodied action.</p>
-    `,
-    links: [
-      { type: "ARTICLE", title: "Spatial Intelligence: The Next Frontier in AI", url: "https://stanford.edu", desc: "Fei-Fei Li's keynote on 3D spatial reasoning." }
-    ],
-    backlinks: [
-      { title: "Why LLMs Don't Think: Yann LeCun's World Models", slug: "#post-jepa", note: "Continuous physical models." }
-    ],
-    tags: ["spatial-intelligence", "fei-fei-li", "3d-perception", "world-models"]
-  },
-
-  "post-dither": {
-    theme: "dark",
-    format: "RESOURCE",
-    pillar: "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-    subtopic: "AESTHETICS & INTERFACE POLITICS",
-    title: "Dithered Duotone Web Graphics Toolkit",
-    subtitle: "A lightweight canvas utility for generating retro-surrealist Atkinson and Floyd-Steinberg dithering algorithms in real-time.",
-    date: "2026.09.15",
-    author: "Juan P. Giusepponi",
-    posted_by: "JPG",
-    sys_id: "SYS_260915_DITH",
-    read_time: "Code Toolkit",
-    via: "Untitled.jpg Lab",
-    content: `
-      <h2 class="essay-section-kicker">01. Dithering as Aesthetic Subversion</h2>
-      <p class="essay-paragraph">Dithering exposes the digital quantization grid. Rather than hiding pixel boundaries, it celebrates high-contrast mathematical noise.</p>
-    `,
-    links: [
-      { type: "TOOL", title: "Web Dither Canvas Repo", url: "https://github.com", desc: "Open-source JavaScript canvas dithering library." }
-    ],
-    backlinks: [],
-    tags: ["dithering", "canvas-api", "web-graphics", "digital-surrealism"]
-  }
+/**
+ * Fallback Geometric Art Vectors for Card Matrix
+ */
+const ART_FALLBACKS = {
+  coral: `<svg class="card-art-svg" viewBox="0 0 180 230"><rect width="180" height="230" fill="#E84A5F"/><rect x="25" y="30" width="65" height="55" fill="#C73649"/><rect x="105" y="45" width="50" height="105" fill="#FF7084"/><ellipse cx="78" cy="130" rx="30" ry="42" fill="#170508"/></svg>`,
+  charcoal: `<svg class="card-art-svg" viewBox="0 0 180 255"><rect width="180" height="255" fill="#181818"/><path d="M90,35 Q130,55 125,120 Q120,185 145,255 L35,255 Q60,185 55,120 Q50,55 90,35 Z" fill="#757575"/><ellipse cx="90" cy="85" rx="24" ry="34" fill="#E0E0E0"/><rect x="150" y="30" width="9" height="9" fill="#E84A5F"/></svg>`,
+  eye: `<svg class="card-art-svg" viewBox="0 0 180 205"><rect width="180" height="205" fill="#191919"/><ellipse cx="90" cy="85" rx="45" ry="60" fill="#8E8E8E"/><path d="M72,65 Q88,62 104,65 Q100,115 88,128 Q76,115 72,65 Z" fill="#E8E8E8"/></svg>`,
+  circle: `<svg class="card-art-svg" viewBox="0 0 180 185"><rect width="180" height="185" fill="#1B1B1B"/><ellipse cx="90" cy="92" rx="55" ry="36" fill="#808080"/><ellipse cx="90" cy="92" rx="45" ry="30" fill="#CCCCCC"/><circle cx="90" cy="92" r="22" fill="#141414"/><circle cx="90" cy="92" r="12" fill="#E84A5F"/></svg>`
 };
+
+/**
+ * Dynamically Fetch posts.json (Live HTTP Server / Production Build)
+ */
+async function loadDynamicPosts() {
+  // If already populated by posts.js, set default activePostId if needed
+  if (Object.keys(POSTS_DATABASE).length > 0 && !POSTS_DATABASE[activePostId]) {
+    activePostId = Object.keys(POSTS_DATABASE)[0];
+  }
+
+  try {
+    const res = await fetch("posts.json?t=" + Date.now());
+    if (res.ok) {
+      const data = await res.json();
+      if (Array.isArray(data) && data.length > 0) {
+        ingestPostList(data);
+        console.log(`[UNTITLED.JPG] Loaded ${data.length} dispatches live from posts.json`);
+      }
+    }
+  } catch (err) {
+    // Offline / file protocol fallback (already populated by posts.js)
+    console.log("[UNTITLED.JPG] Running with direct script posts feed.");
+  }
+
+  // Check URL Hash for deep-link
+  const hash = window.location.hash.replace("#", "");
+  if (hash && POSTS_DATABASE[hash]) {
+    activePostId = hash;
+  } else {
+    activePostId = Object.keys(POSTS_DATABASE)[0] || "2026-09-25-turing-queer-ai";
+  }
+
+  // Render Matrix Cards and Initial Reader Pane
+  renderCardMatrix();
+  selectAndRenderPost(activePostId);
+}
+
+/**
+ * Dynamically Render the Asymmetric Card Grid Matrix
+ */
+function renderCardMatrix() {
+  const container = document.getElementById("card-matrix");
+  if (!container) return;
+
+  // Collect unique posts
+  const uniquePosts = [];
+  const seen = new Set();
+  
+  Object.values(POSTS_DATABASE).forEach(post => {
+    const uniqueKey = post.slug || post.id || post.sys_id;
+    if (uniqueKey && !seen.has(uniqueKey) && post.status !== "draft") {
+      seen.add(uniqueKey);
+      uniquePosts.push(post);
+    }
+  });
+
+  const ratios = ["h-tall-1", "h-tall-2", "h-med", "h-square", "h-wide", "h-tall-1"];
+  const fallbackArts = ["coral", "charcoal", "eye", "circle", "charcoal", "coral"];
+
+  container.innerHTML = uniquePosts.map((post, idx) => {
+    const key = post.slug || post.id || post.sys_id;
+    const ratio = post.aspect_ratio || ratios[idx % ratios.length];
+    const format = (post.format || "ESSAY").toLowerCase();
+    const isEssay = format === "essay";
+    const isFeatured = Boolean(post.featured);
+    const artKey = fallbackArts[idx % fallbackArts.length];
+    const isSelected = key === activePostId || post.sys_id === activePostId;
+
+    const isVisible = activeFilter === "all" || format === activeFilter;
+
+    return `
+      <article class="grid-card ${isFeatured ? 'card-featured' : ''} ${isSelected ? 'selected-active' : ''}" data-id="${key}" data-format="${format}" style="display: ${isVisible ? 'flex' : 'none'};" tabindex="0" role="button" aria-pressed="${isSelected}">
+        <div class="card-art-box ${ratio}">
+          <span class="card-type-chip ${isEssay ? 'chip-essay' : ''}">[${post.format}]</span>
+          ${isFeatured ? `<span class="card-featured-badge">★ FEATURED</span>` : ''}
+          ${post.image ? `
+            <img src="${post.image}" alt="${post.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="display:none;">${ART_FALLBACKS[artKey]}</div>
+          ` : ART_FALLBACKS[artKey]}
+          <div class="hover-meta-reveal">
+            <span class="meta-sub">${post.date} • ${post.read_time} • ${post.pillar || 'DISPATCH'}</span>
+          </div>
+        </div>
+        <h2 class="card-caption">${post.title}</h2>
+      </article>
+    `;
+  }).join("");
+
+  // Re-attach Click & Key Event Handlers
+  const cards = container.querySelectorAll(".grid-card");
+  cards.forEach(card => {
+    const handler = () => {
+      const postId = card.getAttribute("data-id");
+      selectAndRenderPost(postId);
+    };
+    card.addEventListener("click", handler);
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        handler();
+      }
+    });
+  });
+}
+
+/**
+ * Select a Card and Render in Reader Pane
+ */
+function selectAndRenderPost(postId) {
+  activePostId = postId;
+  const cards = document.querySelectorAll(".grid-card");
+  cards.forEach(c => {
+    const cardId = c.getAttribute("data-id");
+    const targetPost = POSTS_DATABASE[postId];
+    if (cardId === postId || (targetPost && (cardId === targetPost.slug || cardId === targetPost.sys_id))) {
+      c.classList.add("selected-active");
+      c.setAttribute("aria-pressed", "true");
+    } else {
+      c.classList.remove("selected-active");
+      c.setAttribute("aria-pressed", "false");
+    }
+  });
+
+  renderPost(postId);
+}
 
 /**
  * Reader Pane Component Renderer (3-Tier Metadata Architecture)
  */
 function renderPost(postId) {
-  const post = POSTS_DATABASE[postId] || POSTS_DATABASE["post-turing"];
+  const post = POSTS_DATABASE[postId] || Object.values(POSTS_DATABASE)[0];
   const pane = document.getElementById("essay-reading-pane");
-  if (!pane) return;
+  if (!pane || !post) return;
 
-  // Apply Per-Post Predefined Theme Mode
+  // Apply Per-Post Theme Mode
   if (post.theme === "light") {
     pane.classList.add("theme-light");
   } else {
@@ -212,30 +185,40 @@ function renderPost(postId) {
     <!-- TIER 1: ABOVE TITLE ARCHIVAL BADGES -->
     <header class="post-header-meta-top">
       <span class="meta-chip chip-primary">[${post.format}]</span>
+      ${post.category ? `<a href="#cat-${post.category.toLowerCase()}" class="meta-chip meta-chip-category" onclick="event.preventDefault(); applyCategoryFilter('${post.category.toLowerCase()}')" title="Filter by category: ${post.category}">[${post.category}]</a>` : ''}
+      ${post.media ? `<span class="meta-chip meta-chip-media">[MEDIA: ${post.media}]</span>` : ''}
       <span class="meta-chip">[${post.pillar}]</span>
       ${post.subtopic ? `<span class="meta-chip">[${post.subtopic}]</span>` : ''}
-      <span class="meta-chip">[MODE: ${post.theme.toUpperCase()}]</span>
     </header>
 
     <!-- TITLE & SUBTITLE -->
-    <h1 class="essay-title">${post.title}</h1>
-    <p class="essay-subtitle">${post.subtitle}</p>
+    <h1 class="post-title essay-title">${post.title}</h1>
+    ${post.subtitle ? `<p class="post-subtitle essay-subtitle">${post.subtitle}</p>` : ''}
+
+    ${post.url ? `
+      <!-- PROMINENT ACTION LINK (FOR RESOURCES & BOOKMARKS) -->
+      <div class="post-prominent-action">
+        <a href="${post.url}" target="_blank" rel="noopener noreferrer" class="btn-prominent-action">
+          <span class="action-kicker">${post.format === 'RESOURCE' ? 'ACCESS RESOURCE ↗' : (post.format === 'BOOKMARK' ? 'VIEW SOURCE ↗' : 'VISIT DESTINATION ↗')}</span>
+          <span class="action-url-text">${post.url}</span>
+        </a>
+      </div>
+    ` : ''}
 
     <!-- TIER 2: BELOW TITLE META BAR -->
     <div class="post-header-meta-bottom">
       <span>DATE: <time>${post.date}</time></span>
-      <span>//</span>
-      <span>BY: ${post.author}</span>
-      ${post.posted_by ? `<span>//</span><span>DISPATCHED_AS: ${post.posted_by}</span>` : ''}
-      <span>//</span>
+      <span class="meta-sep">//</span>
+      <span>BY: <strong class="meta-author">${post.author}</strong></span>
+      <span class="meta-sep">//</span>
+      <span class="meta-readtime">${post.read_time}</span>
+      ${(post.source || post.via) ? `<span class="meta-sep">//</span><span>SOURCE: <strong class="meta-author">${post.source || post.via}</strong></span>` : ''}
+      <span class="meta-sep">//</span>
       <span>SYS_ID: <code>${post.sys_id}</code></span>
-      <span>//</span>
-      <span>${post.read_time}</span>
-      ${post.via ? `<span>//</span><span>VIA: ${post.via}</span>` : ''}
     </div>
 
     <!-- MAIN BODY PROSE -->
-    <div class="essay-body-content">
+    <div class="post-body-content essay-body-content">
       ${post.content}
     </div>
 
@@ -247,9 +230,11 @@ function renderPost(postId) {
           <div class="resources-grid">
             ${post.links.map(l => `
               <div class="resource-card">
-                <span class="meta-chip">[${l.type}]</span>
-                <a href="${l.url}" target="_blank" rel="noopener noreferrer"><strong>${l.title}</strong> ↗</a>
-                ${l.desc ? `<p>${l.desc}</p>` : ''}
+                <div class="resource-card-header">
+                  <span class="meta-chip resource-chip">[${l.type}]</span>
+                  <a href="${l.url}" target="_blank" rel="noopener noreferrer"><strong>${l.title}</strong> ↗</a>
+                </div>
+                ${l.desc ? `<p class="resource-card-desc">${l.desc}</p>` : ''}
               </div>
             `).join('')}
           </div>
@@ -261,7 +246,7 @@ function renderPost(postId) {
           <h3 class="footer-block-title">// CONNECTED_DISPATCHES (NETWORK)</h3>
           <ul class="backlinks-list">
             ${post.backlinks.map(b => `
-              <li><a href="${b.slug}"><strong>${b.title}</strong></a> — <em>${b.note}</em></li>
+              <li><a href="${b.slug}"><strong>${b.title}</strong></a> ${b.note ? `— <em>${b.note}</em>` : ''}</li>
             `).join('')}
           </ul>
         </section>
@@ -276,14 +261,51 @@ function renderPost(postId) {
         </section>
       ` : ''}
 
-      <section class="footer-block footer-share">
-        <div class="share-actions-bar">
-          <span style="color: var(--accent-coral);">[ SHARE DISPATCH ]:</span>
-          <button type="button" class="btn-share" onclick="navigator.clipboard.writeText(window.location.href); alert('Dispatch link copied to clipboard.');">[ COPY URL ]</button>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn-share">[ X / TWITTER ↗ ]</a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-share">[ LINKEDIN ↗ ]</a>
-        </div>
-      </section>
+      ${post.shareable !== false ? `
+        <section class="footer-block footer-share">
+          <div class="share-actions-bar">
+            <span class="share-caption">SHARE DISPATCH:</span>
+            
+            <!-- Copy URL Button -->
+            <button type="button" class="btn-share" onclick="copyPostUrl()" title="Copy Link to Clipboard">
+              <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+              <span>[ COPY URL ]</span>
+            </button>
+
+            <!-- Embed Card Button -->
+            ${post.allow_embed !== false ? `
+              <button type="button" class="btn-share" onclick="copyEmbedCard('${postId}')" title="Copy HTML Embed Card">
+                <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                <span>EMBED</span>
+              </button>
+            ` : ''}
+
+            <!-- X / Twitter -->
+            <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title + ' — Untitled.jpg')}&url=${encodeURIComponent(window.location.href)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on X / Twitter">
+              <svg viewBox="0 0 24 24"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+              <span>X / TWITTER ↗</span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <span>LINKEDIN ↗</span>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on Facebook">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              <span>FACEBOOK ↗</span>
+            </a>
+
+            <!-- Instagram Stories -->
+            <button type="button" class="btn-share" onclick="shareInstagram('${postId}')" title="Copy for Instagram Stories">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <span>INSTAGRAM ↗</span>
+            </button>
+          </div>
+        </section>
+      ` : ''}
 
       <div class="post-signoff">
         <code>UNTITLED.JPG // BUILT IN ZEROES AND ONES WITH THE BLOOD AND SWEAT OF JUAN P. GIUSEPPONI // 2026</code>
@@ -293,51 +315,150 @@ function renderPost(postId) {
 
   // Smooth scroll reader to top on post change
   pane.scrollTo({ top: 0, behavior: "smooth" });
+
+  // Auto-render KaTeX math formulas if available
+  if (typeof renderMathInElement === "function") {
+    try {
+      renderMathInElement(pane, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "\\(", right: "\\)", display: false }
+        ],
+        throwOnError: false
+      });
+    } catch (err) {
+      console.log("[KaTeX] Math render skipped:", err);
+    }
+  }
+
+  // Auto-render Mermaid diagrams if available
+  if (typeof mermaid !== "undefined") {
+    try {
+      // Auto-convert standard markdown code blocks (e.g. from marked default parser) into mermaid diagram boxes
+      pane.querySelectorAll("pre code.language-mermaid").forEach((el) => {
+        const pre = el.parentElement;
+        const rawCode = el.textContent;
+        const container = document.createElement("div");
+        container.className = "mermaid-diagram-box";
+        container.innerHTML = `<pre class="mermaid">\n${rawCode}\n</pre>`;
+        pre.replaceWith(container);
+      });
+
+      const isLight = pane.classList.contains("theme-light");
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: isLight ? "neutral" : "dark",
+        themeVariables: {
+          darkMode: !isLight,
+          background: "transparent",
+          mainBkg: isLight ? "#FFFFFF" : "#141414",
+          nodeBkg: isLight ? "#FFFFFF" : "#141414",
+          primaryColor: isLight ? "#FFFFFF" : "#141414",
+          primaryTextColor: isLight ? "#1B2427" : "#F5F5F5",
+          primaryBorderColor: isLight ? "rgba(0, 0, 0, 0.18)" : "rgba(255, 255, 255, 0.18)",
+          nodeBorder: isLight ? "rgba(0, 0, 0, 0.18)" : "rgba(255, 255, 255, 0.18)",
+          clusterBkg: "transparent",
+          clusterBorder: "none",
+          lineColor: "#E84A5F",
+          edgeLabelBackground: isLight ? "#DEE6E9" : "#0E0E0E",
+          fontFamily: "'Azeret Mono', monospace",
+          fontSize: "12px"
+        },
+        securityLevel: "loose"
+      });
+      mermaid.run({
+        nodes: pane.querySelectorAll(".mermaid")
+      });
+    } catch (err) {
+      console.log("[Mermaid] Render skipped:", err);
+    }
+  }
+}
+
+// Configure Marked.js renderer for Mermaid diagrams if marked is present
+if (typeof marked !== "undefined" && marked.use) {
+  try {
+    marked.use({
+      renderer: {
+        code(code, infostring, escaped) {
+          const lang = (infostring || "").trim().toLowerCase();
+          if (lang === "mermaid") {
+            return `<div class="mermaid-diagram-box"><pre class="mermaid">\n${code}\n</pre></div>`;
+          }
+          return false;
+        }
+      }
+    });
+  } catch (e) {
+    console.log("[Marked] Custom renderer initialization skipped:", e);
+  }
 }
 
 /**
- * Initialize Interactive Behaviors & Event Listeners
+ * Initialize Interactive Behaviors & Category Filter Nav
  */
 document.addEventListener("DOMContentLoaded", () => {
-  // Initial render default
-  renderPost("post-turing");
+  // Load dynamic posts & initialize UI
+  loadDynamicPosts();
 
-  // Card Matrix Click Handler
-  const cards = document.querySelectorAll(".grid-card");
-  cards.forEach(card => {
-    card.addEventListener("click", () => {
-      cards.forEach(c => c.classList.remove("selected-active"));
-      card.classList.add("selected-active");
-      const postId = card.getAttribute("data-id");
-      renderPost(postId);
+  // Reset filter on brand logo click
+  const brandLogo = document.querySelector(".brand-logo-v");
+  if (brandLogo) {
+    brandLogo.addEventListener("click", (e) => {
+      e.preventDefault();
+      applyCategoryFilter("all");
     });
-  });
+  }
 
   // Sidebar Format Filter Handler
   const navLinks = document.querySelectorAll("#category-filter-nav .nav-link-item");
-  const filterLabel = document.getElementById("active-filter-label");
-
   navLinks.forEach(link => {
     link.addEventListener("click", () => {
-      navLinks.forEach(l => l.classList.remove("active"));
-      link.classList.add("active");
-
-      const filter = link.getAttribute("data-filter");
-      if (filterLabel) {
-        filterLabel.textContent = `[MODE: ${filter.toUpperCase()}_DISPATCHES]`;
+      const filter = link.getAttribute("data-filter") || "all";
+      
+      // Toggle active filter off if clicked again
+      if (link.classList.contains("active")) {
+        applyCategoryFilter("all");
+      } else {
+        applyCategoryFilter(filter);
       }
-
-      cards.forEach(card => {
-        const format = card.getAttribute("data-format");
-        if (filter === "all" || format === filter) {
-          card.style.display = "flex";
-        } else {
-          card.style.display = "none";
-        }
-      });
     });
   });
 });
+
+/**
+ * Filter Cards by Format
+ */
+function applyCategoryFilter(filter) {
+  activeFilter = filter;
+  const navLinks = document.querySelectorAll("#category-filter-nav .nav-link-item");
+  const filterLabel = document.getElementById("active-filter-label");
+
+  navLinks.forEach(l => {
+    const lFilter = l.getAttribute("data-filter");
+    if (filter !== "all" && lFilter === filter) {
+      l.classList.add("active");
+    } else {
+      l.classList.remove("active");
+    }
+  });
+
+  if (filterLabel) {
+    filterLabel.textContent = `[MODE: ${filter.toUpperCase()}_DISPATCHES]`;
+  }
+
+  const cards = document.querySelectorAll(".grid-card");
+  cards.forEach(card => {
+    const format = card.getAttribute("data-format");
+    if (filter === "all" || format === filter) {
+      card.style.display = "flex";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
 
 /**
  * Global Newsletter Modal Dialog Handlers
@@ -370,3 +491,49 @@ function handleSubscribeSubmit(event) {
   }
 }
 
+/**
+ * Dispatch Sharing Handlers
+ */
+function copyPostUrl() {
+  const url = window.location.href;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(() => {
+      alert(`[COPIED] Dispatch URL copied to clipboard:\n${url}`);
+    }).catch(() => {
+      prompt("Copy dispatch URL:", url);
+    });
+  } else {
+    prompt("Copy dispatch URL:", url);
+  }
+}
+
+function copyEmbedCard(postId) {
+  const post = POSTS_DATABASE[postId] || Object.values(POSTS_DATABASE)[0];
+  if (!post) return;
+  const currentUrl = window.location.origin + window.location.pathname + '#' + (post.slug || postId);
+  const embedCode = `<div class="untitled-dispatch-embed" style="border:1px solid #333;background:#161616;color:#f5f5f5;padding:1.25rem;border-radius:2px;font-family:sans-serif;max-width:560px;">\n  <div style="font-family:monospace;font-size:0.75rem;color:#E84A5F;letter-spacing:0.08em;margin-bottom:0.4rem;">[ UNTITLED.JPG // ${post.format} ]</div>\n  <h3 style="margin:0 0 0.5rem 0;font-size:1.15rem;line-height:1.3;"><a href="${currentUrl}" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:none;">${post.title}</a></h3>\n  <p style="color:#cccccc;font-size:0.88rem;line-height:1.45;margin:0 0 0.75rem 0;">${post.subtitle}</p>\n  <div style="font-family:monospace;font-size:0.7rem;color:#888888;">BY ${post.author} (${post.posted_by}) • ${post.date} • ${post.read_time}</div>\n</div>`;
+  
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(embedCode).then(() => {
+      alert(`[COPIED] HTML Embed Card snippet copied to clipboard! You can paste this card into any website or blog.`);
+    }).catch(() => {
+      prompt("Copy HTML Embed code:", embedCode);
+    });
+  } else {
+    prompt("Copy HTML Embed code:", embedCode);
+  }
+}
+
+function shareInstagram(postId) {
+  const post = POSTS_DATABASE[postId] || Object.values(POSTS_DATABASE)[0];
+  const url = window.location.origin + window.location.pathname + '#' + (post.slug || postId);
+  const storyText = `${post ? post.title : 'Untitled.jpg Dispatch'}\n\nRead full dispatch: ${url}`;
+  
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(storyText).then(() => {
+      alert(`[INSTAGRAM / STORIES]\nDispatch link and title copied to clipboard for your story or bio link:\n\n${storyText}`);
+    });
+  } else {
+    prompt("Copy dispatch text for Instagram story link:", storyText);
+  }
+}
