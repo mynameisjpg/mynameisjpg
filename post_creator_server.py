@@ -24,7 +24,16 @@ if sys.platform == "win32":
     except Exception:
         pass
 
-BASE_DIR = Path(__file__).resolve().parent
+if getattr(sys, 'frozen', False):
+    # Running as PyInstaller executable (.exe)
+    exe_dir = Path(sys.executable).resolve().parent
+    if (exe_dir / "post-creator.html").exists():
+        BASE_DIR = exe_dir
+    else:
+        BASE_DIR = Path(getattr(sys, '_MEIPASS', exe_dir))
+else:
+    BASE_DIR = Path(__file__).resolve().parent
+
 POSTS_DIR = BASE_DIR / "_posts"
 
 def parse_frontmatter(file_path):
