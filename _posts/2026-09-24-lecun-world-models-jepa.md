@@ -73,7 +73,7 @@ allow_embed: true
 canonical_url: ""
 
 image:
-  path: "/assets/images/lecun-world-models-cover.png"
+  path: "mynameisjpg\assets\images\ailook1.png"
   alt: "High-contrast dithered duotone graphic of a human eye and optic nerve transforming into a vector network grid"
 ---
 
@@ -173,8 +173,8 @@ The core flaw of the text-first paradigm begins with a quantitative disparity in
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-* **All Written Human Knowledge:** If you aggregate literature, scientific preprints, legal codes, and Wikipedia, humanity has produced roughly $\approx 10^{12}\text{ bytes}$ of text.
-* **Human Toddler Ingestion:** By age four, a child has ingested $\approx 10^{14}\text{ bytes}$ of high-bandwidth sensory input, processing visual signals through the optic nerve at approximately **20 Megabytes/second**.
+- **All Written Human Knowledge:** If you aggregate literature, scientific preprints, legal codes, and Wikipedia, humanity has produced roughly $\approx 10^{12}\text{ bytes}$ of text.
+- **Human Toddler Ingestion:** By age four, a child has ingested $\approx 10^{14}\text{ bytes}$ of high-bandwidth sensory input, processing visual signals through the optic nerve at approximately **20 Megabytes/second**.
 
 A four-year-old child has seen two orders of magnitude more information about the causal structure of reality than GPT-4 or Claude 3.5 have ever parsed in text.
 
@@ -213,7 +213,7 @@ Step 50:  P(Success) = (0.99)^50 ≈ 0.605
 Step 100: P(Success) = (0.99)^100 ≈ 0.366
 ```
 
-If a model has a 99% accuracy per token step, over a 100-step chain of complex logical deduction, the probability of remaining uncorrupted collapses to just **36.6%**. 
+If a model has a 99% accuracy per token step, over a 100-step chain of complex logical deduction, the probability of remaining uncorrupted collapses to just **36.6%**.
 
 Because the model possesses no internal simulator of physical reality, it cannot verify whether its generated plan violates physical causality until after the token stream collapses into hallucination.
 
@@ -221,7 +221,7 @@ Because the model possesses no internal simulator of physical reality, it cannot
 
 ## 05. LeCun’s 6 Modules for Autonomous Machine Intelligence
 
-In *A Path Towards Autonomous Machine Intelligence*, LeCun replaces monolithic sequence-to-sequence transformers with a modular cognitive architecture:
+In _A Path Towards Autonomous Machine Intelligence_, LeCun replaces monolithic sequence-to-sequence transformers with a modular cognitive architecture:
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────┐
@@ -276,6 +276,7 @@ JEPA LATENT PREDICTION (Efficient):
 ```
 
 **Joint Embedding Predictive Architecture (JEPA)** does not generate surface observations. Instead:
+
 1. Encoder $E_x$ extracts structural features $s_x \in \mathcal{Z}$.
 2. Encoder $E_y$ extracts target features $s_y \in \mathcal{Z}$.
 3. Predictor $P_\phi(s_x, z)$ predicts $s_y$ directly inside continuous **Latent Space $\mathcal{Z}$**.
@@ -292,9 +293,9 @@ Rather than relying on computationally expensive negative sample batches, LeCun 
 
 $$\mathcal{L}_{\text{VICReg}} = \lambda \cdot s(Z_1, Z_2) + \mu \cdot \left[ v(Z_1) + v(Z_2) \right] + \nu \cdot \left[ c(Z_1) + c(Z_2) \right]$$
 
-* **Invariance $s(Z_1, Z_2)$:** Forces representations of transformed inputs to remain close in cosine distance.
-* **Variance $v(Z)$:** Forces each latent dimension to maintain a variance above a unit threshold, preventing collapse to a single point.
-* **Covariance $c(Z)$:** Decorrelates latent feature pairs, ensuring each dimension captures independent physical properties of the environment.
+- **Invariance $s(Z_1, Z_2)$:** Forces representations of transformed inputs to remain close in cosine distance.
+- **Variance $v(Z)$:** Forces each latent dimension to maintain a variance above a unit threshold, preventing collapse to a single point.
+- **Covariance $c(Z)$:** Decorrelates latent feature pairs, ensuring each dimension captures independent physical properties of the environment.
 
 ---
 
@@ -302,8 +303,8 @@ $$\mathcal{L}_{\text{VICReg}} = \lambda \cdot s(Z_1, Z_2) + \mu \cdot \left[ v(Z
 
 This technical divergence connects directly with philosophical critique:
 
-1. **Michel Foucault’s *Episteme* (*The Order of Things*):** Vector databases map words according to statistical proximity in digital texts. Confusing spatial proximity inside a vector manifold with physical causality is the central epistemic error of modern AI marketing.
-2. **Hito Steyerl’s *Mean Images* (2023):** Generative AI does not produce photographs of physical reality; it produces statistical averages extracted from past online traces. When LLMs generate text, they sample the median consensus of their training distribution.
+1. **Michel Foucault’s _Episteme_ (_The Order of Things_):** Vector databases map words according to statistical proximity in digital texts. Confusing spatial proximity inside a vector manifold with physical causality is the central epistemic error of modern AI marketing.
+2. **Hito Steyerl’s _Mean Images_ (2023):** Generative AI does not produce photographs of physical reality; it produces statistical averages extracted from past online traces. When LLMs generate text, they sample the median consensus of their training distribution.
 
 ```text
 THE MEAN IMAGE DILEMMA:
@@ -330,7 +331,9 @@ True machine intelligence will not be achieved by predicting the next word—it 
 <footer class="post-footer-section">
 
   <!-- A. REFERENCED RESOURCES -->
-  {% if page.links and page.links.size > 0 %}
+
+{% if page.links and page.links.size > 0 %}
+
   <section class="footer-block footer-links">
     <h3 class="footer-block-title">// REFERENCED_RESOURCES &amp; DESTINATIONS</h3>
     <div class="resources-grid">
@@ -350,7 +353,9 @@ True machine intelligence will not be achieved by predicting the next word—it 
   {% endif %}
 
   <!-- B. CONNECTED BACKLINKS -->
-  {% if page.backlinks and page.backlinks.size > 0 %}
+
+{% if page.backlinks and page.backlinks.size > 0 %}
+
   <section class="footer-block footer-backlinks">
     <h3 class="footer-block-title">// CONNECTED_DISPATCHES (NETWORK)</h3>
     <ul class="backlinks-list">
@@ -365,7 +370,9 @@ True machine intelligence will not be achieved by predicting the next word—it 
   {% endif %}
 
   <!-- C. TAXONOMY INDEX -->
-  {% if page.tags and page.tags.size > 0 %}
+
+{% if page.tags and page.tags.size > 0 %}
+
   <section class="footer-block footer-tags">
     <h3 class="footer-block-title">// TAXONOMY_INDEX</h3>
     <div class="tags-group">
@@ -377,7 +384,9 @@ True machine intelligence will not be achieved by predicting the next word—it 
   {% endif %}
 
   <!-- D. SHARE & EMBED ACTIONS -->
-  {% if page.shareable %}
+
+{% if page.shareable %}
+
   <section class="footer-block footer-share">
     <div class="share-actions-bar">
       <span class="share-label">[ SHARE DISPATCH ]:</span>

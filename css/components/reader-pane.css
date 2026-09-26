@@ -1,0 +1,119 @@
+/* ==============================================================================
+   COMPONENT: ESSAY READER PANE
+   ============================================================================== */
+
+.essay-column {
+  background-color: var(--bg-panel);
+  padding: 4.5rem 4.5rem;
+  overflow-y: auto;
+  height: 100vh;
+  position: relative;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+/* Light Theme Mode for Reader Pane */
+.essay-column.theme-light {
+  background-color: var(--bg-light-mode);
+  color: var(--text-light-mode-title);
+}
+
+.essay-column.theme-light .essay-title {
+  color: var(--text-light-mode-title);
+}
+
+.essay-column.theme-light .essay-paragraph {
+  color: var(--text-light-mode-body);
+}
+
+.essay-column.theme-light .post-header-meta-bottom {
+  color: var(--text-light-mode-muted);
+  border-bottom-color: var(--border-light-mode);
+}
+
+.essay-column.theme-light .meta-chip {
+  color: var(--text-light-mode-muted);
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.essay-column.theme-light .essay-quote {
+  color: var(--text-light-mode-title);
+  border-left-color: var(--accent-coral);
+}
+
+.essay-column.theme-light .resource-card {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: var(--border-light-mode);
+}
+
+.essay-column.theme-light .resource-card a {
+  color: var(--text-light-mode-title);
+}
+
+.essay-column.theme-light .post-footer-section {
+  border-top-color: var(--border-light-mode);
+}
+
+/* Reader Typography Hierarchy */
+.essay-title {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xl);
+  font-weight: 500;
+  line-height: var(--leading-tight);
+  color: var(--text-bright);
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.015em;
+}
+
+.essay-subtitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-style: italic;
+  color: var(--accent-coral);
+  line-height: var(--leading-normal);
+  margin-bottom: 1.5rem;
+}
+
+.essay-section-kicker {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-bright);
+  margin: 2.5rem 0 1rem 0;
+  letter-spacing: 0.02em;
+}
+
+.essay-paragraph {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--text-body);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.essay-paragraph strong {
+  font-weight: 600;
+  color: var(--text-bright);
+}
+
+.essay-column.theme-light .essay-paragraph strong {
+  color: var(--text-light-mode-title);
+}
+
+.essay-quote {
+  border-left: 2px solid var(--accent-coral);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  font-size: 1.18rem;
+  color: var(--text-bright);
+  line-height: 1.65;
+}
+
+@media (max-width: 980px) {
+  .essay-column {
+    height: auto;
+    overflow-y: visible;
+    padding: 2.5rem 1.5rem;
+  }
+}

@@ -1,0 +1,194 @@
+/* ==============================================================================
+   COMPONENT: 3-TIER METADATA SYSTEM
+   ============================================================================== */
+
+/* ------------------------------------------------------------------------------
+   TIER 1: TOP KICKER BADGES (Above Title: Format • Pillar • Subtopic)
+   ------------------------------------------------------------------------------ */
+.post-header-meta-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.meta-chip {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.55rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+}
+
+.meta-chip.chip-primary {
+  color: var(--accent-coral);
+  background: var(--accent-coral-subtle);
+  border: 1px solid var(--accent-coral-border);
+}
+
+/* ------------------------------------------------------------------------------
+   TIER 2: META BAR (Below Title: Date • Author • sys_id • Reading Time • Via)
+   ------------------------------------------------------------------------------ */
+.post-header-meta-bottom {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  letter-spacing: 0.03em;
+}
+
+.post-header-meta-bottom code {
+  color: var(--accent-coral);
+  font-family: var(--font-mono);
+}
+
+.meta-author-sig {
+  color: var(--text-bright);
+  font-weight: 500;
+}
+
+/* ------------------------------------------------------------------------------
+   TIER 3: POST FOOTER & NETWORK BLOCK (Links • Backlinks • Tags • Share)
+   ------------------------------------------------------------------------------ */
+.post-footer-section {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.footer-block-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-coral);
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+/* Resources & References Grid */
+.resources-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+
+.resource-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+}
+
+.resource-card a {
+  color: var(--text-bright);
+  text-decoration: none;
+  font-size: 0.78rem;
+  display: inline-block;
+  margin-bottom: 0.35rem;
+}
+
+.resource-card a:hover {
+  color: var(--accent-coral);
+}
+
+.resource-card p {
+  font-family: var(--font-serif);
+  font-size: var(--text-md);
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Network Backlinks */
+.backlinks-list {
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.backlinks-list a {
+  color: var(--accent-coral);
+  text-decoration: none;
+}
+
+.backlinks-list a:hover {
+  text-decoration: underline;
+}
+
+/* Taxonomy Index Tags */
+.tags-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-pill {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.25rem 0.6rem;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.tag-pill:hover {
+  color: var(--accent-coral);
+  background: rgba(232, 74, 95, 0.1);
+}
+
+/* Social & Share Bar */
+.share-actions-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+}
+
+.btn-share {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-share:hover {
+  color: var(--accent-coral);
+  border-color: var(--accent-coral);
+}
+
+/* Monospace Terminal Brand Sign-Off */
+.post-signoff {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}

@@ -9,16 +9,16 @@
 # ------------------------------------------------------------------------------
 # 1. CORE IDENTIFICATION & PUBLISHING
 # ------------------------------------------------------------------------------
-title: "Foucault in the Latent Space: Biopolitics of Vector Embeddings"
-subtitle: "How continuous dimensional representation reconfigures surveillance, categorization, and the discipline of synthetic bodies."
-excerpt: "When identity becomes a point in 1536-dimensional space, how does normativity function? An inquiry into latent spaces as modern panopticons."
+title: "title"
+subtitle: "subtitle"
+excerpt: "excerpt"
 
-date: 2026-09-26 14:30:00 -0300        # Format: YYYY-MM-DD HH:MM:SS +/-TTTT
+date: 2026-09-26 14:30:00 -0300 # Format: YYYY-MM-DD HH:MM:SS +/-TTTT
 last_modified_at: 2026-09-26 18:00:00 -0300 # Updated timestamp for living notes / digital garden
 
-author: "Juan P. Giusepponi"            # Formal author name
-posted_by: "JPG"                        # Optional moniker signature: "JPG" | "Untitled.jpg" | guest
-status: "published"                     # "draft" | "in-progress" | "evergreen" | "published"
+author: "Juan P. Giusepponi" # Formal author name
+posted_by: "JPG" # Optional moniker signature: "JPG" | "Untitled.jpg" | guest
+status: "published" # "draft" | "in-progress" | "evergreen" | "published"
 
 # ------------------------------------------------------------------------------
 # 2. FORMAT & TAXONOMY (Renders in Chips Above Title)
@@ -54,16 +54,16 @@ tags:
 # - "light" : Pure Off-White (#DEE6E9 background, Midnight Slate text)
 theme: "dark"
 
-featured: true                          # true: Highlights post on homepage hero / top of 65/35 grid
-toc: true                               # true: Automatically renders Table of Contents in sidebar
-math: true                              # true: Enables KaTeX / MathJax for formulas and vector math
+featured: true # true: Highlights post on homepage hero / top of 65/35 grid
+toc: true # true: Automatically renders Table of Contents in sidebar
+math: true # true: Enables KaTeX / MathJax for formulas and vector math
 
 # ------------------------------------------------------------------------------
 # 4. ARCHIVAL & SPEC BADGES (Auto-filled if left blank or omitted)
 # ------------------------------------------------------------------------------
-sys_id: "SYS_260926_FOUC"             # Unique terminal ID (Auto-generated from date + slug if omitted)
-vector_dim: 1536                      # Latent dimension badge (Auto-filled from topic/content seed if omitted)
-reading_time: "12 min read"           # Read duration badge (Auto-calculated from word count if omitted)
+sys_id: "sysid" # Unique terminal ID (Auto-generated from date + slug if omitted)
+vector_dim: # Latent dimension badge (Auto-filled from topic/content seed if omitted)
+reading_time: "12 min read" # Read duration badge (Auto-calculated from word count if omitted)
 
 # ------------------------------------------------------------------------------
 # 5. MULTIPLE EXTERNAL DESTINATIONS & RESOURCES (Renders in Footer Section)
@@ -72,7 +72,7 @@ reading_time: "12 min read"           # Read duration badge (Auto-calculated fro
 links:
   - title: "ArXiv Preprint: Latent Manifolds as Power Topologies"
     url: "https://arxiv.org/abs/2301.00000"
-    type: "paper"                       # "paper" | "repo" | "article" | "tool" | "video" | "dataset"
+    type: "paper" # "paper" | "repo" | "article" | "tool" | "video" | "dataset"
     description: "Original mathematical formalization of high-dimensional manifold projection."
   - title: "Official PyTorch Implementation & Weights"
     url: "https://github.com/mynameisjpg/vector-biopolitics"
@@ -101,9 +101,9 @@ backlinks:
 # ------------------------------------------------------------------------------
 # 7. SHARING, EMBEDS & SOCIAL SYNDICATION (Renders in Footer Section)
 # ------------------------------------------------------------------------------
-shareable: true                         # true: Displays copy link, quote-share & webmention badges
-allow_embed: false                      # true: Permits iframe embedding with standalone reader styles
-canonical_url: ""                       # External canonical link if syndicating to Substack/Medium/LinkedIn
+shareable: true # true: Displays copy link, quote-share & webmention badges
+allow_embed: false # true: Permits iframe embedding with standalone reader styles
+canonical_url: "" # External canonical link if syndicating to Substack/Medium/LinkedIn
 
 image:
   path: "/assets/images/foucault-latent-cover.png"
@@ -198,7 +198,9 @@ Where $u$ and $v$ represent high-dimensional vector projections of human behavio
 <footer class="post-footer-section">
 
   <!-- A. EXTERNAL LINKS LIST -->
-  {% if page.links and page.links.size > 0 %}
+
+{% if page.links and page.links.size > 0 %}
+
   <section class="footer-block footer-links">
     <h3 class="footer-block-title">// REFERENCED_RESOURCES &amp; DESTINATIONS</h3>
     <div class="resources-grid">
@@ -218,7 +220,9 @@ Where $u$ and $v$ represent high-dimensional vector projections of human behavio
   {% endif %}
 
   <!-- B. BACKLINKS / CONNECTED DISPATCHES -->
-  {% if page.backlinks and page.backlinks.size > 0 %}
+
+{% if page.backlinks and page.backlinks.size > 0 %}
+
   <section class="footer-block footer-backlinks">
     <h3 class="footer-block-title">// CONNECTED_DISPATCHES (NETWORK)</h3>
     <ul class="backlinks-list">
@@ -233,7 +237,9 @@ Where $u$ and $v$ represent high-dimensional vector projections of human behavio
   {% endif %}
 
   <!-- C. TAXONOMY INDEX / TAGS CLOUD -->
-  {% if page.tags and page.tags.size > 0 %}
+
+{% if page.tags and page.tags.size > 0 %}
+
   <section class="footer-block footer-tags">
     <h3 class="footer-block-title">// TAXONOMY_INDEX</h3>
     <div class="tags-group">
@@ -245,7 +251,9 @@ Where $u$ and $v$ represent high-dimensional vector projections of human behavio
   {% endif %}
 
   <!-- D. SHARE & EMBED ACTIONS -->
-  {% if page.shareable %}
+
+{% if page.shareable %}
+
   <section class="footer-block footer-share">
     <div class="share-actions-bar">
       <span class="share-label">[ SHARE DISPATCH ]:</span>

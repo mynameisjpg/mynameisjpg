@@ -1,0 +1,58 @@
+/* ==============================================================================
+   COMPONENT: SPLIT LAYOUT SHELL (50% Matrix / 50% Reader)
+   ============================================================================== */
+
+.split-layout {
+  margin-left: var(--sidebar-width);
+  width: calc(100vw - var(--sidebar-width));
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-column {
+  background-color: var(--bg-deep);
+  padding: 3.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.grid-header-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.grid-header-kicker .filter-status {
+  color: var(--accent-coral);
+}
+
+/* Responsive Stacking */
+@media (max-width: 980px) {
+  .split-layout {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    width: 100vw;
+  }
+  .sidebar-rail {
+    display: none;
+  }
+  .grid-column {
+    height: auto;
+    overflow-y: visible;
+    padding: 2rem 1.5rem;
+  }
+}

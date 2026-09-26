@@ -1,0 +1,63 @@
+/* ==============================================================================
+   UNTITLED.JPG — BASE & UTILITIES
+   ============================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  background-color: var(--bg-deep);
+  color: var(--text-bright);
+  font-family: var(--font-serif);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  overflow-x: hidden;
+  line-height: var(--leading-normal);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-coral);
+}
+
+/* Floating Ambient Pixel Glitches */
+.pixel-glitch {
+  position: absolute;
+  pointer-events: none;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  line-height: 0.85;
+  color: rgba(255, 255, 255, 0.22);
+  user-select: none;
+  z-index: var(--z-base);
+}
+
+.glitch-1 { top: 10%; left: 24px; }
+.glitch-2 { top: 38%; left: 14px; color: rgba(255, 255, 255, 0.38); }
+.glitch-3 { top: 74%; left: 30px; color: rgba(255, 255, 255, 0.28); }
+.glitch-4 { top: 8%; right: 20px; color: rgba(255, 255, 255, 0.38); }
+.glitch-5 { top: 44%; right: 12px; }
+.glitch-6 { top: 80%; right: 24px; color: rgba(255, 255, 255, 0.3); }

@@ -63,7 +63,7 @@ allow_embed: true
 canonical_url: ""
 
 image:
-  path: "/assets/images/turing-queer-ai-cover.png"
+  path: "mynameisjpg\assets\images\turing2.png"
   alt: "Dithered duotone graphic of a teleprinter partition splitting human and algorithmic signal"
 ---
 

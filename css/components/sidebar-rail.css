@@ -1,0 +1,114 @@
+/* ==============================================================================
+   COMPONENT: SIDEBAR RAIL (Ultra-Thin 48px Left Navigation)
+   ============================================================================== */
+
+.sidebar-rail {
+  width: var(--sidebar-width);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--bg-panel);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  z-index: var(--z-sidebar);
+  border-right: 1px solid var(--border-faint);
+}
+
+.sidebar-top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.brand-logo-v {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--text-bright);
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.brand-logo-v:hover {
+  color: var(--accent-coral);
+}
+
+.sidebar-top-icon {
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.sidebar-top-icon:hover {
+  color: var(--accent-coral);
+}
+
+.nav-stacked-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  align-items: center;
+  margin: auto 0;
+}
+
+.nav-link-item {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.nav-link-item:hover {
+  color: var(--accent-coral);
+}
+
+.nav-link-item.active {
+  color: var(--text-bright);
+  font-weight: 600;
+  border-left: 2px solid var(--accent-coral);
+}
+
+.sidebar-bottom-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  align-items: center;
+}
+
+.sidebar-bottom-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sidebar-bottom-icons svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: var(--text-muted);
+  stroke-width: 1.6;
+  transition: stroke var(--transition-fast);
+}
+
+.sidebar-bottom-icons svg:hover {
+  stroke: var(--accent-coral);
+}

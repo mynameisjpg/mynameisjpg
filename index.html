@@ -5,670 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Untitled.jpg — Overthinking Undervalued Means</title>
   <meta name="description" content="Essays, field notes, curated bookmarks, and practical resources on AI perception, cognitive psychophysics, latent spaces, and media ecology.">
+  
+  <!-- Typography & Math Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-  <style>
-    :root {
-      --bg-deep: #121212;        /* Pure neutral deep charcoal black */
-      --bg-panel: #161616;       /* Neutral dark grey panel */
-      --bg-card: #202020;        /* Solid neutral grey card container */
-      --accent-coral: #E84A5F;   /* Signature Coral Red */
-      --accent-coral-glow: rgba(232, 74, 95, 0.45);
-      --text-bright: #F5F5F5;    /* Crisp bright neutral off-white */
-      --text-body: #D4D4D4;      /* Soft neutral reading tone */
-      --text-muted: #888888;     /* Neutral mid-grey */
-      --text-faint: #555555;     /* Neutral dark-grey */
-      --font-mono: 'Azeret Mono', monospace;
-      --font-serif: 'Cormorant Garamond', serif;
-    }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: var(--bg-deep);
-      color: var(--text-bright);
-      font-family: var(--font-serif);
-      display: flex;
-      min-height: 100vh;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ==========================================================================
-       1. ULTRA-THIN LEFT SIDEBAR RAIL (48px Width)
-       ========================================================================== */
-    .sidebar-rail {
-      width: 48px;
-      height: 100vh;
-      position: fixed;
-      left: 0;
-      top: 0;
-      background-color: var(--bg-panel);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 0;
-      z-index: 100;
-      border-right: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .sidebar-top-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.25rem;
-    }
-
-    /* Brand Logo Rotated at Top (Reads Upward, Glyphs Face Left) */
-    .brand-logo-v {
-      font-family: var(--font-mono);
-      font-size: 0.62rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      color: var(--text-bright);
-      text-decoration: none;
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      white-space: nowrap;
-      transition: color 0.2s ease;
-    }
-
-    .brand-logo-v:hover {
-      color: var(--accent-coral);
-    }
-
-    /* Stacked Vertical Route Links */
-    .nav-stacked-vertical {
-      display: flex;
-      flex-direction: column;
-      gap: 2.2rem;
-      align-items: center;
-      margin: auto 0;
-    }
-
-    .nav-link-item {
-      font-family: var(--font-mono);
-      font-size: 0.62rem;
-      font-weight: 400;
-      letter-spacing: 0.12em;
-      color: var(--text-muted);
-      text-decoration: none;
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      transition: all 0.2s ease;
-      white-space: nowrap;
-      cursor: pointer;
-      padding: 4px 0;
-    }
-
-    .nav-link-item:hover {
-      color: var(--accent-coral);
-    }
-
-    .nav-link-item.active {
-      color: var(--text-bright);
-      font-weight: 600;
-      border-left: 2px solid var(--accent-coral);
-    }
-
-    /* Bottom Pinned Icons: Home, Subscribe, LinkedIn */
-    .sidebar-bottom-icons {
-      display: flex;
-      flex-direction: column;
-      gap: 1.15rem;
-      align-items: center;
-    }
-
-    .sidebar-bottom-icons a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .sidebar-bottom-icons svg {
-      width: 15px;
-      height: 15px;
-      fill: none;
-      stroke: var(--text-muted);
-      stroke-width: 1.6;
-      transition: stroke 0.2s ease;
-    }
-
-    .sidebar-bottom-icons svg:hover {
-      stroke: var(--accent-coral);
-    }
-
-    /* ==========================================================================
-       2. MAIN SPLIT 50-50 LAYOUT
-       ========================================================================== */
-    .split-layout {
-      margin-left: 48px;
-      width: calc(100vw - 48px);
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    /* LEFT FLOATING ASYMMETRIC GRID PANEL (50%) */
-    .grid-column {
-      background-color: var(--bg-deep);
-      padding: 3.5rem 2.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      position: relative;
-      overflow-y: auto;
-      height: 100vh;
-    }
-
-    .grid-header-kicker {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      color: var(--text-muted);
-      letter-spacing: 0.1em;
-      margin-bottom: 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 680px;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-    }
-
-    .grid-header-kicker .filter-status {
-      color: var(--accent-coral);
-    }
-
-    /* Floating Ambient Pixel Glitches */
-    .pixel-glitch {
-      position: absolute;
-      pointer-events: none;
-      font-family: var(--font-mono);
-      font-size: 0.6rem;
-      line-height: 0.85;
-      color: rgba(255, 255, 255, 0.22);
-      user-select: none;
-      z-index: 1;
-    }
-    .glitch-1 { top: 10%; left: 24px; }
-    .glitch-2 { top: 38%; left: 14px; color: rgba(255, 255, 255, 0.38); }
-    .glitch-3 { top: 74%; left: 30px; color: rgba(255, 255, 255, 0.28); }
-    .glitch-4 { top: 8%; right: 20px; color: rgba(255, 255, 255, 0.38); }
-    .glitch-5 { top: 44%; right: 12px; }
-    .glitch-6 { top: 80%; right: 24px; color: rgba(255, 255, 255, 0.3); }
-
-    /* Asymmetric 3x3 Card Grid Matrix */
-    .card-grid-matrix {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem 1.6rem;
-      align-items: start;
-      position: relative;
-      z-index: 2;
-      max-width: 680px;
-      margin: 0 auto;
-      width: 100%;
-      padding-bottom: 4rem;
-    }
-
-    /* Unified Solid Card Container */
-    .grid-card {
-      position: relative;
-      background-color: var(--bg-card);
-      display: flex;
-      flex-direction: column;
-      cursor: pointer;
-      padding: 0.55rem;
-      border-radius: 2px;
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background-color 0.25s ease;
-      text-decoration: none;
-      z-index: 2;
-      border: 1px solid rgba(255, 255, 255, 0.04);
-    }
-
-    .grid-card:hover {
-      transform: scale(1.05);
-      z-index: 20;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-      border-color: rgba(232, 74, 95, 0.4);
-    }
-
-    .grid-card:hover .card-caption {
-      color: var(--text-bright);
-    }
-
-    .grid-card:hover .hover-meta-reveal,
-    .grid-card.selected-active .hover-meta-reveal {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    /* Selected Active Card */
-    .grid-card.selected-active {
-      background-color: var(--accent-coral);
-      box-shadow: 0 0 35px var(--accent-coral-glow);
-      transform: scale(1.05);
-      z-index: 10;
-      border-color: #FFFFFF;
-    }
-
-    .grid-card.selected-active .card-caption {
-      color: #141414;
-      font-weight: 600;
-    }
-
-    .card-art-box {
-      width: 100%;
-      background-color: #161616;
-      position: relative;
-      overflow: hidden;
-      border-radius: 1px;
-    }
-
-    /* Asymmetric Heights */
-    .h-tall-1 { aspect-ratio: 1 / 1.28; }
-    .h-tall-2 { aspect-ratio: 1 / 1.42; }
-    .h-med    { aspect-ratio: 1 / 1.15; }
-    .h-square { aspect-ratio: 1 / 1.02; }
-    .h-wide   { aspect-ratio: 1 / 0.95; }
-
-    .card-type-chip {
-      position: absolute;
-      top: 6px;
-      right: 6px;
-      font-family: var(--font-mono);
-      font-size: 0.52rem;
-      font-weight: 400;
-      letter-spacing: 0.06em;
-      color: rgba(255, 255, 255, 0.7);
-      background: rgba(18, 18, 18, 0.88);
-      padding: 2px 6px;
-      border-radius: 1px;
-      z-index: 5;
-    }
-
-    .card-type-chip.chip-essay {
-      color: var(--accent-coral);
-    }
-
-    .card-art-svg {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-    }
-
-    .card-caption {
-      margin-top: 0.65rem;
-      font-family: var(--font-mono);
-      font-size: 0.74rem;
-      font-weight: 400;
-      line-height: 1.35;
-      color: var(--text-body);
-      letter-spacing: -0.01em;
-      transition: color 0.2s ease;
-      padding: 0 0.15rem 0.2rem 0.15rem;
-    }
-
-    /* Hover Meta Overlay */
-    .hover-meta-reveal {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.4) 70%, transparent);
-      padding: 1.2rem 0.65rem 0.6rem 0.65rem;
-      font-family: var(--font-mono);
-      font-size: 0.58rem;
-      color: #EEEEEE;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.2s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-      z-index: 10;
-    }
-
-    .hover-meta-reveal .meta-title {
-      color: var(--text-bright);
-      font-weight: 600;
-      font-size: 0.64rem;
-      letter-spacing: 0.02em;
-    }
-
-    .hover-meta-reveal .meta-sub {
-      color: rgba(245, 245, 245, 0.85);
-      font-size: 0.52rem;
-      line-height: 1.35;
-    }
-
-    /* ==========================================================================
-       3. RIGHT ESSAY READING COLUMN (50%)
-       ========================================================================== */
-    .essay-column {
-      background-color: var(--bg-panel);
-      padding: 4.5rem 4.5rem;
-      overflow-y: auto;
-      height: 100vh;
-      position: relative;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    /* Dynamic Theme Switching for Reader Panel */
-    .essay-column.theme-light {
-      background-color: #DEE6E9;
-      color: #1B2427;
-    }
-    .essay-column.theme-light .essay-title {
-      color: #1B2427;
-    }
-    .essay-column.theme-light .essay-paragraph {
-      color: #2D3748;
-    }
-    .essay-column.theme-light .essay-byline,
-    .essay-column.theme-light .meta-chip {
-      color: #64748B;
-      background: rgba(0, 0, 0, 0.06);
-    }
-    .essay-column.theme-light .essay-quote {
-      color: #1B2427;
-      border-left-color: var(--accent-coral);
-    }
-    .essay-column.theme-light .resource-card {
-      background: rgba(0, 0, 0, 0.04);
-      border-color: rgba(0, 0, 0, 0.1);
-    }
-    .essay-column.theme-light .resource-card a {
-      color: #1B2427;
-    }
-    .essay-column.theme-light .post-header-meta-bottom {
-      color: #4A5568;
-    }
-
-    /* 3-TIER METADATA ARCHITECTURE */
-    /* Tier 1: Above Title */
-    .post-header-meta-top {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .meta-chip {
-      font-family: var(--font-mono);
-      font-size: 0.58rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      padding: 0.25rem 0.55rem;
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--text-muted);
-      border-radius: 1px;
-    }
-
-    .meta-chip.chip-primary {
-      color: var(--accent-coral);
-      background: rgba(232, 74, 95, 0.12);
-      border: 1px solid rgba(232, 74, 95, 0.25);
-    }
-
-    .essay-title {
-      font-family: var(--font-mono);
-      font-size: 1.85rem;
-      font-weight: 500;
-      line-height: 1.25;
-      color: var(--text-bright);
-      margin-bottom: 0.85rem;
-      letter-spacing: -0.015em;
-    }
-
-    .essay-subtitle {
-      font-family: var(--font-serif);
-      font-size: 1.2rem;
-      font-style: italic;
-      color: var(--accent-coral);
-      line-height: 1.45;
-      margin-bottom: 1.5rem;
-    }
-
-    /* Tier 2: Below Title */
-    .post-header-meta-bottom {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      color: var(--text-muted);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 2.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      letter-spacing: 0.03em;
-    }
-
-    .post-header-meta-bottom code {
-      color: var(--accent-coral);
-    }
-
-    /* Essay Prose */
-    .essay-section-kicker {
-      font-family: var(--font-mono);
-      font-size: 1.05rem;
-      font-weight: 500;
-      color: var(--text-bright);
-      margin: 2.5rem 0 1rem 0;
-      letter-spacing: 0.02em;
-    }
-
-    .essay-paragraph {
-      font-family: var(--font-serif);
-      font-size: 1.12rem;
-      line-height: 1.8;
-      color: var(--text-body);
-      margin-bottom: 1.5rem;
-      font-weight: 300;
-    }
-
-    .essay-quote {
-      border-left: 2px solid var(--accent-coral);
-      padding-left: 1.5rem;
-      margin: 2rem 0;
-      font-style: italic;
-      font-size: 1.18rem;
-      color: var(--text-bright);
-      line-height: 1.65;
-    }
-
-    /* Tier 3: Footer Section */
-    .post-footer-section {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
-    }
-
-    .footer-block-title {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--accent-coral);
-      letter-spacing: 0.08em;
-      margin-bottom: 1rem;
-    }
-
-    .resources-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.85rem;
-    }
-
-    .resource-card {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      padding: 1rem;
-      border-radius: 2px;
-      font-family: var(--font-mono);
-    }
-
-    .resource-card a {
-      color: var(--text-bright);
-      text-decoration: none;
-      font-size: 0.78rem;
-      display: inline-block;
-      margin-bottom: 0.35rem;
-    }
-
-    .resource-card a:hover {
-      color: var(--accent-coral);
-    }
-
-    .resource-card p {
-      font-family: var(--font-serif);
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }
-
-    .backlinks-list {
-      list-style: none;
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .backlinks-list a {
-      color: var(--accent-coral);
-      text-decoration: none;
-    }
-
-    .backlinks-list a:hover {
-      text-decoration: underline;
-    }
-
-    .tags-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .tag-pill {
-      font-family: var(--font-mono);
-      font-size: 0.6rem;
-      color: var(--text-muted);
-      background: rgba(255, 255, 255, 0.04);
-      padding: 0.25rem 0.6rem;
-      text-decoration: none;
-      border-radius: 1px;
-    }
-
-    .tag-pill:hover {
-      color: var(--accent-coral);
-    }
-
-    .share-actions-bar {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.6rem;
-      font-family: var(--font-mono);
-      font-size: 0.62rem;
-    }
-
-    .btn-share {
-      background: transparent;
-      color: var(--text-muted);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      padding: 0.4rem 0.75rem;
-      border-radius: 1px;
-      cursor: pointer;
-      text-decoration: none;
-      font-family: var(--font-mono);
-      font-size: 0.6rem;
-      transition: all 0.2s ease;
-    }
-
-    .btn-share:hover {
-      color: var(--accent-coral);
-      border-color: var(--accent-coral);
-    }
-
-    .post-signoff {
-      font-family: var(--font-mono);
-      font-size: 0.58rem;
-      color: var(--text-faint);
-      letter-spacing: 0.05em;
-      text-align: center;
-      margin-top: 2rem;
-      padding-bottom: 2rem;
-    }
-
-    /* Floating Navigation Controls */
-    .floating-nav-buttons {
-      position: fixed;
-      bottom: 24px;
-      right: 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      z-index: 60;
-    }
-
-    .btn-nav-action {
-      font-family: var(--font-mono);
-      font-size: 0.6rem;
-      font-weight: 400;
-      background: var(--bg-deep);
-      color: var(--text-muted);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 6px 10px;
-      border-radius: 1px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .btn-nav-action:hover {
-      color: var(--accent-coral);
-      border-color: var(--accent-coral);
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 980px) {
-      .split-layout {
-        grid-template-columns: 1fr;
-        margin-left: 0;
-        width: 100vw;
-      }
-      .sidebar-rail {
-        display: none;
-      }
-      .grid-column, .essay-column {
-        height: auto;
-        overflow-y: visible;
-        padding: 2rem 1.5rem;
-      }
-    }
-  </style>
+  <!-- Modular Design System Stylesheet (Imports Tokens & Components) -->
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
   <!-- ====================================================================
-       1. ULTRA-THIN LEFT SIDEBAR RAIL (48px)
+       COMPONENT 1: ULTRA-THIN LEFT SIDEBAR RAIL (48px)
+       File: css/components/sidebar-rail.css
        ==================================================================== -->
-  <aside class="sidebar-rail">
+  <aside class="sidebar-rail" data-component="sidebar-rail" aria-label="Main Navigation Rail">
     <!-- Top Brand & Menu -->
     <div class="sidebar-top-section">
       <a href="#" class="brand-logo-v" title="Untitled.jpg">[ UNTITLED.JPG ]</a>
@@ -682,94 +36,84 @@
     </div>
 
     <!-- Stacked Vertical Route Links -->
-    <nav class="nav-stacked-vertical" id="category-filter-nav">
-      <div class="nav-link-item active" data-filter="all">00. ALL</div>
-      <div class="nav-link-item" data-filter="essay">01. ESSAYS</div>
-      <div class="nav-link-item" data-filter="note">02. NOTES</div>
-      <div class="nav-link-item" data-filter="bookmark">03. BOOKMARKS</div>
-      <div class="nav-link-item" data-filter="resource">04. RESOURCES</div>
+    <nav class="nav-stacked-vertical" id="category-filter-nav" aria-label="Format Filters">
+      <button type="button" class="nav-link-item active" data-filter="all">00. ALL</button>
+      <button type="button" class="nav-link-item" data-filter="essay">01. ESSAYS</button>
+      <button type="button" class="nav-link-item" data-filter="note">02. NOTES</button>
+      <button type="button" class="nav-link-item" data-filter="bookmark">03. BOOKMARKS</button>
+      <button type="button" class="nav-link-item" data-filter="resource">04. RESOURCES</button>
     </nav>
 
     <!-- Bottom Pinned Icons: Home, Subscribe, LinkedIn -->
     <div class="sidebar-bottom-icons">
-      <a href="#" title="Home">
+      <a href="#" title="Home" aria-label="Home">
         <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
       </a>
-      <a href="javascript:void(0)" onclick="openSubscribeModal()" title="Subscribe">
-        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-      </a>
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+      <button type="button" class="sidebar-icon-btn" onclick="openSubscribeModal()" title="Subscribe to Dispatches" aria-label="Subscribe" style="background: none; border: none; cursor: pointer; padding: 0;">
+        <svg viewBox="0 0 24 24" style="width: 15px; height: 15px; stroke: var(--text-muted); stroke-width: 1.6; fill: none;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+      </button>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
         <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
       </a>
     </div>
   </aside>
 
   <!-- ====================================================================
-       2. SPLIT 50-50 LAYOUT
+       COMPONENT 2: SPLIT 50-50 LAYOUT (Matrix Column & Reader Column)
+       File: css/components/split-layout.css
        ==================================================================== -->
-  <main class="split-layout">
+  <main class="split-layout" data-component="split-shell">
 
-    <!-- LEFT FLOATING ASYMMETRIC GRID PANEL (50%) -->
-    <section class="grid-column">
+    <!-- COMPONENT 3: ASYMMETRIC GRID MATRIX (50% Column)
+         File: css/components/card-matrix.css -->
+    <section class="grid-column" data-component="dispatch-matrix" aria-label="Dispatch Grid Matrix">
 
-      <div class="grid-header-kicker">
+      <header class="grid-header-kicker">
         <span>SYS_LOG // ASYMMETRIC_DISPATCH_MATRIX</span>
         <span class="filter-status" id="active-filter-label">[MODE: ALL_DISPATCHES]</span>
-      </div>
+      </header>
 
       <!-- Scattered Floating Ambient Glitch Clusters -->
-      <div class="pixel-glitch glitch-1">▪ ▫<br>▫ ▪ ▪<br>▪</div>
-      <div class="pixel-glitch glitch-2">■ ▪ ▫<br>▫ ■<br>▪ ▫ ■ ▪</div>
-      <div class="pixel-glitch glitch-3">▫ ▪<br>▪ ▪ ▫</div>
-      <div class="pixel-glitch glitch-4">▪ ▪ ▫<br>▫ ■ ▪<br>▪</div>
-      <div class="pixel-glitch glitch-5">▫ ▪ ▫<br>■ ▪</div>
-      <div class="pixel-glitch glitch-6">▪ ▫ ■<br>▫ ▪</div>
+      <div class="pixel-glitch glitch-1" aria-hidden="true">▪ ▫<br>▫ ▪ ▪<br>▪</div>
+      <div class="pixel-glitch glitch-2" aria-hidden="true">■ ▪ ▫<br>▫ ■<br>▪ ▫ ■ ▪</div>
+      <div class="pixel-glitch glitch-3" aria-hidden="true">▫ ▪<br>▪ ▪ ▫</div>
+      <div class="pixel-glitch glitch-4" aria-hidden="true">▪ ▪ ▫<br>▫ ■ ▪<br>▪</div>
+      <div class="pixel-glitch glitch-5" aria-hidden="true">▫ ▪ ▫<br>■ ▪</div>
+      <div class="pixel-glitch glitch-6" aria-hidden="true">▪ ▫ ■<br>▫ ▪</div>
 
       <!-- Asymmetric 3x3 Card Grid Matrix -->
       <div class="card-grid-matrix" id="card-matrix">
 
-        <!-- Card 1: Turing & Queer AI (Selected Active) -->
-        <article class="grid-card selected-active" data-id="post-turing" data-format="essay">
+        <!-- Card 1: AI is Queer (Turing & Synthetic Bodies) -->
+        <article class="grid-card selected-active" data-id="post-turing" data-format="essay" tabindex="0" role="button" aria-pressed="true">
           <div class="card-art-box h-tall-1">
             <span class="card-type-chip chip-essay">[ESSAY]</span>
-            <svg class="card-art-svg" viewBox="0 0 180 230">
-              <defs>
-                <pattern id="coral-dither" width="3" height="3" patternUnits="userSpaceOnUse">
-                  <rect width="1.5" height="1.5" fill="#B32B3E"/>
-                </pattern>
-              </defs>
+            <img src="assets/images/turing1.png" alt="Turing & Queer AI Artwork" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <!-- Fallback Vector Graphic if local image not found -->
+            <svg class="card-art-svg" viewBox="0 0 180 230" style="display: none;">
               <rect width="180" height="230" fill="#E84A5F"/>
               <rect x="25" y="30" width="65" height="55" fill="#C73649"/>
               <rect x="105" y="45" width="50" height="105" fill="#FF7084"/>
-              <path d="M45,95 Q90,60 110,105 Q120,165 65,175 Q35,160 45,95 Z" fill="#2A0B10"/>
               <ellipse cx="78" cy="130" rx="30" ry="42" fill="#170508"/>
-              <path d="M35,45 L150,45 L150,190 L118,190 L118,80 L35,80 Z" fill="#FF8A99" opacity="0.75"/>
-              <rect width="180" height="230" fill="url(#coral-dither)" opacity="0.3"/>
             </svg>
             <div class="hover-meta-reveal">
-              <span class="meta-title">TURING & QUEER AI</span>
+              <span class="meta-title">AI IS QUEER: TURING</span>
               <span class="meta-sub">2026.09.25 • 9 MIN READ • TOPIC: AI PERCEPTION</span>
             </div>
           </div>
-          <h2 class="card-caption">Turing & Queer AI: Synthetic Bodies</h2>
+          <h2 class="card-caption">AI is Queer: Turing & Synthetic Bodies</h2>
         </article>
 
         <!-- Card 2: Foucault & The Vector (Chinese Encyclopedia) -->
-        <article class="grid-card" data-id="post-foucault" data-format="essay">
+        <article class="grid-card" data-id="post-foucault" data-format="essay" tabindex="0" role="button" aria-pressed="false">
           <div class="card-art-box h-tall-2">
             <span class="card-type-chip chip-essay">[ESSAY]</span>
-            <svg class="card-art-svg" viewBox="0 0 180 255">
-              <defs>
-                <pattern id="dither-p3" width="4" height="4" patternUnits="userSpaceOnUse">
-                  <circle cx="2" cy="2" r="1" fill="#555555"/>
-                </pattern>
-              </defs>
+            <img src="assets/images/foucault1.png" alt="Foucault & Vector Space Artwork" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <svg class="card-art-svg" viewBox="0 0 180 255" style="display: none;">
               <rect width="180" height="255" fill="#181818"/>
               <path d="M90,35 Q130,55 125,120 Q120,185 145,255 L35,255 Q60,185 55,120 Q50,55 90,35 Z" fill="#757575"/>
-              <path d="M90,45 Q120,60 115,115 Q110,180 130,255 L50,255 Q70,180 65,115 Q60,60 90,45 Z" fill="#B0B0B0"/>
               <ellipse cx="90" cy="85" rx="24" ry="34" fill="#E0E0E0"/>
               <rect x="150" y="30" width="9" height="9" fill="#E84A5F"/>
-              <rect width="180" height="255" fill="url(#dither-p3)" opacity="0.3"/>
             </svg>
             <div class="hover-meta-reveal">
               <span class="meta-title">CHINESE ENCYCLOPEDIA OF VECTOR SPACE</span>
@@ -779,46 +123,34 @@
           <h2 class="card-caption">The "Chinese Encyclopedia" of Vector Space</h2>
         </article>
 
-        <!-- Card 3: JEPA & LeCun's World Models (Note) -->
-        <article class="grid-card" data-id="post-jepa" data-format="note">
+        <!-- Card 3: Yann LeCun World Models & JEPA -->
+        <article class="grid-card" data-id="post-jepa" data-format="essay" tabindex="0" role="button" aria-pressed="false">
           <div class="card-art-box h-med">
-            <span class="card-type-chip">[NOTE]</span>
-            <svg class="card-art-svg" viewBox="0 0 180 205">
-              <defs>
-                <pattern id="dither-p2" width="3" height="3" patternUnits="userSpaceOnUse">
-                  <rect width="1.5" height="1.5" fill="#3A3A3A"/>
-                </pattern>
-              </defs>
+            <span class="card-type-chip chip-essay">[ESSAY]</span>
+            <img src="assets/images/ailook1.png" alt="Yann LeCun World Models Artwork" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <svg class="card-art-svg" viewBox="0 0 180 205" style="display: none;">
               <rect width="180" height="205" fill="#191919"/>
               <ellipse cx="90" cy="85" rx="45" ry="60" fill="#8E8E8E"/>
-              <ellipse cx="88" cy="83" rx="38" ry="52" fill="#BDBDBD"/>
               <path d="M72,65 Q88,62 104,65 Q100,115 88,128 Q76,115 72,65 Z" fill="#E8E8E8"/>
-              <rect width="180" height="205" fill="url(#dither-p2)" opacity="0.4"/>
             </svg>
             <div class="hover-meta-reveal">
-              <span class="meta-title">JEPA & WORLD MODELS</span>
-              <span class="meta-sub">2026.09.24 • 5 MIN READ • TOPIC: LLMS & ARCHITECTURE</span>
+              <span class="meta-title">WHY LLMS DON'T THINK: JEPA</span>
+              <span class="meta-sub">2026.09.24 • 12 MIN READ • TOPIC: WORLD MODELS</span>
             </div>
           </div>
-          <h2 class="card-caption">JEPA & LeCun's World Models</h2>
+          <h2 class="card-caption">Why LLMs Don't Think: World Models & JEPA</h2>
         </article>
 
         <!-- Card 4: Foveal vs Peripheral Vision (Resource) -->
-        <article class="grid-card" data-id="post-foveal" data-format="resource">
+        <article class="grid-card" data-id="post-foveal" data-format="resource" tabindex="0" role="button" aria-pressed="false">
           <div class="card-art-box h-square">
             <span class="card-type-chip">[RESOURCE]</span>
             <svg class="card-art-svg" viewBox="0 0 180 185">
-              <defs>
-                <pattern id="dot-eye" width="5" height="5" patternUnits="userSpaceOnUse">
-                  <circle cx="2.5" cy="2.5" r="1.4" fill="#555555"/>
-                </pattern>
-              </defs>
               <rect width="180" height="185" fill="#1B1B1B"/>
               <ellipse cx="90" cy="92" rx="55" ry="36" fill="#808080"/>
               <ellipse cx="90" cy="92" rx="45" ry="30" fill="#CCCCCC"/>
               <circle cx="90" cy="92" r="22" fill="#141414"/>
               <circle cx="90" cy="92" r="12" fill="#E84A5F"/>
-              <rect width="180" height="185" fill="url(#dot-eye)" opacity="0.45"/>
             </svg>
             <div class="hover-meta-reveal">
               <span class="meta-title">FOVEAL VS PERIPHERAL VISION</span>
@@ -829,7 +161,7 @@
         </article>
 
         <!-- Card 5: Spatial Intelligence (Bookmark) -->
-        <article class="grid-card" data-id="post-spatial" data-format="bookmark">
+        <article class="grid-card" data-id="post-spatial" data-format="bookmark" tabindex="0" role="button" aria-pressed="false">
           <div class="card-art-box h-tall-1">
             <span class="card-type-chip">[BOOKMARK]</span>
             <svg class="card-art-svg" viewBox="0 0 180 230">
@@ -846,7 +178,7 @@
         </article>
 
         <!-- Card 6: Dithered Duotone Graphics (Resource) -->
-        <article class="grid-card" data-id="post-dither" data-format="resource">
+        <article class="grid-card" data-id="post-dither" data-format="resource" tabindex="0" role="button" aria-pressed="false">
           <div class="card-art-box h-wide">
             <span class="card-type-chip">[RESOURCE]</span>
             <svg class="card-art-svg" viewBox="0 0 180 170">
@@ -865,286 +197,47 @@
       </div>
     </section>
 
-    <!-- RIGHT ESSAY READING PANEL (50%) -->
-    <article class="essay-column" id="essay-reading-pane">
-      <!-- Injected dynamically by JavaScript below -->
+    <!-- COMPONENT 4: ESSAY READER PANE & 3-TIER METADATA (50% Column)
+         Files: css/components/reader-pane.css, css/components/metadata-tiers.css -->
+    <article class="essay-column" id="essay-reading-pane" data-component="reader-pane" aria-label="Essay Reader View">
+      <!-- Hydrated dynamically by app.js -->
     </article>
 
   </main>
 
-  <!-- Fixed Navigation Tools -->
-  <div class="floating-nav-buttons">
-    <button class="btn-nav-action" onclick="document.getElementById('essay-reading-pane').scrollTo({top: 0, behavior: 'smooth'})">↑ TOP</button>
-    <button class="btn-nav-action" onclick="document.getElementById('essay-reading-pane').scrollTo({top: document.getElementById('essay-reading-pane').scrollHeight, behavior: 'smooth'})">↓ BOTTOM</button>
+  <!-- ====================================================================
+       COMPONENT 5: FLOATING CONTROLS
+       File: css/components/floating-controls.css
+       ==================================================================== -->
+  <div class="floating-nav-buttons" data-component="floating-controls">
+    <button type="button" class="btn-nav-action" onclick="document.getElementById('essay-reading-pane').scrollTo({top: 0, behavior: 'smooth'})" title="Scroll Reader to Top">↑ TOP</button>
+    <button type="button" class="btn-nav-action" onclick="document.getElementById('essay-reading-pane').scrollTo({top: document.getElementById('essay-reading-pane').scrollHeight, behavior: 'smooth'})" title="Scroll Reader to Bottom">↓ BOTTOM</button>
   </div>
 
-  <!-- Client-Side Content Store & Dynamic Hydration Script -->
-  <script>
-    const POSTS_DATABASE = {
-      "post-turing": {
-        theme: "dark",
-        format: "ESSAY",
-        pillar: "AI PERCEPTION, CULTURE & REPRESENTATION",
-        subtopic: "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        title: "Turing & Queer AI: Synthetic Bodies, Mimicry, and the Violence of the Statistical Mean",
-        subtitle: "How Alan Turing's Imitation Game codified survival through deception—and why modern machine learning remains an engine for the recognition of the Same.",
-        date: "2026.09.25",
-        author: "Juan P. Giusepponi",
-        posted_by: "JPG",
-        sys_id: "SYS_260925_TURQ",
-        read_time: "9 MIN READ",
-        via: "Matteo Pasquinelli / e-flux journal",
-        content: `
-          <h2 class="essay-section-kicker">01. The Original Game of Passing</h2>
-          <p class="essay-paragraph">When Alan Turing framed the benchmark for machine intelligence in his 1950 landmark paper <em>Computing Machinery and Intelligence</em>, he did not propose a benchmark of mathematical problem-solving or axiomatic deduction.</p>
-          <p class="essay-paragraph">Instead, he proposed a theatrical parlor game rooted in <strong>deception, mimicry, and social performativity</strong>: the Imitation Game. The test begins with an interrogation of gender across typed teleprinter text. The computer enters not as a calculator, but as an impersonator of social conventions.</p>
-          <blockquote class="essay-quote">"By employing a schema of mind that prioritizes good manners and familiarity with social conventions, the Turing Test remains an example of austere social normativity..." — Matteo Pasquinelli</blockquote>
-          
-          <h2 class="essay-section-kicker">02. Intelligence as Defensive Camouflage</h2>
-          <p class="essay-paragraph">In 1950s Britain, where homosexuality was criminalized, computing what authority expected to hear was an existential survival discipline. The social mechanism of "passing" requires an intense Theory of Mind. Turing transposed this defensive posture into the blueprint of AI: intelligence as avoiding being caught as an outsider.</p>
-          
-          <h2 class="essay-section-kicker">03. The Violence of the Statistical Mean</h2>
-          <p class="essay-paragraph">In modern deep learning architectures, parameter loss is minimized by driving models toward the dense statistical center of the training corpus. Divergent, queer, or minority expressions become outliers to be smoothed away. When we build models purely for frictionless output, we build automated conformity.</p>
-        `,
-        links: [
-          { type: "PAPER", title: "e-flux journal: Abnormal Encephalization in the Age of Machine Learning", url: "https://www.e-flux.com/journal/75/67133/abnormal-encephalization-in-the-age-of-machine-learning/", desc: "Matteo Pasquinelli's foundational essay on the sociomorphic origins of machine intelligence (Issue #75)." },
-          { type: "ARCHIVE", title: "Computing Machinery and Intelligence (Mind, 1950)", url: "https://doi.org/10.1093/mind/LIX.236.433", desc: "Alan Turing's original text introducing the Imitation Game." }
-        ],
-        backlinks: [
-          { title: "The 'Chinese Encyclopedia' of Vector Space", slug: "#", note: "Continuous metric spaces and high-dimensional classification." },
-          { title: "JEPA & LeCun's World Models", slug: "#", note: "Critique of token prediction versus structural representation." }
-        ],
-        tags: ["alan-turing", "queer-theory", "imitation-game", "sociomorphic-ai", "pasquinelli", "episteme"]
-      },
-
-      "post-foucault": {
-        theme: "light",
-        format: "ESSAY",
-        pillar: "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        subtopic: "EPISTEMOLOGY OF REPRESENTATION",
-        title: "The 'Chinese Encyclopedia' of Vector Space: Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        subtitle: "How continuous metric spaces replace discrete tables of representation—and why building a vector database is fundamentally an epistemological act.",
-        date: "2026.09.26",
-        author: "Juan P. Giusepponi",
-        posted_by: "JPG",
-        sys_id: "SYS_260926_FBVEC",
-        read_time: "8 MIN READ",
-        via: "Michel Foucault / Les Mots et les Choses",
-        content: `
-          <h2 class="essay-section-kicker">01. The Laughter of Borges and the Spatial Grid</h2>
-          <p class="essay-paragraph">In the preface to <em>The Order of Things</em> (1966), Michel Foucault references a fictional taxonomy by Jorge Luis Borges: an ancient Chinese encyclopedia dividing animals into 'belonging to the Emperor', 'sucking pigs', 'frenzied', and 'drawn with a fine camelhair brush'.</p>
-          <p class="essay-paragraph">Foucault used this absurdity to ask: what is the invisible table (<em>la grille</em>) upon which a culture orders its concepts? Today, high-dimensional embedding spaces and vector databases are the digital manifestation of Foucault’s episteme.</p>
-          <blockquote class="essay-quote">"To build a vector database is not merely to optimize search queries; it is an epistemological act of defining the order of things."</blockquote>
-          
-          <h2 class="essay-section-kicker">02. From Renaissance Resemblance to Metric Topologies</h2>
-          <p class="essay-paragraph">In vector space, classification is not a rigid tree hierarchy (like relational SQL). It is continuous geometric proximity: Cosine Similarity and Euclidean distance in 1536-dimensional space.</p>
-        `,
-        links: [
-          { type: "PAPER", title: "The Order of Things (Michel Foucault, 1966)", url: "https://monoskop.org", desc: "Archaeology of human knowledge and historical systems of representation." },
-          { type: "ARCHIVE", title: "The Analytical Language of John Wilkins (Borges)", url: "https://alamut.com", desc: "Original essay introducing the Celestial Emporium taxonomy." }
-        ],
-        backlinks: [
-          { title: "Turing & Queer AI", slug: "#", note: "Statistical optimization as the normalization of identity." }
-        ],
-        tags: ["foucault", "borges", "vector-databases", "embeddings", "episteme", "rag"]
-      },
-
-      "post-jepa": {
-        theme: "dark",
-        format: "NOTE",
-        pillar: "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        subtopic: "WORLD MODELS & ARCHITECTURE",
-        title: "JEPA & LeCun's World Models: Beyond Autoregressive Hallucination",
-        subtitle: "Why predicting the next token is an evolutionary dead end for artificial general intelligence.",
-        date: "2026.09.24",
-        author: "Juan P. Giusepponi",
-        posted_by: "JPG",
-        sys_id: "SYS_260924_JEPA",
-        read_time: "5 MIN READ",
-        via: "Yann LeCun / Meta FAIR",
-        content: `
-          <h2 class="essay-section-kicker">01. Autoregression vs. Abstract Representation</h2>
-          <p class="essay-paragraph">Autoregressive LLMs predict word tokens pixel-by-pixel, token-by-token. Joint Embedding Predictive Architectures (JEPA) discard surface-level pixel prediction in favor of learning hierarchical abstractions in latent energy space.</p>
-          <blockquote class="essay-quote">"Intelligence is not predicting the next letter on a page; it is anticipating the physical dynamics of an unobserved world."</blockquote>
-        `,
-        links: [
-          { type: "PAPER", title: "A Path Towards Autonomous Machine Intelligence (Yann LeCun)", url: "https://openreview.net", desc: "Proposal for energy-based world models." }
-        ],
-        backlinks: [
-          { title: "The 'Chinese Encyclopedia' of Vector Space", slug: "#", note: "Latent space representations." }
-        ],
-        tags: ["jepa", "world-models", "lecun", "latent-energy"]
-      },
-
-      "post-foveal": {
-        theme: "light",
-        format: "RESOURCE",
-        pillar: "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        subtopic: "COMPRESSION & BANDWIDTH",
-        title: "Foveal vs. Peripheral Vision: Human vs. Machine Bandwidth",
-        subtitle: "A psychophysics reference guide on biological gaze compression vs. convolutional vision transformers.",
-        date: "2026.09.20",
-        author: "Juan P. Giusepponi",
-        posted_by: "JPG",
-        sys_id: "SYS_260920_FOVL",
-        read_time: "Toolkit Guide",
-        via: "Visual Psychophysics Lab",
-        content: `
-          <h2 class="essay-section-kicker">01. The Biological Fovea</h2>
-          <p class="essay-paragraph">Human visual clarity is confined to a tiny 2-degree foveal center. The peripheral visual field is low-resolution, high-motion statistical inference. Vision transformers, by contrast, process uniform spatial grids.</p>
-        `,
-        links: [
-          { type: "DATASET", title: "Foveated Vision Benchmarks", url: "https://github.com", desc: "Open psychophysics visual acuity dataset." }
-        ],
-        backlinks: [],
-        tags: ["fovea", "psychophysics", "visual-perception", "vision-transformers"]
-      }
-    };
-
-    function renderPost(postId) {
-      const post = POSTS_DATABASE[postId] || POSTS_DATABASE["post-turing"];
-      const pane = document.getElementById("essay-reading-pane");
-
-      // Set reader theme
-      if (post.theme === "light") {
-        pane.classList.add("theme-light");
-      } else {
-        pane.classList.remove("theme-light");
-      }
-
-      // Render 3-tier structure
-      pane.innerHTML = `
-        <!-- TIER 1: ABOVE TITLE -->
-        <header class="post-header-meta-top">
-          <span class="meta-chip chip-primary">[${post.format}]</span>
-          <span class="meta-chip">[${post.pillar}]</span>
-          ${post.subtopic ? `<span class="meta-chip">[${post.subtopic}]</span>` : ''}
-          <span class="meta-chip">[MODE: ${post.theme.toUpperCase()}]</span>
-        </header>
-
-        <!-- TITLE & SUBTITLE -->
-        <h1 class="essay-title">${post.title}</h1>
-        <p class="essay-subtitle">${post.subtitle}</p>
-
-        <!-- TIER 2: BELOW TITLE META BAR -->
-        <div class="post-header-meta-bottom">
-          <span>DATE: <time>${post.date}</time></span>
-          <span>//</span>
-          <span>BY: ${post.author}</span>
-          ${post.posted_by ? `<span>//</span><span>DISPATCHED_AS: ${post.posted_by}</span>` : ''}
-          <span>//</span>
-          <span>SYS_ID: <code>${post.sys_id}</code></span>
-          <span>//</span>
-          <span>${post.read_time}</span>
-          ${post.via ? `<span>//</span><span>VIA: ${post.via}</span>` : ''}
+  <!-- ====================================================================
+       COMPONENT 6: NEWSLETTER SUBSCRIPTION MODAL
+       File: css/components/modal.css
+       ==================================================================== -->
+  <dialog id="subscribe-modal" class="modal-dialog" data-component="subscribe-modal" aria-labelledby="modal-heading">
+    <div class="modal-box">
+      <div class="modal-header-tag">[ DISPATCH_SUBSCRIPTION // FREQUENCY: FORTNIGHTLY ]</div>
+      <h2 id="modal-heading" class="modal-title">Subscribe to Untitled.jpg</h2>
+      <p class="modal-description">Deep-dive essays and technical dispatches on AI perception, cognitive psychophysics, high-dimensional latent space, and media archaeology.</p>
+      
+      <form class="modal-form" method="dialog" onsubmit="handleSubscribeSubmit(event)">
+        <div class="modal-input-group">
+          <label for="subscriber-email" class="modal-input-label">TRANSMISSION_ENDPOINT (EMAIL):</label>
+          <input type="email" id="subscriber-email" class="modal-input" placeholder="reader@domain.xyz" required autocomplete="email">
         </div>
-
-        <!-- MAIN BODY PROSE -->
-        <div class="essay-body-content">
-          ${post.content}
+        <div class="modal-actions">
+          <button type="button" class="btn-modal-cancel" onclick="closeSubscribeModal()">[ CANCEL ]</button>
+          <button type="submit" class="btn-modal-submit">[ TRANSMIT SUBSCRIPTION ]</button>
         </div>
+      </form>
+    </div>
+  </dialog>
 
-        <!-- TIER 3: FOOTER SECTION -->
-        <footer class="post-footer-section">
-          ${post.links && post.links.length > 0 ? `
-            <section class="footer-block footer-links">
-              <h3 class="footer-block-title">// REFERENCED_RESOURCES &amp; DESTINATIONS</h3>
-              <div class="resources-grid">
-                ${post.links.map(l => `
-                  <div class="resource-card">
-                    <span class="meta-chip">[${l.type}]</span>
-                    <a href="${l.url}" target="_blank" rel="noopener noreferrer"><strong>${l.title}</strong> ↗</a>
-                    ${l.desc ? `<p>${l.desc}</p>` : ''}
-                  </div>
-                `).join('')}
-              </div>
-            </section>
-          ` : ''}
-
-          ${post.backlinks && post.backlinks.length > 0 ? `
-            <section class="footer-block footer-backlinks">
-              <h3 class="footer-block-title">// CONNECTED_DISPATCHES (NETWORK)</h3>
-              <ul class="backlinks-list">
-                ${post.backlinks.map(b => `
-                  <li><a href="${b.slug}"><strong>${b.title}</strong></a> — <em>${b.note}</em></li>
-                `).join('')}
-              </ul>
-            </section>
-          ` : ''}
-
-          ${post.tags && post.tags.length > 0 ? `
-            <section class="footer-block footer-tags">
-              <h3 class="footer-block-title">// TAXONOMY_INDEX</h3>
-              <div class="tags-group">
-                ${post.tags.map(t => `<a href="#tag-${t}" class="tag-pill">#${t}</a>`).join('')}
-              </div>
-            </section>
-          ` : ''}
-
-          <section class="footer-block footer-share">
-            <div class="share-actions-bar">
-              <span style="color: var(--accent-coral);">[ SHARE DISPATCH ]:</span>
-              <button type="button" class="btn-share" onclick="navigator.clipboard.writeText(window.location.href); alert('Dispatch link copied to clipboard.');">[ COPY URL ]</button>
-              <a href="https://twitter.com" target="_blank" class="btn-share">[ X / TWITTER ↗ ]</a>
-              <a href="https://linkedin.com" target="_blank" class="btn-share">[ LINKEDIN ↗ ]</a>
-            </div>
-          </section>
-
-          <div class="post-signoff">
-            <code>UNTITLED.JPG // BUILT IN ZEROES AND ONES WITH THE BLOOD AND SWEAT OF JUAN P. GIUSEPPONI // 2026</code>
-          </div>
-        </footer>
-      `;
-
-      pane.scrollTo({ top: 0, behavior: "smooth" });
-    }
-
-    // Initialize Card Clicks & Navigation Filtering
-    document.addEventListener("DOMContentLoaded", () => {
-      // Initial render with first post
-      renderPost("post-turing");
-
-      // Card Selection
-      const cards = document.querySelectorAll(".grid-card");
-      cards.forEach(card => {
-        card.addEventListener("click", () => {
-          cards.forEach(c => c.classList.remove("selected-active"));
-          card.classList.add("selected-active");
-          const postId = card.getAttribute("data-id");
-          renderPost(postId);
-        });
-      });
-
-      // Format Filtering from Sidebar
-      const navLinks = document.querySelectorAll("#category-filter-nav .nav-link-item");
-      const filterLabel = document.getElementById("active-filter-label");
-
-      navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-          navLinks.forEach(l => l.classList.remove("active"));
-          link.classList.add("active");
-
-          const filter = link.getAttribute("data-filter");
-          filterLabel.textContent = `[MODE: ${filter.toUpperCase()}_DISPATCHES]`;
-
-          cards.forEach(card => {
-            const format = card.getAttribute("data-format");
-            if (filter === "all" || format === filter) {
-              card.style.display = "flex";
-            } else {
-              card.style.display = "none";
-            }
-          });
-        });
-      });
-    });
-
-    function openSubscribeModal() {
-      const email = prompt("[UNTITLED.JPG // DISPATCH SUBSCRIPTION]\nEnter your email to receive deep-dive dispatches on AI perception and visual culture:");
-      if (email) {
-        alert(`[CONFIRMED] Subscribed ${email} to Untitled.jpg dispatches.`);
-      }
-    }
-  </script>
+  <!-- Client-Side Application Script -->
+  <script src="app.js" defer></script>
 </body>
 </html>

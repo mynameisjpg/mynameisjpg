@@ -64,8 +64,8 @@ allow_embed: true
 canonical_url: ""
 
 image:
-  path: "/assets/images/foucault-borges-vectors-cover.png"
-  alt: "High-contrast architectural diagram of a 1536-dimensional vector sphere intersecting Borges' Chinese encyclopedia taxonomy"
+  path: "mynameisjpg\assets\images\foucault1.png"
+  alt: ""
 ---
 
 <!-- ======================================================================= -->
@@ -136,9 +136,9 @@ image:
 
 ## 01. The Laughter of Borges and the Spatial Grid
 
-In the famous preface to *The Order of Things* (*Les Mots et les Choses*, 1966), Michel Foucault confesses that his book was born out of a text by Jorge Luis Borges—specifically, from the laughter that shattered all the familiar landmarks of his thought.
+In the famous preface to _The Order of Things_ (_Les Mots et les Choses_, 1966), Michel Foucault confesses that his book was born out of a text by Jorge Luis Borges—specifically, from the laughter that shattered all the familiar landmarks of his thought.
 
-Borges cites a fictional Chinese encyclopedia entitled *The Celestial Emporium of Benevolent Knowledge*, in which animals are divided into the following categories:
+Borges cites a fictional Chinese encyclopedia entitled _The Celestial Emporium of Benevolent Knowledge_, in which animals are divided into the following categories:
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────┐
@@ -155,7 +155,7 @@ Borges cites a fictional Chinese encyclopedia entitled *The Celestial Emporium o
 
 To modern eyes, this taxonomy is hilarious not because sirens or embalmed animals are fictional, but because the **system of coordinates** that allows them to juxtapose alongside one another feels impossible.
 
-Foucault used this absurdity to introduce his central philosophical concept: the **episteme** (*épistémè*). What is the invisible table (*la grille*), the implicit spatial ground upon which a given culture orders its concepts, establishes resemblance, and decides what is true?
+Foucault used this absurdity to introduce his central philosophical concept: the **episteme** (_épistémè_). What is the invisible table (_la grille_), the implicit spatial ground upon which a given culture orders its concepts, establishes resemblance, and decides what is true?
 
 Fast forward to contemporary artificial intelligence: **Vector databases and high-dimensional embedding spaces are the digital manifestation of Foucault’s episteme.**
 
@@ -172,7 +172,7 @@ HISTORICAL SHIFTS IN REPRESENTATION:
 3. VECTOR / AI EPISTEME  ──> High-dimensional metric distance & semantic manifold.
 ```
 
-1. **The Renaissance Episteme (Similitude):** Things were grouped because they echoed one another in nature (*convenientia*, *aemulatio*, *analogy*, *sympathy*). A walnut cured brain ailments because its shape resembled the cerebral cortex.
+1. **The Renaissance Episteme (Similitude):** Things were grouped because they echoed one another in nature (_convenientia_, _aemulatio_, _analogy_, _sympathy_). A walnut cured brain ailments because its shape resembled the cerebral cortex.
 2. **The Classical Episteme (The Table):** Knowledge abandoned mystical echoes and organized into rigid, discrete grids (taxonomies, Linnaean biological trees, relational SQL tables).
 3. **The Vector Episteme (Continuous Proximity):** Modern AI architectures paradoxically bridge both worlds.
 
@@ -195,9 +195,9 @@ UNSEEN GEOMETRIES:
 [MASS CULTURAL DATA] ──(Transformer Loss)──> [1536-DIM MANIFOLD] ──(Cosine Query)──> [AI TRUTH]
 ```
 
-* The distance between two concepts in latent space is dictated by statistical co-occurrence across internet-scale crawl datasets.
-* Just like Borges' Chinese encyclopedia, vector spaces generate startling juxtapositions: slang terms, corporate marketing tropes, demographic identities, and technical jargon collapse into shared high-dimensional neighborhoods.
-* If the training distribution links a minoritized demographic with specific occupations or criminalized contexts, that association is encoded directly as **spatial proximity**.
+- The distance between two concepts in latent space is dictated by statistical co-occurrence across internet-scale crawl datasets.
+- Just like Borges' Chinese encyclopedia, vector spaces generate startling juxtapositions: slang terms, corporate marketing tropes, demographic identities, and technical jargon collapse into shared high-dimensional neighborhoods.
+- If the training distribution links a minoritized demographic with specific occupations or criminalized contexts, that association is encoded directly as **spatial proximity**.
 
 ---
 
@@ -205,17 +205,17 @@ UNSEEN GEOMETRIES:
 
 The structural differences between classical data schemas and vector geometries redefine how systems think:
 
-| Dimension | Classical Relational Schema (SQL / Trees) | High-Dimensional Vector Space (Embeddings) |
-| :--- | :--- | :--- |
-| **Logic** | Top-down, discrete, rule-based | Emergent, continuous, probabilistic |
-| **Boundaries** | Hard binary edges (`WHERE category = 'animal'`) | Soft topological contours ($\text{distance} < 0.25$) |
-| **Flexibility** | Brittle to out-of-schema queries | Fluid across metaphors, dialects, and synonyms |
-| **Failure Mode** | Returns `NULL` or syntax error | Hallucination or semantic drift into strange neighborhoods |
-| **Governance** | Explicit database schema administrator | Implicit transformer training loss function |
+| Dimension        | Classical Relational Schema (SQL / Trees)       | High-Dimensional Vector Space (Embeddings)                 |
+| :--------------- | :---------------------------------------------- | :--------------------------------------------------------- |
+| **Logic**        | Top-down, discrete, rule-based                  | Emergent, continuous, probabilistic                        |
+| **Boundaries**   | Hard binary edges (`WHERE category = 'animal'`) | Soft topological contours ($\text{distance} < 0.25$)       |
+| **Flexibility**  | Brittle to out-of-schema queries                | Fluid across metaphors, dialects, and synonyms             |
+| **Failure Mode** | Returns `NULL` or syntax error                  | Hallucination or semantic drift into strange neighborhoods |
+| **Governance**   | Explicit database schema administrator          | Implicit transformer training loss function                |
 
 When an autonomous AI agent executes a semantic search or retrieves context for an LLM prompt, it is constantly posing Foucault's question:
 
-> *"Under what spatial order do these disparate pieces of human culture belong together?"*
+> _"Under what spatial order do these disparate pieces of human culture belong together?"_
 
 ---
 
@@ -229,9 +229,10 @@ THE POWER OF THE GRID:
 ```
 
 When enterprise teams fine-tune embeddings or partition vector clusters, they are not just tuning database latencies:
-* They are deciding which ideas are permitted to be "neighbors".
-* They are defining which nuances are compressed away as noise.
-* They are building the modern *grille* upon which synthetic intelligence will synthesize knowledge for the next century.
+
+- They are deciding which ideas are permitted to be "neighbors".
+- They are defining which nuances are compressed away as noise.
+- They are building the modern _grille_ upon which synthetic intelligence will synthesize knowledge for the next century.
 
 To build a vector database is not merely to optimize retrieval; **it is an epistemological act of defining the order of things.**
 
@@ -243,7 +244,9 @@ To build a vector database is not merely to optimize retrieval; **it is an epist
 <footer class="post-footer-section">
 
   <!-- A. REFERENCED RESOURCES -->
-  {% if page.links and page.links.size > 0 %}
+
+{% if page.links and page.links.size > 0 %}
+
   <section class="footer-block footer-links">
     <h3 class="footer-block-title">// REFERENCED_RESOURCES &amp; DESTINATIONS</h3>
     <div class="resources-grid">
@@ -263,7 +266,9 @@ To build a vector database is not merely to optimize retrieval; **it is an epist
   {% endif %}
 
   <!-- B. CONNECTED BACKLINKS -->
-  {% if page.backlinks and page.backlinks.size > 0 %}
+
+{% if page.backlinks and page.backlinks.size > 0 %}
+
   <section class="footer-block footer-backlinks">
     <h3 class="footer-block-title">// CONNECTED_DISPATCHES (NETWORK)</h3>
     <ul class="backlinks-list">
@@ -278,7 +283,9 @@ To build a vector database is not merely to optimize retrieval; **it is an epist
   {% endif %}
 
   <!-- C. TAXONOMY INDEX -->
-  {% if page.tags and page.tags.size > 0 %}
+
+{% if page.tags and page.tags.size > 0 %}
+
   <section class="footer-block footer-tags">
     <h3 class="footer-block-title">// TAXONOMY_INDEX</h3>
     <div class="tags-group">
@@ -290,7 +297,9 @@ To build a vector database is not merely to optimize retrieval; **it is an epist
   {% endif %}
 
   <!-- D. SHARE & EMBED ACTIONS -->
-  {% if page.shareable %}
+
+{% if page.shareable %}
+
   <section class="footer-block footer-share">
     <div class="share-actions-bar">
       <span class="share-label">[ SHARE DISPATCH ]:</span>

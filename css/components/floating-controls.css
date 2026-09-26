@@ -1,0 +1,31 @@
+/* ==============================================================================
+   COMPONENT: FLOATING CONTROLS
+   ============================================================================== */
+
+.floating-nav-buttons {
+  position: fixed;
+  bottom: 24px;
+  right: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: var(--z-floating);
+}
+
+.btn-nav-action {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 400;
+  background: var(--bg-deep);
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-nav-action:hover {
+  color: var(--accent-coral);
+  border-color: var(--accent-coral);
+}
