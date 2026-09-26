@@ -154,7 +154,7 @@ async function loadDynamicPosts() {
   }
 
   // Check URL Hash for deep-link
-  const hash = window.location.hash.replace("#", "");
+  const hash = (typeof window !== "undefined" && window.location && window.location.hash) ? window.location.hash.replace("#", "") : "";
   if (hash && POSTS_DATABASE[hash]) {
     activePostId = hash;
   } else {
@@ -346,6 +346,8 @@ function renderPost(postId) {
   const pane = document.getElementById("essay-reading-pane");
   if (!pane || !post) return;
 
+  const pageUrl = (typeof window !== "undefined" && window.location && window.location.href) ? window.location.href : "";
+
   // Apply Per-Post Theme Mode
   if (post.theme === "light") {
     pane.classList.add("theme-light");
@@ -454,19 +456,19 @@ function renderPost(postId) {
             ` : ''}
 
             <!-- X / Twitter -->
-            <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title + ' — Untitled.jpg')}&url=${encodeURIComponent(window.location.href)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on X / Twitter">
+            <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title + ' — Untitled.jpg')}&url=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on X / Twitter">
               <svg viewBox="0 0 24 24"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
               <span>X / TWITTER ↗</span>
             </a>
 
             <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on LinkedIn">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on LinkedIn">
               <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
               <span>LINKEDIN ↗</span>
             </a>
 
             <!-- Facebook -->
-            <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on Facebook">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on Facebook">
               <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
               <span>FACEBOOK ↗</span>
             </a>
