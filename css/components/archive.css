@@ -11,14 +11,14 @@
   width: calc(100% - var(--sidebar-width, 48px));
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 55% 45%;
   overflow: hidden;
   background-color: var(--neutral-bg, #121212);
   box-sizing: border-box;
 }
 
 /* ==============================================================================
-   LEFT 50% PANEL: TIMELINE COLUMN WITH CENTERED TIMELINE FRAME
+   LEFT 55% PANEL: TIMELINE COLUMN WITH CENTERED TIMELINE FRAME
    ============================================================================== */
 .timeline-column {
   display: flex;
@@ -45,7 +45,7 @@
 }
 
 .timeline-header-content {
-  max-width: 520px;
+  max-width: 880px;
   margin: 0 auto;
   width: 100%;
   display: flex;
@@ -109,7 +109,7 @@
   color: var(--text-faint, #555555);
 }
 
-/* Timeline Scroll Container Centered in Left 50% Panel */
+/* Timeline Scroll Container Centered in Left Panel */
 .timeline-scroll-container {
   flex: 1;
   overflow-y: auto;
@@ -130,7 +130,7 @@
   list-style: none;
   padding: 0;
   margin: 0 auto;
-  max-width: 520px;
+  max-width: 880px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -317,6 +317,7 @@
   margin: 0 0 0.65rem 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   word-break: break-word;
