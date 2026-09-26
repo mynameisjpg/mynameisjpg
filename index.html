@@ -10,278 +10,175 @@
 <body>
 
   <!-- ====================================================================
-       FIXED LEFT SIDEBAR NAVIGATION RAIL
+       ULTRA-THIN 45px LEFT SIDEBAR RAIL
        ==================================================================== -->
-  <aside class="sidebar-rail" id="sidebar">
-    <div class="sidebar-header">
-      <a href="#" class="brand-mark">
-        [ UNTITLED<span class="glitch-text">.JPG</span> ]
-      </a>
-      <span class="brand-tagline">Overthinking Undervalued Means</span>
+  <aside class="sidebar-rail">
+    <div class="sidebar-top">
+      <a href="#" class="brand-mark-vertical">[ UNTITLED.JPG ]</a>
+      
+      <nav class="sidebar-nav-vertical">
+        <a href="#essays" class="nav-link-v active">01. ESSAYS</a>
+        <a href="#notes" class="nav-link-v">02. NOTES</a>
+        <a href="#bookmarks" class="nav-link-v">03. BOOKMARKS</a>
+        <a href="#resources" class="nav-link-v">04. RESOURCES</a>
+        <a href="#about" class="nav-link-v">05. WHO & WHAT</a>
+      </nav>
     </div>
 
-    <nav class="sidebar-nav">
-      <a href="#essays" class="nav-link active">
-        <span class="nav-num">01.</span> ESSAYS
+    <!-- Pinned Line Icons (No Text Labels) -->
+    <div class="sidebar-icons-bottom">
+      <a href="#" class="icon-btn" title="Home">
+        <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
       </a>
-      <a href="#notes" class="nav-link">
-        <span class="nav-num">02.</span> NOTES
+      <a href="#footer-newsletter" class="icon-btn" title="Subscribe">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
       </a>
-      <a href="#bookmarks" class="nav-link">
-        <span class="nav-num">03.</span> BOOKMARKS
+      <a href="https://linkedin.com" target="_blank" rel="noopener" class="icon-btn" title="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.78a1.63 1.63 0 1 0 1.63 1.63 1.63 1.63 0 0 0-1.63-1.63z"/></svg>
       </a>
-      <a href="#resources" class="nav-link">
-        <span class="nav-num">04.</span> RESOURCES
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="icon-btn" title="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
       </a>
-      <a href="#about" class="nav-link">
-        <span class="nav-num">05.</span> WHO & WHAT
-      </a>
-    </nav>
-
-    <div class="sidebar-footer">
-      <button class="btn-subscribe" onclick="document.getElementById('footer-newsletter').scrollIntoView({behavior: 'smooth'})">
-        SUBSCRIBE TO DISPATCHES →
-      </button>
     </div>
   </aside>
 
   <!-- ====================================================================
-       MAIN CONTENT AREA
+       MAIN CONTENT CONTAINER
        ==================================================================== -->
   <main class="main-wrapper">
 
-    <!-- HERO SECTION (SPLIT-SCREEN LEAD) -->
-    <section class="hero-section">
-      <div class="hero-left">
-        <div class="sys-kicker">SYS_ID // UNTITLED.JPG_</div>
-        <h1 class="hero-title">OVERTHINKING UNDERVALUED MEANS.</h1>
-        <p class="hero-subtitle">
-          Investigating the psychophysics of vision, latent space aesthetics, and the epistemology of synthetic representation.
-        </p>
-        <p class="hero-body">
-          I write, build, and obsess at the collision point of artificial intelligence, human cognition, and visual culture. Driven by a quiet urgency regarding how synthetic media is quietly rewriting human perception, this notebook is my open workspace—an evolving attempt to untangle latent spaces, post-ironic surrealism, and the political economy of machine vision.
-        </p>
-        <div class="hero-actions">
-          <a href="#stream" class="btn-primary">EXPLORE ESSAYS →</a>
-          <a href="#bookmarks" class="btn-secondary">BROWSE BOOKMARKS</a>
-        </div>
-      </div>
-
-      <!-- Hero Right: Spotlight Feature Card -->
-      <div class="hero-right">
-        <article class="spotlight-card">
-          <div class="spotlight-img-container">
-            <div class="archival-badge-container">
-              <span class="archival-chip">[FORMAT: ESSAY]</span>
-              <span class="archival-chip chip-mode">[MODE: DARK]</span>
-              <span class="archival-chip">[VECTOR_DIM: 1536]</span>
-            </div>
-            <img src="assets/hero_duotone_artwork.jpg" alt="Foucault in the Latent Space Duotone Artwork">
+    <!-- BASELINE 1: BROADSHEET HOMEPAGE & FULL-SPREAD RED COVER -->
+    <section class="split-hero-container">
+      
+      <!-- Left Broadsheet Reader (Light Mode) -->
+      <div class="broadsheet-left">
+        <div>
+          <div class="broadsheet-header">
+            <span>Issue 04 | Sep 2026</span>
+            <span>Graphic Rules</span>
           </div>
-          <div class="spotlight-content">
-            <div class="spotlight-topic">TOPIC: AI PERCEPTION, CULTURE & REPRESENTATION</div>
-            <h2 class="spotlight-title">Foucault in the Latent Space: Biopolitics of Vector Embeddings</h2>
-            <p class="spotlight-excerpt">
-              How continuous dimensional representation reconfigures surveillance, categorization, and the discipline of high-dimensional bodies.
+          <h1 class="broadsheet-headline">Overthinking Undervalued Means</h1>
+          <div class="broadsheet-prose">
+            <p>
+              I write, build, and obsess at the collision point of artificial intelligence, human cognition, and visual culture. Driven by a quiet urgency regarding how synthetic media is quietly rewriting human perception, this notebook is my open workspace—an evolving attempt to untangle latent spaces, post-ironic surrealism, and the political economy of machine vision.
             </p>
-            <div class="spotlight-meta">
-              <span>12 MIN READ</span>
-              <span>•</span>
-              <span>2026.09.25</span>
-            </div>
+            <p>
+              From vector embeddings to psychophysics, we explore how algorithmic models structure human identity, surveillance, and contemporary media ecology.
+            </p>
           </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- SECTION 1: ASYMMETRICAL 2-COLUMN MUST-READ GRID -->
-    <section class="section-grid" id="essays">
-      <div class="section-header">
-        <h2 class="section-title">CORNERSTONE DISPATCHES</h2>
-        <span class="section-subtitle">ASYMMETRICAL FEATURED STREAM</span>
+        </div>
+        <hr class="broadsheet-rule">
       </div>
 
-      <div class="asym-container">
-        <!-- Main Column (65% Width) — Foundational Essays -->
-        <div class="col-main">
-
-          <!-- Card 1: Dark Mode Essay -->
-          <article class="card-item theme-dark" data-category="essays">
-            <div class="archival-badge-container">
-              <span class="archival-chip">[FORMAT: ESSAY]</span>
-              <span class="archival-chip chip-mode">[MODE: DARK]</span>
-            </div>
-            <div class="card-header-meta">
-              <span class="card-topic">TOPIC: PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE</span>
-            </div>
-            <h3 class="card-title">Foucault & The Vector: Continuous Representation as Power</h3>
-            <p class="card-excerpt">
-              When identity becomes a point in 1536-dimensional space, how does normativity function? An inquiry into latent spaces as modern panopticons and the political economy of machine vision.
-            </p>
-            <div class="card-footer">
-              <span class="card-meta">ESSAY • 14 MIN READ</span>
-              <a href="#" class="card-link">READ ESSAY →</a>
-            </div>
-          </article>
-
-          <!-- Card 2: Light Mode Essay -->
-          <article class="card-item theme-light" data-category="essays">
-            <div class="archival-badge-container">
-              <span class="archival-chip">[FORMAT: ESSAY]</span>
-              <span class="archival-chip chip-mode">[MODE: LIGHT]</span>
-            </div>
-            <div class="card-header-meta">
-              <span class="card-topic">TOPIC: AI PERCEPTION, CULTURE & REPRESENTATION</span>
-            </div>
-            <h3 class="card-title">Turing & Queer AI: Synthetic Bodies, Mimicry, and Representation</h3>
-            <p class="card-excerpt">
-              Revisiting Alan Turing’s imitation game through the lens of queer theory, algorithmic subversion, and statistical identity in generative media.
-            </p>
-            <div class="card-footer">
-              <span class="card-meta">ESSAY + CAROUSEL • 18 MIN READ</span>
-              <a href="#" class="card-link">READ ESSAY →</a>
-            </div>
-          </article>
-
+      <!-- Right Full-Spread Majority Red Cover -->
+      <div class="fullart-cover-right">
+        <div class="fullart-top-overlay">
+          <h2 class="fullart-title-mono">Foucault in the Latent Space</h2>
+          <div class="fullart-chips">
+            <span class="chip-mini">[2026.09.25]</span>
+            <span class="chip-mini">[FORMAT: ESSAY]</span>
+          </div>
         </div>
 
-        <!-- Sidebar Column (35% Width) — Notes, Bookmarks & Resources -->
-        <div class="col-side">
+        <button class="fullart-bottom-handle">
+          SWIPE UP TO REVEAL GRID ↑
+        </button>
+      </div>
 
-          <!-- Card 3: Dark Mode Note -->
-          <article class="card-item theme-dark" data-category="notes">
-            <div class="archival-badge-container">
-              <span class="archival-chip">[FORMAT: NOTE]</span>
-              <span class="archival-chip chip-mode">[MODE: DARK]</span>
+    </section>
+
+    <!-- BASELINE 2: MONOCHROMATIC GRID & 50/50 ESSAY PANEL -->
+    <section class="grid-essay-section" id="essays">
+      
+      <!-- Left Grid Panel -->
+      <div class="grid-panel-left">
+        <!-- Fixed Top-Left Filter Selector -->
+        <div class="grid-filter-bar">
+          <button class="filter-chip-btn active" data-category="all">[ALL]</button>
+          <button class="filter-chip-btn" data-category="essays">[ESSAYS]</button>
+          <button class="filter-chip-btn" data-category="notes">[NOTES]</button>
+          <button class="filter-chip-btn" data-category="bookmarks">[BOOKMARKS]</button>
+          <button class="filter-chip-btn" data-category="resources">[RESOURCES]</button>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="cards-grid">
+          
+          <article class="grid-card" data-category="essays">
+            <span class="corner-type-chip">[ESSAY]</span>
+            <div class="card-img-wrap">
+              <img src="assets/hero_duotone_artwork.jpg" alt="Foucault & The Vector">
             </div>
-            <div class="card-header-meta">
-              <span class="card-topic">TOPIC: LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE</span>
-            </div>
-            <h3 class="card-title">JEPA & LeCun’s World Models</h3>
-            <p class="card-excerpt">
-              Why predicting tokens isn't understanding: Joint Embedding Predictive Architectures and grounded machine cognition.
-            </p>
-            <div class="card-footer">
-              <span class="card-meta">FIELD NOTE • 6 MIN READ</span>
-              <a href="#" class="card-link">READ NOTE →</a>
+            <div class="card-info">
+              <h3 class="card-info-title">Foucault & The Vector: Continuous Representation as Power</h3>
             </div>
           </article>
 
-          <!-- Card 4: Light Mode Resource -->
-          <article class="card-item theme-light" data-category="resources">
-            <div class="archival-badge-container">
-              <span class="archival-chip">[FORMAT: RESOURCE]</span>
-              <span class="archival-chip chip-mode">[MODE: LIGHT]</span>
+          <article class="grid-card hover-active" data-category="essays">
+            <span class="corner-type-chip">[ESSAY]</span>
+            <div class="card-img-wrap">
+              <img src="assets/hero_duotone_artwork.jpg" alt="Turing & Queer AI">
             </div>
-            <div class="card-header-meta">
-              <span class="card-topic">TOPIC: VISUAL PERCEPTION & PSYCHOLOGY OF SEEING</span>
+            <div class="card-info">
+              <h3 class="card-info-title">Turing & Queer AI: Synthetic Bodies, Mimicry, and Representation</h3>
             </div>
-            <h3 class="card-title">Foveal vs. Peripheral Vision</h3>
-            <p class="card-excerpt">
-              A psychophysics reference guide on how human visual compression differs from vision transformer sampling.
-            </p>
-            <div class="card-footer">
-              <span class="card-meta">RESOURCE • TOOLKIT</span>
-              <a href="#" class="card-link">VIEW RESOURCE →</a>
+          </article>
+
+          <article class="grid-card" data-category="notes">
+            <span class="corner-type-chip">[NOTE]</span>
+            <div class="card-img-wrap">
+              <img src="assets/hero_duotone_artwork.jpg" alt="JEPA & LeCun World Models">
+            </div>
+            <div class="card-info">
+              <h3 class="card-info-title">JEPA & LeCun’s World Models: Beyond Autoregressive Token Prediction</h3>
+            </div>
+          </article>
+
+          <article class="grid-card" data-category="resources">
+            <span class="corner-type-chip">[RESOURCE]</span>
+            <div class="card-img-wrap">
+              <img src="assets/hero_duotone_artwork.jpg" alt="Foveal vs. Peripheral Vision">
+            </div>
+            <div class="card-info">
+              <h3 class="card-info-title">Foveal vs. Peripheral Vision: The Bandwidth of Trained Perception</h3>
             </div>
           </article>
 
         </div>
       </div>
+
+      <!-- Right Essay Reading Panel (Wider 50% Width) -->
+      <div class="essay-panel-right">
+        <div>
+          <div class="essay-header-tags">
+            <span class="chip-mini">[FORMAT: ESSAY]</span>
+            <span class="chip-mini">[MODE: DARK]</span>
+            <span class="chip-mini">[2026.09.25]</span>
+            <span class="chip-mini">[18 MIN READ]</span>
+          </div>
+          <h2 class="essay-title-heavy">Turing & Queer AI: Synthetic Bodies, Mimicry, and Representation</h2>
+          <div class="essay-byline">BY JUAN PABLO GIUSEPPONI</div>
+
+          <div class="essay-content-prose">
+            <p>
+              Alan Turing’s 1950 'Imitation Game' was born from non-normative identity. By investigating how algorithmic systems mimic human behavior, we uncover how synthetic media redefines representation, performance, and bodily subversion.
+            </p>
+            <blockquote class="essay-quote-block">
+              "The institution of statistical identity is not a neutral mirror; it is an active filter through which non-normative agency is continuously negotiated."
+            </blockquote>
+            <p>
+              When generative neural networks sample latent space distributions, they construct statistical norms. This essay explores how queer theory provides a framework for resistance against algorithmic categorization.
+            </p>
+          </div>
+        </div>
+      </div>
+
     </section>
 
-    <!-- SECTION 2: INTERACTIVE STREAM (FORMAT TABS & MONOSPACE LOG TABLE) -->
-    <section class="stream-section" id="stream">
-      <div class="section-header">
-        <h2 class="section-title">ALL DISPATCHES LOG</h2>
-        <span class="section-subtitle">HIGH-DENSITY TABULAR ARCHIVE</span>
-      </div>
-
-      <!-- Format Filter Tabs -->
-      <div class="format-tabs">
-        <button class="tab-btn active" data-category="all">[ ALL DISPATCHES ]</button>
-        <button class="tab-btn" data-category="essays">[ ESSAYS ]</button>
-        <button class="tab-btn" data-category="notes">[ NOTES ]</button>
-        <button class="tab-btn" data-category="bookmarks">[ BOOKMARKS ]</button>
-        <button class="tab-btn" data-category="resources">[ RESOURCES ]</button>
-      </div>
-
-      <!-- Tabular Monospace Log -->
-      <div class="stream-table-container">
-        <table class="stream-table">
-          <thead>
-            <tr>
-              <th>DATE</th>
-              <th>FORMAT</th>
-              <th>MODE</th>
-              <th>TITLE</th>
-              <th>TOPIC TAG</th>
-              <th>ACTION</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="stream-row" data-category="essays">
-              <td class="log-date">2026.09.25</td>
-              <td class="log-format">[ESSAY]</td>
-              <td><span class="log-mode">DARK</span></td>
-              <td><a href="#" class="log-title">Foucault in the Latent Space: Biopolitics of Vector Embeddings</a></td>
-              <td class="log-topic">AI Perception, Culture & Representation</td>
-              <td><a href="#" class="log-action">READ →</a></td>
-            </tr>
-            <tr class="stream-row" data-category="notes">
-              <td class="log-date">2026.09.24</td>
-              <td class="log-format">[NOTE]</td>
-              <td><span class="log-mode">LIGHT</span></td>
-              <td><a href="#" class="log-title">Visual Bandwidth: Foveal Compression in High-Density Interfaces</a></td>
-              <td class="log-topic">Visual Perception & Psychology of Seeing</td>
-              <td><a href="#" class="log-action">READ →</a></td>
-            </tr>
-            <tr class="stream-row" data-category="bookmarks">
-              <td class="log-date">2026.09.22</td>
-              <td class="log-format">[BOOKMARK]</td>
-              <td><span class="log-mode">DARK</span></td>
-              <td><a href="#" class="log-title">Recommended: Spatial Intelligence & World Models (Fei-Fei Li)</a></td>
-              <td class="log-topic">AI Perception, Culture & Representation</td>
-              <td><a href="#" class="log-action">VISIT ↗</a></td>
-            </tr>
-            <tr class="stream-row" data-category="resources">
-              <td class="log-date">2026.09.20</td>
-              <td class="log-format">[RESOURCE]</td>
-              <td><span class="log-mode">LIGHT</span></td>
-              <td><a href="#" class="log-title">Toolkit: Creating Dithered Duotone Graphics for Web</a></td>
-              <td class="log-topic">Philosophy of the Image, Tech & Visual Culture</td>
-              <td><a href="#" class="log-action">VIEW →</a></td>
-            </tr>
-            <tr class="stream-row" data-category="essays">
-              <td class="log-date">2026.09.15</td>
-              <td class="log-format">[ESSAY]</td>
-              <td><span class="log-mode">DARK</span></td>
-              <td><a href="#" class="log-title">Turing & Queer AI: Synthetic Bodies, Mimicry, and Representation</a></td>
-              <td class="log-topic">AI Perception, Culture & Representation</td>
-              <td><a href="#" class="log-action">READ →</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- FOOTER (NEWSLETTER & SIGN-OFF) -->
-    <footer class="site-footer" id="footer-newsletter">
-      <div class="footer-newsletter">
-        <h2 class="newsletter-title">SUBSCRIBE TO DISPATCHES</h2>
-        <p class="newsletter-copy">
-          Get long-form essays, field notes, and curated bookmarks on AI cognition, visual surrealism, and synthetic media delivered directly to your inbox.
-        </p>
-        <form class="newsletter-form">
-          <input type="email" class="newsletter-input" placeholder="[ Enter your email address... ]" required>
-          <button type="submit" class="btn-primary">SUBSCRIBE →</button>
-        </form>
-      </div>
-
-      <div class="footer-signoff">
-        <span>UNTITLED.JPG // BUILT IN ZEROES AND ONES WITH THE BLOOD AND SWEAT OF JUAN P. GIUSEPPONI // 2026</span>
-        <span>SYS_VER 4.4.0</span>
-      </div>
+    <!-- MASTER FOOTER -->
+    <footer class="master-footer" id="footer-newsletter">
+      <span>UNTITLED.JPG // BUILT IN ZEROES AND ONES WITH THE BLOOD AND SWEAT OF JUAN P. GIUSEPPONI // 2026</span>
+      <span>SYS_VER 4.5.0</span>
     </footer>
 
   </main>
