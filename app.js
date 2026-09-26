@@ -1051,7 +1051,7 @@ function closeSubscribeModal() {
 // Public Google Form response endpoint
 let GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLScWoT07kZjH1m5Mu1zrK4l_eFpzOytLler0cwd0j4yQTXYDJQ/formResponse";
 const GOOGLE_FORM_EMAIL_ENTRY_ID = "entry.1020667952";
-let GOOGLE_FORM_NAME_ENTRY_ID = ""; // Populated when entry ID for Name question is provided
+const GOOGLE_FORM_NAME_ENTRY_ID = "entry.1290617359";
 
 async function handleSubscribeSubmit(event) {
   event.preventDefault();
