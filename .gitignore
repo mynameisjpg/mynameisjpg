@@ -3,6 +3,14 @@ build/
 dist/
 *.spec
 
+# DispatchCreator Executables & Launchers
+DispatchCreator.exe
+DispatchCreator.spec
+Launch_Dispatch_Creator.bat
+dispatch_creator_launcher.py
+DispatchCreator/
+dispatch_creator*
+
 # System files
 .DS_Store
 Thumbs.db
