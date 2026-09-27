@@ -494,12 +494,9 @@
   gap: 0.35rem;
 }
 
-.filter-panel {
-  right: 6.5rem;
-}
-
+.filter-panel,
 .sort-panel {
-  right: 4rem;
+  /* Positioned dynamically below trigger button via JS */
 }
 
 .dropdown-header {

@@ -883,6 +883,19 @@ function applyCategoryFilter(filter) {
 /* ==============================================================================
    TOP NAVBAR CONTROLS & DROPDOWN HANDLERS (FEED / INDEX)
    ============================================================================== */
+function positionDropdown(panel, btn) {
+  if (!panel || !btn) return;
+  const rect = btn.getBoundingClientRect();
+  if (btn.id === "dispatch-log-btn") {
+    panel.style.left = `${Math.max(8, rect.left)}px`;
+    panel.style.right = "auto";
+  } else {
+    const rightOffset = window.innerWidth - rect.right;
+    panel.style.left = "auto";
+    panel.style.right = `${Math.max(8, rightOffset)}px`;
+  }
+}
+
 function toggleDispatchLogDropdown() {
   closeAllTopDropdowns("dispatch-log-dropdown");
   const panel = document.getElementById("dispatch-log-dropdown");
@@ -891,6 +904,7 @@ function toggleDispatchLogDropdown() {
   const isHidden = panel.style.display === "none" || !panel.style.display;
   panel.style.display = isHidden ? "flex" : "none";
   if (btn) btn.classList.toggle("active", isHidden);
+  if (isHidden) positionDropdown(panel, btn);
 }
 
 function toggleTopSearchDropdown() {
@@ -902,6 +916,7 @@ function toggleTopSearchDropdown() {
   panel.style.display = isHidden ? "block" : "none";
   if (btn) btn.classList.toggle("active", isHidden);
   if (isHidden) {
+    positionDropdown(panel, btn);
     const input = document.getElementById("top-search-input");
     if (input) input.focus();
   }
@@ -915,6 +930,7 @@ function toggleTopFilterDropdown() {
   const isHidden = panel.style.display === "none" || !panel.style.display;
   panel.style.display = isHidden ? "flex" : "none";
   if (btn) btn.classList.toggle("active", isHidden);
+  if (isHidden) positionDropdown(panel, btn);
 }
 
 function toggleTopSortDropdown() {
@@ -925,6 +941,7 @@ function toggleTopSortDropdown() {
   const isHidden = panel.style.display === "none" || !panel.style.display;
   panel.style.display = isHidden ? "flex" : "none";
   if (btn) btn.classList.toggle("active", isHidden);
+  if (isHidden) positionDropdown(panel, btn);
 }
 
 function closeAllTopDropdowns(exceptId = null) {
