@@ -268,7 +268,7 @@
   right: calc(100% + 14px);
   top: 50%;
   transform-origin: right center;
-  transform: rotate(180deg) translateY(50%) scale(0.7) translateX(10px);
+  transform: rotate(180deg) translateY(-50%) scale(0.7) translateX(10px);
   transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
               visibility 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -278,21 +278,22 @@
 .nav-link-item:hover .rail-tooltip {
   opacity: 1;
   visibility: visible;
-  transform: rotate(180deg) translateY(50%) scale(1) translateX(0);
+  transform: rotate(180deg) translateY(-50%) scale(1) translateX(0);
 }
 
 .brand-logo-v .rail-tooltip::before,
 .nav-link-item .rail-tooltip::before {
   content: '';
   position: absolute;
-  left: -6px;
+  right: -6px;
+  left: auto;
   top: 50%;
   transform: translateY(-50%);
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 6px solid #E5E5E5;
+  border-left: 6px solid #E5E5E5;
 }
 
 /* 2. Unrotated Parent Items (Bottom Icons): Open to Visual RIGHT */
@@ -317,6 +318,7 @@
   content: '';
   position: absolute;
   left: -6px;
+  right: auto;
   top: 50%;
   transform: translateY(-50%);
   width: 0;
