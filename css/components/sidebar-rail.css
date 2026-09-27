@@ -512,10 +512,6 @@
   gap: 0.35rem;
 }
 
-.sort-panel {
-  /* Positioned dynamically below trigger button via JS */
-}
-
 .dropdown-header {
   font-family: var(--font-mono, 'Azeret Mono', monospace);
   font-size: 0.58rem;
@@ -750,6 +746,8 @@
   .archive-split-shell,
   .split-layout {
     margin-left: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
     margin-top: 48px !important;
     height: calc(100vh - 48px) !important;
   }
