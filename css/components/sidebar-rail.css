@@ -143,21 +143,22 @@
 .top-inline-search-box {
   display: none;
   align-items: center;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: var(--neutral-bg, #121212);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.15));
   border-radius: var(--rounded-sm, 2px);
-  padding: 0.3rem 0.6rem;
+  padding: 0 0.65rem;
   gap: 0.45rem;
   flex: 1 1 auto;
   max-width: 260px;
-  min-width: 120px;
+  min-width: 140px;
+  height: 32px;
   box-sizing: border-box;
-  transition: all 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .top-inline-search-box:focus-within {
-  border-color: var(--accent-coral, #E84A5F);
-  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-coral, #E84A5F) !important;
+  background-color: var(--neutral-surface, #161616);
   box-shadow: 0 0 0 1px rgba(232, 74, 95, 0.4);
 }
 
@@ -174,14 +175,17 @@
   background: transparent;
   border: none;
   outline: none;
-  color: var(--text-bright, #F5F5F5);
+  color: var(--text-body, #D4D4D4);
   font-family: var(--font-mono, 'Azeret Mono', monospace);
   font-size: 0.68rem;
+  letter-spacing: 0.05em;
   width: 100%;
+  padding: 0;
 }
 
 .top-inline-search-box input::placeholder {
-  color: var(--text-faint, #666666);
+  color: var(--text-muted, #888888);
+  opacity: 1;
 }
 
 .top-navbar-legend-badge {
