@@ -184,6 +184,24 @@
   color: var(--text-faint, #666666);
 }
 
+.top-navbar-legend-badge {
+  display: none;
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--accent-coral, #E84A5F);
+  background: rgba(232, 74, 95, 0.08);
+  border: 1px solid rgba(232, 74, 95, 0.25);
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--rounded-sm, 2px);
+  white-space: nowrap;
+  align-items: center;
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+  pointer-events: none;
+}
+
 /* Bottom Pinned Icons */
 .sidebar-bottom-icons {
   display: flex;
@@ -494,7 +512,6 @@
   gap: 0.35rem;
 }
 
-.filter-panel,
 .sort-panel {
   /* Positioned dynamically below trigger button via JS */
 }
@@ -665,6 +682,10 @@
     margin-right: 0.5rem;
   }
 
+  .top-navbar-legend-badge {
+    display: inline-flex !important;
+  }
+
   .top-nav-controls-group {
     display: flex !important;
     flex-direction: row !important;
@@ -767,6 +788,10 @@
 
   .dispatch-log-dropdown-btn {
     display: inline-flex !important;
+  }
+
+  .top-navbar-legend-badge {
+    display: none !important;
   }
 }
 

@@ -81,7 +81,7 @@
       </button>
     </div>
 
-    <!-- RIGHT GROUP: Inline Search Box + Filter & Sort Icons + Archive & Social Icons -->
+    <!-- RIGHT GROUP: Inline Search Box + Tag Legend + Filter & Sort Icons + Archive & Social Icons -->
     <div class="sidebar-right-group">
       <!-- Full-width / Flexible Inline Search Input Box -->
       <div class="top-inline-search-box" id="top-inline-search-box">
@@ -89,11 +89,11 @@
         <input type="text" id="top-inline-search-input" placeholder="SEARCH DISPATCHES..." aria-label="Search dispatches" autocomplete="off" oninput="handleTopInlineSearch(this.value)" />
       </div>
 
-      <!-- Controls Group: Icon button for mobile search (<=520px) + Filter + Sort -->
+      <!-- Navbar Tag Legend Badge (Positioned Right of Search Bar) -->
+      <span class="top-navbar-legend-badge" id="nodemap-status-label">EXPLORE 3D TAG NODES &amp; CONCEPTUAL VECTORS</span>
+
+      <!-- Controls Group: Filter + Sort -->
       <div class="top-nav-controls-group">
-        <button type="button" class="top-nav-icon-btn mobile-search-only" id="top-navbar-search-btn" title="Search Dispatches" onclick="toggleTopSearchDropdown()">
-          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        </button>
         <button type="button" class="top-nav-icon-btn" id="top-navbar-filter-btn" title="Filter Formats" onclick="toggleTopFilterDropdown()">
           <svg viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
         </button>
@@ -161,24 +161,6 @@
 
     <!-- LEFT 50%: TIMELINE STRATIGRAPHY AXIS (Centered Timeline Frame) -->
     <section class="timeline-column" aria-label="Chronological Timeline">
-      <div class="timeline-header-group">
-        <div class="timeline-header-content">
-          <div class="timeline-header-top">
-            <span class="timeline-legend">SYS_LOG // CHRONOLOGICAL_TIMELINE_AXIS</span>
-            <span class="timeline-active-filter" id="timeline-active-filter-label">DISPATCHES: LOADING...</span>
-          </div>
-          <div class="timeline-controls-row">
-            <div class="timeline-search-box">
-              <svg class="search-icon-svg" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:0.4rem; color:var(--text-muted);">
-                <circle cx="6.5" cy="6.5" r="4.5"/>
-                <line x1="10" y1="10" x2="14" y2="14"/>
-              </svg>
-              <input type="text" id="archive-search-input" placeholder="SEARCH TIMELINE DISPATCHES..." aria-label="Search timeline dispatches" autocomplete="off" />
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="timeline-scroll-container" id="timeline-list-container">
         <!-- Rendered dynamically by js/archive.js -->
       </div>
@@ -186,23 +168,12 @@
 
     <!-- RIGHT 50%: INTERACTIVE TAXONOMY NODE MAP -->
     <section class="nodemap-column" aria-label="Interactive Taxonomy Node Map">
-      <div class="nodemap-header-group">
-        <div class="nodemap-header-content">
-          <div class="nodemap-header-top">
-            <span class="nodemap-legend">SYS_LOG // INTERACTIVE_TAXONOMY_NODE_MAP</span>
-            <span class="nodemap-subtitle" id="nodemap-status-label">EXPLORE TAG NODES &amp; CONCEPTUAL VECTORS</span>
-          </div>
-          <div class="nodemap-controls-row">
-            <button type="button" id="clear-node-filter-btn" class="btn-clear-node-filter" style="display: none;">[ CLEAR NODE FILTER ]</button>
-          </div>
-        </div>
-      </div>
-
       <div class="nodemap-canvas-wrapper" id="nodemap-canvas-wrapper">
         <canvas id="nodemap-canvas"></canvas>
         
         <!-- Interactive Inspection Dock at Bottom -->
         <div class="nodemap-hover-dock" id="nodemap-hover-dock">
+          <button type="button" id="clear-node-filter-btn" class="btn-clear-node-filter" style="display: none; margin-bottom: 0.5rem;">[ CLEAR NODE FILTER ]</button>
           <div class="dock-node-title" id="dock-node-title">[ NODE MAP ACTIVE ]</div>
           <div class="dock-node-desc" id="dock-node-desc">Hover over any tag or pillar node to highlight connected dispatches. Click to filter timeline.</div>
         </div>

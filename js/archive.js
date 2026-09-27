@@ -577,8 +577,16 @@ function initThreeJSNodeMap() {
     antialias: true,
     alpha: true
   });
-  threeRenderer.setSize(w, h);
+  threeRenderer.setSize(w, h, false);
   threeRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  // Attach ResizeObserver to keep canvas sized to wrapper container
+  if (window.ResizeObserver) {
+    const ro = new ResizeObserver(() => {
+      onThreeWindowResize();
+    });
+    ro.observe(wrapper);
+  }
 
   // 4. Orbit Controls (Rotation, Pan, Zoom)
   if (typeof THREE.OrbitControls !== "undefined") {
@@ -1003,9 +1011,10 @@ function onThreeWindowResize() {
   if (!wrapper || !threeRenderer || !threeCamera) return;
   const nw = wrapper.clientWidth;
   const nh = wrapper.clientHeight;
+  if (nw === 0 || nh === 0) return;
   threeCamera.aspect = nw / nh;
   threeCamera.updateProjectionMatrix();
-  threeRenderer.setSize(nw, nh);
+  threeRenderer.setSize(nw, nh, false);
 }
 
 /**
