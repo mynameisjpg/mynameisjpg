@@ -690,7 +690,7 @@ function build3DNodeMapGraph() {
   rootMesh.position.set(0, 0, 0);
   threeNodesGroup.add(rootMesh);
 
-  const rootSprite = create3DTextSprite("UNTITLED.JPG", "#E84A5F", 26);
+  const rootSprite = create3DTextSprite("UNTITLED.JPG", "#FFFFFF", 26);
   rootSprite.position.set(0, -22, 0);
   rootMesh.add(rootSprite);
 
@@ -731,7 +731,7 @@ function build3DNodeMapGraph() {
     pillarMesh.position.set(px, py, pz);
     threeNodesGroup.add(pillarMesh);
 
-    const pillarSprite = create3DTextSprite(pilName.toUpperCase(), "#FF6579", 20);
+    const pillarSprite = create3DTextSprite(pilName.toUpperCase(), "#FFA0AD", 20);
     pillarSprite.position.set(0, -16, 0);
     pillarMesh.add(pillarSprite);
 
@@ -764,15 +764,15 @@ function build3DNodeMapGraph() {
         label: `#${tag}`,
         rawTag: tag,
         type: "tag",
-        color: "#38BDF8",
+        color: "#B8B8B8",
         postsCount: pillarMap[pilName].filter(p => p.tags && p.tags.includes(tag)).length
       };
 
-      const tagMesh = createSphereNodeMesh(5.5, 0x38BDF8, 0.3);
+      const tagMesh = createSphereNodeMesh(5.5, 0xB8B8B8, 0.35);
       tagMesh.position.set(tx, ty, tz);
       threeNodesGroup.add(tagMesh);
 
-      const tagSprite = create3DTextSprite(`#${tag}`, "#38BDF8", 16);
+      const tagSprite = create3DTextSprite(`#${tag}`, "#E2E8F0", 16);
       tagSprite.position.set(0, -12, 0);
       tagMesh.add(tagSprite);
 
@@ -780,7 +780,7 @@ function build3DNodeMapGraph() {
       threeNodes.push(tagNodeItem);
 
       // Connect Pillar to Tag in 3D
-      create3DConnectionLine(pillarNodeItem, tagNodeItem, 0x1e4f66, 0x38bdf8);
+      create3DConnectionLine(pillarNodeItem, tagNodeItem, 0x444444, 0xB8B8B8);
     });
   });
 }
@@ -1136,7 +1136,7 @@ function buildNodeMapData() {
         vx: (Math.random() - 0.5) * 0.4,
         vy: (Math.random() - 0.5) * 0.4,
         radius: 8,
-        color: "#38BDF8",
+        color: "#B8B8B8",
         postsCount: pillarMap[pilName].filter(p => p.tags && p.tags.includes(tag)).length
       };
       nodes.push(tagNode);
@@ -1213,7 +1213,7 @@ function drawNodeGraph() {
     if (isHovered || isActive || isConnected) {
       ctx.beginPath();
       ctx.arc(node.x, node.y, r + 8, 0, Math.PI * 2);
-      ctx.fillStyle = node.type === "tag" ? "rgba(56, 189, 248, 0.25)" : "rgba(232, 74, 95, 0.3)";
+      ctx.fillStyle = node.type === "tag" ? "rgba(184, 184, 184, 0.25)" : "rgba(232, 74, 95, 0.3)";
       ctx.fill();
     }
 
@@ -1234,7 +1234,7 @@ function drawNodeGraph() {
 
     // Text Label (Supports Multi-line)
     ctx.font = `${isHovered || isActive ? "600" : "400"} 10px 'Azeret Mono', monospace`;
-    ctx.fillStyle = isHovered || isActive ? "#FFFFFF" : (isConnected ? "#D4D4D4" : "#A0A0A0");
+    ctx.fillStyle = isHovered || isActive ? "#FFFFFF" : (isConnected ? "#FFFFFF" : "#E2E8F0");
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
 
