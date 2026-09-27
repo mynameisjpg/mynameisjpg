@@ -607,12 +607,13 @@
   }
 
   .sidebar-right-group {
-    flex-direction: row;
-    gap: 0.65rem;
-    width: auto;
-    align-items: center;
-    flex: 1 1 auto;
-    justify-content: flex-end;
+    flex-direction: row !important;
+    gap: 0 !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
   }
 
   .sidebar-top-section {
@@ -658,18 +659,61 @@
     border-bottom: 2px solid var(--accent-coral, #E84A5F) !important;
   }
 
-  /* Right Side: Inline Search + Filter + Sort BEFORE Social/Archive Icons */
+  /* Right Side: Search Box + Controls Group + Social/Archive Icons aligned to far right */
   .top-inline-search-box {
     display: flex !important;
+    max-width: 240px;
+    min-width: 140px;
+    height: 32px;
+    margin-right: 0.5rem;
   }
 
   .top-nav-controls-group {
     display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0 !important;
   }
 
   .sidebar-bottom-icons {
-    flex-direction: row;
-    gap: 0.65rem;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 0 !important;
+    width: auto !important;
+    align-items: center !important;
+  }
+
+  /* Enforce 48x48 Square Zone for all Icon Buttons in Top Navbar */
+  .top-nav-icon-btn,
+  .sidebar-bottom-icons a {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    max-width: 48px !important;
+    max-height: 48px !important;
+    flex: 0 0 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transition: background-color var(--transition-fast, 0.15s ease), color var(--transition-fast, 0.15s ease) !important;
+  }
+
+  .top-nav-icon-btn:hover,
+  .sidebar-bottom-icons a:hover {
+    background: rgba(255, 255, 255, 0.06) !important;
+  }
+
+  .top-nav-icon-btn svg,
+  .sidebar-bottom-icons svg {
+    width: 16px !important;
+    height: 16px !important;
   }
 
   /* Remove Home Icon from Top Navbar */
