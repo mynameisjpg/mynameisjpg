@@ -606,16 +606,16 @@ function initThreeJSNodeMap() {
   }
 
   // 5. Dual Opposite Source Lighting (Red & Neutral)
-  const ambientLight = new THREE.AmbientLight(0x06060a, 0.25);
+  const ambientLight = new THREE.AmbientLight(0x06060a, 6.5);
   threeScene.add(ambientLight);
 
   // Source 1: Vibrant Red/Coral Point Light (Top-Front-Right)
-  const lightRed = new THREE.PointLight(0xe84a5f, 1.4, 550);
+  const lightRed = new THREE.PointLight(0xe84a5f, 3.0, 550);
   lightRed.position.set(200, 150, 180);
   threeScene.add(lightRed);
 
   // Source 2: Neutral White Point Light (Bottom-Back-Left - Directly Opposite)
-  const lightNeutral = new THREE.PointLight(0xf1f5f9, 0.9, 550);
+  const lightNeutral = new THREE.PointLight(0xf1f5f9, 1.3, 550);
   lightNeutral.position.set(-200, -150, -180);
   threeScene.add(lightNeutral);
 
@@ -688,7 +688,7 @@ function build3DNodeMapGraph() {
     postsCount: ARCHIVE_POSTS.length
   };
 
-  const rootMesh = createCrystalNodeMesh(15, 0xE84A5F, 0.25);
+  const rootMesh = createCrystalNodeMesh(15, 0xE84A5F, 0.35);
   rootMesh.position.set(0, 0, 0);
   threeNodesGroup.add(rootMesh);
 
@@ -770,7 +770,7 @@ function build3DNodeMapGraph() {
         postsCount: pillarMap[pilName].filter(p => p.tags && p.tags.includes(tag)).length
       };
 
-      const tagMesh = createCrystalNodeMesh(6.5, 0xB8B8B8, 0.12);
+      const tagMesh = createCrystalNodeMesh(6.5, 0xB8B8B8, 0.17);
       tagMesh.position.set(tx, ty, tz);
       threeNodesGroup.add(tagMesh);
 
@@ -787,7 +787,7 @@ function build3DNodeMapGraph() {
   });
 }
 
-function createCrystalNodeMesh(radius, colorHex, emissiveIntensity = 0.2) {
+function createCrystalNodeMesh(radius, colorHex, emissiveIntensity = 0.3) {
   // Faceted 3D crystalline quartz shard geometry
   const geo = new THREE.IcosahedronGeometry(radius, 2);
   const pos = geo.attributes.position;
