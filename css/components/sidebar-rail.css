@@ -44,8 +44,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.25rem;
-  transition: all 0.3s ease;
+  gap: 0.5rem;
+  width: 100%;
 }
 
 .brand-logo-v {
@@ -58,7 +58,13 @@
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   white-space: nowrap;
-  transition: color var(--transition-fast, 0.15s ease), font-size 0.3s ease;
+  transition: color var(--transition-fast, 0.15s ease), background-color var(--transition-fast, 0.15s ease);
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .brand-logo-v:hover {
@@ -77,10 +83,10 @@
 .nav-stacked-vertical {
   display: flex;
   flex-direction: column;
-  gap: 2.2rem;
+  gap: 0.75rem;
   align-items: center;
   margin: auto 0;
-  transition: gap 0.3s ease;
+  width: 100%;
 }
 
 .nav-link-item {
@@ -95,17 +101,18 @@
   transition: all var(--transition-fast, 0.15s ease);
   white-space: nowrap;
   cursor: pointer;
-  padding: 4px 0;
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0;
 }
 
-.nav-link-item:hover {
-  color: var(--accent-coral, #E84A5F);
-}
-
+.nav-link-item:hover,
 .nav-link-item.active {
-  color: var(--text-bright, #F5F5F5);
-  font-weight: 600;
-  border-left: 2px solid var(--accent-coral, #E84A5F);
+  color: var(--accent-coral, #E84A5F);
 }
 
 /* Collapsed Dispatch Log Single Dropdown Button (Hidden on Desktop) */
@@ -181,9 +188,9 @@
 .sidebar-bottom-icons {
   display: flex;
   flex-direction: column;
-  gap: 1.15rem;
+  gap: 0.5rem;
   align-items: center;
-  transition: gap 0.3s ease;
+  width: 100%;
 }
 
 .sidebar-bottom-icons a {
@@ -192,6 +199,10 @@
   justify-content: center;
   cursor: pointer;
   text-decoration: none;
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+  transition: background-color var(--transition-fast, 0.15s ease);
 }
 
 .sidebar-bottom-icons svg {
@@ -200,7 +211,7 @@
   fill: none;
   stroke: var(--text-muted, #888888);
   stroke-width: 1.6;
-  transition: stroke var(--transition-fast, 0.15s ease), width 0.3s ease, height 0.3s ease;
+  transition: stroke var(--transition-fast, 0.15s ease);
 }
 
 .sidebar-bottom-icons svg:hover,
@@ -209,64 +220,196 @@
 }
 
 /* ==============================================================================
-   SUBSCRIBE ICON PHONE RING & VIBRATION ANIMATION (3 Bursts over 4.5s)
+   SIDEBAR RAIL TOOLTIPS (Light Grey Background, Dark High-Contrast Text)
    ============================================================================== */
-@keyframes subscribePhoneRing {
-  /* Burst 1: 0.0s - 0.7s */
-  0% { transform: scale(1) rotate(0deg); }
-  2.5% { transform: scale(1.28) rotate(-22deg); }
-  5.0% { transform: scale(1.28) rotate(22deg); }
-  7.5% { transform: scale(1.28) rotate(-18deg); }
-  10.0% { transform: scale(1.28) rotate(18deg); }
-  12.5% { transform: scale(1.28) rotate(-12deg); }
-  14.0% { transform: scale(1.28) rotate(12deg); }
-  15.5% { transform: scale(1) rotate(0deg); }
-
-  /* Pause 1 */
-  33.3% { transform: scale(1) rotate(0deg); }
-
-  /* Burst 2: 1.5s - 2.2s */
-  35.8% { transform: scale(1.28) rotate(-22deg); }
-  38.3% { transform: scale(1.28) rotate(22deg); }
-  40.8% { transform: scale(1.28) rotate(-18deg); }
-  43.3% { transform: scale(1.28) rotate(18deg); }
-  45.8% { transform: scale(1.28) rotate(-12deg); }
-  47.3% { transform: scale(1.28) rotate(12deg); }
-  48.8% { transform: scale(1) rotate(0deg); }
-
-  /* Pause 2 */
-  66.6% { transform: scale(1) rotate(0deg); }
-
-  /* Burst 3: 3.0s - 3.7s */
-  69.1% { transform: scale(1.28) rotate(-22deg); }
-  71.6% { transform: scale(1.28) rotate(22deg); }
-  74.1% { transform: scale(1.28) rotate(-18deg); }
-  76.6% { transform: scale(1.28) rotate(18deg); }
-  79.1% { transform: scale(1.28) rotate(-12deg); }
-  80.6% { transform: scale(1.28) rotate(12deg); }
-  82.2% { transform: scale(1) rotate(0deg); }
-
-  /* Final Rest */
-  100% { transform: scale(1) rotate(0deg); }
+.brand-logo-v,
+.nav-link-item,
+.sidebar-bottom-icons a {
+  position: relative;
 }
 
-a.subscribe-ring-vibrate,
-.subscribe-ring-vibrate svg,
-#sidebar-subscribe-btn.subscribe-ring-vibrate svg {
+.rail-tooltip {
+  position: absolute;
+  background: #E5E5E5;
+  color: #121212;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 0.52rem 0.95rem;
+  border-radius: var(--rounded-sm, 2px);
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  writing-mode: horizontal-tb !important;
+  z-index: 10005;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rail-tooltip .tooltip-icon {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: #121212;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* 1. Rotated Parent Items (Logo & Format Links): Open to Visual RIGHT */
+.brand-logo-v .rail-tooltip,
+.nav-link-item .rail-tooltip {
+  left: auto;
+  right: calc(100% + 14px);
+  top: 50%;
+  transform-origin: right center;
+  transform: rotate(180deg) translateY(50%) scale(0.7) translateX(10px);
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand-logo-v:hover .rail-tooltip,
+.nav-link-item:hover .rail-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: rotate(180deg) translateY(50%) scale(1) translateX(0);
+}
+
+.brand-logo-v .rail-tooltip::before,
+.nav-link-item .rail-tooltip::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 6px solid #E5E5E5;
+}
+
+/* 2. Unrotated Parent Items (Bottom Icons): Open to Visual RIGHT */
+.sidebar-bottom-icons a .rail-tooltip {
+  left: calc(100% + 14px);
+  right: auto;
+  top: 50%;
+  transform-origin: left center;
+  transform: translateY(-50%) scale(0.7) translateX(-10px);
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sidebar-bottom-icons a:hover .rail-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) scale(1) translateX(0);
+}
+
+.sidebar-bottom-icons a .rail-tooltip::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 6px solid #E5E5E5;
+}
+
+/* ==============================================================================
+   SUBSCRIBE ICON CALL VIBRATION (6 LOOPS) & SLOW COLOR BREATHING PULSE
+   ============================================================================== */
+@keyframes subscribeCallVibrate {
+  0% { transform: scale(1) rotate(0deg); stroke: var(--text-muted, #888888); }
+  15% { transform: scale(1.28) rotate(-22deg); stroke: var(--accent-coral, #E84A5F); filter: drop-shadow(0 0 6px rgba(232, 74, 95, 0.85)); }
+  30% { transform: scale(1.28) rotate(22deg); stroke: var(--accent-coral, #E84A5F); filter: drop-shadow(0 0 6px rgba(232, 74, 95, 0.85)); }
+  45% { transform: scale(1.28) rotate(-18deg); stroke: var(--accent-coral, #E84A5F); filter: drop-shadow(0 0 6px rgba(232, 74, 95, 0.85)); }
+  60% { transform: scale(1.28) rotate(18deg); stroke: var(--accent-coral, #E84A5F); filter: drop-shadow(0 0 6px rgba(232, 74, 95, 0.85)); }
+  75% { transform: scale(1.28) rotate(-10deg); stroke: var(--accent-coral, #E84A5F); }
+  85% { transform: scale(1.1) rotate(8deg); stroke: var(--accent-coral, #E84A5F); }
+  100% { transform: scale(1) rotate(0deg); stroke: var(--text-muted, #888888); filter: none; }
+}
+
+@keyframes subscribeSlowColorLoop {
+  0%, 100% {
+    stroke: var(--text-muted, #888888);
+    filter: none;
+  }
+  50% {
+    stroke: var(--accent-coral, #E84A5F);
+    filter: drop-shadow(0 0 8px rgba(232, 74, 95, 0.5));
+  }
+}
+
+#sidebar-subscribe-btn svg {
   display: inline-block !important;
   transform-origin: center center !important;
   transform-box: fill-box !important;
-  stroke: var(--accent-coral, #E84A5F) !important;
-  animation: subscribePhoneRing 4.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) forwards !important;
-  filter: drop-shadow(0 0 8px var(--accent-coral-glow, rgba(232, 74, 95, 0.85))) !important;
+  animation: subscribeCallVibrate 1.2s cubic-bezier(0.36, 0.07, 0.19, 0.97) 6.0s 6,
+             subscribeSlowColorLoop 4s ease-in-out 13.2s infinite !important;
 }
 
-a.subscribe-coral-active,
-a.subscribe-coral-active svg,
-.subscribe-coral-active svg,
-#sidebar-subscribe-btn.subscribe-coral-active svg {
-  stroke: var(--accent-coral, #E84A5F) !important;
-  transition: stroke 0.3s ease;
+/* Auto-Reveal & Smooth Scaling Glow for Subscribe Tooltip (Appears at 6s for ~3s) */
+@keyframes subscribeTooltipAutoReveal {
+  0%, 62% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50%) scale(0.65) translateX(-12px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75);
+  }
+  /* 6.0s - 6.5s: Smooth scaling entrance with soft subtle red glow */
+  63% {
+    opacity: 0;
+    visibility: visible;
+    transform: translateY(-50%) scale(0.65) translateX(-12px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75), 0 0 8px rgba(232, 74, 95, 0.2);
+  }
+  68.4% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) scale(1) translateX(0);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75), 0 0 12px rgba(232, 74, 95, 0.35);
+  }
+  89.5% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) scale(1) translateX(0);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75), 0 0 16px rgba(232, 74, 95, 0.45);
+  }
+  /* 9.0s - 9.5s: Smooth scaling & fading exit back into the navbar */
+  94.7% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) scale(1) translateX(0);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75), 0 0 10px rgba(232, 74, 95, 0.3);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50%) scale(0.65) translateX(-12px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75);
+  }
+}
+
+#sidebar-subscribe-btn .rail-tooltip {
+  transform-origin: left center;
+  animation: subscribeTooltipAutoReveal 9.5s cubic-bezier(0.16, 1, 0.3, 1) 1 forwards;
+}
+
+#sidebar-subscribe-btn:hover .rail-tooltip {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(-50%) scale(1) translateX(0) !important;
 }
 
 
@@ -434,6 +577,10 @@ a.subscribe-coral-active svg,
    Smoothly transforms sidebar into a sleek Top Navbar
    ============================================================================== */
 @media (max-height: 700px), (max-width: 980px) {
+  .rail-tooltip {
+    display: none !important;
+  }
+
   .sidebar-rail {
     width: 100vw;
     height: 48px;
