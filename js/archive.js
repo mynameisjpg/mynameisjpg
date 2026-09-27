@@ -108,14 +108,24 @@ function checkUrlTagParameters() {
   }
 }
 
+function setNodeFilterUIState(isFiltered, filterText = "") {
+  document.querySelectorAll("#clear-node-filter-btn, .btn-clear-node-filter").forEach(btn => {
+    btn.style.display = isFiltered ? "inline-flex" : "none";
+  });
+  document.querySelectorAll("#nodemap-status-label, .top-navbar-legend-badge").forEach(label => {
+    if (isFiltered) {
+      label.textContent = `FILTERED BY NODE: ${filterText.toUpperCase()}`;
+    } else {
+      label.textContent = "EXPLORE 3D TAG NODES & CONCEPTUAL VECTORS";
+    }
+  });
+}
+
 function applyTagFilterDirectly(tag) {
   if (!tag) return;
   activeTagFilter = tag.trim();
 
-  const clearNodeBtn = document.getElementById("clear-node-filter-btn");
-  const statusLabel = document.getElementById("nodemap-status-label");
-  if (clearNodeBtn) clearNodeBtn.style.display = "inline-flex";
-  if (statusLabel) statusLabel.textContent = `FILTERED BY NODE: ${activeTagFilter.toUpperCase()}`;
+  setNodeFilterUIState(true, activeTagFilter);
 
   const tagLower = activeTagFilter.toLowerCase();
   if (typeof threeNodes !== "undefined" && threeNodes && threeNodes.length > 0) {
@@ -201,18 +211,15 @@ function initArchiveListeners() {
   });
 
   // Clear Node Filter button
-  const clearNodeBtn = document.getElementById("clear-node-filter-btn");
-  if (clearNodeBtn) {
-    clearNodeBtn.addEventListener("click", () => {
+  document.querySelectorAll("#clear-node-filter-btn, .btn-clear-node-filter").forEach(btn => {
+    btn.addEventListener("click", () => {
       activeTagFilter = null;
       activeNodeFilter = null;
-      clearNodeBtn.style.display = "none";
-      const statusLabel = document.getElementById("nodemap-status-label");
-      if (statusLabel) statusLabel.textContent = "EXPLORE TAG NODES & CONCEPTUAL VECTORS";
+      setNodeFilterUIState(false);
       renderTimelineList();
       resetNodeHighlights();
     });
-  }
+  });
 
   // Live tag link click interceptor when already on archive.html
   document.addEventListener("click", (e) => {
@@ -506,11 +513,8 @@ function clearAllFilters() {
   searchQuery = "";
   const searchInput = document.getElementById("archive-search-input");
   if (searchInput) searchInput.value = "";
-  const clearNodeBtn = document.getElementById("clear-node-filter-btn");
-  if (clearNodeBtn) clearNodeBtn.style.display = "none";
   document.querySelectorAll("#category-filter-nav .nav-link-item").forEach(l => l.classList.remove("active"));
-  const statusLabel = document.getElementById("nodemap-status-label");
-  if (statusLabel) statusLabel.textContent = "EXPLORE TAG NODES & CONCEPTUAL VECTORS";
+  setNodeFilterUIState(false);
   renderTimelineList();
   resetNodeHighlights();
 }
@@ -974,15 +978,12 @@ function onThreeMouseClick() {
   if (!hoveredThreeNode) return;
 
   const clickedData = hoveredThreeNode.data;
-  const clearNodeBtn = document.getElementById("clear-node-filter-btn");
-  const statusLabel = document.getElementById("nodemap-status-label");
 
   if (activeNodeFilter === clickedData) {
     // Toggle off
     activeNodeFilter = null;
     activeTagFilter = null;
-    if (clearNodeBtn) clearNodeBtn.style.display = "none";
-    if (statusLabel) statusLabel.textContent = "EXPLORE 3D TAG NODES & CONCEPTUAL VECTORS";
+    setNodeFilterUIState(false);
   } else {
     activeNodeFilter = clickedData;
     if (clickedData.type === "pillar") {
@@ -993,9 +994,10 @@ function onThreeMouseClick() {
       activeTagFilter = null;
     }
 
-    if (clearNodeBtn) clearNodeBtn.style.display = "inline-block";
-    if (statusLabel && activeTagFilter) {
-      statusLabel.textContent = `FILTERED BY 3D NODE: ${activeTagFilter.toUpperCase()}`;
+    if (activeTagFilter) {
+      setNodeFilterUIState(true, activeTagFilter);
+    } else {
+      setNodeFilterUIState(false);
     }
   }
 
@@ -1283,15 +1285,11 @@ function handleCanvasMouseMove(e) {
 function handleCanvasClick(e) {
   if (!hoveredNode) return;
 
-  const clearNodeBtn = document.getElementById("clear-node-filter-btn");
-  const statusLabel = document.getElementById("nodemap-status-label");
-
   if (activeNodeFilter === hoveredNode) {
     // Toggle off
     activeNodeFilter = null;
     activeTagFilter = null;
-    if (clearNodeBtn) clearNodeBtn.style.display = "none";
-    if (statusLabel) statusLabel.textContent = "EXPLORE TAG NODES & CONCEPTUAL VECTORS";
+    setNodeFilterUIState(false);
   } else {
     activeNodeFilter = hoveredNode;
     if (hoveredNode.type === "pillar") {
@@ -1302,9 +1300,10 @@ function handleCanvasClick(e) {
       activeTagFilter = null;
     }
 
-    if (clearNodeBtn) clearNodeBtn.style.display = "inline-block";
-    if (statusLabel && activeTagFilter) {
-      statusLabel.textContent = `FILTERED BY NODE: ${activeTagFilter.toUpperCase()}`;
+    if (activeTagFilter) {
+      setNodeFilterUIState(true, activeTagFilter);
+    } else {
+      setNodeFilterUIState(false);
     }
   }
 

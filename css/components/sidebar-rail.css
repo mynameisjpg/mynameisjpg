@@ -713,7 +713,7 @@
     box-sizing: border-box !important;
     border: none !important;
     border-radius: 0 !important;
-    background: transparent !important;
+    /*background: transparent !important;*/
     padding: 0 !important;
     margin: 0 !important;
     transition: background-color var(--transition-fast, 0.15s ease), color var(--transition-fast, 0.15s ease) !important;
@@ -726,8 +726,8 @@
 
   .top-nav-icon-btn svg,
   .sidebar-bottom-icons svg {
-    width: 16px !important;
-    height: 16px !important;
+    width: 18px !important;
+    height: 18px !important;
   }
 
   /* Remove Home Icon from Top Navbar */
@@ -758,17 +758,11 @@
     height: calc(100vh - 48px) !important;
   }
 
-  /* Hide static header labels on short height/mobile */
-  .timeline-header-top,
-  .matrix-header-group,
-  .header-legend,
-  .timeline-controls-row {
+  /* Hide static header panels in top navbar mode */
+  .timeline-header-group,
+  .nodemap-header-group,
+  .matrix-header-group {
     display: none !important;
-  }
-
-  .timeline-header-group {
-    padding: 0;
-    border-bottom: none;
   }
 
   .timeline-scroll-container {

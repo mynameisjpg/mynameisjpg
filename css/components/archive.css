@@ -33,10 +33,20 @@
   box-sizing: border-box;
 }
 
-/* Header Groups Spanning Top of Left & Right Panels (Removed from view) */
+/* Header Groups Spanning Top of Left & Right Panels (Equal Height 82px in Desktop View) */
 .timeline-header-group,
 .nodemap-header-group {
-  display: none !important;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  background-color: var(--neutral-surface, #161616);
+  z-index: 10;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  min-height: 82px;
+  max-height: 82px;
+  flex-shrink: 0;
 }
 
 .timeline-header-content,
