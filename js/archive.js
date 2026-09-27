@@ -605,17 +605,29 @@ function initThreeJSNodeMap() {
     threeControls.autoRotateSpeed = 0.4;
   }
 
-  // 5. Lighting
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.65);
+  // 5. Enhanced Crystalline Scene Lighting
+  const ambientLight = new THREE.AmbientLight(0x181824, 0.95);
   threeScene.add(ambientLight);
 
-  const lightRed = new THREE.PointLight(0xe84a5f, 2.2, 500);
-  lightRed.position.set(120, 150, 180);
+  // Key Light (warm front-top directional)
+  const keyLight = new THREE.DirectionalLight(0xfff5ea, 1.25);
+  keyLight.position.set(150, 200, 250);
+  threeScene.add(keyLight);
+
+  // Red/Coral Accent Point Light
+  const lightRed = new THREE.PointLight(0xe84a5f, 2.5, 600);
+  lightRed.position.set(160, 180, 200);
   threeScene.add(lightRed);
 
-  const lightCyan = new THREE.PointLight(0x38bdf8, 1.8, 500);
-  lightCyan.position.set(-150, -100, 150);
+  // Cool Cyan Rim Fill Point Light
+  const lightCyan = new THREE.PointLight(0x38bdf8, 2.0, 600);
+  lightCyan.position.set(-180, -120, 160);
   threeScene.add(lightCyan);
+
+  // Soft Underside Indigo Fill Light
+  const lightIndigo = new THREE.PointLight(0x6366f1, 1.2, 500);
+  lightIndigo.position.set(0, -220, -100);
+  threeScene.add(lightIndigo);
 
   // Groups
   threeNodesGroup = new THREE.Group();
@@ -686,7 +698,7 @@ function build3DNodeMapGraph() {
     postsCount: ARCHIVE_POSTS.length
   };
 
-  const rootMesh = createSphereNodeMesh(14, 0xE84A5F, 0.7);
+  const rootMesh = createCrystalNodeMesh(15, 0xE84A5F, 0.55);
   rootMesh.position.set(0, 0, 0);
   threeNodesGroup.add(rootMesh);
 
@@ -727,7 +739,7 @@ function build3DNodeMapGraph() {
       postSlugs: pillarMap[pilName].map(p => p.slug)
     };
 
-    const pillarMesh = createSphereNodeMesh(9, 0xFF6579, 0.4);
+    const pillarMesh = createCrystalNodeMesh(10, 0xFF6579, 0.45);
     pillarMesh.position.set(px, py, pz);
     threeNodesGroup.add(pillarMesh);
 
@@ -768,7 +780,7 @@ function build3DNodeMapGraph() {
         postsCount: pillarMap[pilName].filter(p => p.tags && p.tags.includes(tag)).length
       };
 
-      const tagMesh = createSphereNodeMesh(5.5, 0xB8B8B8, 0.35);
+      const tagMesh = createCrystalNodeMesh(6.5, 0xB8B8B8, 0.38);
       tagMesh.position.set(tx, ty, tz);
       threeNodesGroup.add(tagMesh);
 
@@ -785,14 +797,26 @@ function build3DNodeMapGraph() {
   });
 }
 
-function createSphereNodeMesh(radius, colorHex, emissiveIntensity = 0.3) {
-  const geo = new THREE.SphereGeometry(radius, 24, 24);
+function createCrystalNodeMesh(radius, colorHex, emissiveIntensity = 0.4) {
+  // Faceted 3D crystalline quartz shard geometry
+  const geo = new THREE.IcosahedronGeometry(radius, 2);
+  const pos = geo.attributes.position;
+  const vec = new THREE.Vector3();
+  for (let i = 0; i < pos.count; i++) {
+    vec.fromBufferAttribute(pos, i);
+    const noise = Math.sin(vec.x * 0.4 + vec.y * 0.6) * Math.cos(vec.z * 0.5) * (radius * 0.22);
+    vec.normalize().multiplyScalar(radius + noise);
+    pos.setXYZ(i, vec.x, vec.y, vec.z);
+  }
+  geo.computeVertexNormals();
+
   const mat = new THREE.MeshStandardMaterial({
     color: colorHex,
     emissive: colorHex,
     emissiveIntensity: emissiveIntensity,
-    roughness: 0.25,
-    metalness: 0.5
+    roughness: 0.65,
+    metalness: 0.05,
+    flatShading: true
   });
   return new THREE.Mesh(geo, mat);
 }
@@ -895,6 +919,16 @@ function animateThreeJS() {
   // Subtle background starfield rotation
   if (threeParticlesGroup) {
     threeParticlesGroup.rotation.y += 0.0003;
+  }
+
+  // Gentle rotation of 3D crystalline shard nodes to reflect lights across facets
+  if (threeNodes && threeNodes.length > 0) {
+    threeNodes.forEach((n, idx) => {
+      if (n.mesh) {
+        n.mesh.rotation.y += 0.003 * (idx % 2 === 0 ? 1 : -1);
+        n.mesh.rotation.x += 0.0015 * (idx % 3 === 0 ? 1 : -1);
+      }
+    });
   }
 
   // 3D Raycasting hover update
