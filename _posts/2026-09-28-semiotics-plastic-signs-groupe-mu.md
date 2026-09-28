@@ -31,7 +31,6 @@ toc: true
 math: true
 
 sys_id: "SYS_260928_PLSTC"
-vector_dim: 0002
 reading_time: "11 min read"
 
 links:
@@ -106,13 +105,13 @@ A picture of a cat isn't an iconic sign because it physically matches a real cat
 
 Groupe µ showed that an image also works on a second, parallel level: the **Plastic Sign**. Plastic signs don't care about object recognition or real-world targets. They operate through three raw spatial qualities:
 
-| Plastic Dimension | Physical / Computational Correlate              | Perceptual Function                                    |
-| :---------------- | :---------------------------------------------- | :----------------------------------------------------- |
-| **Form**          | Geometric spatial coordinates & contours        | Enclosure, orientation, and Gestalt grouping           |
-| **Color**         | Spectral frequency, luminance, and chromaticity | Tone, figure-ground separation, and contrast           |
-| **Texture**       | Spatial frequency distributions and micro-grain | Surface feel, tactile density, and grain               |
+| Plastic Dimension | Physical / Computational Correlate              | Perceptual Function                          |
+| :---------------- | :---------------------------------------------- | :------------------------------------------- |
+| **Form**          | Geometric spatial coordinates & contours        | Enclosure, orientation, and Gestalt grouping |
+| **Color**         | Spectral frequency, luminance, and chromaticity | Tone, figure-ground separation, and contrast |
+| **Texture**       | Spatial frequency distributions and micro-grain | Surface feel, tactile density, and grain     |
 
-An iconic sign asks, *"What is this depicting?"* A plastic sign asks, *"How does this visual arrangement affect how I see?"* Cézanne’s blocky brushstrokes, Mondrian’s black grid lines, or a noisy dithered gradient hit the visual cortex before we even register what objects are in the frame.
+An iconic sign asks, _"What is this depicting?"_ A plastic sign asks, _"How does this visual arrangement affect how I see?"_ Cézanne’s blocky brushstrokes, Mondrian’s black grid lines, or a noisy dithered gradient hit the visual cortex before we even register what objects are in the frame.
 
 ---
 

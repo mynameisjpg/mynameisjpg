@@ -111,7 +111,7 @@ const canvas = document.getElementById("viewport");
 const filter = createDitherFilter({
   algorithm: "atkinson",
   palette: ["#121212", "#E84A5F", "#FFFFFF"],
-  threshold: 128
+  threshold: 128,
 });
 
 filter.apply(canvas);
@@ -121,9 +121,9 @@ filter.apply(canvas);
 
 ## 04. Technical Specifications & Benchmarks
 
-| Parameter | Default Value | Description |
-| :--- | :--- | :--- |
+| Parameter   | Default Value     | Description                         |
+| :---------- | :---------------- | :---------------------------------- |
 | `algorithm` | `floyd-steinberg` | Error-diffusion quantization matrix |
-| `bitDepth` | `1-bit` | Color channel quantization depth |
-| `fps` | `60 FPS` | Target WebGL render cycle |
-| `license` | `MIT` | Open-source permissive license |
+| `bitDepth`  | `1-bit`           | Color channel quantization depth    |
+| `fps`       | `60 FPS`          | Target WebGL render cycle           |
+| `license`   | `MIT`             | Open-source permissive license      |

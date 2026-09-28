@@ -31,7 +31,6 @@ toc: true
 math: true
 
 sys_id: "SYS_260925_TURQ"
-vector_dim: 0002
 reading_time: "9 min read"
 
 links:

@@ -61,7 +61,6 @@ math: true
 # 4. ARCHIVAL & SPEC BADGES
 # ------------------------------------------------------------------------------
 sys_id: "SYS_260926_DISPATCH"
-vector_dim: 0001
 reading_time: "8 min read"
 
 # ------------------------------------------------------------------------------
@@ -102,7 +101,7 @@ image:
 
 Write standard Markdown body prose here.
 
-You can use **bold text**, *italics*, inline `code`, and [hyperlinks](https://example.com).
+You can use **bold text**, _italics_, inline `code`, and [hyperlinks](https://example.com).
 
 > "Blockquotes for key citations or statements."
 

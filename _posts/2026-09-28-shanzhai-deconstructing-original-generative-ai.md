@@ -106,4 +106,3 @@ If generative media is fundamentally a _Shanzhai_ process:
 - How do legal frameworks move away from strict copyright penalties toward clear attribution networks?
 - How does artistic practice change when creation becomes about steering variations in latent space instead of manual execution?
 - Can _Shanzhai_ ideas help keep digital tools open instead of locked inside corporate platforms?
-

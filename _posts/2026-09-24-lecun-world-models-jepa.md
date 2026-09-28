@@ -32,7 +32,6 @@ toc: true
 math: true
 
 sys_id: "SYS_260924_JEPA"
-vector_dim: 0003
 reading_time: "12 min read"
 
 links:

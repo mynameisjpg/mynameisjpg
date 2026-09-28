@@ -10,9 +10,9 @@ author: "Juan P. Giusepponi"
 status: "published"
 
 format: "bookmark"
-media: "paper"
-source: "Socialist Review / e-flux Journal Archival Reader"
-bookmark_url: "https://www.e-flux.com/journal/153/haraway-cyborg-manifesto/"
+media: "essay"
+source: "Donna Haraway's 1985 Cyborg Manifesto"
+bookmark_url: "https://monoskop.org/images/4/4c/Haraway_Donna_1985_A_Manifesto_for_Cyborgs_Science_Technology_and_Socialist_Feminism_in_the_1980s.pdf"
 
 topic:
   pillar: "Philosophy of the Image, Tech & Visual Culture"
@@ -34,13 +34,13 @@ reading_time: "Curated Read"
 
 links:
   - title: "A Cyborg Manifesto: Science, Technology, and Socialist-Feminism in the Late 20th Century (Haraway, 1985)"
-    url: "https://www.monoskop.org/images/f/f3/Haraway_Donna_A_Cyborg_Manifesto_Science_Technology_and_Socialist-Feminism_in_the_Late_Twentieth_Century_1991.pdf"
-    type: "paper"
+    url: "https://monoskop.org/images/4/4c/Haraway_Donna_1985_A_Manifesto_for_Cyborgs_Science_Technology_and_Socialist_Feminism_in_the_1980s.pdf"
+    type: "essay"
     description: "The complete text of Donna Haraway's groundbreaking manifesto on cybernetic organisms, anti-essentialism, and boundary breakdowns."
-  - title: "e-flux Journal Issue #153 Archival Focus"
-    url: "https://www.e-flux.com/journal/153/"
+  - title: "e-flux Journal Issue #75 Tentacular Thinking: Anthropocene, Capitalocene, Chthulucene"
+    url: ""
     type: "article"
-    description: "Special journal issue reflecting on technology, contemporary art, and post-humanist cyborg politics in modern neural network infrastructure."
+    description: "Donna's article on issue #75 of e-flux."
 
 backlinks:
   - slug: "/essays/semiotics-plastic-signs-groupe-mu"
@@ -98,4 +98,3 @@ Modern software runs on invisible signals—light pulses, radio waves, and vecto
 1. **Embrace the Hybrid Loop:** When you code or design with AI, agency doesn't belong strictly to you or to the model. It lives in the loop between both.
 2. **Skip the Moral Panics:** Panics about "AI art" or "synthetic text" rerun old arguments trying to draw clean lines between human thought and technological tools.
 3. **Irony, Affinity, and Chimeras:** Building software today is rarely about neat, single-platform systems. It's about combining different tools, API streams, and AI models into temporary setups that get real work done.
-

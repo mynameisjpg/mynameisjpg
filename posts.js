@@ -180,9 +180,9 @@ window.DYNAMIC_POSTS = [
     "excerpt": "Published in 1985, Donna Haraway's A Cyborg Manifesto cuts through modern panics over artificial intelligence and synthetic tools better than almost anything written today.",
     "format": "BOOKMARK",
     "category": "",
-    "media": "PAPER",
-    "source": "Socialist Review / e-flux Journal Archival Reader",
-    "url": "https://www.e-flux.com/journal/153/haraway-cyborg-manifesto/",
+    "media": "ESSAY",
+    "source": "Donna Haraway's 1985 Cyborg Manifesto",
+    "url": "https://monoskop.org/images/4/4c/Haraway_Donna_1985_A_Manifesto_for_Cyborgs_Science_Technology_and_Socialist_Feminism_in_the_1980s.pdf",
     "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
     "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
     "theme": "light",
@@ -193,21 +193,21 @@ window.DYNAMIC_POSTS = [
     "date": "2026.09.28",
     "author": "Juan P. Giusepponi",
     "read_time": "CURATED READ",
-    "via": "Socialist Review / e-flux Journal Archival Reader",
+    "via": "Donna Haraway's 1985 Cyborg Manifesto",
     "image": "assets/images/donna_haraway.png",
     "aspect_ratio": "h-tall-1",
     "links": [
       {
         "title": "A Cyborg Manifesto: Science, Technology, and Socialist-Feminism in the Late 20th Century (Haraway, 1985)",
-        "url": "https://www.monoskop.org/images/f/f3/Haraway_Donna_A_Cyborg_Manifesto_Science_Technology_and_Socialist-Feminism_in_the_Late_Twentieth_Century_1991.pdf",
-        "type": "PAPER",
+        "url": "https://monoskop.org/images/4/4c/Haraway_Donna_1985_A_Manifesto_for_Cyborgs_Science_Technology_and_Socialist_Feminism_in_the_1980s.pdf",
+        "type": "ESSAY",
         "desc": "The complete text of Donna Haraway's groundbreaking manifesto on cybernetic organisms, anti-essentialism, and boundary breakdowns."
       },
       {
-        "title": "e-flux Journal Issue #153 Archival Focus",
-        "url": "https://www.e-flux.com/journal/153/",
+        "title": "e-flux Journal Issue #75 Tentacular Thinking: Anthropocene, Capitalocene, Chthulucene",
+        "url": "",
         "type": "ARTICLE",
-        "desc": "Special journal issue reflecting on technology, contemporary art, and post-humanist cyborg politics in modern neural network infrastructure."
+        "desc": "Donna's article on issue #75 of e-flux."
       }
     ],
     "backlinks": [
