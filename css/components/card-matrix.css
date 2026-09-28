@@ -151,18 +151,18 @@
 }
 
 .card-type-chip.chip-note {
-  color: #4ea8de;
-  border-color: rgba(78, 168, 222, 0.35);
+  color: var(--text-bright);
+  border-color: rgba(255, 255, 255, 0.16);
 }
 
 .card-type-chip.chip-bookmark {
-  color: #f72585;
-  border-color: rgba(247, 37, 133, 0.35);
+  color: var(--accent-rose);
+  border-color: rgba(255, 132, 132, 0.3);
 }
 
 .card-type-chip.chip-resource {
-  color: #4895ef;
-  border-color: rgba(72, 149, 239, 0.35);
+  color: var(--text-body);
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 .card-caption {

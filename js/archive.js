@@ -23,15 +23,22 @@ document.addEventListener("DOMContentLoaded", () => {
   initArchiveApp();
 });
 
+let ARCHIVE_TAGS_DATA = [];
+
 function initArchiveApp() {
   if (typeof window !== "undefined" && window.DYNAMIC_POSTS) {
     ingestArchivePosts(window.DYNAMIC_POSTS);
   }
+  if (typeof window !== "undefined" && window.DYNAMIC_TAGS) {
+    ARCHIVE_TAGS_DATA = window.DYNAMIC_TAGS;
+  }
 
   fetchArchivePostsJson();
+  fetchArchiveTagsJson();
   initArchiveListeners();
   initNodeMapCanvas();
   initSubscribeAnimation();
+  renderTagsDirectoryTable();
 }
 
 let isArchiveSubscribeAnimScheduled = false;
@@ -173,9 +180,111 @@ async function fetchArchivePostsJson() {
   }
 }
 
+async function fetchArchiveTagsJson() {
+  try {
+    const res = await fetch("tags.json?t=" + Date.now());
+    if (res.ok) {
+      const data = await res.json();
+      if (Array.isArray(data)) {
+        ARCHIVE_TAGS_DATA = data;
+        renderTagsDirectoryTable();
+      }
+    }
+  } catch (err) {
+    console.log("Archive Tags JSON fetch fallback active.");
+  }
+}
+
+function renderTagsDirectoryTable(searchVal = "") {
+  const tbody = document.getElementById("tags-directory-tbody");
+  const countLabel = document.getElementById("tags-table-count-label");
+  if (!tbody) return;
+
+  const rawData = (window.DYNAMIC_TAGS || ARCHIVE_TAGS_DATA || []);
+  const searchLower = (searchVal || "").toLowerCase().trim();
+
+  const filtered = rawData.filter(t => {
+    if (!searchLower) return true;
+    const nameMatch = (t.name || "").toLowerCase().includes(searchLower);
+    const typeMatch = (t.type || "").toLowerCase().includes(searchLower);
+    const postsMatch = (t.posts || []).some(p => (p.title || "").toLowerCase().includes(searchLower));
+    return nameMatch || typeMatch || postsMatch;
+  });
+
+  if (countLabel) {
+    countLabel.textContent = `TOTAL TAXONOMY ITEMS: ${filtered.length}`;
+  }
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="4" style="text-align: center; padding: 2rem; color: var(--text-muted); font-family: var(--font-mono);">
+          [ NO TAXONOMY TAGS OR TOPICS MATCHING SELECTION ]
+        </td>
+      </tr>
+    `;
+    return;
+  }
+
+  tbody.innerHTML = filtered.map(t => {
+    const typeBadgeClass = t.type === "pillar" ? "tag-type-pillar" : (t.type === "subtopic" ? "tag-type-subtopic" : "tag-type-tag");
+    const typeLabel = t.type.toUpperCase();
+
+    const linksHtml = (t.links || []).map(l => {
+      const fmt = (l.format || "ESSAY").toUpperCase();
+      return `<a href="${l.url}" class="tag-dispatch-link" title="${l.title}">
+        <span class="link-fmt">[${fmt}]</span> ${l.title}
+      </a>`;
+    }).join("");
+
+    return `
+      <tr class="tags-table-row" data-tag="${t.name}">
+        <td class="tag-name-cell">
+          <a href="javascript:void(0)" class="tag-directory-filter-link" onclick="applyTagFilterDirectly('${t.name}')">
+            ${t.type === 'tag' ? '#' : ''}${t.name}
+          </a>
+        </td>
+        <td><span class="tag-type-badge ${typeBadgeClass}">${typeLabel}</span></td>
+        <td class="tag-count-cell">${t.count}</td>
+        <td class="tag-links-cell">${linksHtml}</td>
+      </tr>
+    `;
+  }).join("");
+}
+
 let activeSortOrder = "newest";
 
 function initArchiveListeners() {
+  // View Toggle Buttons (Graph vs Table)
+  const graphBtn = document.getElementById("toggle-view-graph-btn");
+  const tableBtn = document.getElementById("toggle-view-table-btn");
+  const canvasWrapper = document.getElementById("nodemap-canvas-wrapper");
+  const tableWrapper = document.getElementById("tags-table-wrapper");
+
+  if (graphBtn && tableBtn) {
+    graphBtn.addEventListener("click", () => {
+      graphBtn.classList.add("active");
+      tableBtn.classList.remove("active");
+      if (canvasWrapper) canvasWrapper.style.display = "block";
+      if (tableWrapper) tableWrapper.style.display = "none";
+    });
+
+    tableBtn.addEventListener("click", () => {
+      tableBtn.classList.add("active");
+      graphBtn.classList.remove("active");
+      if (canvasWrapper) canvasWrapper.style.display = "none";
+      if (tableWrapper) tableWrapper.style.display = "flex";
+      renderTagsDirectoryTable();
+    });
+  }
+
+  // Tags Table Search Input
+  const tagsSearchInput = document.getElementById("tags-table-search-input");
+  if (tagsSearchInput) {
+    tagsSearchInput.addEventListener("input", (e) => {
+      renderTagsDirectoryTable(e.target.value);
+    });
+  }
   // Search input
   const searchInput = document.getElementById("archive-search-input");
   if (searchInput) {
@@ -874,7 +983,7 @@ function build3DNodeMapGraph() {
       }
     });
 
-    const pillarTags = Array.from(tagSet).slice(0, 4);
+    const pillarTags = Array.from(tagSet);
     const tagCount = pillarTags.length;
 
     pillarTags.forEach((tag, tIdx) => {
@@ -1264,7 +1373,7 @@ function buildNodeMapData() {
       }
     });
 
-    const pillarTags = Array.from(tagSet).slice(0, 4);
+    const pillarTags = Array.from(tagSet);
     const tagCount = pillarTags.length;
 
     pillarTags.forEach((tag, tIdx) => {

@@ -27,9 +27,6 @@
 <body>
 
   <!-- ====================================================================
-       COMPONENT 1: ULTRA-THIN LEFT SIDEBAR RAIL (48px)
-       ==================================================================== -->
-  <!-- ====================================================================
        COMPONENT 1: ULTRA-THIN LEFT SIDEBAR RAIL (48px) / TOP NAVBAR
        ==================================================================== -->
   <aside class="sidebar-rail" data-component="sidebar-rail" aria-label="Main Navigation Rail">
@@ -181,7 +178,7 @@
       </div>
     </section>
 
-    <!-- RIGHT 50%: INTERACTIVE TAXONOMY NODE MAP -->
+    <!-- RIGHT 50%: INTERACTIVE TAXONOMY NODE MAP & TAGS DIRECTORY -->
     <section class="nodemap-column" aria-label="Interactive Taxonomy Node Map">
       <div class="nodemap-header-group">
         <div class="nodemap-header-content">
@@ -189,7 +186,11 @@
             <span class="nodemap-legend">SYS_LOG // INTERACTIVE_TAXONOMY_NODE_MAP</span>
             <span class="nodemap-subtitle" id="nodemap-status-label">EXPLORE 3D TAG NODES &amp; CONCEPTUAL VECTORS</span>
           </div>
-          <div class="nodemap-controls-row">
+          <div class="nodemap-controls-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <div class="view-toggle-buttons" style="display: flex; gap: 0.5rem;">
+              <button type="button" id="toggle-view-graph-btn" class="btn-archive-view-toggle active" title="3D Node Map Graph">[ 3D GRAPH NODE MAP ]</button>
+              <button type="button" id="toggle-view-table-btn" class="btn-archive-view-toggle" title="Tags & Taxonomy Table">[ TAGS DIRECTORY TABLE ]</button>
+            </div>
             <button type="button" id="clear-node-filter-btn" class="btn-clear-node-filter" style="display: none;">[ CLEAR NODE FILTER ]</button>
           </div>
         </div>
@@ -202,6 +203,29 @@
         <div class="nodemap-hover-dock" id="nodemap-hover-dock">
           <div class="dock-node-title" id="dock-node-title">[ NODE MAP ACTIVE ]</div>
           <div class="dock-node-desc" id="dock-node-desc">Hover over any tag or pillar node to highlight connected dispatches. Click to filter timeline.</div>
+        </div>
+      </div>
+
+      <!-- TAGS DIRECTORY TABLE VIEW CONTAINER -->
+      <div class="tags-table-wrapper" id="tags-table-wrapper" style="display: none;">
+        <div class="tags-table-header-bar">
+          <input type="text" id="tags-table-search-input" placeholder="SEARCH TAGS, PILLARS & SUBTOPICS..." aria-label="Search tags and topics" autocomplete="off" />
+          <span class="tags-table-count" id="tags-table-count-label">TOTAL TAXONOMY ITEMS: 0</span>
+        </div>
+        <div class="tags-table-scroll-box">
+          <table class="tags-directory-table">
+            <thead>
+              <tr>
+                <th>TAG / TOPIC</th>
+                <th>TYPE</th>
+                <th>COUNT</th>
+                <th>CONNECTED DISPATCHES & LINKS</th>
+              </tr>
+            </thead>
+            <tbody id="tags-directory-tbody">
+              <!-- Rendered dynamically from tags.json / tags.js -->
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
@@ -248,8 +272,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 
-  <!-- Dynamic Posts Feed -->
+  <!-- Dynamic Posts Feed & Tags Database -->
   <script src="posts.js"></script>
+  <script src="tags.js"></script>
   <!-- Archive Engine Script -->
   <script src="js/archive.js"></script>
 </body>

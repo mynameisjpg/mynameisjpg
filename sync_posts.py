@@ -28,7 +28,15 @@ BASE_DIR = Path(__file__).resolve().parent
 POSTS_DIR = BASE_DIR / "_posts"
 OUTPUT_JSON = BASE_DIR / "posts.json"
 OUTPUT_JS = BASE_DIR / "posts.js"
+OUTPUT_TAGS_JSON = BASE_DIR / "tags.json"
+OUTPUT_TAGS_JS = BASE_DIR / "tags.js"
 ROOT_DIR = BASE_DIR.parent if (BASE_DIR.parent / "index.html").exists() else BASE_DIR
+
+def slugify(text):
+    """Normalize text into a clean URL-safe slug."""
+    if not text:
+        return ""
+    return re.sub(r'[^a-z0-9]+', '-', str(text).lower()).strip('-')
 
 def parse_yaml_frontmatter(text):
     """Robust YAML front-matter parser."""
@@ -449,6 +457,9 @@ def compile_posts():
     with open(OUTPUT_JS, "w", encoding="utf-8") as f:
         f.write(js_content)
         
+    # Compile tags & taxonomy database (tags.json / tags.js)
+    compile_tags_database(posts)
+
     # Also sync copies to repository root if separate
     if ROOT_DIR != BASE_DIR:
         shutil.copy2(OUTPUT_JSON, ROOT_DIR / "posts.json")
@@ -456,6 +467,122 @@ def compile_posts():
 
     print(f"\n[SUCCESS] Compiled {len(posts)} full posts into {OUTPUT_JSON.name} & {OUTPUT_JS.name}\n")
     return True
+
+def compile_tags_database(posts):
+    """
+    Builds a comprehensive index of all tags, pillars, and subtopics across all dispatches.
+    Generates tags.json and tags.js containing occurrence stats, connected dispatches, and links.
+    """
+    tags_map = {}
+
+    def get_or_create(tag_id, name, entity_type):
+        key = (entity_type, tag_id)
+        if key not in tags_map:
+            tags_map[key] = {
+                "id": tag_id,
+                "name": name,
+                "label": f"#{name}" if entity_type == "tag" else name,
+                "type": entity_type,
+                "count": 0,
+                "posts": [],
+                "links": [],
+                "pillars": set(),
+                "subtopics": set(),
+                "co_occurring": {}
+            }
+        return tags_map[key]
+
+    for p in posts:
+        post_summary = {
+            "id": p.get("id"),
+            "slug": p.get("slug"),
+            "title": p.get("title"),
+            "date": p.get("date"),
+            "format": p.get("format"),
+            "pillar": p.get("pillar"),
+            "subtopic": p.get("subtopic"),
+            "url": f"index.html?post={p.get('slug')}"
+        }
+
+        link_entry = {
+            "title": p.get("title"),
+            "slug": p.get("slug"),
+            "format": p.get("format"),
+            "url": f"index.html?post={p.get('slug')}",
+            "date": p.get("date")
+        }
+
+        # 1. Process Pillar
+        pillar = p.get("pillar")
+        if pillar:
+            pil_id = f"pillar-{slugify(pillar)}"
+            pil_item = get_or_create(pil_id, pillar, "pillar")
+            pil_item["count"] += 1
+            pil_item["posts"].append(post_summary)
+            pil_item["links"].append(link_entry)
+
+        # 2. Process Subtopic
+        subtopic = p.get("subtopic")
+        if subtopic:
+            sub_id = f"subtopic-{slugify(subtopic)}"
+            sub_item = get_or_create(sub_id, subtopic, "subtopic")
+            sub_item["count"] += 1
+            sub_item["posts"].append(post_summary)
+            sub_item["links"].append(link_entry)
+            if pillar:
+                sub_item["pillars"].add(pillar)
+
+        # 3. Process Tags
+        post_tags = p.get("tags") or []
+        if isinstance(post_tags, str):
+            post_tags = [t.strip() for t in post_tags.split(",") if t.strip()]
+
+        for tag in post_tags:
+            tag_clean = str(tag).strip().lower().lstrip("#")
+            if not tag_clean:
+                continue
+            tag_id = slugify(tag_clean)
+            tag_item = get_or_create(tag_id, tag_clean, "tag")
+            tag_item["count"] += 1
+            tag_item["posts"].append(post_summary)
+            tag_item["links"].append(link_entry)
+            if pillar:
+                tag_item["pillars"].add(pillar)
+            if subtopic:
+                tag_item["subtopics"].add(subtopic)
+
+            # Track co-occurrences with other tags in same post
+            for other_tag in post_tags:
+                other_clean = str(other_tag).strip().lower().lstrip("#")
+                if other_clean and other_clean != tag_clean:
+                    tag_item["co_occurring"][other_clean] = tag_item["co_occurring"].get(other_clean, 0) + 1
+
+    # Format final list sorted by count descending, then name
+    tags_list = []
+    for item in tags_map.values():
+        item["pillars"] = sorted(list(item["pillars"]))
+        item["subtopics"] = sorted(list(item["subtopics"]))
+        co_sorted = sorted(item["co_occurring"].items(), key=lambda x: x[1], reverse=True)
+        item["connected_tags"] = [k for k, _ in co_sorted[:6]]
+        del item["co_occurring"]
+        tags_list.append(item)
+
+    tags_list.sort(key=lambda x: (-x["count"], x["name"]))
+
+    # Write tags.json
+    with open(OUTPUT_TAGS_JSON, "w", encoding="utf-8") as f:
+        json.dump(tags_list, f, indent=2, ensure_ascii=False)
+
+    # Write tags.js (for zero-CORS direct file:/// and browser execution)
+    tags_js_content = f"/** Auto-generated from _posts/*.md by sync_posts.py */\nwindow.DYNAMIC_TAGS = {json.dumps(tags_list, indent=2, ensure_ascii=False)};\n"
+    with open(OUTPUT_TAGS_JS, "w", encoding="utf-8") as f:
+        f.write(tags_js_content)
+
+    if ROOT_DIR != BASE_DIR:
+        shutil.copy2(OUTPUT_TAGS_JSON, ROOT_DIR / "tags.json")
+        shutil.copy2(OUTPUT_TAGS_JS, ROOT_DIR / "tags.js")
+
+    print(f"  [OK] Generated {len(tags_list)} taxonomy entries in {OUTPUT_TAGS_JSON.name} & {OUTPUT_TAGS_JS.name}")
 
 def watch_posts():
     """Watches _posts/ folder and auto-recompiles on change."""
