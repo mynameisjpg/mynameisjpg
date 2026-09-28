@@ -237,6 +237,91 @@ function initArchiveListeners() {
     }
   });
 
+  // Centralized Top Navigation & Dropdown Listeners
+  const dispatchLogBtn = document.getElementById("dispatch-log-btn");
+  if (dispatchLogBtn) {
+    dispatchLogBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleDispatchLogDropdown();
+    });
+  }
+
+  const topFilterBtn = document.getElementById("top-navbar-filter-btn");
+  if (topFilterBtn) {
+    topFilterBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleTopFilterDropdown();
+    });
+  }
+
+  const topSortBtn = document.getElementById("top-navbar-sort-btn");
+  if (topSortBtn) {
+    topSortBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleTopSortDropdown();
+    });
+  }
+
+  const sidebarSubscribeBtn = document.getElementById("sidebar-subscribe-btn");
+  if (sidebarSubscribeBtn) {
+    sidebarSubscribeBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      openSubscribeModal();
+    });
+  }
+
+  const topInlineSearch = document.getElementById("top-inline-search-input");
+  if (topInlineSearch) {
+    topInlineSearch.addEventListener("input", (e) => {
+      handleTopInlineSearch(e.target.value);
+    });
+  }
+
+  document.querySelectorAll("#dispatch-log-dropdown .dropdown-option, #top-filter-dropdown .dropdown-option").forEach(opt => {
+    opt.addEventListener("click", () => {
+      const filter = opt.getAttribute("data-filter") || "all";
+      applyTopFilter(filter);
+    });
+  });
+
+  document.querySelectorAll("#top-sort-dropdown .dropdown-option").forEach(opt => {
+    opt.addEventListener("click", () => {
+      const sort = opt.getAttribute("data-sort") || "newest";
+      applyTopSort(sort);
+    });
+  });
+
+  // Subscribe Modal Form & Buttons
+  document.querySelectorAll("#subscribe-modal form, .modal-form").forEach(form => {
+    form.addEventListener("submit", handleSubscribeSubmit);
+  });
+
+  document.querySelectorAll("#subscribe-modal .btn-modal-cancel, .btn-modal-cancel").forEach(btn => {
+    btn.addEventListener("click", closeSubscribeModal);
+  });
+
+  // Image Lightbox Modal
+  const lightboxModal = document.getElementById("image-lightbox-modal");
+  if (lightboxModal) {
+    lightboxModal.addEventListener("click", (e) => {
+      if (e.target === lightboxModal) {
+        closeImageLightbox();
+      }
+    });
+
+    const lightboxContent = lightboxModal.querySelector(".image-lightbox-content");
+    if (lightboxContent) {
+      lightboxContent.addEventListener("click", (e) => {
+        e.stopPropagation();
+      });
+    }
+
+    const lightboxCloseBtn = lightboxModal.querySelector(".image-lightbox-close-btn");
+    if (lightboxCloseBtn) {
+      lightboxCloseBtn.addEventListener("click", closeImageLightbox);
+    }
+  }
+
   // Close top navbar dropdowns when clicking outside
   document.addEventListener("click", (e) => {
     const isInsideNavBtn = e.target.closest(".top-nav-icon-btn");
@@ -339,8 +424,8 @@ function applyTopFilter(formatKey) {
 
   // Highlight dropdown options
   document.querySelectorAll("#top-filter-dropdown .dropdown-option, #dispatch-log-dropdown .dropdown-option").forEach(opt => {
-    const clickAttr = opt.getAttribute("onclick") || "";
-    opt.classList.toggle("active", clickAttr.includes(`'${formatKey}'`));
+    const filter = opt.getAttribute("data-filter") || "all";
+    opt.classList.toggle("active", filter === formatKey);
   });
 
   // Sync category nav links
@@ -363,11 +448,49 @@ function applyTopFilter(formatKey) {
 function applyTopSort(sortOrder) {
   activeSortOrder = sortOrder;
   document.querySelectorAll("#top-sort-dropdown .dropdown-option").forEach(opt => {
-    const clickAttr = opt.getAttribute("onclick") || "";
-    opt.classList.toggle("active", clickAttr.includes(`'${sortOrder}'`));
+    const sort = opt.getAttribute("data-sort") || "newest";
+    opt.classList.toggle("active", sort === sortOrder);
   });
   renderTimelineList();
   closeAllTopDropdowns();
+}
+
+/* Modal Helper Functions */
+function openSubscribeModal() {
+  const subscribeBtn = document.getElementById("sidebar-subscribe-btn") || document.querySelector('a[aria-label="Subscribe"]');
+  if (subscribeBtn) {
+    subscribeBtn.classList.remove("subscribe-ring-vibrate");
+    subscribeBtn.classList.add("subscribe-coral-active");
+  }
+  const modal = document.getElementById("subscribe-modal");
+  if (modal && typeof modal.showModal === "function") modal.showModal();
+}
+
+function closeSubscribeModal() {
+  const modal = document.getElementById("subscribe-modal");
+  if (modal && typeof modal.close === "function") modal.close();
+}
+
+function handleSubscribeSubmit(e) {
+  e.preventDefault();
+  alert("[SUBSCRIPTION CONFIRMED] Transmission endpoint registered.");
+  closeSubscribeModal();
+}
+
+function openImageLightbox(src, captionText) {
+  const modal = document.getElementById("image-lightbox-modal");
+  const img = document.getElementById("image-lightbox-img");
+  const caption = document.getElementById("image-lightbox-caption");
+  if (modal && img) {
+    img.src = src;
+    if (caption) caption.textContent = captionText || "";
+    if (typeof modal.showModal === "function") modal.showModal();
+  }
+}
+
+function closeImageLightbox() {
+  const modal = document.getElementById("image-lightbox-modal");
+  if (modal && typeof modal.close === "function") modal.close();
 }
 
 /**
@@ -606,7 +729,7 @@ function initThreeJSNodeMap() {
   }
 
   // 5. Dual Opposite Source Lighting (Red & Neutral)
-  const ambientLight = new THREE.AmbientLight(0x06060a, 6.5);
+  const ambientLight = new THREE.AmbientLight(0x06060a, 4.5);
   threeScene.add(ambientLight);
 
   // Source 1: Vibrant Red/Coral Point Light (Top-Front-Right)

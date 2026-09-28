@@ -790,6 +790,102 @@ function initApp() {
     closeAllControlDropdowns();
   });
 
+  // Centralized Top Navigation & Rail Listeners
+  const dispatchLogBtn = document.getElementById("dispatch-log-btn");
+  if (dispatchLogBtn) {
+    dispatchLogBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleDispatchLogDropdown();
+    });
+  }
+
+  const topFilterBtn = document.getElementById("top-navbar-filter-btn");
+  if (topFilterBtn) {
+    topFilterBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleTopFilterDropdown();
+    });
+  }
+
+  const topSortBtn = document.getElementById("top-navbar-sort-btn");
+  if (topSortBtn) {
+    topSortBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleTopSortDropdown();
+    });
+  }
+
+  const sidebarSubscribeBtn = document.getElementById("sidebar-subscribe-btn");
+  if (sidebarSubscribeBtn) {
+    sidebarSubscribeBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      openSubscribeModal();
+    });
+  }
+
+  const topInlineSearch = document.getElementById("top-inline-search-input");
+  if (topInlineSearch) {
+    topInlineSearch.addEventListener("input", (e) => {
+      handleTopInlineSearch(e.target.value);
+    });
+  }
+
+  const topSearchInput = document.getElementById("top-search-input");
+  if (topSearchInput) {
+    topSearchInput.addEventListener("input", (e) => {
+      handleTopInlineSearch(e.target.value);
+    });
+  }
+
+  document.querySelectorAll("#dispatch-log-dropdown .dropdown-option, #top-filter-dropdown .dropdown-option").forEach(opt => {
+    opt.addEventListener("click", () => {
+      const filter = opt.getAttribute("data-filter") || "all";
+      applyTopFilter(filter);
+    });
+  });
+
+  document.querySelectorAll("#top-sort-dropdown .dropdown-option").forEach(opt => {
+    opt.addEventListener("click", () => {
+      const sort = opt.getAttribute("data-sort") || "newest";
+      applyTopSort(sort);
+    });
+  });
+
+  // Mobile & Reader Floating Navigation Controls
+  const swipeBtn = document.getElementById("swipe-to-reader-btn");
+  if (swipeBtn) {
+    swipeBtn.addEventListener("click", showReaderPaneMobile);
+  }
+
+  document.querySelectorAll(".btn-return-grid").forEach(btn => {
+    btn.addEventListener("click", showGridFeedMobile);
+  });
+
+  const scrollTopBtn = document.getElementById("btn-scroll-top");
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener("click", () => {
+      const pane = document.getElementById("essay-reading-pane");
+      if (pane) pane.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  const scrollBottomBtn = document.getElementById("btn-scroll-bottom");
+  if (scrollBottomBtn) {
+    scrollBottomBtn.addEventListener("click", () => {
+      const pane = document.getElementById("essay-reading-pane");
+      if (pane) pane.scrollTo({ top: pane.scrollHeight, behavior: "smooth" });
+    });
+  }
+
+  // Subscribe Modal Form & Cancel Button Listeners
+  document.querySelectorAll("#subscribe-modal form, .modal-form").forEach(form => {
+    form.addEventListener("submit", handleSubscribeSubmit);
+  });
+
+  document.querySelectorAll("#subscribe-modal .btn-modal-cancel, .btn-modal-cancel").forEach(btn => {
+    btn.addEventListener("click", closeSubscribeModal);
+  });
+
   // Start 6s post-load subscribe icon callout animation
   initSubscribeAnimation();
 }
@@ -976,8 +1072,8 @@ function applyTopFilter(formatKey) {
 
   // Highlight dropdown options
   document.querySelectorAll("#top-filter-dropdown .dropdown-option, #dispatch-log-dropdown .dropdown-option").forEach(opt => {
-    const clickAttr = opt.getAttribute("onclick") || "";
-    opt.classList.toggle("active", clickAttr.includes(`'${formatKey}'`));
+    const filter = opt.getAttribute("data-filter") || "all";
+    opt.classList.toggle("active", filter === formatKey);
   });
 
   // Sync category nav links
@@ -1001,8 +1097,8 @@ function applyTopFilter(formatKey) {
 function applyTopSort(sortOrder) {
   activeSort = sortOrder === "newest" ? "recent" : sortOrder;
   document.querySelectorAll("#top-sort-dropdown .dropdown-option").forEach(opt => {
-    const clickAttr = opt.getAttribute("onclick") || "";
-    opt.classList.toggle("active", clickAttr.includes(`'${sortOrder}'`));
+    const sort = opt.getAttribute("data-sort") || "newest";
+    opt.classList.toggle("active", sort === sortOrder);
   });
   matrixVisibleCount = MATRIX_BATCH_SIZE;
   renderCardMatrix();
