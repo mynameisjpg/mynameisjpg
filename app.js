@@ -97,24 +97,27 @@ function getFilteredAndSortedPosts() {
     return true;
   });
 
-  // Sort: Featured posts first, then secondary sort
+  // Sort: Primary activeSort order (default: Most Recent First)
   filtered.sort((a, b) => {
-    const isFeatA = Boolean(a.featured);
-    const isFeatB = Boolean(b.featured);
-    if (isFeatA && !isFeatB) return -1;
-    if (!isFeatA && isFeatB) return 1;
-
     if (activeSort === "recent") {
-      return (b.date || "").localeCompare(a.date || "");
+      const cmp = (b.date || "").localeCompare(a.date || "");
+      if (cmp !== 0) return cmp;
+      const isFeatA = Boolean(a.featured);
+      const isFeatB = Boolean(b.featured);
+      if (isFeatA && !isFeatB) return -1;
+      if (!isFeatA && isFeatB) return 1;
+      return 0;
     } else if (activeSort === "oldest") {
-      return (a.date || "").localeCompare(b.date || "");
+      const cmp = (a.date || "").localeCompare(b.date || "");
+      if (cmp !== 0) return cmp;
+      return 0;
     } else if (activeSort === "readtime") {
       const parseTime = (str) => parseInt((str || "").replace(/\D/g, "")) || 0;
       return parseTime(b.read_time) - parseTime(a.read_time);
     } else if (activeSort === "title") {
       return (a.title || "").localeCompare(b.title || "");
     }
-    return 0;
+    return (b.date || "").localeCompare(a.date || "");
   });
 
   return filtered;
@@ -134,11 +137,6 @@ const ART_FALLBACKS = {
  * Dynamically Fetch posts.json (Live HTTP Server / Production Build)
  */
 async function loadDynamicPosts() {
-  // If already populated by posts.js, set default activePostId if needed
-  if (Object.keys(POSTS_DATABASE).length > 0 && !POSTS_DATABASE[activePostId]) {
-    activePostId = Object.keys(POSTS_DATABASE)[0];
-  }
-
   try {
     const res = await fetch("posts.json?t=" + Date.now());
     if (res.ok) {
@@ -153,12 +151,17 @@ async function loadDynamicPosts() {
     console.log("[UNTITLED.JPG] Running with direct script posts feed.");
   }
 
+  const sortedPosts = getFilteredAndSortedPosts();
+
   // Check URL Hash for deep-link
   const hash = (typeof window !== "undefined" && window.location && window.location.hash) ? window.location.hash.replace("#", "") : "";
   if (hash && POSTS_DATABASE[hash]) {
     activePostId = hash;
+  } else if (sortedPosts.length > 0) {
+    const topPost = sortedPosts[0];
+    activePostId = topPost.slug || topPost.id || topPost.sys_id;
   } else {
-    activePostId = Object.keys(POSTS_DATABASE)[0] || "2026-09-25-turing-queer-ai";
+    activePostId = Object.keys(POSTS_DATABASE)[0] || "";
   }
 
   // Render Matrix Cards and Initial Reader Pane
