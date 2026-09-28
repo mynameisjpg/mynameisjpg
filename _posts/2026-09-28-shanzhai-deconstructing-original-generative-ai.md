@@ -48,17 +48,17 @@ shareable: true
 allow_embed: true
 
 image:
-  path: "assets/images/cards_test_screenshot_subtle_glitch.png"
-  alt: "Shanzhai deconstructive latent space matrix graphic"
+  path: "assets/images/shanzhai.png"
+  alt: "A circuit-textured figure dissolves into architectural blueprints and corrupted scanlines, fragmented by stark black, white, and coral red digital noise."
 ---
 
 ## 01. The Western Fetish of the Immutable Original
 
 Western intellectual property law and art history are built upon a singular theological axiom: **the sanctity of the immutable original**. From Walter Benjamin’s "aura" to modern copyright litigation surrounding generative AI training datasets, Western legal frameworks presume that an authentic work possesses a fixed origin tied to a discrete authorial subject.
 
-When generative AI models sample from billions of images, Western critics immediately cry theft: *"The neural network is plagiarizing the original!"*
+When generative AI models sample from billions of images, Western critics immediately cry theft: _"The neural network is plagiarizing the original!"_
 
-However, in his provocative essay *Shanzhai: Deconstruction in Chinese* (2011/2017), philosopher **Byung-Chul Han** demonstrates that this obsession with fixed origins is far from universal.
+However, in his provocative essay _Shanzhai: Deconstruction in Chinese_ (2011/2017), philosopher **Byung-Chul Han** demonstrates that this obsession with fixed origins is far from universal.
 
 ```text
 CULTURAL PARADIGM COMPARISON:
@@ -70,13 +70,13 @@ SHANZHAI DECONSTRUCTION ──> [Continuous Process] ──(Mutation / Adaptatio
 
 ## 02. What is Shanzhai?
 
-Originally referring to bandit strongholds in the mountains outside imperial control, the term ***Shanzhai* (山寨)** evolved in contemporary Chinese culture to designate fake or mutated consumer goods—from multi-SIM mobile phones with built-in telescoping antennas to playful reinterpretations of luxury fashion brands.
+Originally referring to bandit strongholds in the mountains outside imperial control, the term **_Shanzhai_ (山寨)** evolved in contemporary Chinese culture to designate fake or mutated consumer goods—from multi-SIM mobile phones with built-in telescoping antennas to playful reinterpretations of luxury fashion brands.
 
-Crucially, Han argues that *Shanzhai* is not mere cheap counterfeit. It is an active **deconstructive practice**:
+Crucially, Han argues that _Shanzhai_ is not mere cheap counterfeit. It is an active **deconstructive practice**:
 
 > _"In Far Eastern thought, creation is not a ex nihilo birth tied to an authorial essence, but a continuous process of modification, combination, and contextual adaptation. The original does not stand above the copy; it is merely a temporary state in an endless chain of transformations."_ — Byung-Chul Han
 
-In classical Chinese painting, masters routinely reproduced older works, adding their own seals and brushstrokes. The highest compliment paid to a master was not that their work was unique, but that their copy possessed more vitality (*Quan*) than the predecessor.
+In classical Chinese painting, masters routinely reproduced older works, adding their own seals and brushstrokes. The highest compliment paid to a master was not that their work was unique, but that their copy possessed more vitality (_Quan_) than the predecessor.
 
 ---
 
@@ -94,15 +94,15 @@ LATENT SHANZHAI PIPELINE:
 ```
 
 1. **Fluidity over Essence:** The latent space does not store static raster images; it stores continuous probability vectors. Every output is a contextual iteration.
-2. **Deconstruction of Copyright:** Copyright relies on identifying static boundaries. *Shanzhai* aesthetics thrive in the boundary-less fluid manifold of vector math.
-3. **Hyper-functional Hybridity:** Just as *Shanzhai* phone makers combined projectors, dual SIM cards, and solar panels into a single device, prompt engineering combines disparate stylistic tokens (*"Cyberpunk + Renaissance Fresco + 1-bit Dither"*) into novel visual hybrids.
+2. **Deconstruction of Copyright:** Copyright relies on identifying static boundaries. _Shanzhai_ aesthetics thrive in the boundary-less fluid manifold of vector math.
+3. **Hyper-functional Hybridity:** Just as _Shanzhai_ phone makers combined projectors, dual SIM cards, and solar panels into a single device, prompt engineering combines disparate stylistic tokens (_"Cyberpunk + Renaissance Fresco + 1-bit Dither"_) into novel visual hybrids.
 
 ---
 
 ## 04. Open Questions for Post-Authorship Culture
 
-If we accept that generative media is fundamentally a *Shanzhai* phenomenon:
+If we accept that generative media is fundamentally a _Shanzhai_ phenomenon:
 
 - How do we shift our legal and ethical frameworks away from punitive copyright enforcement toward open attribution networks?
 - How does the concept of artistic mastery change when creation transitions from manual execution to curating mutations within latent space?
-- Can *Shanzhai* aesthetics liberate digital culture from corporate platform enclosure?
+- Can _Shanzhai_ aesthetics liberate digital culture from corporate platform enclosure?

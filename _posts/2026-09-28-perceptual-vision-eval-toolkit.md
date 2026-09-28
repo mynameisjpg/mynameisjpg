@@ -7,7 +7,7 @@ date: 2026-09-28 12:00:00 -0300
 last_modified_at: 2026-09-28 12:00:00 -0300
 
 author: "Juan P. Giusepponi"
-status: "published"
+status: "draft"
 
 format: "resource"
 category: "tool/software"
@@ -58,7 +58,7 @@ image:
 
 While standard image quality assessment tools rely on structural similarity metrics (SSIM, PSNR) or CLIP embeddings, they frequently fail to predict how human viewers actually perceive synthetic visual assets.
 
-The **Perceptual Vision Eval Toolkit** bridges computer vision algorithms with classical visual psychophysics—specifically drawing on David Cycleback’s *Art Perception* and Rudolf Arnheim’s Gestalt psychology.
+The **Perceptual Vision Eval Toolkit** bridges computer vision algorithms with classical visual psychophysics—specifically drawing on David Cycleback’s _Art Perception_ and Rudolf Arnheim’s Gestalt psychology.
 
 ```text
 EVALUATION PIPELINE ARCHITECTURE:
@@ -103,19 +103,22 @@ npm run test
 The toolkit exposes both a high-level `PerceptualEvaluator` class and standalone Canvas API utilities.
 
 ```javascript
-import { PerceptualEvaluator, computeLateralInhibition } from 'perceptual-vision-eval';
+import {
+  PerceptualEvaluator,
+  computeLateralInhibition,
+} from "perceptual-vision-eval";
 
 // Select target canvas element or image buffer
-const canvas = document.getElementById('viewport');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("viewport");
+const ctx = canvas.getContext("2d");
 const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
 // Initialize evaluator with Cycleback psychophysical parameters
 const evaluator = new PerceptualEvaluator({
-  luminanceFormula: 'WCAG21',      // 'WCAG21' | 'RelativeLuminance'
-  lateralInhibitionSigma: 1.8,     // Center-surround receptive field kernel size
-  gestaltThreshold: 0.42,           // Edge grouping sensitivity threshold
-  multiStabilitySensitivity: 0.75   // Oscillatory depth detection
+  luminanceFormula: "WCAG21", // 'WCAG21' | 'RelativeLuminance'
+  lateralInhibitionSigma: 1.8, // Center-surround receptive field kernel size
+  gestaltThreshold: 0.42, // Edge grouping sensitivity threshold
+  multiStabilitySensitivity: 0.75, // Oscillatory depth detection
 });
 
 // Run automated perceptual audit
@@ -131,12 +134,12 @@ console.log(`Multi-Stability Warning: ${report.diagnostics.hasDepthAmbiguity}`);
 
 ## 04. Technical Specifications & Benchmark Ratios
 
-| Metric Parameter | Formula / Method | Target Threshold | Perceptual Diagnostic |
-| :--- | :--- | :--- | :--- |
-| **Luminance Contrast ($L_r$)** | $\frac{L_1 + 0.05}{L_2 + 0.05}$ | $\ge 4.5:1$ (AA), $\ge 7:1$ (AAA) | Text & UI legibility against dark slate backgrounds |
-| **Lateral Inhibition ($\mathbf{K}_{\text{DoG}}$)** | Difference of Gaussians: $G_{\sigma_1} - G_{\sigma_2}$ | Peak edge ratio $\le 2.4$ | Prevents Mach band glare and visual fatigue |
-| **Gestalt Continuity ($C_g$)** | Orientation vector histogram coherence | $C_g \in [0.65, 0.95]$ | Ensures clear figure-ground separation |
-| **Multi-Stability Index ($M_s$)** | Spatial frequency phase inversion variance | $M_s \le 0.30$ | Flags ambiguous 3D visual flips in synthetic graphics |
+| Metric Parameter                                   | Formula / Method                                       | Target Threshold                  | Perceptual Diagnostic                                 |
+| :------------------------------------------------- | :----------------------------------------------------- | :-------------------------------- | :---------------------------------------------------- |
+| **Luminance Contrast ($L_r$)**                     | $\frac{L_1 + 0.05}{L_2 + 0.05}$                        | $\ge 4.5:1$ (AA), $\ge 7:1$ (AAA) | Text & UI legibility against dark slate backgrounds   |
+| **Lateral Inhibition ($\mathbf{K}_{\text{DoG}}$)** | Difference of Gaussians: $G_{\sigma_1} - G_{\sigma_2}$ | Peak edge ratio $\le 2.4$         | Prevents Mach band glare and visual fatigue           |
+| **Gestalt Continuity ($C_g$)**                     | Orientation vector histogram coherence                 | $C_g \in [0.65, 0.95]$            | Ensures clear figure-ground separation                |
+| **Multi-Stability Index ($M_s$)**                  | Spatial frequency phase inversion variance             | $M_s \le 0.30$                    | Flags ambiguous 3D visual flips in synthetic graphics |
 
 ---
 

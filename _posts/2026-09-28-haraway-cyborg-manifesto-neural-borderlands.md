@@ -51,21 +51,22 @@ shareable: true
 allow_embed: true
 
 image:
-  path: "assets/images/cards_test_sidebar_integrated.png"
-  alt: "Cyborg manifesto neural network boundary interface graphic"
+  path: "assets/images/donna_haraway.png"
+  alt: "Coral-red pixel glitches and neural diagrams bleed across a woman making hand-binoculars, fusing her with a jellyfish and fractured brain scans."
 ---
 
 ## 01. Archival Excerpt
 
-> _"A cyborg is a cybernetic organism, a hybrid of machine and organism, a creature of social reality as well as a creature of fiction. ... By the late twentieth century, our time, a mythic time, we are all chimeras, theorized and fabricated hybrids of machine and organism; in short, we are cyborgs. The cyborg is our ontology; it gives us our politics."_ — **Donna Haraway**, *A Cyborg Manifesto*
+> _"A cyborg is a cybernetic organism, a hybrid of machine and organism, a creature of social reality as well as a creature of fiction. ... By the late twentieth century, our time, a mythic time, we are all chimeras, theorized and fabricated hybrids of machine and organism; in short, we are cyborgs. The cyborg is our ontology; it gives us our politics."_ — **Donna Haraway**, _A Cyborg Manifesto_
 
 ---
 
 ## 02. Editorial Commentary & Context
 
-Why return to Donna Haraway's 1985 *Manifesto* in 2026?
+Why return to Donna Haraway's 1985 _Manifesto_ in 2026?
 
 As artificial intelligence models transition from passive chatbots into autonomous agentic systems operating directly alongside human coders, researchers, and designers, contemporary discourse frequently collapses into one of two reactionary panics:
+
 1. **The Humanist Nostalgia Panic:** An insistence on preserving a "pure, uncorrupted human soul" separate from computational tools.
 2. **The Technocratic Utopian Myth:** A silicon-valley fantasy of total machine replacement and singular AI autonomy.
 
@@ -79,13 +80,16 @@ HARAWAY'S THREE BOUNDARY BREAKDOWNS:
 ```
 
 ### 1. Human vs. Animal
+
 Evolutionary biology and genomics shattered the myth of human exceptionalism, establishing that humans share code and lineage with all organic life.
 
 ### 2. Organism vs. Machine
+
 Late 20th-century microelectronics and modern neural network architectures rendered machines no longer heavy, static gears, but miniaturized, intimate, self-modifying computational signals. Microprocessors and vector weights inhabit our cognitive workflows directly.
 
 ### 3. Physical vs. Non-Physical
-Modern computational systems operate via invisible electromagnetic signals, light pulses, and mathematical vector spaces ($n$-dimensional embeddings). As Haraway famously noted: *"Our best machines are made of sunshine; they are all light and clean, because they are nothing but signals."*
+
+Modern computational systems operate via invisible electromagnetic signals, light pulses, and mathematical vector spaces ($n$-dimensional embeddings). As Haraway famously noted: _"Our best machines are made of sunshine; they are all light and clean, because they are nothing but signals."_
 
 ---
 
@@ -93,4 +97,4 @@ Modern computational systems operate via invisible electromagnetic signals, ligh
 
 1. **Embrace the Hybrid Subject:** In pair programming and collaborative AI design, the unit of agency is neither the isolated human programmer nor the autonomous AI model—it is the **cyborg loop** formed by their dynamic interaction.
 2. **Reject Essentialist Moral Panics:** Moral panics over "AI-assisted art" or "synthetic prose" repeat older essentialist attempts to draw artificial boundaries between organic mind and technological apparatus.
-3. **Irony, Affinity, and Chimeras:** Rather than demanding seamless totalizing systems, Haraway championing *irony, blasphemy, and partial identities*. Building software in 2026 is an exercise in assembling heterogeneous tools, API streams, and synthetic collaborators into powerful, temporary assemblages.
+3. **Irony, Affinity, and Chimeras:** Rather than demanding seamless totalizing systems, Haraway championing _irony, blasphemy, and partial identities_. Building software in 2026 is an exercise in assembling heterogeneous tools, API streams, and synthetic collaborators into powerful, temporary assemblages.
