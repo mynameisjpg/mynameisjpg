@@ -52,7 +52,7 @@ shareable: true
 allow_embed: true
 
 image:
-  path: "assets/images/perception_eval.png"
+  path: "assets/images/perception_eval.jpg"
   alt: "In coral red and black, vintage engraved eyes are fractured and obscured by corrupted UI windows, pixel grids, and degraded scanline textures."
 ---
 

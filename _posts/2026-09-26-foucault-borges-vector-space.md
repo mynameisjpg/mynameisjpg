@@ -78,13 +78,8 @@ Borges cites a fictional Chinese encyclopedia entitled _The Celestial Emporium o
 flowchart TD
     subgraph Emporium ["BORGES' TAXONOMY OF ANIMALS (Celestial Emporium of Benevolent Knowledge)"]
         direction TB
-        A["(a) Belonging to the Emperor"] --- H["(h) Included in the present classification"]
-        B["(b) Embalmed"] --- I["(i) Frenzied"]
-        C["(c) Tame"] --- J["(j) Innumerable"]
-        D["(d) Sucking pigs"] --- K["(k) Drawn with a fine camelhair brush"]
-        E["(e) Sirens"] --- L["(l) Et cetera"]
-        F["(f) Fabulous"] --- M["(m) Having just broken the water pitcher"]
-        G["(g) Stray dogs"] --- N["(n) That from a long way off look like flies"]
+        A["(a) Belonging to the Emperor"] --- B["(b) Embalmed"] --- C["(c) Tame"] --- D["(d) Sucking pigs"] --- E["(e) Sirens"] --- F["(f) Fabulous"] --- G["(g) Stray dogs"]
+        H["(h) Included in this classification"] --- I["(i) Frenzied"] --- J["(j) Innumerable"] --- K["(k) Drawn with fine camelhair brush"] --- L["(l) Et cetera"] --- M["(m) Broken the water pitcher"] --- N["(n) Look like flies from afar"]
     end
 ```
 

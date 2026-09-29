@@ -50,7 +50,7 @@ allow_embed: true
 canonical_url: ""
 
 image:
-  path: "assets/images/groupemu.png"
+  path: "assets/images/groupemu.jpg"
   alt: "Coral red and black glitch art: fractured human figures dissolve and warp into printed circuit boards, technical schematics, and pixelated tears."
 ---
 
@@ -64,7 +64,7 @@ For decades, scholars tried fitting pictures into verbal boxes. They pasted term
 
 Words depend on arbitrary rules. Images hit human perception directly, working on how our visual system extracts shapes, colors, and structures from light.
 
-In their 1992 book *Traité du signe visuel* ("Treatise on the Visual Sign"), Groupe µ built a framework designed specifically for images. Their key move was splitting visual messages into two separate levels: **the Iconic Sign** and **the Plastic Sign**.
+In their 1992 book _Traité du signe visuel_ ("Treatise on the Visual Sign"), Groupe µ built a framework designed specifically for images. Their key move was splitting visual messages into two separate levels: **the Iconic Sign** and **the Plastic Sign**.
 
 This distinction cuts straight to why AI image generators (Midjourney, Stable Diffusion, FLUX) output what they do: **AI has mastered plastic composition while remaining blind to iconic reality.**
 
@@ -95,7 +95,7 @@ Instead, Groupe µ broke iconic signs into three parts:
 - **The Referent:** The real-world object, scene, or model being represented.
 - **The Type:** The mental concept or category stored in memory that connects the signifier to the referent.
 
-A picture of a dog isn't iconic because its pixels copy a physical dog. It's iconic because its layout triggers the mental category "dog" (*Type*) in our memory. As long as key structural traits remain, recognition works (whether it's a 5-pixel icon or a high-res photo).
+A picture of a dog isn't iconic because its pixels copy a physical dog. It's iconic because its layout triggers the mental category "dog" (_Type_) in our memory. As long as key structural traits remain, recognition works (whether it's a 5-pixel icon or a high-res photo).
 
 ---
 
@@ -103,13 +103,13 @@ A picture of a dog isn't iconic because its pixels copy a physical dog. It's ico
 
 Groupe µ's second major insight was showing that images carry meaning independent of any depicted object. This is **the Plastic Sign**.
 
-Plastic signs don't ask *"What object is this?"* They work directly on perception through three dimensions:
+Plastic signs don't ask _"What object is this?"_ They work directly on perception through three dimensions:
 
-| Plastic Dimension | Visual Element | Perceptual Effect |
-| :--- | :--- | :--- |
-| **Form** | Lines, contours, geometry | Sets boundaries, orientation, and shape grouping |
-| **Color** | Hue, saturation, brightness | Sets tone, splits figure from ground, creates contrast |
-| **Texture** | Micro-patterns, grain, surface frequency | Creates tactile feel, surface density, and visual weight |
+| Plastic Dimension | Visual Element                           | Perceptual Effect                                        |
+| :---------------- | :--------------------------------------- | :------------------------------------------------------- |
+| **Form**          | Lines, contours, geometry                | Sets boundaries, orientation, and shape grouping         |
+| **Color**         | Hue, saturation, brightness              | Sets tone, splits figure from ground, creates contrast   |
+| **Texture**       | Micro-patterns, grain, surface frequency | Creates tactile feel, surface density, and visual weight |
 
 A plastic sign operates before recognition happens. A red rectangle, a cross-hatched shadow, or a smooth gradient hits the visual cortex well before the brain labels it a chair, a face, or a landscape.
 
@@ -131,13 +131,13 @@ Visual rhetoric isn't about flowery phrasing. It's about how an image breaks awa
 
 Groupe µ framed this using three concepts:
 
-- **Degree Zero (*Degré zéro*):** The baseline norm or expected visual pattern (either universal visual rules or local styles set within a single image).
-- **Deviation (*Alotopy*):** A deliberate break from the baseline norm.
+- **Degree Zero (_Degré zéro_):** The baseline norm or expected visual pattern (either universal visual rules or local styles set within a single image).
+- **Deviation (_Alotopy_):** A deliberate break from the baseline norm.
 - **Re-evaluation:** The moment a viewer registers the break and interprets the surprise.
 
 Visual rhetoric operates by adding, removing, swapping, or rearranging elements across plastic and iconic levels.
 
-In René Magritte's *Le Viol*, a female torso replaces a face. Magritte swaps iconic elements while keeping the plastic outline of a head. The plastic contour tells your eyes "head," but the iconic content reveals a torso. That collision between plastic expectation and iconic reality is a classic visual deviation.
+In René Magritte's _Le Viol_, a female torso replaces a face. Magritte swaps iconic elements while keeping the plastic outline of a head. The plastic contour tells your eyes "head," but the iconic content reveals a torso. That collision between plastic expectation and iconic reality is a classic visual deviation.
 
 ### Iconoplasticity
 
@@ -147,13 +147,13 @@ Groupe µ coined **iconoplasticity** to describe how plastic and iconic signs in
 
 ## 06. The Frame: Where the Image Ends
 
-Groupe µ paid close attention to the frame (*le bord* or *le cadre*). They drew a line between a **contour** (the edge defining a shape inside the image) and the **frame** (the border separating the image from the world outside it).
+Groupe µ paid close attention to the frame (_le bord_ or _le cadre_). They drew a line between a **contour** (the edge defining a shape inside the image) and the **frame** (the border separating the image from the world outside it).
 
 The frame sits on the boundary between inside and outside. Groupe µ outlined key ways images handle the frame:
 
-1. **Overflow (*Débordement*):** Visual elements push past the border into external space.
-2. **Contraction (*Bornage*):** The frame pulls inward, cropping or squeezing the content.
-3. **Frame Excess (*Embordement*):** The border grows so thick it dominates the picture inside.
+1. **Overflow (_Débordement_):** Visual elements push past the border into external space.
+2. **Contraction (_Bornage_):** The frame pulls inward, cropping or squeezing the content.
+3. **Frame Excess (_Embordement_):** The border grows so thick it dominates the picture inside.
 4. **Iconic Frame:** The border stops being neutral and becomes a detailed picture itself (such as painted margins or UI borders).
 
 ---
@@ -162,7 +162,7 @@ The frame sits on the boundary between inside and outside. Groupe µ outlined ke
 
 How does this apply to generative tools?
 
-When a diffusion model trains on millions of images, it doesn't construct mental categories (*Types*) or learn how physical objects interact (*Referents*). It maps statistical patterns between text tokens and visual features: lighting gradients, color distributions, edge frequencies, and textures.
+When a diffusion model trains on millions of images, it doesn't construct mental categories (_Types_) or learn how physical objects interact (_Referents_). It maps statistical patterns between text tokens and visual features: lighting gradients, color distributions, edge frequencies, and textures.
 
 This produces a clear split in AI output:
 
@@ -175,7 +175,7 @@ Looking at a synthetic image, your early visual processing reacts to the **plast
 
 ## 08. Beyond "Fake Image" Clichés
 
-Groupe µ’s *Traité du signe visuel* gives us precise terms to evaluate synthetic media without falling back on vague complaints about "fake pictures."
+Groupe µ’s _Traité du signe visuel_ gives us precise terms to evaluate synthetic media without falling back on vague complaints about "fake pictures."
 
 AI generators aren't imitating human thought or capturing real-world meaning. They are **plastic rhetoric engines**. They manipulate color, light, geometry, and texture with mathematical precision while disconnected from physical referents.
 

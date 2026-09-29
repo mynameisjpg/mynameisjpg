@@ -26,7 +26,7 @@ theme: "light"
 featured: false
 reading_time: "Full Course"
 image:
-  path: "assets/images/harvard1.png"
+  path: "assets/images/harvard1.jpg"
   alt: "Digital collage of a computer science class"
 category: "course/career"
 resource_url: "https://cs50.harvard.edu/x/weeks/0/"
