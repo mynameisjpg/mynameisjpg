@@ -68,21 +68,19 @@ It is an open-source JavaScript and Node.js toolkit built on visual psychophysic
 
 ## The 4 Core Visual Diagnostics
 
-```text
-[ CANVAS OR IMAGE INPUT ]
-           │
-           ▼
- ┌────────────────────────────────────────────────────────┐
- │            4 PSYCHOPHYSICAL EVALUATION TESTS           │
- ├────────────────────────────────────────────────────────┤
- │ 1. Contrast & Legibility (WCAG 2.2 + Relative)          │
- │ 2. Lateral Inhibition (Difference of Gaussians)       │
- │ 3. Gestalt Edge Continuity (Vector Coherence)         │
- │ 4. Multi-Stability Index (Depth Ambiguity Flips)      │
- └────────────────────────────────────────────────────────┘
-           │
-           ▼
-[ PERCEPTUAL SCORE & DIAGNOSTIC REPORT ]
+```mermaid
+graph TD
+    A["Canvas or Image Input"] --> B["4 Psychophysical Tests"]
+
+    subgraph B["4 Psychophysical Tests"]
+        direction TB
+        T1["1. Contrast & Legibility (WCAG 2.2 + Relative)"]
+        T2["2. Lateral Inhibition (Difference of Gaussians)"]
+        T3["3. Gestalt Edge Continuity (Vector Coherence)"]
+        T4["4. Multi-Stability Index (Depth Ambiguity Flips)"]
+    end
+
+    B --> C["Perceptual Score & Diagnostic Report"]
 ```
 
 ### 1. Contrast & Text Legibility
