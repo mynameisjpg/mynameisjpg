@@ -43,7 +43,7 @@ links:
     description: "Donna's article on issue #75 of e-flux."
 
 backlinks:
-  - slug: "/essays/ai-images-groupe-mu"
+  - slug: "#2026-09-28-ai-images-groupe-mu"
     title: "Why AI Images Look Perfect Until You Look Closer: Groupe µ"
     note: "Analysis of synthetic signifiers and human perceptual integration."
 

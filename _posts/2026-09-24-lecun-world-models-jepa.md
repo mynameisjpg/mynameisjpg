@@ -51,10 +51,10 @@ links:
 #via: "Yann LeCun / Meta AI Research"
 
 backlinks:
-  - slug: "/essays/turing-queer-ai"
+  - slug: "#2026-09-25-turing-queer-ai"
     title: "Turing & Queer AI: Synthetic Bodies, Mimicry, and Representation"
     note: "Examines how statistical optimization drives automated conformity."
-  - slug: "/essays/foucault-borges-vector-space"
+  - slug: "#2026-09-26-foucault-borges-vector-space"
     title: "The 'Chinese Encyclopedia' of Vector Space"
     note: "Analyzes vector databases as epistemological taxonomies of representation."
 

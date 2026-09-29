@@ -51,10 +51,10 @@ links:
 #via: "Michel Foucault / Les Mots et les Choses"
 
 backlinks:
-  - slug: "/essays/turing-queer-ai"
+  - slug: "#2026-09-25-turing-queer-ai"
     title: "Turing & Queer AI: Synthetic Bodies, Mimicry, and Representation"
     note: "Examines how statistical optimization drives automated conformity."
-  - slug: "/notes/lecun-world-models"
+  - slug: "#2026-09-24-lecun-world-models-jepa"
     title: "JEPA & LeCun's World Models"
     note: "Investigates joint embeddings as non-generative abstractions of reality."
 

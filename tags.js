@@ -83,6 +83,84 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "visual-perception",
+    "name": "visual-perception",
+    "label": "#visual-perception",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-09-29-visual-bandwidth-bottleneck",
+        "slug": "visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "date": "2026.09.29",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/visual-bandwidth-bottleneck.html"
+      },
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      },
+      {
+        "id": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
+        "date": "2026.09.28",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
+        "url": "posts/ai-images-groupe-mu.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "slug": "visual-bandwidth-bottleneck",
+        "format": "NOTE",
+        "url": "posts/visual-bandwidth-bottleneck.html",
+        "date": "2026.09.29"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      },
+      {
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
+        "slug": "ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "posts/ai-images-groupe-mu.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "MODES OF SEEING & VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "psychophysics",
+      "fovea",
+      "predictive-processing",
+      "bandwidth",
+      "ui-design",
+      "cognitive-load"
+    ]
+  },
+  {
     "id": "pillar-ai-perception-culture-representation",
     "name": "AI PERCEPTION, CULTURE & REPRESENTATION",
     "label": "AI PERCEPTION, CULTURE & REPRESENTATION",
@@ -127,6 +205,56 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
+    "id": "subtopic-anatomy-and-psychophysics-of-vision",
+    "name": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+    "label": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+    "type": "subtopic",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-09-29-visual-bandwidth-bottleneck",
+        "slug": "visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "date": "2026.09.29",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/visual-bandwidth-bottleneck.html"
+      },
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "slug": "visual-bandwidth-bottleneck",
+        "format": "NOTE",
+        "url": "posts/visual-bandwidth-bottleneck.html",
+        "date": "2026.09.29"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
     "subtopics": [],
     "connected_tags": []
   },
@@ -179,12 +307,22 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
-    "id": "visual-perception",
-    "name": "visual-perception",
-    "label": "#visual-perception",
-    "type": "tag",
+    "id": "pillar-visual-perception-psychology-of-seeing",
+    "name": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+    "label": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+    "type": "pillar",
     "count": 2,
     "posts": [
+      {
+        "id": "2026-09-29-visual-bandwidth-bottleneck",
+        "slug": "visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "date": "2026.09.29",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/visual-bandwidth-bottleneck.html"
+      },
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
         "slug": "perceptual-vision-eval-toolkit",
@@ -194,49 +332,85 @@ window.DYNAMIC_TAGS = [
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
         "url": "posts/perceptual-vision-eval-toolkit.html"
-      },
-      {
-        "id": "2026-09-28-ai-images-groupe-mu",
-        "slug": "ai-images-groupe-mu",
-        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "date": "2026.09.28",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "posts/ai-images-groupe-mu.html"
       }
     ],
     "links": [
+      {
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "slug": "visual-bandwidth-bottleneck",
+        "format": "NOTE",
+        "url": "posts/visual-bandwidth-bottleneck.html",
+        "date": "2026.09.29"
+      },
       {
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "slug": "perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
         "url": "posts/perceptual-vision-eval-toolkit.html",
         "date": "2026.09.28"
+      }
+    ],
+    "pillars": [],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
+    "id": "psychophysics",
+    "name": "psychophysics",
+    "label": "#psychophysics",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-09-29-visual-bandwidth-bottleneck",
+        "slug": "visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "date": "2026.09.29",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/visual-bandwidth-bottleneck.html"
       },
       {
-        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "ai-images-groupe-mu",
-        "format": "ESSAY",
-        "url": "posts/ai-images-groupe-mu.html",
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "slug": "visual-bandwidth-bottleneck",
+        "format": "NOTE",
+        "url": "posts/visual-bandwidth-bottleneck.html",
+        "date": "2026.09.29"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
         "date": "2026.09.28"
       }
     ],
     "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
       "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
     ],
     "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION",
-      "MODES OF SEEING & VISUAL SEMIOTICS"
+      "ANATOMY AND PSYCHOPHYSICS OF VISION"
     ],
     "connected_tags": [
-      "toolkit",
-      "psychophysics",
-      "skill",
-      "image-analysis",
-      "canvas-api",
-      "gestalt"
+      "visual-perception",
+      "fovea",
+      "predictive-processing",
+      "bandwidth",
+      "ui-design",
+      "cognitive-load"
     ]
   },
   {
@@ -268,39 +442,6 @@ window.DYNAMIC_TAGS = [
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
-    "id": "subtopic-anatomy-and-psychophysics-of-vision",
-    "name": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-    "label": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-    "type": "subtopic",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [
-      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
     ],
     "subtopics": [],
     "connected_tags": []
@@ -537,37 +678,6 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
-    "id": "pillar-visual-perception-psychology-of-seeing",
-    "name": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-    "label": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-    "type": "pillar",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
     "id": "ai",
     "name": "ai",
     "label": "#ai",
@@ -731,6 +841,48 @@ window.DYNAMIC_TAGS = [
       "deconstruction",
       "reflections",
       "philosophy"
+    ]
+  },
+  {
+    "id": "bandwidth",
+    "name": "bandwidth",
+    "label": "#bandwidth",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-29-visual-bandwidth-bottleneck",
+        "slug": "visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "date": "2026.09.29",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/visual-bandwidth-bottleneck.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "slug": "visual-bandwidth-bottleneck",
+        "format": "NOTE",
+        "url": "posts/visual-bandwidth-bottleneck.html",
+        "date": "2026.09.29"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION"
+    ],
+    "connected_tags": [
+      "visual-perception",
+      "psychophysics",
+      "fovea",
+      "predictive-processing",
+      "ui-design",
+      "cognitive-load"
     ]
   },
   {
@@ -1024,6 +1176,48 @@ window.DYNAMIC_TAGS = [
       "informatics",
       "networks",
       "ai"
+    ]
+  },
+  {
+    "id": "cognitive-load",
+    "name": "cognitive-load",
+    "label": "#cognitive-load",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-29-visual-bandwidth-bottleneck",
+        "slug": "visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "date": "2026.09.29",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/visual-bandwidth-bottleneck.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "slug": "visual-bandwidth-bottleneck",
+        "format": "NOTE",
+        "url": "posts/visual-bandwidth-bottleneck.html",
+        "date": "2026.09.29"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION"
+    ],
+    "connected_tags": [
+      "visual-perception",
+      "psychophysics",
+      "fovea",
+      "predictive-processing",
+      "bandwidth",
+      "ui-design"
     ]
   },
   {
@@ -1694,6 +1888,48 @@ window.DYNAMIC_TAGS = [
       "episteme",
       "rag",
       "latent-space"
+    ]
+  },
+  {
+    "id": "fovea",
+    "name": "fovea",
+    "label": "#fovea",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-29-visual-bandwidth-bottleneck",
+        "slug": "visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "date": "2026.09.29",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/visual-bandwidth-bottleneck.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "slug": "visual-bandwidth-bottleneck",
+        "format": "NOTE",
+        "url": "posts/visual-bandwidth-bottleneck.html",
+        "date": "2026.09.29"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION"
+    ],
+    "connected_tags": [
+      "visual-perception",
+      "psychophysics",
+      "predictive-processing",
+      "bandwidth",
+      "ui-design",
+      "cognitive-load"
     ]
   },
   {
@@ -2614,30 +2850,30 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "psychophysics",
-    "name": "psychophysics",
-    "label": "#psychophysics",
+    "id": "predictive-processing",
+    "name": "predictive-processing",
+    "label": "#predictive-processing",
     "type": "tag",
     "count": 1,
     "posts": [
       {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
+        "id": "2026-09-29-visual-bandwidth-bottleneck",
+        "slug": "visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "date": "2026.09.29",
+        "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
+        "url": "posts/visual-bandwidth-bottleneck.html"
       }
     ],
     "links": [
       {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "slug": "visual-bandwidth-bottleneck",
+        "format": "NOTE",
+        "url": "posts/visual-bandwidth-bottleneck.html",
+        "date": "2026.09.29"
       }
     ],
     "pillars": [
@@ -2647,12 +2883,12 @@ window.DYNAMIC_TAGS = [
       "ANATOMY AND PSYCHOPHYSICS OF VISION"
     ],
     "connected_tags": [
-      "toolkit",
       "visual-perception",
-      "skill",
-      "image-analysis",
-      "canvas-api",
-      "gestalt"
+      "psychophysics",
+      "fovea",
+      "bandwidth",
+      "ui-design",
+      "cognitive-load"
     ]
   },
   {
@@ -3111,6 +3347,48 @@ window.DYNAMIC_TAGS = [
       "image-analysis",
       "canvas-api",
       "gestalt"
+    ]
+  },
+  {
+    "id": "ui-design",
+    "name": "ui-design",
+    "label": "#ui-design",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-29-visual-bandwidth-bottleneck",
+        "slug": "visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "date": "2026.09.29",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/visual-bandwidth-bottleneck.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "slug": "visual-bandwidth-bottleneck",
+        "format": "NOTE",
+        "url": "posts/visual-bandwidth-bottleneck.html",
+        "date": "2026.09.29"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION"
+    ],
+    "connected_tags": [
+      "visual-perception",
+      "psychophysics",
+      "fovea",
+      "predictive-processing",
+      "bandwidth",
+      "cognitive-load"
     ]
   },
   {

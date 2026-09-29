@@ -38,10 +38,10 @@ links:
     description: "Foundational text establishing visual semiotics, plastic signs (form, color, texture), and the triadic model of iconic transformation."
 
 backlinks:
-  - slug: "/essays/foucault-borges-vector-space"
+  - slug: "#2026-09-26-foucault-borges-vector-space"
     title: "Foucault, Borges, and Vector Space"
     note: "High-dimensional embedding grids as modern epistemological matrices."
-  - slug: "/notes/shanzhai-deconstructing-original"
+  - slug: "#2026-09-28-shanzhai-deconstructing-original"
     title: "What If Nothing Is Ever Original? Thinking Through Shanzhai"
     note: "Deconstructive variation and fluid aesthetics in Byung-Chul Han's theory."
 

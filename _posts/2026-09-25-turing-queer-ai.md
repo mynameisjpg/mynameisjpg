@@ -47,10 +47,10 @@ links:
     description: "Turing's early formulation of 'unorganized machines' learning through interference and mistakes."
 
 backlinks:
-  - slug: "/essays/foucault-latent-space"
+  - slug: "#2026-09-26-foucault-borges-vector-space"
     title: "Foucault in the Latent Space"
     note: "Explores continuous metric spaces and high-dimensional panoptic discipline."
-  - slug: "/notes/lecun-world-models"
+  - slug: "#2026-09-24-lecun-world-models-jepa"
     title: "JEPA & LeCun's World Models"
     note: "Critiques generative token mimicry versus structural world representation."
 
