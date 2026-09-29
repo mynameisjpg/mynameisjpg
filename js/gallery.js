@@ -176,6 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
           e.target.closest('.artwork-full-modal')) {
         return;
       }
+      e.stopPropagation();
 
       const rect = container.getBoundingClientRect();
       mouse.x = ((e.clientX - rect.left) / container.clientWidth) * 2 - 1;
@@ -207,7 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     container.addEventListener('click', handleCanvasClick);
-    viewport.addEventListener('click', handleCanvasClick);
 
     function focusOnMeshIndex(index) {
       currentIndex = index;
@@ -434,25 +434,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.getElementById('artwork-modal-close');
 
   function openFullViewModal(post) {
-    if (!fullModal || !post) return;
+    const modal = document.getElementById('artwork-full-modal');
+    const img = document.getElementById('artwork-full-img');
+    const downloadLink = document.getElementById('artwork-download-btn');
+    const shareText = document.getElementById('share-btn-text');
+
+    if (!modal || !post) return;
 
     // Hide HUD panel when opening lightbox view
     const hudPanel = document.querySelector('.floating-hud-panel');
     if (hudPanel) hudPanel.style.display = 'none';
 
-    if (fullImg) fullImg.src = post.image;
-    if (downloadBtn) {
-      downloadBtn.href = post.image;
+    if (img) img.src = post.image;
+    if (downloadLink) {
+      downloadLink.href = post.image;
       const ext = post.image.split('.').pop() || 'png';
-      downloadBtn.download = `${post.slug || post.id || 'cover-art'}.${ext}`;
+      downloadLink.download = `${post.slug || post.id || 'cover-art'}.${ext}`;
     }
 
-    if (shareBtnText) shareBtnText.textContent = 'SHARE';
-    fullModal.style.display = 'flex';
+    if (shareText) shareText.textContent = 'SHARE';
+    modal.style.display = 'flex';
   }
 
   function closeFullViewModal() {
-    if (fullModal) fullModal.style.display = 'none';
+    const modal = document.getElementById('artwork-full-modal');
+    if (modal) modal.style.display = 'none';
     // Restore HUD panel when closing lightbox view
     const hudPanel = document.querySelector('.floating-hud-panel');
     if (hudPanel) hudPanel.style.display = 'flex';
@@ -462,15 +468,22 @@ document.addEventListener('DOMContentLoaded', () => {
   window.closeFullViewModal = closeFullViewModal;
 
   function setupFullViewModal() {
+    const modal = document.getElementById('artwork-full-modal');
+    const closeBtn = document.getElementById('artwork-modal-close');
+    const shareBtn = document.getElementById('artwork-share-btn');
+    const shareBtnText = document.getElementById('share-btn-text');
+
     if (closeBtn) {
-      closeBtn.addEventListener('click', () => {
+      closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         closeFullViewModal();
       });
     }
 
-    if (fullModal) {
-      fullModal.addEventListener('click', (e) => {
-        if (e.target === fullModal || e.target.classList.contains('artwork-full-container')) {
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        // Only close if user clicks directly on the dark overlay background (modal backdrop)
+        if (e.target === modal) {
           closeFullViewModal();
         }
       });
@@ -480,6 +493,7 @@ document.addEventListener('DOMContentLoaded', () => {
       shareBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         const post = galleryPosts[currentIndex];
+        if (!post) return;
         const shareUrl = `${window.location.origin}${window.location.pathname.replace('gallery.html', 'index.html')}?post=${post.slug || post.id}`;
         
         navigator.clipboard.writeText(shareUrl).then(() => {
@@ -494,7 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && fullModal && fullModal.style.display === 'flex') {
+      if (e.key === 'Escape') {
         closeFullViewModal();
       }
     });
