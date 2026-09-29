@@ -1060,9 +1060,6 @@ function applyCategoryFilter(filter) {
   renderCardMatrix();
 }
 
-/* ==============================================================================
-   TOP NAVBAR CONTROLS & DROPDOWN HANDLERS (FEED / INDEX)
-   ============================================================================== */
 function positionDropdown(panel, btn) {
   if (!panel || !btn) return;
   const rect = btn.getBoundingClientRect();
@@ -1070,9 +1067,11 @@ function positionDropdown(panel, btn) {
     panel.style.left = `${Math.max(8, rect.left)}px`;
     panel.style.right = "auto";
   } else {
-    const rightOffset = window.innerWidth - rect.right;
+    // Position directly beneath the button, aligned to its right edge, bounded by viewport
+    const rightOffset = Math.max(8, window.innerWidth - rect.right);
     panel.style.left = "auto";
-    panel.style.right = `${Math.max(8, rightOffset)}px`;
+    panel.style.right = `${rightOffset}px`;
+    panel.style.top = `${rect.bottom + 4}px`;
   }
 }
 

@@ -514,10 +514,8 @@
 }
 
 .search-dropdown-panel {
-  left: 50%;
-  transform: translateX(-50%);
   width: calc(100vw - 2rem);
-  max-width: 500px;
+  max-width: 420px;
 }
 
 .menu-dropdown-panel {
