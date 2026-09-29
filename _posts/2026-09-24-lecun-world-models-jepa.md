@@ -63,7 +63,7 @@ allow_embed: true
 canonical_url: ""
 
 image:
-  path: "assets/images/ailook1.png"
+  path: "assets/images/Mind_processing_visual_data_2K_20260926123925.jpg"
   alt: "High-contrast dithered duotone graphic of a human eye and optic nerve transforming into a vector network grid"
 ---
 

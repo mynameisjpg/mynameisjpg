@@ -64,7 +64,7 @@ allow_embed: true
 canonical_url: ""
 
 image:
-  path: "assets/images/foucault1.png"
+  path: "assets/images/Digital_collage_artwork_20260926075810.jpg"
   alt: "High-dimensional vector space graphic with geometric coordinates"
 ---
 

@@ -62,7 +62,7 @@ allow_embed: true
 canonical_url: ""
 
 image:
-  path: "assets/images/turing1.png"
+  path: "assets/images/this-is-not-a-human.jpg"
   alt: "Dithered duotone graphic of a teleprinter partition splitting human and algorithmic signal"
 ---
 

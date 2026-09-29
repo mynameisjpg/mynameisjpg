@@ -21,7 +21,7 @@ theme: "dark"
 featured: false
 reading_time: "Curated Read"
 image:
-  path: "assets/images/excavatingai1.png"
+  path: "assets/images/cecinestpasunhomme.jpg"
   alt: "Ceci n'est pas un être humain."
 media: "article"
 source: "Kate Crawford and Trevor Paglen, “Excavating AI: The Politics of Training Sets for Machine Learning (September 19, 2019) https://excavating.ai"
