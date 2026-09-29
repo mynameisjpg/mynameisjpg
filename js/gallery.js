@@ -151,42 +151,12 @@ document.addEventListener('DOMContentLoaded', () => {
       img.src = post.image;
     });
 
-    // Interaction Drag, Inertia & Precise Click Detection
-    let isDragging = false;
-    let hasMouseDown = false;
-    let mouseDownX = -1;
-    let mouseDownY = -1;
-    let previousMousePosition = { x: 0, y: 0 };
+    // Interaction & Camera Controls (Scroll Zoom)
     let targetRotationY = 0;
     let currentRotationY = 0;
     let targetCameraZ = 18;
 
     const viewport = document.querySelector('.gallery-spatial-viewport') || container;
-
-    viewport.addEventListener('mousedown', (e) => {
-      // Don't initiate 3D drag if clicking UI overlays (HUD, chevrons, modal)
-      if (e.target.closest('.floating-hud-panel') || 
-          e.target.closest('.gallery-side-nav-zone') || 
-          e.target.closest('.artwork-full-modal')) {
-        return;
-      }
-      isDragging = true;
-      hasMouseDown = true;
-      mouseDownX = e.clientX;
-      mouseDownY = e.clientY;
-      previousMousePosition = { x: e.clientX, y: e.clientY };
-    });
-
-    window.addEventListener('mouseup', () => {
-      isDragging = false;
-    });
-
-    window.addEventListener('mousemove', (e) => {
-      if (!isDragging) return;
-      const deltaX = e.clientX - previousMousePosition.x;
-      targetRotationY += deltaX * 0.0025;
-      previousMousePosition = { x: e.clientX, y: e.clientY };
-    });
 
     viewport.addEventListener('wheel', (e) => {
       if (e.target.closest('.floating-hud-panel') || e.target.closest('.artwork-full-modal')) return;
@@ -207,17 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      let moveDistance = 0;
-      if (hasMouseDown && mouseDownX >= 0) {
-        moveDistance = Math.hypot(e.clientX - mouseDownX, e.clientY - mouseDownY);
-      }
-      hasMouseDown = false;
-
-      if (moveDistance > 10) {
-        // User was dragging to rotate 3D space, ignore click
-        return;
-      }
-
       const rect = container.getBoundingClientRect();
       mouse.x = ((e.clientX - rect.left) / container.clientWidth) * 2 - 1;
       mouse.y = -((e.clientY - rect.top) / container.clientHeight) * 2 + 1;
@@ -233,12 +192,12 @@ document.addEventListener('DOMContentLoaded', () => {
           window.focusGalleryIndex(clickedMesh.userData.index);
         }
       } else {
-        // Clicked in canvas area: open full view modal if center area, or navigate if far left/right
+        // Clicked in canvas area: navigate if clicking far edges, or open full view modal for center view
         const relX = (e.clientX - rect.left) / rect.width;
-        if (relX < 0.22) {
+        if (relX < 0.20) {
           const prevIdx = (currentIndex - 1 + galleryPosts.length) % galleryPosts.length;
           window.focusGalleryIndex(prevIdx);
-        } else if (relX > 0.78) {
+        } else if (relX > 0.80) {
           const nextIdx = (currentIndex + 1) % galleryPosts.length;
           window.focusGalleryIndex(nextIdx);
         } else {
@@ -248,6 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     container.addEventListener('click', handleCanvasClick);
+    viewport.addEventListener('click', handleCanvasClick);
 
     function focusOnMeshIndex(index) {
       currentIndex = index;

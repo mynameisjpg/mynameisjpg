@@ -30,11 +30,7 @@ body.gallery-page {
   top: 0;
   left: 0;
   z-index: 1;
-  cursor: grab;
-}
-
-#spatial-canvas-container:active {
-  cursor: grabbing;
+  cursor: pointer;
 }
 
 /* Subtle Spatial Background Ambient Glow */
