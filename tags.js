@@ -155,7 +155,7 @@ window.DYNAMIC_TAGS = [
       "psychophysics",
       "fovea",
       "predictive-processing",
-      "bandwidth",
+      "vision",
       "ui-design",
       "cognitive-load"
     ]
@@ -408,7 +408,7 @@ window.DYNAMIC_TAGS = [
       "visual-perception",
       "fovea",
       "predictive-processing",
-      "bandwidth",
+      "vision",
       "ui-design",
       "cognitive-load"
     ]
@@ -844,48 +844,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "bandwidth",
-    "name": "bandwidth",
-    "label": "#bandwidth",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-29-visual-bandwidth-bottleneck",
-        "slug": "visual-bandwidth-bottleneck",
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "date": "2026.09.29",
-        "format": "NOTE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/visual-bandwidth-bottleneck.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "slug": "visual-bandwidth-bottleneck",
-        "format": "NOTE",
-        "url": "posts/visual-bandwidth-bottleneck.html",
-        "date": "2026.09.29"
-      }
-    ],
-    "pillars": [
-      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
-    ],
-    "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION"
-    ],
-    "connected_tags": [
-      "visual-perception",
-      "psychophysics",
-      "fovea",
-      "predictive-processing",
-      "ui-design",
-      "cognitive-load"
-    ]
-  },
-  {
     "id": "biopolitics",
     "name": "biopolitics",
     "label": "#biopolitics",
@@ -1216,7 +1174,7 @@ window.DYNAMIC_TAGS = [
       "psychophysics",
       "fovea",
       "predictive-processing",
-      "bandwidth",
+      "vision",
       "ui-design"
     ]
   },
@@ -1927,7 +1885,7 @@ window.DYNAMIC_TAGS = [
       "visual-perception",
       "psychophysics",
       "predictive-processing",
-      "bandwidth",
+      "vision",
       "ui-design",
       "cognitive-load"
     ]
@@ -2886,7 +2844,7 @@ window.DYNAMIC_TAGS = [
       "visual-perception",
       "psychophysics",
       "fovea",
-      "bandwidth",
+      "vision",
       "ui-design",
       "cognitive-load"
     ]
@@ -3387,7 +3345,7 @@ window.DYNAMIC_TAGS = [
       "psychophysics",
       "fovea",
       "predictive-processing",
-      "bandwidth",
+      "vision",
       "cognitive-load"
     ]
   },
@@ -3473,6 +3431,48 @@ window.DYNAMIC_TAGS = [
       "llms",
       "sensory-bandwidth",
       "symbol-grounding"
+    ]
+  },
+  {
+    "id": "vision",
+    "name": "vision",
+    "label": "#vision",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-29-visual-bandwidth-bottleneck",
+        "slug": "visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "date": "2026.09.29",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/visual-bandwidth-bottleneck.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "slug": "visual-bandwidth-bottleneck",
+        "format": "NOTE",
+        "url": "posts/visual-bandwidth-bottleneck.html",
+        "date": "2026.09.29"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION"
+    ],
+    "connected_tags": [
+      "visual-perception",
+      "psychophysics",
+      "fovea",
+      "predictive-processing",
+      "ui-design",
+      "cognitive-load"
     ]
   },
   {
