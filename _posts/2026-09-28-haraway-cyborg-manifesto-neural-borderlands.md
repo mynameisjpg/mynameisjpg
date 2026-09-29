@@ -38,7 +38,7 @@ links:
     type: "essay"
     description: "The complete text of Donna Haraway's groundbreaking manifesto on cybernetic organisms, anti-essentialism, and boundary breakdowns."
   - title: "e-flux Journal Issue #75 Tentacular Thinking: Anthropocene, Capitalocene, Chthulucene"
-    url: ""
+    url: "https://www.e-flux.com/journal/0075/69369/tentacular-thinking-anthropocene-capitalocene-chthulucene/"
     type: "article"
     description: "Donna's article on issue #75 of e-flux."
 

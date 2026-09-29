@@ -11,7 +11,7 @@ status: "published"
 
 format: "resource"
 category: "tool/software"
-resource_url: "https://github.com/untitled-jpg/perceptual-vision-eval"
+resource_url: "https://github.com/mynameisjpg/perceptual-vision-eval"
 
 topic:
   pillar: "Visual Perception & Psychology of Seeing"
@@ -41,7 +41,7 @@ links:
     type: "book"
     description: "Comprehensive guide to visual optics, cognitive color science, lateral inhibition, and perceptual illusions in fine art."
   - title: "Perceptual Vision Eval GitHub Repository"
-    url: "https://github.com/untitled-jpg/perceptual-vision-eval"
+    url: "https://github.com/mynameisjpg/perceptual-vision-eval"
     type: "repo"
     description: "Source code, unit test suites, and interactive HTML5 Canvas demo for automated visual perceptual evaluation."
 

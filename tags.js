@@ -83,6 +83,71 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "pillar-ai-perception-culture-representation",
+    "name": "AI PERCEPTION, CULTURE & REPRESENTATION",
+    "label": "AI PERCEPTION, CULTURE & REPRESENTATION",
+    "type": "pillar",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      },
+      {
+        "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
+        "title": "Excavating AI (the unEthics of Machine Learning Training)",
+        "date": "2026.09.26",
+        "format": "BOOKMARK",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
+      },
+      {
+        "id": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "date": "2026.09.25",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
+        "url": "posts/turing-queer-ai.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      },
+      {
+        "title": "Excavating AI (the unEthics of Machine Learning Training)",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
+        "format": "BOOKMARK",
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "slug": "turing-queer-ai",
+        "format": "ESSAY",
+        "url": "posts/turing-queer-ai.html",
+        "date": "2026.09.25"
+      }
+    ],
+    "pillars": [],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
     "id": "visual-perception",
     "name": "visual-perception",
     "label": "#visual-perception",
@@ -159,54 +224,6 @@ window.DYNAMIC_TAGS = [
       "ui-design",
       "cognitive-load"
     ]
-  },
-  {
-    "id": "pillar-ai-perception-culture-representation",
-    "name": "AI PERCEPTION, CULTURE & REPRESENTATION",
-    "label": "AI PERCEPTION, CULTURE & REPRESENTATION",
-    "type": "pillar",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "date": "2026.09.26",
-        "format": "BOOKMARK",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
-      },
-      {
-        "id": "2026-09-25-turing-queer-ai",
-        "slug": "turing-queer-ai",
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "date": "2026.09.25",
-        "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "posts/turing-queer-ai.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "format": "BOOKMARK",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "turing-queer-ai",
-        "format": "ESSAY",
-        "url": "posts/turing-queer-ai.html",
-        "date": "2026.09.25"
-      }
-    ],
-    "pillars": [],
-    "subtopics": [],
-    "connected_tags": []
   },
   {
     "id": "subtopic-anatomy-and-psychophysics-of-vision",
@@ -355,6 +372,128 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "ai",
+    "name": "ai",
+    "label": "#ai",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      },
+      {
+        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "date": "2026.09.26",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      },
+      {
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "format": "RESOURCE",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION",
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "github",
+      "repo",
+      "relational",
+      "data-labeling",
+      "models"
+    ]
+  },
+  {
+    "id": "canvas-api",
+    "name": "canvas-api",
+    "label": "#canvas-api",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      },
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "github",
+      "repo",
+      "relational",
+      "data-labeling",
+      "ai"
+    ]
+  },
+  {
     "id": "free",
     "name": "free",
     "label": "#free",
@@ -475,6 +614,67 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "toolkit",
+    "name": "toolkit",
+    "label": "#toolkit",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      },
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "canvas-api",
+      "github",
+      "repo",
+      "relational",
+      "data-labeling",
+      "ai"
+    ]
+  },
+  {
     "id": "subtopic-aesthetics-as-ideology-and-interface-politics",
     "name": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
     "label": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
@@ -503,6 +703,39 @@ window.DYNAMIC_TAGS = [
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
+    "id": "subtopic-computer-vision-vs-human-perception",
+    "name": "COMPUTER VISION VS. HUMAN PERCEPTION",
+    "label": "COMPUTER VISION VS. HUMAN PERCEPTION",
+    "type": "subtopic",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
     ],
     "subtopics": [],
     "connected_tags": []
@@ -737,48 +970,6 @@ window.DYNAMIC_TAGS = [
     ],
     "subtopics": [],
     "connected_tags": []
-  },
-  {
-    "id": "ai",
-    "name": "ai",
-    "label": "#ai",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "date": "2026.09.26",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/harvard-s-computer-science-career-for-free.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "format": "RESOURCE",
-        "url": "posts/harvard-s-computer-science-career-for-free.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
-    ],
-    "subtopics": [
-      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
-    ],
-    "connected_tags": [
-      "course",
-      "career",
-      "computer sciences",
-      "informatics",
-      "networks",
-      "llm"
-    ]
   },
   {
     "id": "alan-turing",
@@ -1069,48 +1260,6 @@ window.DYNAMIC_TAGS = [
       "authorship",
       "reflections",
       "philosophy"
-    ]
-  },
-  {
-    "id": "canvas-api",
-    "name": "canvas-api",
-    "label": "#canvas-api",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [
-      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
-    ],
-    "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION"
-    ],
-    "connected_tags": [
-      "toolkit",
-      "free",
-      "download",
-      "psychophysics",
-      "visual-perception",
-      "skill"
     ]
   },
   {
@@ -1534,6 +1683,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "data-labeling",
+    "name": "data-labeling",
+    "label": "#data-labeling",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "github",
+      "repo",
+      "relational",
+      "ai",
+      "models"
+    ]
+  },
+  {
     "id": "deconstruction",
     "name": "deconstruction",
     "label": "#deconstruction",
@@ -1613,6 +1804,48 @@ window.DYNAMIC_TAGS = [
       "computer sciences",
       "informatics",
       "networks",
+      "ai"
+    ]
+  },
+  {
+    "id": "dithering",
+    "name": "dithering",
+    "label": "#dithering",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "github",
+      "repo",
+      "relational",
+      "data-labeling",
       "ai"
     ]
   },
@@ -2074,6 +2307,48 @@ window.DYNAMIC_TAGS = [
       "psychophysics",
       "visual-perception",
       "skill"
+    ]
+  },
+  {
+    "id": "github",
+    "name": "github",
+    "label": "#github",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "repo",
+      "relational",
+      "data-labeling",
+      "ai",
+      "models"
     ]
   },
   {
@@ -2619,6 +2894,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "models",
+    "name": "models",
+    "label": "#models",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "github",
+      "repo",
+      "relational",
+      "data-labeling",
+      "ai"
+    ]
+  },
+  {
     "id": "networks",
     "name": "networks",
     "label": "#networks",
@@ -3036,6 +3353,90 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "relational",
+    "name": "relational",
+    "label": "#relational",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "github",
+      "repo",
+      "data-labeling",
+      "ai",
+      "models"
+    ]
+  },
+  {
+    "id": "repo",
+    "name": "repo",
+    "label": "#repo",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "github",
+      "relational",
+      "data-labeling",
+      "ai",
+      "models"
+    ]
+  },
+  {
     "id": "semiotics",
     "name": "semiotics",
     "label": "#semiotics",
@@ -3324,48 +3725,6 @@ window.DYNAMIC_TAGS = [
       "imagenet",
       "ethics",
       "archeology"
-    ]
-  },
-  {
-    "id": "toolkit",
-    "name": "toolkit",
-    "label": "#toolkit",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [
-      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
-    ],
-    "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION"
-    ],
-    "connected_tags": [
-      "free",
-      "download",
-      "psychophysics",
-      "visual-perception",
-      "skill",
-      "image-analysis"
     ]
   },
   {

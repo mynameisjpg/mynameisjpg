@@ -1,6 +1,47 @@
 /** Auto-generated from _posts/*.md by sync_posts.py */
 window.DYNAMIC_POSTS = [
   {
+    "id": "2026-09-30-relate-anything-github-repo",
+    "slug": "2026-09-30-relate-anything-github-repo",
+    "sys_id": "SYS_202609_RES",
+    "title": "Relate Anything [github repo]",
+    "subtitle": "Real-time open-vocabulary relation prediction from any inputs",
+    "excerpt": "Give RelateAnything an image, object regions, and the relations you want to look for. It returns scored (subject, relation, object) triplets, such as person → riding → horse.",
+    "format": "RESOURCE",
+    "category": "TOOL/SOFTWARE",
+    "media": "",
+    "source": "",
+    "url": "https://github.com/Maelic/RelateAnything",
+    "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+    "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+    "theme": "dark",
+    "featured": false,
+    "shareable": true,
+    "allow_embed": true,
+    "status": "published",
+    "date": "2026.09.30",
+    "author": "Juan P. Giusepponi",
+    "read_time": "CODE TOOLKIT",
+    "via": "",
+    "image": "assets/images/[image].png",
+    "image_alt": "Dithered toolkit interface graphic",
+    "aspect_ratio": "h-tall-1",
+    "links": [],
+    "backlinks": [],
+    "tags": [
+      "toolkit",
+      "github",
+      "repo",
+      "relational",
+      "data-labeling",
+      "ai",
+      "models",
+      "dithering",
+      "canvas-api"
+    ],
+    "content": "<h2 class=\"post-section-kicker essay-section-kicker\">01. Overview & Capability</h2>\n\n<p class=\"post-paragraph essay-paragraph\">Give <strong>RelateAnything</strong> an image, object regions, and the relations you want to look for. It returns scored</p>\n\n<p class=\"post-paragraph essay-paragraph\"><code>(subject, relation, object)</code> triplets, such as <code>person → riding → horse</code>.</p>\n\n<p class=\"post-paragraph essay-paragraph\"><img src=\"assets/images/relateanything.gif\" alt=\"video with data labeling tags\" width=\"100%\"/></p>\n\n<h3 class=\"post-subheading essay-subheading\">Try it with zero install:</h3>\n\n<ol class=\"post-list essay-list\"><li>Go to https://maelic.github.io/RelateAnythingProject/demo/</li><li>Upload a photo or video, or use your webcam ></li><li>It runs entirely in your browser, nothing gets sent to a server</li></ol>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">02. Do you want to run it in python (locally) instead?</h2>\n\n<p class=\"post-paragraph essay-paragraph\">Use Python 3.12+. Install a CUDA-enabled PyTorch build for NVIDIA GPU inference, or use device=\"cpu\" in the example below.</p>\n\n<pre><code class=\"language-text\">git clone https://github.com/Maelic/RelateAnything.git\ncd RelateAnything\npip install -e \".[hub]\"</code></pre>\n\n<p class=\"post-paragraph essay-paragraph\">Run this from the repository root. The sample photo is included; the two example boxes identify the person and the horse.</p>\n\n<pre><code class=\"language-text\">import numpy as np\nfrom PIL import Image\nfrom relsgg import RelateAnything\n\nmodel = RelateAnything.from_pretrained(\"maelic/relsgg-vits16plus\", device=\"cuda\")\nimage = Image.open(\"assets/reel/images/horse.jpg\").convert(\"RGB\")\nboxes = np.array([[470, 130, 650, 630], [90, 310, 1010, 875]], dtype=np.float32)\n\n# Boxes are [x1, y1, x2, y2] in original-image pixels.\n# Labels are optional and only make the printed triplets easier to read.\nfor triplet in model.predict(image, boxes, box_labels=[\"person\", \"horse\"], topk=5):\n    print(triplet)\n\n# Change what relations to look for, without retraining.\nmodel.set_vocabulary([\"riding\", \"carrying a rider\", \"beside\", \"in front of\"])\ngraphs = model.predict(image, boxes, box_labels=[\"person\", \"horse\"], decompose=True)\nprint(graphs[\"spatial\"])\nprint(graphs[\"semantic\"])</code></pre>\n\n<p class=\"post-paragraph essay-paragraph\">Released checkpoints include the backbone configuration and text encoder; no gated DINOv3 login is needed for inference. Replace the sample image and boxes with your own inputs; the API also supports masks and a larger built-in relation vocabulary.</p>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h3 class=\"post-subheading essay-subheading\">03. API Reference</h3>\n\n<p class=\"post-paragraph essay-paragraph\"><a href=\"https://github.com/Maelic/RelateAnything/blob/main/docs/quickstart.md\" target=\"_blank\" rel=\"noopener noreferrer\">API guide: inputs, vocabularies, masks, and scores</a> — <a href=\"https://github.com/Maelic/RelateAnything/blob/main/docs/installation.md\" target=\"_blank\" rel=\"noopener noreferrer\">Installation and offline use</a></p>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">04. Research Paper</h2>\n\n<p class=\"post-paragraph essay-paragraph\">Subjects: Computer Vision and Pattern Recognition (cs.CV)<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">• <a href=\"assets/docs/2609.12552.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">arXiv:2609.12552</a> [cs.CV]<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">• https://doi.org/10.48550/arXiv.2609.12552</p>"
+  },
+  {
     "id": "2026-09-29-visual-bandwidth-bottleneck",
     "slug": "2026-09-29-visual-bandwidth-bottleneck",
     "sys_id": "SYS_260929_VSBND",
@@ -114,7 +155,7 @@ window.DYNAMIC_POSTS = [
     "category": "TOOL/SOFTWARE",
     "media": "",
     "source": "",
-    "url": "https://github.com/untitled-jpg/perceptual-vision-eval",
+    "url": "https://github.com/mynameisjpg/perceptual-vision-eval",
     "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
     "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
     "theme": "light",
@@ -138,7 +179,7 @@ window.DYNAMIC_POSTS = [
       },
       {
         "title": "Perceptual Vision Eval GitHub Repository",
-        "url": "https://github.com/untitled-jpg/perceptual-vision-eval",
+        "url": "https://github.com/mynameisjpg/perceptual-vision-eval",
         "type": "REPO",
         "desc": "Source code, unit test suites, and interactive HTML5 Canvas demo for automated visual perceptual evaluation."
       }
