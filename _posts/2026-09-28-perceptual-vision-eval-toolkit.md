@@ -70,16 +70,11 @@ It is an open-source JavaScript and Node.js toolkit built on visual psychophysic
 
 ```mermaid
 flowchart TD
-    A["Canvas or Image Input"] --> T1 & T2 & T3 & T4
-
-    subgraph TESTS ["4 Psychophysical Evaluation Tests"]
-        T1["1. Contrast & Legibility<br/>WCAG 2.2 + Relative"]
-        T2["2. Lateral Inhibition<br/>Difference of Gaussians"]
-        T3["3. Gestalt Edge Continuity<br/>Vector Coherence"]
-        T4["4. Multi-Stability Index<br/>Depth Ambiguity Flips"]
-    end
-
-    T1 & T2 & T3 & T4 --> C["Perceptual Score & Diagnostic Report"]
+    A["Canvas or Image Input"] --> T1["1. Contrast & Legibility (WCAG 2.2)"]
+    T1 --> T2["2. Lateral Inhibition (Difference of Gaussians)"]
+    T2 --> T3["3. Gestalt Edge Continuity (Vector Coherence)"]
+    T3 --> T4["4. Multi-Stability Index (Depth Ambiguity Flips)"]
+    T4 --> C["Perceptual Score & Diagnostic Report"]
 ```
 
 ### 1. Contrast & Text Legibility
