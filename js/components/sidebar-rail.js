@@ -30,22 +30,10 @@ class SidebarRail extends HTMLElement {
     const hasSearch = this.hasAttribute('has-search');
 
     const searchSection = hasSearch ? `
-      <!-- Full-width / Flexible Inline Search Input Box -->
-      <div class="top-inline-search-box" id="top-inline-search-box">
-        <svg viewBox="0 0 24 24" class="search-icon-svg" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <input type="text" id="top-inline-search-input" name="search" placeholder="SEARCH DISPATCHES..." aria-label="Search dispatches" autocomplete="off" spellcheck="false" />
-      </div>
-
-      <!-- Navbar Tag Legend Badge (Positioned Right of Search Bar) -->
-      <span class="top-navbar-legend-badge" id="nodemap-status-label">EXPLORE 3D TAG NODES &amp; CONCEPTUAL VECTORS</span>
-
-      <!-- Controls Group: Filter + Sort -->
+      <!-- Top Navbar Search Icon Button -->
       <div class="top-nav-controls-group">
-        <button type="button" class="top-nav-icon-btn" id="top-navbar-filter-btn" title="Filter Formats" aria-label="Filter Formats">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
-        </button>
-        <button type="button" class="top-nav-icon-btn" id="top-navbar-sort-btn" title="Sort Dispatches" aria-label="Sort Dispatches">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+        <button type="button" class="top-nav-icon-btn" id="top-navbar-search-btn" title="Search Dispatches" aria-label="Search Dispatches">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </button>
       </div>
     ` : '';
@@ -113,7 +101,11 @@ class SidebarRail extends HTMLElement {
             </a>
             <a href="archive.html" id="sidebar-archive-btn" title="Chronological Archive" aria-label="Archive">
               <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-              <span class="rail-tooltip"># ARCHIVE_NODES</span>
+              <span class="rail-tooltip"># ARCHIVE_TIMELINE</span>
+            </a>
+            <a href="network.html" id="sidebar-network-btn" title="Taxonomy Node Map Network" aria-label="Network">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><line x1="8" y1="7.5" x2="10" y2="10.5"/><line x1="16" y1="7.5" x2="14" y2="10.5"/><line x1="8" y1="16.5" x2="10" y2="13.5"/><line x1="16" y1="16.5" x2="14" y2="13.5"/></svg>
+              <span class="rail-tooltip"># NETWORK_NODEMAP</span>
             </a>
             <a href="gallery.html" id="sidebar-gallery-btn" title="Cover Art Gallery" aria-label="Gallery">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
@@ -143,11 +135,14 @@ class SidebarRail extends HTMLElement {
 
     const homeBtn = this.querySelector('#sidebar-home-btn');
     const archiveBtn = this.querySelector('#sidebar-archive-btn');
+    const networkBtn = this.querySelector('#sidebar-network-btn');
     const galleryBtn = this.querySelector('#sidebar-gallery-btn');
 
-    [homeBtn, archiveBtn, galleryBtn].forEach(btn => btn?.classList.remove('active'));
+    [homeBtn, archiveBtn, networkBtn, galleryBtn].forEach(btn => btn?.classList.remove('active'));
 
-    if (activeAttr === 'archive' || pathname.includes('archive.html')) {
+    if (activeAttr === 'network' || pathname.includes('network.html')) {
+      if (networkBtn) networkBtn.classList.add('active');
+    } else if (activeAttr === 'archive' || pathname.includes('archive.html')) {
       if (archiveBtn) archiveBtn.classList.add('active');
     } else if (activeAttr === 'gallery' || pathname.includes('gallery.html')) {
       if (galleryBtn) galleryBtn.classList.add('active');
@@ -182,6 +177,26 @@ class SidebarRail extends HTMLElement {
           if (modal && typeof modal.showModal === 'function') {
             modal.showModal();
           }
+        }
+      });
+    }
+
+    const dispatchBtn = this.querySelector('#dispatch-log-btn');
+    if (dispatchBtn) {
+      dispatchBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (typeof window.toggleDispatchLogDropdown === 'function') {
+          window.toggleDispatchLogDropdown();
+        }
+      });
+    }
+
+    const searchBtn = this.querySelector('#top-navbar-search-btn');
+    if (searchBtn) {
+      searchBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (typeof window.toggleTopSearchDropdown === 'function') {
+          window.toggleTopSearchDropdown();
         }
       });
     }

@@ -5,7 +5,7 @@
    - Offset by 48px sidebar rail
    ============================================================================== */
 
-/* Main Archive Split Shell Layout */
+/* Main Archive Split Shell Layout & Full View Shell Layouts */
 .archive-split-shell {
   margin-left: var(--sidebar-width, 48px);
   width: calc(100vw - var(--sidebar-width, 48px));
@@ -18,9 +18,20 @@
   box-sizing: border-box;
 }
 
-/* ==============================================================================
-   LEFT 55% PANEL: TIMELINE COLUMN WITH CENTERED TIMELINE FRAME
-   ============================================================================== */
+.archive-timeline-shell,
+.network-full-shell {
+  margin-left: var(--sidebar-width, 48px);
+  width: calc(100vw - var(--sidebar-width, 48px));
+  max-width: calc(100vw - var(--sidebar-width, 48px));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--neutral-bg, #121212);
+  box-sizing: border-box;
+}
+
+/* Timeline Column - Standard and Full View */
 .timeline-column {
   display: flex;
   flex-direction: column;
@@ -31,6 +42,10 @@
   overflow: hidden;
   align-items: center;
   box-sizing: border-box;
+}
+
+.timeline-column.full-view {
+  border-right: none;
 }
 
 /* Header Groups Spanning Top of Left & Right Panels (Equal Height 82px in Desktop View) */

@@ -656,38 +656,22 @@
     color: var(--accent-coral, #E84A5F);
   }
 
-  /* Content format links follow logo on the LEFT side */
+  /* Hide text format links; use _DISPATCH_LOG dropdown button instead */
   .nav-stacked-vertical {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 0.75rem !important;
-    margin: 0 !important;
+    display: none !important;
   }
 
-  .nav-link-item {
-    writing-mode: horizontal-tb !important;
-    transform: none !important;
-    font-size: 0.62rem !important;
-    padding: 0 !important;
-    border-left: none !important;
+  .dispatch-log-dropdown-btn {
+    display: inline-flex !important;
   }
 
-  .nav-link-item.active {
-    color: var(--accent-coral, #E84A5F) !important;
-    border-bottom: 2px solid var(--accent-coral, #E84A5F) !important;
-  }
-
-  /* Right Side: Search Box + Controls Group + Social/Archive Icons aligned to far right */
+  /* Right Side: Hide inline search box & legend badge, use Search Icon button + Dropdown */
   .top-inline-search-box {
-    display: flex !important;
-    max-width: 240px;
-    min-width: 140px;
-    height: 32px;
-    margin-right: 0.5rem;
+    display: none !important;
   }
 
   .top-navbar-legend-badge {
-    display: inline-flex !important;
+    display: none !important;
   }
 
   .top-nav-controls-group {
@@ -739,7 +723,7 @@
     height: 18px !important;
   }
 
-  /* Remove Filter Button from Top Navbar (Available in Full Viewport) */
+  /* Remove Filter Button from Top Navbar */
   #top-navbar-filter-btn {
     display: none !important;
   }
@@ -769,36 +753,6 @@
 
   .timeline-scroll-container {
     padding-top: 1rem;
-  }
-}
-
-/* ==============================================================================
-   740px WIDTH BREAKPOINT: Collapse Format Links into [ _DISPATCH_LOG ▼ ]
-   ============================================================================== */
-@media (max-width: 740px) {
-  .nav-stacked-vertical {
-    display: none !important;
-  }
-
-  .dispatch-log-dropdown-btn {
-    display: inline-flex !important;
-  }
-
-  .top-navbar-legend-badge {
-    display: none !important;
-  }
-}
-
-/* ==============================================================================
-   520px SMALLEST BREAKPOINT: Revert Search Box to Icon-Only
-   ============================================================================== */
-@media (max-width: 520px) {
-  .top-inline-search-box {
-    display: none !important;
-  }
-
-  .mobile-search-only {
-    display: flex !important;
   }
 }
 

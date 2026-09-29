@@ -6,11 +6,18 @@
 .post-column,
 .essay-column {
   background-color: var(--bg-panel);
-  padding: 4.5rem 4.5rem;
-  overflow-y: auto;
+  padding: 0;
+  overflow: visible !important;
   height: 100vh;
   position: relative;
   transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+.reader-scroll-wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  padding: 4.5rem 4.5rem;
+  box-sizing: border-box;
 }
 
 /* ==============================================================================
