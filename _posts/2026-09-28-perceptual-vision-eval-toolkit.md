@@ -1,6 +1,6 @@
 ---
-title: "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment"
-subtitle: "An open-source browser and Node.js evaluation framework measuring luminance contrast, Gestalt edge continuity, lateral inhibition proxies, and visual multi-stability in AI outputs."
+title: "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis"
+subtitle: "An open-source browser and Node.js evaluation framework measuring luminance contrast, Gestalt edge continuity, lateral inhibition proxies, and visual multi-stability in digital graphics."
 excerpt: "Built on foundational psychophysics from David Cycleback's Art Perception and Rudolf Arnheim's visual psychology, this toolkit provides automated perceptual diagnostics for generated graphics and web UI components."
 
 date: 2026-09-28 12:00:00 -0300

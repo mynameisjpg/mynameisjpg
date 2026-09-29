@@ -310,7 +310,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
@@ -330,7 +330,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
         "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
@@ -404,7 +404,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
@@ -414,7 +414,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
         "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
@@ -668,7 +668,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
@@ -678,7 +678,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
         "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
@@ -1034,7 +1034,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
@@ -1044,7 +1044,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
         "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
@@ -1160,7 +1160,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
@@ -1170,7 +1170,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
         "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
@@ -1244,7 +1244,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
@@ -1254,7 +1254,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
         "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
@@ -1873,7 +1873,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
@@ -1883,7 +1883,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
         "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
@@ -2122,7 +2122,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
@@ -2132,7 +2132,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
         "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
@@ -2624,7 +2624,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
@@ -2634,7 +2634,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
         "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
@@ -2917,7 +2917,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
@@ -2927,7 +2927,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
         "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
@@ -3084,7 +3084,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
@@ -3094,7 +3094,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
         "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
