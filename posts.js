@@ -356,7 +356,7 @@ window.DYNAMIC_POSTS = [
     "author": "Juan P. Giusepponi",
     "read_time": "CURATED READ",
     "via": "Kate Crawford and Trevor Paglen, “Excavating AI: The Politics of Training Sets for Machine Learning (September 19, 2019) https://excavating.ai",
-    "image": "assets/images/cecinestpasunhomme.jpg",
+    "image": "assets/images/this-is-not-a-human.jpg",
     "aspect_ratio": "h-tall-1",
     "links": [],
     "backlinks": [],
@@ -461,7 +461,7 @@ window.DYNAMIC_POSTS = [
     "author": "Juan P. Giusepponi",
     "read_time": "12 MIN READ",
     "via": "",
-    "image": "assets/images/Mind_processing_visual_data_2K_20260926123925.jpg",
+    "image": "assets/images/llms-dont-think.jpg",
     "aspect_ratio": "h-tall-1",
     "links": [
       {

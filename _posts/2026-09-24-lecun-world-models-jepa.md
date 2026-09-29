@@ -63,8 +63,8 @@ allow_embed: true
 canonical_url: ""
 
 image:
-  path: "assets/images/Mind_processing_visual_data_2K_20260926123925.jpg"
-  alt: "High-contrast dithered duotone graphic of a human eye and optic nerve transforming into a vector network grid"
+  path: "assets/images/llms-dont-think.jpg"
+  alt: "Digital art of a glowing red human brain centrally positioned against a dark background of glitchy binary code, circuit board patterns, and pixelated human face silhouettes."
 ---
 
 ## 01. The AGI Scaling Fallacy

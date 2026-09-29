@@ -112,6 +112,7 @@ In vector space, classification is not binary. Two concepts are not separated by
 $$\text{Similarity}(\mathbf{A}, \mathbf{B}) = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{A}\|_2 \|\mathbf{B}\|_2}$$
 
 In a 1536-dimensional space:
+
 - "The Emperor" and "Fine camelhair brush" can occupy adjacent geometric clusters if their training context correlates.
 - Words with no lexical overlap ("frenzied" and "sucking pig in a storm") become neighbors based on latent context vectors.
 
@@ -129,13 +130,13 @@ flowchart TD
 
 The transition from traditional databases to vector storage represents a radical epistemological shift:
 
-| Dimension | Classical SQL Episteme | Vector Latent Episteme |
-| :--- | :--- | :--- |
-| **Logic** | Top-down, discrete, rule-based | Emergent, continuous, probabilistic |
-| **Boundaries** | Hard binary edges (`WHERE category = 'animal'`) | Soft topological contours ($\text{distance} < 0.25$) |
-| **Flexibility** | Brittle to out-of-schema queries | Fluid across metaphors, dialects, and synonyms |
-| **Failure Mode** | Returns `NULL` or syntax error | Hallucination or semantic drift into strange neighborhoods |
-| **Governance** | Explicit database schema administrator | Implicit transformer training loss function |
+| Dimension        | Classical SQL Episteme                          | Vector Latent Episteme                                     |
+| :--------------- | :---------------------------------------------- | :--------------------------------------------------------- |
+| **Logic**        | Top-down, discrete, rule-based                  | Emergent, continuous, probabilistic                        |
+| **Boundaries**   | Hard binary edges (`WHERE category = 'animal'`) | Soft topological contours ($\text{distance} < 0.25$)       |
+| **Flexibility**  | Brittle to out-of-schema queries                | Fluid across metaphors, dialects, and synonyms             |
+| **Failure Mode** | Returns `NULL` or syntax error                  | Hallucination or semantic drift into strange neighborhoods |
+| **Governance**   | Explicit database schema administrator          | Implicit transformer training loss function                |
 
 When an autonomous AI agent executes a semantic search or retrieves context for an LLM prompt, it is constantly posing Foucault's question:
 
