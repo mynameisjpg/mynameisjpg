@@ -153,8 +153,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Interaction Drag, Inertia & Precise Click Detection
     let isDragging = false;
-    let mouseDownX = 0;
-    let mouseDownY = 0;
+    let hasMouseDown = false;
+    let mouseDownX = -1;
+    let mouseDownY = -1;
     let previousMousePosition = { x: 0, y: 0 };
     let targetRotationY = 0;
     let currentRotationY = 0;
@@ -170,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
       isDragging = true;
+      hasMouseDown = true;
       mouseDownX = e.clientX;
       mouseDownY = e.clientY;
       previousMousePosition = { x: e.clientX, y: e.clientY };
@@ -197,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const raycaster = new THREE.Raycaster();
     const mouse = new THREE.Vector2();
 
-    viewport.addEventListener('click', (e) => {
+    const handleCanvasClick = (e) => {
       // Ignore click if clicking HUD panel, side chevrons, or modal controls
       if (e.target.closest('.floating-hud-panel') || 
           e.target.closest('.gallery-side-nav-zone') || 
@@ -205,9 +207,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Calculate true mouse drag distance
-      const moveDistance = Math.hypot(e.clientX - mouseDownX, e.clientY - mouseDownY);
-      if (moveDistance > 8) {
+      let moveDistance = 0;
+      if (hasMouseDown && mouseDownX >= 0) {
+        moveDistance = Math.hypot(e.clientX - mouseDownX, e.clientY - mouseDownY);
+      }
+      hasMouseDown = false;
+
+      if (moveDistance > 10) {
         // User was dragging to rotate 3D space, ignore click
         return;
       }
@@ -239,7 +245,9 @@ document.addEventListener('DOMContentLoaded', () => {
           openFullViewModal(galleryPosts[currentIndex]);
         }
       }
-    });
+    };
+
+    container.addEventListener('click', handleCanvasClick);
 
     function focusOnMeshIndex(index) {
       currentIndex = index;
@@ -481,6 +489,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (shareBtnText) shareBtnText.textContent = 'SHARE';
     fullModal.style.display = 'flex';
   }
+
+  window.openFullViewModal = openFullViewModal;
 
   function setupFullViewModal() {
     if (closeBtn) {
