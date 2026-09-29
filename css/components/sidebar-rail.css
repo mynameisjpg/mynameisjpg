@@ -488,9 +488,6 @@
   stroke-linejoin: round;
 }
 
-.mobile-search-only {
-  display: none !important;
-}
 
 /* Top Dropdown Panels */
 .top-dropdown-panel {
@@ -727,11 +724,16 @@
   }
 
   /* Offset Main Layout for 48px Top Navbar */
-  .archive-split-shell,
-  .split-layout {
+  .archive-split-shell {
     margin-left: 0 !important;
     width: 100vw !important;
     max-width: 100vw !important;
+    margin-top: 48px !important;
+    height: calc(100vh - 48px) !important;
+  }
+
+  .split-layout {
+    margin-left: 0 !important;
     margin-top: 48px !important;
     height: calc(100vh - 48px) !important;
   }

@@ -358,6 +358,16 @@ function showGridFeedMobile() {
   const splitLayout = document.querySelector(".split-layout");
   if (splitLayout) {
     splitLayout.classList.remove("mobile-reader-active");
+    splitLayout.classList.remove("reader-open");
+  }
+  activePostId = "";
+  const cards = document.querySelectorAll(".grid-card");
+  cards.forEach(c => {
+    c.classList.remove("selected-active");
+    c.setAttribute("aria-pressed", "false");
+  });
+  if (typeof window !== "undefined" && window.history && window.history.replaceState) {
+    window.history.replaceState(null, "", window.location.pathname + window.location.search);
   }
 }
 
@@ -398,9 +408,6 @@ document.addEventListener("keydown", (e) => {
 /**
  * Select a Card and Render in Reader Pane
  */
-/**
- * Select a Card and Render in Reader Pane
- */
 function selectAndRenderPost(postId, updateUrl = true) {
   if (!postId || !POSTS_DATABASE[postId]) return;
   activePostId = postId;
@@ -426,7 +433,7 @@ function selectAndRenderPost(postId, updateUrl = true) {
     splitLayout.classList.add("reader-open");
   }
 
-  if (window.innerWidth <= 980) {
+  if (window.innerWidth <= 980 || window.innerHeight <= 700) {
     showReaderPaneMobile();
   }
 
@@ -459,42 +466,6 @@ function closeReaderPane() {
 }
 
 /**
- * Copy Direct Link to Clipboard
- */
-function copyPostLink(postId) {
-  const targetPost = POSTS_DATABASE[postId];
-  const slug = targetPost ? (targetPost.slug || targetPost.id || targetPost.sys_id) : postId;
-  const fullUrl = window.location.origin + window.location.pathname + "#" + slug;
-
-  const showFeedback = () => {
-    const btnText = document.getElementById("copy-link-text");
-    if (btnText) {
-      const orig = btnText.textContent;
-      btnText.textContent = "[ COPIED LINK! ]";
-      setTimeout(() => { btnText.textContent = orig; }, 2000);
-    }
-  };
-
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(fullUrl).then(showFeedback).catch(() => {
-      fallbackCopyText(fullUrl, showFeedback);
-    });
-  } else {
-    fallbackCopyText(fullUrl, showFeedback);
-  }
-}
-
-function fallbackCopyText(text, callback) {
-  const input = document.createElement("input");
-  input.value = text;
-  document.body.appendChild(input);
-  input.select();
-  document.execCommand("copy");
-  document.body.removeChild(input);
-  if (callback) callback();
-}
-
-/**
  * Reader Pane Component Renderer (3-Tier Metadata Architecture)
  */
 function renderPost(postId) {
@@ -519,6 +490,12 @@ function renderPost(postId) {
     <button type="button" class="btn-close-reader-edge" onclick="closeReaderPane()" title="Close reader panel (ESC)" aria-label="Close reader panel">&lt;&lt;</button>
 
     <div class="reader-scroll-wrapper">
+      <!-- Return to Grid Feed Button (Mobile / Narrow Screens) -->
+      <button type="button" class="btn-return-grid" onclick="showGridFeedMobile()" aria-label="Return to Grid Feed">
+        <span class="return-arrow">&lt;&lt;</span>
+        <span class="return-text">[ RETURN TO GRID FEED ]</span>
+      </button>
+
       <!-- TIER 1: ABOVE TITLE ARCHIVAL BADGES -->
       <header class="post-header-meta-top">
         <span class="meta-chip chip-primary">[${post.format}]</span>
@@ -935,11 +912,6 @@ function initApp() {
     });
   });
 
-  // Mobile & Reader Floating Navigation Controls
-  const swipeBtn = document.getElementById("swipe-to-reader-btn");
-  if (swipeBtn) {
-    swipeBtn.addEventListener("click", showReaderPaneMobile);
-  }
 
   document.querySelectorAll(".btn-return-grid").forEach(btn => {
     btn.addEventListener("click", showGridFeedMobile);
@@ -975,13 +947,9 @@ function initApp() {
 }
 
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => {
-    initApp();
-    initSubscribeAnimation();
-  });
+  document.addEventListener("DOMContentLoaded", initApp);
 } else {
   initApp();
-  initSubscribeAnimation();
 }
 
 
