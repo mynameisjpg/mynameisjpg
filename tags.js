@@ -1,77 +1,22 @@
 /** Auto-generated from _posts/*.md by sync_posts.py */
 window.DYNAMIC_TAGS = [
   {
-    "id": "pillar-ai-perception-culture-representation",
-    "name": "AI PERCEPTION, CULTURE & REPRESENTATION",
-    "label": "AI PERCEPTION, CULTURE & REPRESENTATION",
-    "type": "pillar",
-    "count": 3,
-    "posts": [
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "LATENT SPACES AND AI ARCHIVES",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai"
-      },
-      {
-        "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "date": "2026.09.26",
-        "format": "BOOKMARK",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training"
-      },
-      {
-        "id": "2026-09-25-turing-queer-ai",
-        "slug": "2026-09-25-turing-queer-ai",
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "date": "2026.09.25",
-        "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "index.html?post=2026-09-25-turing-queer-ai"
-      }
-    ],
-    "links": [
-      {
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "2026-09-25-turing-queer-ai",
-        "format": "ESSAY",
-        "url": "index.html?post=2026-09-25-turing-queer-ai",
-        "date": "2026.09.25"
-      }
-    ],
-    "pillars": [],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
     "id": "pillar-philosophy-of-the-image-tech-visual-culture",
     "name": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
     "label": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
     "type": "pillar",
-    "count": 3,
+    "count": 4,
     "posts": [
+      {
+        "id": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "date": "2026.09.28",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "DECONSTRUCTION & CULTURE",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original"
+      },
       {
         "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
         "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
@@ -105,6 +50,13 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "format": "NOTE",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original",
+        "date": "2026.09.28"
+      },
+      {
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
         "format": "BOOKMARK",
@@ -124,6 +76,54 @@ window.DYNAMIC_TAGS = [
         "format": "ESSAY",
         "url": "index.html?post=2026-09-26-foucault-borges-vector-space",
         "date": "2026.09.26"
+      }
+    ],
+    "pillars": [],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
+    "id": "pillar-ai-perception-culture-representation",
+    "name": "AI PERCEPTION, CULTURE & REPRESENTATION",
+    "label": "AI PERCEPTION, CULTURE & REPRESENTATION",
+    "type": "pillar",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "title": "Excavating AI (the unEthics of Machine Learning Training)",
+        "date": "2026.09.26",
+        "format": "BOOKMARK",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
+        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training"
+      },
+      {
+        "id": "2026-09-25-turing-queer-ai",
+        "slug": "2026-09-25-turing-queer-ai",
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "date": "2026.09.25",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
+        "url": "index.html?post=2026-09-25-turing-queer-ai"
+      }
+    ],
+    "links": [
+      {
+        "title": "Excavating AI (the unEthics of Machine Learning Training)",
+        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "format": "BOOKMARK",
+        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "slug": "2026-09-25-turing-queer-ai",
+        "format": "ESSAY",
+        "url": "index.html?post=2026-09-25-turing-queer-ai",
+        "date": "2026.09.25"
       }
     ],
     "pillars": [],
@@ -177,128 +177,6 @@ window.DYNAMIC_TAGS = [
     "pillars": [],
     "subtopics": [],
     "connected_tags": []
-  },
-  {
-    "id": "generative-ai",
-    "name": "generative-ai",
-    "label": "#generative-ai",
-    "type": "tag",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "LATENT SPACES AND AI ARCHIVES",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai"
-      },
-      {
-        "id": "2026-09-28-ai-images-groupe-mu",
-        "slug": "2026-09-28-ai-images-groupe-mu",
-        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "date": "2026.09.28",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
-      }
-    ],
-    "links": [
-      {
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "2026-09-28-ai-images-groupe-mu",
-        "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "LATENT SPACES AND AI ARCHIVES",
-      "MODES OF SEEING & VISUAL SEMIOTICS"
-    ],
-    "connected_tags": [
-      "byung-chul-han",
-      "shanzhai",
-      "deconstruction",
-      "latent-space",
-      "authorship",
-      "reflections"
-    ]
-  },
-  {
-    "id": "latent-space",
-    "name": "latent-space",
-    "label": "#latent-space",
-    "type": "tag",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "LATENT SPACES AND AI ARCHIVES",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "2026-09-26-foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space"
-      }
-    ],
-    "links": [
-      {
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "2026-09-26-foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "EPISTEMOLOGY OF REPRESENTATION",
-      "LATENT SPACES AND AI ARCHIVES"
-    ],
-    "connected_tags": [
-      "byung-chul-han",
-      "shanzhai",
-      "generative-ai",
-      "deconstruction",
-      "authorship",
-      "reflections"
-    ]
   },
   {
     "id": "visual-perception",
@@ -428,6 +306,39 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "subtopic-deconstruction-culture",
+    "name": "DECONSTRUCTION & CULTURE",
+    "label": "DECONSTRUCTION & CULTURE",
+    "type": "subtopic",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "date": "2026.09.28",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "DECONSTRUCTION & CULTURE",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original"
+      }
+    ],
+    "links": [
+      {
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "format": "NOTE",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
     "id": "subtopic-epistemology-of-representation",
     "name": "EPISTEMOLOGY OF REPRESENTATION",
     "label": "EPISTEMOLOGY OF REPRESENTATION",
@@ -522,39 +433,6 @@ window.DYNAMIC_TAGS = [
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
-    ],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
-    "id": "subtopic-latent-spaces-and-ai-archives",
-    "name": "LATENT SPACES AND AI ARCHIVES",
-    "label": "LATENT SPACES AND AI ARCHIVES",
-    "type": "subtopic",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "LATENT SPACES AND AI ARCHIVES",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai"
-      }
-    ],
-    "links": [
-      {
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
     ],
     "subtopics": [],
     "connected_tags": []
@@ -822,38 +700,37 @@ window.DYNAMIC_TAGS = [
     "count": 1,
     "posts": [
       {
-        "id": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
+        "id": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
         "date": "2026.09.28",
         "format": "NOTE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "LATENT SPACES AND AI ARCHIVES",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai"
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "DECONSTRUCTION & CULTURE",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original"
       }
     ],
     "links": [
       {
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "slug": "2026-09-28-shanzhai-deconstructing-original",
         "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original",
         "date": "2026.09.28"
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "LATENT SPACES AND AI ARCHIVES"
+      "DECONSTRUCTION & CULTURE"
     ],
     "connected_tags": [
       "byung-chul-han",
       "shanzhai",
-      "generative-ai",
       "deconstruction",
-      "latent-space",
-      "reflections"
+      "reflections",
+      "philosophy"
     ]
   },
   {
@@ -990,38 +867,37 @@ window.DYNAMIC_TAGS = [
     "count": 1,
     "posts": [
       {
-        "id": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
+        "id": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
         "date": "2026.09.28",
         "format": "NOTE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "LATENT SPACES AND AI ARCHIVES",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai"
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "DECONSTRUCTION & CULTURE",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original"
       }
     ],
     "links": [
       {
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "slug": "2026-09-28-shanzhai-deconstructing-original",
         "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original",
         "date": "2026.09.28"
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "LATENT SPACES AND AI ARCHIVES"
+      "DECONSTRUCTION & CULTURE"
     ],
     "connected_tags": [
       "shanzhai",
-      "generative-ai",
       "deconstruction",
-      "latent-space",
       "authorship",
-      "reflections"
+      "reflections",
+      "philosophy"
     ]
   },
   {
@@ -1452,38 +1328,37 @@ window.DYNAMIC_TAGS = [
     "count": 1,
     "posts": [
       {
-        "id": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
+        "id": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
         "date": "2026.09.28",
         "format": "NOTE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "LATENT SPACES AND AI ARCHIVES",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai"
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "DECONSTRUCTION & CULTURE",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original"
       }
     ],
     "links": [
       {
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "slug": "2026-09-28-shanzhai-deconstructing-original",
         "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original",
         "date": "2026.09.28"
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "LATENT SPACES AND AI ARCHIVES"
+      "DECONSTRUCTION & CULTURE"
     ],
     "connected_tags": [
       "byung-chul-han",
       "shanzhai",
-      "generative-ai",
-      "latent-space",
       "authorship",
-      "reflections"
+      "reflections",
+      "philosophy"
     ]
   },
   {
@@ -1861,6 +1736,47 @@ window.DYNAMIC_TAGS = [
       "informatics",
       "networks",
       "ai"
+    ]
+  },
+  {
+    "id": "generative-ai",
+    "name": "generative-ai",
+    "label": "#generative-ai",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-28-ai-images-groupe-mu",
+        "slug": "2026-09-28-ai-images-groupe-mu",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
+        "date": "2026.09.28",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
+      }
+    ],
+    "links": [
+      {
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
+        "slug": "2026-09-28-ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "MODES OF SEEING & VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "semiotics",
+      "groupe-mu",
+      "plastic-signs",
+      "iconicity",
+      "visual-perception"
     ]
   },
   {
@@ -2322,6 +2238,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "latent-space",
+    "name": "latent-space",
+    "label": "#latent-space",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-26-foucault-borges-vector-space",
+        "slug": "2026-09-26-foucault-borges-vector-space",
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "index.html?post=2026-09-26-foucault-borges-vector-space"
+      }
+    ],
+    "links": [
+      {
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "slug": "2026-09-26-foucault-borges-vector-space",
+        "format": "ESSAY",
+        "url": "index.html?post=2026-09-26-foucault-borges-vector-space",
+        "date": "2026.09.26"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION"
+    ],
+    "connected_tags": [
+      "foucault",
+      "borges",
+      "vector-databases",
+      "embeddings",
+      "episteme",
+      "rag"
+    ]
+  },
+  {
     "id": "llm",
     "name": "llm",
     "label": "#llm",
@@ -2487,6 +2445,47 @@ window.DYNAMIC_TAGS = [
       "sociomorphic-ai",
       "epistemology",
       "biopolitics"
+    ]
+  },
+  {
+    "id": "philosophy",
+    "name": "philosophy",
+    "label": "#philosophy",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "date": "2026.09.28",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "DECONSTRUCTION & CULTURE",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original"
+      }
+    ],
+    "links": [
+      {
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "format": "NOTE",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "DECONSTRUCTION & CULTURE"
+    ],
+    "connected_tags": [
+      "byung-chul-han",
+      "shanzhai",
+      "deconstruction",
+      "authorship",
+      "reflections"
     ]
   },
   {
@@ -2748,38 +2747,37 @@ window.DYNAMIC_TAGS = [
     "count": 1,
     "posts": [
       {
-        "id": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
+        "id": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
         "date": "2026.09.28",
         "format": "NOTE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "LATENT SPACES AND AI ARCHIVES",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai"
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "DECONSTRUCTION & CULTURE",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original"
       }
     ],
     "links": [
       {
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "slug": "2026-09-28-shanzhai-deconstructing-original",
         "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original",
         "date": "2026.09.28"
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "LATENT SPACES AND AI ARCHIVES"
+      "DECONSTRUCTION & CULTURE"
     ],
     "connected_tags": [
       "byung-chul-han",
       "shanzhai",
-      "generative-ai",
       "deconstruction",
-      "latent-space",
-      "authorship"
+      "authorship",
+      "philosophy"
     ]
   },
   {
@@ -2873,38 +2871,37 @@ window.DYNAMIC_TAGS = [
     "count": 1,
     "posts": [
       {
-        "id": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
+        "id": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
         "date": "2026.09.28",
         "format": "NOTE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "LATENT SPACES AND AI ARCHIVES",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai"
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "DECONSTRUCTION & CULTURE",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original"
       }
     ],
     "links": [
       {
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "slug": "2026-09-28-shanzhai-deconstructing-original",
         "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original",
         "date": "2026.09.28"
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "LATENT SPACES AND AI ARCHIVES"
+      "DECONSTRUCTION & CULTURE"
     ],
     "connected_tags": [
       "byung-chul-han",
-      "generative-ai",
       "deconstruction",
-      "latent-space",
       "authorship",
-      "reflections"
+      "reflections",
+      "philosophy"
     ]
   },
   {

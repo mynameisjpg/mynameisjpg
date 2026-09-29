@@ -41,9 +41,9 @@ backlinks:
   - slug: "/essays/foucault-borges-vector-space"
     title: "Foucault, Borges, and Vector Space"
     note: "High-dimensional embedding grids as modern epistemological matrices."
-  - slug: "/notes/shanzhai-deconstructing-original-generative-ai"
-    title: "Shanzhai and the Synthetic Copy"
-    note: "Deconstructive forgery and transformation in latent space."
+  - slug: "/notes/shanzhai-deconstructing-original"
+    title: "What If Nothing Is Ever Original? Thinking Through Shanzhai"
+    note: "Deconstructive variation and fluid aesthetics in Byung-Chul Han's theory."
 
 shareable: true
 allow_embed: true
