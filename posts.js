@@ -152,6 +152,8 @@ window.DYNAMIC_POSTS = [
     ],
     "tags": [
       "toolkit",
+      "free",
+      "download",
       "psychophysics",
       "visual-perception",
       "skill",

@@ -19,6 +19,8 @@ topic:
 
 tags:
   - "toolkit"
+  - "free"
+  - "download"
   - "psychophysics"
   - "visual-perception"
   - "skill"

@@ -355,6 +355,67 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "free",
+    "name": "free",
+    "label": "#free",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      },
+      {
+        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "date": "2026.09.26",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      },
+      {
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "format": "RESOURCE",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "download",
+      "psychophysics",
+      "visual-perception",
+      "skill",
+      "image-analysis"
+    ]
+  },
+  {
     "id": "psychophysics",
     "name": "psychophysics",
     "label": "#psychophysics",
@@ -1045,11 +1106,11 @@ window.DYNAMIC_TAGS = [
     ],
     "connected_tags": [
       "toolkit",
+      "free",
+      "download",
       "psychophysics",
       "visual-perception",
-      "skill",
-      "image-analysis",
-      "gestalt"
+      "skill"
     ]
   },
   {
@@ -1213,11 +1274,11 @@ window.DYNAMIC_TAGS = [
     ],
     "connected_tags": [
       "toolkit",
+      "free",
+      "download",
       "psychophysics",
       "visual-perception",
-      "skill",
-      "image-analysis",
-      "canvas-api"
+      "skill"
     ]
   },
   {
@@ -1297,11 +1358,11 @@ window.DYNAMIC_TAGS = [
     ],
     "connected_tags": [
       "toolkit",
+      "free",
+      "download",
       "psychophysics",
       "visual-perception",
-      "skill",
-      "image-analysis",
-      "canvas-api"
+      "skill"
     ]
   },
   {
@@ -1553,6 +1614,48 @@ window.DYNAMIC_TAGS = [
       "informatics",
       "networks",
       "ai"
+    ]
+  },
+  {
+    "id": "download",
+    "name": "download",
+    "label": "#download",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "free",
+      "psychophysics",
+      "visual-perception",
+      "skill",
+      "image-analysis"
     ]
   },
   {
@@ -1891,48 +1994,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "free",
-    "name": "free",
-    "label": "#free",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "date": "2026.09.26",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/harvard-s-computer-science-career-for-free.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "format": "RESOURCE",
-        "url": "posts/harvard-s-computer-science-career-for-free.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
-    ],
-    "subtopics": [
-      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
-    ],
-    "connected_tags": [
-      "course",
-      "career",
-      "computer sciences",
-      "informatics",
-      "networks",
-      "ai"
-    ]
-  },
-  {
     "id": "generative-ai",
     "name": "generative-ai",
     "label": "#generative-ai",
@@ -2008,11 +2069,11 @@ window.DYNAMIC_TAGS = [
     ],
     "connected_tags": [
       "toolkit",
+      "free",
+      "download",
       "psychophysics",
       "visual-perception",
-      "skill",
-      "image-analysis",
-      "canvas-api"
+      "skill"
     ]
   },
   {
@@ -2257,11 +2318,11 @@ window.DYNAMIC_TAGS = [
     ],
     "connected_tags": [
       "toolkit",
+      "free",
+      "download",
       "psychophysics",
       "visual-perception",
-      "skill",
-      "canvas-api",
-      "gestalt"
+      "skill"
     ]
   },
   {
@@ -3133,11 +3194,11 @@ window.DYNAMIC_TAGS = [
     ],
     "connected_tags": [
       "toolkit",
+      "free",
+      "download",
       "psychophysics",
       "visual-perception",
-      "image-analysis",
-      "canvas-api",
-      "gestalt"
+      "image-analysis"
     ]
   },
   {
@@ -3299,12 +3360,12 @@ window.DYNAMIC_TAGS = [
       "ANATOMY AND PSYCHOPHYSICS OF VISION"
     ],
     "connected_tags": [
+      "free",
+      "download",
       "psychophysics",
       "visual-perception",
       "skill",
-      "image-analysis",
-      "canvas-api",
-      "gestalt"
+      "image-analysis"
     ]
   },
   {
