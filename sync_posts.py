@@ -511,6 +511,7 @@ def generate_post_html_files(posts):
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title} — Untitled.jpg</title>
   <meta name="description" content="{subtitle}">
+  <base href="../">
   <link rel="canonical" href="{post_url}">
 
   <!-- Open Graph / LinkedIn / Facebook / WhatsApp -->
@@ -543,15 +544,15 @@ def generate_post_html_files(posts):
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 
   <!-- Design System Stylesheets -->
-  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="index.css">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
-  <link rel="shortcut icon" type="image/svg+xml" href="../assets/images/favicon.svg">
-  <link rel="apple-touch-icon" href="../assets/images/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="shortcut icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
   
   <!-- Autonomous Web Components -->
-  <script src="../js/components/sidebar-rail.js"></script>
+  <script src="js/components/sidebar-rail.js"></script>
 </head>
 <body>
 
@@ -680,8 +681,8 @@ def generate_post_html_files(posts):
   <script>
     window.INITIAL_POST_SLUG = "{slug}";
   </script>
-  <script src="../posts.js"></script>
-  <script src="../app.js"></script>
+  <script src="posts.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
 """
