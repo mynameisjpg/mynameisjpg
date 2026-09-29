@@ -3,26 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Untitled.jpg — Overthinking Undervalued Means of Thought</title>
-  <meta name="description" content="Essays, field notes, curated bookmarks, and practical resources on AI perception, cognitive psychophysics, latent spaces, and media ecology.">
-  <link rel="canonical" href="https://mynameisjpg.github.io/">
+  <title>Excavating AI (the unEthics of Machine Learning Training) — Untitled.jpg</title>
+  <meta name="description" content="A lesson in what happens when people are categorized like objects.">
+  <link rel="canonical" href="https://mynameisjpg.github.io/posts/2026-09-26-excavating-ai-the-unethics-of-machine-learning-training.html">
 
-  <!-- Open Graph / LinkedIn / Facebook -->
-  <meta property="og:type" content="website">
+  <!-- Open Graph / LinkedIn / Facebook / WhatsApp -->
+  <meta property="og:type" content="article">
   <meta property="og:site_name" content="Untitled.jpg">
-  <meta property="og:title" content="Untitled.jpg — Overthinking Undervalued Means of Thought">
-  <meta property="og:description" content="Essays, field notes, curated bookmarks, and practical resources on AI perception, cognitive psychophysics, latent spaces, and media ecology.">
-  <meta property="og:url" content="https://mynameisjpg.github.io/">
-  <meta property="og:image" content="https://mynameisjpg.github.io/assets/images/favicon.svg">
+  <meta property="og:title" content="Excavating AI (the unEthics of Machine Learning Training)">
+  <meta property="og:description" content="A lesson in what happens when people are categorized like objects.">
+  <meta property="og:url" content="https://mynameisjpg.github.io/posts/2026-09-26-excavating-ai-the-unethics-of-machine-learning-training.html">
+  <meta property="og:image" content="https://mynameisjpg.github.io/assets/images/this-is-not-a-human.jpg">
+  <meta property="article:published_time" content="2026.09.26">
+  <meta property="article:author" content="Juan P. Giusepponi">
 
   <!-- Twitter / X Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@untitled_jpg">
-  <meta name="twitter:title" content="Untitled.jpg — Overthinking Undervalued Means of Thought">
-  <meta name="twitter:description" content="Essays, field notes, curated bookmarks, and practical resources on AI perception, cognitive psychophysics, latent spaces, and media ecology.">
-  <meta name="twitter:image" content="https://mynameisjpg.github.io/assets/images/favicon.svg">
-  
-  <!-- Typography: Azeret Mono (UI), Platypi (Prose), JetBrains Mono (ASCII Diagrams & Code) -->
+  <meta name="twitter:title" content="Excavating AI (the unEthics of Machine Learning Training)">
+  <meta name="twitter:description" content="A lesson in what happens when people are categorized like objects.">
+  <meta name="twitter:image" content="https://mynameisjpg.github.io/assets/images/this-is-not-a-human.jpg">
+
+  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&family=Platypi:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
@@ -34,25 +36,23 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 
-  <!-- Modular Design System Stylesheet (Imports Tokens & Components) -->
-  <link rel="stylesheet" href="index.css">
+  <!-- Design System Stylesheets -->
+  <link rel="stylesheet" href="../index.css">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <link rel="shortcut icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="shortcut icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/images/favicon.svg">
+  
   <!-- Autonomous Web Components -->
-  <script src="js/components/sidebar-rail.js"></script>
+  <script src="../js/components/sidebar-rail.js"></script>
 </head>
 <body>
 
-  <!-- ====================================================================
-       COMPONENT 1: ULTRA-THIN LEFT SIDEBAR RAIL (48px) / TOP NAVBAR
-       Autonomous Web Component: <sidebar-rail> (js/components/sidebar-rail.js)
-       ==================================================================== -->
+  <!-- Sidebar Rail Component -->
   <sidebar-rail active-page="home" has-search></sidebar-rail>
 
-  <!-- Interactive Dropdown Overlays attached to Top Navbar -->
+  <!-- Interactive Dropdown Overlays -->
   <div id="dispatch-log-dropdown" class="top-dropdown-panel menu-dropdown-panel dispatch-log-panel" style="display:none;">
     <div class="dropdown-header">[ DISPATCH LOG ]</div>
     <button type="button" class="dropdown-option active" data-filter="all">SHOW ALL DISPATCHES</button>
@@ -82,23 +82,13 @@
     <button type="button" class="dropdown-option" data-sort="title">ALPHABETICAL (A-Z)</button>
   </div>
 
-  <!-- ====================================================================
-       COMPONENT 2: SPLIT 50-50 LAYOUT (Matrix Column & Reader Column)
-       File: css/components/split-layout.css
-       ==================================================================== -->
-  <main class="split-layout" data-component="split-shell">
-
-    <!-- COMPONENT 3: ASYMMETRIC GRID MATRIX (50% Column)
-         File: css/components/card-matrix.css -->
+  <!-- Split 50-50 Layout -->
+  <main class="split-layout reader-open" data-component="split-shell">
     <section class="grid-column" data-component="dispatch-matrix" aria-label="Dispatch Grid Matrix">
-
-      <!-- UNIFIED MATRIX HEADER (LEGEND & CONTROLS ALIGNED) -->
       <div class="matrix-header-group">
-        <!-- LEFT COLUMN: SYS_LOG & FILTER/SORT PILLS -->
         <div class="header-col-left">
           <span class="header-legend">SYS_LOG // ASYMMETRIC_DISPATCH_MATRIX</span>
           <div class="controls-row-left">
-            <!-- FORMAT FILTER PILL DROPDOWN -->
             <div class="custom-select-wrapper flex-pill">
               <button type="button" class="btn-matrix-pill" id="filter-pill-btn" aria-haspopup="true" aria-expanded="false" title="Filter by format">
                 <span class="pill-label">FILTER:</span>
@@ -114,7 +104,6 @@
               </div>
             </div>
 
-            <!-- SORT ORDER PILL DROPDOWN -->
             <div class="custom-select-wrapper flex-pill">
               <button type="button" class="btn-matrix-pill" id="sort-pill-btn" aria-haspopup="true" aria-expanded="false" title="Sort dispatches">
                 <span class="pill-label">SORT:</span>
@@ -131,7 +120,6 @@
           </div>
         </div>
 
-        <!-- RIGHT COLUMN: MODE STATUS & SEARCH INPUT -->
         <div class="header-col-right">
           <span class="header-legend filter-status" id="active-filter-label">[MODE: ALL_DISPATCHES]</span>
           <div class="matrix-search-box">
@@ -142,37 +130,23 @@
         </div>
       </div>
 
-
-      <!-- Asymmetric 3x3 Card Grid Matrix (Dynamically Populated by app.js) -->
       <div class="card-grid-matrix" id="card-matrix"></div>
     </section>
 
-    <!-- COMPONENT 4: ESSAY READER PANE & 3-TIER METADATA (50% Column)
-         Files: css/components/reader-pane.css, css/components/metadata-tiers.css -->
+    <!-- Reading Pane -->
     <article class="post-column essay-column" id="essay-reading-pane" data-component="reader-pane" aria-label="Post Reader View">
-      <!-- Return to Grid Feed Button (Mobile / Narrow Screens) -->
       <button type="button" class="btn-return-grid" aria-label="Return to Grid Feed">
         <span class="return-arrow">&lt;&lt;</span>
         <span class="return-text">[ RETURN TO GRID FEED ]</span>
       </button>
-      <!-- Hydrated dynamically by app.js -->
     </article>
-
   </main>
 
-  <!-- ====================================================================
-       COMPONENT 5: FLOATING CONTROLS
-       File: css/components/floating-controls.css
-       ==================================================================== -->
   <div class="floating-nav-buttons" data-component="floating-controls">
     <button type="button" class="btn-nav-action" id="btn-scroll-top" title="Scroll Reader to Top">↑ TOP</button>
     <button type="button" class="btn-nav-action" id="btn-scroll-bottom" title="Scroll Reader to Bottom">↓ BOTTOM</button>
   </div>
 
-  <!-- ====================================================================
-       COMPONENT 6: NEWSLETTER SUBSCRIPTION MODAL
-       File: css/components/modal.css
-       ==================================================================== -->
   <dialog id="subscribe-modal" class="modal-dialog" data-component="subscribe-modal" aria-labelledby="modal-heading">
     <div class="modal-box">
       <div class="modal-header-tag">[ DISPATCH_SUBSCRIPTION // FREQUENCY: FORTNIGHTLY ]</div>
@@ -196,9 +170,11 @@
     </div>
   </dialog>
 
-  <!-- Dynamic Posts Feed (Auto-compiled from _posts/*.md) -->
-  <script src="posts.js"></script>
-  <!-- Client-Side Application Script -->
-  <script src="app.js"></script>
+  <!-- Specify active post slug for deep-load -->
+  <script>
+    window.INITIAL_POST_SLUG = "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training";
+  </script>
+  <script src="../posts.js"></script>
+  <script src="../app.js"></script>
 </body>
 </html>

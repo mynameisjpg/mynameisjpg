@@ -137,8 +137,11 @@ const ART_FALLBACKS = {
  * Dynamically Fetch posts.json (Live HTTP Server / Production Build)
  */
 async function loadDynamicPosts() {
+  const isSubdir = typeof window !== "undefined" && window.location.pathname.includes("/posts/");
+  const jsonPath = isSubdir ? "../posts.json?t=" + Date.now() : "posts.json?t=" + Date.now();
+
   try {
-    const res = await fetch("posts.json?t=" + Date.now());
+    const res = await fetch(jsonPath);
     if (res.ok) {
       const data = await res.json();
       if (Array.isArray(data) && data.length > 0) {
@@ -153,14 +156,15 @@ async function loadDynamicPosts() {
 
   const sortedPosts = getFilteredAndSortedPosts();
 
-  // Check URL Hash for deep-link
+  // Check URL Hash or INITIAL_POST_SLUG for deep-link
   const hash = (typeof window !== "undefined" && window.location && window.location.hash) ? window.location.hash.replace("#", "") : "";
+  const targetSlug = hash || (typeof window !== "undefined" ? window.INITIAL_POST_SLUG : "");
 
   // Render Matrix Cards
   renderCardMatrix(true);
 
-  if (hash && POSTS_DATABASE[hash]) {
-    activePostId = hash;
+  if (targetSlug && POSTS_DATABASE[targetSlug]) {
+    activePostId = targetSlug;
     selectAndRenderPost(activePostId, false);
   } else {
     activePostId = "";
@@ -473,7 +477,9 @@ function renderPost(postId) {
   const pane = document.getElementById("essay-reading-pane");
   if (!pane || !post) return;
 
-  const pageUrl = (typeof window !== "undefined" && window.location && window.location.href) ? window.location.href : "";
+  const canonicalSlug = post.slug || post.id || post.sys_id || postId;
+  const baseUrl = (typeof window !== "undefined" && window.location) ? (window.location.origin + window.location.pathname.replace(/\/posts\/.*$/, "/").replace(/\/index\.html$/, "/")) : "https://mynameisjpg.github.io/";
+  const pageUrl = `${baseUrl.replace(/\/$/, "")}/posts/${canonicalSlug}.html`;
 
   // Apply Per-Post Theme Mode
   if (post.theme === "light") {
@@ -481,8 +487,6 @@ function renderPost(postId) {
   } else {
     pane.classList.remove("theme-light");
   }
-
-  const canonicalSlug = post.slug || post.id || post.sys_id || postId;
 
   // Construct 3-Tier DOM Template
   pane.innerHTML = `
@@ -581,7 +585,7 @@ function renderPost(postId) {
               <span class="share-caption">SHARE DISPATCH:</span>
               
               <!-- Copy URL Button -->
-              <button type="button" class="btn-share" onclick="copyPostUrl()" title="Copy Link to Clipboard">
+              <button type="button" class="btn-share" onclick="copyPostUrl('${postId}')" title="Copy Link to Clipboard">
                 <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
                 <span>COPY URL</span>
               </button>
@@ -1320,8 +1324,14 @@ async function handleSubscribeSubmit(event) {
 /**
  * Dispatch Sharing Handlers
  */
-function copyPostUrl() {
-  const url = window.location.href;
+function copyPostUrl(postId) {
+  const currentPost = postId ? POSTS_DATABASE[postId] : (activePostId ? POSTS_DATABASE[activePostId] : null);
+  let url = window.location.href;
+  if (currentPost) {
+    const slug = currentPost.slug || currentPost.id || currentPost.sys_id;
+    const baseUrl = (window.location.origin + window.location.pathname.replace(/\/posts\/.*$/, "/").replace(/\/index\.html$/, "/")).replace(/\/$/, "");
+    url = `${baseUrl}/posts/${slug}.html`;
+  }
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(url).then(() => {
       alert(`[COPIED] Dispatch URL copied to clipboard:\n${url}`);
@@ -1336,7 +1346,9 @@ function copyPostUrl() {
 function copyEmbedCard(postId) {
   const post = POSTS_DATABASE[postId] || Object.values(POSTS_DATABASE)[0];
   if (!post) return;
-  const currentUrl = window.location.origin + window.location.pathname + '#' + (post.slug || postId);
+  const slug = post.slug || post.id || post.sys_id || postId;
+  const baseUrl = (window.location.origin + window.location.pathname.replace(/\/posts\/.*$/, "/").replace(/\/index\.html$/, "/")).replace(/\/$/, "");
+  const currentUrl = `${baseUrl}/posts/${slug}.html`;
   const embedCode = `<div class="untitled-dispatch-embed" style="border:1px solid #333;background:#161616;color:#f5f5f5;padding:1.25rem;border-radius:2px;font-family:sans-serif;max-width:560px;">\n  <div style="font-family:monospace;font-size:0.75rem;color:#E84A5F;letter-spacing:0.08em;margin-bottom:0.4rem;">[ UNTITLED.JPG // ${post.format} ]</div>\n  <h3 style="margin:0 0 0.5rem 0;font-size:1.15rem;line-height:1.3;"><a href="${currentUrl}" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:none;">${post.title}</a></h3>\n  <p style="color:#cccccc;font-size:0.88rem;line-height:1.45;margin:0 0 0.75rem 0;">${post.subtitle}</p>\n  <div style="font-family:monospace;font-size:0.7rem;color:#888888;">BY ${post.author} (${post.posted_by}) • ${post.date} • ${post.read_time}</div>\n</div>`;
   
   if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -1352,7 +1364,9 @@ function copyEmbedCard(postId) {
 
 function shareInstagram(postId) {
   const post = POSTS_DATABASE[postId] || Object.values(POSTS_DATABASE)[0];
-  const url = window.location.origin + window.location.pathname + '#' + (post.slug || postId);
+  const slug = post ? (post.slug || post.id || post.sys_id || postId) : postId;
+  const baseUrl = (window.location.origin + window.location.pathname.replace(/\/posts\/.*$/, "/").replace(/\/index\.html$/, "/")).replace(/\/$/, "");
+  const url = `${baseUrl}/posts/${slug}.html`;
   const storyText = `${post ? post.title : 'Untitled.jpg Dispatch'}\n\nRead full dispatch: ${url}`;
   
   if (navigator.clipboard && navigator.clipboard.writeText) {
