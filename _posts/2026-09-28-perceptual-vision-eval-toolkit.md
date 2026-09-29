@@ -62,7 +62,7 @@ Standard computer vision algorithms usually rely on structural comparison metric
 
 Think of **Perceptual Vision Eval** as an **eye doctor for computer graphics and web UIs**.
 
-It is an open-source JavaScript and Node.js toolkit built on visual psychophysics. It reads image pixel data or HTML5 `<canvas>` elements, runs them through models of human retinal and cognitive vision, and returns an automated perceptual health score out of 100.
+It is an open-source JavaScript and Node.js toolkit built on visual psychophysics. It reads image pixel data or HTML5 $<canvas>$ elements, runs them through models of human retinal and cognitive vision, and returns an automated perceptual health score out of 100.
 
 ---
 
