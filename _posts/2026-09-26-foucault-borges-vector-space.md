@@ -32,7 +32,6 @@ toc: true
 math: true
 
 sys_id: "SYS_260926_FBVEC"
-vector_dim: 0001
 reading_time: "8 min read"
 
 links:
