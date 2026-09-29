@@ -436,39 +436,49 @@ document.addEventListener('DOMContentLoaded', () => {
   function openFullViewModal(post) {
     if (!fullModal || !post) return;
 
+    // Hide HUD panel when opening lightbox view
+    const hudPanel = document.querySelector('.floating-hud-panel');
+    if (hudPanel) hudPanel.style.display = 'none';
+
     if (fullImg) fullImg.src = post.image;
-    if (fullTitle) fullTitle.textContent = post.title;
-    if (fullMeta) fullMeta.textContent = `[${post.format || 'POST'}] • ${post.date || ''} • ${post.pillar || 'AI PERCEPTION'}`;
     if (downloadBtn) {
       downloadBtn.href = post.image;
       const ext = post.image.split('.').pop() || 'png';
       downloadBtn.download = `${post.slug || post.id || 'cover-art'}.${ext}`;
     }
-    if (dispatchBtn) dispatchBtn.href = `index.html?post=${post.slug || post.id}`;
 
     if (shareBtnText) shareBtnText.textContent = 'SHARE';
     fullModal.style.display = 'flex';
   }
 
+  function closeFullViewModal() {
+    if (fullModal) fullModal.style.display = 'none';
+    // Restore HUD panel when closing lightbox view
+    const hudPanel = document.querySelector('.floating-hud-panel');
+    if (hudPanel) hudPanel.style.display = 'flex';
+  }
+
   window.openFullViewModal = openFullViewModal;
+  window.closeFullViewModal = closeFullViewModal;
 
   function setupFullViewModal() {
     if (closeBtn) {
       closeBtn.addEventListener('click', () => {
-        fullModal.style.display = 'none';
+        closeFullViewModal();
       });
     }
 
     if (fullModal) {
       fullModal.addEventListener('click', (e) => {
-        if (e.target === fullModal) {
-          fullModal.style.display = 'none';
+        if (e.target === fullModal || e.target.classList.contains('artwork-full-container')) {
+          closeFullViewModal();
         }
       });
     }
 
     if (shareBtn) {
-      shareBtn.addEventListener('click', () => {
+      shareBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         const post = galleryPosts[currentIndex];
         const shareUrl = `${window.location.origin}${window.location.pathname.replace('gallery.html', 'index.html')}?post=${post.slug || post.id}`;
         
@@ -485,7 +495,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && fullModal && fullModal.style.display === 'flex') {
-        fullModal.style.display = 'none';
+        closeFullViewModal();
       }
     });
   }
