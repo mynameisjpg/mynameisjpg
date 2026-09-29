@@ -29,7 +29,7 @@ toc: true
 math: false
 
 sys_id: "SYS_260928_PLSTC"
-reading_time: "8 min read"
+reading_time: "14 min read"
 
 links:
   - title: "Traité du signe visuel. Pour une rhétorique de l'image (Groupe µ, 1992)"
@@ -60,11 +60,11 @@ When semiotics took off in the mid-twentieth century, analyzing images suffered 
 
 On one side was traditional art criticism: subjective, impressionistic, and dependent on artistic intuition rather than systematic analysis. On the other side was what **Groupe µ**—the Belgian group of semioticians founded at the University of Liège by Francis Edeline, Jean-Marie Klinkenberg, Jacques Dubois, Philippe Minguet, and their colleagues—called **linguistic imperialism**.
 
-For decades, scholars tried to force pictures into verbal molds. They slapped terms like "syntax" and "grammar" onto brushstrokes or pixels without asking whether visual images actually work like written sentences. 
+For decades, scholars tried to force pictures into verbal molds. They slapped terms like "syntax" and "grammar" onto brushstrokes or pixels without asking whether visual images actually work like written sentences.
 
 Words rely on arbitrary conventions. An image, by contrast, acts directly on human perception—on how our visual system extracts shape, color, and structure from light.
 
-In their 1992 work *Traité du signe visuel* ("Treatise on the Visual Sign"), Groupe µ set out to build an autonomous way to analyze images. Their most important insight was separating every visual message into two distinct planes: **the Iconic Sign** and **the Plastic Sign**.
+In their 1992 work _Traité du signe visuel_ ("Treatise on the Visual Sign"), Groupe µ set out to build an autonomous way to analyze images. Their most important insight was separating every visual message into two distinct planes: **the Iconic Sign** and **the Plastic Sign**.
 
 Understanding this separation isn't just an academic exercise. It cuts right to why AI image generators like Midjourney, Stable Diffusion, or FLUX behave the way they do: **AI has mastered plastic manipulation while remaining structurally blind to iconic reality.**
 
@@ -95,7 +95,7 @@ Instead, Groupe µ broke down the iconic sign into three connected parts:
 - **The Referent:** The real-world object, scene, or model.
 - **The Type:** The mental concept or category stored in our memory that bridges the signifier and the referent.
 
-An image of a dog isn't iconic because its pixels physically match a real dog in the world. It's iconic because the pattern of lines and shapes triggers the mental category of "dog" (*Type*) in our mind. As long as key structural features survive, recognition works—whether it's a 5-pixel pixel-art dog or a high-res photo.
+An image of a dog isn't iconic because its pixels physically match a real dog in the world. It's iconic because the pattern of lines and shapes triggers the mental category of "dog" (_Type_) in our mind. As long as key structural features survive, recognition works—whether it's a 5-pixel pixel-art dog or a high-res photo.
 
 ---
 
@@ -103,13 +103,13 @@ An image of a dog isn't iconic because its pixels physically match a real dog in
 
 Groupe µ's second major contribution was proving that images carry meaning completely independent of depicted objects: **the Plastic Sign**.
 
-Plastic signs don't ask *"What object is this showing?"* They operate directly on perception through three spatial dimensions:
+Plastic signs don't ask _"What object is this showing?"_ They operate directly on perception through three spatial dimensions:
 
-| Plastic Dimension | Visual Element | What it Does to Perception |
-| :--- | :--- | :--- |
-| **Form** | Lines, contours, geometry | Defines boundaries, orientation, and shape grouping |
-| **Color** | Hue, saturation, brightness | Sets tone, separates figure from ground, creates contrast |
-| **Texture** | Micro-patterns, grain, surface frequency | Gives tactile feel, surface density, and visual weight |
+| Plastic Dimension | Visual Element                           | What it Does to Perception                                |
+| :---------------- | :--------------------------------------- | :-------------------------------------------------------- |
+| **Form**          | Lines, contours, geometry                | Defines boundaries, orientation, and shape grouping       |
+| **Color**         | Hue, saturation, brightness              | Sets tone, separates figure from ground, creates contrast |
+| **Texture**       | Micro-patterns, grain, surface frequency | Gives tactile feel, surface density, and visual weight    |
 
 A plastic sign doesn't care about real-world objects. A bold red rectangle, a cross-hatched shadow, or a smooth gradient hits your visual cortex long before your brain decides whether it's looking at a chair, a face, or a landscape.
 
@@ -131,13 +131,13 @@ For Groupe µ, visual rhetoric isn't about flowery language. It's about how an i
 
 They defined this through three core concepts:
 
-- **Degree Zero (*Degré zéro*):** The baseline norm or expected visual pattern. This can be a universal visual baseline (how light normally behaves) or a local baseline (the style established within a specific picture).
-- **Deviation (*Alotopy*):** A deliberate break from the expected baseline norm.
+- **Degree Zero (_Degré zéro_):** The baseline norm or expected visual pattern. This can be a universal visual baseline (how light normally behaves) or a local baseline (the style established within a specific picture).
+- **Deviation (_Alotopy_):** A deliberate break from the expected baseline norm.
 - **Re-evaluation:** The moment when the viewer notices the deviation and makes sense of the surprise.
 
 Visual rhetoric works by adding, removing, swapping, or rearranging elements across both plastic and iconic planes.
 
-When René Magritte paints a female torso where a face should be in *Le Viol*, he swaps iconic elements while preserving the plastic contour of a head. The plastic shape tells your eyes "this is a head," but the iconic content reveals a torso. That clash between plastic expectation and iconic reality is a classic visual deviation.
+When René Magritte paints a female torso where a face should be in _Le Viol_, he swaps iconic elements while preserving the plastic contour of a head. The plastic shape tells your eyes "this is a head," but the iconic content reveals a torso. That clash between plastic expectation and iconic reality is a classic visual deviation.
 
 ### Iconoplasticity
 
@@ -147,13 +147,13 @@ Groupe µ used the term **iconoplasticity** to describe how plastic signs and ic
 
 ## 06. The Frame: Where the Picture Ends
 
-Groupe µ spent considerable time analyzing the frame (*le bord* or *le cadre*). They distinguished between a **contour** (the edge defining an object inside the picture) and the **frame** (the boundary separating the artwork from the surrounding world).
+Groupe µ spent considerable time analyzing the frame (_le bord_ or _le cadre_). They distinguished between a **contour** (the edge defining an object inside the picture) and the **frame** (the boundary separating the artwork from the surrounding world).
 
 The frame is a hybrid boundary. It belongs both to the picture and to the space around it. Groupe µ highlighted several ways images manipulate the frame:
 
-1. **Overflow (*Débordement*):** Visual elements break past the border into the outer space.
-2. **Contraction (*Bornage*):** The frame shrinks inward, cropping or compressing the image.
-3. **Frame Excess (*Embordement*):** The frame becomes so thick or dominant that it crowds out the picture inside.
+1. **Overflow (_Débordement_):** Visual elements break past the border into the outer space.
+2. **Contraction (_Bornage_):** The frame shrinks inward, cropping or compressing the image.
+3. **Frame Excess (_Embordement_):** The frame becomes so thick or dominant that it crowds out the picture inside.
 4. **Iconic Frame:** The frame ceases to be a neutral border and becomes a detailed picture itself (like ornate painted borders or computational UI margins).
 
 ---
@@ -162,7 +162,7 @@ The frame is a hybrid boundary. It belongs both to the picture and to the space 
 
 This brings us to generative AI. Why is Groupe µ's framework so useful for understanding tools like Midjourney, Stable Diffusion, or ChatGPT image generators?
 
-When a diffusion model trains on millions of images, it doesn't build mental concepts (*Types*) or learn how physical objects exist in 3D space (*Referents*). It learns statistical correlations between words and visual features: lighting, color gradients, edge distributions, and surface textures.
+When a diffusion model trains on millions of images, it doesn't build mental concepts (_Types_) or learn how physical objects exist in 3D space (_Referents_). It learns statistical correlations between words and visual features: lighting, color gradients, edge distributions, and surface textures.
 
 This creates the fundamental split in AI images:
 
@@ -175,7 +175,7 @@ When you look at a synthetic image, your brain's early visual system is instantl
 
 ## 08. Beyond "Fake News" Panics
 
-Groupe µ’s *Traité du signe visuel* gives us a clear vocabulary to talk about AI images without relying on vague complaints about "fake pictures."
+Groupe µ’s _Traité du signe visuel_ gives us a clear vocabulary to talk about AI images without relying on vague complaints about "fake pictures."
 
 AI generators aren't mimicking human thought or capturing real-world meaning. They are hyper-specialized **plastic rhetoric engines**. They manipulate color, light, geometry, and texture with incredible precision, while remaining completely ungrounded from physical reality.
 

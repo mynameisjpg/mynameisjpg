@@ -42,8 +42,8 @@ links:
     description: "Source code, unit test suites, and interactive HTML5 Canvas demo for automated visual perceptual evaluation."
 
 backlinks:
-  - slug: "/essays/semiotics-plastic-signs-groupe-mu"
-    title: "The Semiotics of Plastic Deviation: Groupe µ"
+  - slug: "/essays/ai-images-groupe-mu"
+    title: "Why AI Images Look Perfect Until You Look Closer: Groupe µ"
     note: "Theoretical grounding for plastic signs (form, color, texture) in computer vision."
 
 shareable: true

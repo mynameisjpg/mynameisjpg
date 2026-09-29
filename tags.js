@@ -73,16 +73,6 @@ window.DYNAMIC_TAGS = [
     "count": 3,
     "posts": [
       {
-        "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "date": "2026.09.28",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu"
-      },
-      {
         "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
         "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
@@ -91,6 +81,16 @@ window.DYNAMIC_TAGS = [
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands"
+      },
+      {
+        "id": "2026-09-28-ai-images-groupe-mu",
+        "slug": "2026-09-28-ai-images-groupe-mu",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
+        "date": "2026.09.28",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
       },
       {
         "id": "2026-09-26-foucault-borges-vector-space",
@@ -105,17 +105,17 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "date": "2026.09.28"
-      },
-      {
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
         "format": "BOOKMARK",
         "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "date": "2026.09.28"
+      },
+      {
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
+        "slug": "2026-09-28-ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
         "date": "2026.09.28"
       },
       {
@@ -196,14 +196,14 @@ window.DYNAMIC_TAGS = [
         "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai"
       },
       {
-        "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "id": "2026-09-28-ai-images-groupe-mu",
+        "slug": "2026-09-28-ai-images-groupe-mu",
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu"
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
       }
     ],
     "links": [
@@ -216,9 +216,9 @@ window.DYNAMIC_TAGS = [
       },
       {
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "slug": "2026-09-28-ai-images-groupe-mu",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
         "date": "2026.09.28"
       }
     ],
@@ -308,16 +308,6 @@ window.DYNAMIC_TAGS = [
     "count": 2,
     "posts": [
       {
-        "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "date": "2026.09.28",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu"
-      },
-      {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
@@ -326,21 +316,31 @@ window.DYNAMIC_TAGS = [
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
         "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit"
+      },
+      {
+        "id": "2026-09-28-ai-images-groupe-mu",
+        "slug": "2026-09-28-ai-images-groupe-mu",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
+        "date": "2026.09.28",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
       }
     ],
     "links": [
-      {
-        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "date": "2026.09.28"
-      },
       {
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
         "slug": "2026-09-28-perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
         "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
+        "date": "2026.09.28"
+      },
+      {
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
+        "slug": "2026-09-28-ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
         "date": "2026.09.28"
       }
     ],
@@ -353,12 +353,12 @@ window.DYNAMIC_TAGS = [
       "MODES OF SEEING & VISUAL SEMIOTICS"
     ],
     "connected_tags": [
-      "semiotics",
-      "groupe-mu",
-      "plastic-signs",
-      "iconicity",
-      "generative-ai",
-      "toolkit"
+      "toolkit",
+      "psychophysics",
+      "canvas-api",
+      "gestalt",
+      "color-contrast",
+      "computer-vision"
     ]
   },
   {
@@ -567,22 +567,22 @@ window.DYNAMIC_TAGS = [
     "count": 1,
     "posts": [
       {
-        "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "id": "2026-09-28-ai-images-groupe-mu",
+        "slug": "2026-09-28-ai-images-groupe-mu",
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu"
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
       }
     ],
     "links": [
       {
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "slug": "2026-09-28-ai-images-groupe-mu",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
         "date": "2026.09.28"
       }
     ],
@@ -1913,22 +1913,22 @@ window.DYNAMIC_TAGS = [
     "count": 1,
     "posts": [
       {
-        "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "id": "2026-09-28-ai-images-groupe-mu",
+        "slug": "2026-09-28-ai-images-groupe-mu",
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu"
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
       }
     ],
     "links": [
       {
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "slug": "2026-09-28-ai-images-groupe-mu",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
         "date": "2026.09.28"
       }
     ],
@@ -2038,22 +2038,22 @@ window.DYNAMIC_TAGS = [
     "count": 1,
     "posts": [
       {
-        "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "id": "2026-09-28-ai-images-groupe-mu",
+        "slug": "2026-09-28-ai-images-groupe-mu",
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu"
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
       }
     ],
     "links": [
       {
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "slug": "2026-09-28-ai-images-groupe-mu",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
         "date": "2026.09.28"
       }
     ],
@@ -2497,22 +2497,22 @@ window.DYNAMIC_TAGS = [
     "count": 1,
     "posts": [
       {
-        "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "id": "2026-09-28-ai-images-groupe-mu",
+        "slug": "2026-09-28-ai-images-groupe-mu",
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu"
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
       }
     ],
     "links": [
       {
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "slug": "2026-09-28-ai-images-groupe-mu",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
         "date": "2026.09.28"
       }
     ],
@@ -2748,22 +2748,22 @@ window.DYNAMIC_TAGS = [
     "count": 1,
     "posts": [
       {
-        "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "id": "2026-09-28-ai-images-groupe-mu",
+        "slug": "2026-09-28-ai-images-groupe-mu",
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu"
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
       }
     ],
     "links": [
       {
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "slug": "2026-09-28-ai-images-groupe-mu",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
+        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
         "date": "2026.09.28"
       }
     ],

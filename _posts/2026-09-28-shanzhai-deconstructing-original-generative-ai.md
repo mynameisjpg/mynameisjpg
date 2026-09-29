@@ -40,8 +40,8 @@ links:
     description: "Philosophical reflection on copy culture, original vs. forgery, and adaptive fluid aesthetics in Far Eastern thought."
 
 backlinks:
-  - slug: "/essays/semiotics-plastic-signs-groupe-mu"
-    title: "The Semiotics of Plastic Deviation: Groupe µ"
+  - slug: "/essays/ai-images-groupe-mu"
+    title: "Why AI Images Look Perfect Until You Look Closer: Groupe µ"
     note: "Analysis of plastic rhetoric in latent image generation."
 
 shareable: true
