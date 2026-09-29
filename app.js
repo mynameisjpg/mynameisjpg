@@ -422,7 +422,8 @@ function selectAndRenderPost(postId, updateUrl = true) {
   if (!postId || !POSTS_DATABASE[postId]) return;
   activePostId = postId;
   const targetPost = POSTS_DATABASE[postId];
-  const canonicalSlug = targetPost ? (targetPost.slug || targetPost.id || targetPost.sys_id) : postId;
+  const rawSlug = targetPost ? (targetPost.slug || targetPost.id || targetPost.sys_id) : postId;
+  const canonicalSlug = String(rawSlug).replace(/^\d{4}-\d{2}-\d{2}-/, "");
 
   const cards = document.querySelectorAll(".grid-card");
   cards.forEach(c => {
@@ -476,6 +477,23 @@ function closeReaderPane() {
 }
 
 /**
+ * Helper to get canonical permanent URL without dates in the slug
+ */
+function getCanonicalPostUrl(postOrId) {
+  const post = (typeof postOrId === "object" && postOrId) ? postOrId : (POSTS_DATABASE[postOrId] || (activePostId ? POSTS_DATABASE[activePostId] : null));
+  const raw = post ? (post.slug || post.id || post.sys_id || postOrId) : postOrId;
+  const clean = String(raw || "").replace(/^\d{4}-\d{2}-\d{2}-/, "");
+  
+  if (typeof window !== "undefined" && window.location && window.location.origin) {
+    const origin = window.location.origin;
+    // Extract base pathname removing any /posts/... or index.html
+    const basePath = window.location.pathname.replace(/\/posts\/.*$/, "/").replace(/\/index\.html$/, "/").replace(/\/$/, "");
+    return `${origin}${basePath}/posts/${clean}.html`;
+  }
+  return `https://mynameisjpg.github.io/posts/${clean}.html`;
+}
+
+/**
  * Reader Pane Component Renderer (3-Tier Metadata Architecture)
  */
 function renderPost(postId) {
@@ -483,10 +501,7 @@ function renderPost(postId) {
   const pane = document.getElementById("essay-reading-pane");
   if (!pane || !post) return;
 
-  const rawSlug = post.slug || post.id || post.sys_id || postId;
-  const canonicalSlug = rawSlug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
-  const baseUrl = (typeof window !== "undefined" && window.location) ? (window.location.origin + window.location.pathname.replace(/\/posts\/.*$/, "/").replace(/\/index\.html$/, "/")) : "https://mynameisjpg.github.io/";
-  const pageUrl = `${baseUrl.replace(/\/$/, "")}/posts/${canonicalSlug}.html`;
+  const pageUrl = getCanonicalPostUrl(post);
 
   // Apply Per-Post Theme Mode
   if (post.theme === "light") {
@@ -1332,14 +1347,7 @@ async function handleSubscribeSubmit(event) {
  * Dispatch Sharing Handlers
  */
 function copyPostUrl(postId) {
-  const currentPost = postId ? POSTS_DATABASE[postId] : (activePostId ? POSTS_DATABASE[activePostId] : null);
-  let url = window.location.href;
-  if (currentPost) {
-    const rawSlug = currentPost.slug || currentPost.id || currentPost.sys_id;
-    const slug = rawSlug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
-    const baseUrl = (window.location.origin + window.location.pathname.replace(/\/posts\/.*$/, "/").replace(/\/index\.html$/, "/")).replace(/\/$/, "");
-    url = `${baseUrl}/posts/${slug}.html`;
-  }
+  const url = getCanonicalPostUrl(postId);
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(url).then(() => {
       alert(`[COPIED] Dispatch URL copied to clipboard:\n${url}`);
@@ -1352,12 +1360,9 @@ function copyPostUrl(postId) {
 }
 
 function copyEmbedCard(postId) {
-  const post = POSTS_DATABASE[postId] || Object.values(POSTS_DATABASE)[0];
+  const post = postId ? POSTS_DATABASE[postId] : (activePostId ? POSTS_DATABASE[activePostId] : Object.values(POSTS_DATABASE)[0]);
   if (!post) return;
-  const rawSlug = post.slug || post.id || post.sys_id || postId;
-  const slug = rawSlug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
-  const baseUrl = (window.location.origin + window.location.pathname.replace(/\/posts\/.*$/, "/").replace(/\/index\.html$/, "/")).replace(/\/$/, "");
-  const currentUrl = `${baseUrl}/posts/${slug}.html`;
+  const currentUrl = getCanonicalPostUrl(post);
   const embedCode = `<div class="untitled-dispatch-embed" style="border:1px solid #333;background:#161616;color:#f5f5f5;padding:1.25rem;border-radius:2px;font-family:sans-serif;max-width:560px;">\n  <div style="font-family:monospace;font-size:0.75rem;color:#E84A5F;letter-spacing:0.08em;margin-bottom:0.4rem;">[ UNTITLED.JPG // ${post.format} ]</div>\n  <h3 style="margin:0 0 0.5rem 0;font-size:1.15rem;line-height:1.3;"><a href="${currentUrl}" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:none;">${post.title}</a></h3>\n  <p style="color:#cccccc;font-size:0.88rem;line-height:1.45;margin:0 0 0.75rem 0;">${post.subtitle}</p>\n  <div style="font-family:monospace;font-size:0.7rem;color:#888888;">BY ${post.author} (${post.posted_by}) • ${post.date} • ${post.read_time}</div>\n</div>`;
   
   if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -1372,11 +1377,8 @@ function copyEmbedCard(postId) {
 }
 
 function shareInstagram(postId) {
-  const post = POSTS_DATABASE[postId] || Object.values(POSTS_DATABASE)[0];
-  const rawSlug = post ? (post.slug || post.id || post.sys_id || postId) : postId;
-  const slug = rawSlug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
-  const baseUrl = (window.location.origin + window.location.pathname.replace(/\/posts\/.*$/, "/").replace(/\/index\.html$/, "/")).replace(/\/$/, "");
-  const url = `${baseUrl}/posts/${slug}.html`;
+  const post = postId ? POSTS_DATABASE[postId] : (activePostId ? POSTS_DATABASE[activePostId] : Object.values(POSTS_DATABASE)[0]);
+  const url = getCanonicalPostUrl(post);
   const storyText = `${post ? post.title : 'Untitled.jpg Dispatch'}\n\nRead full dispatch: ${url}`;
   
   if (navigator.clipboard && navigator.clipboard.writeText) {

@@ -9,72 +9,72 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
         "date": "2026.09.28",
         "format": "NOTE",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "DECONSTRUCTION & CULTURE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original"
+        "url": "posts/shanzhai-deconstructing-original.html"
       },
       {
         "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands"
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
       },
       {
         "id": "2026-09-28-ai-images-groupe-mu",
-        "slug": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
+        "url": "posts/ai-images-groupe-mu.html"
       },
       {
         "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space"
+        "url": "posts/foucault-borges-vector-space.html"
       }
     ],
     "links": [
       {
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
         "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original",
+        "url": "posts/shanzhai-deconstructing-original.html",
         "date": "2026.09.28"
       },
       {
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
         "date": "2026.09.28"
       },
       {
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
+        "url": "posts/ai-images-groupe-mu.html",
         "date": "2026.09.28"
       },
       {
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space",
+        "url": "posts/foucault-borges-vector-space.html",
         "date": "2026.09.26"
       }
     ],
@@ -91,38 +91,38 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
         "title": "Excavating AI (the unEthics of Machine Learning Training)",
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training"
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       },
       {
         "id": "2026-09-25-turing-queer-ai",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
         "date": "2026.09.25",
         "format": "ESSAY",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "index.html?post=2026-09-25-turing-queer-ai"
+        "url": "posts/turing-queer-ai.html"
       }
     ],
     "links": [
       {
         "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
         "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
         "date": "2026.09.26"
       },
       {
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-25-turing-queer-ai",
+        "url": "posts/turing-queer-ai.html",
         "date": "2026.09.25"
       }
     ],
@@ -139,38 +139,38 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
         "date": "2026.09.26",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free"
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
       },
       {
         "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa"
+        "url": "posts/lecun-world-models-jepa.html"
       }
     ],
     "links": [
       {
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
         "date": "2026.09.26"
       },
       {
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa",
+        "url": "posts/lecun-world-models-jepa.html",
         "date": "2026.09.24"
       }
     ],
@@ -187,38 +187,38 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit"
+        "url": "posts/perceptual-vision-eval-toolkit.html"
       },
       {
         "id": "2026-09-28-ai-images-groupe-mu",
-        "slug": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
+        "url": "posts/ai-images-groupe-mu.html"
       }
     ],
     "links": [
       {
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
         "date": "2026.09.28"
       },
       {
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
+        "url": "posts/ai-images-groupe-mu.html",
         "date": "2026.09.28"
       }
     ],
@@ -248,21 +248,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands"
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
       }
     ],
     "links": [
       {
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
         "date": "2026.09.28"
       }
     ],
@@ -281,21 +281,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit"
+        "url": "posts/perceptual-vision-eval-toolkit.html"
       }
     ],
     "links": [
       {
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
         "date": "2026.09.28"
       }
     ],
@@ -314,21 +314,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
         "date": "2026.09.28",
         "format": "NOTE",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "DECONSTRUCTION & CULTURE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original"
+        "url": "posts/shanzhai-deconstructing-original.html"
       }
     ],
     "links": [
       {
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
         "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original",
+        "url": "posts/shanzhai-deconstructing-original.html",
         "date": "2026.09.28"
       }
     ],
@@ -347,21 +347,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space"
+        "url": "posts/foucault-borges-vector-space.html"
       }
     ],
     "links": [
       {
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space",
+        "url": "posts/foucault-borges-vector-space.html",
         "date": "2026.09.26"
       }
     ],
@@ -380,21 +380,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa"
+        "url": "posts/lecun-world-models-jepa.html"
       }
     ],
     "links": [
       {
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa",
+        "url": "posts/lecun-world-models-jepa.html",
         "date": "2026.09.24"
       }
     ],
@@ -413,21 +413,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
         "date": "2026.09.26",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free"
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
       }
     ],
     "links": [
       {
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
         "date": "2026.09.26"
       }
     ],
@@ -446,21 +446,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-ai-images-groupe-mu",
-        "slug": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
+        "url": "posts/ai-images-groupe-mu.html"
       }
     ],
     "links": [
       {
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
+        "url": "posts/ai-images-groupe-mu.html",
         "date": "2026.09.28"
       }
     ],
@@ -479,21 +479,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-25-turing-queer-ai",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
         "date": "2026.09.25",
         "format": "ESSAY",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "index.html?post=2026-09-25-turing-queer-ai"
+        "url": "posts/turing-queer-ai.html"
       }
     ],
     "links": [
       {
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-25-turing-queer-ai",
+        "url": "posts/turing-queer-ai.html",
         "date": "2026.09.25"
       }
     ],
@@ -512,21 +512,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
         "title": "Excavating AI (the unEthics of Machine Learning Training)",
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training"
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
     ],
     "links": [
       {
         "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
         "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
         "date": "2026.09.26"
       }
     ],
@@ -545,21 +545,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit"
+        "url": "posts/perceptual-vision-eval-toolkit.html"
       }
     ],
     "links": [
       {
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
         "date": "2026.09.28"
       }
     ],
@@ -576,21 +576,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
         "date": "2026.09.26",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free"
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
       }
     ],
     "links": [
       {
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
         "date": "2026.09.26"
       }
     ],
@@ -618,21 +618,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-25-turing-queer-ai",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
         "date": "2026.09.25",
         "format": "ESSAY",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "index.html?post=2026-09-25-turing-queer-ai"
+        "url": "posts/turing-queer-ai.html"
       }
     ],
     "links": [
       {
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-25-turing-queer-ai",
+        "url": "posts/turing-queer-ai.html",
         "date": "2026.09.25"
       }
     ],
@@ -660,21 +660,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
         "title": "Excavating AI (the unEthics of Machine Learning Training)",
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training"
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
     ],
     "links": [
       {
         "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
         "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
         "date": "2026.09.26"
       }
     ],
@@ -701,21 +701,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
         "date": "2026.09.28",
         "format": "NOTE",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "DECONSTRUCTION & CULTURE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original"
+        "url": "posts/shanzhai-deconstructing-original.html"
       }
     ],
     "links": [
       {
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
         "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original",
+        "url": "posts/shanzhai-deconstructing-original.html",
         "date": "2026.09.28"
       }
     ],
@@ -742,21 +742,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-25-turing-queer-ai",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
         "date": "2026.09.25",
         "format": "ESSAY",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "index.html?post=2026-09-25-turing-queer-ai"
+        "url": "posts/turing-queer-ai.html"
       }
     ],
     "links": [
       {
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-25-turing-queer-ai",
+        "url": "posts/turing-queer-ai.html",
         "date": "2026.09.25"
       }
     ],
@@ -784,21 +784,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands"
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
       }
     ],
     "links": [
       {
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
         "date": "2026.09.28"
       }
     ],
@@ -826,21 +826,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space"
+        "url": "posts/foucault-borges-vector-space.html"
       }
     ],
     "links": [
       {
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space",
+        "url": "posts/foucault-borges-vector-space.html",
         "date": "2026.09.26"
       }
     ],
@@ -868,21 +868,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
         "date": "2026.09.28",
         "format": "NOTE",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "DECONSTRUCTION & CULTURE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original"
+        "url": "posts/shanzhai-deconstructing-original.html"
       }
     ],
     "links": [
       {
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
         "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original",
+        "url": "posts/shanzhai-deconstructing-original.html",
         "date": "2026.09.28"
       }
     ],
@@ -909,21 +909,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit"
+        "url": "posts/perceptual-vision-eval-toolkit.html"
       }
     ],
     "links": [
       {
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
         "date": "2026.09.28"
       }
     ],
@@ -951,21 +951,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
         "date": "2026.09.26",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free"
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
       }
     ],
     "links": [
       {
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
         "date": "2026.09.26"
       }
     ],
@@ -993,21 +993,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
         "date": "2026.09.26",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free"
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
       }
     ],
     "links": [
       {
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
         "date": "2026.09.26"
       }
     ],
@@ -1035,21 +1035,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit"
+        "url": "posts/perceptual-vision-eval-toolkit.html"
       }
     ],
     "links": [
       {
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
         "date": "2026.09.28"
       }
     ],
@@ -1077,21 +1077,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
         "date": "2026.09.26",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free"
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
       }
     ],
     "links": [
       {
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
         "date": "2026.09.26"
       }
     ],
@@ -1119,21 +1119,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit"
+        "url": "posts/perceptual-vision-eval-toolkit.html"
       }
     ],
     "links": [
       {
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
         "date": "2026.09.28"
       }
     ],
@@ -1161,21 +1161,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
         "date": "2026.09.26",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free"
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
       }
     ],
     "links": [
       {
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
         "date": "2026.09.26"
       }
     ],
@@ -1203,21 +1203,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands"
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
       }
     ],
     "links": [
       {
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
         "date": "2026.09.28"
       }
     ],
@@ -1245,21 +1245,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands"
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
       }
     ],
     "links": [
       {
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
         "date": "2026.09.28"
       }
     ],
@@ -1287,21 +1287,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands"
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
       }
     ],
     "links": [
       {
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
         "date": "2026.09.28"
       }
     ],
@@ -1329,21 +1329,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
         "date": "2026.09.28",
         "format": "NOTE",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "DECONSTRUCTION & CULTURE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original"
+        "url": "posts/shanzhai-deconstructing-original.html"
       }
     ],
     "links": [
       {
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
         "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original",
+        "url": "posts/shanzhai-deconstructing-original.html",
         "date": "2026.09.28"
       }
     ],
@@ -1370,21 +1370,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
         "date": "2026.09.26",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free"
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
       }
     ],
     "links": [
       {
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
         "date": "2026.09.26"
       }
     ],
@@ -1412,21 +1412,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
         "date": "2026.09.26",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free"
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
       }
     ],
     "links": [
       {
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
         "date": "2026.09.26"
       }
     ],
@@ -1454,21 +1454,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space"
+        "url": "posts/foucault-borges-vector-space.html"
       }
     ],
     "links": [
       {
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space",
+        "url": "posts/foucault-borges-vector-space.html",
         "date": "2026.09.26"
       }
     ],
@@ -1496,21 +1496,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa"
+        "url": "posts/lecun-world-models-jepa.html"
       }
     ],
     "links": [
       {
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa",
+        "url": "posts/lecun-world-models-jepa.html",
         "date": "2026.09.24"
       }
     ],
@@ -1538,21 +1538,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space"
+        "url": "posts/foucault-borges-vector-space.html"
       }
     ],
     "links": [
       {
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space",
+        "url": "posts/foucault-borges-vector-space.html",
         "date": "2026.09.26"
       }
     ],
@@ -1580,21 +1580,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-25-turing-queer-ai",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
         "date": "2026.09.25",
         "format": "ESSAY",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "index.html?post=2026-09-25-turing-queer-ai"
+        "url": "posts/turing-queer-ai.html"
       }
     ],
     "links": [
       {
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-25-turing-queer-ai",
+        "url": "posts/turing-queer-ai.html",
         "date": "2026.09.25"
       }
     ],
@@ -1622,21 +1622,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
         "title": "Excavating AI (the unEthics of Machine Learning Training)",
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training"
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
     ],
     "links": [
       {
         "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
         "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
         "date": "2026.09.26"
       }
     ],
@@ -1663,21 +1663,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space"
+        "url": "posts/foucault-borges-vector-space.html"
       }
     ],
     "links": [
       {
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space",
+        "url": "posts/foucault-borges-vector-space.html",
         "date": "2026.09.26"
       }
     ],
@@ -1705,21 +1705,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
         "date": "2026.09.26",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free"
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
       }
     ],
     "links": [
       {
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
         "date": "2026.09.26"
       }
     ],
@@ -1747,21 +1747,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-ai-images-groupe-mu",
-        "slug": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
+        "url": "posts/ai-images-groupe-mu.html"
       }
     ],
     "links": [
       {
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
+        "url": "posts/ai-images-groupe-mu.html",
         "date": "2026.09.28"
       }
     ],
@@ -1788,21 +1788,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit"
+        "url": "posts/perceptual-vision-eval-toolkit.html"
       }
     ],
     "links": [
       {
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
         "date": "2026.09.28"
       }
     ],
@@ -1830,21 +1830,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-ai-images-groupe-mu",
-        "slug": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
+        "url": "posts/ai-images-groupe-mu.html"
       }
     ],
     "links": [
       {
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
+        "url": "posts/ai-images-groupe-mu.html",
         "date": "2026.09.28"
       }
     ],
@@ -1871,21 +1871,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands"
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
       }
     ],
     "links": [
       {
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
         "date": "2026.09.28"
       }
     ],
@@ -1913,21 +1913,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands"
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
       }
     ],
     "links": [
       {
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
         "date": "2026.09.28"
       }
     ],
@@ -1955,21 +1955,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-ai-images-groupe-mu",
-        "slug": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
+        "url": "posts/ai-images-groupe-mu.html"
       }
     ],
     "links": [
       {
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
+        "url": "posts/ai-images-groupe-mu.html",
         "date": "2026.09.28"
       }
     ],
@@ -1996,21 +1996,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
         "title": "Excavating AI (the unEthics of Machine Learning Training)",
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training"
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
     ],
     "links": [
       {
         "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
         "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
         "date": "2026.09.26"
       }
     ],
@@ -2037,21 +2037,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit"
+        "url": "posts/perceptual-vision-eval-toolkit.html"
       }
     ],
     "links": [
       {
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
         "date": "2026.09.28"
       }
     ],
@@ -2079,21 +2079,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
         "title": "Excavating AI (the unEthics of Machine Learning Training)",
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training"
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
     ],
     "links": [
       {
         "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
         "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
         "date": "2026.09.26"
       }
     ],
@@ -2120,21 +2120,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-25-turing-queer-ai",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
         "date": "2026.09.25",
         "format": "ESSAY",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "index.html?post=2026-09-25-turing-queer-ai"
+        "url": "posts/turing-queer-ai.html"
       }
     ],
     "links": [
       {
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-25-turing-queer-ai",
+        "url": "posts/turing-queer-ai.html",
         "date": "2026.09.25"
       }
     ],
@@ -2162,21 +2162,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
         "date": "2026.09.26",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free"
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
       }
     ],
     "links": [
       {
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
         "date": "2026.09.26"
       }
     ],
@@ -2204,21 +2204,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa"
+        "url": "posts/lecun-world-models-jepa.html"
       }
     ],
     "links": [
       {
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa",
+        "url": "posts/lecun-world-models-jepa.html",
         "date": "2026.09.24"
       }
     ],
@@ -2246,21 +2246,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space"
+        "url": "posts/foucault-borges-vector-space.html"
       }
     ],
     "links": [
       {
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space",
+        "url": "posts/foucault-borges-vector-space.html",
         "date": "2026.09.26"
       }
     ],
@@ -2288,21 +2288,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
         "date": "2026.09.26",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free"
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
       }
     ],
     "links": [
       {
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
         "date": "2026.09.26"
       }
     ],
@@ -2330,21 +2330,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa"
+        "url": "posts/lecun-world-models-jepa.html"
       }
     ],
     "links": [
       {
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa",
+        "url": "posts/lecun-world-models-jepa.html",
         "date": "2026.09.24"
       }
     ],
@@ -2372,21 +2372,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
         "date": "2026.09.26",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free"
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
       }
     ],
     "links": [
       {
         "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-26-harvard-s-computer-science-career-for-free",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
         "date": "2026.09.26"
       }
     ],
@@ -2414,21 +2414,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-25-turing-queer-ai",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
         "date": "2026.09.25",
         "format": "ESSAY",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "index.html?post=2026-09-25-turing-queer-ai"
+        "url": "posts/turing-queer-ai.html"
       }
     ],
     "links": [
       {
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-25-turing-queer-ai",
+        "url": "posts/turing-queer-ai.html",
         "date": "2026.09.25"
       }
     ],
@@ -2456,21 +2456,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
         "date": "2026.09.28",
         "format": "NOTE",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "DECONSTRUCTION & CULTURE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original"
+        "url": "posts/shanzhai-deconstructing-original.html"
       }
     ],
     "links": [
       {
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
         "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original",
+        "url": "posts/shanzhai-deconstructing-original.html",
         "date": "2026.09.28"
       }
     ],
@@ -2497,21 +2497,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space"
+        "url": "posts/foucault-borges-vector-space.html"
       }
     ],
     "links": [
       {
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space",
+        "url": "posts/foucault-borges-vector-space.html",
         "date": "2026.09.26"
       }
     ],
@@ -2539,21 +2539,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-ai-images-groupe-mu",
-        "slug": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
+        "url": "posts/ai-images-groupe-mu.html"
       }
     ],
     "links": [
       {
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
+        "url": "posts/ai-images-groupe-mu.html",
         "date": "2026.09.28"
       }
     ],
@@ -2580,21 +2580,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands"
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
       }
     ],
     "links": [
       {
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
         "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
         "date": "2026.09.28"
       }
     ],
@@ -2622,21 +2622,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit"
+        "url": "posts/perceptual-vision-eval-toolkit.html"
       }
     ],
     "links": [
       {
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
         "date": "2026.09.28"
       }
     ],
@@ -2664,21 +2664,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-25-turing-queer-ai",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
         "date": "2026.09.25",
         "format": "ESSAY",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "index.html?post=2026-09-25-turing-queer-ai"
+        "url": "posts/turing-queer-ai.html"
       }
     ],
     "links": [
       {
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-25-turing-queer-ai",
+        "url": "posts/turing-queer-ai.html",
         "date": "2026.09.25"
       }
     ],
@@ -2706,21 +2706,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space"
+        "url": "posts/foucault-borges-vector-space.html"
       }
     ],
     "links": [
       {
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space",
+        "url": "posts/foucault-borges-vector-space.html",
         "date": "2026.09.26"
       }
     ],
@@ -2748,21 +2748,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
         "date": "2026.09.28",
         "format": "NOTE",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "DECONSTRUCTION & CULTURE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original"
+        "url": "posts/shanzhai-deconstructing-original.html"
       }
     ],
     "links": [
       {
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
         "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original",
+        "url": "posts/shanzhai-deconstructing-original.html",
         "date": "2026.09.28"
       }
     ],
@@ -2789,21 +2789,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-ai-images-groupe-mu",
-        "slug": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu"
+        "url": "posts/ai-images-groupe-mu.html"
       }
     ],
     "links": [
       {
         "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-ai-images-groupe-mu",
+        "url": "posts/ai-images-groupe-mu.html",
         "date": "2026.09.28"
       }
     ],
@@ -2830,21 +2830,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa"
+        "url": "posts/lecun-world-models-jepa.html"
       }
     ],
     "links": [
       {
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa",
+        "url": "posts/lecun-world-models-jepa.html",
         "date": "2026.09.24"
       }
     ],
@@ -2872,21 +2872,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
         "date": "2026.09.28",
         "format": "NOTE",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "DECONSTRUCTION & CULTURE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original"
+        "url": "posts/shanzhai-deconstructing-original.html"
       }
     ],
     "links": [
       {
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
         "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original",
+        "url": "posts/shanzhai-deconstructing-original.html",
         "date": "2026.09.28"
       }
     ],
@@ -2913,21 +2913,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit"
+        "url": "posts/perceptual-vision-eval-toolkit.html"
       }
     ],
     "links": [
       {
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
         "date": "2026.09.28"
       }
     ],
@@ -2955,21 +2955,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-25-turing-queer-ai",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
         "date": "2026.09.25",
         "format": "ESSAY",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "index.html?post=2026-09-25-turing-queer-ai"
+        "url": "posts/turing-queer-ai.html"
       }
     ],
     "links": [
       {
         "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-25-turing-queer-ai",
+        "url": "posts/turing-queer-ai.html",
         "date": "2026.09.25"
       }
     ],
@@ -2997,21 +2997,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa"
+        "url": "posts/lecun-world-models-jepa.html"
       }
     ],
     "links": [
       {
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa",
+        "url": "posts/lecun-world-models-jepa.html",
         "date": "2026.09.24"
       }
     ],
@@ -3039,21 +3039,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
         "title": "Excavating AI (the unEthics of Machine Learning Training)",
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training"
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
     ],
     "links": [
       {
         "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
         "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
         "date": "2026.09.26"
       }
     ],
@@ -3080,21 +3080,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit"
+        "url": "posts/perceptual-vision-eval-toolkit.html"
       }
     ],
     "links": [
       {
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
         "format": "RESOURCE",
-        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
         "date": "2026.09.28"
       }
     ],
@@ -3122,21 +3122,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space"
+        "url": "posts/foucault-borges-vector-space.html"
       }
     ],
     "links": [
       {
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space",
+        "url": "posts/foucault-borges-vector-space.html",
         "date": "2026.09.26"
       }
     ],
@@ -3164,21 +3164,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa"
+        "url": "posts/lecun-world-models-jepa.html"
       }
     ],
     "links": [
       {
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa",
+        "url": "posts/lecun-world-models-jepa.html",
         "date": "2026.09.24"
       }
     ],
@@ -3206,21 +3206,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
         "title": "Excavating AI (the unEthics of Machine Learning Training)",
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training"
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
     ],
     "links": [
       {
         "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
         "format": "BOOKMARK",
-        "url": "index.html?post=2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
         "date": "2026.09.26"
       }
     ],
@@ -3247,21 +3247,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa"
+        "url": "posts/lecun-world-models-jepa.html"
       }
     ],
     "links": [
       {
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa",
+        "url": "posts/lecun-world-models-jepa.html",
         "date": "2026.09.24"
       }
     ],
@@ -3289,21 +3289,21 @@ window.DYNAMIC_TAGS = [
     "posts": [
       {
         "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa"
+        "url": "posts/lecun-world-models-jepa.html"
       }
     ],
     "links": [
       {
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
         "format": "ESSAY",
-        "url": "index.html?post=2026-09-24-lecun-world-models-jepa",
+        "url": "posts/lecun-world-models-jepa.html",
         "date": "2026.09.24"
       }
     ],

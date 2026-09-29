@@ -497,6 +497,11 @@ def generate_post_html_files(posts):
         subtitle = (post.get("subtitle") or post.get("excerpt") or "Untitled.jpg — Dispatches on AI perception, cognitive psychophysics, and media archaeology.").replace('"', '&quot;')
         post_url = f"{SITE_ORIGIN}/posts/{clean_slug}.html"
         
+        # ISO 8601 publish date (YYYY-MM-DD) for LinkedIn and schema crawlers
+        raw_post_date = str(post.get("date", ""))
+        iso_date_match = re.search(r'(\d{4})[-.](\d{2})[-.](\d{2})', raw_post_date)
+        iso_published_time = f"{iso_date_match.group(1)}-{iso_date_match.group(2)}-{iso_date_match.group(3)}" if iso_date_match else raw_post_date
+
         # Resolve absolute image URL for Open Graph crawlers
         raw_image = post.get("image") or ""
         if raw_image.startswith("http://") or raw_image.startswith("https://"):
@@ -514,7 +519,6 @@ def generate_post_html_files(posts):
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title} — Untitled.jpg</title>
   <meta name="description" content="{subtitle}">
-  <base href="../">
   <link rel="canonical" href="{post_url}">
 
   <!-- Open Graph / LinkedIn / Facebook / WhatsApp -->
@@ -523,11 +527,12 @@ def generate_post_html_files(posts):
   <meta property="og:title" content="{title}">
   <meta property="og:description" content="{subtitle}">
   <meta property="og:url" content="{post_url}">
-  <meta property="og:image" content="{og_image}">
+  <meta name="image" property="og:image" content="{og_image}">
+  <meta property="og:image:secure_url" content="{og_image}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="{title}">
-  <meta property="article:published_time" content="{post.get('date', '')}">
+  <meta property="article:published_time" content="{iso_published_time}">
   <meta property="article:author" content="{post.get('author', 'Juan P. Giusepponi')}">
 
   <!-- Twitter / X Cards -->
@@ -536,6 +541,8 @@ def generate_post_html_files(posts):
   <meta name="twitter:title" content="{title}">
   <meta name="twitter:description" content="{subtitle}">
   <meta name="twitter:image" content="{og_image}">
+
+  <base href="../">
 
   <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -685,7 +692,7 @@ def generate_post_html_files(posts):
 
   <!-- Specify active post slug for deep-load -->
   <script>
-    window.INITIAL_POST_SLUG = "{raw_slug}";
+    window.INITIAL_POST_SLUG = "{clean_slug}";
   </script>
   <script src="posts.js"></script>
   <script src="app.js"></script>
@@ -723,22 +730,25 @@ def compile_tags_database(posts):
         return tags_map[key]
 
     for p in posts:
+        raw_slug = p.get("slug", "")
+        clean_slug = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', raw_slug)
+
         post_summary = {
             "id": p.get("id"),
-            "slug": p.get("slug"),
+            "slug": clean_slug,
             "title": p.get("title"),
             "date": p.get("date"),
             "format": p.get("format"),
             "pillar": p.get("pillar"),
             "subtopic": p.get("subtopic"),
-            "url": f"index.html?post={p.get('slug')}"
+            "url": f"posts/{clean_slug}.html"
         }
 
         link_entry = {
             "title": p.get("title"),
-            "slug": p.get("slug"),
+            "slug": clean_slug,
             "format": p.get("format"),
-            "url": f"index.html?post={p.get('slug')}",
+            "url": f"posts/{clean_slug}.html",
             "date": p.get("date")
         }
 
