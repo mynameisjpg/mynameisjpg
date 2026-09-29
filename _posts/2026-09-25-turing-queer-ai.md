@@ -62,8 +62,8 @@ allow_embed: true
 canonical_url: ""
 
 image:
-  path: "assets/images/this-is-not-a-human.jpg"
-  alt: "Dithered duotone graphic of a teleprinter partition splitting human and algorithmic signal"
+  path: "assets/images/turing-ai.jpg"
+  alt: "Coral-pink and black glitch collage featuring Alan Turing, surrounded by brain scans, circuit boards, Rorschach inkblots, and digital artifacts."
 ---
 
 ## 01. The Original Game of Passing

@@ -1283,7 +1283,7 @@ function updateThreeDockMetadata(nodeItem) {
       dockDesc.textContent = `Tag node with ${d.postsCount} dispatch${d.postsCount > 1 ? 'es' : ''}${pStr ? ' across ' + pStr : ''}. Click node to filter timeline.`;
     }
   } else if (!activeNodeFilter) {
-    dockTitle.textContent = "[ 3D OBSIDIAN GRAPH CLOUD ACTIVE ]";
+    dockTitle.textContent = "[ 3D TAGS CLOUD ACTIVE ]";
     dockDesc.textContent = "Drag to rotate 3D constellation. Scroll to zoom. Hover over nodes to inspect network connections. Click to filter.";
   }
 }
@@ -1636,7 +1636,7 @@ function handleCanvasMouseMove(e) {
       dockDesc.textContent = `Conceptual tag node with ${found.postsCount} dispatch${found.postsCount > 1 ? 'es' : ''}. Click to filter timeline.`;
     }
   } else if (!activeNodeFilter && dockTitle && dockDesc) {
-    dockTitle.textContent = "[ NODE MAP ACTIVE ]";
+    dockTitle.textContent = "[ 3D TAGS CLOUD ACTIVE ]";
     dockDesc.textContent = "Hover over any tag or pillar node to highlight connected dispatches. Click to filter timeline.";
   }
 }

@@ -393,7 +393,7 @@ window.DYNAMIC_POSTS = [
     "author": "Juan P. Giusepponi",
     "read_time": "9 MIN READ",
     "via": "",
-    "image": "assets/images/this-is-not-a-human.jpg",
+    "image": "assets/images/turing-ai.jpg",
     "aspect_ratio": "h-tall-1",
     "links": [
       {
