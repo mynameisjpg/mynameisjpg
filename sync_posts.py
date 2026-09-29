@@ -486,13 +486,16 @@ def generate_post_html_files(posts):
     DEFAULT_OG_IMAGE = f"{SITE_ORIGIN}/assets/images/favicon.svg"
 
     for post in posts:
-        slug = post.get("slug") or post.get("id") or post.get("sys_id")
-        if not slug:
+        raw_slug = post.get("slug") or post.get("id") or post.get("sys_id")
+        if not raw_slug:
             continue
+
+        # Strip date prefix (e.g., "2026-09-24-lecun-..." -> "lecun-...")
+        clean_slug = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', raw_slug)
 
         title = (post.get("title") or "Untitled Dispatch").replace('"', '&quot;')
         subtitle = (post.get("subtitle") or post.get("excerpt") or "Untitled.jpg — Dispatches on AI perception, cognitive psychophysics, and media archaeology.").replace('"', '&quot;')
-        post_url = f"{SITE_ORIGIN}/posts/{slug}.html"
+        post_url = f"{SITE_ORIGIN}/posts/{clean_slug}.html"
         
         # Resolve absolute image URL for Open Graph crawlers
         raw_image = post.get("image") or ""
@@ -679,14 +682,14 @@ def generate_post_html_files(posts):
 
   <!-- Specify active post slug for deep-load -->
   <script>
-    window.INITIAL_POST_SLUG = "{slug}";
+    window.INITIAL_POST_SLUG = "{raw_slug}";
   </script>
   <script src="posts.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
 """
-        target_file = POSTS_HTML_DIR / f"{slug}.html"
+        target_file = POSTS_HTML_DIR / f"{clean_slug}.html"
         with open(target_file, "w", encoding="utf-8") as f:
             f.write(post_html_content)
 

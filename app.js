@@ -16,7 +16,13 @@ function ingestPostList(postsArray) {
     if (key) {
       POSTS_DATABASE[key] = p;
       if (p.sys_id) POSTS_DATABASE[p.sys_id] = p;
-      if (p.slug) POSTS_DATABASE[p.slug] = p;
+      if (p.slug) {
+        POSTS_DATABASE[p.slug] = p;
+        const cleanSlug = p.slug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
+        if (cleanSlug && cleanSlug !== p.slug) {
+          POSTS_DATABASE[cleanSlug] = p;
+        }
+      }
       if (p.id) POSTS_DATABASE[p.id] = p;
 
       // Map static/legacy card data-id aliases
@@ -477,7 +483,8 @@ function renderPost(postId) {
   const pane = document.getElementById("essay-reading-pane");
   if (!pane || !post) return;
 
-  const canonicalSlug = post.slug || post.id || post.sys_id || postId;
+  const rawSlug = post.slug || post.id || post.sys_id || postId;
+  const canonicalSlug = rawSlug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
   const baseUrl = (typeof window !== "undefined" && window.location) ? (window.location.origin + window.location.pathname.replace(/\/posts\/.*$/, "/").replace(/\/index\.html$/, "/")) : "https://mynameisjpg.github.io/";
   const pageUrl = `${baseUrl.replace(/\/$/, "")}/posts/${canonicalSlug}.html`;
 
@@ -1328,7 +1335,8 @@ function copyPostUrl(postId) {
   const currentPost = postId ? POSTS_DATABASE[postId] : (activePostId ? POSTS_DATABASE[activePostId] : null);
   let url = window.location.href;
   if (currentPost) {
-    const slug = currentPost.slug || currentPost.id || currentPost.sys_id;
+    const rawSlug = currentPost.slug || currentPost.id || currentPost.sys_id;
+    const slug = rawSlug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
     const baseUrl = (window.location.origin + window.location.pathname.replace(/\/posts\/.*$/, "/").replace(/\/index\.html$/, "/")).replace(/\/$/, "");
     url = `${baseUrl}/posts/${slug}.html`;
   }
@@ -1346,7 +1354,8 @@ function copyPostUrl(postId) {
 function copyEmbedCard(postId) {
   const post = POSTS_DATABASE[postId] || Object.values(POSTS_DATABASE)[0];
   if (!post) return;
-  const slug = post.slug || post.id || post.sys_id || postId;
+  const rawSlug = post.slug || post.id || post.sys_id || postId;
+  const slug = rawSlug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
   const baseUrl = (window.location.origin + window.location.pathname.replace(/\/posts\/.*$/, "/").replace(/\/index\.html$/, "/")).replace(/\/$/, "");
   const currentUrl = `${baseUrl}/posts/${slug}.html`;
   const embedCode = `<div class="untitled-dispatch-embed" style="border:1px solid #333;background:#161616;color:#f5f5f5;padding:1.25rem;border-radius:2px;font-family:sans-serif;max-width:560px;">\n  <div style="font-family:monospace;font-size:0.75rem;color:#E84A5F;letter-spacing:0.08em;margin-bottom:0.4rem;">[ UNTITLED.JPG // ${post.format} ]</div>\n  <h3 style="margin:0 0 0.5rem 0;font-size:1.15rem;line-height:1.3;"><a href="${currentUrl}" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:none;">${post.title}</a></h3>\n  <p style="color:#cccccc;font-size:0.88rem;line-height:1.45;margin:0 0 0.75rem 0;">${post.subtitle}</p>\n  <div style="font-family:monospace;font-size:0.7rem;color:#888888;">BY ${post.author} (${post.posted_by}) • ${post.date} • ${post.read_time}</div>\n</div>`;
@@ -1364,7 +1373,8 @@ function copyEmbedCard(postId) {
 
 function shareInstagram(postId) {
   const post = POSTS_DATABASE[postId] || Object.values(POSTS_DATABASE)[0];
-  const slug = post ? (post.slug || post.id || post.sys_id || postId) : postId;
+  const rawSlug = post ? (post.slug || post.id || post.sys_id || postId) : postId;
+  const slug = rawSlug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
   const baseUrl = (window.location.origin + window.location.pathname.replace(/\/posts\/.*$/, "/").replace(/\/index\.html$/, "/")).replace(/\/$/, "");
   const url = `${baseUrl}/posts/${slug}.html`;
   const storyText = `${post ? post.title : 'Untitled.jpg Dispatch'}\n\nRead full dispatch: ${url}`;
