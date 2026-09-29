@@ -517,4 +517,46 @@ document.addEventListener('DOMContentLoaded', () => {
   function escapeHtml(str) {
     return (str || '').replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   }
+
+  // Global Subscribe Modal Handlers
+  window.openSubscribeModal = function() {
+    const modal = document.getElementById('subscribe-modal');
+    if (modal && typeof modal.showModal === 'function') {
+      modal.showModal();
+    }
+  };
+
+  window.closeSubscribeModal = function() {
+    const modal = document.getElementById('subscribe-modal');
+    if (modal && typeof modal.close === 'function') {
+      modal.close();
+    }
+  };
+
+  const subscribeForm = document.getElementById('subscribe-form');
+  if (subscribeForm) {
+    subscribeForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('[SUBSCRIPTION CONFIRMED] Transmission endpoint registered.');
+      window.closeSubscribeModal();
+    });
+  }
+
+  const subscribeCancelBtns = document.querySelectorAll('#subscribe-modal .btn-modal-cancel');
+  subscribeCancelBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.closeSubscribeModal();
+    });
+  });
+
+  const subscribeModal = document.getElementById('subscribe-modal');
+  if (subscribeModal) {
+    subscribeModal.addEventListener('click', (e) => {
+      if (e.target === subscribeModal) {
+        window.closeSubscribeModal();
+      }
+    });
+  }
 });
+
