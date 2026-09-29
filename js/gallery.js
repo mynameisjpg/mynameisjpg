@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const mesh = new THREE.Mesh(geometry, material);
       mesh.position.set(x, y, z);
-      mesh.rotation.y = -angle + Math.PI;
+      mesh.rotation.y = -angle;
       mesh.userData = { index: i, post: post, basePos: { x, y, z }, angle };
 
       scene.add(mesh);
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
           mesh.position.x = Math.sin(rotatedAngle) * radius;
           mesh.position.z = Math.cos(rotatedAngle) * radius - radius * 0.5;
           mesh.position.y = 0;
-          mesh.rotation.y = -rotatedAngle + Math.PI;
+          mesh.rotation.y = -rotatedAngle;
 
           const targetScale = 1.25;
           mesh.scale.x += (targetScale - mesh.scale.x) * 0.08;
@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
           mesh.position.x = Math.sin(rotatedAngle) * radius;
           mesh.position.z = Math.cos(rotatedAngle) * radius - radius * 0.5;
           mesh.position.y = subtleLevitation;
-          mesh.rotation.y = -rotatedAngle + Math.PI;
+          mesh.rotation.y = -rotatedAngle;
 
           const targetScale = 0.92;
           mesh.scale.x += (targetScale - mesh.scale.x) * 0.08;
