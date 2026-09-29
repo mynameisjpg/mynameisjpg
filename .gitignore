@@ -10,7 +10,11 @@ Launch_Dispatch_Creator.bat
 dispatch_creator_launcher.py
 DispatchCreator/
 dispatch_creator*
+css/post-creator.css
+js/post-creator.js
 
-# System files
+# System & Python cache files
 .DS_Store
 Thumbs.db
+__pycache__/
+*.pyc

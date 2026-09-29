@@ -805,7 +805,7 @@ function initThreeJSNodeMap() {
 
   // 2. Camera setup
   threeCamera = new THREE.PerspectiveCamera(45, w / h, 1, 2000);
-  threeCamera.position.set(0, 20, 420);
+  threeCamera.position.set(0, 15, 340);
 
   // 3. WebGL Renderer
   threeRenderer = new THREE.WebGLRenderer({
@@ -831,10 +831,10 @@ function initThreeJSNodeMap() {
     threeControls.dampingFactor = 0.05;
     threeControls.rotateSpeed = 0.7;
     threeControls.zoomSpeed = 0.9;
-    threeControls.minDistance = 120;
-    threeControls.maxDistance = 850;
+    threeControls.minDistance = 80;
+    threeControls.maxDistance = 650;
     threeControls.autoRotate = true;
-    threeControls.autoRotateSpeed = 0.4;
+    threeControls.autoRotateSpeed = 0.35;
   }
 
   // 5. Dual Opposite Source Lighting (Red & Neutral)
@@ -903,7 +903,7 @@ function build3DStarfield() {
 }
 
 function build3DNodeMapGraph() {
-  // Clear previous meshes
+  // Clear previous meshes & lines
   while (threeNodesGroup.children.length > 0) threeNodesGroup.remove(threeNodesGroup.children[0]);
   while (threeLinesGroup.children.length > 0) threeLinesGroup.remove(threeLinesGroup.children[0]);
   threeNodes = [];
@@ -911,7 +911,7 @@ function build3DNodeMapGraph() {
 
   if (!ARCHIVE_POSTS || ARCHIVE_POSTS.length === 0) return;
 
-  // 1. Root Node: UNTITLED.JPG
+  // 1. Core Root Node: UNTITLED.JPG at origin
   const rootData = {
     id: "root",
     label: "UNTITLED.JPG",
@@ -920,7 +920,7 @@ function build3DNodeMapGraph() {
     postsCount: ARCHIVE_POSTS.length
   };
 
-  const rootMesh = createCrystalNodeMesh(15, 0xE84A5F, 0.35);
+  const rootMesh = createCrystalNodeMesh(16, 0xE84A5F, 0.4);
   rootMesh.position.set(0, 0, 0);
   threeNodesGroup.add(rootMesh);
 
@@ -928,94 +928,155 @@ function build3DNodeMapGraph() {
   rootSprite.position.set(0, -22, 0);
   rootMesh.add(rootSprite);
 
-  const rootNodeItem = { mesh: rootMesh, labelSprite: rootSprite, data: rootData };
+  const rootNodeItem = { mesh: rootMesh, labelSprite: rootSprite, data: rootData, neighbors: new Set() };
   threeNodes.push(rootNodeItem);
 
-  // 2. Extract Pillars
-  const pillarMap = {};
+  // 2. Extract All 4 Pillars as major node vertices
+  const pillarSet = new Set();
   ARCHIVE_POSTS.forEach(p => {
-    const pil = p.pillar || "GENERAL";
-    if (!pillarMap[pil]) pillarMap[pil] = [];
-    pillarMap[pil].push(p);
+    if (p.pillar) pillarSet.add(p.pillar);
   });
+  const pillarList = Array.from(pillarSet);
 
-  const pillarKeys = Object.keys(pillarMap);
-  const pillarCount = pillarKeys.length;
+  const pillarNodeMap = {}; // name -> nodeItem
+  const R_PILLAR = 85;
+  const pillarPositions = [
+    new THREE.Vector3( R_PILLAR * 0.707,  R_PILLAR * 0.707, 0),
+    new THREE.Vector3(-R_PILLAR * 0.707,  R_PILLAR * 0.707, 0),
+    new THREE.Vector3( 0, -R_PILLAR * 0.707,  R_PILLAR * 0.707),
+    new THREE.Vector3( 0, -R_PILLAR * 0.707, -R_PILLAR * 0.707)
+  ];
 
-  pillarKeys.forEach((pilName, idx) => {
-    // Distribute pillars in 3D spherical shell
-    const phi = Math.acos(-1 + (2 * idx) / pillarCount);
-    const theta = Math.sqrt(pillarCount * Math.PI) * phi;
-    const radius = 135;
-
-    const px = radius * Math.cos(theta) * Math.sin(phi);
-    const py = radius * Math.sin(theta) * Math.sin(phi);
-    const pz = radius * Math.cos(phi);
+  pillarList.forEach((pilName, idx) => {
+    const pos = pillarPositions[idx % pillarPositions.length];
+    const postsInPillar = ARCHIVE_POSTS.filter(p => p.pillar === pilName);
+    const pillarRadius = Math.min(18, 9.5 + postsInPillar.length * 2.2);
 
     const pillarData = {
       id: `pillar_${idx}`,
       label: pilName,
       type: "pillar",
       color: "#FF6579",
-      postsCount: pillarMap[pilName].length,
-      postSlugs: pillarMap[pilName].map(p => p.slug)
+      postsCount: postsInPillar.length,
+      postSlugs: postsInPillar.map(p => p.slug)
     };
 
-    const pillarMesh = createCrystalNodeMesh(10, 0xFF6579, 0.20);
-    pillarMesh.position.set(px, py, pz);
+    const pillarMesh = createCrystalNodeMesh(pillarRadius, 0xFF6579, 0.28);
+    pillarMesh.position.copy(pos);
     threeNodesGroup.add(pillarMesh);
 
-    const pillarSprite = create3DTextSprite(pilName.toUpperCase(), "#FFA0AD", 20);
-    pillarSprite.position.set(0, -16, 0);
+    const pillarSprite = create3DTextSprite(pilName.toUpperCase(), "#FFA0AD", 22);
+    pillarSprite.position.set(0, -(pillarRadius + 8), 0);
     pillarMesh.add(pillarSprite);
 
-    const pillarNodeItem = { mesh: pillarMesh, labelSprite: pillarSprite, data: pillarData };
+    const pillarNodeItem = { mesh: pillarMesh, labelSprite: pillarSprite, data: pillarData, neighbors: new Set() };
     threeNodes.push(pillarNodeItem);
+    pillarNodeMap[pilName] = pillarNodeItem;
 
-    // Connect Root to Pillar in 3D
+    // Connect Root to Pillar
+    rootNodeItem.neighbors.add(pillarNodeItem);
+    pillarNodeItem.neighbors.add(rootNodeItem);
     create3DConnectionLine(rootNodeItem, pillarNodeItem, 0x993344, 0xe84a5f);
+  });
 
-    // 3. Extract Tags for this pillar
-    const tagSet = new Set();
-    pillarMap[pilName].forEach(p => {
-      if (p.tags && Array.isArray(p.tags)) {
-        p.tags.forEach(t => tagSet.add(t));
+  // 3. Extract Unique Tags across the portfolio
+  const uniqueTagMap = {}; // cleanName -> { name, pillars: Set, posts: [], count: 0 }
+  ARCHIVE_POSTS.forEach(p => {
+    if (p.tags && Array.isArray(p.tags)) {
+      p.tags.forEach(t => {
+        const clean = String(t).trim().toLowerCase().replace(/^#/, "");
+        if (!clean) return;
+        if (!uniqueTagMap[clean]) {
+          uniqueTagMap[clean] = { name: clean, pillars: new Set(), posts: [], count: 0 };
+        }
+        uniqueTagMap[clean].count++;
+        uniqueTagMap[clean].posts.push(p);
+        if (p.pillar) uniqueTagMap[clean].pillars.add(p.pillar);
+      });
+    }
+  });
+
+  const tagList = Object.values(uniqueTagMap);
+  const tagNodeMap = {}; // cleanName -> nodeItem
+  const totalTags = tagList.length;
+  const GOLDEN_RATIO = (1 + Math.sqrt(5)) / 2;
+  const GOLDEN_ANGLE = 2 * Math.PI * (1 - 1 / GOLDEN_RATIO);
+
+  tagList.forEach((tagObj, idx) => {
+    // 3D Fibonacci Sphere sampling for ultra-harmonious spherical distribution
+    const y = 1 - (idx / Math.max(1, totalTags - 1)) * 2;
+    const radiusAtY = Math.sqrt(Math.max(0, 1 - y * y));
+    const theta = GOLDEN_ANGLE * idx;
+
+    const x = Math.cos(theta) * radiusAtY;
+    const z = Math.sin(theta) * radiusAtY;
+
+    const fibVec = new THREE.Vector3(x, y, z).normalize();
+
+    // Gently blend 30% with direction toward associated Pillar(s)
+    const pillars = Array.from(tagObj.pillars);
+    const targetPillarNodes = pillars.map(pName => pillarNodeMap[pName]).filter(Boolean);
+
+    if (targetPillarNodes.length > 0) {
+      const pillarDir = new THREE.Vector3(0, 0, 0);
+      targetPillarNodes.forEach(pn => pillarDir.add(pn.mesh.position));
+      pillarDir.normalize();
+      fibVec.lerp(pillarDir, 0.30).normalize();
+    }
+
+    // Outer spherical shell radius: 145 to 170 units from root
+    const tagDist = 145 + (idx % 5) * 6;
+    const finalPos = fibVec.multiplyScalar(tagDist);
+
+    // Node radius scales directly with post occurrence count
+    const tagRadius = Math.min(15, 5.5 + Math.pow(tagObj.count, 0.75) * 3.5);
+    const tagData = {
+      id: `tag_${idx}`,
+      label: `#${tagObj.name}`,
+      rawTag: tagObj.name,
+      type: "tag",
+      color: "#D4D4D4",
+      postsCount: tagObj.count,
+      pillars: pillars
+    };
+
+    const tagMesh = createCrystalNodeMesh(tagRadius, 0xD4D4D4, 0.16);
+    tagMesh.position.copy(finalPos);
+    threeNodesGroup.add(tagMesh);
+
+    const labelFontSize = Math.min(18, 12 + tagRadius * 0.45);
+    const tagSprite = create3DTextSprite(`#${tagObj.name}`, "#F5F5F5", labelFontSize);
+    tagSprite.position.set(0, -(tagRadius + 7), 0);
+    tagMesh.add(tagSprite);
+
+    const tagNodeItem = { mesh: tagMesh, labelSprite: tagSprite, data: tagData, neighbors: new Set() };
+    threeNodes.push(tagNodeItem);
+    tagNodeMap[tagObj.name] = tagNodeItem;
+
+    // Connect Tag to ALL its Pillars
+    targetPillarNodes.forEach(pNode => {
+      tagNodeItem.neighbors.add(pNode);
+      pNode.neighbors.add(tagNodeItem);
+      create3DConnectionLine(pNode, tagNodeItem, 0x333333, 0xE84A5F);
+    });
+  });
+
+  // 4. Connect Tags to Tags if they co-occur in the same post (Obsidian Network Cloud)
+  ARCHIVE_POSTS.forEach(p => {
+    if (p.tags && Array.isArray(p.tags) && p.tags.length > 1) {
+      const cleanTags = p.tags.map(t => String(t).trim().toLowerCase().replace(/^#/, "")).filter(Boolean);
+      for (let i = 0; i < cleanTags.length; i++) {
+        for (let j = i + 1; j < cleanTags.length; j++) {
+          const nodeA = tagNodeMap[cleanTags[i]];
+          const nodeB = tagNodeMap[cleanTags[j]];
+          if (nodeA && nodeB && nodeA !== nodeB && !nodeA.neighbors.has(nodeB)) {
+            nodeA.neighbors.add(nodeB);
+            nodeB.neighbors.add(nodeA);
+            create3DConnectionLine(nodeA, nodeB, 0x222226, 0xFF8484);
+          }
+        }
       }
-    });
-
-    const pillarTags = Array.from(tagSet);
-    const tagCount = pillarTags.length;
-
-    pillarTags.forEach((tag, tIdx) => {
-      const tagAngle = (tIdx / tagCount) * Math.PI * 2;
-      const tagDist = 65;
-      const tx = px + Math.cos(tagAngle) * tagDist;
-      const ty = py + Math.sin(tagAngle) * tagDist * 0.7 + (tIdx % 2 === 0 ? 25 : -25);
-      const tz = pz + Math.sin(tagAngle) * tagDist;
-
-      const tagData = {
-        id: `tag_${idx}_${tIdx}`,
-        label: `#${tag}`,
-        rawTag: tag,
-        type: "tag",
-        color: "#B8B8B8",
-        postsCount: pillarMap[pilName].filter(p => p.tags && p.tags.includes(tag)).length
-      };
-
-      const tagMesh = createCrystalNodeMesh(6.5, 0xB8B8B8, 0.17);
-      tagMesh.position.set(tx, ty, tz);
-      threeNodesGroup.add(tagMesh);
-
-      const tagSprite = create3DTextSprite(`#${tag}`, "#E2E8F0", 16);
-      tagSprite.position.set(0, -12, 0);
-      tagMesh.add(tagSprite);
-
-      const tagNodeItem = { mesh: tagMesh, labelSprite: tagSprite, data: tagData };
-      threeNodes.push(tagNodeItem);
-
-      // Connect Pillar to Tag in 3D
-      create3DConnectionLine(pillarNodeItem, tagNodeItem, 0x444444, 0xB8B8B8);
-    });
+    }
   });
 }
 
@@ -1175,16 +1236,19 @@ function updateThreeRaycasting() {
   }
 
   if (hoveredThreeNode !== newHovered) {
-    // Reset previous hovered node scale & highlight
-    if (hoveredThreeNode) {
-      hoveredThreeNode.mesh.scale.set(1, 1, 1);
-    }
-
     hoveredThreeNode = newHovered;
 
-    // Apply new hover effect
+    // Apply new hover effect: scale up hovered node + all neighbor nodes in network
+    threeNodes.forEach(n => {
+      if (hoveredThreeNode && (n === hoveredThreeNode || (hoveredThreeNode.neighbors && hoveredThreeNode.neighbors.has(n)))) {
+        const s = n === hoveredThreeNode ? 1.45 : 1.25;
+        n.mesh.scale.set(s, s, s);
+      } else {
+        n.mesh.scale.set(1, 1, 1);
+      }
+    });
+
     if (hoveredThreeNode) {
-      hoveredThreeNode.mesh.scale.set(1.4, 1.4, 1.4);
       if (canvas) canvas.style.cursor = "pointer";
     } else {
       if (canvas) canvas.style.cursor = "default";
@@ -1194,7 +1258,7 @@ function updateThreeRaycasting() {
     threeLines.forEach(l => {
       const isConn = hoveredThreeNode && (l.fromItem === hoveredThreeNode || l.toItem === hoveredThreeNode);
       l.mesh.material.color.setHex(isConn ? l.highlightColorHex : l.defaultColorHex);
-      l.mesh.material.opacity = isConn ? 0.95 : 0.4;
+      l.mesh.material.opacity = isConn ? 0.95 : 0.25;
     });
 
     // Update Dock Metadata
@@ -1211,15 +1275,16 @@ function updateThreeDockMetadata(nodeItem) {
     const d = nodeItem.data;
     dockTitle.textContent = `[ 3D NODE: ${d.label} ]`;
     if (d.type === "root") {
-      dockDesc.textContent = `Central taxonomy core connecting ${ARCHIVE_POSTS.length} dispatches in 3D WebGL space.`;
+      dockDesc.textContent = `Central taxonomy core connecting all dispatches across 4 primary pillars.`;
     } else if (d.type === "pillar") {
-      dockDesc.textContent = `Pillar category with ${d.postsCount} dispatch${d.postsCount > 1 ? 'es' : ''}. Click 3D node to filter timeline.`;
+      dockDesc.textContent = `Pillar category with ${d.postsCount} dispatch${d.postsCount > 1 ? 'es' : ''}. Click to filter timeline.`;
     } else {
-      dockDesc.textContent = `Conceptual tag node with ${d.postsCount} dispatch${d.postsCount > 1 ? 'es' : ''}. Click 3D node to filter timeline.`;
+      const pStr = (d.pillars || []).join(" • ");
+      dockDesc.textContent = `Tag node with ${d.postsCount} dispatch${d.postsCount > 1 ? 'es' : ''}${pStr ? ' across ' + pStr : ''}. Click node to filter timeline.`;
     }
   } else if (!activeNodeFilter) {
-    dockTitle.textContent = "[ 3D WEBGL GRAPH ACTIVE ]";
-    dockDesc.textContent = "Drag to rotate 3D view. Scroll to zoom. Hover over nodes to inspect or click to filter timeline.";
+    dockTitle.textContent = "[ 3D OBSIDIAN GRAPH CLOUD ACTIVE ]";
+    dockDesc.textContent = "Drag to rotate 3D constellation. Scroll to zoom. Hover over nodes to inspect network connections. Click to filter.";
   }
 }
 
@@ -1330,22 +1395,22 @@ function buildNodeMapData() {
   };
   nodes.push(rootNode);
 
-  // Extract Unique Pillars
-  const pillarMap = {};
-  ARCHIVE_POSTS.forEach(p => {
-    const pil = p.pillar || "GENERAL";
-    if (!pillarMap[pil]) pillarMap[pil] = [];
-    pillarMap[pil].push(p);
-  });
+  // 1. Extract All 4 Pillars
+  const pillarSet = new Set();
+  ARCHIVE_POSTS.forEach(p => { if (p.pillar) pillarSet.add(p.pillar); });
+  const pillarList = Array.from(pillarSet);
 
-  const pillarKeys = Object.keys(pillarMap);
-  const pillarCount = pillarKeys.length;
+  const pillarNodeMap = {};
+  const pillarCount = pillarList.length;
 
-  pillarKeys.forEach((pilName, idx) => {
-    const angle = (idx / pillarCount) * Math.PI * 2;
-    const distance = Math.min(w, h) * 0.26;
+  pillarList.forEach((pilName, idx) => {
+    const angle = (idx / Math.max(1, pillarCount)) * Math.PI * 2;
+    const distance = Math.min(w, h) * 0.28;
     const px = cx + Math.cos(angle) * distance;
     const py = cy + Math.sin(angle) * distance;
+
+    const postsInPillar = ARCHIVE_POSTS.filter(p => p.pillar === pilName);
+    const pillarRadius = Math.min(18, 9.5 + postsInPillar.length * 2.2);
 
     const pillarNode = {
       id: `pillar_${idx}`,
@@ -1355,51 +1420,89 @@ function buildNodeMapData() {
       y: py,
       vx: (Math.random() - 0.5) * 0.3,
       vy: (Math.random() - 0.5) * 0.3,
-      radius: 12,
+      radius: pillarRadius,
       color: "#FF6579",
-      postsCount: pillarMap[pilName].length,
-      postSlugs: pillarMap[pilName].map(p => p.slug)
+      postsCount: postsInPillar.length,
+      postSlugs: postsInPillar.map(p => p.slug)
     };
     nodes.push(pillarNode);
-
-    // Connect Root to Pillar
+    pillarNodeMap[pilName] = pillarNode;
     connections.push({ from: rootNode, to: pillarNode, weight: 2 });
+  });
 
-    // Extract Tags for this pillar
-    const tagSet = new Set();
-    pillarMap[pilName].forEach(p => {
-      if (p.tags && Array.isArray(p.tags)) {
-        p.tags.forEach(t => tagSet.add(t));
+  // 2. Extract Unique Tags
+  const uniqueTagMap = {};
+  ARCHIVE_POSTS.forEach(p => {
+    if (p.tags && Array.isArray(p.tags)) {
+      p.tags.forEach(t => {
+        const clean = String(t).trim().toLowerCase().replace(/^#/, "");
+        if (!clean) return;
+        if (!uniqueTagMap[clean]) {
+          uniqueTagMap[clean] = { name: clean, pillars: new Set(), count: 0 };
+        }
+        uniqueTagMap[clean].count++;
+        if (p.pillar) uniqueTagMap[clean].pillars.add(p.pillar);
+      });
+    }
+  });
+
+  const tagList = Object.values(uniqueTagMap);
+  const tagNodeMap = {};
+
+  tagList.forEach((tagObj, idx) => {
+    const pillars = Array.from(tagObj.pillars);
+    const targetPillarNodes = pillars.map(pName => pillarNodeMap[pName]).filter(Boolean);
+
+    let tx = cx, ty = cy;
+    if (targetPillarNodes.length > 0) {
+      let sumX = 0, sumY = 0;
+      targetPillarNodes.forEach(pn => { sumX += pn.x; sumY += pn.y; });
+      tx = sumX / targetPillarNodes.length;
+      ty = sumY / targetPillarNodes.length;
+    }
+
+    const angle = (idx / Math.max(1, tagList.length)) * Math.PI * 2;
+    const distOffset = 65 + (idx % 6) * 15;
+    tx += Math.cos(angle) * distOffset;
+    ty += Math.sin(angle) * distOffset;
+
+    const tagRadius = Math.min(15, 5.5 + Math.pow(tagObj.count, 0.75) * 3.5);
+    const tagNode = {
+      id: `tag_${idx}`,
+      label: `#${tagObj.name}`,
+      rawTag: tagObj.name,
+      type: "tag",
+      x: tx,
+      y: ty,
+      vx: (Math.random() - 0.5) * 0.4,
+      vy: (Math.random() - 0.5) * 0.4,
+      radius: tagRadius,
+      color: "#D4D4D4",
+      postsCount: tagObj.count,
+      pillars: pillars
+    };
+    nodes.push(tagNode);
+    tagNodeMap[tagObj.name] = tagNode;
+
+    targetPillarNodes.forEach(pn => {
+      connections.push({ from: pn, to: tagNode, weight: 1 });
+    });
+  });
+
+  // 3. Connect Co-occurring Tags in 2D
+  ARCHIVE_POSTS.forEach(p => {
+    if (p.tags && Array.isArray(p.tags) && p.tags.length > 1) {
+      const cleanTags = p.tags.map(t => String(t).trim().toLowerCase().replace(/^#/, "")).filter(Boolean);
+      for (let i = 0; i < cleanTags.length; i++) {
+        for (let j = i + 1; j < cleanTags.length; j++) {
+          const nodeA = tagNodeMap[cleanTags[i]];
+          const nodeB = tagNodeMap[cleanTags[j]];
+          if (nodeA && nodeB && nodeA !== nodeB) {
+            connections.push({ from: nodeA, to: nodeB, weight: 1 });
+          }
+        }
       }
-    });
-
-    const pillarTags = Array.from(tagSet);
-    const tagCount = pillarTags.length;
-
-    pillarTags.forEach((tag, tIdx) => {
-      const tagAngle = angle + ((tIdx - (tagCount - 1) / 2) * 0.45);
-      const tagDistance = distance + 90;
-      const tx = cx + Math.cos(tagAngle) * tagDistance;
-      const ty = cy + Math.sin(tagAngle) * tagDistance;
-
-      const tagNode = {
-        id: `tag_${idx}_${tIdx}`,
-        label: `#${tag}`,
-        rawTag: tag,
-        type: "tag",
-        x: tx,
-        y: ty,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
-        radius: 8,
-        color: "#B8B8B8",
-        postsCount: pillarMap[pilName].filter(p => p.tags && p.tags.includes(tag)).length
-      };
-      nodes.push(tagNode);
-
-      // Connect Pillar to Tag
-      connections.push({ from: pillarNode, to: tagNode, weight: 1 });
-    });
+    }
   });
 }
 

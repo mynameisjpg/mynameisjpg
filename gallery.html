@@ -1,10 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cover Art Spatial Vault — Untitled.jpg</title>
+  <meta name="description" content="Ultra-minimalist 3D spatial gallery displaying cover art floating in space for Untitled.jpg.">
+  
+  <!-- Typography: Azeret Mono (UI), Platypi (Prose) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Platypi:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Three.js 3D WebGL Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Modular Design System Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="shortcut icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
 </head>
-<body>
+<body class="gallery-page">
+
+  <!-- ====================================================================
+       COMPONENT 1: ULTRA-THIN LEFT SIDEBAR RAIL (48px)
+       ==================================================================== -->
+  <aside class="sidebar-rail" data-component="sidebar-rail" aria-label="Main Navigation Rail">
+    <div class="sidebar-left-group">
+      <div class="sidebar-top-section">
+        <a href="index.html" class="brand-logo-v" title="Untitled.jpg">
+          <span class="logo-full">[ UNTITLED.JPG ]</span>
+          <span class="logo-short">[ .JPG ]</span>
+          <span class="rail-tooltip">[ UNTITLED.jpg ]</span>
+        </a>
+      </div>
+
+      <nav class="nav-stacked-vertical" aria-label="Format Filters">
+        <a href="index.html?filter=essay" class="nav-link-item">
+          _ESSAYS
+          <span class="rail-tooltip">_ESSAYS</span>
+        </a>
+        <a href="index.html?filter=note" class="nav-link-item">
+          _NOTES
+          <span class="rail-tooltip">_NOTES</span>
+        </a>
+        <a href="index.html?filter=bookmark" class="nav-link-item">
+          _BOOKMARKS
+          <span class="rail-tooltip">_BOOKMARKS</span>
+        </a>
+        <a href="index.html?filter=resource" class="nav-link-item">
+          _RESOURCES
+          <span class="rail-tooltip">_RESOURCES</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="sidebar-right-group">
+      <div class="sidebar-bottom-icons">
+        <a href="index.html" id="sidebar-home-btn" title="Home Feed" aria-label="Home">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span class="rail-tooltip">&gt;&gt; GO HOME</span>
+        </a>
+        <a href="archive.html" id="sidebar-archive-btn" title="Chronological Archive" aria-label="Archive">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <span class="rail-tooltip"># ARCHIVE_NODES</span>
+        </a>
+        <a href="gallery.html" class="active" id="sidebar-gallery-btn" title="Cover Art Gallery" aria-label="Gallery">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span class="rail-tooltip"># GALLERY_VAULT</span>
+        </a>
+        <a href="javascript:void(0)" id="sidebar-subscribe-btn" title="Subscribe to Dispatches" aria-label="Subscribe">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span class="rail-tooltip">&gt;&gt; SUB-SCRIBE</span>
+        </a>
+        <a href="https://linkedin.com/in/jpgiuse" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          <span class="rail-tooltip">/ LINK IN</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ====================================================================
+       ULTRA-MINIMAL 3D SPATIAL VIEWPORT
+       ==================================================================== -->
+  <div class="gallery-spatial-viewport">
     
+    <!-- Top-Left Subtle Spatial Control Hint -->
+    <div class="minimal-spatial-hint">
+      <span>&#9632; SPATIAL 3D CANVAS</span> &bull; DRAG TO ROTATE &bull; SCROLL TO ZOOM &bull; CLICK IMAGE FOR FULL VIEW
+    </div>
+
+    <!-- Background Ambient Glow -->
+    <div class="ambient-vignette"></div>
+
+    <!-- Left / Right Click Nav Chevrons -->
+    <div id="side-nav-left" class="gallery-side-nav-zone left" title="Previous Artwork">
+      <span class="side-nav-chevron">&lsaquo;</span>
+    </div>
+    <div id="side-nav-right" class="gallery-side-nav-zone right" title="Next Artwork">
+      <span class="side-nav-chevron">&rsaquo;</span>
+    </div>
+
+    <!-- 3D Canvas Element -->
+    <div id="spatial-canvas-container"></div>
+
+    <!-- ====================================================================
+         FLOATING CORNER HUD PANEL
+         ==================================================================== -->
+    <aside class="floating-hud-panel" aria-label="Active Artwork Info">
+      <div class="hud-top-meta">
+        <span id="hud-counter-val" class="hud-counter">01 / 11</span>
+        <span id="hud-format-val" class="hud-format-badge">[ ESSAY ]</span>
+      </div>
+
+      <div class="hud-title-wrap">
+        <h2 id="hud-title-val" class="hud-post-title">Loading Artwork...</h2>
+        <div id="hud-pillar-val" class="hud-post-pillar">Philosophy of the Image</div>
+      </div>
+
+      <div class="hud-actions-row">
+        <div class="hud-nav-controls">
+          <button type="button" id="hud-prev-btn" class="hud-nav-btn" title="Previous Artwork">&larr; PREV</button>
+          <button type="button" id="hud-next-btn" class="hud-nav-btn" title="Next Artwork">NEXT &rarr;</button>
+        </div>
+
+        <a id="hud-read-link" href="#" class="hud-read-link">
+          READ DISPATCH &rarr;
+        </a>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ====================================================================
+       FULL-HEIGHT ARTWORK VIEW MODAL WITH SHARE & DOWNLOAD
+       ==================================================================== -->
+  <div id="artwork-full-modal" class="artwork-full-modal" role="dialog" aria-modal="true" aria-label="Full Height Artwork View" style="display:none;">
+    <div class="artwork-full-container">
+      <button type="button" id="artwork-modal-close" class="artwork-modal-close-btn" title="Close Full View">[ CLOSE &#215; ]</button>
+      
+      <div class="artwork-full-image-wrapper">
+        <img id="artwork-full-img" src="" alt="Full Height Cover Art" />
+      </div>
+
+      <div class="artwork-full-toolbar">
+        <div class="artwork-full-info">
+          <div id="artwork-full-title" class="artwork-full-title">Post Title</div>
+          <div id="artwork-full-meta" class="artwork-full-meta">Format &bull; Date</div>
+        </div>
+        
+        <div class="artwork-full-actions">
+          <button type="button" id="artwork-share-btn" class="artwork-btn btn-share" title="Copy link to clipboard">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+            <span id="share-btn-text">SHARE</span>
+          </button>
+          <a id="artwork-download-btn" href="#" download class="artwork-btn btn-download" title="Download high resolution artwork">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            DOWNLOAD
+          </a>
+          <a id="artwork-dispatch-btn" href="#" class="artwork-btn btn-dispatch" title="Read full post dispatch">
+            READ DISPATCH &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Dependencies -->
+  <script src="posts.js"></script>
+  <script src="js/gallery.js"></script>
 </body>
 </html>

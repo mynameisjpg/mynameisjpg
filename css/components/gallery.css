@@ -1,0 +1,416 @@
+/* ==============================================================================
+   UNTITLED.JPG — ULTRA-MINIMAL 3D SPATIAL GALLERY STYLESHEET
+   Full-size artworks floating in 3D space with a minimal HUD panel
+   ============================================================================== */
+
+/* Viewport Shell */
+body.gallery-page {
+  margin: 0;
+  padding: 0;
+  background-color: #050505;
+  color: var(--text-bright, #F5F5F5);
+  overflow: hidden;
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+}
+
+.gallery-spatial-viewport {
+  margin-left: var(--sidebar-width, 48px);
+  width: calc(100vw - var(--sidebar-width, 48px));
+  height: 100vh;
+  position: relative;
+  background-color: #050505;
+  overflow: hidden;
+}
+
+/* 3D WebGL Canvas Container */
+#spatial-canvas-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor: grab;
+}
+
+#spatial-canvas-container:active {
+  cursor: grabbing;
+}
+
+/* Subtle Spatial Background Ambient Glow */
+.ambient-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: radial-gradient(circle at 50% 50%, rgba(232, 74, 95, 0.03) 0%, rgba(5, 5, 5, 0.8) 75%, #050505 100%);
+}
+
+/* ==============================================================================
+   FLOATING CORNER HUD PANEL
+   ============================================================================== */
+.floating-hud-panel {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 360px;
+  max-width: calc(100vw - var(--sidebar-width, 48px) - 48px);
+  background: rgba(18, 18, 18, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 1.25rem;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 30px rgba(232, 74, 95, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-hud-panel:hover {
+  border-color: rgba(232, 74, 95, 0.45);
+}
+
+.hud-top-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.62rem;
+  color: var(--text-muted, #888888);
+  letter-spacing: 0.12em;
+}
+
+.hud-counter {
+  color: var(--accent-coral, #E84A5F);
+  font-weight: 600;
+}
+
+.hud-format-badge {
+  background: rgba(232, 74, 95, 0.12);
+  color: var(--accent-coral, #E84A5F);
+  padding: 0.15rem 0.45rem;
+  border: 1px solid rgba(232, 74, 95, 0.25);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+}
+
+.hud-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.hud-post-title {
+  font-family: var(--font-serif, 'Platypi', serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-bright, #F5F5F5);
+  line-height: 1.3;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.hud-post-title:hover {
+  color: var(--accent-coral, #E84A5F);
+}
+
+.hud-post-pillar {
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.62rem;
+  color: var(--text-muted, #888888);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hud-actions-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hud-nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.hud-nav-btn {
+  background: var(--neutral-card, #202020);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-bright, #F5F5F5);
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.65rem;
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.hud-nav-btn:hover {
+  border-color: var(--accent-coral, #E84A5F);
+  color: var(--accent-coral, #E84A5F);
+  background: rgba(232, 74, 95, 0.08);
+}
+
+.hud-read-link {
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background: var(--accent-coral, #E84A5F);
+  text-decoration: none;
+  padding: 0.45rem 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.hud-read-link:hover {
+  opacity: 0.9;
+  transform: translateX(2px);
+}
+
+/* Minimal Drag/Scroll Hint Overlay (Top Left) */
+.minimal-spatial-hint {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 100;
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.minimal-spatial-hint span {
+  color: var(--accent-coral, #E84A5F);
+}
+
+/* Discreet Side Navigation Buttons (Compact 48px Chevron Controls) */
+.gallery-side-nav-zone {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: rgba(18, 18, 18, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  z-index: 150;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-bright, #F5F5F5);
+  transition: all 0.2s ease;
+}
+
+.gallery-side-nav-zone.left {
+  left: calc(var(--sidebar-width, 48px) + 20px);
+}
+
+.gallery-side-nav-zone.right {
+  right: 20px;
+}
+
+.gallery-side-nav-zone:hover {
+  border-color: var(--accent-coral, #E84A5F);
+  color: var(--accent-coral, #E84A5F);
+  background: rgba(232, 74, 95, 0.15);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.side-nav-chevron {
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 1.4rem;
+  line-height: 1;
+  user-select: none;
+}
+
+/* ==============================================================================
+   FULL HEIGHT ARTWORK VIEW MODAL WITH SHARE & DOWNLOAD
+   ============================================================================== */
+.artwork-full-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 5, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 20000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.artwork-full-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 95vw;
+  max-height: 95vh;
+  position: relative;
+}
+
+.artwork-modal-close-btn {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  background: var(--neutral-card, #202020);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-bright, #F5F5F5);
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.68rem;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.artwork-modal-close-btn:hover {
+  border-color: var(--accent-coral, #E84A5F);
+  color: var(--accent-coral, #E84A5F);
+}
+
+.artwork-full-image-wrapper {
+  height: 78vh;
+  max-width: 92vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artwork-full-image-wrapper img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.artwork-full-toolbar {
+  width: 92vw;
+  max-width: 900px;
+  background: rgba(18, 18, 18, 0.88);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.artwork-full-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.artwork-full-title {
+  font-family: var(--font-serif, 'Platypi', serif);
+  font-size: 1.1rem;
+  color: var(--text-bright, #F5F5F5);
+}
+
+.artwork-full-meta {
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.6rem;
+  color: var(--text-muted, #888888);
+}
+
+.artwork-full-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.artwork-btn {
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.45rem 0.85rem;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.15s ease;
+}
+
+.btn-share {
+  background: var(--neutral-card, #202020);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-bright, #F5F5F5);
+}
+
+.btn-share:hover {
+  border-color: var(--accent-coral, #E84A5F);
+  color: var(--accent-coral, #E84A5F);
+}
+
+.btn-download {
+  background: var(--neutral-card, #202020);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-bright, #F5F5F5);
+}
+
+.btn-download:hover {
+  border-color: var(--accent-coral, #E84A5F);
+  color: var(--accent-coral, #E84A5F);
+}
+
+.btn-dispatch {
+  background: var(--accent-coral, #E84A5F);
+  border: none;
+  color: #FFFFFF;
+}
+
+.btn-dispatch:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .floating-hud-panel {
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+    width: auto;
+  }
+
+  .gallery-side-nav-zone.left {
+    left: calc(var(--sidebar-width, 48px) + 8px);
+  }
+
+  .gallery-side-nav-zone.right {
+    right: 8px;
+  }
+
+  .artwork-full-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@keyframes subtleFloat {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}

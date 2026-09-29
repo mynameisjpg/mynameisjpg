@@ -75,7 +75,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
         "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
@@ -105,7 +105,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
         "format": "ESSAY",
         "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
@@ -129,85 +129,6 @@ window.DYNAMIC_TAGS = [
     "pillars": [],
     "subtopics": [],
     "connected_tags": []
-  },
-  {
-    "id": "latent-space",
-    "name": "latent-space",
-    "label": "#latent-space",
-    "type": "tag",
-    "count": 3,
-    "posts": [
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "LATENT SPACES AND AI ARCHIVES",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai"
-      },
-      {
-        "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
-        "date": "2026.09.28",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "2026-09-26-foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space"
-      }
-    ],
-    "links": [
-      {
-        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
-        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "format": "NOTE",
-        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "2026-09-26-foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "index.html?post=2026-09-26-foucault-borges-vector-space",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "EPISTEMOLOGY OF REPRESENTATION",
-      "LATENT SPACES AND AI ARCHIVES",
-      "MODES OF SEEING & VISUAL SEMIOTICS"
-    ],
-    "connected_tags": [
-      "generative-ai",
-      "byung-chul-han",
-      "shanzhai",
-      "deconstruction",
-      "authorship",
-      "reflections"
-    ]
   },
   {
     "id": "pillar-language-llms-artificial-intelligence",
@@ -277,7 +198,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
         "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
@@ -294,7 +215,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.28"
       },
       {
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
         "format": "ESSAY",
         "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
@@ -310,9 +231,70 @@ window.DYNAMIC_TAGS = [
       "MODES OF SEEING & VISUAL SEMIOTICS"
     ],
     "connected_tags": [
-      "latent-space",
       "byung-chul-han",
       "shanzhai",
+      "deconstruction",
+      "latent-space",
+      "authorship",
+      "reflections"
+    ]
+  },
+  {
+    "id": "latent-space",
+    "name": "latent-space",
+    "label": "#latent-space",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
+        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
+        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
+        "date": "2026.09.28",
+        "format": "NOTE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "LATENT SPACES AND AI ARCHIVES",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai"
+      },
+      {
+        "id": "2026-09-26-foucault-borges-vector-space",
+        "slug": "2026-09-26-foucault-borges-vector-space",
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "index.html?post=2026-09-26-foucault-borges-vector-space"
+      }
+    ],
+    "links": [
+      {
+        "title": "Shanzhai and the Synthetic Copy: Deconstructing Originality in Latent Space",
+        "slug": "2026-09-28-shanzhai-deconstructing-original-generative-ai",
+        "format": "NOTE",
+        "url": "index.html?post=2026-09-28-shanzhai-deconstructing-original-generative-ai",
+        "date": "2026.09.28"
+      },
+      {
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "slug": "2026-09-26-foucault-borges-vector-space",
+        "format": "ESSAY",
+        "url": "index.html?post=2026-09-26-foucault-borges-vector-space",
+        "date": "2026.09.26"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION",
+      "LATENT SPACES AND AI ARCHIVES"
+    ],
+    "connected_tags": [
+      "byung-chul-han",
+      "shanzhai",
+      "generative-ai",
       "deconstruction",
       "authorship",
       "reflections"
@@ -328,7 +310,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
         "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
@@ -348,7 +330,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
         "format": "ESSAY",
         "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
@@ -375,8 +357,8 @@ window.DYNAMIC_TAGS = [
       "groupe-mu",
       "plastic-signs",
       "iconicity",
-      "latent-space",
-      "generative-ai"
+      "generative-ai",
+      "toolkit"
     ]
   },
   {
@@ -587,7 +569,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
         "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
@@ -597,7 +579,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
         "format": "ESSAY",
         "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
@@ -1933,7 +1915,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
         "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
@@ -1943,7 +1925,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
         "format": "ESSAY",
         "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
@@ -1960,9 +1942,8 @@ window.DYNAMIC_TAGS = [
       "semiotics",
       "plastic-signs",
       "iconicity",
-      "latent-space",
       "generative-ai",
-      "rhetoric-of-the-image"
+      "visual-perception"
     ]
   },
   {
@@ -2059,7 +2040,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
         "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
@@ -2069,7 +2050,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
         "format": "ESSAY",
         "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
@@ -2086,9 +2067,8 @@ window.DYNAMIC_TAGS = [
       "semiotics",
       "groupe-mu",
       "plastic-signs",
-      "latent-space",
       "generative-ai",
-      "rhetoric-of-the-image"
+      "visual-perception"
     ]
   },
   {
@@ -2519,7 +2499,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
         "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
@@ -2529,7 +2509,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
         "format": "ESSAY",
         "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
@@ -2546,9 +2526,8 @@ window.DYNAMIC_TAGS = [
       "semiotics",
       "groupe-mu",
       "iconicity",
-      "latent-space",
       "generative-ai",
-      "rhetoric-of-the-image"
+      "visual-perception"
     ]
   },
   {
@@ -2762,48 +2741,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "rhetoric-of-the-image",
-    "name": "rhetoric-of-the-image",
-    "label": "#rhetoric-of-the-image",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
-        "date": "2026.09.28",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu"
-      }
-    ],
-    "links": [
-      {
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
-        "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "format": "ESSAY",
-        "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "MODES OF SEEING & VISUAL SEMIOTICS"
-    ],
-    "connected_tags": [
-      "semiotics",
-      "groupe-mu",
-      "plastic-signs",
-      "iconicity",
-      "latent-space",
-      "generative-ai"
-    ]
-  },
-  {
     "id": "semiotics",
     "name": "semiotics",
     "label": "#semiotics",
@@ -2813,7 +2750,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-09-28-semiotics-plastic-signs-groupe-mu",
         "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
@@ -2823,7 +2760,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Semiotics of Plastic Deviation: Groupe µ and the Rhetoric of Latent Space",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
         "slug": "2026-09-28-semiotics-plastic-signs-groupe-mu",
         "format": "ESSAY",
         "url": "index.html?post=2026-09-28-semiotics-plastic-signs-groupe-mu",
@@ -2840,9 +2777,8 @@ window.DYNAMIC_TAGS = [
       "groupe-mu",
       "plastic-signs",
       "iconicity",
-      "latent-space",
       "generative-ai",
-      "rhetoric-of-the-image"
+      "visual-perception"
     ]
   },
   {

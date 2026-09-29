@@ -590,9 +590,6 @@
     font-size: 0.58rem;
     padding: 2px 0;
   }
-  .sidebar-bottom-icons {
-    gap: 0.75rem;
-  }
 }
 
 /* ==============================================================================
@@ -724,7 +721,6 @@
     box-sizing: border-box !important;
     border: none !important;
     border-radius: 0 !important;
-    /*background: transparent !important;*/
     padding: 0 !important;
     margin: 0 !important;
     transition: background-color var(--transition-fast, 0.15s ease), color var(--transition-fast, 0.15s ease) !important;
@@ -741,13 +737,6 @@
   .sidebar-bottom-icons svg {
     width: 18px !important;
     height: 18px !important;
-  }
-
-  /* Remove Home Icon from Top Navbar */
-  .sidebar-bottom-icons a[title="Home Feed"],
-  .sidebar-bottom-icons a[aria-label="Home"],
-  #sidebar-home-btn {
-    display: none !important;
   }
 
   /* Remove Filter Button from Top Navbar (Available in Full Viewport) */
