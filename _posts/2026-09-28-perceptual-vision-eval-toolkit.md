@@ -21,13 +21,15 @@ tags:
   - "toolkit"
   - "psychophysics"
   - "visual-perception"
+  - "skill"
+  - "image-analysis"
   - "canvas-api"
   - "gestalt"
   - "color-contrast"
   - "computer-vision"
 
-theme: "dark"
-featured: false
+theme: "light"
+featured: true
 sys_id: "SYS_260928_PRVTL"
 reading_time: "Code Toolkit"
 
@@ -50,15 +52,15 @@ shareable: true
 allow_embed: true
 
 image:
-  path: "assets/images/cards_test_clean_3dtilt.png"
-  alt: "Perceptual vision evaluation canvas toolkit preview graphic"
+  path: "assets/images/perception_eval.png"
+  alt: "In coral red and black, vintage engraved eyes are fractured and obscured by corrupted UI windows, pixel grids, and degraded scanline textures."
 ---
 
 ## What is Perceptual Vision Eval?
 
 Standard computer vision algorithms usually rely on structural comparison metrics like SSIM or mathematical similarity models like CLIP. While those metrics work well for image compression or search indexing, they don't predict how a human eye and brain actually experience a visual asset.
 
-Think of **Perceptual Vision Eval** as an **eye doctor for computer graphics and web UIs**. 
+Think of **Perceptual Vision Eval** as an **eye doctor for computer graphics and web UIs**.
 
 It is an open-source JavaScript and Node.js toolkit built on visual psychophysics. It reads image pixel data or HTML5 `<canvas>` elements, runs them through models of human retinal and cognitive vision, and returns an automated perceptual health score out of 100.
 
@@ -84,10 +86,12 @@ It is an open-source JavaScript and Node.js toolkit built on visual psychophysic
 ```
 
 ### 1. Contrast & Text Legibility
+
 - **What it does:** Measures luminance contrast ratios across text, buttons, and background surfaces using WCAG 2.2 guidelines and relative luminance equations.
 - **Why it matters:** Ensures dark mode interfaces and dithered graphic backgrounds stay easy to read without causing viewer eye strain.
 
 ### 2. Glare & Eye Strain (Lateral Inhibition)
+
 - **What it does:** Simulates how human retinal ganglion cells process brightness boundaries using a Difference of Gaussians (DoG) filter kernel:
 
   $$K_{\text{DoG}} = G_{\sigma_1} - G_{\sigma_2}$$
@@ -95,10 +99,12 @@ It is an open-source JavaScript and Node.js toolkit built on visual psychophysic
 - **Why it matters:** Flags harsh step transitions that create Mach bands (phantom glow lines along edges), visual glare, and viewer fatigue.
 
 ### 3. Shape & Border Continuity (Gestalt Coherence)
+
 - **What it does:** Applies Sobel gradient filters to calculate orientation vector coherence across edges, measuring figure-ground separation.
 - **Why it matters:** Checks whether objects and boundaries group together naturally into clear visual structures or dissolve into noisy, chaotic shapes.
 
 ### 4. Optical Illusions & Ambiguity (Multi-Stability)
+
 - **What it does:** Analyzes spatial frequency phase shifts to identify ambiguous regions where the human brain oscillates between conflicting 3D depth interpretations (such as a Necker cube illusion).
 - **Why it matters:** Catches synthetic AI images or graphics that look visually unstable or optically disorienting.
 
@@ -138,10 +144,10 @@ const ctx = canvas.getContext("2d");
 
 // Initialize evaluator with custom sensitivity settings
 const evaluator = new PerceptualEvaluator({
-  luminanceFormula: "WCAG21",      // 'WCAG21' | 'RelativeLuminance'
-  lateralInhibitionSigma: 1.8,     // Receptive field kernel size
-  gestaltThreshold: 0.42,          // Edge grouping sensitivity
-  multiStabilitySensitivity: 0.75  // Depth ambiguity sensitivity
+  luminanceFormula: "WCAG21", // 'WCAG21' | 'RelativeLuminance'
+  lateralInhibitionSigma: 1.8, // Receptive field kernel size
+  gestaltThreshold: 0.42, // Edge grouping sensitivity
+  multiStabilitySensitivity: 0.75, // Depth ambiguity sensitivity
 });
 
 // Run automated perceptual analysis
@@ -158,12 +164,12 @@ console.log(`Diagnostic Summary: ${report.diagnostics.summary}`);
 
 ## Technical Specifications & Diagnostic Thresholds
 
-| Metric Parameter | Target Range / Threshold | Perceptual Diagnostic Goal |
-| :--- | :--- | :--- |
-| **Luminance Contrast ($L_r$)** | $\ge 4.5:1$ (AA), $\ge 7:1$ (AAA) | Verifies text legibility on dark or dithered surfaces |
-| **Lateral Inhibition ($\mathbf{K}_{\text{DoG}}$)** | Peak ratio $\le 2.4$ | Prevents Mach band glare lines and visual fatigue |
-| **Gestalt Continuity ($C_g$)** | Score $\in [0.65, 0.95]$ | Confirms clear figure-ground boundary separation |
-| **Multi-Stability Index ($M_s$)** | Index $\le 0.30$ | Flags ambiguous 3D depth flips in synthetic media |
+| Metric Parameter                                   | Target Range / Threshold          | Perceptual Diagnostic Goal                            |
+| :------------------------------------------------- | :-------------------------------- | :---------------------------------------------------- |
+| **Luminance Contrast ($L_r$)**                     | $\ge 4.5:1$ (AA), $\ge 7:1$ (AAA) | Verifies text legibility on dark or dithered surfaces |
+| **Lateral Inhibition ($\mathbf{K}_{\text{DoG}}$)** | Peak ratio $\le 2.4$              | Prevents Mach band glare lines and visual fatigue     |
+| **Gestalt Continuity ($C_g$)**                     | Score $\in [0.65, 0.95]$          | Confirms clear figure-ground boundary separation      |
+| **Multi-Stability Index ($M_s$)**                  | Index $\le 0.30$                  | Flags ambiguous 3D depth flips in synthetic media     |
 
 ---
 

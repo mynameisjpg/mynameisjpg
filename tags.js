@@ -355,10 +355,10 @@ window.DYNAMIC_TAGS = [
     "connected_tags": [
       "toolkit",
       "psychophysics",
+      "skill",
+      "image-analysis",
       "canvas-api",
-      "gestalt",
-      "color-contrast",
-      "computer-vision"
+      "gestalt"
     ]
   },
   {
@@ -1061,9 +1061,9 @@ window.DYNAMIC_TAGS = [
       "toolkit",
       "psychophysics",
       "visual-perception",
-      "gestalt",
-      "color-contrast",
-      "computer-vision"
+      "skill",
+      "image-analysis",
+      "gestalt"
     ]
   },
   {
@@ -1187,9 +1187,9 @@ window.DYNAMIC_TAGS = [
       "toolkit",
       "psychophysics",
       "visual-perception",
-      "canvas-api",
-      "gestalt",
-      "computer-vision"
+      "skill",
+      "image-analysis",
+      "canvas-api"
     ]
   },
   {
@@ -1271,9 +1271,9 @@ window.DYNAMIC_TAGS = [
       "toolkit",
       "psychophysics",
       "visual-perception",
-      "canvas-api",
-      "gestalt",
-      "color-contrast"
+      "skill",
+      "image-analysis",
+      "canvas-api"
     ]
   },
   {
@@ -1900,9 +1900,9 @@ window.DYNAMIC_TAGS = [
       "toolkit",
       "psychophysics",
       "visual-perception",
-      "canvas-api",
-      "color-contrast",
-      "computer-vision"
+      "skill",
+      "image-analysis",
+      "canvas-api"
     ]
   },
   {
@@ -2110,6 +2110,48 @@ window.DYNAMIC_TAGS = [
       "ethics",
       "archeology",
       "taxonomy"
+    ]
+  },
+  {
+    "id": "image-analysis",
+    "name": "image-analysis",
+    "label": "#image-analysis",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit"
+      }
+    ],
+    "links": [
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "psychophysics",
+      "visual-perception",
+      "skill",
+      "canvas-api",
+      "gestalt"
     ]
   },
   {
@@ -2608,10 +2650,10 @@ window.DYNAMIC_TAGS = [
     "connected_tags": [
       "toolkit",
       "visual-perception",
+      "skill",
+      "image-analysis",
       "canvas-api",
-      "gestalt",
-      "color-contrast",
-      "computer-vision"
+      "gestalt"
     ]
   },
   {
@@ -2866,6 +2908,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "skill",
+    "name": "skill",
+    "label": "#skill",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit"
+      }
+    ],
+    "links": [
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Synthetic Media Assessment",
+        "slug": "2026-09-28-perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "index.html?post=2026-09-28-perceptual-vision-eval-toolkit",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "psychophysics",
+      "visual-perception",
+      "image-analysis",
+      "canvas-api",
+      "gestalt"
+    ]
+  },
+  {
     "id": "sociomorphic-ai",
     "name": "sociomorphic-ai",
     "label": "#sociomorphic-ai",
@@ -3026,10 +3110,10 @@ window.DYNAMIC_TAGS = [
     "connected_tags": [
       "psychophysics",
       "visual-perception",
+      "skill",
+      "image-analysis",
       "canvas-api",
-      "gestalt",
-      "color-contrast",
-      "computer-vision"
+      "gestalt"
     ]
   },
   {
