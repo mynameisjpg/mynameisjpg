@@ -7,7 +7,7 @@ date: 2026-09-29 07:00:00 -0300
 last_modified_at: 2026-09-29 07:00:00 -0300
 
 author: "Juan P. Giusepponi"
-status: "draft"
+status: "published"
 
 format: "note"
 category: "observations"
@@ -52,8 +52,8 @@ shareable: true
 allow_embed: true
 
 image:
-  path: "assets/images/Mind_processing_visual_data_2K_20260926123925.jpg"
-  alt: "Coral-red glitch artwork depicting multiple watchful eyes, brain scans, and ASCII telemetry reading 'Eyes don't capture reality, they hallucinate it from 10% data'."
+  path: "assets/images/visual_bandwidth.jpg"
+  alt: "Red-toned glitch artwork of a close-up eye overlaid with static and scan lines. The pupil reflects an old television screen displaying a person's face."
 ---
 
 ## 01. The compression crisis in our eyes
@@ -64,15 +64,10 @@ The biophysics of vision tells a completely different story.
 
 The human retina processes an incoming sensory torrent estimated at roughly **$10^7$ bits per second**. Yet by the time neural spikes pass through the optic nerve and filter through conscious awareness, bandwidth collapses to a trickle: barely **8 to 25 bits per second**.
 
-```text
-THE SENSORY BOTTLENECK:
-Raw Retinal Stream  [ ~10,000,000 bits/sec ]
-        │
-        ▼ (Optic Nerve Compression)
-Conscious Attention [ 8 — 25 bits/sec ]
-        │
-        ▼
-[ CONTROLLED HALLUCINATION / INTERNAL PREDICTIVE SIMULATION ]
+```mermaid
+flowchart TD
+    A["Raw Retinal Stream<br/>~10,000,000 bits/sec"] -->|"Optic Nerve Compression"| B["Conscious Attention<br/>8 — 25 bits/sec"]
+    B --> C["Controlled Hallucination /<br/>Internal Predictive Simulation"]
 ```
 
 To survive this astronomical compression ratio, the visual cortex doesn't bother relaying raw data. It runs as a **prediction engine**.
