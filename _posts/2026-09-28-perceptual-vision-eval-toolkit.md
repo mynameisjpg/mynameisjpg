@@ -69,18 +69,17 @@ It is an open-source JavaScript and Node.js toolkit built on visual psychophysic
 ## The 4 Core Visual Diagnostics
 
 ```mermaid
-graph TD
-    A["Canvas or Image Input"] --> B["4 Psychophysical Tests"]
+flowchart TD
+    A["Canvas or Image Input"] --> T1 & T2 & T3 & T4
 
-    subgraph B["4 Psychophysical Tests"]
-        direction TB
-        T1["1. Contrast & Legibility (WCAG 2.2 + Relative)"]
-        T2["2. Lateral Inhibition (Difference of Gaussians)"]
-        T3["3. Gestalt Edge Continuity (Vector Coherence)"]
-        T4["4. Multi-Stability Index (Depth Ambiguity Flips)"]
+    subgraph TESTS ["4 Psychophysical Evaluation Tests"]
+        T1["1. Contrast & Legibility<br/>WCAG 2.2 + Relative"]
+        T2["2. Lateral Inhibition<br/>Difference of Gaussians"]
+        T3["3. Gestalt Edge Continuity<br/>Vector Coherence"]
+        T4["4. Multi-Stability Index<br/>Depth Ambiguity Flips"]
     end
 
-    B --> C["Perceptual Score & Diagnostic Report"]
+    T1 & T2 & T3 & T4 --> C["Perceptual Score & Diagnostic Report"]
 ```
 
 ### 1. Contrast & Text Legibility
