@@ -48,8 +48,8 @@ shareable: true
 allow_embed: true
 
 image:
-  path: "assets/images/shanzhai.png"
-  alt: "A circuit-textured figure dissolves into architectural blueprints and corrupted scanlines, fragmented by stark black, white, and coral red digital noise."
+  path: "assets/images/shanzhai.jpg"
+  alt: "Archival B&W human forms dissolve and distort through glowing coral-red circuit traces, scanlines, and fragmented pixel glitches."
 ---
 
 ## 01. The Western Obsession with Fixed Originals

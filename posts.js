@@ -23,7 +23,7 @@ window.DYNAMIC_POSTS = [
     "author": "Juan P. Giusepponi",
     "read_time": "4 MIN READ",
     "via": "",
-    "image": "assets/images/shanzhai.png",
+    "image": "assets/images/shanzhai.jpg",
     "aspect_ratio": "h-tall-1",
     "links": [
       {
