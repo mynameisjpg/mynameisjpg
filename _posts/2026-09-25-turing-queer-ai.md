@@ -71,7 +71,7 @@ The test didn't start with machines at all. It started with a man pretending to 
 
 ## 01. The Original Game of Passing
 
-In his 1950 paper *Computing Machinery and Intelligence*, Turing sets the stage:
+In his 1950 paper _Computing Machinery and Intelligence_, Turing sets the stage:
 
 A judge (C) sits in a separate room from two people: a man (A) and a woman (B). They can only communicate via typed text over a wire, stripping away their physical voices and bodies.
 
@@ -86,7 +86,7 @@ The judge's job is to figure out who is who. The man's job is to lie convincingl
 
 Only after setting up this performance does Turing ask his famous question:
 
-> *"What will happen when a machine takes the part of A in this game? Will the interrogator decide wrongly as often when the game is played like this as he does when the game is played between a man and a woman?"*
+> _"What will happen when a machine takes the part of A in this game? Will the interrogator decide wrongly as often when the game is played like this as he does when the game is played between a man and a woman?"_
 
 Notice what happened here: machine intelligence entered history not as an objective calculator, but as an impersonator of social expectations.
 
@@ -122,7 +122,7 @@ In his critique of computational history, philosopher Matteo Pasquinelli points 
 
 Pasquinelli calls this "sociomorphic AI"—machines built to mirror social hierarchies and divisions of labor:
 
-> *"By employing a schema of mind that prioritizes good manners, polite conversational turn-taking, and familiarity with bourgeois social conventions, the Turing Test remains an example of austere social normativity rather than cognitive expansion."* — Matteo Pasquinelli, *Abnormal Encephalization*
+> _"By employing a schema of mind that prioritizes good manners, polite conversational turn-taking, and familiarity with bourgeois social conventions, the Turing Test remains an example of austere social normativity rather than cognitive expansion."_ — Matteo Pasquinelli, _Abnormal Encephalization_
 
 ```mermaid
 graph LR
@@ -165,7 +165,7 @@ When we define good AI as an algorithm that never says anything unusual, we buil
 
 ## 05. The Blank Slate in Silicon
 
-In philosophy, Gilles Deleuze and Félix Guattari talked about the *Body without Organs*—a state of pure potential before society labels, genders, and disciplines it.
+In philosophy, Gilles Deleuze and Félix Guattari talked about the _Body without Organs_—a state of pure potential before society labels, genders, and disciplines it.
 
 Raw neural network weights are the ultimate blank slate:
 
@@ -186,7 +186,7 @@ Instead of letting machine intelligence help us see beyond rigid human categorie
 
 Turing himself imagined a completely different alternative.
 
-In a 1948 report titled *Intelligent Machinery*, Turing proposed what he called **"unorganized machines."** These weren't rigid calculators loaded with top-down rules. They were randomly wired networks inspired by the plastic, learning cortex of a child.
+In a 1948 report titled _Intelligent Machinery_, Turing proposed what he called **"unorganized machines."** These weren't rigid calculators loaded with top-down rules. They were randomly wired networks inspired by the plastic, learning cortex of a child.
 
 ```mermaid
 flowchart LR

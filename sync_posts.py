@@ -544,7 +544,7 @@ def generate_post_html_files(posts):
     and boots the full split-layout application with the current post active.
     """
     POSTS_HTML_DIR.mkdir(parents=True, exist_ok=True)
-    SITE_ORIGIN = "https://mynameisjpg.github.io"
+    SITE_ORIGIN = "https://mynameisjpg.github.io/mynameisjpg"
     DEFAULT_OG_IMAGE = f"{SITE_ORIGIN}/assets/images/favicon.svg"
 
     for post in posts:
@@ -556,7 +556,39 @@ def generate_post_html_files(posts):
         clean_slug = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', raw_slug)
 
         title = (post.get("title") or "Untitled Dispatch").replace('"', '&quot;')
-        subtitle = (post.get("subtitle") or post.get("excerpt") or "Untitled.jpg — Dispatches on AI perception, cognitive psychophysics, and media archaeology.").replace('"', '&quot;')
+        
+        # Ensure description is at least 100 characters (LinkedIn warning requirement)
+        # and capped under 300 characters for optimal card rendering.
+        excerpt = (post.get("excerpt") or "").strip()
+        subtitle = (post.get("subtitle") or "").strip()
+        
+        candidates = []
+        if excerpt and len(excerpt) >= 100:
+            candidates.append(excerpt)
+        if subtitle and len(subtitle) >= 100:
+            candidates.append(subtitle)
+        if subtitle and excerpt and subtitle != excerpt:
+            combined = f"{subtitle} {excerpt}"
+            if len(combined) >= 100:
+                candidates.append(combined)
+        if excerpt:
+            candidates.append(excerpt)
+        if subtitle:
+            candidates.append(subtitle)
+        candidates.append("Untitled.jpg — Dispatches on AI perception, cognitive psychophysics, high-dimensional latent space, and media archaeology.")
+        
+        # Pick the first candidate with >= 100 characters, or fallback to the longest available
+        description = candidates[0]
+        for c in candidates:
+            if len(c) >= 100:
+                description = c
+                break
+        
+        # Clean quotes and clamp to 300 characters without cutting words awkwardly
+        if len(description) > 300:
+            description = description[:297].rsplit(' ', 1)[0] + '...'
+        description = description.replace('"', '&quot;').replace('\n', ' ').strip()
+
         post_url = f"{SITE_ORIGIN}/posts/{clean_slug}.html"
         
         # ISO 8601 publish date (YYYY-MM-DD) for LinkedIn and schema crawlers
@@ -587,14 +619,14 @@ def generate_post_html_files(posts):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title} — Untitled.jpg</title>
-  <meta name="description" content="{subtitle}">
+  <meta name="description" content="{description}">
   <link rel="canonical" href="{post_url}">
 
   <!-- Open Graph / LinkedIn / Facebook / WhatsApp -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Untitled.jpg">
   <meta property="og:title" content="{title}">
-  <meta property="og:description" content="{subtitle}">
+  <meta property="og:description" content="{description}">
   <meta property="og:url" content="{post_url}">
   <meta name="image" property="og:image" content="{og_image}">
   <meta property="og:image:secure_url" content="{og_image}">
@@ -608,7 +640,7 @@ def generate_post_html_files(posts):
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@untitled_jpg">
   <meta name="twitter:title" content="{title}">
-  <meta name="twitter:description" content="{subtitle}">
+  <meta name="twitter:description" content="{description}">
   <meta name="twitter:image" content="{og_image}">
   <meta name="twitter:image:alt" content="{image_alt}">
 
@@ -616,7 +648,7 @@ def generate_post_html_files(posts):
 
   <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&family=Platypi:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
   
   <!-- Math Rendering (KaTeX), Markdown (Marked.js), & Diagrams (Mermaid.js) -->
