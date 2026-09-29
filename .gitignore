@@ -12,6 +12,9 @@ DispatchCreator/
 dispatch_creator*
 css/post-creator.css
 js/post-creator.js
+post-creator.html
+post_creator_server.py
+custom_options.json
 
 # System & Python cache files
 .DS_Store
