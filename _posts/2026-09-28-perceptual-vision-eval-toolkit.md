@@ -7,7 +7,7 @@ date: 2026-09-28 12:00:00 -0300
 last_modified_at: 2026-09-28 12:00:00 -0300
 
 author: "Juan P. Giusepponi"
-status: "draft"
+status: "published"
 
 format: "resource"
 category: "tool/software"
@@ -54,95 +54,119 @@ image:
   alt: "Perceptual vision evaluation canvas toolkit preview graphic"
 ---
 
-## 01. Overview & Perceptual Framework
+## What is Perceptual Vision Eval?
 
-While standard image quality assessment tools rely on structural similarity metrics (SSIM, PSNR) or CLIP embeddings, they frequently fail to predict how human viewers actually perceive synthetic visual assets.
+Standard computer vision algorithms usually rely on structural comparison metrics like SSIM or mathematical similarity models like CLIP. While those metrics work well for image compression or search indexing, they don't predict how a human eye and brain actually experience a visual asset.
 
-The **Perceptual Vision Eval Toolkit** bridges computer vision algorithms with classical visual psychophysics—specifically drawing on David Cycleback’s _Art Perception_ and Rudolf Arnheim’s Gestalt psychology.
+Think of **Perceptual Vision Eval** as an **eye doctor for computer graphics and web UIs**. 
 
-```text
-EVALUATION PIPELINE ARCHITECTURE:
-[CANVAS / IMAGE INPUT] ──(Grayscale / Luminance Reduction)──> [LATERAL INHIBITION KERNEL]
-                                                                        │
-                                                                        ▼
-[GESTALT EDGE MAP] <──(Sobel / Laplacian High Pass)─── [CONTRAST METRIC MATRIX]
-        │
-        ▼
-[PERCEPTUAL LEGIBILITY SCORE & MULTI-STABILITY DIAGNOSTIC]
-```
-
-### Key Capabilities
-
-1. **Mach Banding & Lateral Inhibition Simulation:** Computes spatial contrast enhancement along luminance boundaries to detect visual glare and illegibility.
-2. **Gestalt Edge Continuity Index:** Measures line orientation coherence and figure-ground separation ratios.
-3. **Multi-Stability Score:** Detects ambiguous spatial regions where the human visual system oscillates between conflicting 3D depth interpretations.
-4. **WCAG 2.2 + Psychophysical Contrast Ratios:** Evaluates legibility across dithered backgrounds, dark mode surfaces, and high-frequency noise.
+It is an open-source JavaScript and Node.js toolkit built on visual psychophysics. It reads image pixel data or HTML5 `<canvas>` elements, runs them through models of human retinal and cognitive vision, and returns an automated perceptual health score out of 100.
 
 ---
 
-## 02. Quickstart & Installation
+## The 4 Core Visual Diagnostics
 
-Install the package via `npm` or clone the repository directly for local Node.js / browser usage:
+```text
+[ CANVAS OR IMAGE INPUT ]
+           │
+           ▼
+ ┌────────────────────────────────────────────────────────┐
+ │            4 PSYCHOPHYSICAL EVALUATION TESTS           │
+ ├────────────────────────────────────────────────────────┤
+ │ 1. Contrast & Legibility (WCAG 2.2 + Relative)          │
+ │ 2. Lateral Inhibition (Difference of Gaussians)       │
+ │ 3. Gestalt Edge Continuity (Vector Coherence)         │
+ │ 4. Multi-Stability Index (Depth Ambiguity Flips)      │
+ └────────────────────────────────────────────────────────┘
+           │
+           ▼
+[ PERCEPTUAL SCORE & DIAGNOSTIC REPORT ]
+```
+
+### 1. Contrast & Text Legibility
+- **What it does:** Measures luminance contrast ratios across text, buttons, and background surfaces using WCAG 2.2 guidelines and relative luminance equations.
+- **Why it matters:** Ensures dark mode interfaces and dithered graphic backgrounds stay easy to read without causing viewer eye strain.
+
+### 2. Glare & Eye Strain (Lateral Inhibition)
+- **What it does:** Simulates how human retinal ganglion cells process brightness boundaries using a Difference of Gaussians (DoG) filter kernel:
+
+  $$K_{\text{DoG}} = G_{\sigma_1} - G_{\sigma_2}$$
+
+- **Why it matters:** Flags harsh step transitions that create Mach bands (phantom glow lines along edges), visual glare, and viewer fatigue.
+
+### 3. Shape & Border Continuity (Gestalt Coherence)
+- **What it does:** Applies Sobel gradient filters to calculate orientation vector coherence across edges, measuring figure-ground separation.
+- **Why it matters:** Checks whether objects and boundaries group together naturally into clear visual structures or dissolve into noisy, chaotic shapes.
+
+### 4. Optical Illusions & Ambiguity (Multi-Stability)
+- **What it does:** Analyzes spatial frequency phase shifts to identify ambiguous regions where the human brain oscillates between conflicting 3D depth interpretations (such as a Necker cube illusion).
+- **Why it matters:** Catches synthetic AI images or graphics that look visually unstable or optically disorienting.
+
+---
+
+## Quickstart & Installation
+
+You can install the toolkit via `npm` or clone the repository directly:
 
 ```bash
-# Clone repository
+# Clone the repository
 git clone https://github.com/untitled-jpg/perceptual-vision-eval.git
 
-# Install dependencies
+# Navigate to directory and install dependencies
 cd perceptual-vision-eval
 npm install
 
-# Run test suite & benchmark on sample assets
-npm run test
+# Run test suite
+npm test
+
+# Launch local interactive demo
+npm run demo
 ```
 
 ---
 
-## 03. API Reference & Code Snippet
+## Usage & API Reference
 
-The toolkit exposes both a high-level `PerceptualEvaluator` class and standalone Canvas API utilities.
+The library exports a `PerceptualEvaluator` class alongside standalone metric functions. It accepts an `HTMLCanvasElement`, `CanvasRenderingContext2D`, `ImageData`, or a raw pixel object `{ data, width, height }`.
 
 ```javascript
-import {
-  PerceptualEvaluator,
-  computeLateralInhibition,
-} from "perceptual-vision-eval";
+import { PerceptualEvaluator } from "perceptual-vision-eval";
 
-// Select target canvas element or image buffer
+// Select target canvas element
 const canvas = document.getElementById("viewport");
 const ctx = canvas.getContext("2d");
-const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
-// Initialize evaluator with Cycleback psychophysical parameters
+// Initialize evaluator with custom sensitivity settings
 const evaluator = new PerceptualEvaluator({
-  luminanceFormula: "WCAG21", // 'WCAG21' | 'RelativeLuminance'
-  lateralInhibitionSigma: 1.8, // Center-surround receptive field kernel size
-  gestaltThreshold: 0.42, // Edge grouping sensitivity threshold
-  multiStabilitySensitivity: 0.75, // Oscillatory depth detection
+  luminanceFormula: "WCAG21",      // 'WCAG21' | 'RelativeLuminance'
+  lateralInhibitionSigma: 1.8,     // Receptive field kernel size
+  gestaltThreshold: 0.42,          // Edge grouping sensitivity
+  multiStabilitySensitivity: 0.75  // Depth ambiguity sensitivity
 });
 
-// Run automated perceptual audit
-const report = evaluator.analyze(imageData);
+// Run automated perceptual analysis
+const report = evaluator.analyze(canvas);
 
 console.log(`Perceptual Score: ${report.score} / 100`);
 console.log(`Contrast Ratio: ${report.metrics.contrastRatio}:1`);
-console.log(`Gestalt Continuity: ${report.metrics.gestaltContinuity}`);
-console.log(`Multi-Stability Warning: ${report.diagnostics.hasDepthAmbiguity}`);
+console.log(`Mach Banding Warning: ${report.diagnostics.machBandingWarning}`);
+console.log(`Depth Ambiguity: ${report.diagnostics.hasDepthAmbiguity}`);
+console.log(`Diagnostic Summary: ${report.diagnostics.summary}`);
 ```
 
 ---
 
-## 04. Technical Specifications & Benchmark Ratios
+## Technical Specifications & Diagnostic Thresholds
 
-| Metric Parameter                                   | Formula / Method                                       | Target Threshold                  | Perceptual Diagnostic                                 |
-| :------------------------------------------------- | :----------------------------------------------------- | :-------------------------------- | :---------------------------------------------------- |
-| **Luminance Contrast ($L_r$)**                     | $\frac{L_1 + 0.05}{L_2 + 0.05}$                        | $\ge 4.5:1$ (AA), $\ge 7:1$ (AAA) | Text & UI legibility against dark slate backgrounds   |
-| **Lateral Inhibition ($\mathbf{K}_{\text{DoG}}$)** | Difference of Gaussians: $G_{\sigma_1} - G_{\sigma_2}$ | Peak edge ratio $\le 2.4$         | Prevents Mach band glare and visual fatigue           |
-| **Gestalt Continuity ($C_g$)**                     | Orientation vector histogram coherence                 | $C_g \in [0.65, 0.95]$            | Ensures clear figure-ground separation                |
-| **Multi-Stability Index ($M_s$)**                  | Spatial frequency phase inversion variance             | $M_s \le 0.30$                    | Flags ambiguous 3D visual flips in synthetic graphics |
+| Metric Parameter | Target Range / Threshold | Perceptual Diagnostic Goal |
+| :--- | :--- | :--- |
+| **Luminance Contrast ($L_r$)** | $\ge 4.5:1$ (AA), $\ge 7:1$ (AAA) | Verifies text legibility on dark or dithered surfaces |
+| **Lateral Inhibition ($\mathbf{K}_{\text{DoG}}$)** | Peak ratio $\le 2.4$ | Prevents Mach band glare lines and visual fatigue |
+| **Gestalt Continuity ($C_g$)** | Score $\in [0.65, 0.95]$ | Confirms clear figure-ground boundary separation |
+| **Multi-Stability Index ($M_s$)** | Index $\le 0.30$ | Flags ambiguous 3D depth flips in synthetic media |
 
 ---
 
-## 05. Integration with Synthetic Media Workflows
+## Interactive Demo
 
-You can run `perceptual-vision-eval` as a CI/CD build step to validate generated image assets, background UI graphics, or dithered canvas renders before deploying to production.
+The project includes an interactive HTML5 Canvas demo. Run `npm run demo` and open `http://localhost:3000` to test sample patterns (Mach bands, UI text contrast grids, Gestalt shapes, and multi-stable figures) with live visual heatmaps.
