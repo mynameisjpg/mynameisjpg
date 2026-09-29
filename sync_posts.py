@@ -110,8 +110,11 @@ def format_inline_markdown(text):
     # Italic: *text* or _text_
     out = re.sub(r'(?<!\w)\*([^\*]+?)\*(?!\w)', r'<em>\1</em>', out)
     out = re.sub(r'(?<!\w)_([^_]+?)_(?!\w)', r'<em>\1</em>', out)
-    # Code inline: `code`
-    out = re.sub(r'`([^`]+?)`', r'<code>\1</code>', out)
+    # Code inline: `code` (with HTML entity escaping for < and >)
+    def _code_repl(m):
+        code_str = m.group(1).replace('<', '&lt;').replace('>', '&gt;')
+        return f'<code>{code_str}</code>'
+    out = re.sub(r'`([^`]+?)`', _code_repl, out)
     # Links: [text](url)
     out = re.sub(r'\[([^\]]+?)\]\(([^)]+?)\)', r'<a href="\2" target="_blank" rel="noopener noreferrer">\1</a>', out)
     return out
