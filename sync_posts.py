@@ -524,6 +524,9 @@ def generate_post_html_files(posts):
   <meta property="og:description" content="{subtitle}">
   <meta property="og:url" content="{post_url}">
   <meta property="og:image" content="{og_image}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{title}">
   <meta property="article:published_time" content="{post.get('date', '')}">
   <meta property="article:author" content="{post.get('author', 'Juan P. Giusepponi')}">
 
