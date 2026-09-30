@@ -432,67 +432,6 @@
     ]
   },
   {
-    "id": "canvas-api",
-    "name": "canvas-api",
-    "label": "#canvas-api",
-    "type": "tag",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
-      },
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      },
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
-      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
-    ],
-    "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION",
-      "COMPUTER VISION VS. HUMAN PERCEPTION"
-    ],
-    "connected_tags": [
-      "toolkit",
-      "github",
-      "repo",
-      "relational",
-      "data-labeling",
-      "ai"
-    ]
-  },
-  {
     "id": "free",
     "name": "free",
     "label": "#free",
@@ -665,12 +604,12 @@
       "COMPUTER VISION VS. HUMAN PERCEPTION"
     ],
     "connected_tags": [
-      "canvas-api",
       "github",
       "repo",
       "relational",
       "data-labeling",
-      "ai"
+      "ai",
+      "models"
     ]
   },
   {
@@ -1013,6 +952,48 @@
     ]
   },
   {
+    "id": "annotation",
+    "name": "annotation",
+    "label": "#annotation",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "github",
+      "repo",
+      "relational",
+      "data-labeling",
+      "ai"
+    ]
+  },
+  {
     "id": "archeology",
     "name": "archeology",
     "label": "#archeology",
@@ -1259,6 +1240,48 @@
       "authorship",
       "reflections",
       "philosophy"
+    ]
+  },
+  {
+    "id": "canvas-api",
+    "name": "canvas-api",
+    "label": "#canvas-api",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "free",
+      "download",
+      "psychophysics",
+      "visual-perception",
+      "skill"
     ]
   },
   {
@@ -1803,48 +1826,6 @@
       "computer sciences",
       "informatics",
       "networks",
-      "ai"
-    ]
-  },
-  {
-    "id": "dithering",
-    "name": "dithering",
-    "label": "#dithering",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      }
-    ],
-    "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
-    ],
-    "subtopics": [
-      "COMPUTER VISION VS. HUMAN PERCEPTION"
-    ],
-    "connected_tags": [
-      "toolkit",
-      "github",
-      "repo",
-      "relational",
-      "data-labeling",
       "ai"
     ]
   },

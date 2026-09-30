@@ -111,5 +111,5 @@ Released checkpoints include the backbone configuration and text encoder; no gat
 
 **Title:** RelateAnything: Real-Time Open-Vocabulary Relation Prediction From Any Inputs
 Subjects: Computer Vision and Pattern Recognition (cs.CV)<br>
-• [arXiv:2609.12552](assets/docs/2609.12552.pdf) [cs.CV]<br>
+• [arXiv:2609.12552](assets/docs/2609.12552v1.pdf) [cs.CV]<br>
 • https://doi.org/10.48550/arXiv.2609.12552
