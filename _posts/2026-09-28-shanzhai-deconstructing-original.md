@@ -52,11 +52,7 @@ I keep returning to a question that seems almost silly on the surface: _Why are 
 
 Growing up around Western art and legal ideas, you learn to take a specific premise for granted: every poem, painting, or design has a single starting point. It belongs to one author, born at one specific moment in time. Anything that comes after is judged against that first instance. If it strays too close, we call it a copy, a forgery, or a imitation. We treat the original as a sacred monument, and the copy as something diminished—a loss of aura.
 
-```text
-TWO WAYS OF SEEING CREATION:
-FIXED ORIGINAL     ──> [Sacred Peak] ──(Reproduction)──> [Degraded Copy]
-SHANZHAI DECONSTRUCTION ──> [Flowing Stream] ──(Adaptation)──> [Evolving Variation]
-```
+<img src="assets/images/shanzhai_2ways.jpg" alt="TWO WAYS OF SEEING CREATION: from a fixed original, through a sacred peak of reproduction, to a degraded copy; and Shanzhai (deconstruction), as a flowing stream through adaptation, to evolving variation" width="100%" />
 
 When you step back, that strict boundary feels less like a universal truth and more like a cultural habit.
 
