@@ -18,6 +18,15 @@
   overflow-y: auto;
   padding: 4.5rem 4.5rem;
   box-sizing: border-box;
+  width: 100%;
+}
+
+.reader-content-container {
+  max-width: 800px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 }
 
 /* ==============================================================================

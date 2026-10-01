@@ -516,141 +516,143 @@ function renderPost(postId) {
     <button type="button" class="btn-close-reader-edge" onclick="closeReaderPane()" title="Close reader panel (ESC)" aria-label="Close reader panel">&lt;&lt;</button>
 
     <div class="reader-scroll-wrapper">
-      <!-- Return to Grid Feed Button (Mobile / Narrow Screens) -->
-      <button type="button" class="btn-return-grid" onclick="showGridFeedMobile()" aria-label="Return to Grid Feed">
-        <span class="return-arrow">&lt;&lt;</span>
-        <span class="return-text">[ RETURN TO GRID FEED ]</span>
-      </button>
+      <div class="reader-content-container">
+        <!-- Return to Grid Feed Button (Mobile / Narrow Screens) -->
+        <button type="button" class="btn-return-grid" onclick="showGridFeedMobile()" aria-label="Return to Grid Feed">
+          <span class="return-arrow">&lt;&lt;</span>
+          <span class="return-text">[ RETURN TO GRID FEED ]</span>
+        </button>
 
-      <!-- TIER 1: ABOVE TITLE ARCHIVAL BADGES -->
-      <header class="post-header-meta-top">
-        <span class="meta-chip chip-primary">[${post.format}]</span>
-        ${post.category ? `<a href="network.html?tag=${encodeURIComponent(post.category)}" class="meta-chip meta-chip-category" title="Explore ${post.category} in Taxonomy Node Map">[${post.category}]</a>` : ''}
-        ${post.media ? `<span class="meta-chip meta-chip-media">[MEDIA: ${post.media}]</span>` : ''}
-        ${post.pillar ? `<a href="network.html?tag=${encodeURIComponent(post.pillar)}" class="meta-chip" title="Explore ${post.pillar} in Taxonomy Node Map">[${post.pillar}]</a>` : ''}
-        ${post.subtopic ? `<a href="network.html?tag=${encodeURIComponent(post.subtopic)}" class="meta-chip" title="Explore ${post.subtopic} in Taxonomy Node Map">[${post.subtopic}]</a>` : ''}
-      </header>
+        <!-- TIER 1: ABOVE TITLE ARCHIVAL BADGES -->
+        <header class="post-header-meta-top">
+          <span class="meta-chip chip-primary">[${post.format}]</span>
+          ${post.category ? `<a href="network.html?tag=${encodeURIComponent(post.category)}" class="meta-chip meta-chip-category" title="Explore ${post.category} in Taxonomy Node Map">[${post.category}]</a>` : ''}
+          ${post.media ? `<span class="meta-chip meta-chip-media">[MEDIA: ${post.media}]</span>` : ''}
+          ${post.pillar ? `<a href="network.html?tag=${encodeURIComponent(post.pillar)}" class="meta-chip" title="Explore ${post.pillar} in Taxonomy Node Map">[${post.pillar}]</a>` : ''}
+          ${post.subtopic ? `<a href="network.html?tag=${encodeURIComponent(post.subtopic)}" class="meta-chip" title="Explore ${post.subtopic} in Taxonomy Node Map">[${post.subtopic}]</a>` : ''}
+        </header>
 
-      <!-- TITLE & SUBTITLE -->
-      <h1 class="post-title essay-title">${post.title}</h1>
-      ${post.subtitle ? `<p class="post-subtitle essay-subtitle">${post.subtitle}</p>` : ''}
+        <!-- TITLE & SUBTITLE -->
+        <h1 class="post-title essay-title">${post.title}</h1>
+        ${post.subtitle ? `<p class="post-subtitle essay-subtitle">${post.subtitle}</p>` : ''}
 
-      ${post.url ? `
-        <!-- PROMINENT ACTION LINK (FOR RESOURCES & BOOKMARKS) -->
-        <div class="post-prominent-action">
-          <a href="${post.url}" target="_blank" rel="noopener noreferrer" class="btn-prominent-action">
-            <span class="action-kicker">${post.format === 'RESOURCE' ? 'ACCESS RESOURCE ↗' : (post.format === 'BOOKMARK' ? 'VIEW SOURCE ↗' : 'VISIT DESTINATION ↗')}</span>
-            <span class="action-url-text">${post.url}</span>
-          </a>
+        ${post.url ? `
+          <!-- PROMINENT ACTION LINK (FOR RESOURCES & BOOKMARKS) -->
+          <div class="post-prominent-action">
+            <a href="${post.url}" target="_blank" rel="noopener noreferrer" class="btn-prominent-action">
+              <span class="action-kicker">${post.format === 'RESOURCE' ? 'ACCESS RESOURCE ↗' : (post.format === 'BOOKMARK' ? 'VIEW SOURCE ↗' : 'VISIT DESTINATION ↗')}</span>
+              <span class="action-url-text">${post.url}</span>
+            </a>
+          </div>
+        ` : ''}
+
+        <!-- TIER 2: BELOW TITLE META BAR -->
+        <div class="post-header-meta-bottom">
+          <span>DATE: <time>${post.date}</time></span>
+          <span class="meta-sep">//</span>
+          <span>BY: <strong class="meta-author">${post.author}</strong></span>
+          <span class="meta-sep">//</span>
+          <span class="meta-readtime">${post.read_time}</span>
+          ${(post.source || post.via) ? `<span class="meta-sep">//</span><span>SOURCE: <strong class="meta-author">${post.source || post.via}</strong></span>` : ''}
+          <span class="meta-sep">//</span>
+          <span>SYS_ID: <code>${post.sys_id}</code></span>
         </div>
-      ` : ''}
 
-      <!-- TIER 2: BELOW TITLE META BAR -->
-      <div class="post-header-meta-bottom">
-        <span>DATE: <time>${post.date}</time></span>
-        <span class="meta-sep">//</span>
-        <span>BY: <strong class="meta-author">${post.author}</strong></span>
-        <span class="meta-sep">//</span>
-        <span class="meta-readtime">${post.read_time}</span>
-        ${(post.source || post.via) ? `<span class="meta-sep">//</span><span>SOURCE: <strong class="meta-author">${post.source || post.via}</strong></span>` : ''}
-        <span class="meta-sep">//</span>
-        <span>SYS_ID: <code>${post.sys_id}</code></span>
-      </div>
+        <!-- MAIN BODY PROSE -->
+        <div class="post-body-content essay-body-content">
+          ${post.content}
+        </div>
 
-      <!-- MAIN BODY PROSE -->
-      <div class="post-body-content essay-body-content">
-        ${post.content}
-      </div>
-
-      <!-- TIER 3: FOOTER SECTION -->
-      <footer class="post-footer-section">
-        ${post.links && post.links.length > 0 ? `
-          <section class="footer-block footer-links">
-            <h3 class="footer-block-title">// REFERENCED_RESOURCES &amp; DESTINATIONS</h3>
-            <div class="resources-grid">
-              ${post.links.map(l => `
-                <div class="resource-card">
-                  <div class="resource-card-header">
-                    <span class="meta-chip resource-chip">[${l.type}]</span>
-                    <a href="${l.url}" target="_blank" rel="noopener noreferrer"><strong>${l.title}</strong> ↗</a>
+        <!-- TIER 3: FOOTER SECTION -->
+        <footer class="post-footer-section">
+          ${post.links && post.links.length > 0 ? `
+            <section class="footer-block footer-links">
+              <h3 class="footer-block-title">// REFERENCED_RESOURCES &amp; DESTINATIONS</h3>
+              <div class="resources-grid">
+                ${post.links.map(l => `
+                  <div class="resource-card">
+                    <div class="resource-card-header">
+                      <span class="meta-chip resource-chip">[${l.type}]</span>
+                      <a href="${l.url}" target="_blank" rel="noopener noreferrer"><strong>${l.title}</strong> ↗</a>
+                    </div>
+                    ${l.desc ? `<p class="resource-card-desc">${l.desc}</p>` : ''}
                   </div>
-                  ${l.desc ? `<p class="resource-card-desc">${l.desc}</p>` : ''}
-                </div>
-              `).join('')}
-            </div>
-          </section>
-        ` : ''}
+                `).join('')}
+              </div>
+            </section>
+          ` : ''}
 
-        ${post.backlinks && post.backlinks.length > 0 ? `
-          <section class="footer-block footer-backlinks">
-            <h3 class="footer-block-title">// CONNECTED_DISPATCHES (NETWORK)</h3>
-            <ul class="backlinks-list">
-              ${post.backlinks.map(b => `
-                <li><a href="${b.slug}"><strong>${b.title}</strong></a> ${b.note ? `— <em>${b.note}</em>` : ''}</li>
-              `).join('')}
-            </ul>
-          </section>
-        ` : ''}
+          ${post.backlinks && post.backlinks.length > 0 ? `
+            <section class="footer-block footer-backlinks">
+              <h3 class="footer-block-title">// CONNECTED_DISPATCHES (NETWORK)</h3>
+              <ul class="backlinks-list">
+                ${post.backlinks.map(b => `
+                  <li><a href="${b.slug}"><strong>${b.title}</strong></a> ${b.note ? `— <em>${b.note}</em>` : ''}</li>
+                `).join('')}
+              </ul>
+            </section>
+          ` : ''}
 
-        ${post.tags && post.tags.length > 0 ? `
-          <section class="footer-block footer-tags">
-            <h3 class="footer-block-title">// TAXONOMY_INDEX</h3>
-            <div class="tags-group">
-              ${post.tags.map(t => `<a href="network.html?tag=${encodeURIComponent(t)}" class="tag-pill" title="Explore #${t} in Taxonomy Node Map">#${t}</a>`).join('')}
-            </div>
-          </section>
-        ` : ''}
+          ${post.tags && post.tags.length > 0 ? `
+            <section class="footer-block footer-tags">
+              <h3 class="footer-block-title">// TAXONOMY_INDEX</h3>
+              <div class="tags-group">
+                ${post.tags.map(t => `<a href="network.html?tag=${encodeURIComponent(t)}" class="tag-pill" title="Explore #${t} in Taxonomy Node Map">#${t}</a>`).join('')}
+              </div>
+            </section>
+          ` : ''}
 
-        ${post.shareable !== false ? `
-          <section class="footer-block footer-share">
-            <div class="share-actions-bar">
-              <span class="share-caption">SHARE DISPATCH:</span>
-              
-              <!-- Copy URL Button -->
-              <button type="button" class="btn-share" onclick="copyPostUrl('${postId}')" title="Copy Link to Clipboard">
-                <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-                <span>COPY URL</span>
-              </button>
-
-              <!-- Embed Card Button -->
-              ${post.allow_embed !== false ? `
-                <button type="button" class="btn-share" onclick="copyEmbedCard('${postId}')" title="Copy HTML Embed Card">
-                  <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                  <span>EMBED</span>
+          ${post.shareable !== false ? `
+            <section class="footer-block footer-share">
+              <div class="share-actions-bar">
+                <span class="share-caption">SHARE DISPATCH:</span>
+                
+                <!-- Copy URL Button -->
+                <button type="button" class="btn-share" onclick="copyPostUrl('${postId}')" title="Copy Link to Clipboard">
+                  <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                  <span>COPY URL</span>
                 </button>
-              ` : ''}
 
-              <!-- X / Twitter -->
-              <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title + ' — Untitled.jpg')}&url=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on X / Twitter">
-                <svg viewBox="0 0 24 24"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
-                <span>X ↗</span>
-              </a>
+                <!-- Embed Card Button -->
+                ${post.allow_embed !== false ? `
+                  <button type="button" class="btn-share" onclick="copyEmbedCard('${postId}')" title="Copy HTML Embed Card">
+                    <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    <span>EMBED</span>
+                  </button>
+                ` : ''}
 
-              <!-- LinkedIn -->
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on LinkedIn">
-                <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                <span>LINKEDIN ↗</span>
-              </a>
+                <!-- X / Twitter -->
+                <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title + ' — Untitled.jpg')}&url=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on X / Twitter">
+                  <svg viewBox="0 0 24 24"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+                  <span>X ↗</span>
+                </a>
 
-              <!-- Facebook -->
-              <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on Facebook">
-                <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                <span>FB ↗</span>
-              </a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on LinkedIn">
+                  <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  <span>LINKEDIN ↗</span>
+                </a>
 
-              <!-- Instagram Stories -->
-              <button type="button" class="btn-share" onclick="shareInstagram('${postId}')" title="Copy for Instagram Stories">
-                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                <span>IG ↗</span>
-              </button>
-            </div>
-          </section>
-        ` : ''}
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on Facebook">
+                  <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                  <span>FB ↗</span>
+                </a>
 
-        <div class="post-signoff">
-          <code>UNTITLED.JPG // BUILT IN ZEROES AND ONES WITH THE BLOOD AND SWEAT OF JUAN P. GIUSEPPONI // 2026</code>
-        </div>
-      </footer>
+                <!-- Instagram Stories -->
+                <button type="button" class="btn-share" onclick="shareInstagram('${postId}')" title="Copy for Instagram Stories">
+                  <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                  <span>IG ↗</span>
+                </button>
+              </div>
+            </section>
+          ` : ''}
+
+          <div class="post-signoff">
+            <code>UNTITLED.JPG // BUILT IN ZEROES AND ONES WITH THE BLOOD AND SWEAT OF JUAN P. GIUSEPPONI // 2026</code>
+          </div>
+        </footer>
+      </div>
     </div>
   `;
 
