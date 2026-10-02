@@ -29,11 +29,10 @@
   /* 2. Light Theme Tokens (Per-Post Mode Adaptation) */
   --bg-light-mode: #f5f5f5;
   --bg-light-card: #d5d5d5;
-  --bg-light-card-hover: #c5d3da;
-  --text-light-h: #1b2427;
-  --text-light-body: #2d3748;
-  --text-light-muted: #4a5568;
-  --text-light-secondary: #4a5568;
+  --bg-light-card-hover: #c2c2c2;
+  --text-light-h: #212121;
+  --text-light-body: #3b3b3b;
+  --text-light-muted: #616161;
   --border-light: rgba(0, 0, 0, 0.12);
   --border-light-subtle: rgba(0, 0, 0, 0.08);
 

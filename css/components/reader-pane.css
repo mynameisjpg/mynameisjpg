@@ -10,7 +10,9 @@
   overflow: visible !important;
   height: 100vh;
   position: relative;
-  transition: background-color var(--transition-normal), color var(--transition-normal);
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal);
 }
 
 .reader-scroll-wrapper {
@@ -36,7 +38,7 @@
 .essay-title {
   font-family: var(--font-mono);
   font-size: var(--text-2xl);
-  font-weight: var(--weight-medium);
+  font-weight: var(--weight-semibold);
   line-height: var(--leading-tight);
   color: var(--text-bright);
   margin-bottom: 0.85rem;
@@ -136,18 +138,22 @@
 
 .post-body-content pre,
 .essay-body-content pre {
-  background: #0E0E0E;
+  background: #0e0e0e;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   padding: 1.2rem 1.4rem;
   margin: 2rem 0;
   overflow-x: auto;
-  font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', 'SF Mono', Consolas, 'Courier New', monospace;
+  font-family:
+    "JetBrains Mono", "Cascadia Code", "Fira Code", "SF Mono", Consolas,
+    "Courier New", monospace;
   font-size: 0.76rem;
   line-height: 1.25;
   letter-spacing: 0;
   font-variant-ligatures: none;
-  font-feature-settings: "liga" 0, "calt" 0;
+  font-feature-settings:
+    "liga" 0,
+    "calt" 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -158,7 +164,7 @@
   font-size: inherit;
   line-height: inherit;
   letter-spacing: inherit;
-  color: #E6E6E6;
+  color: #e6e6e6;
   white-space: pre;
   tab-size: 2;
   display: block;
@@ -168,7 +174,7 @@
 .post-body-content li code,
 .essay-body-content p code,
 .essay-body-content li code {
-  font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace;
+  font-family: "JetBrains Mono", "Cascadia Code", "Fira Code", monospace;
   font-size: 0.85em;
   background: rgba(255, 255, 255, 0.08);
   padding: 0.15em 0.4em;
@@ -198,7 +204,7 @@
 .essay-body-content p .math-inline,
 .essay-body-content li .math-inline,
 .math-inline {
-  font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace;
+  font-family: "JetBrains Mono", "Cascadia Code", "Fira Code", monospace;
   background: rgba(255, 255, 255, 0.08);
   padding: 0.15em 0.45em;
   border-radius: 2px;
@@ -331,7 +337,7 @@
 
 /* 6. Dark Mode Edge Labels: Style ONLY non-empty inner span elements */
 .mermaid-diagram-box svg .edgeLabel span:not(:empty) {
-  background-color: #1A1A1A !important;
+  background-color: #1a1a1a !important;
   color: var(--text-bright) !important;
   border: none !important;
   border-radius: 4px !important;
@@ -364,7 +370,7 @@
 .theme-light .mermaid-diagram-box,
 .essay-column.theme-light .mermaid-diagram-box,
 .theme-light #essay-reading-pane .mermaid-diagram-box {
-  background: #F1F5F9 !important;
+  background: #f1f5f9 !important;
   border: none !important;
   box-shadow: none !important;
 }
@@ -385,8 +391,8 @@
 .theme-light .mermaid-diagram-box svg .cluster-label text,
 .theme-light .mermaid-diagram-box svg .cluster-label span,
 .theme-light .mermaid-diagram-box svg .cluster-label div {
-  fill: #64748B !important;
-  color: #64748B !important;
+  fill: #64748b !important;
+  color: #64748b !important;
 }
 
 /* Light Mode: White background for node boxes with darker grey border */
@@ -398,9 +404,9 @@
 .essay-column.theme-light .mermaid-diagram-box svg .node circle,
 .essay-column.theme-light .mermaid-diagram-box svg .node polygon,
 .essay-column.theme-light .mermaid-diagram-box svg .node path {
-  stroke: #4A5568 !important;
+  stroke: #4a5568 !important;
   stroke-width: 1.5px !important;
-  fill: #FFFFFF !important;
+  fill: #ffffff !important;
 }
 
 /* Light Mode: Dark text inside white boxes */
@@ -410,16 +416,16 @@
 .essay-column.theme-light .mermaid-diagram-box svg .node .label,
 .essay-column.theme-light .mermaid-diagram-box svg .node label,
 .essay-column.theme-light .mermaid-diagram-box svg .node text {
-  fill: #1B2427 !important;
-  color: #1B2427 !important;
+  fill: #1b2427 !important;
+  color: #1b2427 !important;
   font-weight: 500 !important;
 }
 
 /* Light Mode: Borderless box background for arrow labels containing text */
 .theme-light .mermaid-diagram-box svg .edgeLabel span:not(:empty),
 .essay-column.theme-light .mermaid-diagram-box svg .edgeLabel span:not(:empty) {
-  background-color: #FFFFFF !important;
-  color: #1B2427 !important;
+  background-color: #ffffff !important;
+  color: #1b2427 !important;
   border: none !important;
   border-radius: 4px !important;
   padding: 4px 10px !important;
@@ -437,8 +443,8 @@
 .theme-light .mermaid-diagram-box svg .edgeLabel text:not(:empty),
 .essay-column.theme-light .mermaid-diagram-box svg .edgeLabel tspan,
 .essay-column.theme-light .mermaid-diagram-box svg .edgeLabel text:not(:empty) {
-  fill: #1B2427 !important;
-  color: #1B2427 !important;
+  fill: #1b2427 !important;
+  color: #1b2427 !important;
   font-family: var(--font-mono) !important;
   font-size: 0.72rem !important;
   font-weight: 500 !important;
@@ -553,7 +559,7 @@
 
 .post-column.theme-light .post-body-content pre,
 .essay-column.theme-light .essay-body-content pre {
-  background: #E4ECF0;
+  background: #e4ecf0;
   border-color: var(--border-light);
 }
 
@@ -567,7 +573,7 @@
 .essay-column.theme-light .essay-body-content p code,
 .essay-column.theme-light .essay-body-content li code {
   background: rgba(0, 0, 0, 0.06);
-  color: #B22234;
+  color: #b22234;
 }
 
 .post-column.theme-light .math-block,

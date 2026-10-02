@@ -440,14 +440,14 @@
 .theme-light .resource-card p,
 .post-column.theme-light .resource-card p,
 .essay-column.theme-light .resource-card p {
-  color: var(--text-light-secondary);
+  color: var(--text-light-muted);
   font-weight: var(--weight-regular);
 }
 
 .theme-light .backlinks-list,
 .post-column.theme-light .backlinks-list,
 .essay-column.theme-light .backlinks-list {
-  color: var(--text-light-secondary);
+  color: var(--text-light-muted);
 }
 
 .theme-light .backlinks-list a,

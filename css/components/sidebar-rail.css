@@ -17,11 +17,12 @@
   z-index: var(--z-sidebar, 10000);
   border-right: 1px solid var(--border-faint, rgba(255, 255, 255, 0.08));
   box-sizing: border-box;
-  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              padding 0.3s ease,
-              background-color 0.3s ease,
-              border-color 0.3s ease;
+  transition:
+    width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    padding 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .sidebar-left-group {
@@ -49,16 +50,18 @@
 }
 
 .brand-logo-v {
-  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-family: var(--font-mono, "Azeret Mono", monospace);
   font-size: 0.62rem;
   font-weight: 500;
   letter-spacing: 0.14em;
-  color: var(--text-bright, #F5F5F5);
+  color: var(--text-bright, #f5f5f5);
   text-decoration: none;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   white-space: nowrap;
-  transition: color var(--transition-fast, 0.15s ease), background-color var(--transition-fast, 0.15s ease);
+  transition:
+    color var(--transition-fast, 0.15s ease),
+    background-color var(--transition-fast, 0.15s ease);
   width: 100%;
   min-height: 48px;
   display: flex;
@@ -68,7 +71,7 @@
 }
 
 .brand-logo-v:hover {
-  color: var(--accent-coral, #E84A5F);
+  color: var(--accent-coral, #e84a5f);
 }
 
 .logo-full {
@@ -90,7 +93,7 @@
 }
 
 .nav-link-item {
-  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-family: var(--font-mono, "Azeret Mono", monospace);
   font-size: 0.62rem;
   font-weight: 400;
   letter-spacing: 0.12em;
@@ -112,7 +115,7 @@
 
 .nav-link-item:hover,
 .nav-link-item.active {
-  color: var(--accent-coral, #E84A5F);
+  color: var(--accent-coral, #e84a5f);
 }
 
 /* Collapsed Dispatch Log Single Dropdown Button (Hidden on Desktop) */
@@ -121,8 +124,8 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--rounded-sm, 2px);
-  color: var(--accent-coral, #E84A5F);
-  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  color: var(--accent-coral, #e84a5f);
+  font-family: var(--font-mono, "Azeret Mono", monospace);
   font-size: 0.65rem;
   font-weight: 600;
   padding: 0.35rem 0.65rem;
@@ -134,9 +137,9 @@
 
 .dispatch-log-dropdown-btn:hover,
 .dispatch-log-dropdown-btn.active {
-  background: var(--accent-coral, #E84A5F);
+  background: var(--accent-coral, #e84a5f);
   color: #121212;
-  border-color: var(--accent-coral, #E84A5F);
+  border-color: var(--accent-coral, #e84a5f);
 }
 
 /* Inline Top Search Box (Hidden on Desktop Rail) */
@@ -153,11 +156,14 @@
   min-width: 140px;
   height: 32px;
   box-sizing: border-box;
-  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .top-inline-search-box:focus-within {
-  border-color: var(--accent-coral, #E84A5F) !important;
+  border-color: var(--accent-coral, #e84a5f) !important;
   background-color: var(--neutral-surface, #161616);
   box-shadow: 0 0 0 1px rgba(232, 74, 95, 0.4);
 }
@@ -166,7 +172,7 @@
   width: 14px;
   height: 14px;
   fill: none;
-  stroke: var(--accent-coral, #E84A5F);
+  stroke: var(--accent-coral, #e84a5f);
   stroke-width: 2;
   flex-shrink: 0;
 }
@@ -175,8 +181,8 @@
   background: transparent;
   border: none;
   outline: none;
-  color: var(--text-body, #D4D4D4);
-  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  color: var(--text-body, #d4d4d4);
+  font-family: var(--font-mono, "Azeret Mono", monospace);
   font-size: 0.68rem;
   letter-spacing: 0.05em;
   width: 100%;
@@ -190,11 +196,11 @@
 
 .top-navbar-legend-badge {
   display: none;
-  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-family: var(--font-mono, "Azeret Mono", monospace);
   font-size: 0.6rem;
   font-weight: 500;
   letter-spacing: 0.08em;
-  color: var(--accent-coral, #E84A5F);
+  color: var(--accent-coral, #e84a5f);
   background: rgba(232, 74, 95, 0.08);
   border: 1px solid rgba(232, 74, 95, 0.25);
   padding: 0.35rem 0.65rem;
@@ -249,7 +255,7 @@
 
 .sidebar-bottom-icons a:hover svg,
 .sidebar-bottom-icons a.active svg {
-  stroke: var(--accent-coral, #E84A5F);
+  stroke: var(--accent-coral, #e84a5f);
 }
 
 /* ==============================================================================
@@ -263,12 +269,12 @@
 
 .rail-tooltip {
   position: absolute;
-  background: #E5E5E5;
+  background: #e5e5e5;
   color: #121212;
   border: 1px solid rgba(0, 0, 0, 0.15);
   padding: 0.52rem 0.95rem;
   border-radius: var(--rounded-sm, 2px);
-  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-family: var(--font-mono, "Azeret Mono", monospace);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -302,9 +308,10 @@
   top: 50%;
   transform-origin: left center;
   transform: rotate(180deg) translateY(50%) scale(0.7) translateX(-10px);
-  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-              visibility 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .brand-logo-v:hover .rail-tooltip,
@@ -316,7 +323,7 @@
 
 .brand-logo-v .rail-tooltip::before,
 .nav-link-item .rail-tooltip::before {
-  content: '';
+  content: "";
   position: absolute;
   left: -6px;
   right: auto;
@@ -326,7 +333,7 @@
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 6px solid #E5E5E5;
+  border-right: 6px solid #e5e5e5;
 }
 
 /* 2. Unrotated Parent Items (Bottom Icons): Open to Visual RIGHT */
@@ -336,9 +343,10 @@
   top: 50%;
   transform-origin: left center;
   transform: translateY(-50%) scale(0.7) translateX(-10px);
-  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-              visibility 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sidebar-bottom-icons a:hover .rail-tooltip {
@@ -348,7 +356,7 @@
 }
 
 .sidebar-bottom-icons a .rail-tooltip::before {
-  content: '';
+  content: "";
   position: absolute;
   left: -6px;
   right: auto;
@@ -358,30 +366,60 @@
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 6px solid #E5E5E5;
+  border-right: 6px solid #e5e5e5;
 }
 
 /* ==============================================================================
    SUBSCRIBE ICON CALL VIBRATION (6 LOOPS) & SLOW COLOR BREATHING PULSE
    ============================================================================== */
 @keyframes subscribeCallVibrate {
-  0% { transform: scale(1) rotate(0deg); stroke: var(--text-muted, #888888); }
-  15% { transform: scale(1.28) rotate(-22deg); stroke: var(--accent-coral, #E84A5F); filter: drop-shadow(0 0 6px rgba(232, 74, 95, 0.85)); }
-  30% { transform: scale(1.28) rotate(22deg); stroke: var(--accent-coral, #E84A5F); filter: drop-shadow(0 0 6px rgba(232, 74, 95, 0.85)); }
-  45% { transform: scale(1.28) rotate(-18deg); stroke: var(--accent-coral, #E84A5F); filter: drop-shadow(0 0 6px rgba(232, 74, 95, 0.85)); }
-  60% { transform: scale(1.28) rotate(18deg); stroke: var(--accent-coral, #E84A5F); filter: drop-shadow(0 0 6px rgba(232, 74, 95, 0.85)); }
-  75% { transform: scale(1.28) rotate(-10deg); stroke: var(--accent-coral, #E84A5F); }
-  85% { transform: scale(1.1) rotate(8deg); stroke: var(--accent-coral, #E84A5F); }
-  100% { transform: scale(1) rotate(0deg); stroke: var(--text-muted, #888888); filter: none; }
+  0% {
+    transform: scale(1) rotate(0deg);
+    stroke: var(--text-muted, #888888);
+  }
+  15% {
+    transform: scale(1.28) rotate(-22deg);
+    stroke: var(--accent-coral, #e84a5f);
+    filter: drop-shadow(0 0 6px rgba(232, 74, 95, 0.85));
+  }
+  30% {
+    transform: scale(1.28) rotate(22deg);
+    stroke: var(--accent-coral, #e84a5f);
+    filter: drop-shadow(0 0 6px rgba(232, 74, 95, 0.85));
+  }
+  45% {
+    transform: scale(1.28) rotate(-18deg);
+    stroke: var(--accent-coral, #e84a5f);
+    filter: drop-shadow(0 0 6px rgba(232, 74, 95, 0.85));
+  }
+  60% {
+    transform: scale(1.28) rotate(18deg);
+    stroke: var(--accent-coral, #e84a5f);
+    filter: drop-shadow(0 0 6px rgba(232, 74, 95, 0.85));
+  }
+  75% {
+    transform: scale(1.28) rotate(-10deg);
+    stroke: var(--accent-coral, #e84a5f);
+  }
+  85% {
+    transform: scale(1.1) rotate(8deg);
+    stroke: var(--accent-coral, #e84a5f);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    stroke: var(--text-muted, #888888);
+    filter: none;
+  }
 }
 
 @keyframes subscribeSlowColorLoop {
-  0%, 100% {
+  0%,
+  100% {
     stroke: var(--text-muted, #888888);
     filter: none;
   }
   50% {
-    stroke: var(--accent-coral, #E84A5F);
+    stroke: var(--accent-coral, #e84a5f);
     filter: drop-shadow(0 0 8px rgba(232, 74, 95, 0.5));
   }
 }
@@ -390,13 +428,15 @@
   display: inline-block !important;
   transform-origin: center center !important;
   transform-box: fill-box !important;
-  animation: subscribeCallVibrate 1.2s cubic-bezier(0.36, 0.07, 0.19, 0.97) 6.0s 6,
-             subscribeSlowColorLoop 4s ease-in-out 13.2s infinite !important;
+  animation:
+    subscribeCallVibrate 1.2s cubic-bezier(0.36, 0.07, 0.19, 0.97) 6s 6,
+    subscribeSlowColorLoop 4s ease-in-out 13.2s infinite !important;
 }
 
 /* Auto-Reveal & Smooth Scaling Glow for Subscribe Tooltip (Appears at 6s for ~3s) */
 @keyframes subscribeTooltipAutoReveal {
-  0%, 62% {
+  0%,
+  62% {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-50%) scale(0.65) translateX(-12px);
@@ -407,26 +447,34 @@
     opacity: 0;
     visibility: visible;
     transform: translateY(-50%) scale(0.65) translateX(-12px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75), 0 0 8px rgba(232, 74, 95, 0.2);
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.75),
+      0 0 8px rgba(232, 74, 95, 0.2);
   }
   68.4% {
     opacity: 1;
     visibility: visible;
     transform: translateY(-50%) scale(1) translateX(0);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75), 0 0 12px rgba(232, 74, 95, 0.35);
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.75),
+      0 0 12px rgba(232, 74, 95, 0.35);
   }
   89.5% {
     opacity: 1;
     visibility: visible;
     transform: translateY(-50%) scale(1) translateX(0);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75), 0 0 16px rgba(232, 74, 95, 0.45);
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.75),
+      0 0 16px rgba(232, 74, 95, 0.45);
   }
   /* 9.0s - 9.5s: Smooth scaling & fading exit back into the navbar */
   94.7% {
     opacity: 1;
     visibility: visible;
     transform: translateY(-50%) scale(1) translateX(0);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75), 0 0 10px rgba(232, 74, 95, 0.3);
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.75),
+      0 0 10px rgba(232, 74, 95, 0.3);
   }
   100% {
     opacity: 0;
@@ -438,7 +486,8 @@
 
 #sidebar-subscribe-btn .rail-tooltip {
   transform-origin: left center;
-  animation: subscribeTooltipAutoReveal 9.5s cubic-bezier(0.16, 1, 0.3, 1) 1 forwards;
+  animation: subscribeTooltipAutoReveal 9.5s cubic-bezier(0.16, 1, 0.3, 1) 1
+    forwards;
 }
 
 #sidebar-subscribe-btn:hover .rail-tooltip {
@@ -446,8 +495,6 @@
   visibility: visible !important;
   transform: translateY(-50%) scale(1) translateX(0) !important;
 }
-
-
 
 /* Top Navbar SVG Action Button Group (Hidden on Desktop Tall) */
 .top-nav-controls-group {
@@ -473,8 +520,8 @@
 
 .top-nav-icon-btn:hover,
 .top-nav-icon-btn.active {
-  border-color: var(--accent-coral, #E84A5F);
-  color: var(--accent-coral, #E84A5F);
+  border-color: var(--accent-coral, #e84a5f);
+  color: var(--accent-coral, #e84a5f);
   background: rgba(232, 74, 95, 0.12);
 }
 
@@ -488,7 +535,6 @@
   stroke-linejoin: round;
 }
 
-
 /* Top Dropdown Panels */
 .top-dropdown-panel {
   position: fixed;
@@ -498,7 +544,7 @@
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-top: 2px solid var(--accent-coral, #E84A5F);
+  border-top: 2px solid var(--accent-coral, #e84a5f);
   border-radius: 0 0 4px 4px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75);
   padding: 0.85rem;
@@ -523,10 +569,10 @@
 }
 
 .dropdown-header {
-  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-family: var(--font-mono, "Azeret Mono", monospace);
   font-size: 0.58rem;
   letter-spacing: 0.1em;
-  color: var(--accent-coral, #E84A5F);
+  color: var(--accent-coral, #e84a5f);
   margin-bottom: 0.35rem;
   text-transform: uppercase;
 }
@@ -535,25 +581,27 @@
   width: 100%;
   background: var(--neutral-bg, #121212);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #FFFFFF;
-  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  color: #ffffff;
+  font-family: var(--font-mono, "Azeret Mono", monospace);
   font-size: 0.75rem;
   padding: 0.5rem 0.75rem;
   border-radius: 2px;
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .top-dropdown-panel input:focus {
-  border-color: var(--accent-coral, #E84A5F);
+  border-color: var(--accent-coral, #e84a5f);
   box-shadow: 0 0 0 1px rgba(232, 74, 95, 0.4);
 }
 
 .dropdown-option {
   background: transparent;
   border: none;
-  color: var(--text-body, #D4D4D4);
-  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  color: var(--text-body, #d4d4d4);
+  font-family: var(--font-mono, "Azeret Mono", monospace);
   font-size: 0.68rem;
   padding: 0.45rem 0.65rem;
   text-align: left;
@@ -565,7 +613,7 @@
 .dropdown-option:hover,
 .dropdown-option.active {
   background: rgba(232, 74, 95, 0.18);
-  color: var(--accent-coral, #E84A5F);
+  color: var(--accent-coral, #e84a5f);
 }
 
 /* ==============================================================================
@@ -648,7 +696,7 @@
 
   .logo-short {
     display: inline-block;
-    color: var(--accent-coral, #E84A5F);
+    color: var(--accent-coral, #e84a5f);
   }
 
   /* Hide text format links; use _DISPATCH_LOG dropdown button instead */
@@ -702,7 +750,9 @@
     border-radius: 0 !important;
     padding: 0 !important;
     margin: 0 !important;
-    transition: background-color var(--transition-fast, 0.15s ease), color var(--transition-fast, 0.15s ease) !important;
+    transition:
+      background-color var(--transition-fast, 0.15s ease),
+      color var(--transition-fast, 0.15s ease) !important;
   }
 
   .top-nav-icon-btn:hover,
@@ -755,4 +805,3 @@
     padding-top: 1rem;
   }
 }
-
