@@ -7,7 +7,7 @@ date: 2026-10-02 12:00:00 -0300
 last_modified_at: 2026-10-02 12:00:00 -0300
 
 author: "Juan P. Giusepponi"
-status: "draft"
+status: "published"
 
 format: "essay"
 
@@ -59,9 +59,6 @@ backlinks:
   - slug: "#2026-09-28-ai-images-groupe-mu"
     title: "[2] Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics"
     note: "Analysis of plastic vs. iconic signifiers in synthetic image generation."
-  - slug: "#2026-09-28-haraway-cyborg-manifesto-neural-borderlands"
-    title: "Donna Haraway's Cyborg Manifesto: Neural Borderlands"
-    note: "Human-machine hybridity and boundary ruptures."
 
 shareable: true
 allow_embed: true
@@ -81,8 +78,7 @@ Then, almost simultaneously in 2026, the largest tech companies executed a radic
 
 OpenAI launched **dots**: soft, customizable pastel blobs that wobble across your desktop like a cross between a jellybean and a sleeping kitten. Elon Musk's xAI softened Grok's combative stance with **Grok Bot**, an animated companion full of bouncy, disarming visual quirks. Meta took it one step further with **Muse** and its companion hardware, the **Muse Charm**, a physical keychain gadget deliberately shaped like a 1990s Bandai Tamagotchi, complete with a tiny virtual creature living in your pocket.
 
-<img src="assets\images\interface-inversion.png" alt="1980s-2010s: MENACING CYBORG signifies Cold, rational, hyper-efficient machine, 2020-2024: STERILE TEXTBOX signifies Neutral corporate utility, clean minimalism
-2025-2026+: CUTE DIGITAL PET signifies Soft, wide-eyed, infantile companion" width="100%" />
+<img src="assets\images\interface-inversion.png" alt="1980s-2010s MENACING CYBORG Cold, rational, hyper-efficient machine, 2020-2024 STERILE TEXTBOX Neutral corporate utility, clean minimalism, 2025-2026 CUTE DIGITAL PET Soft, wide-eyed, infantile companion" width="100%" />
 
 Why are multi-trillion-dollar corporations dressing massive planetary computing clusters, gigawatt data centers, and autonomous background agents in the visual language of nursery toys?
 
@@ -141,14 +137,14 @@ In visual semiotics, the Belgian research group **Groupe µ** (_Traité du signe
 ```text
 GROUPE µ'S DUAL-AXIS SEMIOTICS IN AI AGENTS:
 
-    [ PLASTIC LAYER ]                   [ ICONIC LAYER ]
-• Pastel, low-saturation tones      • "This is your helpful assistant"
-• Continuous spring damping         • "This is an autonomous worker"
-• Hyper-rounded low frequencies     • "This is a productivity tool"
-              │                                    │
-              ▼                                    ▼
-Subcortical Emotional Bypass          Conscious Task Evaluation
-(Pre-cognitive trust trigger)         (Suspended critical scrutiny)
+                    [ PLASTIC LAYER ]                   [ ICONIC LAYER ]
+                • Pastel, low-saturation tones      • "This is your helpful assistant"
+                • Continuous spring damping         • "This is an autonomous worker"
+                • Hyper-rounded low frequencies     • "This is a productivity tool"
+                              │                                    │
+                              ▼                                    ▼
+                Subcortical Emotional Bypass          Conscious Task Evaluation
+                (Pre-cognitive trust trigger)         (Suspended critical scrutiny)
 ```
 
 What Groupe µ demonstrated is that **the plastic layer acts on the nervous system faster than the iconic layer.** Before your brain identifies the _iconic_ fact that a software agent is scanning your private correspondence, your sensory cortex has already absorbed the _plastic_ signifiers: soft pastel pinks, warm buttery yellows, spring-damped elasticity, and rounded curves.
@@ -167,10 +163,10 @@ Meta's **Muse Charm** pushes this dynamic into what Jean Baudrillard called the 
 
 ```text
 THE SIMULATION ESCALATION:
-1. Physical Pet (Dog/Cat)      ──► Biological organism, genuine mutual interdependence
-2. 1996 Tamagotchi             ──► 8-bit digital toy simulating biological maintenance
-3. 2026 AI Agent Charm (Muse)  ──► Autonomous LLM agent simulating emotional attachment
-                                   to capture behavioral data and personal context
+      1. Physical Pet (Dog/Cat)      ──► Biological organism, genuine mutual interdependence
+      2. 1996 Tamagotchi             ──► 8-bit digital toy simulating biological maintenance
+      3. 2026 AI Agent Charm (Muse)  ──► Autonomous LLM agent simulating emotional attachment
+                                        to capture behavioral data and personal context
 ```
 
 The 1990s Tamagotchi was a harmless closed system. It was an LCD toy that simulated hunger so an eight-year-old would press buttons after school.
