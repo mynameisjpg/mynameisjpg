@@ -162,7 +162,7 @@ flowchart TD
 
 Instead of asking: _"What is the exact value of pixel $(x, y)$ in frame $t+1$?"_, JEPA asks:
 
-> _"What is the high-level semantic vector $\mathbf{s}_y$ describing the state of the world after action $\mathbf{a}$?"_
+> _"What is the high-level semantic vector $\mathbf{s_y}$ describing the state of the world after action $\mathbf{a}$?"_
 
 ### Preventing Representation Collapse via VICReg
 

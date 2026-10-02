@@ -51,8 +51,7 @@ allow_embed: true
 
 ## 01. Overview & Capability
 
-Give **RelateAnything** an image, object regions, and the relations you want to look for. It returns scored
-`(subject, relation, object)` triplets, such as `person → riding → horse`.
+Give **RelateAnything** an image, object regions, and the relations you want to look for. It returns scored `(subject, relation, object)` triplets, such as `person → riding → horse`.
 
 <img src="assets/images/relateanything.gif" alt="video with data labeling tags" width="100%"/>
 
@@ -109,7 +108,4 @@ Released checkpoints include the backbone configuration and text encoder; no gat
 
 ## 04. Research Paper
 
-**Title:** RelateAnything: Real-Time Open-Vocabulary Relation Prediction From Any Inputs
-Subjects: Computer Vision and Pattern Recognition (cs.CV)<br>
-• [arXiv:2609.12552](assets/docs/2609.12552v1.pdf) [cs.CV]<br>
-• https://doi.org/10.48550/arXiv.2609.12552
+**Title:** Relate Anything: Real-Time Open-Vocabulary Relation Prediction From Any Inputs <br>**Subjects:** Computer Vision and Pattern Recognition (cs.CV) <br>• [arXiv:2609.12552](assets/docs/2609.12552v1.pdf) [cs.CV] <br>• [https://doi.org/10.48550/arXiv.2609.12552](https://doi.org/10.48550/arXiv.2609.12552)

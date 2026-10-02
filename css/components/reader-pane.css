@@ -59,11 +59,10 @@
 .post-section-kicker,
 .essay-section-kicker {
   font-family: var(--font-mono);
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   font-weight: var(--weight-semibold);
   color: var(--text-bright);
-  margin: 2.8rem 0 1rem 0;
-  letter-spacing: 0.02em;
+  margin: 2rem 0 1.3rem 0;
 }
 
 .post-paragraph,
@@ -72,7 +71,7 @@
   font-size: var(--text-md);
   line-height: var(--leading-relaxed);
   color: var(--text-body);
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem;
   font-weight: var(--weight-regular); /* Platypi 400 for balanced legibility */
 }
 
@@ -113,7 +112,7 @@
 .essay-divider {
   border: none;
   border-top: 1px solid var(--border-subtle);
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 
 .post-list,
@@ -174,11 +173,10 @@
 .post-body-content li code,
 .essay-body-content p code,
 .essay-body-content li code {
-  font-family: "JetBrains Mono", "Cascadia Code", "Fira Code", monospace;
-  font-size: 0.85em;
-  background: rgba(255, 255, 255, 0.08);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  background: rgba(0, 0, 0, 0.5);
   padding: 0.15em 0.4em;
-  border-radius: 2px;
   color: var(--accent-coral);
 }
 
@@ -204,18 +202,19 @@
 .essay-body-content p .math-inline,
 .essay-body-content li .math-inline,
 .math-inline {
-  font-family: "JetBrains Mono", "Cascadia Code", "Fira Code", monospace;
-  background: rgba(255, 255, 255, 0.08);
+  font-family: var(--font-serif);
+  font-size: 1.1em;
+  background: rgba(0, 0, 0, 0.35);
   padding: 0.15em 0.45em;
   border-radius: 2px;
   color: var(--accent-coral);
   display: inline-block;
-  vertical-align: middle;
-  line-height: 1.1;
+  /* vertical-align: middle; */
+  line-height: 1;
 }
 
 .math-inline .katex {
-  font-size: 0.98em;
+  font-size: 1em;
   color: inherit;
 }
 
@@ -571,9 +570,12 @@
 .post-column.theme-light .post-body-content p code,
 .post-column.theme-light .post-body-content li code,
 .essay-column.theme-light .essay-body-content p code,
-.essay-column.theme-light .essay-body-content li code {
+.essay-column.theme-light .essay-body-content li code,
+.post-column.theme-light .math-inline,
+.essay-column.theme-light .math-inline,
+.theme-light .math-inline {
   background: rgba(0, 0, 0, 0.06);
-  color: #b22234;
+  color: var(--accent-coral);
 }
 
 .post-column.theme-light .math-block,
