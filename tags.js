@@ -5,8 +5,18 @@ window.DYNAMIC_TAGS = [
     "name": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
     "label": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
     "type": "pillar",
-    "count": 4,
+    "count": 5,
     "posts": [
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      },
       {
         "id": "2026-09-28-shanzhai-deconstructing-original",
         "slug": "shanzhai-deconstructing-original",
@@ -49,6 +59,13 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "links": [
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      },
       {
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
         "slug": "shanzhai-deconstructing-original",
@@ -291,6 +308,56 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "subtopic-aesthetics-as-ideology-and-interface-politics",
+    "name": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+    "label": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+    "type": "subtopic",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      },
+      {
+        "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
+        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
+        "date": "2026.09.28",
+        "format": "BOOKMARK",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      },
+      {
+        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
+        "format": "BOOKMARK",
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
     "id": "subtopic-anatomy-and-psychophysics-of-vision",
     "name": "ANATOMY AND PSYCHOPHYSICS OF VISION",
     "label": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -511,6 +578,66 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "groupe-mu",
+    "name": "groupe-mu",
+    "label": "#groupe-mu",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      },
+      {
+        "id": "2026-09-28-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
+        "date": "2026.09.28",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
+        "url": "posts/ai-images-groupe-mu.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      },
+      {
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
+        "slug": "ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "posts/ai-images-groupe-mu.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+      "MODES OF SEEING & VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "dots",
+      "muse",
+      "grok-bot",
+      "openai",
+      "grok"
+    ]
+  },
+  {
     "id": "psychophysics",
     "name": "psychophysics",
     "label": "#psychophysics",
@@ -629,39 +756,6 @@ window.DYNAMIC_TAGS = [
       "ai",
       "models"
     ]
-  },
-  {
-    "id": "subtopic-aesthetics-as-ideology-and-interface-politics",
-    "name": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-    "label": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-    "type": "subtopic",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "date": "2026.09.28",
-        "format": "BOOKMARK",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "format": "BOOKMARK",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [],
-    "connected_tags": []
   },
   {
     "id": "subtopic-computer-vision-vs-human-perception",
@@ -961,6 +1055,48 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "ai-mascots",
+    "name": "ai-mascots",
+    "label": "#ai-mascots",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
+    ],
+    "connected_tags": [
+      "dots",
+      "muse",
+      "grok-bot",
+      "openai",
+      "grok",
+      "meta"
+    ]
+  },
+  {
     "id": "alan-turing",
     "name": "alan-turing",
     "label": "#alan-turing",
@@ -1166,6 +1302,48 @@ window.DYNAMIC_TAGS = [
       "deconstruction",
       "reflections",
       "philosophy"
+    ]
+  },
+  {
+    "id": "baudrillard",
+    "name": "baudrillard",
+    "label": "#baudrillard",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "dots",
+      "muse",
+      "grok-bot",
+      "openai",
+      "grok"
     ]
   },
   {
@@ -1462,6 +1640,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "character-design",
+    "name": "character-design",
+    "label": "#character-design",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "dots",
+      "muse",
+      "grok-bot",
+      "openai",
+      "grok"
+    ]
+  },
+  {
     "id": "cognitive-load",
     "name": "cognitive-load",
     "label": "#cognitive-load",
@@ -1714,6 +1934,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "cute",
+    "name": "cute",
+    "label": "#cute",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "dots",
+      "muse",
+      "grok-bot",
+      "openai",
+      "grok"
+    ]
+  },
+  {
     "id": "cyborg-feminism",
     "name": "cyborg-feminism",
     "label": "#cyborg-feminism",
@@ -1962,6 +2224,48 @@ window.DYNAMIC_TAGS = [
       "ux",
       "psychology",
       "lists"
+    ]
+  },
+  {
+    "id": "dots",
+    "name": "dots",
+    "label": "#dots",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "muse",
+      "grok-bot",
+      "openai",
+      "grok",
+      "meta"
     ]
   },
   {
@@ -2467,44 +2771,87 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "groupe-mu",
-    "name": "groupe-mu",
-    "label": "#groupe-mu",
+    "id": "grok",
+    "name": "grok",
+    "label": "#grok",
     "type": "tag",
     "count": 1,
     "posts": [
       {
-        "id": "2026-09-28-ai-images-groupe-mu",
-        "slug": "ai-images-groupe-mu",
-        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "date": "2026.09.28",
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
-        "url": "posts/ai-images-groupe-mu.html"
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
       }
     ],
     "links": [
       {
-        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "ai-images-groupe-mu",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
         "format": "ESSAY",
-        "url": "posts/ai-images-groupe-mu.html",
-        "date": "2026.09.28"
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
       }
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "MODES OF SEEING & VISUAL SEMIOTICS"
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
     ],
     "connected_tags": [
-      "semiotics",
-      "plastic-signs",
-      "iconicity",
-      "generative-ai",
-      "visual-perception"
+      "ai-mascots",
+      "dots",
+      "muse",
+      "grok-bot",
+      "openai",
+      "meta"
+    ]
+  },
+  {
+    "id": "grok-bot",
+    "name": "grok-bot",
+    "label": "#grok-bot",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "dots",
+      "muse",
+      "openai",
+      "grok",
+      "meta"
     ]
   },
   {
@@ -2841,6 +3188,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "interface-politics",
+    "name": "interface-politics",
+    "label": "#interface-politics",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "dots",
+      "muse",
+      "grok-bot",
+      "openai",
+      "grok"
+    ]
+  },
+  {
     "id": "jepa",
     "name": "jepa",
     "label": "#jepa",
@@ -2880,6 +3269,48 @@ window.DYNAMIC_TAGS = [
       "sensory-bandwidth",
       "symbol-grounding",
       "vicreg"
+    ]
+  },
+  {
+    "id": "kindchenschema",
+    "name": "kindchenschema",
+    "label": "#kindchenschema",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "dots",
+      "muse",
+      "grok-bot",
+      "openai",
+      "grok"
     ]
   },
   {
@@ -3051,6 +3482,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "meta",
+    "name": "meta",
+    "label": "#meta",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "dots",
+      "muse",
+      "grok-bot",
+      "openai",
+      "grok"
+    ]
+  },
+  {
     "id": "models",
     "name": "models",
     "label": "#models",
@@ -3090,6 +3563,48 @@ window.DYNAMIC_TAGS = [
       "relational",
       "data-labeling",
       "ai"
+    ]
+  },
+  {
+    "id": "muse",
+    "name": "muse",
+    "label": "#muse",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "dots",
+      "grok-bot",
+      "openai",
+      "grok",
+      "meta"
     ]
   },
   {
@@ -3174,6 +3689,48 @@ window.DYNAMIC_TAGS = [
       "psychology",
       "lists",
       "tips"
+    ]
+  },
+  {
+    "id": "openai",
+    "name": "openai",
+    "label": "#openai",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "dots",
+      "muse",
+      "grok-bot",
+      "grok",
+      "meta"
     ]
   },
   {
@@ -3886,6 +4443,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "sociomorphic-computing",
+    "name": "sociomorphic-computing",
+    "label": "#sociomorphic-computing",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "dots",
+      "muse",
+      "grok-bot",
+      "openai",
+      "grok"
+    ]
+  },
+  {
     "id": "symbol-grounding",
     "name": "symbol-grounding",
     "label": "#symbol-grounding",
@@ -3925,6 +4524,48 @@ window.DYNAMIC_TAGS = [
       "llms",
       "sensory-bandwidth",
       "vicreg"
+    ]
+  },
+  {
+    "id": "tamagotchi-effect",
+    "name": "tamagotchi-effect",
+    "label": "#tamagotchi-effect",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "dots",
+      "muse",
+      "grok-bot",
+      "openai",
+      "grok"
     ]
   },
   {
@@ -4343,6 +4984,48 @@ window.DYNAMIC_TAGS = [
       "ethics",
       "archeology",
       "taxonomy"
+    ]
+  },
+  {
+    "id": "visual-semiotics",
+    "name": "visual-semiotics",
+    "label": "#visual-semiotics",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "dots",
+      "muse",
+      "grok-bot",
+      "openai",
+      "grok"
     ]
   },
   {
