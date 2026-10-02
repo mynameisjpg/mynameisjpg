@@ -532,8 +532,8 @@ window.DYNAMIC_POSTS = [
     "author": "Juan P. Giusepponi",
     "read_time": "8 MIN READ",
     "via": "",
-    "image": "assets/images/Digital_collage_artwork_20260926075810.jpg",
-    "image_alt": "High-dimensional vector space graphic with geometric coordinates",
+    "image": "assets/images/this-is-not-a-human.jpg",
+    "image_alt": "A Magritte inspired glitch art picture of a suited body with a big apple for a head",
     "aspect_ratio": "h-tall-1",
     "links": [
       {

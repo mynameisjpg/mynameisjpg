@@ -63,8 +63,8 @@ allow_embed: true
 canonical_url: ""
 
 image:
-  path: "assets/images/Digital_collage_artwork_20260926075810.jpg"
-  alt: "High-dimensional vector space graphic with geometric coordinates"
+  path: "assets/images/this-is-not-a-human.jpg"
+  alt: "A Magritte inspired glitch art picture of a suited body with a big apple for a head"
 ---
 
 ## 01. The Laughter of Borges and the Spatial Grid
