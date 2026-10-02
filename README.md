@@ -7,7 +7,7 @@
 
 **An editorial digital workspace, computational psychophysics notebook, and publication by Juan P. Giusepponi.**
 
-[![Website](https://img.shields.io/badge/Live_Site-mynameisjpg.github.io-E84A5F?style=for-the-badge&logo=github&logoColor=white)](https://mynameisjpg.github.io)
+[![Website](https://img.shields.io/badge/Live_Site-mynameisjpg.github.io-E84A5F?style=for-the-badge&logo=github&logoColor=white)](https://mynameisjpg.github.io/mynameisjpg)
 [![Stack](https://img.shields.io/badge/Stack-HTML5_%7C_Vanilla_CSS_%7C_JS_%7C_Python-161616?style=for-the-badge)](https://github.com/mynameisjpg)
 [![License](https://img.shields.io/badge/License-MIT-E84A5F?style=for-the-badge)](LICENSE)
 
