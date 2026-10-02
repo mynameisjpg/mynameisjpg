@@ -565,6 +565,75 @@ function applyTopSort(sortOrder) {
 }
 
 /* Modal Helper Functions */
+function escapeHtmlArchive(str) {
+  return (str || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+function renderSubscribeFormArchive(modal) {
+  if (!modal) modal = document.getElementById("subscribe-modal");
+  if (!modal) return;
+
+  modal.innerHTML = `
+    <div class="modal-box">
+      <div class="modal-header-tag">[ DISPATCH_SUBSCRIPTION // FREQUENCY: FORTNIGHTLY ]</div>
+      <h2 id="modal-heading" class="modal-title">Subscribe to Untitled.jpg</h2>
+      <p class="modal-description">Deep-dive essays and technical dispatches on AI perception, cognitive psychophysics, high-dimensional latent space, and media archaeology.</p>
+      
+      <form class="modal-form" id="subscribe-form" method="dialog">
+        <div class="modal-input-group">
+          <label for="subscriber-name" class="modal-input-label">IDENTITY (NAME):</label>
+          <input type="text" id="subscriber-name" name="name" class="modal-input" placeholder="Your Name / Alias" autocomplete="name">
+        </div>
+        <div class="modal-input-group">
+          <label for="subscriber-email" class="modal-input-label">TRANSMISSION_ENDPOINT (EMAIL):</label>
+          <input type="email" id="subscriber-email" name="email" class="modal-input" placeholder="reader@domain.xyz" required autocomplete="email" spellcheck="false">
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn-modal-cancel">[ CANCEL ]</button>
+          <button type="submit" class="btn-modal-submit">[ TRANSMIT SUBSCRIPTION ]</button>
+        </div>
+      </form>
+    </div>
+  `;
+
+  const form = modal.querySelector("form");
+  if (form) {
+    form.addEventListener("submit", handleSubscribeSubmit);
+  }
+
+  const cancelBtn = modal.querySelector(".btn-modal-cancel");
+  if (cancelBtn) {
+    cancelBtn.addEventListener("click", closeSubscribeModal);
+  }
+}
+
+function renderSubscribeConfirmationArchive(email, name) {
+  const modal = document.getElementById("subscribe-modal");
+  if (!modal) return;
+
+  const safeEmail = escapeHtmlArchive(email || "");
+  const safeName = escapeHtmlArchive(name || "");
+
+  modal.innerHTML = `
+    <div class="modal-box modal-success-anim" role="status" aria-live="polite">
+      <div class="modal-header-tag">[ TRANSMISSION_RECEIVED // STATUS: CONFIRMED ]</div>
+      <h2 id="modal-heading" class="modal-title">Subscription Confirmed</h2>
+      <p class="modal-description" style="margin-bottom: 1.2rem;">
+        Thank you for subscribing to <strong>Untitled.jpg</strong> dispatches. Technical essays on AI perception, cognitive psychophysics, and latent space geometry will be transmitted to your endpoint.
+      </p>
+      
+      <div class="modal-confirmation-card">
+        <div class="modal-confirmation-tag">[ REGISTERED_ENDPOINT ]</div>
+        <div class="modal-confirmation-value">${safeEmail}${safeName ? ` <span style="color:var(--text-muted);font-size:var(--text-sm);margin-left:0.4rem;">(${safeName})</span>` : ""}</div>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn-modal-submit" onclick="closeSubscribeModal()" style="min-width: 120px;">[ CLOSE ]</button>
+      </div>
+    </div>
+  `;
+}
+
 function openSubscribeModal() {
   const subscribeBtn = document.getElementById("sidebar-subscribe-btn") || document.querySelector('a[aria-label="Subscribe"]');
   if (subscribeBtn) {
@@ -572,7 +641,18 @@ function openSubscribeModal() {
     subscribeBtn.classList.add("subscribe-coral-active");
   }
   const modal = document.getElementById("subscribe-modal");
-  if (modal && typeof modal.showModal === "function") modal.showModal();
+  if (modal) {
+    if (!modal.dataset.backdropBound) {
+      modal.dataset.backdropBound = "true";
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeSubscribeModal();
+      });
+    }
+    if (!modal.querySelector("#subscriber-name") || modal.querySelector(".modal-confirmation-card")) {
+      renderSubscribeFormArchive(modal);
+    }
+    if (typeof modal.showModal === "function") modal.showModal();
+  }
 }
 
 function closeSubscribeModal() {
@@ -580,10 +660,40 @@ function closeSubscribeModal() {
   if (modal && typeof modal.close === "function") modal.close();
 }
 
-function handleSubscribeSubmit(e) {
+async function handleSubscribeSubmit(e) {
   e.preventDefault();
-  alert("[SUBSCRIPTION CONFIRMED] Transmission endpoint registered.");
-  closeSubscribeModal();
+  const nameInput = document.getElementById("subscriber-name");
+  const emailInput = document.getElementById("subscriber-email");
+  const submitBtn = e.target ? e.target.querySelector('button[type="submit"]') : null;
+
+  const name = nameInput ? nameInput.value.trim() : "";
+  const email = emailInput ? emailInput.value.trim() : "";
+
+  if (!email) return;
+
+  const originalText = submitBtn ? submitBtn.textContent : "[ TRANSMIT SUBSCRIPTION ]";
+  if (submitBtn) {
+    submitBtn.textContent = "[ TRANSMITTING... ]";
+    submitBtn.disabled = true;
+  }
+
+  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScWoT07kZjH1m5Mu1zrK4l_eFpzOytLler0cwd0j4yQTXYDJQ/formResponse";
+  const bodyParams = new URLSearchParams();
+  bodyParams.append("entry.1020667952", email);
+  if (name) bodyParams.append("entry.1290617359", name);
+
+  try {
+    await fetch(GOOGLE_FORM_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: bodyParams
+    });
+  } catch (err) {
+    console.warn("[Subscription Notice]", err);
+  } finally {
+    renderSubscribeConfirmationArchive(email, name);
+  }
 }
 
 function openImageLightbox(src, captionText) {

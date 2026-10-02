@@ -143,3 +143,46 @@
   background: #FF5A6F;
   box-shadow: 0 0 15px var(--accent-coral-glow);
 }
+
+.modal-confirmation-card {
+  background: var(--bg-deep);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-coral);
+  padding: 1rem 1.15rem;
+  border-radius: var(--radius-sm);
+  margin: 1.25rem 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.modal-confirmation-tag {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent-coral);
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.modal-confirmation-value {
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  color: var(--text-bright);
+  word-break: break-all;
+}
+
+.modal-success-anim {
+  animation: modalSuccessFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalSuccessFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

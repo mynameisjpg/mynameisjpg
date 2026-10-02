@@ -5,42 +5,42 @@
 
 :root {
   /* 1. Color Tokens (Midnight Slate × Coral Crimson Palette) */
-  --bg-deep: #121212;             /* Deep neutral charcoal black */
-  --bg-panel: #161616;            /* Neutral dark grey reader panel */
-  --bg-card: #202020;             /* Solid neutral grey card container */
-  --bg-card-hover: #262626;       /* Card hover background */
-  --accent-coral: #E84A5F;        /* Signature Coral Crimson */
+  --bg-deep: #121212; /* Deep neutral charcoal black */
+  --bg-panel: #161616; /* Neutral dark grey reader panel */
+  --bg-card: #202020; /* Solid neutral grey card container */
+  --bg-card-hover: #262626; /* Card hover background */
+  --accent-coral: #e84a5f; /* Signature Coral Crimson */
   --accent-coral-glow: rgba(232, 74, 95, 0.45);
   --accent-coral-subtle: rgba(232, 74, 95, 0.12);
   --accent-coral-border: rgba(232, 74, 95, 0.25);
-  --accent-rose: #FF8484;         /* Dusky Rose secondary accent */
-  
+  --accent-rose: #ff8484; /* Dusky Rose secondary accent */
+
   /* Text & Foreground Tokens */
-  --text-bright: #F5F5F5;         /* Crisp bright neutral off-white */
-  --text-body: #D4D4D4;           /* Soft neutral reading tone */
-  --text-muted: #888888;          /* Neutral mid-grey */
-  --text-faint: #555555;          /* Neutral dark-grey */
-  
+  --text-bright: #f5f5f5; /* Crisp bright neutral off-white */
+  --text-body: #d4d4d4; /* Soft neutral reading tone */
+  --text-muted: #888888; /* Neutral mid-grey */
+  --text-faint: #555555; /* Neutral dark-grey */
+
   /* Border Tokens */
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-faint: rgba(255, 255, 255, 0.04);
   --border-strong: rgba(255, 255, 255, 0.16);
 
   /* 2. Light Theme Tokens (Per-Post Mode Adaptation) */
-  --bg-light-mode: #DEE6E9;
-  --bg-light-card: #D4DFE3;
-  --bg-light-card-hover: #C5D3DA;
-  --text-light-h: #1B2427;
-  --text-light-body: #2D3748;
-  --text-light-muted: #4A5568;
-  --text-light-secondary: #4A5568;
+  --bg-light-mode: #f5f5f5;
+  --bg-light-card: #d5d5d5;
+  --bg-light-card-hover: #c5d3da;
+  --text-light-h: #1b2427;
+  --text-light-body: #2d3748;
+  --text-light-muted: #4a5568;
+  --text-light-secondary: #4a5568;
   --border-light: rgba(0, 0, 0, 0.12);
   --border-light-subtle: rgba(0, 0, 0, 0.08);
 
   /* 3. Typography Tokens */
-  --font-mono: 'Azeret Mono', monospace;
-  --font-serif: 'Platypi', Georgia, serif;
-  --font-display: 'Azeret Mono', monospace;
+  --font-mono: "Azeret Mono", monospace;
+  --font-serif: "Platypi", Georgia, serif;
+  --font-display: "Azeret Mono", monospace;
 
   /* Font Weights */
   --weight-regular: 400;
@@ -52,9 +52,9 @@
   --text-xs: 0.58rem;
   --text-sm: 0.65rem;
   --text-base: 0.74rem;
-  --text-md: 0.90rem;
+  --text-md: 0.9rem;
   --text-lg: 1.05rem;
-  --text-xl: 1.20rem;
+  --text-xl: 1.2rem;
   --text-2xl: clamp(1.6rem, 2.5vw, 2.1rem);
 
   /* Line Heights */

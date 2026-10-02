@@ -15,7 +15,7 @@ window.DYNAMIC_POSTS = [
     "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
     "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
     "theme": "light",
-    "featured": true,
+    "featured": false,
     "shareable": true,
     "allow_embed": true,
     "status": "published",

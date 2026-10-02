@@ -22,7 +22,7 @@ tags:
   - "design-psychology"
 reading_time: "3 min read"
 theme: "light"
-featured: true
+featured: false
 shareable: true
 allow_embed: true
 image:
