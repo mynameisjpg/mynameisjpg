@@ -1144,7 +1144,16 @@ function applyCategoryFilter(filter) {
 }
 
 function positionDropdown(panel, btn) {
-  if (!panel || !btn) return;
+  if (!panel) return;
+  if (panel.id === "top-search-dropdown" && (window.innerWidth <= 590 || !btn || btn.offsetParent === null)) {
+    panel.style.left = "50%";
+    panel.style.right = "auto";
+    panel.style.transform = "translateX(-50%)";
+    panel.style.top = "54px";
+    return;
+  }
+  if (!btn || btn.offsetParent === null) return;
+  panel.style.transform = "none";
   const rect = btn.getBoundingClientRect();
   if (btn.id === "dispatch-log-btn") {
     panel.style.left = `${Math.max(8, rect.left)}px`;
@@ -1207,15 +1216,18 @@ function toggleTopSortDropdown() {
 }
 
 function closeAllTopDropdowns(exceptId = null) {
-  const dropdowns = ["dispatch-log-dropdown", "top-search-dropdown", "top-filter-dropdown", "top-sort-dropdown"];
-  const btns = ["dispatch-log-btn", "top-navbar-search-btn", "top-navbar-filter-btn", "top-navbar-sort-btn"];
+  const dropdowns = ["dispatch-log-dropdown", "top-search-dropdown", "top-filter-dropdown", "top-sort-dropdown", "top-nav-hamburger-dropdown"];
+  const btns = ["dispatch-log-btn", "top-navbar-search-btn", "top-navbar-filter-btn", "top-navbar-sort-btn", "top-nav-hamburger-btn"];
 
   dropdowns.forEach((id, idx) => {
     if (id !== exceptId) {
       const panel = document.getElementById(id);
       const btn = document.getElementById(btns[idx]);
       if (panel) panel.style.display = "none";
-      if (btn) btn.classList.remove("active");
+      if (btn) {
+        btn.classList.remove("active");
+        btn.setAttribute("aria-expanded", "false");
+      }
     }
   });
 }

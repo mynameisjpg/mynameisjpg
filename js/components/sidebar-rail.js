@@ -2,7 +2,7 @@
  * UNTITLED.JPG — WEB COMPONENT: <sidebar-rail>
  * Custom Autonomous Web Component representing the ultra-thin responsive sidebar rail / top navbar.
  * Supports active page routing, category filter state, search & status badge integration (`has-search`),
- * subscribe modal triggers, and 100% responsive behavior across all device screens.
+ * subscribe modal triggers, mobile hamburger menu (<= 590px), and 100% responsive behavior across all device screens.
  */
 
 class SidebarRail extends HTMLElement {
@@ -120,8 +120,48 @@ class SidebarRail extends HTMLElement {
               <span class="rail-tooltip">/ LINK IN</span>
             </a>
           </div>
+
+          <!-- Hamburger Button (Displayed on mobile screens <= 590px) -->
+          <button type="button" class="top-nav-hamburger-btn" id="top-nav-hamburger-btn" title="Navigation Menu" aria-label="Navigation Menu" aria-expanded="false" aria-haspopup="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
         </div>
       </aside>
+
+      <!-- Hamburger Menu Dropdown Overlay -->
+      <div id="top-nav-hamburger-dropdown" class="top-dropdown-panel menu-dropdown-panel hamburger-panel" style="display:none;">
+        <div class="dropdown-header">[ NAVIGATION ]</div>
+        ${hasSearch ? `
+          <button type="button" class="dropdown-option hamburger-nav-opt" id="hamburger-search-opt">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            SEARCH DISPATCHES
+          </button>
+        ` : ''}
+        <a href="index.html" class="dropdown-option hamburger-nav-opt" id="hamburger-home-opt">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          &gt;&gt; GO HOME
+        </a>
+        <a href="archive.html" class="dropdown-option hamburger-nav-opt" id="hamburger-archive-opt">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          # ARCHIVE_TIMELINE
+        </a>
+        <a href="network.html" class="dropdown-option hamburger-nav-opt" id="hamburger-network-opt">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><line x1="8" y1="7.5" x2="10" y2="10.5"/><line x1="16" y1="7.5" x2="14" y2="10.5"/><line x1="8" y1="16.5" x2="10" y2="13.5"/><line x1="16" y1="16.5" x2="14" y2="13.5"/></svg>
+          # NETWORK_NODEMAP
+        </a>
+        <a href="gallery.html" class="dropdown-option hamburger-nav-opt" id="hamburger-gallery-opt">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          # GALLERY_VAULT
+        </a>
+        <button type="button" class="dropdown-option hamburger-nav-opt" id="hamburger-subscribe-opt">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          &gt;&gt; SUBSCRIBE
+        </button>
+        <a href="https://linkedin.com/in/jpgiuse" target="_blank" rel="noopener noreferrer" class="dropdown-option hamburger-nav-opt" id="hamburger-linkedin-opt">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          / LINKEDIN
+        </a>
+      </div>
     `;
 
     this.highlightActivePage();
@@ -138,16 +178,25 @@ class SidebarRail extends HTMLElement {
     const networkBtn = this.querySelector('#sidebar-network-btn');
     const galleryBtn = this.querySelector('#sidebar-gallery-btn');
 
-    [homeBtn, archiveBtn, networkBtn, galleryBtn].forEach(btn => btn?.classList.remove('active'));
+    const hHomeBtn = this.querySelector('#hamburger-home-opt');
+    const hArchiveBtn = this.querySelector('#hamburger-archive-opt');
+    const hNetworkBtn = this.querySelector('#hamburger-network-opt');
+    const hGalleryBtn = this.querySelector('#hamburger-gallery-opt');
+
+    [homeBtn, archiveBtn, networkBtn, galleryBtn, hHomeBtn, hArchiveBtn, hNetworkBtn, hGalleryBtn].forEach(btn => btn?.classList.remove('active'));
 
     if (activeAttr === 'network' || pathname.includes('network.html')) {
       if (networkBtn) networkBtn.classList.add('active');
+      if (hNetworkBtn) hNetworkBtn.classList.add('active');
     } else if (activeAttr === 'archive' || pathname.includes('archive.html')) {
       if (archiveBtn) archiveBtn.classList.add('active');
+      if (hArchiveBtn) hArchiveBtn.classList.add('active');
     } else if (activeAttr === 'gallery' || pathname.includes('gallery.html')) {
       if (galleryBtn) galleryBtn.classList.add('active');
+      if (hGalleryBtn) hGalleryBtn.classList.add('active');
     } else if (activeAttr === 'home' || pathname.endsWith('index.html') || pathname === '/' || pathname.endsWith('/')) {
       if (homeBtn) homeBtn.classList.add('active');
+      if (hHomeBtn) hHomeBtn.classList.add('active');
     }
   }
 
@@ -166,25 +215,30 @@ class SidebarRail extends HTMLElement {
   }
 
   bindEvents() {
-    const subBtn = this.querySelector('#sidebar-subscribe-btn');
-    if (subBtn) {
-      subBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (typeof window.openSubscribeModal === 'function') {
-          window.openSubscribeModal();
-        } else {
-          const modal = document.getElementById('subscribe-modal');
-          if (modal && typeof modal.showModal === 'function') {
-            modal.showModal();
-          }
+    const triggerSubscribe = (e) => {
+      e.preventDefault();
+      this.closeHamburgerDropdown();
+      if (typeof window.openSubscribeModal === 'function') {
+        window.openSubscribeModal();
+      } else {
+        const modal = document.getElementById('subscribe-modal');
+        if (modal && typeof modal.showModal === 'function') {
+          modal.showModal();
         }
-      });
-    }
+      }
+    };
+
+    const subBtn = this.querySelector('#sidebar-subscribe-btn');
+    if (subBtn) subBtn.addEventListener('click', triggerSubscribe);
+
+    const hSubBtn = this.querySelector('#hamburger-subscribe-opt');
+    if (hSubBtn) hSubBtn.addEventListener('click', triggerSubscribe);
 
     const dispatchBtn = this.querySelector('#dispatch-log-btn');
     if (dispatchBtn) {
       dispatchBtn.addEventListener('click', (e) => {
         e.stopPropagation();
+        this.closeHamburgerDropdown();
         if (typeof window.toggleDispatchLogDropdown === 'function') {
           window.toggleDispatchLogDropdown();
         }
@@ -195,10 +249,73 @@ class SidebarRail extends HTMLElement {
     if (searchBtn) {
       searchBtn.addEventListener('click', (e) => {
         e.stopPropagation();
+        this.closeHamburgerDropdown();
         if (typeof window.toggleTopSearchDropdown === 'function') {
           window.toggleTopSearchDropdown();
         }
       });
+    }
+
+    const hSearchBtn = this.querySelector('#hamburger-search-opt');
+    if (hSearchBtn) {
+      hSearchBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.closeHamburgerDropdown();
+        if (typeof window.toggleTopSearchDropdown === 'function') {
+          window.toggleTopSearchDropdown();
+        } else {
+          const searchPanel = document.getElementById('top-search-dropdown');
+          if (searchPanel) {
+            searchPanel.style.display = 'block';
+            searchPanel.style.left = '50%';
+            searchPanel.style.right = 'auto';
+            searchPanel.style.transform = 'translateX(-50%)';
+            searchPanel.style.top = '54px';
+            const input = searchPanel.querySelector('input');
+            if (input) input.focus();
+          }
+        }
+      });
+    }
+
+    const hamburgerBtn = this.querySelector('#top-nav-hamburger-btn');
+    if (hamburgerBtn) {
+      hamburgerBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.toggleHamburgerDropdown();
+      });
+    }
+
+    // Handle global click outside to close hamburger dropdown if open
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.sidebar-rail') && !e.target.closest('.top-dropdown-panel')) {
+        this.closeHamburgerDropdown();
+      }
+    });
+  }
+
+  toggleHamburgerDropdown() {
+    const panel = this.querySelector('#top-nav-hamburger-dropdown');
+    const btn = this.querySelector('#top-nav-hamburger-btn');
+    if (!panel || !btn) return;
+
+    if (typeof window.closeAllTopDropdowns === 'function') {
+      window.closeAllTopDropdowns('top-nav-hamburger-dropdown');
+    }
+
+    const isHidden = panel.style.display === 'none' || !panel.style.display;
+    panel.style.display = isHidden ? 'flex' : 'none';
+    btn.classList.toggle('active', isHidden);
+    btn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+  }
+
+  closeHamburgerDropdown() {
+    const panel = this.querySelector('#top-nav-hamburger-dropdown');
+    const btn = this.querySelector('#top-nav-hamburger-btn');
+    if (panel) panel.style.display = 'none';
+    if (btn) {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-expanded', 'false');
     }
   }
 }
