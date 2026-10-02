@@ -379,7 +379,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (formatEl) formatEl.textContent = `[ ${post.format || 'POST'} ]`;
     if (titleEl) titleEl.textContent = post.title;
     if (pillarEl) pillarEl.textContent = `${post.date || ''} • ${post.pillar || 'AI PERCEPTION & CULTURE'}`;
-    if (linkEl) linkEl.href = `index.html?post=${post.slug || post.id}`;
+    if (linkEl) {
+      const cleanSlug = String(post.slug || post.id || '').replace(/^\d{4}-\d{2}-\d{2}-/, '');
+      linkEl.href = `posts/${cleanSlug}.html`;
+    }
   }
 
   function setupHUDNavigation() {
@@ -494,7 +497,10 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation();
         const post = galleryPosts[currentIndex];
         if (!post) return;
-        const shareUrl = `${window.location.origin}${window.location.pathname.replace('gallery.html', 'index.html')}?post=${post.slug || post.id}`;
+        const cleanSlug = String(post.slug || post.id || '').replace(/^\d{4}-\d{2}-\d{2}-/, '');
+        const origin = window.location.origin;
+        const basePath = window.location.pathname.replace(/\/gallery\.html$/, '').replace(/\/$/, '');
+        const shareUrl = `${origin}${basePath}/posts/${cleanSlug}.html`;
         
         navigator.clipboard.writeText(shareUrl).then(() => {
           if (shareBtnText) {

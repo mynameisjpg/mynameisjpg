@@ -21,3 +21,7 @@ custom_options.json
 Thumbs.db
 __pycache__/
 *.pyc
+
+# Email templates (private / local drafting)
+email/
+

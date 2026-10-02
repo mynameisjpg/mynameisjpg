@@ -27,7 +27,7 @@ tags:
   - "human-ai-pairing"
   - "borderlands"
 
-theme: "light"
+theme: "dark"
 featured: false
 sys_id: "SYS_260928_CYBRG"
 reading_time: "Curated Read"
@@ -72,12 +72,7 @@ As AI models shift from simple chat boxes into tools that write code, generate d
 
 Haraway rejected both sides. Writing in 1985, at the start of personal computing and gene editing, she pointed to three **boundary breakdowns** that shape how we live with technology:
 
-```text
-HARAWAY'S THREE BOUNDARY BREAKDOWNS:
-1. HUMAN ◄──────────────────(Rupture)──────────────────► ANIMAL
-2. ANIMAL-HUMAN (ORGANISM) ◄(Rupture)──────────────────► MACHINE
-3. PHYSICAL ────────────────(Rupture)──────────────────► NON-PHYSICAL / ETHERIC
-```
+<img src="assets/images/haraway_3boundaries.png" alt="Diagram of Haraway's three boundary breakdowns." width="100%" />
 
 ### 1. Human vs. Animal
 
