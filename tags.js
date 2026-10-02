@@ -148,6 +148,71 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "pillar-visual-perception-psychology-of-seeing",
+    "name": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+    "label": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+    "type": "pillar",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "title": "5 Psychology Effects Used in App Design",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "url": "posts/5-psychology-effects-used-in-app-design.html"
+      },
+      {
+        "id": "2026-09-29-visual-bandwidth-bottleneck",
+        "slug": "visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "date": "2026.09.29",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/visual-bandwidth-bottleneck.html"
+      },
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "5 Psychology Effects Used in App Design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "format": "NOTE",
+        "url": "posts/5-psychology-effects-used-in-app-design.html",
+        "date": "2026.10.02"
+      },
+      {
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "slug": "visual-bandwidth-bottleneck",
+        "format": "NOTE",
+        "url": "posts/visual-bandwidth-bottleneck.html",
+        "date": "2026.09.29"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
     "id": "visual-perception",
     "name": "visual-perception",
     "label": "#visual-perception",
@@ -317,54 +382,6 @@ window.DYNAMIC_TAGS = [
         "format": "ESSAY",
         "url": "posts/lecun-world-models-jepa.html",
         "date": "2026.09.24"
-      }
-    ],
-    "pillars": [],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
-    "id": "pillar-visual-perception-psychology-of-seeing",
-    "name": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-    "label": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-    "type": "pillar",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-09-29-visual-bandwidth-bottleneck",
-        "slug": "visual-bandwidth-bottleneck",
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "date": "2026.09.29",
-        "format": "NOTE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/visual-bandwidth-bottleneck.html"
-      },
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "slug": "visual-bandwidth-bottleneck",
-        "format": "NOTE",
-        "url": "posts/visual-bandwidth-bottleneck.html",
-        "date": "2026.09.29"
-      },
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
       }
     ],
     "pillars": [],
@@ -845,6 +862,39 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "subtopic-psychophysics-of-digital-interfaces",
+    "name": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+    "label": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+    "type": "subtopic",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "title": "5 Psychology Effects Used in App Design",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "url": "posts/5-psychology-effects-used-in-app-design.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "5 Psychology Effects Used in App Design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "format": "NOTE",
+        "url": "posts/5-psychology-effects-used-in-app-design.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
     "id": "subtopic-synthetic-identity-normative-machines",
     "name": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
     "label": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
@@ -992,6 +1042,48 @@ window.DYNAMIC_TAGS = [
       "relational",
       "data-labeling",
       "ai"
+    ]
+  },
+  {
+    "id": "app-design",
+    "name": "app-design",
+    "label": "#app-design",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "title": "5 Psychology Effects Used in App Design",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "url": "posts/5-psychology-effects-used-in-app-design.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "5 Psychology Effects Used in App Design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "format": "NOTE",
+        "url": "posts/5-psychology-effects-used-in-app-design.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+    ],
+    "connected_tags": [
+      "observations",
+      "ui",
+      "ux",
+      "psychology",
+      "lists",
+      "tips"
     ]
   },
   {
@@ -1828,6 +1920,48 @@ window.DYNAMIC_TAGS = [
       "informatics",
       "networks",
       "ai"
+    ]
+  },
+  {
+    "id": "design-psychology",
+    "name": "design-psychology",
+    "label": "#design-psychology",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "title": "5 Psychology Effects Used in App Design",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "url": "posts/5-psychology-effects-used-in-app-design.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "5 Psychology Effects Used in App Design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "format": "NOTE",
+        "url": "posts/5-psychology-effects-used-in-app-design.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+    ],
+    "connected_tags": [
+      "observations",
+      "app-design",
+      "ui",
+      "ux",
+      "psychology",
+      "lists"
     ]
   },
   {
@@ -2791,6 +2925,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "lists",
+    "name": "lists",
+    "label": "#lists",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "title": "5 Psychology Effects Used in App Design",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "url": "posts/5-psychology-effects-used-in-app-design.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "5 Psychology Effects Used in App Design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "format": "NOTE",
+        "url": "posts/5-psychology-effects-used-in-app-design.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+    ],
+    "connected_tags": [
+      "observations",
+      "app-design",
+      "ui",
+      "ux",
+      "psychology",
+      "tips"
+    ]
+  },
+  {
     "id": "llm",
     "name": "llm",
     "label": "#llm",
@@ -2956,6 +3132,48 @@ window.DYNAMIC_TAGS = [
       "informatics",
       "ai",
       "llm"
+    ]
+  },
+  {
+    "id": "observations",
+    "name": "observations",
+    "label": "#observations",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "title": "5 Psychology Effects Used in App Design",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "url": "posts/5-psychology-effects-used-in-app-design.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "5 Psychology Effects Used in App Design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "format": "NOTE",
+        "url": "posts/5-psychology-effects-used-in-app-design.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+    ],
+    "connected_tags": [
+      "app-design",
+      "ui",
+      "ux",
+      "psychology",
+      "lists",
+      "tips"
     ]
   },
   {
@@ -3206,6 +3424,48 @@ window.DYNAMIC_TAGS = [
       "vision",
       "ui-design",
       "cognitive-load"
+    ]
+  },
+  {
+    "id": "psychology",
+    "name": "psychology",
+    "label": "#psychology",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "title": "5 Psychology Effects Used in App Design",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "url": "posts/5-psychology-effects-used-in-app-design.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "5 Psychology Effects Used in App Design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "format": "NOTE",
+        "url": "posts/5-psychology-effects-used-in-app-design.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+    ],
+    "connected_tags": [
+      "observations",
+      "app-design",
+      "ui",
+      "ux",
+      "lists",
+      "tips"
     ]
   },
   {
@@ -3709,6 +3969,90 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "tips",
+    "name": "tips",
+    "label": "#tips",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "title": "5 Psychology Effects Used in App Design",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "url": "posts/5-psychology-effects-used-in-app-design.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "5 Psychology Effects Used in App Design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "format": "NOTE",
+        "url": "posts/5-psychology-effects-used-in-app-design.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+    ],
+    "connected_tags": [
+      "observations",
+      "app-design",
+      "ui",
+      "ux",
+      "psychology",
+      "lists"
+    ]
+  },
+  {
+    "id": "ui",
+    "name": "ui",
+    "label": "#ui",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "title": "5 Psychology Effects Used in App Design",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "url": "posts/5-psychology-effects-used-in-app-design.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "5 Psychology Effects Used in App Design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "format": "NOTE",
+        "url": "posts/5-psychology-effects-used-in-app-design.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+    ],
+    "connected_tags": [
+      "observations",
+      "app-design",
+      "ux",
+      "psychology",
+      "lists",
+      "tips"
+    ]
+  },
+  {
     "id": "ui-design",
     "name": "ui-design",
     "label": "#ui-design",
@@ -3748,6 +4092,90 @@ window.DYNAMIC_TAGS = [
       "predictive-processing",
       "vision",
       "cognitive-load"
+    ]
+  },
+  {
+    "id": "ux",
+    "name": "ux",
+    "label": "#ux",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "title": "5 Psychology Effects Used in App Design",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "url": "posts/5-psychology-effects-used-in-app-design.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "5 Psychology Effects Used in App Design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "format": "NOTE",
+        "url": "posts/5-psychology-effects-used-in-app-design.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+    ],
+    "connected_tags": [
+      "observations",
+      "app-design",
+      "ui",
+      "psychology",
+      "lists",
+      "tips"
+    ]
+  },
+  {
+    "id": "ux-design",
+    "name": "ux-design",
+    "label": "#ux-design",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "title": "5 Psychology Effects Used in App Design",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "url": "posts/5-psychology-effects-used-in-app-design.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "5 Psychology Effects Used in App Design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "format": "NOTE",
+        "url": "posts/5-psychology-effects-used-in-app-design.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+    ],
+    "connected_tags": [
+      "observations",
+      "app-design",
+      "ui",
+      "ux",
+      "psychology",
+      "lists"
     ]
   },
   {
