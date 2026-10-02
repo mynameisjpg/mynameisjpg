@@ -57,8 +57,8 @@ let activeFilter = "all";
 let activeSort = "recent";
 let searchQuery = "";
 
-let matrixVisibleCount = 9;
-const MATRIX_BATCH_SIZE = 9;
+let matrixVisibleCount = 8;
+const MATRIX_BATCH_SIZE = 8;
 let matrixObserver = null;
 
 
@@ -337,8 +337,6 @@ function setupSentinelObserver() {
   const sentinel = document.getElementById("matrix-sentinel");
   if (!sentinel) return;
 
-  const matrixCol = document.querySelector(".grid-column") || document.querySelector("[data-component='dispatch-matrix']");
-
   if ("IntersectionObserver" in window) {
     matrixObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -350,8 +348,8 @@ function setupSentinelObserver() {
         }
       });
     }, { 
-      root: (matrixCol && window.innerWidth > 980) ? matrixCol : null,
-      rootMargin: "300px" 
+      root: null,
+      rootMargin: "80px" 
     });
 
     matrixObserver.observe(sentinel);
@@ -370,19 +368,19 @@ function handleMatrixScroll() {
     if (matrixCol) {
       const scrollBottom = matrixCol.scrollTop + matrixCol.clientHeight;
       const scrollHeight = matrixCol.scrollHeight;
-      if (scrollHeight - scrollBottom < 350) {
+      if (scrollHeight - scrollBottom < 300) {
         loadMoreDispatches();
         return;
       }
     }
 
-    // Window scroll check (mobile or narrow viewport)
+    // Window scroll check
     const winScrollBottom = window.scrollY + window.innerHeight;
     const docHeight = document.documentElement.scrollHeight;
-    if (docHeight - winScrollBottom < 400) {
+    if (docHeight - winScrollBottom < 350) {
       loadMoreDispatches();
     }
-  }, 120);
+  }, 100);
 }
 
 function resetMatrixFilters() {
@@ -1016,19 +1014,37 @@ function initApp() {
     btn.addEventListener("click", showGridFeedMobile);
   });
 
+  function scrollCurrentView(toBottom = false) {
+    const splitLayout = document.querySelector(".split-layout");
+    const isReaderOpen = splitLayout && (splitLayout.classList.contains("reader-open") || splitLayout.classList.contains("mobile-reader-active"));
+
+    if (isReaderOpen) {
+      const pane = document.getElementById("essay-reading-pane");
+      const wrapper = document.querySelector(".reader-scroll-wrapper");
+      if (pane) pane.scrollTo({ top: toBottom ? pane.scrollHeight : 0, behavior: "smooth" });
+      if (wrapper) wrapper.scrollTo({ top: toBottom ? wrapper.scrollHeight : 0, behavior: "smooth" });
+    } else {
+      const gridCol = document.querySelector(".grid-column") || document.querySelector("[data-component='dispatch-matrix']");
+      if (gridCol) {
+        gridCol.scrollTo({ top: toBottom ? gridCol.scrollHeight : 0, behavior: "smooth" });
+      }
+      window.scrollTo({ top: toBottom ? document.documentElement.scrollHeight : 0, behavior: "smooth" });
+    }
+  }
+
   const scrollTopBtn = document.getElementById("btn-scroll-top");
   if (scrollTopBtn) {
-    scrollTopBtn.addEventListener("click", () => {
-      const pane = document.getElementById("essay-reading-pane");
-      if (pane) pane.scrollTo({ top: 0, behavior: "smooth" });
+    scrollTopBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      scrollCurrentView(false);
     });
   }
 
   const scrollBottomBtn = document.getElementById("btn-scroll-bottom");
   if (scrollBottomBtn) {
-    scrollBottomBtn.addEventListener("click", () => {
-      const pane = document.getElementById("essay-reading-pane");
-      if (pane) pane.scrollTo({ top: pane.scrollHeight, behavior: "smooth" });
+    scrollBottomBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      scrollCurrentView(true);
     });
   }
 
