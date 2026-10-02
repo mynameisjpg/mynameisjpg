@@ -264,18 +264,28 @@ function renderCardMatrix(resetPagination = true) {
 }
 
 /**
+ * Load More Dispatches Batch Handler
+ */
+function loadMoreDispatches() {
+  const allPosts = getFilteredAndSortedPosts();
+  if (matrixVisibleCount < allPosts.length) {
+    matrixVisibleCount += MATRIX_BATCH_SIZE;
+    renderCardMatrix(false);
+  }
+}
+
+/**
  * Infinite Scroll Sentinel Status & Observer
  */
 function updateMatrixSentinel(loadedCount, totalCount) {
   let sentinel = document.getElementById("matrix-sentinel");
-  if (!sentinel) {
-    const matrixCol = document.querySelector(".matrix-column");
-    if (matrixCol) {
-      sentinel = document.createElement("div");
-      sentinel.id = "matrix-sentinel";
-      sentinel.className = "matrix-sentinel-loader";
-      matrixCol.appendChild(sentinel);
-    }
+  const matrixCol = document.querySelector(".grid-column") || document.querySelector("[data-component='dispatch-matrix']");
+  
+  if (!sentinel && matrixCol) {
+    sentinel = document.createElement("div");
+    sentinel.id = "matrix-sentinel";
+    sentinel.className = "matrix-sentinel-loader";
+    matrixCol.appendChild(sentinel);
   }
 
   if (!sentinel) return;
@@ -287,10 +297,30 @@ function updateMatrixSentinel(loadedCount, totalCount) {
 
   sentinel.style.display = "flex";
   if (loadedCount < totalCount) {
-    sentinel.innerHTML = `<span class="sentinel-text">[ SCROLL FOR MORE DISPATCHES • ${loadedCount} OF ${totalCount} LOADED ]</span>`;
+    sentinel.innerHTML = `
+      <div class="sentinel-inner">
+        <button type="button" class="btn-load-more" id="btn-load-more-dispatches" aria-label="Load more dispatches">
+          <span class="load-more-icon">↓</span>
+          <span class="load-more-text">[ LOAD MORE DISPATCHES ]</span>
+          <span class="load-more-count">(${loadedCount} OF ${totalCount})</span>
+        </button>
+        <span class="sentinel-hint">// SCROLL OR CLICK TO REVEAL MORE</span>
+      </div>
+    `;
+    const loadBtn = document.getElementById("btn-load-more-dispatches");
+    if (loadBtn) {
+      loadBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        loadMoreDispatches();
+      });
+    }
     setupSentinelObserver();
   } else {
-    sentinel.innerHTML = `<span class="sentinel-text">[ ALL DISPATCHES LOADED • ${totalCount} TOTAL ]</span>`;
+    sentinel.innerHTML = `
+      <div class="sentinel-inner">
+        <span class="sentinel-text">[ ALL DISPATCHES LOADED • ${totalCount} TOTAL ]</span>
+      </div>
+    `;
     if (matrixObserver) {
       matrixObserver.disconnect();
       matrixObserver = null;
@@ -299,10 +329,15 @@ function updateMatrixSentinel(loadedCount, totalCount) {
 }
 
 function setupSentinelObserver() {
-  if (matrixObserver) matrixObserver.disconnect();
+  if (matrixObserver) {
+    matrixObserver.disconnect();
+    matrixObserver = null;
+  }
 
   const sentinel = document.getElementById("matrix-sentinel");
   if (!sentinel) return;
+
+  const matrixCol = document.querySelector(".grid-column") || document.querySelector("[data-component='dispatch-matrix']");
 
   if ("IntersectionObserver" in window) {
     matrixObserver = new IntersectionObserver((entries) => {
@@ -310,15 +345,44 @@ function setupSentinelObserver() {
         if (entry.isIntersecting) {
           const allPosts = getFilteredAndSortedPosts();
           if (matrixVisibleCount < allPosts.length) {
-            matrixVisibleCount += MATRIX_BATCH_SIZE;
-            renderCardMatrix(false);
+            loadMoreDispatches();
           }
         }
       });
-    }, { rootMargin: "200px" });
+    }, { 
+      root: (matrixCol && window.innerWidth > 980) ? matrixCol : null,
+      rootMargin: "300px" 
+    });
 
     matrixObserver.observe(sentinel);
   }
+}
+
+let scrollThrottleTimeout = null;
+function handleMatrixScroll() {
+  if (scrollThrottleTimeout) return;
+  scrollThrottleTimeout = setTimeout(() => {
+    scrollThrottleTimeout = null;
+    const allPosts = getFilteredAndSortedPosts();
+    if (matrixVisibleCount >= allPosts.length) return;
+
+    const matrixCol = document.querySelector(".grid-column") || document.querySelector("[data-component='dispatch-matrix']");
+    if (matrixCol) {
+      const scrollBottom = matrixCol.scrollTop + matrixCol.clientHeight;
+      const scrollHeight = matrixCol.scrollHeight;
+      if (scrollHeight - scrollBottom < 350) {
+        loadMoreDispatches();
+        return;
+      }
+    }
+
+    // Window scroll check (mobile or narrow viewport)
+    const winScrollBottom = window.scrollY + window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
+    if (docHeight - winScrollBottom < 400) {
+      loadMoreDispatches();
+    }
+  }, 120);
 }
 
 function resetMatrixFilters() {
@@ -343,7 +407,7 @@ function resetMatrixFilters() {
 function resetPage() {
   resetMatrixFilters();
 
-  const matrixCol = document.querySelector(".matrix-column");
+  const matrixCol = document.querySelector(".grid-column") || document.querySelector("[data-component='dispatch-matrix']");
   if (matrixCol) matrixCol.scrollTop = 0;
   window.scrollTo({ top: 0, behavior: "smooth" });
 
@@ -765,6 +829,13 @@ function initApp() {
       }
     });
   });
+
+  // Attach Infinite Scroll Listeners
+  const matrixCol = document.querySelector(".grid-column") || document.querySelector("[data-component='dispatch-matrix']");
+  if (matrixCol) {
+    matrixCol.addEventListener("scroll", handleMatrixScroll, { passive: true });
+  }
+  window.addEventListener("scroll", handleMatrixScroll, { passive: true });
 
   // Reset page on brand logo or home icon click
   const brandLogo = document.querySelector(".brand-logo-v");

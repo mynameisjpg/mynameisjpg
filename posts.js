@@ -425,7 +425,7 @@ window.DYNAMIC_POSTS = [
     "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
     "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
     "theme": "dark",
-    "featured": true,
+    "featured": false,
     "shareable": true,
     "allow_embed": true,
     "status": "published",
@@ -532,8 +532,8 @@ window.DYNAMIC_POSTS = [
     "author": "Juan P. Giusepponi",
     "read_time": "8 MIN READ",
     "via": "",
-    "image": "assets/images/this-is-not-a-human.jpg",
-    "image_alt": "A Magritte inspired glitch art picture of a suited body with a big apple for a head",
+    "image": "assets/images/foucault-borges.jpg",
+    "image_alt": "Red and black archival glitch collage featuring Michel Foucault inside a fractured frame alongside Jorge Luis Borges standing in a circular labyrinth with open books.",
     "aspect_ratio": "h-tall-1",
     "links": [
       {

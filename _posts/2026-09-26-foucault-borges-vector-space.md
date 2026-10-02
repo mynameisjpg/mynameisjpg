@@ -63,8 +63,8 @@ allow_embed: true
 canonical_url: ""
 
 image:
-  path: "assets/images/this-is-not-a-human.jpg"
-  alt: "A Magritte inspired glitch art picture of a suited body with a big apple for a head"
+  path: "assets/images/foucault-borges.jpg"
+  alt: "Red and black archival glitch collage featuring Michel Foucault inside a fractured frame alongside Jorge Luis Borges standing in a circular labyrinth with open books."
 ---
 
 ## 01. The Laughter of Borges and the Spatial Grid

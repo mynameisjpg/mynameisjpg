@@ -24,7 +24,7 @@ tags:
   - "visual-perception"
 
 theme: "dark"
-featured: true
+featured: false
 toc: true
 math: false
 
