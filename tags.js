@@ -237,18 +237,8 @@ window.DYNAMIC_TAGS = [
     "name": "AI PERCEPTION, CULTURE & REPRESENTATION",
     "label": "AI PERCEPTION, CULTURE & REPRESENTATION",
     "type": "pillar",
-    "count": 4,
+    "count": 3,
     "posts": [
-      {
-        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
-      },
       {
         "id": "2026-09-30-relate-anything-github-repo",
         "slug": "relate-anything-github-repo",
@@ -281,13 +271,6 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "links": [
-      {
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "format": "ESSAY",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
-        "date": "2026.10.03"
-      },
       {
         "title": "Relate Anything [github repo]",
         "slug": "relate-anything-github-repo",
@@ -392,7 +375,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       },
@@ -442,6 +425,7 @@ window.DYNAMIC_TAGS = [
     ],
     "pillars": [
       "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "PHILOSOPHY & POLITICS OF INFORMATION",
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
@@ -452,9 +436,9 @@ window.DYNAMIC_TAGS = [
       "epistemology",
       "paul-b-preciado",
       "pharmacopornography",
-      "queer-theory",
-      "generative-ai",
-      "bernard-stiegler"
+      "philosophy",
+      "politics",
+      "queer-theory"
     ]
   },
   {
@@ -470,7 +454,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       },
@@ -520,6 +504,7 @@ window.DYNAMIC_TAGS = [
     ],
     "pillars": [
       "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "PHILOSOPHY & POLITICS OF INFORMATION",
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
@@ -530,9 +515,88 @@ window.DYNAMIC_TAGS = [
       "biopolitics",
       "paul-b-preciado",
       "pharmacopornography",
-      "queer-theory",
-      "generative-ai",
-      "bernard-stiegler"
+      "philosophy",
+      "politics",
+      "queer-theory"
+    ]
+  },
+  {
+    "id": "philosophy",
+    "name": "philosophy",
+    "label": "#philosophy",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
+      },
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      },
+      {
+        "id": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "date": "2026.09.28",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "DECONSTRUCTION & CULTURE",
+        "url": "posts/shanzhai-deconstructing-original.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "format": "ESSAY",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
+        "date": "2026.10.03"
+      },
+      {
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      },
+      {
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "slug": "shanzhai-deconstructing-original",
+        "format": "NOTE",
+        "url": "posts/shanzhai-deconstructing-original.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY & POLITICS OF INFORMATION",
+      "PHILOSOPHY AND CRITICAL THEORY",
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+      "DECONSTRUCTION & CULTURE"
+    ],
+    "connected_tags": [
+      "paul-b-preciado",
+      "byung-chul-han",
+      "pharmacopornography",
+      "biopolitics",
+      "politics",
+      "epistemology"
     ]
   },
   {
@@ -726,7 +790,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       },
@@ -758,7 +822,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "PHILOSOPHY & POLITICS OF INFORMATION",
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [],
@@ -885,7 +949,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       },
@@ -917,7 +981,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "PHILOSOPHY & POLITICS OF INFORMATION",
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
@@ -925,12 +989,12 @@ window.DYNAMIC_TAGS = [
       "DECONSTRUCTION & CULTURE"
     ],
     "connected_tags": [
+      "philosophy",
       "paul-b-preciado",
       "generative-ai",
       "bernard-stiegler",
       "pharmacopornography",
-      "cognitive-proletarianization",
-      "biopolitics"
+      "cognitive-proletarianization"
     ]
   },
   {
@@ -1067,7 +1131,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       },
@@ -1099,7 +1163,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "PHILOSOPHY & POLITICS OF INFORMATION",
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
@@ -1249,7 +1313,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       },
@@ -1281,7 +1345,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "PHILOSOPHY & POLITICS OF INFORMATION",
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
@@ -1290,10 +1354,10 @@ window.DYNAMIC_TAGS = [
     "connected_tags": [
       "pharmacopornography",
       "biopolitics",
+      "philosophy",
+      "politics",
       "epistemology",
-      "generative-ai",
-      "bernard-stiegler",
-      "byung-chul-han"
+      "generative-ai"
     ]
   },
   {
@@ -1309,7 +1373,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       },
@@ -1341,7 +1405,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "PHILOSOPHY & POLITICS OF INFORMATION",
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
@@ -1350,19 +1414,29 @@ window.DYNAMIC_TAGS = [
     "connected_tags": [
       "paul-b-preciado",
       "biopolitics",
+      "philosophy",
+      "politics",
       "epistemology",
-      "generative-ai",
-      "bernard-stiegler",
-      "byung-chul-han"
+      "generative-ai"
     ]
   },
   {
-    "id": "philosophy",
-    "name": "philosophy",
-    "label": "#philosophy",
+    "id": "politics",
+    "name": "politics",
+    "label": "#politics",
     "type": "tag",
     "count": 2,
     "posts": [
+      {
+        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
+      },
       {
         "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
@@ -1372,49 +1446,38 @@ window.DYNAMIC_TAGS = [
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
-      },
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "shanzhai-deconstructing-original",
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "DECONSTRUCTION & CULTURE",
-        "url": "posts/shanzhai-deconstructing-original.html"
       }
     ],
     "links": [
+      {
+        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "format": "ESSAY",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
+        "date": "2026.10.03"
+      },
       {
         "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
         "format": "ESSAY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
         "date": "2026.10.03"
-      },
-      {
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "shanzhai-deconstructing-original",
-        "format": "NOTE",
-        "url": "posts/shanzhai-deconstructing-original.html",
-        "date": "2026.09.28"
       }
     ],
     "pillars": [
-      "PHILOSOPHY AND CRITICAL THEORY",
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+      "PHILOSOPHY & POLITICS OF INFORMATION",
+      "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
-      "DECONSTRUCTION & CULTURE"
+      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
     ],
     "connected_tags": [
       "paul-b-preciado",
-      "michel-foucault",
-      "governance",
-      "capitalism",
+      "pharmacopornography",
       "biopolitics",
-      "pharmacopornography"
+      "philosophy",
+      "epistemology",
+      "generative-ai"
     ]
   },
   {
@@ -1890,6 +1953,37 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "pillar-philosophy-politics-of-information",
+    "name": "PHILOSOPHY & POLITICS OF INFORMATION",
+    "label": "PHILOSOPHY & POLITICS OF INFORMATION",
+    "type": "pillar",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "format": "ESSAY",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
+        "date": "2026.10.03"
+      }
+    ],
+    "pillars": [],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
     "id": "pillar-philosophy-and-critical-theory",
     "name": "PHILOSOPHY AND CRITICAL THEORY",
     "label": "PHILOSOPHY AND CRITICAL THEORY",
@@ -2324,7 +2418,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       }
@@ -2339,7 +2433,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY & POLITICS OF INFORMATION"
     ],
     "subtopics": [
       "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
@@ -2702,7 +2796,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       }
@@ -2717,7 +2811,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY & POLITICS OF INFORMATION"
     ],
     "subtopics": [
       "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
@@ -3708,7 +3802,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       }
@@ -3723,7 +3817,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY & POLITICS OF INFORMATION"
     ],
     "subtopics": [
       "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
@@ -5078,48 +5172,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "politics",
-    "name": "politics",
-    "label": "#politics",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "format": "ESSAY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
-        "date": "2026.10.03"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY AND CRITICAL THEORY"
-    ],
-    "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
-    ],
-    "connected_tags": [
-      "paul-b-preciado",
-      "michel-foucault",
-      "governance",
-      "capitalism",
-      "biopolitics",
-      "pharmacopornography"
-    ]
-  },
-  {
     "id": "post-fordism",
     "name": "post-fordism",
     "label": "#post-fordism",
@@ -5174,7 +5226,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       }
@@ -5189,7 +5241,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY & POLITICS OF INFORMATION"
     ],
     "subtopics": [
       "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
@@ -5384,7 +5436,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       }
@@ -5399,7 +5451,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY & POLITICS OF INFORMATION"
     ],
     "subtopics": [
       "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
@@ -6010,7 +6062,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       }
@@ -6025,7 +6077,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY & POLITICS OF INFORMATION"
     ],
     "subtopics": [
       "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
