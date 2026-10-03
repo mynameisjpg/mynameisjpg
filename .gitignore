@@ -27,3 +27,5 @@ email/
 
 .vercel
 .env*
+
+node_modules/

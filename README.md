@@ -35,14 +35,14 @@ UNTITLED.JPG CONTENT PILLARS
 │   └── Optical paradoxes, visual illusions, & cognitive biases
 │
 ├── 02. AI Perception, Culture & Representation
-│   ├── Synthetic & statistical images ("the mean image")
-│   ├── Latent space navigation & algorithmic archive dynamics
-│   └── Computer vision vs. human perceptual discrepancies
+│   ├── Generative media, synthetic imagery & visual culture
+│   ├── Machine vision, latent spaces & algorithmic representation
+│   └── Political economy, ethics & societal impacts of AI
 │
 ├── 03. Language, LLMs & Artificial Intelligence
-│   ├── LLM architectures, symbolic grounding, & latent mechanics
-│   ├── Human vs. machine intelligence benchmarking & agentic systems
-│   └── AI safety, alignment, & conversational speech processing
+│   ├── Large language models, architectures & computational reasoning
+│   ├── Machine vs. human cognition, agentic systems & autonomy
+│   └── Semantics, symbolic grounding & knowledge systems
 │
 └── 04. Philosophy of the Image, Tech & Visual Culture
     ├── Modes of seeing, visual semiotics, & photographic truth

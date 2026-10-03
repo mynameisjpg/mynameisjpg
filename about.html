@@ -1,1 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About the Author & Publication — Untitled.jpg</title>
+  <meta name="description" content="Juan Pablo Giusepponi — Sr. Designer, Head of Communication & Frontier AI Specialist. Author of Untitled.jpg: Overthinking Undervalued Means.">
+  <link rel="canonical" href="https://mynameisjpg.github.io/about.html">
 
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Untitled.jpg">
+  <meta property="og:title" content="About the Author & Publication — Untitled.jpg">
+  <meta property="og:description" content="Juan Pablo Giusepponi — Sr. Designer, Head of Communication & Frontier AI Specialist. Author of Untitled.jpg: Overthinking Undervalued Means.">
+  <meta property="og:url" content="https://mynameisjpg.github.io/about.html">
+  <meta property="og:image" content="https://mynameisjpg.github.io/assets/images/self-jpg1.jpg">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@untitled_jpg">
+  <meta name="twitter:title" content="About the Author & Publication — Untitled.jpg">
+  <meta name="twitter:description" content="Juan Pablo Giusepponi — Sr. Designer, Head of Communication & Frontier AI Specialist. Author of Untitled.jpg: Overthinking Undervalued Means.">
+  <meta name="twitter:image" content="https://mynameisjpg.github.io/assets/images/self-jpg1.jpg">
+  
+  <!-- Typography: Azeret Mono (UI), Platypi (Prose), JetBrains Mono (Code/ASCII) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&family=Platypi:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Master Design System Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="shortcut icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Autonomous Web Component for Navigation Rail -->
+  <script src="js/components/sidebar-rail.js"></script>
+</head>
+<body>
+
+  <!-- ====================================================================
+       COMPONENT 1: ULTRA-THIN LEFT SIDEBAR RAIL (48px) / TOP NAVBAR
+       ==================================================================== -->
+  <sidebar-rail active-page="about" has-search></sidebar-rail>
+
+  <!-- Interactive Dropdown Overlays attached to Top Navbar -->
+  <div id="dispatch-log-dropdown" class="top-dropdown-panel menu-dropdown-panel dispatch-log-panel" style="display:none;">
+    <div class="dropdown-header">[ DISPATCH LOG ]</div>
+    <a href="index.html?filter=all" class="dropdown-option">SHOW ALL DISPATCHES</a>
+    <a href="index.html?filter=essay" class="dropdown-option">_ESSAYS</a>
+    <a href="index.html?filter=note" class="dropdown-option">_NOTES</a>
+    <a href="index.html?filter=bookmark" class="dropdown-option">_BOOKMARKS</a>
+    <a href="index.html?filter=resource" class="dropdown-option">_RESOURCES</a>
+  </div>
+
+  <div id="top-search-dropdown" class="top-dropdown-panel search-dropdown-panel" style="display:none;">
+    <input type="text" id="top-search-input" name="search" placeholder="SEARCH DISPATCHES..." aria-label="Search dispatches" autocomplete="off" spellcheck="false" />
+  </div>
+
+  <!-- ====================================================================
+       COMPONENT 2: ABOUT SHELL (REFINED EDITORIAL DOSSIER)
+       ==================================================================== -->
+  <main class="about-shell theme-parchment" id="about-shell" data-component="about-editorial-dossier">
+
+    <div class="about-content-wrap">
+
+      <!-- 1. Unified Minimalist Editorial Masthead Header -->
+      <header class="about-unified-header" aria-label="Publication Masthead">
+        <div class="about-header-topline">
+          <div class="about-header-tagline">
+            <span class="about-status-dot"></span>
+            <span>UNTITLED.JPG // ARCHIVAL DOSSIER // NODE: ABOUT</span>
+          </div>
+          <div>
+            <button type="button" class="theme-mode-toggle" id="theme-mode-btn" title="Toggle Light Parchment / Dark Slate Mode">
+              [THEME: PARCHMENT ☀️]
+            </button>
+          </div>
+        </div>
+
+        <div class="about-header-main">
+          <h1 class="about-editorial-title">Who's Overthinking This</h1>
+          <!-- <p class="about-editorial-subhead">
+            An open cognitive workspace investigating the psychophysics of vision, latent aesthetics, and systems of thought — by <strong>Juan Pablo Giusepponi</strong>.
+          </p> -->
+        </div>
+      </header>
+
+      <!-- 2. Asymmetric Two-Column Core Layout -->
+      <div class="about-core-grid">
+
+        <!-- Left Column: Author Metadata Dossier & Background -->
+        <aside class="author-dossier-panel" aria-label="Author Profile and Dossier">
+          
+          <!-- Full-Width Author Photo -->
+          <div class="dossier-photo-container">
+            <img src="assets/images/self-jpg1.jpg" alt="Juan Pablo Giusepponi" class="dossier-photo-img" />
+            <div class="dossier-photo-overlay"></div>
+            <span class="dossier-photo-tag">[LOC: SAN LUIS / ARGENTINA]</span>
+          </div>
+
+          <div class="dossier-inner-content">
+            
+            <!-- Identity Info -->
+            <div class="dossier-identity-info">
+              <h2 class="dossier-name">Juan Pablo Giusepponi</h2>
+              <span class="dossier-role-sub">Sr. Designer • Head of Communication • AI Specialist</span>
+            </div>
+
+            <!-- Micro Badges -->
+            <div class="dossier-badge-row">
+              <span class="dossier-chip highlight">[FRONTIER AI]</span>
+              <span class="dossier-chip highlight">[ART DIRECTION]</span>
+              <span class="dossier-chip">[SYSTEMS & COGNITION]</span>
+              <span class="dossier-chip">[EDITORIAL]</span>
+            </div>
+
+            <!-- Accordion Panel (Exclusive: Only One Expanded at a Time) -->
+            <div class="dossier-accordion" id="dossier-accordion">
+
+              <!-- 1. FRONTIER AI MGMT -->
+              <details name="dossier-accordion" class="accordion-item" open>
+                <summary>
+                  <span>FRONTIER AI MGMT</span>
+                  <span class="accordion-toggle-icon">▼</span>
+                </summary>
+                <div class="accordion-content">
+                  <div class="milestone-item">
+                    <div class="milestone-header">
+                      <span class="milestone-role">Human Data Manager | AI Expert & Reviewer</span>
+                      <span class="milestone-org">micro1.ai</span>
+                    </div>
+                    <p class="milestone-desc">
+                      Lead and improve human data pipelines for Frontier AI training. Manage operations and domain experts to guarantee benchmark quality and multi-turn evaluation.
+                    </p>
+                  </div>
+                  <div class="milestone-item">
+                    <div class="milestone-header">
+                      <span class="milestone-role">AI Generalist Expert</span>
+                      <span class="milestone-org">Outlier.ai</span>
+                    </div>
+                    <p class="milestone-desc">
+                      Rubric-based evaluation of multi-modal generative AI across text, image, audio, and video modalities.
+                    </p>
+                  </div>
+                </div>
+              </details>
+
+              <!-- 2. BRAND & DESIGN -->
+              <details name="dossier-accordion" class="accordion-item">
+                <summary>
+                  <span>BRAND & DESIGN</span>
+                  <span class="accordion-toggle-icon">▼</span>
+                </summary>
+                <div class="accordion-content">
+                  <div class="milestone-item">
+                    <div class="milestone-header">
+                      <span class="milestone-role">Sr. Designer & Art Director</span>
+                      <span class="milestone-org">UPRO</span>
+                    </div>
+                    <p class="milestone-desc">
+                      Developed institutional identity and multimedia campaigns. Achieved 1,000%+ enrollment growth within six months; produced regional brand activations.
+                    </p>
+                  </div>
+                  <div class="milestone-item">
+                    <div class="milestone-header">
+                      <span class="milestone-role">Head of Design & Communication</span>
+                      <span class="milestone-org">Ministry of Health</span>
+                    </div>
+                    <p class="milestone-desc">
+                      Led visual identity, design, and institutional communications for San Luis Province (<em>“Salud a Pleno!”</em> & award-winning <em>“Espacios Amigos de la Lactancia”</em>).
+                    </p>
+                  </div>
+                  <div class="milestone-item">
+                    <div class="milestone-header">
+                      <span class="milestone-role">Sr. Designer & Visual Strategist</span>
+                      <span class="milestone-org">Dale Mecha</span>
+                    </div>
+                    <p class="milestone-desc">
+                      Brand strategy, creative direction, graphic design, and digital visual communication consulting.
+                    </p>
+                  </div>
+                </div>
+              </details>
+
+              <!-- 3. ART DIRECTION -->
+              <details name="dossier-accordion" class="accordion-item">
+                <summary>
+                  <span>ART DIRECTION</span>
+                  <span class="accordion-toggle-icon">▼</span>
+                </summary>
+                <div class="accordion-content">
+                  <div class="milestone-item">
+                    <div class="milestone-header">
+                      <span class="milestone-role">Co-Founder & Sr. Designer</span>
+                      <span class="milestone-org">Editorial Deacá</span>
+                    </div>
+                    <p class="milestone-desc">
+                      Independent publishing house focusing on federal Argentine poetry. Published 41 books (all sold out); 2 books awarded by Fondo Nacional de las Artes.
+                    </p>
+                  </div>
+                  <div class="milestone-item">
+                    <div class="milestone-header">
+                      <span class="milestone-role">Co-Founder & Art Director</span>
+                      <span class="milestone-org">Editorial Tres Dagas</span>
+                    </div>
+                    <p class="milestone-desc">
+                      Art direction, book layout, cover art, typography, and community representation for independent literature.
+                    </p>
+                  </div>
+                </div>
+              </details>
+
+              <!-- 4. PHOTOGRAPHY & IMG MAKING -->
+              <details name="dossier-accordion" class="accordion-item">
+                <summary>
+                  <span>PHOTOGRAPHY & IMG MAKING</span>
+                  <span class="accordion-toggle-icon">▼</span>
+                </summary>
+                <div class="accordion-content">
+                  <div class="milestone-item">
+                    <div class="milestone-header">
+                      <span class="milestone-role">Photographer & Visual Artist</span>
+                      <span class="milestone-org">Freelance</span>
+                    </div>
+                    <p class="milestone-desc">
+                      Documentary photography, portraiture, digital image manipulation, and visual storytelling since 2007.
+                    </p>
+                  </div>
+                  <div class="milestone-item">
+                    <div class="milestone-header">
+                      <span class="milestone-role">Forensic Photography Expert</span>
+                      <span class="milestone-org">San Luis Justice System</span>
+                    </div>
+                    <p class="milestone-desc">
+                      Forensic photographic expert, documentation of evidence, and technical visual analysis.
+                    </p>
+                  </div>
+                </div>
+              </details>
+
+              <!-- 5. TEACHING & TUTORING -->
+              <details name="dossier-accordion" class="accordion-item">
+                <summary>
+                  <span>TEACHING & TUTORING</span>
+                  <span class="accordion-toggle-icon">▼</span>
+                </summary>
+                <div class="accordion-content">
+                  <div class="milestone-item">
+                    <div class="milestone-header">
+                      <span class="milestone-role">English Language Teacher</span>
+                      <span class="milestone-org">Interlingua Institute</span>
+                    </div>
+                    <p class="milestone-desc">
+                      Second language acquisition instruction and curriculum delivery.
+                    </p>
+                  </div>
+                  <div class="milestone-item">
+                    <div class="milestone-header">
+                      <span class="milestone-role">English Tutor</span>
+                      <span class="milestone-org">Escuela Técnica N° 20 Antonio Berni</span>
+                    </div>
+                    <p class="milestone-desc">
+                      Technical secondary education academic tutoring and student language support.
+                    </p>
+                  </div>
+                  <div class="milestone-item">
+                    <div class="milestone-header">
+                      <span class="milestone-role">Photography & Visual Communication Teacher</span>
+                      <span class="milestone-org">CAJ</span>
+                    </div>
+                    <p class="milestone-desc">
+                      Youth arts education, visual communication workshops, and community photography projects.
+                    </p>
+                  </div>
+                </div>
+              </details>
+
+              <!-- 6. MULTIDISCIPLINARY EDUCATION (Visually Highlighted & Separated) -->
+              <details name="dossier-accordion" class="accordion-item accordion-item-education">
+                <summary>
+                  <span>MULTIDISCIPLINARY EDUCATION</span>
+                  <span class="accordion-toggle-icon">▼</span>
+                </summary>
+                <div class="accordion-content">
+                  
+                  <div class="formation-degrees-list">
+                    <div class="degree-entry">
+                      <span class="degree-name">BA in Psychology</span>
+                      <span class="degree-inst">Universidad Nacional de San Luis (UNSL)</span>
+                    </div>
+                    <div class="degree-entry">
+                      <span class="degree-name">BA in Graphic Design</span>
+                      <span class="degree-inst">Universidad de Buenos Aires (UBA)</span>
+                    </div>
+                    <div class="degree-entry">
+                      <span class="degree-name">Teaching Degree in Language & Literature (Spanish)</span>
+                      <span class="degree-inst">Instituto de Formación Docente Continua (IFDC)</span>
+                    </div>
+                    <div class="degree-entry">
+                      <span class="degree-name">Teaching Degree in Visual Arts</span>
+                      <span class="degree-inst">Instituto de Formación Docente Continua (IFDC)</span>
+                    </div>
+                    <div class="degree-entry">
+                      <span class="degree-name">Teaching Degree in English as a Second Language</span>
+                      <span class="degree-inst">Instituto Cultural Argentino (ICA)</span>
+                    </div>
+                  </div>
+
+                  <div class="formation-topics-wrap">
+                    <span class="formation-topics-label">Specialized Inquiries & Coursework:</span>
+                    <p class="formation-topics-text">
+                      <strong>MIT:</strong> CMS.405 Media & Methods: Sight & Expression • CMS.935 Documentary Photography • 24.949J Language Acquisition.<br>
+                      <strong>Stanford:</strong> CS 178 Digital Photography.<br>
+                      <strong>AI & Computation:</strong> Anthropic (AI Fluency, Claude 101) • Wolfram (Statistics Foundations) • freeCodeCamp (RAG & MCP Frameworks) • Google (Generative AI Leader).
+                    </p>
+                  </div>
+
+                </div>
+              </details>
+
+            </div>
+
+            <!-- Action Relays & External Nodes -->
+            <div class="dossier-relays-group">
+              <!-- <a href="../Resources/HDM Giusepponi_Juan_Pablo CV.pdf" target="_blank" rel="noopener noreferrer" class="btn-cv-download">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                DOWNLOAD FULL CV (PDF)
+              </a> -->
+              <div class="dossier-social-links">
+                <a href="https://linkedin.com/in/jpgiuse" target="_blank" rel="noopener noreferrer" class="dossier-social-link">/ LINKEDIN</a>
+                <a href="https://github.com/mynameisjpg" target="_blank" rel="noopener noreferrer" class="dossier-social-link">/ GITHUB</a>
+                <a href="https://instagram.com/lasfotosdejuana" target="_blank" rel="noopener noreferrer" class="dossier-social-link">&gt;&gt; INSTAGRAM</a>
+              </div>
+            </div>
+
+          </div>
+
+        </aside>
+
+        <!-- Right Column: The Authentic Manifesto Reader -->
+        <article class="manifesto-editorial-panel" aria-label="Author Manifesto and Philosophy">
+          
+          <div class="manifesto-kicker-bar">
+            <span>[ OPEN NOTEBOOK // OPERATIONAL MANIFESTO ]</span>
+          </div>
+
+          <div class="manifesto-reading-body">
+            
+            <p class="manifesto-paragraph-lead">
+              I gather and structure the raw materials of this space —its articles, visual design, and written content— out of a persistent, driving curiosity. My work is an attempt to map a world that refuses to hold still. I build on a dense foundation of theory and materialist/deconstructive thought, daring to formulate claims, trace patterns, and think out loud. Yet every argument I put forward is bounded by a deep humility and a profound respect for the infinite, elusive nature of human interpretation.
+            </p>
+
+            <blockquote class="manifesto-pull-quote">
+              “My writing style sounds 1000x more certain than I ever have been or will be about anything, but it's a transparent reflection of my systems-oriented mind surfing the chaos and uncertainty of reality through axiomatic and decisive experiments of thought.”
+            </blockquote>
+
+            <p>
+              Rather than delivering neat conclusions or performance-driven copy, this site is designed as an accessible doorway into destabilizing ideas. It is an open notebook for examining why we crave absolute truths, how we construct our realities, what are the undervalued nets that hold our systems (of power, of culture, of affection, of meaning), and what happens when we let go of the need to be definitively right.
+            </p>
+
+            <p>
+              I welcome you to explore, question, and think alongside me.
+            </p>
+
+            <div class="manifesto-signature-block">
+              <span class="signature-name">Juan Pablo Giusepponi</span>
+              <span class="signature-title">FOUNDING OPERATOR // UNTITLED.JPG</span>
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+      <!-- 3. Bottom 4-Card Research Pillars Interactive Grid -->
+      <section class="about-pillars-section" aria-label="Four Inquiry Pillars">
+        
+        <div class="pillars-header-group">
+          <h3 class="pillars-section-title">SYS_TAXONOMY // THE FOUR INQUIRY PILLARS</h3>
+          <span class="pillars-section-hint">[CLICK TO FILTER ARCHIVED DISPATCHES BY DOMAIN]</span>
+        </div>
+
+        <div class="pillars-cards-grid">
+          
+          <!-- Pillar 1 -->
+          <a href="index.html?topic=visual-perception" class="pillar-interactive-card" title="Explore Visual Perception dispatches">
+            <div class="pillar-card-content">
+              <h4 class="pillar-card-title"><span class="pillar-number">[ 01 ]</span> Visual Perception & Psychophysics</h4>
+              <p class="pillar-card-desc">
+                Examining how the human visual system constructs reality from sensory signals—exploring the physiological mechanics of sight, optical paradoxes, Gestalt organization, and cognitive biases.
+              </p>
+            </div>
+            <div class="pillar-card-footer">
+              <span>EXPLORE DISPATCHES</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+          </a>
+
+          <!-- Pillar 2 -->
+          <a href="index.html?topic=ai-perception" class="pillar-interactive-card" title="Explore AI Perception dispatches">
+            <div class="pillar-card-content">
+              <h4 class="pillar-card-title"><span class="pillar-number">[ 02 ]</span> AI Perception, Culture & Representation</h4>
+              <p class="pillar-card-desc">
+                Investigating how computational models interpret and generate visual worlds, how machine vision reshapes visual culture, and how synthetic media alters human representation and societal consensus.
+              </p>
+            </div>
+            <div class="pillar-card-footer">
+              <span>EXPLORE DISPATCHES</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+          </a>
+
+          <!-- Pillar 3 -->
+          <a href="index.html?topic=language-llms" class="pillar-interactive-card" title="Explore Language and LLM dispatches">
+            <div class="pillar-card-content">
+              <h4 class="pillar-card-title"><span class="pillar-number">[ 03 ]</span> Language, LLMs & Artificial Intelligence</h4>
+              <p class="pillar-card-desc">
+                Exploring the boundaries of machine cognition and symbolic reasoning—analyzing how language models process meaning, how agentic systems operate, and where artificial intelligence diverges from human thought.
+              </p>
+            </div>
+            <div class="pillar-card-footer">
+              <span>EXPLORE DISPATCHES</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+          </a>
+
+          <!-- Pillar 4 -->
+          <a href="index.html?topic=philosophy-image" class="pillar-interactive-card" title="Explore Philosophy of the Image dispatches">
+            <div class="pillar-card-content">
+              <h4 class="pillar-card-title"><span class="pillar-number">[ 04 ]</span> Philosophy of the Image & Visual Culture</h4>
+              <p class="pillar-card-desc">
+                Analyzing the epistemology of seeing in the digital era—questioning how photographs, simulations, and algorithmic interfaces mediate power, cultural memory, and our understanding of truth.
+              </p>
+            </div>
+            <div class="pillar-card-footer">
+              <span>EXPLORE DISPATCHES</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+          </a>
+
+        </div>
+
+      </section>
+
+      <!-- 4. Master Page Footer Sign-Off -->
+      <footer class="about-page-footer">
+        <div>
+          <span>UNTITLED.JPG</span> // BUILT IN ZEROES AND ONES WITH THE BLOOD AND SWEAT OF JUAN P. GIUSEPPONI // 2026
+        </div>
+        <div class="footer-signoff-quote">
+          [ "OVERTHINKING UNDERVALUED MEANS" ]
+        </div>
+      </footer>
+
+    </div>
+
+  </main>
+
+  <!-- Interactive Theme Switcher and Relay Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const shell = document.getElementById('about-shell');
+      const themeBtn = document.getElementById('theme-mode-btn');
+      
+      // Check for saved preference
+      const savedTheme = localStorage.getItem('about_page_theme') || 'parchment';
+      if (savedTheme === 'slate') {
+        shell.classList.remove('theme-parchment');
+        if (themeBtn) themeBtn.textContent = '[THEME: SLATE 🌙]';
+      } else {
+        shell.classList.add('theme-parchment');
+        if (themeBtn) themeBtn.textContent = '[THEME: PARCHMENT ☀️]';
+      }
+
+      if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+          if (shell.classList.contains('theme-parchment')) {
+            shell.classList.remove('theme-parchment');
+            themeBtn.textContent = '[THEME: SLATE 🌙]';
+            localStorage.setItem('about_page_theme', 'slate');
+          } else {
+            shell.classList.add('theme-parchment');
+            themeBtn.textContent = '[THEME: PARCHMENT ☀️]';
+            localStorage.setItem('about_page_theme', 'parchment');
+          }
+        });
+      }
+
+      // Exclusive Accordion Handlers
+      const accordions = document.querySelectorAll('.dossier-accordion details');
+      accordions.forEach((detail) => {
+        detail.addEventListener('toggle', () => {
+          if (detail.open) {
+            accordions.forEach((other) => {
+              if (other !== detail && other.open) {
+                other.removeAttribute('open');
+              }
+            });
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

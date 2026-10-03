@@ -75,15 +75,21 @@ A personal, open digital workspace published under the moniker `Untitled.jpg` (`
   | ├── Sub-topic 2.3: Generative technologies and prompt engineering
   | ├── Sub-topic 2.4: Computer vision vs. human perception
   | ├── Sub-topic 2.5: The political economy of synthetic media and digital labor
-  | └── Sub-topic 2.6: Societal and algorithmic biases
+  | ├── Sub-topic 2.6: Societal and algorithmic biases
+  | ├── Sub-topic 2.7: Generative media, synthetic imagery & visual culture
+  | ├── Sub-topic 2.8: Machine vision, latent spaces & algorithmic representation
+  | └── Sub-topic 2.9: Political economy, ethics & societal impacts of AI
   |
   ├── 3: Language, LLMs and artificial intelligence
   | ├── Sub-topic 3.1: LLM architectures and mechanics
   | ├── Sub-topic 3.2: Human vs. machine intelligence and benchmarking
   | ├── Sub-topic 3.3: Language, meaning and symbolic grounding
   | ├── Sub-topic 3.4: Agentic systems and human agency
-  | ├── Sub-topic 3.5: Converstional voice AI and speech processing
-  | └── Sub-topic 3.6: AI safety, alignment and extreme risk evaluation
+  | ├── Sub-topic 3.5: Conversational voice AI and speech processing
+  | ├── Sub-topic 3.6: AI safety, alignment and extreme risk evaluation
+  | ├── Sub-topic 3.7: Large language models, architectures & computational reasoning
+  | ├── Sub-topic 3.8: Machine vs. human cognition, agentic systems & autonomy
+  | └── Sub-topic 3.9: Semantics, symbolic grounding & knowledge systems
   |
   └── 4: Philosophy of the image, tech and visual culture
   ├── Sub-topic 4.1: Modes of seeing and visual semiotics
