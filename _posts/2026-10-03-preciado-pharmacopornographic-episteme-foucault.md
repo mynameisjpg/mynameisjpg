@@ -7,7 +7,7 @@ date: 2026-10-03 10:00:00 -0300
 last_modified_at: 2026-10-03 10:00:00 -0300
 
 author: "Juan P. Giusepponi"
-status: "draft"
+status: "published"
 
 format: "essay"
 

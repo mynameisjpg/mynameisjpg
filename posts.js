@@ -24,7 +24,7 @@ window.DYNAMIC_POSTS = [
     "read_time": "22 MIN READ",
     "via": "",
     "image": "assets/images/telebodies.jpg",
-    "image_alt": "Red-haloed human silhouette amid a black-and-white glitch art collage of static CRT screens, circuit boards, pill icons, and binary code..",
+    "image_alt": "Red-haloed human silhouette amid a black-and-white glitch art collage of static CRT screens, circuit boards, pill icons, and binary code.",
     "aspect_ratio": "h-tall-1",
     "links": [
       {
@@ -255,7 +255,7 @@ window.DYNAMIC_POSTS = [
     "featured": false,
     "shareable": true,
     "allow_embed": true,
-    "status": "draft",
+    "status": "published",
     "date": "2026.10.03",
     "author": "Juan P. Giusepponi",
     "read_time": "20 MIN READ",
