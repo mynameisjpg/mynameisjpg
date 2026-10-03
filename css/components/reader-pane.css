@@ -61,6 +61,9 @@
   font-family: var(--font-mono);
   font-size: var(--text-xl);
   font-weight: var(--weight-semibold);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-rose);
+  text-underline-offset: 8px;
   color: var(--text-bright);
   margin: 2rem 0 1.3rem 0;
 }
@@ -174,7 +177,7 @@
 .essay-body-content p code,
 .essay-body-content li code {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   background: rgba(0, 0, 0, 0.5);
   padding: 0.15em 0.4em;
   color: var(--accent-coral);

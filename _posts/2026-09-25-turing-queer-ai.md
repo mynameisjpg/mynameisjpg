@@ -23,6 +23,10 @@ tags:
   - "pasquinelli"
   - "epistemology"
   - "biopolitics"
+  - "ai"
+  - "intelligence"
+  - "queerness"
+  - "lgbtqia+"
 
 theme: "dark"
 featured: true

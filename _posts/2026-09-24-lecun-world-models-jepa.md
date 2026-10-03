@@ -19,6 +19,9 @@ topic:
 tags:
   - "yann-lecun"
   - "jepa"
+  - "physics"
+  - "ai"
+  - "intelligence"
   - "world-models"
   - "llms"
   - "sensory-bandwidth"
@@ -32,7 +35,7 @@ toc: true
 math: true
 
 sys_id: "SYS_260924_JEPA"
-reading_time: "12 min read"
+reading_time: "20 min read"
 
 links:
   - title: "A Path Towards Autonomous Machine Intelligence (Yann LeCun, 2022)"
@@ -43,10 +46,10 @@ links:
     url: "https://arxiv.org/abs/2301.08243"
     type: "paper"
     description: "Meta AI's implementation predicting abstract representations in latent space rather than generating low-level pixels."
-  - title: "V-JEPA: Video Joint Embedding Predictive Architecture"
-    url: "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-dataset/"
-    type: "repo"
-    description: "Official codebase and model weights for self-supervised physical feature learning from high-frame-rate video."
+  - title: "V-JEPA 2: Video Joint Embedding Predictive Architecture"
+    url: "https://arxiv.org/abs/2506.09985"
+    type: "paper"
+    description: "Meta's progress in learning video representations from high frame-rate data."
 
 #via: "Yann LeCun / Meta AI Research"
 

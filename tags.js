@@ -117,12 +117,138 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "ai",
+    "name": "ai",
+    "label": "#ai",
+    "type": "tag",
+    "count": 5,
+    "posts": [
+      {
+        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
+      },
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      },
+      {
+        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "date": "2026.09.26",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
+      },
+      {
+        "id": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "date": "2026.09.25",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
+        "url": "posts/turing-queer-ai.html"
+      },
+      {
+        "id": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "date": "2026.09.24",
+        "format": "ESSAY",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+        "url": "posts/lecun-world-models-jepa.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "format": "NOTE",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
+        "date": "2026.10.02"
+      },
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      },
+      {
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "format": "RESOURCE",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "slug": "turing-queer-ai",
+        "format": "ESSAY",
+        "url": "posts/turing-queer-ai.html",
+        "date": "2026.09.25"
+      },
+      {
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "slug": "lecun-world-models-jepa",
+        "format": "ESSAY",
+        "url": "posts/lecun-world-models-jepa.html",
+        "date": "2026.09.24"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION",
+      "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+      "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
+    ],
+    "connected_tags": [
+      "intelligence",
+      "ai-mascots",
+      "product-design",
+      "ux-psychology",
+      "tamagotchi-effect",
+      "dots"
+    ]
+  },
+  {
     "id": "pillar-ai-perception-culture-representation",
     "name": "AI PERCEPTION, CULTURE & REPRESENTATION",
     "label": "AI PERCEPTION, CULTURE & REPRESENTATION",
     "type": "pillar",
-    "count": 3,
+    "count": 4,
     "posts": [
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      },
       {
         "id": "2026-09-30-relate-anything-github-repo",
         "slug": "relate-anything-github-repo",
@@ -155,6 +281,13 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "links": [
+      {
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      },
       {
         "title": "Relate Anything [github repo]",
         "slug": "relate-anything-github-repo",
@@ -245,86 +378,6 @@ window.DYNAMIC_TAGS = [
     "pillars": [],
     "subtopics": [],
     "connected_tags": []
-  },
-  {
-    "id": "ai",
-    "name": "ai",
-    "label": "#ai",
-    "type": "tag",
-    "count": 3,
-    "posts": [
-      {
-        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
-      },
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
-      },
-      {
-        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "date": "2026.09.26",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/harvard-s-computer-science-career-for-free.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "format": "NOTE",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      },
-      {
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "format": "RESOURCE",
-        "url": "posts/harvard-s-computer-science-career-for-free.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "COMPUTER VISION VS. HUMAN PERCEPTION",
-      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY"
-    ],
-    "connected_tags": [
-      "ai-mascots",
-      "product-design",
-      "ux-psychology",
-      "tamagotchi-effect",
-      "dots",
-      "frontier-ai"
-    ]
   },
   {
     "id": "visual-perception",
@@ -613,6 +666,66 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "biopolitics",
+    "name": "biopolitics",
+    "label": "#biopolitics",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      },
+      {
+        "id": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "date": "2026.09.25",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
+        "url": "posts/turing-queer-ai.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      },
+      {
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "slug": "turing-queer-ai",
+        "format": "ESSAY",
+        "url": "posts/turing-queer-ai.html",
+        "date": "2026.09.25"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+      "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
+    ],
+    "connected_tags": [
+      "queer-theory",
+      "epistemology",
+      "paul-b-preciado",
+      "michel-foucault",
+      "governance",
+      "capitalism"
+    ]
+  },
+  {
     "id": "dots",
     "name": "dots",
     "label": "#dots",
@@ -670,6 +783,66 @@ window.DYNAMIC_TAGS = [
       "ux-psychology",
       "frontier-ai",
       "ai"
+    ]
+  },
+  {
+    "id": "epistemology",
+    "name": "epistemology",
+    "label": "#epistemology",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      },
+      {
+        "id": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "date": "2026.09.25",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
+        "url": "posts/turing-queer-ai.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      },
+      {
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "slug": "turing-queer-ai",
+        "format": "ESSAY",
+        "url": "posts/turing-queer-ai.html",
+        "date": "2026.09.25"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+      "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
+    ],
+    "connected_tags": [
+      "biopolitics",
+      "queer-theory",
+      "paul-b-preciado",
+      "michel-foucault",
+      "governance",
+      "capitalism"
     ]
   },
   {
@@ -794,6 +967,67 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "intelligence",
+    "name": "intelligence",
+    "label": "#intelligence",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "date": "2026.09.25",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
+        "url": "posts/turing-queer-ai.html"
+      },
+      {
+        "id": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "date": "2026.09.24",
+        "format": "ESSAY",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+        "url": "posts/lecun-world-models-jepa.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "slug": "turing-queer-ai",
+        "format": "ESSAY",
+        "url": "posts/turing-queer-ai.html",
+        "date": "2026.09.25"
+      },
+      {
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "slug": "lecun-world-models-jepa",
+        "format": "ESSAY",
+        "url": "posts/lecun-world-models-jepa.html",
+        "date": "2026.09.24"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+      "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
+    ],
+    "connected_tags": [
+      "ai",
+      "alan-turing",
+      "queer-theory",
+      "imitation-game",
+      "sociomorphic-ai",
+      "pasquinelli"
+    ]
+  },
+  {
     "id": "psychophysics",
     "name": "psychophysics",
     "label": "#psychophysics",
@@ -850,6 +1084,66 @@ window.DYNAMIC_TAGS = [
       "vision",
       "ui-design",
       "cognitive-load"
+    ]
+  },
+  {
+    "id": "queer-theory",
+    "name": "queer-theory",
+    "label": "#queer-theory",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      },
+      {
+        "id": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "date": "2026.09.25",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
+        "url": "posts/turing-queer-ai.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      },
+      {
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "slug": "turing-queer-ai",
+        "format": "ESSAY",
+        "url": "posts/turing-queer-ai.html",
+        "date": "2026.09.25"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+      "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
+    ],
+    "connected_tags": [
+      "biopolitics",
+      "epistemology",
+      "paul-b-preciado",
+      "michel-foucault",
+      "governance",
+      "capitalism"
     ]
   },
   {
@@ -972,6 +1266,39 @@ window.DYNAMIC_TAGS = [
       "ai",
       "models"
     ]
+  },
+  {
+    "id": "subtopic-biopolitics-somatic-technologies-body-epistemology",
+    "name": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+    "label": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+    "type": "subtopic",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [],
+    "connected_tags": []
   },
   {
     "id": "subtopic-computer-vision-vs-human-perception",
@@ -1596,48 +1923,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "biopolitics",
-    "name": "biopolitics",
-    "label": "#biopolitics",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-25-turing-queer-ai",
-        "slug": "turing-queer-ai",
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "date": "2026.09.25",
-        "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "posts/turing-queer-ai.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "turing-queer-ai",
-        "format": "ESSAY",
-        "url": "posts/turing-queer-ai.html",
-        "date": "2026.09.25"
-      }
-    ],
-    "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
-    ],
-    "subtopics": [
-      "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
-    ],
-    "connected_tags": [
-      "alan-turing",
-      "queer-theory",
-      "imitation-game",
-      "sociomorphic-ai",
-      "pasquinelli",
-      "epistemology"
-    ]
-  },
-  {
     "id": "borderlands",
     "name": "borderlands",
     "label": "#borderlands",
@@ -1802,6 +2087,48 @@ window.DYNAMIC_TAGS = [
       "psychophysics",
       "visual-perception",
       "skill"
+    ]
+  },
+  {
+    "id": "capitalism",
+    "name": "capitalism",
+    "label": "#capitalism",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+    ],
+    "connected_tags": [
+      "paul-b-preciado",
+      "michel-foucault",
+      "governance",
+      "biopolitics",
+      "pharmacopornography",
+      "governmentality"
     ]
   },
   {
@@ -2637,10 +2964,10 @@ window.DYNAMIC_TAGS = [
     "connected_tags": [
       "yann-lecun",
       "jepa",
-      "world-models",
-      "llms",
-      "sensory-bandwidth",
-      "symbol-grounding"
+      "physics",
+      "ai",
+      "intelligence",
+      "world-models"
     ]
   },
   {
@@ -2683,48 +3010,6 @@ window.DYNAMIC_TAGS = [
       "embeddings",
       "rag",
       "latent-space"
-    ]
-  },
-  {
-    "id": "epistemology",
-    "name": "epistemology",
-    "label": "#epistemology",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-25-turing-queer-ai",
-        "slug": "turing-queer-ai",
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "date": "2026.09.25",
-        "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "posts/turing-queer-ai.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "turing-queer-ai",
-        "format": "ESSAY",
-        "url": "posts/turing-queer-ai.html",
-        "date": "2026.09.25"
-      }
-    ],
-    "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
-    ],
-    "subtopics": [
-      "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
-    ],
-    "connected_tags": [
-      "alan-turing",
-      "queer-theory",
-      "imitation-game",
-      "sociomorphic-ai",
-      "pasquinelli",
-      "biopolitics"
     ]
   },
   {
@@ -3017,6 +3302,90 @@ window.DYNAMIC_TAGS = [
       "data-labeling",
       "ai",
       "models"
+    ]
+  },
+  {
+    "id": "governance",
+    "name": "governance",
+    "label": "#governance",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+    ],
+    "connected_tags": [
+      "paul-b-preciado",
+      "michel-foucault",
+      "capitalism",
+      "biopolitics",
+      "pharmacopornography",
+      "governmentality"
+    ]
+  },
+  {
+    "id": "governmentality",
+    "name": "governmentality",
+    "label": "#governmentality",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+    ],
+    "connected_tags": [
+      "paul-b-preciado",
+      "michel-foucault",
+      "governance",
+      "capitalism",
+      "biopolitics",
+      "pharmacopornography"
     ]
   },
   {
@@ -3555,11 +3924,11 @@ window.DYNAMIC_TAGS = [
     ],
     "connected_tags": [
       "yann-lecun",
+      "physics",
+      "ai",
+      "intelligence",
       "world-models",
-      "llms",
-      "sensory-bandwidth",
-      "symbol-grounding",
-      "vicreg"
+      "llms"
     ]
   },
   {
@@ -3644,6 +4013,48 @@ window.DYNAMIC_TAGS = [
       "embeddings",
       "episteme",
       "rag"
+    ]
+  },
+  {
+    "id": "lgbtqia",
+    "name": "lgbtqia+",
+    "label": "#lgbtqia+",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "date": "2026.09.25",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
+        "url": "posts/turing-queer-ai.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "slug": "turing-queer-ai",
+        "format": "ESSAY",
+        "url": "posts/turing-queer-ai.html",
+        "date": "2026.09.25"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
+    ],
+    "connected_tags": [
+      "alan-turing",
+      "queer-theory",
+      "imitation-game",
+      "sociomorphic-ai",
+      "pasquinelli",
+      "epistemology"
     ]
   },
   {
@@ -3766,10 +4177,10 @@ window.DYNAMIC_TAGS = [
     "connected_tags": [
       "yann-lecun",
       "jepa",
-      "world-models",
-      "sensory-bandwidth",
-      "symbol-grounding",
-      "vicreg"
+      "physics",
+      "ai",
+      "intelligence",
+      "world-models"
     ]
   },
   {
@@ -3812,6 +4223,48 @@ window.DYNAMIC_TAGS = [
       "grok-bot",
       "openai",
       "grok"
+    ]
+  },
+  {
+    "id": "michel-foucault",
+    "name": "michel-foucault",
+    "label": "#michel-foucault",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+    ],
+    "connected_tags": [
+      "paul-b-preciado",
+      "governance",
+      "capitalism",
+      "biopolitics",
+      "pharmacopornography",
+      "governmentality"
     ]
   },
   {
@@ -4067,6 +4520,90 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "paul-b-preciado",
+    "name": "paul-b-preciado",
+    "label": "#paul-b-preciado",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+    ],
+    "connected_tags": [
+      "michel-foucault",
+      "governance",
+      "capitalism",
+      "biopolitics",
+      "pharmacopornography",
+      "governmentality"
+    ]
+  },
+  {
+    "id": "pharmacopornography",
+    "name": "pharmacopornography",
+    "label": "#pharmacopornography",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+    ],
+    "connected_tags": [
+      "paul-b-preciado",
+      "michel-foucault",
+      "governance",
+      "capitalism",
+      "biopolitics",
+      "governmentality"
+    ]
+  },
+  {
     "id": "philosophy",
     "name": "philosophy",
     "label": "#philosophy",
@@ -4150,6 +4687,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "physics",
+    "name": "physics",
+    "label": "#physics",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "date": "2026.09.24",
+        "format": "ESSAY",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+        "url": "posts/lecun-world-models-jepa.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "slug": "lecun-world-models-jepa",
+        "format": "ESSAY",
+        "url": "posts/lecun-world-models-jepa.html",
+        "date": "2026.09.24"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS"
+    ],
+    "connected_tags": [
+      "yann-lecun",
+      "jepa",
+      "ai",
+      "intelligence",
+      "world-models",
+      "llms"
+    ]
+  },
+  {
     "id": "plastic-signs",
     "name": "plastic-signs",
     "label": "#plastic-signs",
@@ -4188,6 +4767,48 @@ window.DYNAMIC_TAGS = [
       "iconicity",
       "generative-ai",
       "visual-perception"
+    ]
+  },
+  {
+    "id": "post-fordism",
+    "name": "post-fordism",
+    "label": "#post-fordism",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+    ],
+    "connected_tags": [
+      "paul-b-preciado",
+      "michel-foucault",
+      "governance",
+      "capitalism",
+      "biopolitics",
+      "pharmacopornography"
     ]
   },
   {
@@ -4359,9 +4980,9 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "queer-theory",
-    "name": "queer-theory",
-    "label": "#queer-theory",
+    "id": "queerness",
+    "name": "queerness",
+    "label": "#queerness",
     "type": "tag",
     "count": 1,
     "posts": [
@@ -4393,11 +5014,11 @@ window.DYNAMIC_TAGS = [
     ],
     "connected_tags": [
       "alan-turing",
+      "queer-theory",
       "imitation-game",
       "sociomorphic-ai",
       "pasquinelli",
-      "epistemology",
-      "biopolitics"
+      "epistemology"
     ]
   },
   {
@@ -4644,10 +5265,10 @@ window.DYNAMIC_TAGS = [
     "connected_tags": [
       "yann-lecun",
       "jepa",
-      "world-models",
-      "llms",
-      "symbol-grounding",
-      "vicreg"
+      "physics",
+      "ai",
+      "intelligence",
+      "world-models"
     ]
   },
   {
@@ -4818,6 +5439,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "somatic-capitalism",
+    "name": "somatic-capitalism",
+    "label": "#somatic-capitalism",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+    ],
+    "connected_tags": [
+      "paul-b-preciado",
+      "michel-foucault",
+      "governance",
+      "capitalism",
+      "biopolitics",
+      "pharmacopornography"
+    ]
+  },
+  {
     "id": "symbol-grounding",
     "name": "symbol-grounding",
     "label": "#symbol-grounding",
@@ -4853,10 +5516,10 @@ window.DYNAMIC_TAGS = [
     "connected_tags": [
       "yann-lecun",
       "jepa",
-      "world-models",
-      "llms",
-      "sensory-bandwidth",
-      "vicreg"
+      "physics",
+      "ai",
+      "intelligence",
+      "world-models"
     ]
   },
   {
@@ -5230,10 +5893,10 @@ window.DYNAMIC_TAGS = [
     "connected_tags": [
       "yann-lecun",
       "jepa",
-      "world-models",
-      "llms",
-      "sensory-bandwidth",
-      "symbol-grounding"
+      "physics",
+      "ai",
+      "intelligence",
+      "world-models"
     ]
   },
   {
@@ -5439,10 +6102,10 @@ window.DYNAMIC_TAGS = [
     "connected_tags": [
       "yann-lecun",
       "jepa",
-      "llms",
-      "sensory-bandwidth",
-      "symbol-grounding",
-      "vicreg"
+      "physics",
+      "ai",
+      "intelligence",
+      "llms"
     ]
   },
   {
@@ -5480,11 +6143,11 @@ window.DYNAMIC_TAGS = [
     ],
     "connected_tags": [
       "jepa",
+      "physics",
+      "ai",
+      "intelligence",
       "world-models",
-      "llms",
-      "sensory-bandwidth",
-      "symbol-grounding",
-      "vicreg"
+      "llms"
     ]
   }
 ];
