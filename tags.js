@@ -5,8 +5,18 @@ window.DYNAMIC_TAGS = [
     "name": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
     "label": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
     "type": "pillar",
-    "count": 5,
+    "count": 6,
     "posts": [
+      {
+        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
+      },
       {
         "id": "2026-10-02-dots-bot-muse-cute-mascots",
         "slug": "dots-bot-muse-cute-mascots",
@@ -59,6 +69,13 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "links": [
+      {
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "format": "NOTE",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
+        "date": "2026.10.02"
+      },
       {
         "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
         "slug": "dots-bot-muse-cute-mascots",
@@ -517,6 +534,66 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "ai-mascots",
+    "name": "ai-mascots",
+    "label": "#ai-mascots",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
+      },
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "format": "NOTE",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
+        "date": "2026.10.02"
+      },
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY"
+    ],
+    "connected_tags": [
+      "tamagotchi-effect",
+      "product-design",
+      "ux-psychology",
+      "growth",
+      "viral-loops",
+      "interface-design"
+    ]
+  },
+  {
     "id": "free",
     "name": "free",
     "label": "#free",
@@ -694,6 +771,66 @@ window.DYNAMIC_TAGS = [
       "vision",
       "ui-design",
       "cognitive-load"
+    ]
+  },
+  {
+    "id": "tamagotchi-effect",
+    "name": "tamagotchi-effect",
+    "label": "#tamagotchi-effect",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
+      },
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "format": "NOTE",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
+        "date": "2026.10.02"
+      },
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "product-design",
+      "ux-psychology",
+      "growth",
+      "viral-loops",
+      "interface-design"
     ]
   },
   {
@@ -923,6 +1060,39 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "subtopic-interface-politics-product-psychology",
+    "name": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+    "label": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+    "type": "subtopic",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "format": "NOTE",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
     "id": "subtopic-modes-of-seeing-visual-semiotics",
     "name": "MODES OF SEEING & VISUAL SEMIOTICS",
     "label": "MODES OF SEEING & VISUAL SEMIOTICS",
@@ -1053,48 +1223,6 @@ window.DYNAMIC_TAGS = [
     ],
     "subtopics": [],
     "connected_tags": []
-  },
-  {
-    "id": "ai-mascots",
-    "name": "ai-mascots",
-    "label": "#ai-mascots",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-02-dots-bot-muse-cute-mascots",
-        "slug": "dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "date": "2026.10.02",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/dots-bot-muse-cute-mascots.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "slug": "dots-bot-muse-cute-mascots",
-        "format": "ESSAY",
-        "url": "posts/dots-bot-muse-cute-mascots.html",
-        "date": "2026.10.02"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
-    ],
-    "connected_tags": [
-      "dots",
-      "muse",
-      "grok-bot",
-      "openai",
-      "grok",
-      "meta"
-    ]
   },
   {
     "id": "alan-turing",
@@ -1344,6 +1472,48 @@ window.DYNAMIC_TAGS = [
       "grok-bot",
       "openai",
       "grok"
+    ]
+  },
+  {
+    "id": "behavioral-design",
+    "name": "behavioral-design",
+    "label": "#behavioral-design",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "format": "NOTE",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "product-design",
+      "ux-psychology",
+      "tamagotchi-effect",
+      "growth",
+      "viral-loops"
     ]
   },
   {
@@ -2855,6 +3025,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "growth",
+    "name": "growth",
+    "label": "#growth",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "format": "NOTE",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "product-design",
+      "ux-psychology",
+      "tamagotchi-effect",
+      "viral-loops",
+      "interface-design"
+    ]
+  },
+  {
     "id": "haraway",
     "name": "haraway",
     "label": "#haraway",
@@ -3185,6 +3397,48 @@ window.DYNAMIC_TAGS = [
       "networks",
       "ai",
       "llm"
+    ]
+  },
+  {
+    "id": "interface-design",
+    "name": "interface-design",
+    "label": "#interface-design",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "format": "NOTE",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "product-design",
+      "ux-psychology",
+      "tamagotchi-effect",
+      "growth",
+      "viral-loops"
     ]
   },
   {
@@ -3984,6 +4238,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "product-design",
+    "name": "product-design",
+    "label": "#product-design",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "format": "NOTE",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "ux-psychology",
+      "tamagotchi-effect",
+      "growth",
+      "viral-loops",
+      "interface-design"
+    ]
+  },
+  {
     "id": "psychology",
     "name": "psychology",
     "label": "#psychology",
@@ -4527,48 +4823,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "tamagotchi-effect",
-    "name": "tamagotchi-effect",
-    "label": "#tamagotchi-effect",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-02-dots-bot-muse-cute-mascots",
-        "slug": "dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "date": "2026.10.02",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/dots-bot-muse-cute-mascots.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "slug": "dots-bot-muse-cute-mascots",
-        "format": "ESSAY",
-        "url": "posts/dots-bot-muse-cute-mascots.html",
-        "date": "2026.10.02"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
-    ],
-    "connected_tags": [
-      "ai-mascots",
-      "dots",
-      "muse",
-      "grok-bot",
-      "openai",
-      "grok"
-    ]
-  },
-  {
     "id": "taxonomy",
     "name": "taxonomy",
     "label": "#taxonomy",
@@ -4820,6 +5074,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "ux-psychology",
+    "name": "ux-psychology",
+    "label": "#ux-psychology",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "format": "NOTE",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "product-design",
+      "tamagotchi-effect",
+      "growth",
+      "viral-loops",
+      "interface-design"
+    ]
+  },
+  {
     "id": "vector-databases",
     "name": "vector-databases",
     "label": "#vector-databases",
@@ -4901,6 +5197,48 @@ window.DYNAMIC_TAGS = [
       "llms",
       "sensory-bandwidth",
       "symbol-grounding"
+    ]
+  },
+  {
+    "id": "viral-loops",
+    "name": "viral-loops",
+    "label": "#viral-loops",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "format": "NOTE",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "product-design",
+      "ux-psychology",
+      "tamagotchi-effect",
+      "growth",
+      "interface-design"
     ]
   },
   {
