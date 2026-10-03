@@ -1,6 +1,6 @@
 ---
 title: "Foucault, Borges, and the Episteme of High-Dimensional Embeddings"
-subtitle: "How continuous metric spaces replace discrete tables of representation—and why building a vector database is fundamentally an epistemological act."
+subtitle: "How continuous metric spaces replace discrete tables of representation, and why building a vector database is an epistemological act."
 excerpt: "In The Order of Things, Michel Foucault used Jorge Luis Borges' surreal taxonomy to ask: upon what invisible grid does a culture order reality? Today, high-dimensional vector embeddings have become that grid."
 
 date: 2026-09-26 12:00:00 -0300
@@ -147,17 +147,17 @@ When an AI retrieval system pulls context for a prompt, it answers Foucault's or
 
 Before taking this metaphor too far, we need a dose of engineering reality.
 
-Static vector embeddings—like those used in basic RAG pipelines or vector databases—are a clean thought experiment. They give us an intuitive way to picture how machines turn language into geometry. But modern Large Language Models have moved well past static spatial lookups.
+Static vector embeddings (such as those in standard RAG pipelines or vector databases) offer a clean thought experiment. They give us an intuitive way to picture how machines turn language into geometry. But modern Large Language Models have moved well past static spatial lookups.
 
 An LLM is not just a giant vector database.
 
 When a 70-billion-parameter transformer processes a prompt, tokens do not stay frozen at fixed coordinates:
 
 1. **Context-Dependent Activations**: The representation of a word changes radically across dozens of attention layers based on everything around it.
-2. **Dynamic Circuits**: Mechanism-level interpretability shows that transformers rely on complex internal circuits—induction heads, superposition across polysemantic neurons, and feature dictionaries—rather than a single flat Euclidean map.
+2. **Dynamic Circuits**: Mechanism-level interpretability shows that transformers rely on complex internal circuits (induction heads, superposition across polysemantic neurons, and feature dictionaries) rather than a single flat Euclidean map.
 3. **Multi-Step Reasoning**: Generation is a dynamic trajectory through activation space, not a static nearest-neighbor retrieval.
 
-Thinking of knowledge as a geometric vector space is an analogy—a helpful lens for seeing how we abandoned discrete symbolic tables in favor of continuous high-dimensional spaces. But real model behavior is far messier and more dynamic than any single frozen index.
+Thinking of knowledge as a geometric vector space is an analogy: a useful lens for seeing how we abandoned discrete symbolic tables in favor of continuous high-dimensional spaces. But real model behavior is far messier and more dynamic than any single frozen index.
 
 ---
 
