@@ -228,6 +228,36 @@ class SidebarRail extends HTMLElement {
       }
     };
 
+    // Intercept format filters on home page for instant in-memory filtering without full page reloads
+    const filterLinks = this.querySelectorAll('.nav-link-item');
+    filterLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const pathname = window.location.pathname.toLowerCase();
+        const isHome = pathname.endsWith('index.html') || pathname === '/' || pathname.endsWith('/');
+        if (isHome && typeof window.applyCategoryFilter === 'function') {
+          e.preventDefault();
+          const filter = link.getAttribute('data-filter') || 'all';
+          if (link.classList.contains('active')) {
+            window.applyCategoryFilter('all', true);
+          } else {
+            window.applyCategoryFilter(filter, true);
+          }
+        }
+      });
+    });
+
+    const logoBtn = this.querySelector('#brand-logo-btn');
+    if (logoBtn) {
+      logoBtn.addEventListener('click', (e) => {
+        const pathname = window.location.pathname.toLowerCase();
+        const isHome = pathname.endsWith('index.html') || pathname === '/' || pathname.endsWith('/');
+        if (isHome && typeof window.resetPage === 'function') {
+          e.preventDefault();
+          window.resetPage();
+        }
+      });
+    }
+
     const subBtn = this.querySelector('#sidebar-subscribe-btn');
     if (subBtn) subBtn.addEventListener('click', triggerSubscribe);
 

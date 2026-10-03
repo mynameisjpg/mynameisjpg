@@ -54,6 +54,7 @@ if (typeof window !== "undefined" && window.DYNAMIC_POSTS) {
 
 let activePostId = "";
 let activeFilter = "all";
+let activePillar = "all";
 let activeSort = "recent";
 let searchQuery = "";
 
@@ -61,13 +62,46 @@ let matrixVisibleCount = 8;
 const MATRIX_BATCH_SIZE = 8;
 let matrixObserver = null;
 
+/**
+ * Robust Pillar Matching Helper
+ * Maps slugs/keywords (e.g. 'visual-perception', 'ai-perception', 'language-llms', 'philosophy-image')
+ * to posts' metadata fields (pillar, subtopic, category, tags).
+ */
+function matchesPillar(post, query) {
+  if (!query || query === "all") return true;
+  const q = String(query).toLowerCase().replace(/[-_]/g, " ").trim();
+  const pillar = String(post.pillar || "").toLowerCase();
+  const subtopic = String(post.subtopic || "").toLowerCase();
+  const category = String(post.category || "").toLowerCase();
+  const tags = Array.isArray(post.tags) ? post.tags.map(t => String(t).toLowerCase()).join(" ") : "";
+
+  // 1. Direct substring match
+  if (pillar.includes(q)) return true;
+
+  // 2. Canonical Pillar Aliases
+  if ((q.includes("visual") && q.includes("perception")) || q === "pillar 1" || q === "1") {
+    return pillar.includes("visual perception") || pillar.includes("psychophysics");
+  }
+  if ((q.includes("ai") && (q.includes("perception") || q.includes("vision") || q.includes("machine"))) || q === "pillar 2" || q === "2") {
+    return pillar.includes("ai perception") || pillar.includes("machine vision") || pillar.includes("generative");
+  }
+  if (q.includes("language") || q.includes("llm") || q.includes("cognitive") || q === "pillar 3" || q === "3") {
+    return pillar.includes("language") || pillar.includes("llm") || pillar.includes("cognitive");
+  }
+  if (q.includes("philosophy") || q.includes("image") || q.includes("culture") || q === "pillar 4" || q === "4") {
+    return pillar.includes("philosophy") || pillar.includes("image") || pillar.includes("culture");
+  }
+
+  // 3. Match against subtopic, category, or tags
+  return subtopic.includes(q) || category.includes(q) || tags.includes(q);
+}
 
 /**
  * Filter & Sort Helper for Dispatches
  * Rules enforced:
  * 1. Only "published" status dispatches (excludes "draft" or "archived").
  * 2. Featured posts ("featured: true") take priority / sort to top.
- * 3. Applies format filter, search query, and selected sort order.
+ * 3. Applies format filter, pillar filter, search query, and selected sort order.
  */
 function getFilteredAndSortedPosts() {
   const uniquePosts = [];
@@ -83,10 +117,12 @@ function getFilteredAndSortedPosts() {
     }
   });
 
-  // Filter by Format & Search Query
+  // Filter by Format, Pillar & Search Query
   let filtered = uniquePosts.filter(post => {
     const format = (post.format || "ESSAY").toLowerCase();
     if (activeFilter !== "all" && format !== activeFilter) return false;
+
+    if (activePillar !== "all" && !matchesPillar(post, activePillar)) return false;
 
     if (searchQuery.trim() !== "") {
       const q = searchQuery.toLowerCase().trim();
@@ -96,7 +132,8 @@ function getFilteredAndSortedPosts() {
       const matchPillar = (post.pillar || "").toLowerCase().includes(q);
       const matchSubtopic = (post.subtopic || "").toLowerCase().includes(q);
       const matchCategory = (post.category || "").toLowerCase().includes(q);
-      if (!matchTitle && !matchSubtitle && !matchExcerpt && !matchPillar && !matchSubtopic && !matchCategory) {
+      const matchTags = Array.isArray(post.tags) && post.tags.some(t => String(t).toLowerCase().includes(q));
+      if (!matchTitle && !matchSubtitle && !matchExcerpt && !matchPillar && !matchSubtopic && !matchCategory && !matchTags) {
         return false;
       }
     }
@@ -160,7 +197,8 @@ async function loadDynamicPosts() {
     console.log("[UNTITLED.JPG] Running with direct script posts feed.");
   }
 
-  const sortedPosts = getFilteredAndSortedPosts();
+  // Parse URL search parameters (?filter=essay, ?pillar=visual-perception, etc.)
+  parseUrlParamsAndApply();
 
   // Check URL Hash or INITIAL_POST_SLUG for deep-link
   const hash = (typeof window !== "undefined" && window.location && window.location.hash) ? window.location.hash.replace("#", "") : "";
@@ -853,16 +891,19 @@ function initApp() {
   }
 
   // Sidebar Format Filter Handler
-  const navLinks = document.querySelectorAll("#category-filter-nav .nav-link-item");
+  const navLinks = document.querySelectorAll("#category-filter-nav .nav-link-item, .sidebar-rail .nav-link-item");
   navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      const filter = link.getAttribute("data-filter") || "all";
-
-      // Toggle active filter off if clicked again
-      if (link.classList.contains("active")) {
-        applyCategoryFilter("all");
-      } else {
-        applyCategoryFilter(filter);
+    link.addEventListener("click", (e) => {
+      const pathname = window.location.pathname.toLowerCase();
+      const isHome = pathname.endsWith("index.html") || pathname === "/" || pathname.endsWith("/");
+      if (isHome) {
+        e.preventDefault();
+        const filter = link.getAttribute("data-filter") || "all";
+        if (activeFilter === filter && filter !== "all") {
+          applyCategoryFilter("all", true);
+        } else {
+          applyCategoryFilter(filter, true);
+        }
       }
     });
   });
@@ -887,7 +928,7 @@ function initApp() {
       opt.addEventListener("click", (e) => {
         e.stopPropagation();
         const selectedFilter = opt.getAttribute("data-filter") || "all";
-        applyCategoryFilter(selectedFilter);
+        applyCategoryFilter(selectedFilter, true);
         closeAllControlDropdowns();
       });
     });
@@ -914,7 +955,7 @@ function initApp() {
         e.stopPropagation();
         const selectedSort = opt.getAttribute("data-sort") || "recent";
         const labelText = opt.textContent.replace(/^\[|\]$/g, '');
-        updateSortSelection(selectedSort, labelText);
+        updateSortSelection(selectedSort, labelText, true);
         closeAllControlDropdowns();
       });
     });
@@ -930,7 +971,8 @@ function initApp() {
       if (clearSearchBtn) {
         clearSearchBtn.style.display = searchQuery.trim() !== "" ? "inline-block" : "none";
       }
-      renderCardMatrix();
+      updateBrowserUrl(true);
+      renderCardMatrix(true);
     });
   }
 
@@ -939,7 +981,8 @@ function initApp() {
       if (searchInput) searchInput.value = "";
       searchQuery = "";
       clearSearchBtn.style.display = "none";
-      renderCardMatrix();
+      updateBrowserUrl(true);
+      renderCardMatrix(true);
     });
   }
 
@@ -996,19 +1039,43 @@ function initApp() {
   }
 
   document.querySelectorAll("#dispatch-log-dropdown .dropdown-option, #top-filter-dropdown .dropdown-option").forEach(opt => {
-    opt.addEventListener("click", () => {
-      const filter = opt.getAttribute("data-filter") || "all";
-      applyTopFilter(filter);
+    opt.addEventListener("click", (e) => {
+      const pathname = window.location.pathname.toLowerCase();
+      const isHome = pathname.endsWith("index.html") || pathname === "/" || pathname.endsWith("/");
+      if (isHome) {
+        e.preventDefault();
+        const filter = opt.getAttribute("data-filter") || "all";
+        applyCategoryFilter(filter, true);
+        closeAllTopDropdowns();
+      }
     });
   });
 
   document.querySelectorAll("#top-sort-dropdown .dropdown-option").forEach(opt => {
-    opt.addEventListener("click", () => {
-      const sort = opt.getAttribute("data-sort") || "newest";
-      applyTopSort(sort);
+    opt.addEventListener("click", (e) => {
+      const pathname = window.location.pathname.toLowerCase();
+      const isHome = pathname.endsWith("index.html") || pathname === "/" || pathname.endsWith("/");
+      if (isHome) {
+        e.preventDefault();
+        const sort = opt.getAttribute("data-sort") || "newest";
+        applyTopSort(sort);
+      }
     });
   });
 
+  // Browser back/forward navigation support
+  window.addEventListener("popstate", () => {
+    parseUrlParamsAndApply();
+    const hash = (window.location.hash || "").replace("#", "");
+    if (hash && POSTS_DATABASE[hash]) {
+      activePostId = hash;
+      selectAndRenderPost(activePostId, false);
+    } else if (!hash && activePostId) {
+      activePostId = "";
+      closeReaderPane();
+    }
+    renderCardMatrix(true);
+  });
 
   document.querySelectorAll(".btn-return-grid").forEach(btn => {
     btn.addEventListener("click", showGridFeedMobile);
@@ -1067,7 +1134,6 @@ if (document.readyState === "loading") {
   initApp();
 }
 
-
 function closeAllControlDropdowns() {
   document.querySelectorAll(".custom-select-dropdown").forEach(d => d.classList.remove("open"));
   document.querySelectorAll(".btn-matrix-pill").forEach(b => {
@@ -1076,43 +1142,131 @@ function closeAllControlDropdowns() {
   });
 }
 
-function updateSortSelection(sortKey, sortLabel) {
-  activeSort = sortKey;
-  const sortValLabel = document.getElementById("current-sort-val");
-  const sortDropdown = document.getElementById("sort-dropdown");
+/**
+ * URL Parameter Parser & Syncer
+ */
+function parseUrlParamsAndApply() {
+  if (typeof window === "undefined" || !window.location) return;
 
-  if (sortValLabel) {
-    sortValLabel.textContent = sortLabel;
+  const params = new URLSearchParams(window.location.search);
+
+  // 1. Format filter (?filter=essay or ?format=note)
+  const filterParam = params.get("filter") || params.get("format");
+  if (filterParam) {
+    const cleanF = filterParam.toLowerCase().trim().replace(/s$/, "");
+    const valid = ["all", "essay", "note", "bookmark", "resource"];
+    if (valid.includes(cleanF) || valid.includes(filterParam.toLowerCase())) {
+      activeFilter = valid.includes(cleanF) ? cleanF : filterParam.toLowerCase();
+    }
   }
-  if (sortDropdown) {
-    sortDropdown.querySelectorAll(".dropdown-opt").forEach(o => {
-      if (o.getAttribute("data-sort") === sortKey) {
-        o.classList.add("active");
-      } else {
-        o.classList.remove("active");
-      }
-    });
+
+  // 2. Pillar filter (?pillar=visual-perception or ?topic=...)
+  const pillarParam = params.get("pillar") || params.get("topic") || params.get("subtopic");
+  if (pillarParam) {
+    activePillar = pillarParam.toLowerCase().trim();
   }
-  renderCardMatrix();
+
+  // 3. Search query (?search=... or ?q=...)
+  const qParam = params.get("search") || params.get("q");
+  if (qParam) {
+    searchQuery = qParam.trim();
+    const searchInput = document.getElementById("matrix-search-input");
+    const clearBtn = document.getElementById("clear-search-btn");
+    const inlineInput = document.getElementById("top-inline-search-input");
+    const modalInput = document.getElementById("top-search-input");
+    if (searchInput) searchInput.value = searchQuery;
+    if (clearBtn) clearBtn.style.display = searchQuery ? "inline-block" : "none";
+    if (inlineInput) inlineInput.value = searchQuery;
+    if (modalInput) modalInput.value = searchQuery;
+  }
+
+  // 4. Sort order (?sort=newest or ?sort=oldest)
+  const sortParam = params.get("sort");
+  if (sortParam) {
+    activeSort = sortParam === "newest" ? "recent" : sortParam.toLowerCase();
+  }
+
+  syncFilterUIState();
 }
 
 /**
- * Filter Cards by Format
+ * Sync Browser URL with In-Memory State
  */
-function applyCategoryFilter(filter) {
-  activeFilter = filter;
-  const navLinks = document.querySelectorAll("#category-filter-nav .nav-link-item");
+function updateBrowserUrl(replace = false) {
+  if (typeof window === "undefined" || !window.history || !window.history.pushState) return;
+  const url = new URL(window.location.href);
+
+  if (activeFilter && activeFilter !== "all") {
+    url.searchParams.set("filter", activeFilter);
+  } else {
+    url.searchParams.delete("filter");
+    url.searchParams.delete("format");
+  }
+
+  if (activePillar && activePillar !== "all") {
+    url.searchParams.set("pillar", activePillar);
+  } else {
+    url.searchParams.delete("pillar");
+    url.searchParams.delete("topic");
+    url.searchParams.delete("subtopic");
+  }
+
+  if (searchQuery && searchQuery.trim()) {
+    url.searchParams.set("search", searchQuery.trim());
+  } else {
+    url.searchParams.delete("search");
+    url.searchParams.delete("q");
+  }
+
+  if (activeSort && activeSort !== "recent") {
+    url.searchParams.set("sort", activeSort);
+  } else {
+    url.searchParams.delete("sort");
+  }
+
+  const newUrl = url.pathname + (url.search ? url.search : "") + (window.location.hash || "");
+  if (replace) {
+    window.history.replaceState(null, "", newUrl);
+  } else {
+    window.history.pushState(null, "", newUrl);
+  }
+}
+
+/**
+ * Synchronize Active UI Filter & Sort Indicators
+ */
+function syncFilterUIState() {
+  const navLinks = document.querySelectorAll("#category-filter-nav .nav-link-item, .sidebar-rail .nav-link-item");
   const filterLabel = document.getElementById("active-filter-label");
   const filterValLabel = document.getElementById("current-filter-val");
-  const filterDropdown = document.getElementById("filter-dropdown");
+  const sortValLabel = document.getElementById("current-sort-val");
+  const dispatchLogBtn = document.getElementById("dispatch-log-btn");
 
   navLinks.forEach(l => {
-    const lFilter = l.getAttribute("data-filter");
-    if (filter !== "all" && lFilter === filter) {
+    const lFilter = (l.getAttribute("data-filter") || "").toLowerCase();
+    if (activeFilter !== "all" && lFilter === activeFilter.toLowerCase()) {
       l.classList.add("active");
     } else {
       l.classList.remove("active");
     }
+  });
+
+  const rail = document.querySelector("sidebar-rail");
+  if (rail) {
+    rail.setAttribute("active-filter", activeFilter !== "all" ? activeFilter : "");
+  }
+
+  // Highlight dropdown options
+  document.querySelectorAll("#top-filter-dropdown .dropdown-option, #dispatch-log-dropdown .dropdown-option, #filter-dropdown .dropdown-opt").forEach(opt => {
+    const f = (opt.getAttribute("data-filter") || "all").toLowerCase();
+    opt.classList.toggle("active", f === activeFilter.toLowerCase());
+  });
+
+  // Highlight sort dropdown options
+  document.querySelectorAll("#top-sort-dropdown .dropdown-option, #sort-dropdown .dropdown-opt").forEach(opt => {
+    const s = opt.getAttribute("data-sort") || "recent";
+    const isActiveSort = s === activeSort || (s === "newest" && activeSort === "recent");
+    opt.classList.toggle("active", isActiveSort);
   });
 
   if (filterValLabel) {
@@ -1123,24 +1277,63 @@ function applyCategoryFilter(filter) {
       bookmark: "BOOKMARKS",
       resource: "RESOURCES"
     };
-    filterValLabel.textContent = labels[filter] || filter.toUpperCase();
+    if (activePillar !== "all") {
+      filterValLabel.textContent = `PILLAR: ${activePillar.toUpperCase().replace(/[-_]/g, ' ')}`;
+    } else {
+      filterValLabel.textContent = labels[activeFilter] || (activeFilter !== "all" ? activeFilter.toUpperCase() : "ALL POSTS");
+    }
   }
 
-  if (filterDropdown) {
-    filterDropdown.querySelectorAll(".dropdown-opt").forEach(opt => {
-      if (opt.getAttribute("data-filter") === filter) {
-        opt.classList.add("active");
-      } else {
-        opt.classList.remove("active");
-      }
-    });
+  if (sortValLabel) {
+    const sortLabels = {
+      recent: "MOST RECENT",
+      oldest: "OLDEST FIRST",
+      title: "ALPHABETICAL",
+      readtime: "READING TIME"
+    };
+    sortValLabel.textContent = sortLabels[activeSort] || "MOST RECENT";
+  }
+
+  if (dispatchLogBtn) {
+    const label = activeFilter === "all" ? "_DISPATCH_LOG" : `_${activeFilter.toUpperCase()}S`;
+    dispatchLogBtn.innerHTML = `${label} &#9660;`;
   }
 
   if (filterLabel) {
-    filterLabel.textContent = `[MODE: ${filter.toUpperCase()}_DISPATCHES]`;
+    if (activePillar !== "all") {
+      filterLabel.textContent = `[PILLAR: ${activePillar.toUpperCase().replace(/[-_]/g, ' ')}]`;
+    } else {
+      filterLabel.textContent = `[MODE: ${activeFilter.toUpperCase()}_DISPATCHES]`;
+    }
   }
+}
 
-  renderCardMatrix();
+/**
+ * Filter Cards by Format
+ */
+function applyCategoryFilter(filter, updateHistory = true) {
+  activeFilter = filter || "all";
+  activePillar = "all"; // Reset pillar when format is explicitly picked
+  syncFilterUIState();
+  if (updateHistory) updateBrowserUrl(false);
+  renderCardMatrix(true);
+}
+
+/**
+ * Filter Cards by Inquiry Pillar
+ */
+function applyPillarFilter(pillar, updateHistory = true) {
+  activePillar = pillar || "all";
+  syncFilterUIState();
+  if (updateHistory) updateBrowserUrl(false);
+  renderCardMatrix(true);
+}
+
+function updateSortSelection(sortKey, sortLabel, updateHistory = true) {
+  activeSort = sortKey === "newest" ? "recent" : sortKey;
+  syncFilterUIState();
+  if (updateHistory) updateBrowserUrl(false);
+  renderCardMatrix(true);
 }
 
 function positionDropdown(panel, btn) {
@@ -1159,7 +1352,6 @@ function positionDropdown(panel, btn) {
     panel.style.left = `${Math.max(8, rect.left)}px`;
     panel.style.right = "auto";
   } else {
-    // Position directly beneath the button, aligned to its right edge, bounded by viewport
     const rightOffset = Math.max(8, window.innerWidth - rect.right);
     panel.style.left = "auto";
     panel.style.right = `${rightOffset}px`;
@@ -1238,49 +1430,40 @@ function handleTopInlineSearch(val) {
   // Sync inputs
   const inlineInput = document.getElementById("top-inline-search-input");
   const modalInput = document.getElementById("top-search-input");
+  const searchInput = document.getElementById("matrix-search-input");
+  const clearBtn = document.getElementById("clear-search-btn");
+
   if (inlineInput && inlineInput.value !== val) inlineInput.value = val;
   if (modalInput && modalInput.value !== val) modalInput.value = val;
+  if (searchInput && searchInput.value !== val) searchInput.value = val;
+  if (clearBtn) clearBtn.style.display = searchQuery ? "inline-block" : "none";
 
+  updateBrowserUrl(true);
   matrixVisibleCount = MATRIX_BATCH_SIZE;
-  renderCardMatrix();
+  renderCardMatrix(true);
 }
 
 function applyTopFilter(formatKey) {
-  activeFilter = formatKey;
-
-  // Highlight dropdown options
-  document.querySelectorAll("#top-filter-dropdown .dropdown-option, #dispatch-log-dropdown .dropdown-option").forEach(opt => {
-    const filter = opt.getAttribute("data-filter") || "all";
-    opt.classList.toggle("active", filter === formatKey);
-  });
-
-  // Sync category nav links
-  document.querySelectorAll("#category-filter-nav .nav-link-item").forEach(link => {
-    const f = link.getAttribute("data-filter");
-    link.classList.toggle("active", f === formatKey);
-  });
-
-  // Update dispatch log dropdown button label
-  const btn = document.getElementById("dispatch-log-btn");
-  if (btn) {
-    const label = formatKey === "all" ? "_DISPATCH_LOG" : `_${formatKey.toUpperCase()}S`;
-    btn.innerHTML = `${label} &#9660;`;
-  }
-
-  matrixVisibleCount = MATRIX_BATCH_SIZE;
-  renderCardMatrix();
+  applyCategoryFilter(formatKey, true);
   closeAllTopDropdowns();
 }
 
 function applyTopSort(sortOrder) {
-  activeSort = sortOrder === "newest" ? "recent" : sortOrder;
-  document.querySelectorAll("#top-sort-dropdown .dropdown-option").forEach(opt => {
-    const sort = opt.getAttribute("data-sort") || "newest";
-    opt.classList.toggle("active", sort === sortOrder);
-  });
-  matrixVisibleCount = MATRIX_BATCH_SIZE;
-  renderCardMatrix();
+  updateSortSelection(sortOrder, sortOrder.toUpperCase(), true);
   closeAllTopDropdowns();
+}
+
+// Global Exposure for Web Components and Inline Triggers
+if (typeof window !== "undefined") {
+  window.applyCategoryFilter = applyCategoryFilter;
+  window.applyPillarFilter = applyPillarFilter;
+  window.resetMatrixFilters = resetMatrixFilters;
+  window.resetPage = resetPage;
+  window.toggleDispatchLogDropdown = toggleDispatchLogDropdown;
+  window.toggleTopSearchDropdown = toggleTopSearchDropdown;
+  window.toggleTopFilterDropdown = toggleTopFilterDropdown;
+  window.toggleTopSortDropdown = toggleTopSortDropdown;
+  window.closeAllTopDropdowns = closeAllTopDropdowns;
 }
 
 // Close top dropdowns on click outside
