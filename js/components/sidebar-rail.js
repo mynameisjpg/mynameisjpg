@@ -115,9 +115,9 @@ class SidebarRail extends HTMLElement {
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
               <span class="rail-tooltip">&gt;&gt; SUB-SCRIBE</span>
             </a>
-            <a href="https://linkedin.com/in/jpgiuse" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-              <span class="rail-tooltip">/ LINK IN</span>
+            <a href="about.html" id="sidebar-about-btn" title="About the Author & Publication" aria-label="About">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span class="rail-tooltip">? ABOUT_AUTHOR</span>
             </a>
           </div>
 
@@ -153,14 +153,14 @@ class SidebarRail extends HTMLElement {
           <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
           # GALLERY_VAULT
         </a>
+        <a href="about.html" class="dropdown-option hamburger-nav-opt" id="hamburger-about-opt">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          ? ABOUT_AUTHOR
+        </a>
         <button type="button" class="dropdown-option hamburger-nav-opt" id="hamburger-subscribe-opt">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
           &gt;&gt; SUBSCRIBE
         </button>
-        <a href="https://linkedin.com/in/jpgiuse" target="_blank" rel="noopener noreferrer" class="dropdown-option hamburger-nav-opt" id="hamburger-linkedin-opt">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-          / LINKEDIN
-        </a>
       </div>
     `;
 
@@ -177,15 +177,20 @@ class SidebarRail extends HTMLElement {
     const archiveBtn = this.querySelector('#sidebar-archive-btn');
     const networkBtn = this.querySelector('#sidebar-network-btn');
     const galleryBtn = this.querySelector('#sidebar-gallery-btn');
+    const aboutBtn = this.querySelector('#sidebar-about-btn');
 
     const hHomeBtn = this.querySelector('#hamburger-home-opt');
     const hArchiveBtn = this.querySelector('#hamburger-archive-opt');
     const hNetworkBtn = this.querySelector('#hamburger-network-opt');
     const hGalleryBtn = this.querySelector('#hamburger-gallery-opt');
+    const hAboutBtn = this.querySelector('#hamburger-about-opt');
 
-    [homeBtn, archiveBtn, networkBtn, galleryBtn, hHomeBtn, hArchiveBtn, hNetworkBtn, hGalleryBtn].forEach(btn => btn?.classList.remove('active'));
+    [homeBtn, archiveBtn, networkBtn, galleryBtn, aboutBtn, hHomeBtn, hArchiveBtn, hNetworkBtn, hGalleryBtn, hAboutBtn].forEach(btn => btn?.classList.remove('active'));
 
-    if (activeAttr === 'network' || pathname.includes('network.html')) {
+    if (activeAttr === 'about' || pathname.includes('about.html')) {
+      if (aboutBtn) aboutBtn.classList.add('active');
+      if (hAboutBtn) hAboutBtn.classList.add('active');
+    } else if (activeAttr === 'network' || pathname.includes('network.html')) {
       if (networkBtn) networkBtn.classList.add('active');
       if (hNetworkBtn) hNetworkBtn.classList.add('active');
     } else if (activeAttr === 'archive' || pathname.includes('archive.html')) {
