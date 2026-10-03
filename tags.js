@@ -372,7 +372,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -382,7 +382,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
@@ -402,14 +402,14 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
         "date": "2026.10.03"
       },
       {
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
         "format": "ESSAY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
@@ -451,7 +451,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -461,7 +461,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
@@ -481,14 +481,14 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
         "date": "2026.10.03"
       },
       {
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
         "format": "ESSAY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
@@ -530,7 +530,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -540,7 +540,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
@@ -560,14 +560,14 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
         "date": "2026.10.03"
       },
       {
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
         "format": "ESSAY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
@@ -787,7 +787,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -797,7 +797,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
@@ -807,14 +807,14 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
         "date": "2026.10.03"
       },
       {
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
         "format": "ESSAY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
@@ -946,7 +946,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -966,7 +966,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -1128,7 +1128,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -1148,7 +1148,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -1310,7 +1310,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -1320,7 +1320,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
@@ -1330,14 +1330,14 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
         "date": "2026.10.03"
       },
       {
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
         "format": "ESSAY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
@@ -1370,7 +1370,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -1380,7 +1380,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
@@ -1390,14 +1390,14 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
         "date": "2026.10.03"
       },
       {
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
         "format": "ESSAY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
@@ -1430,7 +1430,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -1440,7 +1440,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
@@ -1450,14 +1450,14 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
         "date": "2026.10.03"
       },
       {
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
         "format": "ESSAY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
@@ -1549,7 +1549,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
@@ -1569,7 +1569,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
         "format": "ESSAY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
@@ -1962,7 +1962,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -1972,7 +1972,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -1993,7 +1993,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
@@ -2003,7 +2003,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
         "format": "ESSAY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
@@ -2415,7 +2415,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -2425,7 +2425,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -2583,7 +2583,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
@@ -2593,7 +2593,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
         "format": "ESSAY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
@@ -2793,7 +2793,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -2803,7 +2803,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -3799,7 +3799,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -3809,7 +3809,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -3841,7 +3841,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
@@ -3851,7 +3851,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
         "format": "ESSAY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
@@ -3883,7 +3883,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
@@ -3893,7 +3893,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
         "format": "ESSAY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
@@ -4762,7 +4762,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
@@ -4772,7 +4772,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
         "format": "ESSAY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
@@ -5181,7 +5181,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
@@ -5191,7 +5191,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
         "format": "ESSAY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
@@ -5223,7 +5223,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -5233,7 +5233,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -5433,7 +5433,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -5443,7 +5443,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -5934,7 +5934,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
@@ -5944,7 +5944,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
         "slug": "preciado-pharmacopornographic-episteme-foucault",
         "format": "ESSAY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
@@ -6059,7 +6059,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -6069,7 +6069,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
