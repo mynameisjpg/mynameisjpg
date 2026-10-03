@@ -123,19 +123,21 @@ LLMs attempt the inverse: mastering surface-level grammar without ever grounding
 
 ---
 
-## 03. The Mathematics of Autoregressive Error Compounding
+## 03. Why Errors Snowball in Long Reasoning Chains
 
-An autoregressive language model decomposes probability across a sequence of tokens using the chain rule:
+Language models generate text one word at a time. Every new guess is fed right back into the model as absolute fact. In multi-step reasoning, this creates a compounding tightrope effect:
 
-$$P(w_1, w_2, \dots, w_T) = \prod_{t=1}^{T} P(w_t \mid w_1, \dots, w_{t-1})$$
+```mermaid
+flowchart TD
+    S1["<b>Step 1: Solid Start</b><br/>Model generates a reasonable premise"]
+    S2["<b>Step 2: Tiny Slip</b><br/>A subtle flaw is fed back as ground truth"]
+    S3["<b>Step 3: Compounding Drift</b><br/>The next logic step builds on top of the mistake"]
+    S4["<b>Result: Derailment</b><br/>The reasoning chain collapses completely"]
 
-At each generation step $t$, the predicted token $\hat{w}_t$ is appended back into the input context as absolute ground truth.
+    S1 --> S2 --> S3 --> S4
+```
 
-If the probability of producing an error at step $t$ is $\epsilon$, the probability of a completely correct $N$-step logical chain decays exponentially:
-
-$$P(\text{Valid Plan}) = (1 - \epsilon)^N$$
-
-Because LLMs have no internal world simulator to evaluate whether intermediate steps are physically plausible, errors accumulate monotonically. This is why LLMs can generate fluid poetry yet fail at simple spatial navigation or multi-step chess puzzles without search trees.
+Because the model has no mental world simulator to fact-check intermediate steps against physical reality, it never notices when it has drifted off course. It simply doubles down until the entire answer falls apart.
 
 ---
 
