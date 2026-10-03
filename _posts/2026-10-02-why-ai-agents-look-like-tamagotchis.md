@@ -96,7 +96,7 @@ The human brain is hardwired to nurture small, round, clumsy things. Big eyes, s
 
 Watch what happens when you turn software into a pet:
 
-1. **Bugs become personality.** When an enterprise tool hallucinates, you cancel the subscription. When a blushing mascot makes a goofy mistake, you screenshot it and tweet: *"Look at him trying his best."*
+1. **Bugs become personality.** When an enterprise tool hallucinates, you cancel the subscription. When a blushing mascot makes a goofy mistake, you screenshot it and tweet: _"Look at him trying his best."_
 2. **Permission barriers melt away.** You would never let a corporate surveillance tool record your screen all day. But you will let a virtual pet sit in the corner of your desktop for twelve hours straight.
 3. **Churn becomes impossible.** You cancel SaaS tools when you stop using a feature. You do not cancel a pet you have been feeding for six months.
 
@@ -104,21 +104,24 @@ Watch what happens when you turn software into a pet:
 
 ## 03. What Founders and Designers Need to Learn
 
-If you are building products in the age of autonomous agents, take notes:
+`<irony>` If you are building products in the age of autonomous agents, take notes:
 
 ### 1. Utility is a commodity. Affection is a moat.
+
 Every frontier lab has fast inference and large context windows. Raw intelligence is cheap. The product that wins is the one the user actually looks forward to seeing every morning.
 
 ### 2. Perfection is fragile. Personality absorbs mistakes.
+
 Zero-error software does not exist in generative AI. If your interface looks serious and sterile, every error feels catastrophic. If your interface has warmth and vulnerability, your users will debug it with you.
 
 ### 3. Lower the visual stakes to unlock higher permissions.
-High-capability agents create user anxiety. If you want people to hand over their inbox, calendar, and microphone, stop designing like a bank and start designing like a companion.
+
+High-capability agents create user anxiety. If you want people to hand over their inbox, calendar, and microphone, stop designing like a bank and start designing like a companion.`</irony>`
 
 ---
 
 ## 04. The Question
 
-Are you building an enterprise calculator that users tolerate during work hours? Or are you building a companion they refuse to close?
+> Are you building an enterprise calculator that users tolerate during work hours? Or are you building a companion they refuse to close?
 
-And as builders: where is the line between making powerful tools approachable, and using cuteness to disarm critical judgment?
+**And as builders: where is the line between making powerful tools approachable, and using cuteness to disarm critical judgment?**
