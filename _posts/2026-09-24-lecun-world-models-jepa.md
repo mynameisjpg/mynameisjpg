@@ -143,45 +143,49 @@ Because the model has no mental world simulator to fact-check intermediate steps
 
 ## 04. Joint Embedding Predictive Architecture (JEPA)
 
-To overcome the scaling limits of autoregression, Yann LeCun proposed **JEPA (Joint Embedding Predictive Architecture)**.
+To move past the limits of word-by-word prediction, Yann LeCun proposed **JEPA (Joint Embedding Predictive Architecture)**.
 
-Unlike generative models (which try to reconstruct every irrelevant background pixel or word), JEPA predicts in **abstract representation space**.
+Traditional generative AI wastes massive amounts of compute trying to recreate every tiny detail: every blade of grass blowing in the wind, every background shadow, or every single pixel. Humans don't think like this. If you watch a car turn a corner, you don't predict how the texture of the asphalt changes under its tires. You simply predict that the car is now on the next street.
+
+JEPA does exactly that: it predicts only the **meaning** of what comes next in an abstract concept space, ignoring irrelevant noise.
 
 ```mermaid
 flowchart TD
-    subgraph Observed ["Observed World"]
-        X["Observed State x"] --> EX["Encoder E_x"]
-        EX --> SX["Latent State s_x"]
+    subgraph Current ["1. Current Scene"]
+        X["Raw Input x<br/><i>(Current video frame)</i>"] --> EX["Encoder E_x"]
+        EX --> SX["Scene Concept s_x"]
     end
 
-    subgraph Target ["Target World"]
-        Y["Target State y"] --> EY["Encoder E_y"]
-        EY --> SY["Target Latent ŝ_y"]
+    subgraph Future ["2. Actual Next Scene"]
+        Y["Raw Input y<br/><i>(What actually happened)</i>"] --> EY["Encoder E_y"]
+        EY --> SY["Target Concept ŝ_y"]
     end
 
     SX --> P["Predictor P"]
     A["Action / Context a"] --> P
-    P --> PSY["Predicted Latent s_y"]
+    P --> PSY["Predicted Concept s_y"]
 
-    PSY --- LOSS{{"Loss: D(s_y, ŝ_y)"}}
+    PSY --- LOSS{{"Concept Loss: D(s_y, ŝ_y)"}}
     SY --- LOSS
 ```
 
-Instead of asking: _"What is the exact value of pixel $(x, y)$ in frame $t+1$?"_, JEPA asks:
+Instead of asking: _"What is the exact color of pixel $(x, y)$ in the next second?"_, JEPA asks:
 
-> _"What is the high-level semantic vector $\mathbf{s_y}$ describing the state of the world after action $\mathbf{a}$?"_
+> _"What will the scene actually mean once action $\mathbf{a}$ takes place?"_
 
 ### Preventing Representation Collapse via VICReg
 
-The major mathematical challenge in non-generative self-supervised learning is preventing **representation collapse** (where the encoder maps all inputs to a constant zero vector).
+When a model only compares concepts instead of generating full images, it can easily find a lazy shortcut: assign every input the exact same number (like zero). Mathematically, all predictions match perfectly, but the model learns nothing useful. This failure mode is known as **representation collapse**.
 
-LeCun and his team resolve this via **VICReg (Variance-Invariance-Covariance Regularization)**:
+To prevent this shortcut while keeping the system non-generative, LeCun's team uses **VICReg (Variance-Invariance-Covariance Regularization)**:
 
 $$\mathcal{L}_{\text{VICReg}} = \lambda s(\mathbf{Z}) + \mu v(\mathbf{Z}) + \nu c(\mathbf{Z})$$
 
-1. **Invariance ($s$):** Enforces that representations of identical scenes under different augmentations remain close.
-2. **Variance ($v$):** Forces the variance along each embedding dimension across the batch to remain above a threshold $\gamma$, preventing collapse.
-3. **Covariance ($c$):** Decorrelates dimensions, maximizing the information capacity of the latent space $\mathbb{R}^D$.
+VICReg sets up three mathematical guardrails:
+
+1. **Invariance ($s$):** If the same object appears from slightly different viewpoints or lighting conditions, its core representation must stay close together in latent space.
+2. **Variance ($v$):** Prevents the model from collapsing into a flat line by forcing the variance along each embedding dimension to stay above a threshold $\gamma$.
+3. **Covariance ($c$):** Keeps dimensions independent from one another, preventing the network from repeating the same features across multiple channels and maximizing information capacity across $\mathbb{R}^D$.
 
 ---
 
