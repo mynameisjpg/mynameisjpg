@@ -25,3 +25,5 @@ __pycache__/
 # Email templates (private / local drafting)
 email/
 
+.vercel
+.env*
