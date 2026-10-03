@@ -237,18 +237,8 @@ window.DYNAMIC_TAGS = [
     "name": "AI PERCEPTION, CULTURE & REPRESENTATION",
     "label": "AI PERCEPTION, CULTURE & REPRESENTATION",
     "type": "pillar",
-    "count": 4,
+    "count": 3,
     "posts": [
-      {
-        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
-      },
       {
         "id": "2026-09-30-relate-anything-github-repo",
         "slug": "relate-anything-github-repo",
@@ -281,13 +271,6 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "links": [
-      {
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "format": "ESSAY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
-        "date": "2026.10.03"
-      },
       {
         "title": "Relate Anything [github repo]",
         "slug": "relate-anything-github-repo",
@@ -678,7 +661,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       },
@@ -710,7 +693,8 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
       "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
@@ -798,7 +782,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       },
@@ -830,7 +814,8 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
       "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
@@ -1028,6 +1013,67 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "philosophy",
+    "name": "philosophy",
+    "label": "#philosophy",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      },
+      {
+        "id": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "date": "2026.09.28",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "DECONSTRUCTION & CULTURE",
+        "url": "posts/shanzhai-deconstructing-original.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      },
+      {
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "slug": "shanzhai-deconstructing-original",
+        "format": "NOTE",
+        "url": "posts/shanzhai-deconstructing-original.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY AND CRITICAL THEORY",
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+      "DECONSTRUCTION & CULTURE"
+    ],
+    "connected_tags": [
+      "paul-b-preciado",
+      "michel-foucault",
+      "governance",
+      "capitalism",
+      "biopolitics",
+      "pharmacopornography"
+    ]
+  },
+  {
     "id": "psychophysics",
     "name": "psychophysics",
     "label": "#psychophysics",
@@ -1099,7 +1145,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       },
@@ -1131,7 +1177,8 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
       "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
@@ -1280,7 +1327,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
@@ -1295,7 +1342,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [],
     "connected_tags": []
@@ -1528,6 +1575,37 @@ window.DYNAMIC_TAGS = [
     "pillars": [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
+    "id": "pillar-philosophy-and-critical-theory",
+    "name": "PHILOSOPHY AND CRITICAL THEORY",
+    "label": "PHILOSOPHY AND CRITICAL THEORY",
+    "type": "pillar",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      }
+    ],
+    "pillars": [],
     "subtopics": [],
     "connected_tags": []
   },
@@ -2102,7 +2180,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
@@ -2117,7 +2195,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
       "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
@@ -3317,7 +3395,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
@@ -3332,7 +3410,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
       "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
@@ -3359,7 +3437,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
@@ -3374,7 +3452,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
       "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
@@ -4238,7 +4316,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
@@ -4253,7 +4331,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
       "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
@@ -4532,7 +4610,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
@@ -4547,7 +4625,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
       "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
@@ -4574,7 +4652,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
@@ -4589,7 +4667,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
       "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
@@ -4601,47 +4679,6 @@ window.DYNAMIC_TAGS = [
       "capitalism",
       "biopolitics",
       "governmentality"
-    ]
-  },
-  {
-    "id": "philosophy",
-    "name": "philosophy",
-    "label": "#philosophy",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "shanzhai-deconstructing-original",
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "DECONSTRUCTION & CULTURE",
-        "url": "posts/shanzhai-deconstructing-original.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "shanzhai-deconstructing-original",
-        "format": "NOTE",
-        "url": "posts/shanzhai-deconstructing-original.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "DECONSTRUCTION & CULTURE"
-    ],
-    "connected_tags": [
-      "byung-chul-han",
-      "shanzhai",
-      "deconstruction",
-      "authorship",
-      "reflections"
     ]
   },
   {
@@ -4770,9 +4807,9 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "post-fordism",
-    "name": "post-fordism",
-    "label": "#post-fordism",
+    "id": "politics",
+    "name": "politics",
+    "label": "#politics",
     "type": "tag",
     "count": 1,
     "posts": [
@@ -4782,7 +4819,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
@@ -4797,7 +4834,49 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY AND CRITICAL THEORY"
+    ],
+    "subtopics": [
+      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+    ],
+    "connected_tags": [
+      "paul-b-preciado",
+      "michel-foucault",
+      "governance",
+      "capitalism",
+      "biopolitics",
+      "pharmacopornography"
+    ]
+  },
+  {
+    "id": "post-fordism",
+    "name": "post-fordism",
+    "label": "#post-fordism",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
+        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
       "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
@@ -5451,7 +5530,7 @@ window.DYNAMIC_TAGS = [
         "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
         "date": "2026.10.03",
         "format": "ESSAY",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
         "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
@@ -5466,7 +5545,7 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
       "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"

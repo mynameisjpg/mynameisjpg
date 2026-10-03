@@ -7,12 +7,12 @@ date: 2026-10-03 10:00:00 -0300
 last_modified_at: 2026-10-03 10:00:00 -0300
 
 author: "Juan P. Giusepponi"
-status: "published"
+status: "draft"
 
 format: "essay"
 
 topic:
-  pillar: "AI Perception, Culture & Representation"
+  pillar: "Philosophy and Critical Theory"
   subtopic: "Biopolitics, Somatic Technologies & Body Epistemology"
 
 tags:
@@ -27,6 +27,8 @@ tags:
   - "queer-theory"
   - "epistemology"
   - "somatic-capitalism"
+  - "philosophy"
+  - "politics"
 
 theme: "dark"
 featured: false
