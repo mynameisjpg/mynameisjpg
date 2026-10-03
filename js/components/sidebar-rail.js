@@ -206,12 +206,12 @@ class SidebarRail extends HTMLElement {
   }
 
   highlightActiveFilter() {
-    const activeFilterAttr = this.getAttribute('active-filter') || '';
+    const activeFilterAttr = (this.getAttribute('active-filter') || '').toLowerCase().replace(/s$/, '');
     const filterItems = this.querySelectorAll('.nav-link-item');
 
     filterItems.forEach(item => {
-      const f = item.getAttribute('data-filter');
-      if (f && f === activeFilterAttr) {
+      const f = (item.getAttribute('data-filter') || '').toLowerCase().replace(/s$/, '');
+      if (f && f === activeFilterAttr && activeFilterAttr !== 'all') {
         item.classList.add('active');
       } else {
         item.classList.remove('active');
@@ -237,12 +237,12 @@ class SidebarRail extends HTMLElement {
     const filterLinks = this.querySelectorAll('.nav-link-item');
     filterLinks.forEach(link => {
       link.addEventListener('click', (e) => {
-        const pathname = window.location.pathname.toLowerCase();
-        const isHome = pathname.endsWith('index.html') || pathname === '/' || pathname.endsWith('/');
-        if (isHome && typeof window.applyCategoryFilter === 'function') {
+        const isGridPage = Boolean(document.getElementById('card-matrix') || (typeof window.applyCategoryFilter === 'function' && document.querySelector("[data-component='dispatch-matrix']")));
+        if (isGridPage && typeof window.applyCategoryFilter === 'function') {
           e.preventDefault();
-          const filter = link.getAttribute('data-filter') || 'all';
-          if (link.classList.contains('active')) {
+          const filter = (link.getAttribute('data-filter') || 'all').toLowerCase().replace(/s$/, '');
+          const currentActive = (this.getAttribute('active-filter') || 'all').toLowerCase().replace(/s$/, '');
+          if (currentActive === filter && filter !== 'all') {
             window.applyCategoryFilter('all', true);
           } else {
             window.applyCategoryFilter(filter, true);
@@ -254,9 +254,8 @@ class SidebarRail extends HTMLElement {
     const logoBtn = this.querySelector('#brand-logo-btn');
     if (logoBtn) {
       logoBtn.addEventListener('click', (e) => {
-        const pathname = window.location.pathname.toLowerCase();
-        const isHome = pathname.endsWith('index.html') || pathname === '/' || pathname.endsWith('/');
-        if (isHome && typeof window.resetPage === 'function') {
+        const isGridPage = Boolean(document.getElementById('card-matrix') || (typeof window.resetPage === 'function' && document.querySelector("[data-component='dispatch-matrix']")));
+        if (isGridPage && typeof window.resetPage === 'function') {
           e.preventDefault();
           window.resetPage();
         }

@@ -119,8 +119,9 @@ function getFilteredAndSortedPosts() {
 
   // Filter by Format, Pillar & Search Query
   let filtered = uniquePosts.filter(post => {
-    const format = (post.format || "ESSAY").toLowerCase();
-    if (activeFilter !== "all" && format !== activeFilter) return false;
+    const postFormat = (post.format || "ESSAY").toLowerCase().trim().replace(/s$/, "");
+    const curFilter = (activeFilter || "all").toLowerCase().trim().replace(/s$/, "");
+    if (curFilter !== "all" && postFormat !== curFilter) return false;
 
     if (activePillar !== "all" && !matchesPillar(post, activePillar)) return false;
 
@@ -890,15 +891,14 @@ function initApp() {
     });
   }
 
-  // Sidebar Format Filter Handler
-  const navLinks = document.querySelectorAll("#category-filter-nav .nav-link-item, .sidebar-rail .nav-link-item");
-  navLinks.forEach(link => {
+  // Static / Non-WebComponent Format Filter Fallback Handler
+  const staticNavLinks = document.querySelectorAll("nav:not(sidebar-rail nav) .nav-link-item");
+  staticNavLinks.forEach(link => {
     link.addEventListener("click", (e) => {
-      const pathname = window.location.pathname.toLowerCase();
-      const isHome = pathname.endsWith("index.html") || pathname === "/" || pathname.endsWith("/");
-      if (isHome) {
+      const isGridPage = Boolean(document.getElementById("card-matrix"));
+      if (isGridPage) {
         e.preventDefault();
-        const filter = link.getAttribute("data-filter") || "all";
+        const filter = (link.getAttribute("data-filter") || "all").toLowerCase().replace(/s$/, "");
         if (activeFilter === filter && filter !== "all") {
           applyCategoryFilter("all", true);
         } else {
@@ -1040,26 +1040,23 @@ function initApp() {
 
   document.querySelectorAll("#dispatch-log-dropdown .dropdown-option, #top-filter-dropdown .dropdown-option").forEach(opt => {
     opt.addEventListener("click", (e) => {
-      const pathname = window.location.pathname.toLowerCase();
-      const isHome = pathname.endsWith("index.html") || pathname === "/" || pathname.endsWith("/");
-      if (isHome) {
-        e.preventDefault();
-        const filter = opt.getAttribute("data-filter") || "all";
-        applyCategoryFilter(filter, true);
-        closeAllTopDropdowns();
-      }
+      e.preventDefault();
+      e.stopPropagation();
+      const filter = (opt.getAttribute("data-filter") || "all").toLowerCase().replace(/s$/, "");
+      applyCategoryFilter(filter, true);
+      closeAllTopDropdowns();
+      closeAllControlDropdowns();
     });
   });
 
   document.querySelectorAll("#top-sort-dropdown .dropdown-option").forEach(opt => {
     opt.addEventListener("click", (e) => {
-      const pathname = window.location.pathname.toLowerCase();
-      const isHome = pathname.endsWith("index.html") || pathname === "/" || pathname.endsWith("/");
-      if (isHome) {
-        e.preventDefault();
-        const sort = opt.getAttribute("data-sort") || "newest";
-        applyTopSort(sort);
-      }
+      e.preventDefault();
+      e.stopPropagation();
+      const sort = opt.getAttribute("data-sort") || "newest";
+      applyTopSort(sort);
+      closeAllTopDropdowns();
+      closeAllControlDropdowns();
     });
   });
 
@@ -1236,6 +1233,7 @@ function updateBrowserUrl(replace = false) {
  * Synchronize Active UI Filter & Sort Indicators
  */
 function syncFilterUIState() {
+  const cleanFilter = (activeFilter || "all").toLowerCase().replace(/s$/, "");
   const navLinks = document.querySelectorAll("#category-filter-nav .nav-link-item, .sidebar-rail .nav-link-item");
   const filterLabel = document.getElementById("active-filter-label");
   const filterValLabel = document.getElementById("current-filter-val");
@@ -1243,8 +1241,8 @@ function syncFilterUIState() {
   const dispatchLogBtn = document.getElementById("dispatch-log-btn");
 
   navLinks.forEach(l => {
-    const lFilter = (l.getAttribute("data-filter") || "").toLowerCase();
-    if (activeFilter !== "all" && lFilter === activeFilter.toLowerCase()) {
+    const lFilter = (l.getAttribute("data-filter") || "").toLowerCase().replace(/s$/, "");
+    if (cleanFilter !== "all" && lFilter === cleanFilter) {
       l.classList.add("active");
     } else {
       l.classList.remove("active");
@@ -1253,13 +1251,13 @@ function syncFilterUIState() {
 
   const rail = document.querySelector("sidebar-rail");
   if (rail) {
-    rail.setAttribute("active-filter", activeFilter !== "all" ? activeFilter : "");
+    rail.setAttribute("active-filter", cleanFilter !== "all" ? cleanFilter : "");
   }
 
   // Highlight dropdown options
   document.querySelectorAll("#top-filter-dropdown .dropdown-option, #dispatch-log-dropdown .dropdown-option, #filter-dropdown .dropdown-opt").forEach(opt => {
-    const f = (opt.getAttribute("data-filter") || "all").toLowerCase();
-    opt.classList.toggle("active", f === activeFilter.toLowerCase());
+    const f = (opt.getAttribute("data-filter") || "all").toLowerCase().replace(/s$/, "");
+    opt.classList.toggle("active", f === cleanFilter);
   });
 
   // Highlight sort dropdown options
@@ -1280,7 +1278,7 @@ function syncFilterUIState() {
     if (activePillar !== "all") {
       filterValLabel.textContent = `PILLAR: ${activePillar.toUpperCase().replace(/[-_]/g, ' ')}`;
     } else {
-      filterValLabel.textContent = labels[activeFilter] || (activeFilter !== "all" ? activeFilter.toUpperCase() : "ALL POSTS");
+      filterValLabel.textContent = labels[cleanFilter] || (cleanFilter !== "all" ? cleanFilter.toUpperCase() : "ALL POSTS");
     }
   }
 
@@ -1295,7 +1293,7 @@ function syncFilterUIState() {
   }
 
   if (dispatchLogBtn) {
-    const label = activeFilter === "all" ? "_DISPATCH_LOG" : `_${activeFilter.toUpperCase()}S`;
+    const label = cleanFilter === "all" ? "_DISPATCH_LOG" : `_${cleanFilter.toUpperCase()}S`;
     dispatchLogBtn.innerHTML = `${label} &#9660;`;
   }
 
@@ -1303,7 +1301,7 @@ function syncFilterUIState() {
     if (activePillar !== "all") {
       filterLabel.textContent = `[PILLAR: ${activePillar.toUpperCase().replace(/[-_]/g, ' ')}]`;
     } else {
-      filterLabel.textContent = `[MODE: ${activeFilter.toUpperCase()}_DISPATCHES]`;
+      filterLabel.textContent = `[MODE: ${cleanFilter.toUpperCase()}_DISPATCHES]`;
     }
   }
 }
@@ -1312,7 +1310,8 @@ function syncFilterUIState() {
  * Filter Cards by Format
  */
 function applyCategoryFilter(filter, updateHistory = true) {
-  activeFilter = filter || "all";
+  const clean = (filter || "all").toLowerCase().trim().replace(/s$/, "");
+  activeFilter = clean === "all" ? "all" : clean;
   activePillar = "all"; // Reset pillar when format is explicitly picked
   syncFilterUIState();
   if (updateHistory) updateBrowserUrl(false);
@@ -1324,6 +1323,7 @@ function applyCategoryFilter(filter, updateHistory = true) {
  */
 function applyPillarFilter(pillar, updateHistory = true) {
   activePillar = pillar || "all";
+  activeFilter = "all";
   syncFilterUIState();
   if (updateHistory) updateBrowserUrl(false);
   renderCardMatrix(true);
