@@ -21,7 +21,9 @@ tags:
   - "product-design"
   - "ux-psychology"
   - "tamagotchi-effect"
-  - "growth"
+  - "dots"
+  - "frontier-ai"
+  - "ai"
   - "viral-loops"
   - "interface-design"
   - "behavioral-design"
@@ -32,13 +34,7 @@ toc: false
 math: false
 
 sys_id: "SYS_261002_TMGTC"
-reading_time: "2 min read"
-
-links:
-  - title: "The Weaponized Cuteness of Frontier AI (Longform Dispatch)"
-    url: "#2026-10-02-dots-bot-muse-cute-mascots"
-    type: "paper"
-    description: "Theoretical deep-dive on visual semiotics and the politics of AI companion interfaces."
+reading_time: "5 min read"
 
 backlinks:
   - slug: "#2026-10-02-dots-bot-muse-cute-mascots"
@@ -50,7 +46,7 @@ allow_embed: true
 
 image:
   path: "assets/images/ai_tamagotchi.png"
-  alt: "Glitch art in black, white, and coral pink featuring cute cartoon creatures, a robot, and a heart amid heavy digital artifacts, scanlines, and pixel noise."
+  alt: "Glitch art in black, white, and coral red featuring cute cartoon creatures, a robot, and a heart amid heavy digital artifacts, scanlines, and pixel noise."
 ---
 
 ## 01. The Billion-Dollar Bait and Switch
@@ -90,8 +86,8 @@ Now swap the robot for a blushing pixel blob named Dot.
 The human brain is hardwired to nurture small, round, clumsy things. Big eyes, soft curves, and awkward wobbles trigger an instant caretaking reflex that shuts down threat detection.
 
 ```text
-[COLD ENTERPRISE BOT]  ──> Triggers Threat Appraisal ──> High Permission Friction
-[CUTE DIGITAL PET]     ──> Triggers Caretaking Reflex ──> Zero Friction Access
+[COLD ENTERPRISE BOT]  ──> Triggers Threat Appraisal   ──> High Permission Friction
+[CUTE DIGITAL PET]     ──> Triggers Caretaking Reflex  ──> Zero Friction Access
 ```
 
 Watch what happens when you turn software into a pet:

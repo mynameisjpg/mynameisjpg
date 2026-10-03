@@ -247,6 +247,86 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "ai",
+    "name": "ai",
+    "label": "#ai",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
+      },
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      },
+      {
+        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "date": "2026.09.26",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "format": "NOTE",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
+        "date": "2026.10.02"
+      },
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      },
+      {
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "format": "RESOURCE",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION",
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "product-design",
+      "ux-psychology",
+      "tamagotchi-effect",
+      "dots",
+      "frontier-ai"
+    ]
+  },
+  {
     "id": "visual-perception",
     "name": "visual-perception",
     "label": "#visual-perception",
@@ -473,67 +553,6 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
-    "id": "ai",
-    "name": "ai",
-    "label": "#ai",
-    "type": "tag",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
-      },
-      {
-        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "date": "2026.09.26",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/harvard-s-computer-science-career-for-free.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      },
-      {
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "format": "RESOURCE",
-        "url": "posts/harvard-s-computer-science-career-for-free.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
-    ],
-    "subtopics": [
-      "COMPUTER VISION VS. HUMAN PERCEPTION",
-      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
-    ],
-    "connected_tags": [
-      "toolkit",
-      "github",
-      "repo",
-      "relational",
-      "data-labeling",
-      "models"
-    ]
-  },
-  {
     "id": "ai-mascots",
     "name": "ai-mascots",
     "label": "#ai-mascots",
@@ -586,11 +605,71 @@ window.DYNAMIC_TAGS = [
     ],
     "connected_tags": [
       "tamagotchi-effect",
+      "dots",
       "product-design",
       "ux-psychology",
-      "growth",
-      "viral-loops",
-      "interface-design"
+      "frontier-ai",
+      "ai"
+    ]
+  },
+  {
+    "id": "dots",
+    "name": "dots",
+    "label": "#dots",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
+      },
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "format": "NOTE",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
+        "date": "2026.10.02"
+      },
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "tamagotchi-effect",
+      "product-design",
+      "ux-psychology",
+      "frontier-ai",
+      "ai"
     ]
   },
   {
@@ -826,11 +905,11 @@ window.DYNAMIC_TAGS = [
     ],
     "connected_tags": [
       "ai-mascots",
+      "dots",
       "product-design",
       "ux-psychology",
-      "growth",
-      "viral-loops",
-      "interface-design"
+      "frontier-ai",
+      "ai"
     ]
   },
   {
@@ -1512,8 +1591,8 @@ window.DYNAMIC_TAGS = [
       "product-design",
       "ux-psychology",
       "tamagotchi-effect",
-      "growth",
-      "viral-loops"
+      "dots",
+      "frontier-ai"
     ]
   },
   {
@@ -2397,48 +2476,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "dots",
-    "name": "dots",
-    "label": "#dots",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-02-dots-bot-muse-cute-mascots",
-        "slug": "dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "date": "2026.10.02",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/dots-bot-muse-cute-mascots.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "slug": "dots-bot-muse-cute-mascots",
-        "format": "ESSAY",
-        "url": "posts/dots-bot-muse-cute-mascots.html",
-        "date": "2026.10.02"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
-    ],
-    "connected_tags": [
-      "ai-mascots",
-      "muse",
-      "grok-bot",
-      "openai",
-      "grok",
-      "meta"
-    ]
-  },
-  {
     "id": "download",
     "name": "download",
     "label": "#download",
@@ -2816,6 +2853,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "frontier-ai",
+    "name": "frontier-ai",
+    "label": "#frontier-ai",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "format": "NOTE",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY"
+    ],
+    "connected_tags": [
+      "ai-mascots",
+      "product-design",
+      "ux-psychology",
+      "tamagotchi-effect",
+      "dots",
+      "ai"
+    ]
+  },
+  {
     "id": "generative-ai",
     "name": "generative-ai",
     "label": "#generative-ai",
@@ -3022,48 +3101,6 @@ window.DYNAMIC_TAGS = [
       "openai",
       "grok",
       "meta"
-    ]
-  },
-  {
-    "id": "growth",
-    "name": "growth",
-    "label": "#growth",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "format": "NOTE",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
-        "date": "2026.10.02"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY"
-    ],
-    "connected_tags": [
-      "ai-mascots",
-      "product-design",
-      "ux-psychology",
-      "tamagotchi-effect",
-      "viral-loops",
-      "interface-design"
     ]
   },
   {
@@ -3437,8 +3474,8 @@ window.DYNAMIC_TAGS = [
       "product-design",
       "ux-psychology",
       "tamagotchi-effect",
-      "growth",
-      "viral-loops"
+      "dots",
+      "frontier-ai"
     ]
   },
   {
@@ -4274,9 +4311,9 @@ window.DYNAMIC_TAGS = [
       "ai-mascots",
       "ux-psychology",
       "tamagotchi-effect",
-      "growth",
-      "viral-loops",
-      "interface-design"
+      "dots",
+      "frontier-ai",
+      "ai"
     ]
   },
   {
@@ -5110,9 +5147,9 @@ window.DYNAMIC_TAGS = [
       "ai-mascots",
       "product-design",
       "tamagotchi-effect",
-      "growth",
-      "viral-loops",
-      "interface-design"
+      "dots",
+      "frontier-ai",
+      "ai"
     ]
   },
   {
@@ -5237,8 +5274,8 @@ window.DYNAMIC_TAGS = [
       "product-design",
       "ux-psychology",
       "tamagotchi-effect",
-      "growth",
-      "interface-design"
+      "dots",
+      "frontier-ai"
     ]
   },
   {

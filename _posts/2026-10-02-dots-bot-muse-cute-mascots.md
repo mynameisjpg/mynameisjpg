@@ -43,15 +43,15 @@ reading_time: "20 min read"
 
 links:
   - title: "[1] Studies in Animal and Human Behavior (Konrad Lorenz, 1971)"
-    url: "https://archive.org/details/studiesinanimalh0000lore"
+    url: "https://en.wikipedia.org/wiki/Cuteness#Baby_schema"
     type: "book"
     description: "Foundational ethological formulation of the Kindchenschema (baby schema) and innate releasing mechanisms."
   - title: "[3] The Media Equation: How People Treat Computers, Television, and New Media Like Real People and Places (Reeves & Nass, 1996)"
-    url: "https://www.cambridge.org/core/books/media-equation/504B6D82F2F377926FBDF84562477382"
+    url: "https://archive.org/details/mediaequationhow0000reev"
     type: "book"
     description: "Psychological experiments proving the human sensory cortex automatically applies social rules to computational interfaces."
   - title: "[4] The Eye of the Master: A Social History of Artificial Intelligence (Matteo Pasquinelli, 2023)"
-    url: "https://www.versobooks.com/products/850-the-eye-of-the-master"
+    url: "https://www.matteopasquinelli.com"
     type: "book"
     description: "Analysis of sociomorphic computation and the labor architectures masked by algorithmic interfaces."
 
