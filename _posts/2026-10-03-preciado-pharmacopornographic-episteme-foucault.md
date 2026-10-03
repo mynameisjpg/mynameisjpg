@@ -1,5 +1,5 @@
 ---
-title: "The Pharmacopornographic Machine: Capitalism Below the Waist"
+title: "(I) The Pharmacopornographic Machine: Capitalism Below the Waist"
 subtitle: "Cognitive capitalism and post-Fordism missed the body. Synthetic hormones, algorithmic desire, and molecular governmentality redefined modern power."
 excerpt: "Post-Fordist theorists analyzed capitalism only from the waist up, focusing on minds, language, and code while missing the somatic machine. Paul B. Preciado pushed Foucault's biopolitics into the molecular age: where pills, screens, and engineered desire govern modern life."
 
