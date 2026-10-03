@@ -90,17 +90,22 @@ The fundamental limitation of LLMs is not compute, it is **information bandwidth
 
 ```mermaid
 flowchart TD
-    subgraph LLM ["AUTOREGRESSIVE LLM"]
+    subgraph LLM ["1. AUTOREGRESSIVE LLM"]
         direction TB
-        L1["Ingests ~10Â¹Â² bytes text (Internet crawl)"]
-        L2["Masters syntax & token prediction"]
-        L3["Symbol Grounding: 0%"]
+        L1["<b>Input:</b> ~10¹² bytes text<br/><i>(Entire public internet)</i>"]
+        L2["<b>Task:</b> Next-token prediction"]
+        L3["<b>Grounding:</b> 0% <i>(Disembodied)</i>"]
+        L1 --> L2 --> L3
     end
-    subgraph Infant ["BIOLOGICAL INFANT (4 Years Old)"]
+
+    LLM -->|<b>100× Sensory Gap</b>| INF
+
+    subgraph INF ["2. BIOLOGICAL INFANT (4 Years Old)"]
         direction TB
-        I1["Ingests ~10Â¹â�´ bytes vision (~20 MB/s)"]
-        I2["Learns intuitive physics & causality"]
-        I3["Symbol Grounding: 100%"]
+        I1["<b>Input:</b> ~10¹⁴ bytes vision<br/><i>(~20 MB/s continuous stream)</i>"]
+        I2["<b>Task:</b> Intuitive physics & causality"]
+        I3["<b>Grounding:</b> 100% <i>(Embodied world model)</i>"]
+        I1 --> I2 --> I3
     end
 ```
 
@@ -149,14 +154,14 @@ flowchart TD
 
     subgraph Target ["Target World"]
         Y["Target State y"] --> EY["Encoder E_y"]
-        EY --> SY["Target Latent sÌ‚_y"]
+        EY --> SY["Target Latent ŝ_y"]
     end
 
     SX --> P["Predictor P"]
     A["Action / Context a"] --> P
     P --> PSY["Predicted Latent s_y"]
 
-    PSY --- LOSS{{"Loss: D(s_y, sÌ‚_y)"}}
+    PSY --- LOSS{{"Loss: D(s_y, ŝ_y)"}}
     SY --- LOSS
 ```
 
@@ -207,4 +212,4 @@ The thesis is clear:
 2. **Self-Supervised Video Learning is the Path:** Ingesting continuous video through V-JEPA bridges the $10^{14}\text{ bytes}$ bandwidth gap.
 3. **True Intelligence Requires Latent World Models:** Planning through energy-based cost functions in continuous representation space is how machines will finally learn common sense.
 
-True machine intelligence will not be achieved by predicting the next wordâ€”it will be achieved by understanding the physical world.
+True machine intelligence will not be achieved by predicting the next word: it will be achieved by understanding the physical world.
