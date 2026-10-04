@@ -809,8 +809,12 @@ function renderPost(postId) {
 
   // Construct 3-Tier DOM Template
   pane.innerHTML = `
-    <!-- Edge Close Button [<<] (Floating unclipped on border) -->
-    <button type="button" class="btn-close-reader-edge" onclick="closeReaderPane()" title="Close reader panel (ESC)" aria-label="Close reader panel">&lt;&lt;</button>
+    <!-- Edge Close Button (Vertical 3-Chevron Drawer Tab) -->
+    <button type="button" class="btn-close-reader-edge" onclick="closeReaderPane()" title="Close reader panel (ESC)" aria-label="Close reader panel">
+      <svg class="close-chevron-svg" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg>
+      <svg class="close-chevron-svg" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg>
+      <svg class="close-chevron-svg" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
 
     <div class="reader-scroll-wrapper">
       <div class="reader-content-container">
