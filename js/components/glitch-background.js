@@ -17,20 +17,20 @@
       this.animationId = null;
       this.glitches = [];
       this.lastSpawnTime = 0;
-      this.nextBurstInterval = 2400 + Math.random() * 1400; // Balanced cadence: 2.4s to 3.8s between bursts
+      this.nextBurstInterval = 2000 + Math.random() * 1400; // Balanced cadence: 2.4s to 3.8s between bursts
       this.burstRemaining = 0;
       this.isPaused = false;
       this.prefersReducedMotion = false;
 
       // Color Palette (derived from Untitled.jpg brand tokens)
       this.colors = {
-        coral: "232, 74, 95",            // #E84A5F Signature Coral
-        brightCoral: "255, 55, 80",      // #FF3750 High-luma Coral
-        rose: "255, 140, 150",           // #FF8C96 Dusky Rose
-        crimson: "205, 25, 45",          // #CD192D Deep Crimson
-        darkWine: "22, 4, 7",            // #160407 Shadow macroblock
+        coral: "232, 74, 95", // #E84A5F Signature Coral
+        brightCoral: "255, 55, 80", // #FF3750 High-luma Coral
+        rose: "255, 140, 150", // #FF8C96 Dusky Rose
+        crimson: "205, 25, 45", // #CD192D Deep Crimson
+        darkWine: "22, 4, 7", // #160407 Shadow macroblock
         lightHighlight: "255, 240, 245", // #FFF0F5 Hot flash core
-        white: "255, 255, 255"
+        white: "255, 255, 255",
       };
 
       this.init();
@@ -70,18 +70,25 @@
       this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
 
       window.addEventListener("resize", this.handleResize, { passive: true });
-      document.addEventListener("visibilitychange", this.handleVisibilityChange);
+      document.addEventListener(
+        "visibilitychange",
+        this.handleVisibilityChange,
+      );
 
       // Watch for reader pane open/close transitions
       if (splitLayout) {
         const observer = new MutationObserver(() => this.handleResize());
-        observer.observe(splitLayout, { attributes: true, attributeFilter: ["class"] });
+        observer.observe(splitLayout, {
+          attributes: true,
+          attributeFilter: ["class"],
+        });
       }
 
       this.handleResize();
 
       // Start quietly with a gentle delay before the first subtle glitch
-      this.lastSpawnTime = typeof performance !== "undefined" ? performance.now() : 0;
+      this.lastSpawnTime =
+        typeof performance !== "undefined" ? performance.now() : 0;
       this.nextBurstInterval = 2200 + Math.random() * 1200;
 
       this.start();
@@ -90,7 +97,8 @@
     handleResize() {
       if (!this.canvas) return;
       const splitLayout = document.querySelector(".split-layout");
-      const isSplitOpen = splitLayout && splitLayout.classList.contains("reader-open");
+      const isSplitOpen =
+        splitLayout && splitLayout.classList.contains("reader-open");
       const isMobile = window.innerWidth <= 980 || window.innerHeight <= 700;
 
       let targetW = window.innerWidth;
@@ -158,14 +166,16 @@
       const x = this.getRandomCoord(this.width, 0.5);
       const y = this.getRandomCoord(this.height, 0.45);
 
-      // Snappy lifetime: between 3 and 9 frames (approx 50ms - 150ms)
-      const lifeFrames = Math.floor(3 + Math.random() * 7);
+      // Snappy lifetime: between 2 and 7 frames (approx 50ms - 150ms)
+      const lifeFrames = Math.floor(2 + Math.random() * 7);
 
-      const style = Math.random();
+      // Style distribution weights: Macroblock (40), Scanline Slits (40), Pixel Blocks (58), Vertical Stitch (30)
+      const totalWeight = 40 + 40 + 58 + 30;
+      const styleRoll = Math.random() * totalWeight;
       const segments = [];
 
-      if (style < 0.40) {
-        // STYLE 1: Compact Stepped Macroblock (12-40px wide, 3-7px high)
+      if (styleRoll < 40) {
+        // STYLE 1: Compact Stepped Macroblock (12-40px wide, 3-7px high) — Weight: 40
         const w = Math.floor(14 + Math.random() * 26);
         const h = Math.floor(3 + Math.random() * 5);
 
@@ -176,7 +186,7 @@
           w: w + 4,
           h: h + 2,
           color: this.colors.darkWine,
-          alpha: 0.8
+          alpha: 0.8,
         });
 
         // Vivid coral top slice
@@ -185,8 +195,9 @@
           oy: 0,
           w: w,
           h: h,
-          color: Math.random() > 0.35 ? this.colors.brightCoral : this.colors.coral,
-          alpha: 0.95
+          color:
+            Math.random() > 0.35 ? this.colors.brightCoral : this.colors.coral,
+          alpha: 0.95,
         });
 
         // Stepped side tag
@@ -197,11 +208,11 @@
             w: Math.floor(w * 0.5),
             h: Math.max(2, h - 2),
             color: this.colors.rose,
-            alpha: 0.85
+            alpha: 0.85,
           });
         }
-      } else if (style < 0.70) {
-        // STYLE 2: Ultra-fine Horizontal Slit Scanline (1px or 2px high, 25-90px wide)
+      } else if (styleRoll < 80) {
+        // STYLE 2: Ultra-fine Horizontal Slit Scanline (1px or 2px high, 25-90px wide) — Weight: 40
         const w = Math.floor(25 + Math.random() * 70);
         const h = Math.random() > 0.7 ? 2 : 1;
 
@@ -210,8 +221,11 @@
           oy: 0,
           w: w,
           h: h,
-          color: Math.random() > 0.4 ? this.colors.brightCoral : this.colors.lightHighlight,
-          alpha: 0.95
+          color:
+            Math.random() > 0.4
+              ? this.colors.brightCoral
+              : this.colors.lightHighlight,
+          alpha: 0.95,
         });
 
         // Occasional micro dot next to slit
@@ -222,11 +236,11 @@
             w: 4,
             h: h + 1,
             color: this.colors.rose,
-            alpha: 0.9
+            alpha: 0.9,
           });
         }
-      } else if (style < 0.88) {
-        // STYLE 3: Discrete Digital Pixel Block (Single micro rectangle)
+      } else if (styleRoll < 138) {
+        // STYLE 3: Discrete Digital Pixel Block (Single micro rectangle) — Weight: 58
         const w = Math.floor(4 + Math.random() * 12);
         const h = Math.floor(2 + Math.random() * 5);
 
@@ -236,17 +250,17 @@
           w: w,
           h: h,
           color: Math.random() > 0.5 ? this.colors.coral : this.colors.rose,
-          alpha: 0.9
+          alpha: 0.9,
         });
       } else {
-        // STYLE 4: Vertical Pixel Stitch (1px wide, 6-14px tall)
+        // STYLE 4: Vertical Pixel Stitch (1px wide, 6-14px tall) — Weight: 30
         segments.push({
           ox: 0,
           oy: 0,
           w: 1.5,
           h: Math.floor(6 + Math.random() * 10),
           color: this.colors.rose,
-          alpha: 0.85
+          alpha: 0.85,
         });
       }
 
@@ -257,7 +271,7 @@
         currentLife: isInitial ? Math.floor(Math.random() * lifeFrames) : 0,
         maxLife: lifeFrames,
         // Optional 1-frame strobe flicker
-        hasFlicker: Math.random() < 0.25
+        hasFlicker: Math.random() < 0.25,
       });
     }
 
@@ -272,8 +286,12 @@
       const radius = Math.max(this.width, this.height) * 0.65;
 
       const radialGrad = this.ctx.createRadialGradient(
-        centerX, centerY, 0,
-        centerX, centerY, radius
+        centerX,
+        centerY,
+        0,
+        centerX,
+        centerY,
+        radius,
       );
 
       // Clean, luminous radial glow

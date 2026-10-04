@@ -65,7 +65,9 @@
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    text-decoration-color var(--transition-fast);
 }
 
 .meta-text-link:hover {
@@ -103,12 +105,15 @@
   letter-spacing: 0.05em;
   padding: 0.6rem 1.15rem;
   border-radius: var(--radius-sm);
-  transition: transform var(--transition-spring), box-shadow var(--transition-fast), background-color var(--transition-fast);
+  transition:
+    transform var(--transition-spring),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
   box-shadow: 0 4px 15px var(--accent-coral-glow);
 }
 
 .btn-prominent-action:hover {
-  background: #FF6579;
+  background: #ff6579;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px var(--accent-coral-glow);
   color: #000000 !important;
@@ -155,7 +160,7 @@
 }
 
 .post-header-meta-bottom .meta-author {
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: var(--weight-medium);
 }
 
@@ -192,6 +197,7 @@
 }
 
 /* Resources & References Grid */
+/* Resources & References Grid */
 .resources-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -199,14 +205,38 @@
 }
 
 .resource-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   padding: 1.15rem 1.25rem;
   border-radius: var(--radius-md);
   font-family: var(--font-mono);
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  position: relative;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.resource-card:hover,
+.resource-card:focus-visible {
+  transform: translateY(-3px);
+  background-color: rgba(255, 255, 255, 0.14);
+  border-color: rgba(232, 74, 95, 0.45);
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.55),
+    0 0 20px rgba(232, 74, 95, 0.22);
+  outline: none;
+}
+
+.resource-card:active {
+  transform: translateY(-1px);
 }
 
 .resource-card-header {
@@ -228,8 +258,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    color var(--transition-fast);
 }
 
+.resource-card:hover .resource-chip,
+.resource-card:focus-visible .resource-chip {
+  border-color: rgba(232, 74, 95, 0.5);
+  color: var(--accent-coral);
+}
+
+.resource-card-link-text,
 .resource-card a {
   color: var(--text-bright);
   text-decoration: none;
@@ -238,11 +279,25 @@
   line-height: 1.35;
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.35rem;
   transition: color var(--transition-fast);
 }
 
+.resource-card:hover .resource-card-link-text,
+.resource-card:hover .resource-card-link-text strong,
+.resource-card:focus-visible .resource-card-link-text strong,
 .resource-card a:hover {
+  color: var(--accent-coral);
+}
+
+.resource-card .resource-card-arrow {
+  display: inline-block;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.resource-card:hover .resource-card-arrow,
+.resource-card:focus-visible .resource-card-arrow {
+  transform: translate(2px, -2px);
   color: var(--accent-coral);
 }
 
@@ -278,7 +333,7 @@
 
 .backlinks-list em {
   font-family: var(--font-mono);
-  font-size: 0.60rem;
+  font-size: 0.6rem;
   color: var(--text-muted);
   font-weight: var(--weight-medium);
 }
@@ -460,9 +515,17 @@
 }
 
 .theme-light .resource-card:hover,
+.theme-light .resource-card:focus-visible,
 .post-column.theme-light .resource-card:hover,
-.essay-column.theme-light .resource-card:hover {
+.post-column.theme-light .resource-card:focus-visible,
+.essay-column.theme-light .resource-card:hover,
+.essay-column.theme-light .resource-card:focus-visible {
+  transform: translateY(-3px);
   background: var(--bg-light-card-hover);
+  border-color: rgba(232, 74, 95, 0.4);
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.1),
+    0 0 16px rgba(232, 74, 95, 0.12);
 }
 
 .theme-light .resource-card .meta-chip,

@@ -49,7 +49,7 @@
   padding-bottom: 0.85rem;
   border-bottom: 1px dashed var(--border-subtle);
   font-family: var(--font-mono);
-  font-size: 0.70rem;
+  font-size: 0.7rem;
   letter-spacing: 0.09em;
   color: var(--text-muted);
   user-select: none;
@@ -137,23 +137,34 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: radial-gradient(circle, #E84A5F 0%, #E84A5F 3.2px, #161616 3.5px, #161616 6.5px, #444 7px, #161616 8px);
+  background: radial-gradient(
+    circle,
+    #e84a5f 0%,
+    #e84a5f 3.2px,
+    #161616 3.5px,
+    #161616 6.5px,
+    #444 7px,
+    #161616 8px
+  );
   border: 1.5px solid #555555;
   box-shadow: 0 0 6px rgba(232, 74, 95, 0.35);
   cursor: grab;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
 }
 
 .typo-scale-slider:active::-webkit-slider-thumb {
   cursor: grabbing;
   transform: scale(1.15);
   box-shadow: 0 0 12px rgba(232, 74, 95, 0.75);
-  border-color: #E84A5F;
+  border-color: #e84a5f;
 }
 
 .typo-scale-slider::-webkit-slider-thumb:hover {
   box-shadow: 0 0 10px rgba(232, 74, 95, 0.6);
-  border-color: #E84A5F;
+  border-color: #e84a5f;
 }
 
 /* Firefox Thumb */
@@ -161,32 +172,59 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: radial-gradient(circle, #E84A5F 0%, #E84A5F 3.2px, #161616 3.5px, #161616 6.5px, #444 7px, #161616 8px);
+  background: radial-gradient(
+    circle,
+    #e84a5f 0%,
+    #e84a5f 3.2px,
+    #161616 3.5px,
+    #161616 6.5px,
+    #444 7px,
+    #161616 8px
+  );
   border: 1.5px solid #555555;
   box-shadow: 0 0 6px rgba(232, 74, 95, 0.35);
   cursor: grab;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
 }
 
 .typo-scale-slider:active::-moz-range-thumb {
   cursor: grabbing;
   transform: scale(1.15);
   box-shadow: 0 0 12px rgba(232, 74, 95, 0.75);
-  border-color: #E84A5F;
+  border-color: #e84a5f;
 }
 
 .typo-scale-slider::-moz-range-thumb:hover {
   box-shadow: 0 0 10px rgba(232, 74, 95, 0.6);
-  border-color: #E84A5F;
+  border-color: #e84a5f;
 }
 
 /* Light Mode Thumb overrides */
 .theme-light .typo-scale-slider::-webkit-slider-thumb {
-  background: radial-gradient(circle, #E84A5F 0%, #E84A5F 3.2px, #f7fafc 3.5px, #f7fafc 6.5px, #cbd5e0 7px, #f7fafc 8px);
+  background: radial-gradient(
+    circle,
+    #e84a5f 0%,
+    #e84a5f 3.2px,
+    #f7fafc 3.5px,
+    #f7fafc 6.5px,
+    #cbd5e0 7px,
+    #f7fafc 8px
+  );
   border-color: #a0aec0;
 }
 .theme-light .typo-scale-slider::-moz-range-thumb {
-  background: radial-gradient(circle, #E84A5F 0%, #E84A5F 3.2px, #f7fafc 3.5px, #f7fafc 6.5px, #cbd5e0 7px, #f7fafc 8px);
+  background: radial-gradient(
+    circle,
+    #e84a5f 0%,
+    #e84a5f 3.2px,
+    #f7fafc 3.5px,
+    #f7fafc 6.5px,
+    #cbd5e0 7px,
+    #f7fafc 8px
+  );
   border-color: #a0aec0;
 }
 
@@ -205,7 +243,9 @@
   white-space: nowrap;
   border-radius: 2px;
   text-align: right;
-  transition: color var(--transition-fast), background-color var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast);
 }
 
 .typo-scaler-val:hover {
@@ -227,7 +267,9 @@
 .post-title,
 .essay-title {
   font-family: var(--font-mono);
-  font-size: calc(var(--text-2xl) * (1 + (var(--reader-font-scale, 1) - 1) * 0.35));
+  font-size: calc(
+    var(--text-2xl) * (1 + (var(--reader-font-scale, 1) - 1) * 0.35)
+  );
   font-weight: var(--weight-semibold);
   line-height: var(--leading-tight);
   color: var(--text-bright);
@@ -238,7 +280,9 @@
 .post-subtitle,
 .essay-subtitle {
   font-family: var(--font-serif);
-  font-size: calc(var(--text-xl) * (1 + (var(--reader-font-scale, 1) - 1) * 0.35));
+  font-size: calc(
+    var(--text-xl) * (1 + (var(--reader-font-scale, 1) - 1) * 0.35)
+  );
   font-style: italic;
   color: var(--accent-coral);
   line-height: var(--leading-normal);
@@ -249,13 +293,15 @@
 .post-section-kicker,
 .essay-section-kicker {
   font-family: var(--font-mono);
-  font-size: calc(var(--text-xl) * (1 + (var(--reader-font-scale, 1) - 1) * 0.35));
+  font-size: calc(
+    var(--text-xl) * (1 + (var(--reader-font-scale, 1) - 1) * 0.35)
+  );
   font-weight: var(--weight-semibold);
   text-decoration: underline;
   text-decoration-color: var(--accent-rose);
   text-underline-offset: 8px;
   color: var(--text-bright);
-  margin: 2rem 0 1.3rem 0;
+  margin: 2rem 0 2rem 0;
 }
 
 .post-paragraph,
@@ -264,7 +310,9 @@
 .essay-body-content p {
   font-family: var(--font-serif);
   font-size: calc(var(--text-md) * var(--reader-font-scale, 1));
-  line-height: calc(var(--leading-relaxed) + (var(--reader-font-scale, 1) - 1) * 0.15);
+  line-height: calc(
+    var(--leading-relaxed) + (var(--reader-font-scale, 1) - 1) * 0.15
+  );
   color: var(--text-body);
   margin-bottom: 1rem;
   font-weight: var(--weight-regular); /* Platypi 400 for balanced legibility */
@@ -309,7 +357,7 @@
   font-size: calc(0.94rem * (1 + (var(--reader-font-scale, 1) - 1) * 0.3));
   font-weight: var(--weight-medium);
   color: var(--text-bright);
-  margin: 2rem 0 0.8rem 0;
+  margin: 2rem 0 2rem 0;
   letter-spacing: 0.01em;
 }
 
@@ -328,7 +376,9 @@
 .essay-body-content ol {
   font-family: var(--font-serif);
   font-size: calc(var(--text-md) * var(--reader-font-scale, 1));
-  line-height: calc(var(--leading-relaxed) + (var(--reader-font-scale, 1) - 1) * 0.15);
+  line-height: calc(
+    var(--leading-relaxed) + (var(--reader-font-scale, 1) - 1) * 0.15
+  );
   color: var(--text-body);
   margin: 1.2rem 0 1.8rem 1.6rem;
 }

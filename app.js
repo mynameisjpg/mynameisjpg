@@ -392,15 +392,26 @@ function renderCardMatrix(resetPagination = true) {
 
     const glitchLabel = card.querySelector("[data-glitch-action]");
     if (glitchLabel) {
-      card.addEventListener("mouseenter", () => triggerCardGlitchAction(glitchLabel));
-      card.addEventListener("focus", () => triggerCardGlitchAction(glitchLabel));
+      card.addEventListener("mouseenter", () =>
+        triggerCardGlitchAction(glitchLabel),
+      );
+      card.addEventListener("focus", () =>
+        triggerCardGlitchAction(glitchLabel),
+      );
     }
   });
 
   updateMatrixSentinel(visiblePosts.length, allPosts.length);
 }
 
-const CARD_GLITCH_WORDS = ["SURF...", "SEE...", "VIEW...", "VISIT...", "ENTER...", "DECODE..."];
+const CARD_GLITCH_WORDS = [
+  "SURF...",
+  "SEE...",
+  "VIEW...",
+  "VISIT...",
+  "ENTER...",
+  "DECODE...",
+];
 const CARD_GLITCH_CHARS = "#!%$>_/-*01+@&~";
 
 /**
@@ -429,7 +440,10 @@ function triggerCardGlitchAction(element) {
     let scrambled = "";
     for (let i = 0; i < baseWord.length; i++) {
       if (Math.random() < 0.35 && i < baseWord.length - 3) {
-        scrambled += CARD_GLITCH_CHARS[Math.floor(Math.random() * CARD_GLITCH_CHARS.length)];
+        scrambled +=
+          CARD_GLITCH_CHARS[
+            Math.floor(Math.random() * CARD_GLITCH_CHARS.length)
+          ];
       } else {
         scrambled += baseWord[i];
       }
@@ -914,7 +928,24 @@ function renderPost(postId) {
           <!-- PROMINENT ACTION LINK (FOR RESOURCES & BOOKMARKS) -->
           <div class="post-prominent-action">
             <a href="${post.url}" target="_blank" rel="noopener noreferrer" class="btn-prominent-action">
-              <span class="action-kicker">${post.format === "RESOURCE" ? "ACCESS RESOURCE ↗" : post.format === "BOOKMARK" ? "VIEW SOURCE ↗" : "VISIT DESTINATION ↗"}</span>
+              <span class="action-kicker">${
+                post.format === "RESOURCE"
+                  ? Boolean(
+                      post.download ||
+                        (post.url &&
+                          (post.url.endsWith(".pdf") ||
+                            post.url.endsWith(".zip") ||
+                            post.url.endsWith(".tar.gz") ||
+                            post.url.includes("download") ||
+                            (post.url.includes("github.com") &&
+                              post.url.includes("/releases")))),
+                    )
+                    ? "DOWNLOAD IT ↗"
+                    : "ACCESS RESOURCE ↗"
+                  : post.format === "BOOKMARK"
+                  ? "VIEW SOURCE ↗"
+                  : "VISIT DESTINATION ↗"
+              }</span>
               <span class="action-url-text">${post.url}</span>
             </a>
           </div>
@@ -950,13 +981,13 @@ function renderPost(postId) {
                 ${post.links
                   .map(
                     (l) => `
-                  <div class="resource-card">
+                  <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="resource-card">
                     <div class="resource-card-header">
                       <span class="meta-chip resource-chip">[${l.type}]</span>
-                      <a href="${l.url}" target="_blank" rel="noopener noreferrer"><strong>${l.title}</strong> ↗</a>
+                      <span class="resource-card-link-text"><strong>${l.title}</strong> <span class="resource-card-arrow" aria-hidden="true">↗</span></span>
                     </div>
                     ${l.desc ? `<p class="resource-card-desc">${l.desc}</p>` : ""}
-                  </div>
+                  </a>
                 `,
                   )
                   .join("")}
