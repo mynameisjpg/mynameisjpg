@@ -138,26 +138,46 @@ function applyTagFilterDirectly(tag) {
   if (!tag) return;
   activeTagFilter = tag.trim();
 
-  setNodeFilterUIState(true, activeTagFilter);
+  const tagLower = activeTagFilter.toLowerCase().replace(/^#/, "");
+  let matchedData = null;
 
-  const tagLower = activeTagFilter.toLowerCase();
   if (typeof threeNodes !== "undefined" && threeNodes && threeNodes.length > 0) {
     const match = threeNodes.find(n => {
       const d = n.data;
       if (!d) return false;
       const l = (d.label || "").toLowerCase().replace(/^#/, "");
-      const raw = (d.rawTag || "").toLowerCase();
+      const raw = (d.rawTag || "").toLowerCase().replace(/^#/, "");
       return l === tagLower || raw === tagLower;
     });
-    if (match) activeNodeFilter = match.data;
+    if (match) {
+      activeNodeFilter = match.data;
+      matchedData = match.data;
+    }
   } else if (typeof nodes !== "undefined" && nodes && nodes.length > 0) {
     const match = nodes.find(n => {
       const l = (n.label || "").toLowerCase().replace(/^#/, "");
-      const raw = (n.rawTag || "").toLowerCase();
+      const raw = (n.rawTag || "").toLowerCase().replace(/^#/, "");
       return l === tagLower || raw === tagLower;
     });
-    if (match) activeNodeFilter = match;
+    if (match) {
+      activeNodeFilter = match;
+      matchedData = match;
+    }
   }
+
+  if (!matchedData) {
+    matchedData = {
+      type: "tag",
+      label: `#${tagLower}`,
+      rawTag: tagLower,
+      postsCount: 0
+    };
+    activeNodeFilter = matchedData;
+  }
+
+  setNodeFilterUIState(true, activeTagFilter);
+  renderSelectedNodePostsStrip(matchedData);
+  updateThreeDockMetadata(matchedData ? { data: matchedData } : null);
 }
 
 async function fetchNetworkPostsJson() {
@@ -1057,6 +1077,71 @@ function animateThreeJS() {
   }
 }
 
+function getPostsForNode(nodeData) {
+  if (!nodeData || !NETWORK_POSTS || NETWORK_POSTS.length === 0) return [];
+
+  if (nodeData.type === "root") {
+    return NETWORK_POSTS;
+  }
+
+  if (nodeData.type === "pillar") {
+    const pName = (nodeData.label || "").toLowerCase().trim();
+    return NETWORK_POSTS.filter(p => (p.pillar || "").toLowerCase().trim() === pName);
+  }
+
+  if (nodeData.type === "subtopic") {
+    const sName = (nodeData.label || "").toLowerCase().trim();
+    return NETWORK_POSTS.filter(p => (p.subtopic || "").toLowerCase().trim() === sName);
+  }
+
+  // Tag node
+  const targetTag = (nodeData.rawTag || nodeData.label || "").toLowerCase().trim().replace(/^#/, "");
+  return NETWORK_POSTS.filter(p => {
+    if (!p.tags || !Array.isArray(p.tags)) return false;
+    return p.tags.some(t => String(t).toLowerCase().trim().replace(/^#/, "") === targetTag);
+  });
+}
+
+function getPostUrl(p) {
+  if (p.url && !p.url.startsWith("#") && (p.url.startsWith("http") || p.url.endsWith(".html"))) {
+    return p.url;
+  }
+  const slug = (p.slug || p.id || "").replace(/\.html$/, "");
+  return `posts/${slug}.html`;
+}
+
+function renderSelectedNodePostsStrip(nodeData) {
+  const strip = document.getElementById("nodemap-posts-strip");
+  if (!strip) return;
+
+  if (!nodeData) {
+    strip.innerHTML = "";
+    return;
+  }
+
+  const posts = getPostsForNode(nodeData);
+
+  if (posts.length === 0) {
+    strip.innerHTML = "";
+    return;
+  }
+
+  strip.innerHTML = posts.map((p, idx) => {
+    const postUrl = getPostUrl(p);
+    const bgStyle = p.image ? `background-image: url('${p.image}');` : '';
+    const safeTitle = (p.title || "Read Dispatch").replace(/"/g, '&quot;');
+    const safeReadTime = p.read_time ? ` • ${p.read_time}` : '';
+
+    return `
+      <a href="${postUrl}" class="nodemap-post-card" style="--card-idx: ${idx}; ${bgStyle}" title="${safeTitle}${safeReadTime}" target="_self">
+        <div class="nodemap-post-card-inner">
+          <span class="nodemap-post-card-label">READ<br>DISPATCH</span>
+        </div>
+      </a>
+    `;
+  }).join("");
+}
+
 function updateThreeRaycasting() {
   if (!threeRaycaster || !threeCamera || !threeNodesGroup) return;
 
@@ -1074,8 +1159,11 @@ function updateThreeRaycasting() {
     hoveredThreeNode = newHovered;
 
     threeNodes.forEach(n => {
-      if (hoveredThreeNode && (n === hoveredThreeNode || (hoveredThreeNode.neighbors && hoveredThreeNode.neighbors.has(n)))) {
-        const s = n === hoveredThreeNode ? 1.45 : 1.22;
+      const isTarget = hoveredThreeNode
+        ? (n === hoveredThreeNode || (hoveredThreeNode.neighbors && hoveredThreeNode.neighbors.has(n)))
+        : (activeNodeFilter && n.data === activeNodeFilter);
+      if (isTarget) {
+        const s = (hoveredThreeNode && n === hoveredThreeNode) || (activeNodeFilter && n.data === activeNodeFilter) ? 1.45 : 1.22;
         n.mesh.scale.set(s, s, s);
       } else {
         n.mesh.scale.set(1, 1, 1);
@@ -1088,9 +1176,10 @@ function updateThreeRaycasting() {
       if (canvas) canvas.style.cursor = "default";
     }
 
-    // Only highlight lines connected to mouse-hovered node; keep the rest very subtle
+    // Highlight lines connected to mouse-hovered node or active selected node; keep rest very subtle
+    const targetItem = hoveredThreeNode || (activeNodeFilter ? threeNodes.find(n => n.data === activeNodeFilter) : null);
     threeLines.forEach(l => {
-      const isDirectConn = hoveredThreeNode && (l.fromItem === hoveredThreeNode || l.toItem === hoveredThreeNode);
+      const isDirectConn = targetItem && (l.fromItem === targetItem || l.toItem === targetItem);
       if (isDirectConn) {
         l.mesh.material.color.setHex(l.highlightColorHex);
         l.mesh.material.opacity = 0.95;
@@ -1105,30 +1194,66 @@ function updateThreeRaycasting() {
 }
 
 function updateThreeDockMetadata(nodeItem) {
+  const dock = document.getElementById("nodemap-hover-dock");
   const dockTitle = document.getElementById("dock-node-title");
   const dockDesc = document.getElementById("dock-node-desc");
   if (!dockTitle || !dockDesc) return;
 
-  if (nodeItem) {
-    const d = nodeItem.data;
-    if (d.type === "root") {
-      dockTitle.textContent = `[ 3D CORE: ${d.label} ]`;
-      dockDesc.textContent = `Central taxonomy core connecting ${d.postsCount} dispatches across pillars and subtopics.`;
-    } else if (d.type === "pillar") {
-      dockTitle.textContent = `[ 3D PILLAR: ${d.label} ]`;
-      dockDesc.textContent = `Major intellectual pillar with ${d.postsCount} dispatch${d.postsCount > 1 ? 'es' : ''}. Click to explore in Timeline.`;
-    } else if (d.type === "subtopic") {
-      dockTitle.textContent = `[ 3D SUBTOPIC: ${d.label} ]`;
-      dockDesc.textContent = `Subtopic under [${d.pillar}] with ${d.postsCount} dispatch${d.postsCount > 1 ? 'es' : ''}. Click to explore in Timeline.`;
+  const targetData = (nodeItem && nodeItem.data) ? nodeItem.data : (activeNodeFilter || null);
+  const isSelected = activeNodeFilter && targetData === activeNodeFilter;
+
+  if (dock) {
+    if (activeNodeFilter) {
+      dock.classList.add("is-active-node");
     } else {
-      const pStr = (d.pillars || []).join(" • ");
-      const subStr = (d.subtopics || []).slice(0, 2).join(" • ");
-      dockTitle.textContent = `[ 3D TAG: ${d.label} ]`;
-      dockDesc.textContent = `Tag node with ${d.postsCount} dispatch${d.postsCount > 1 ? 'es' : ''}${subStr ? ' • ' + subStr : (pStr ? ' across ' + pStr : '')}. Click to filter in Timeline.`;
+      dock.classList.remove("is-active-node");
     }
-  } else if (!activeNodeFilter) {
-    dockTitle.textContent = "[ 3D TAXONOMY CONSTELLATION ]";
-    dockDesc.textContent = "Drag to rotate 3D constellation. Scroll to zoom. Hover over nodes to inspect network connections. Click to filter.";
+  }
+
+  if (targetData) {
+    const posts = getPostsForNode(targetData);
+    const count = posts.length;
+    const countStr = `${count} dispatch${count !== 1 ? 'es' : ''}`;
+    const titlesPreview = posts.slice(0, 2).map(p => p.title).join(" • ");
+
+    if (targetData.type === "root") {
+      const badgeHtml = isSelected
+        ? `<span class="dock-highlight-badge">${targetData.label}</span>`
+        : targetData.label;
+      dockTitle.innerHTML = `[ 3D CORE: ${badgeHtml} ]`;
+      dockDesc.textContent = isSelected
+        ? `Central taxonomy core with ${countStr}. Click any card to read dispatch.`
+        : `Central taxonomy core connecting ${countStr} across pillars and subtopics. Click to inspect dispatches.`;
+    } else if (targetData.type === "pillar") {
+      const badgeHtml = isSelected
+        ? `<span class="dock-highlight-badge">${targetData.label.toUpperCase()}</span>`
+        : targetData.label.toUpperCase();
+      dockTitle.innerHTML = `[ 3D PILLAR: ${badgeHtml} ]`;
+      dockDesc.textContent = isSelected
+        ? `Pillar node with ${countStr} — ${titlesPreview}. Click card to read dispatch.`
+        : `Major intellectual pillar with ${countStr}. Click to load dispatches.`;
+    } else if (targetData.type === "subtopic") {
+      const badgeHtml = isSelected
+        ? `<span class="dock-highlight-badge">${targetData.label.toUpperCase()}</span>`
+        : targetData.label.toUpperCase();
+      dockTitle.innerHTML = `[ 3D SUBTOPIC: ${badgeHtml} ]`;
+      dockDesc.textContent = isSelected
+        ? `Subtopic under [${targetData.pillar || 'TAXONOMY'}] with ${countStr} — ${titlesPreview}. Click card to read dispatch.`
+        : `Subtopic under [${targetData.pillar || 'TAXONOMY'}] with ${countStr}. Click to load dispatches.`;
+    } else {
+      const raw = targetData.rawTag || targetData.label || "";
+      const cleanTag = raw.startsWith("#") ? raw.toUpperCase() : `#${raw.toUpperCase()}`;
+      const badgeHtml = isSelected
+        ? `<span class="dock-highlight-badge">${cleanTag}</span>`
+        : cleanTag;
+      dockTitle.innerHTML = `[ 3D TAG: ${badgeHtml} ]`;
+      dockDesc.textContent = isSelected
+        ? `Tag node with ${countStr} — ${titlesPreview}. Click card to read dispatch.`
+        : `Tag node with ${countStr}. Click to load dispatches.`;
+    }
+  } else {
+    dockTitle.innerHTML = "[ 3D TAXONOMY CONSTELLATION ]";
+    dockDesc.textContent = "Drag to rotate 3D constellation. Scroll to zoom. Hover over nodes to inspect network connections. Click a node to view dispatches.";
   }
 }
 
@@ -1145,30 +1270,33 @@ function onThreeMouseClick() {
   const clickedData = hoveredThreeNode.data;
 
   if (activeNodeFilter === clickedData) {
+    // Deselect if already selected
     activeNodeFilter = null;
     activeTagFilter = null;
     setNodeFilterUIState(false);
+    renderSelectedNodePostsStrip(null);
+    updateThreeDockMetadata(hoveredThreeNode);
   } else {
+    // Select clicked node
     activeNodeFilter = clickedData;
     if (clickedData.type === "pillar" || clickedData.type === "subtopic") {
       activeTagFilter = clickedData.label;
     } else if (clickedData.type === "tag") {
       activeTagFilter = clickedData.rawTag;
     } else {
-      activeTagFilter = null;
+      activeTagFilter = "all";
     }
 
-    if (activeTagFilter) {
-      setNodeFilterUIState(true, activeTagFilter);
-      window.location.href = `archive.html?tag=${encodeURIComponent(activeTagFilter)}`;
-    } else {
-      setNodeFilterUIState(false);
-    }
+    setNodeFilterUIState(true, activeTagFilter);
+    renderSelectedNodePostsStrip(clickedData);
+    updateThreeDockMetadata(hoveredThreeNode);
   }
 }
 
 function onThreeMouseLeave() {
   threeMouse.set(-999, -999);
+  hoveredThreeNode = null;
+  updateThreeDockMetadata(null);
 }
 
 function onThreeWindowResize() {
