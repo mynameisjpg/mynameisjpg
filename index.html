@@ -91,6 +91,8 @@
     <!-- COMPONENT 3: ASYMMETRIC GRID MATRIX (50% Column)
          File: css/components/card-matrix.css -->
     <section class="grid-column" data-component="dispatch-matrix" aria-label="Dispatch Grid Matrix">
+      <!-- Ambient Canvas Layer (Central Coral Glow & Digital Glitch Artifacts) -->
+      <canvas id="matrix-glitch-canvas" class="matrix-glitch-canvas" aria-hidden="true"></canvas>
 
       <!-- UNIFIED MATRIX HEADER (LEGEND & CONTROLS ALIGNED) -->
       <div class="matrix-header-group">
@@ -198,6 +200,8 @@
 
   <!-- Dynamic Posts Feed (Auto-compiled from _posts/*.md) -->
   <script src="posts.js"></script>
+  <!-- Ambient Digital Glitch & Radial Glow Engine -->
+  <script src="js/components/glitch-background.js"></script>
   <!-- Client-Side Application Script -->
   <script src="app.js"></script>
 </body>

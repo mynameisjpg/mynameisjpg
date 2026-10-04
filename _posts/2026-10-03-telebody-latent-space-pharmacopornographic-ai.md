@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 title: "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization"
+=======
+title: "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization"
+>>>>>>> 485f64d42154c27a820b32ce680422d71f1d0825
 subtitle: "How generative AI operates as an invasive third vector of somatic-cognitive control, accelerating the proletarianization of the mind and the algorithmic automation of reality."
 excerpt: "Updating Paul B. Preciado's pharmacopornographic politics for generative AI, Bernard Stiegler's cognitive proletarianization, and Byung-Chul Han's psychopolitics. How the telebody resists automated reality through dysphoria, glitch, and neganthropic worldmaking."
 

@@ -11,7 +11,7 @@ let POSTS_DATABASE = {};
 
 function ingestPostList(postsArray) {
   if (!Array.isArray(postsArray)) return;
-  postsArray.forEach(p => {
+  postsArray.forEach((p) => {
     const key = p.slug || p.id || p.sys_id;
     if (key) {
       POSTS_DATABASE[key] = p;
@@ -73,23 +73,62 @@ function matchesPillar(post, query) {
   const pillar = String(post.pillar || "").toLowerCase();
   const subtopic = String(post.subtopic || "").toLowerCase();
   const category = String(post.category || "").toLowerCase();
-  const tags = Array.isArray(post.tags) ? post.tags.map(t => String(t).toLowerCase()).join(" ") : "";
+  const tags = Array.isArray(post.tags)
+    ? post.tags.map((t) => String(t).toLowerCase()).join(" ")
+    : "";
 
   // 1. Direct substring match
   if (pillar.includes(q)) return true;
 
   // 2. Canonical Pillar Aliases
-  if ((q.includes("visual") && q.includes("perception")) || q === "pillar 1" || q === "1") {
-    return pillar.includes("visual perception") || pillar.includes("psychophysics");
+  if (
+    (q.includes("visual") && q.includes("perception")) ||
+    q === "pillar 1" ||
+    q === "1"
+  ) {
+    return (
+      pillar.includes("visual perception") || pillar.includes("psychophysics")
+    );
   }
-  if ((q.includes("ai") && (q.includes("perception") || q.includes("vision") || q.includes("machine"))) || q === "pillar 2" || q === "2") {
-    return pillar.includes("ai perception") || pillar.includes("machine vision") || pillar.includes("generative");
+  if (
+    (q.includes("ai") &&
+      (q.includes("perception") ||
+        q.includes("vision") ||
+        q.includes("machine"))) ||
+    q === "pillar 2" ||
+    q === "2"
+  ) {
+    return (
+      pillar.includes("ai perception") ||
+      pillar.includes("machine vision") ||
+      pillar.includes("generative")
+    );
   }
-  if (q.includes("language") || q.includes("llm") || q.includes("cognitive") || q === "pillar 3" || q === "3") {
-    return pillar.includes("language") || pillar.includes("llm") || pillar.includes("cognitive");
+  if (
+    q.includes("language") ||
+    q.includes("llm") ||
+    q.includes("cognitive") ||
+    q === "pillar 3" ||
+    q === "3"
+  ) {
+    return (
+      pillar.includes("language") ||
+      pillar.includes("llm") ||
+      pillar.includes("cognitive")
+    );
   }
-  if (q.includes("philosophy") || q.includes("image") || q.includes("culture") || q === "pillar 4" || q === "4") {
-    return pillar.includes("philosophy") || pillar.includes("image") || pillar.includes("culture");
+  if (
+    q.includes("philosophy") ||
+    q.includes("image") ||
+    q.includes("culture") ||
+    q === "pillar 4" ||
+    q === "4"
+  ) {
+    return (
+      pillar.includes("philosophy") ||
+      pillar.includes("image") ||
+      pillar.includes("culture")
+    );
   }
 
   // 3. Match against subtopic, category, or tags
@@ -107,7 +146,7 @@ function getFilteredAndSortedPosts() {
   const uniquePosts = [];
   const seen = new Set();
 
-  Object.values(POSTS_DATABASE).forEach(post => {
+  Object.values(POSTS_DATABASE).forEach((post) => {
     const uniqueKey = post.slug || post.id || post.sys_id;
     const statusStr = (post.status || "published").toLowerCase();
     const isPublished = statusStr === "published" || statusStr === "active";
@@ -118,12 +157,19 @@ function getFilteredAndSortedPosts() {
   });
 
   // Filter by Format, Pillar & Search Query
-  let filtered = uniquePosts.filter(post => {
-    const postFormat = (post.format || "ESSAY").toLowerCase().trim().replace(/s$/, "");
-    const curFilter = (activeFilter || "all").toLowerCase().trim().replace(/s$/, "");
+  let filtered = uniquePosts.filter((post) => {
+    const postFormat = (post.format || "ESSAY")
+      .toLowerCase()
+      .trim()
+      .replace(/s$/, "");
+    const curFilter = (activeFilter || "all")
+      .toLowerCase()
+      .trim()
+      .replace(/s$/, "");
     if (curFilter !== "all" && postFormat !== curFilter) return false;
 
-    if (activePillar !== "all" && !matchesPillar(post, activePillar)) return false;
+    if (activePillar !== "all" && !matchesPillar(post, activePillar))
+      return false;
 
     if (searchQuery.trim() !== "") {
       const q = searchQuery.toLowerCase().trim();
@@ -133,8 +179,18 @@ function getFilteredAndSortedPosts() {
       const matchPillar = (post.pillar || "").toLowerCase().includes(q);
       const matchSubtopic = (post.subtopic || "").toLowerCase().includes(q);
       const matchCategory = (post.category || "").toLowerCase().includes(q);
-      const matchTags = Array.isArray(post.tags) && post.tags.some(t => String(t).toLowerCase().includes(q));
-      if (!matchTitle && !matchSubtitle && !matchExcerpt && !matchPillar && !matchSubtopic && !matchCategory && !matchTags) {
+      const matchTags =
+        Array.isArray(post.tags) &&
+        post.tags.some((t) => String(t).toLowerCase().includes(q));
+      if (
+        !matchTitle &&
+        !matchSubtitle &&
+        !matchExcerpt &&
+        !matchPillar &&
+        !matchSubtopic &&
+        !matchCategory &&
+        !matchTags
+      ) {
         return false;
       }
     }
@@ -174,15 +230,19 @@ const ART_FALLBACKS = {
   coral: `<svg class="card-art-svg" viewBox="0 0 180 230"><rect width="180" height="230" fill="#E84A5F"/><rect x="25" y="30" width="65" height="55" fill="#C73649"/><rect x="105" y="45" width="50" height="105" fill="#FF7084"/><ellipse cx="78" cy="130" rx="30" ry="42" fill="#170508"/></svg>`,
   charcoal: `<svg class="card-art-svg" viewBox="0 0 180 255"><rect width="180" height="255" fill="#181818"/><path d="M90,35 Q130,55 125,120 Q120,185 145,255 L35,255 Q60,185 55,120 Q50,55 90,35 Z" fill="#757575"/><ellipse cx="90" cy="85" rx="24" ry="34" fill="#E0E0E0"/><rect x="150" y="30" width="9" height="9" fill="#E84A5F"/></svg>`,
   eye: `<svg class="card-art-svg" viewBox="0 0 180 205"><rect width="180" height="205" fill="#191919"/><ellipse cx="90" cy="85" rx="45" ry="60" fill="#8E8E8E"/><path d="M72,65 Q88,62 104,65 Q100,115 88,128 Q76,115 72,65 Z" fill="#E8E8E8"/></svg>`,
-  circle: `<svg class="card-art-svg" viewBox="0 0 180 185"><rect width="180" height="185" fill="#1B1B1B"/><ellipse cx="90" cy="92" rx="55" ry="36" fill="#808080"/><ellipse cx="90" cy="92" rx="45" ry="30" fill="#CCCCCC"/><circle cx="90" cy="92" r="22" fill="#141414"/><circle cx="90" cy="92" r="12" fill="#E84A5F"/></svg>`
+  circle: `<svg class="card-art-svg" viewBox="0 0 180 185"><rect width="180" height="185" fill="#1B1B1B"/><ellipse cx="90" cy="92" rx="55" ry="36" fill="#808080"/><ellipse cx="90" cy="92" rx="45" ry="30" fill="#CCCCCC"/><circle cx="90" cy="92" r="22" fill="#141414"/><circle cx="90" cy="92" r="12" fill="#E84A5F"/></svg>`,
 };
 
 /**
  * Dynamically Fetch posts.json (Live HTTP Server / Production Build)
  */
 async function loadDynamicPosts() {
-  const isSubdir = typeof window !== "undefined" && window.location.pathname.includes("/posts/");
-  const jsonPath = isSubdir ? "../posts.json?t=" + Date.now() : "posts.json?t=" + Date.now();
+  const isSubdir =
+    typeof window !== "undefined" &&
+    window.location.pathname.includes("/posts/");
+  const jsonPath = isSubdir
+    ? "../posts.json?t=" + Date.now()
+    : "posts.json?t=" + Date.now();
 
   try {
     const res = await fetch(jsonPath);
@@ -190,7 +250,9 @@ async function loadDynamicPosts() {
       const data = await res.json();
       if (Array.isArray(data) && data.length > 0) {
         ingestPostList(data);
-        console.log(`[UNTITLED.JPG] Loaded ${data.length} dispatches live from posts.json`);
+        console.log(
+          `[UNTITLED.JPG] Loaded ${data.length} dispatches live from posts.json`,
+        );
       }
     }
   } catch (err) {
@@ -202,8 +264,12 @@ async function loadDynamicPosts() {
   parseUrlParamsAndApply();
 
   // Check URL Hash or INITIAL_POST_SLUG for deep-link
-  const hash = (typeof window !== "undefined" && window.location && window.location.hash) ? window.location.hash.replace("#", "") : "";
-  const targetSlug = hash || (typeof window !== "undefined" ? window.INITIAL_POST_SLUG : "");
+  const hash =
+    typeof window !== "undefined" && window.location && window.location.hash
+      ? window.location.hash.replace("#", "")
+      : "";
+  const targetSlug =
+    hash || (typeof window !== "undefined" ? window.INITIAL_POST_SLUG : "");
 
   // Render Matrix Cards
   renderCardMatrix(true);
@@ -246,46 +312,66 @@ function renderCardMatrix(resetPagination = true) {
 
   const visiblePosts = allPosts.slice(0, matrixVisibleCount);
 
-  const ratios = ["h-tall-1", "h-tall-2", "h-med", "h-square", "h-wide", "h-tall-1"];
-  const fallbackArts = ["coral", "charcoal", "eye", "circle", "charcoal", "coral"];
+  const ratios = [
+    "h-tall-1",
+    "h-tall-2",
+    "h-med",
+    "h-square",
+    "h-wide",
+    "h-tall-1",
+  ];
+  const fallbackArts = [
+    "coral",
+    "charcoal",
+    "eye",
+    "circle",
+    "charcoal",
+    "coral",
+  ];
 
   const FORMAT_ICONS = {
     essay: `<svg viewBox="0 0 24 24" class="card-chip-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>`,
     note: `<svg viewBox="0 0 24 24" class="card-chip-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>`,
     bookmark: `<svg viewBox="0 0 24 24" class="card-chip-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>`,
-    resource: `<svg viewBox="0 0 24 24" class="card-chip-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>`
+    resource: `<svg viewBox="0 0 24 24" class="card-chip-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>`,
   };
 
-  container.innerHTML = visiblePosts.map((post, idx) => {
-    const key = post.slug || post.id || post.sys_id;
-    const ratio = post.aspect_ratio || ratios[idx % ratios.length];
-    const format = (post.format || "ESSAY").toLowerCase();
-    const isFeatured = Boolean(post.featured);
-    const artKey = fallbackArts[idx % fallbackArts.length];
-    const isSelected = key === activePostId || post.sys_id === activePostId;
-    const iconSvg = FORMAT_ICONS[format] || FORMAT_ICONS.essay;
+  container.innerHTML = visiblePosts
+    .map((post, idx) => {
+      const key = post.slug || post.id || post.sys_id;
+      const ratio = post.aspect_ratio || ratios[idx % ratios.length];
+      const format = (post.format || "ESSAY").toLowerCase();
+      const isFeatured = Boolean(post.featured);
+      const artKey = fallbackArts[idx % fallbackArts.length];
+      const isSelected = key === activePostId || post.sys_id === activePostId;
+      const iconSvg = FORMAT_ICONS[format] || FORMAT_ICONS.essay;
 
-    return `
-      <article class="grid-card ${isFeatured ? 'card-featured' : ''} ${isSelected ? 'selected-active' : ''}" data-id="${key}" data-format="${format}" tabindex="0" role="button" aria-pressed="${isSelected}">
+      return `
+      <article class="grid-card ${isFeatured ? "card-featured" : ""} ${isSelected ? "selected-active" : ""}" data-id="${key}" data-format="${format}" tabindex="0" role="button" aria-pressed="${isSelected}">
         <div class="card-art-box ${ratio}">
           <span class="card-type-chip chip-${format}">[${post.format}] ${iconSvg}</span>
-          ${isFeatured ? `<span class="card-featured-badge">★ FEATURED</span>` : ''}
-          ${post.image ? `
+          ${isFeatured ? `<span class="card-featured-badge" title="Featured" aria-label="Featured"><svg viewBox="0 0 24 24" class="card-featured-icon" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>` : ""}
+          ${
+            post.image
+              ? `
             <img src="${post.image}" alt="${post.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
             <div style="display:none;">${ART_FALLBACKS[artKey]}</div>
-          ` : ART_FALLBACKS[artKey]}
+          `
+              : ART_FALLBACKS[artKey]
+          }
           <div class="hover-meta-reveal">
-            <span class="meta-sub">${post.date} • ${post.read_time} • ${post.pillar || 'DISPATCH'}</span>
+            <span class="meta-sub">${post.date} • ${post.read_time} • ${post.pillar || "DISPATCH"}</span>
           </div>
         </div>
         <h2 class="card-caption">${post.title}</h2>
       </article>
     `;
-  }).join("");
+    })
+    .join("");
 
   // Re-attach Click & Key Event Handlers
   const cards = container.querySelectorAll(".grid-card");
-  cards.forEach(card => {
+  cards.forEach((card) => {
     const handler = () => {
       const postId = card.getAttribute("data-id");
       selectAndRenderPost(postId);
@@ -318,8 +404,10 @@ function loadMoreDispatches() {
  */
 function updateMatrixSentinel(loadedCount, totalCount) {
   let sentinel = document.getElementById("matrix-sentinel");
-  const matrixCol = document.querySelector(".grid-column") || document.querySelector("[data-component='dispatch-matrix']");
-  
+  const matrixCol =
+    document.querySelector(".grid-column") ||
+    document.querySelector("[data-component='dispatch-matrix']");
+
   if (!sentinel && matrixCol) {
     sentinel = document.createElement("div");
     sentinel.id = "matrix-sentinel";
@@ -377,19 +465,22 @@ function setupSentinelObserver() {
   if (!sentinel) return;
 
   if ("IntersectionObserver" in window) {
-    matrixObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const allPosts = getFilteredAndSortedPosts();
-          if (matrixVisibleCount < allPosts.length) {
-            loadMoreDispatches();
+    matrixObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const allPosts = getFilteredAndSortedPosts();
+            if (matrixVisibleCount < allPosts.length) {
+              loadMoreDispatches();
+            }
           }
-        }
-      });
-    }, { 
-      root: null,
-      rootMargin: "80px" 
-    });
+        });
+      },
+      {
+        root: null,
+        rootMargin: "80px",
+      },
+    );
 
     matrixObserver.observe(sentinel);
   }
@@ -403,7 +494,9 @@ function handleMatrixScroll() {
     const allPosts = getFilteredAndSortedPosts();
     if (matrixVisibleCount >= allPosts.length) return;
 
-    const matrixCol = document.querySelector(".grid-column") || document.querySelector("[data-component='dispatch-matrix']");
+    const matrixCol =
+      document.querySelector(".grid-column") ||
+      document.querySelector("[data-component='dispatch-matrix']");
     if (matrixCol) {
       const scrollBottom = matrixCol.scrollTop + matrixCol.clientHeight;
       const scrollHeight = matrixCol.scrollHeight;
@@ -444,7 +537,9 @@ function resetMatrixFilters() {
 function resetPage() {
   resetMatrixFilters();
 
-  const matrixCol = document.querySelector(".grid-column") || document.querySelector("[data-component='dispatch-matrix']");
+  const matrixCol =
+    document.querySelector(".grid-column") ||
+    document.querySelector("[data-component='dispatch-matrix']");
   if (matrixCol) matrixCol.scrollTop = 0;
   window.scrollTo({ top: 0, behavior: "smooth" });
 
@@ -473,12 +568,20 @@ function showGridFeedMobile() {
   }
   activePostId = "";
   const cards = document.querySelectorAll(".grid-card");
-  cards.forEach(c => {
+  cards.forEach((c) => {
     c.classList.remove("selected-active");
     c.setAttribute("aria-pressed", "false");
   });
-  if (typeof window !== "undefined" && window.history && window.history.replaceState) {
-    window.history.replaceState(null, "", window.location.pathname + window.location.search);
+  if (
+    typeof window !== "undefined" &&
+    window.history &&
+    window.history.replaceState
+  ) {
+    window.history.replaceState(
+      null,
+      "",
+      window.location.pathname + window.location.search,
+    );
   }
 }
 
@@ -486,29 +589,37 @@ function showGridFeedMobile() {
 let touchStartX = 0;
 let touchStartY = 0;
 
-document.addEventListener("touchstart", (e) => {
-  if (e.touches && e.touches.length > 0) {
-    touchStartX = e.touches[0].clientX;
-    touchStartY = e.touches[0].clientY;
-  }
-}, { passive: true });
+document.addEventListener(
+  "touchstart",
+  (e) => {
+    if (e.touches && e.touches.length > 0) {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }
+  },
+  { passive: true },
+);
 
-document.addEventListener("touchend", (e) => {
-  if (e.changedTouches && e.changedTouches.length > 0) {
-    const touchEndX = e.changedTouches[0].clientX;
-    const touchEndY = e.changedTouches[0].clientY;
-    const diffX = touchEndX - touchStartX;
-    const diffY = touchEndY - touchStartY;
+document.addEventListener(
+  "touchend",
+  (e) => {
+    if (e.changedTouches && e.changedTouches.length > 0) {
+      const touchEndX = e.changedTouches[0].clientX;
+      const touchEndY = e.changedTouches[0].clientY;
+      const diffX = touchEndX - touchStartX;
+      const diffY = touchEndY - touchStartY;
 
-    if (Math.abs(diffX) > 60 && Math.abs(diffX) > Math.abs(diffY) * 1.4) {
-      if (diffX < 0) {
-        showReaderPaneMobile();
-      } else {
-        showGridFeedMobile();
+      if (Math.abs(diffX) > 60 && Math.abs(diffX) > Math.abs(diffY) * 1.4) {
+        if (diffX < 0) {
+          showReaderPaneMobile();
+        } else {
+          showGridFeedMobile();
+        }
       }
     }
-  }
-}, { passive: true });
+  },
+  { passive: true },
+);
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
@@ -523,13 +634,19 @@ function selectAndRenderPost(postId, updateUrl = true) {
   if (!postId || !POSTS_DATABASE[postId]) return;
   activePostId = postId;
   const targetPost = POSTS_DATABASE[postId];
-  const rawSlug = targetPost ? (targetPost.slug || targetPost.id || targetPost.sys_id) : postId;
+  const rawSlug = targetPost
+    ? targetPost.slug || targetPost.id || targetPost.sys_id
+    : postId;
   const canonicalSlug = String(rawSlug).replace(/^\d{4}-\d{2}-\d{2}-/, "");
 
   const cards = document.querySelectorAll(".grid-card");
-  cards.forEach(c => {
+  cards.forEach((c) => {
     const cardId = c.getAttribute("data-id");
-    if (cardId === postId || (targetPost && (cardId === targetPost.slug || cardId === targetPost.sys_id))) {
+    if (
+      cardId === postId ||
+      (targetPost &&
+        (cardId === targetPost.slug || cardId === targetPost.sys_id))
+    ) {
       c.classList.add("selected-active");
       c.setAttribute("aria-pressed", "true");
     } else {
@@ -550,7 +667,12 @@ function selectAndRenderPost(postId, updateUrl = true) {
   }
 
   // Update URL Hash for direct deep-linking
-  if (updateUrl && typeof window !== "undefined" && window.history && window.history.replaceState) {
+  if (
+    updateUrl &&
+    typeof window !== "undefined" &&
+    window.history &&
+    window.history.replaceState
+  ) {
     window.history.replaceState(null, "", "#" + canonicalSlug);
   }
 }
@@ -567,13 +689,21 @@ function closeReaderPane() {
   }
 
   const cards = document.querySelectorAll(".grid-card");
-  cards.forEach(c => {
+  cards.forEach((c) => {
     c.classList.remove("selected-active");
     c.setAttribute("aria-pressed", "false");
   });
 
-  if (typeof window !== "undefined" && window.history && window.history.replaceState) {
-    window.history.replaceState(null, "", window.location.pathname + window.location.search);
+  if (
+    typeof window !== "undefined" &&
+    window.history &&
+    window.history.replaceState
+  ) {
+    window.history.replaceState(
+      null,
+      "",
+      window.location.pathname + window.location.search,
+    );
   }
 }
 
@@ -581,14 +711,25 @@ function closeReaderPane() {
  * Helper to get canonical permanent URL without dates in the slug
  */
 function getCanonicalPostUrl(postOrId) {
-  const post = (typeof postOrId === "object" && postOrId) ? postOrId : (POSTS_DATABASE[postOrId] || (activePostId ? POSTS_DATABASE[activePostId] : null));
-  const raw = post ? (post.slug || post.id || post.sys_id || postOrId) : postOrId;
+  const post =
+    typeof postOrId === "object" && postOrId
+      ? postOrId
+      : POSTS_DATABASE[postOrId] ||
+        (activePostId ? POSTS_DATABASE[activePostId] : null);
+  const raw = post ? post.slug || post.id || post.sys_id || postOrId : postOrId;
   const clean = String(raw || "").replace(/^\d{4}-\d{2}-\d{2}-/, "");
-  
-  if (typeof window !== "undefined" && window.location && window.location.origin) {
+
+  if (
+    typeof window !== "undefined" &&
+    window.location &&
+    window.location.origin
+  ) {
     const origin = window.location.origin;
     // Extract base pathname removing any /posts/... or index.html
-    const basePath = window.location.pathname.replace(/\/posts\/.*$/, "/").replace(/\/index\.html$/, "/").replace(/\/$/, "");
+    const basePath = window.location.pathname
+      .replace(/\/posts\/.*$/, "/")
+      .replace(/\/index\.html$/, "/")
+      .replace(/\/$/, "");
     return `${origin}${basePath}/posts/${clean}.html`;
   }
   return `https://mynameisjpg.github.io/posts/${clean}.html`;
@@ -627,25 +768,29 @@ function renderPost(postId) {
         <!-- TIER 1: ABOVE TITLE ARCHIVAL BADGES -->
         <header class="post-header-meta-top">
           <span class="meta-chip chip-primary">[${post.format}]</span>
-          ${post.category ? `<a href="network.html?tag=${encodeURIComponent(post.category)}" class="meta-chip meta-chip-category" title="Explore ${post.category} in Taxonomy Node Map">[${post.category}]</a>` : ''}
-          ${post.media ? `<span class="meta-chip meta-chip-media">[MEDIA: ${post.media}]</span>` : ''}
-          ${post.pillar ? `<a href="network.html?tag=${encodeURIComponent(post.pillar)}" class="meta-chip" title="Explore ${post.pillar} in Taxonomy Node Map">[${post.pillar}]</a>` : ''}
-          ${post.subtopic ? `<a href="network.html?tag=${encodeURIComponent(post.subtopic)}" class="meta-chip" title="Explore ${post.subtopic} in Taxonomy Node Map">[${post.subtopic}]</a>` : ''}
+          ${post.category ? `<a href="network.html?tag=${encodeURIComponent(post.category)}" class="meta-chip meta-chip-category" title="Explore ${post.category} in Taxonomy Node Map">[${post.category}]</a>` : ""}
+          ${post.media ? `<span class="meta-chip meta-chip-media">[MEDIA: ${post.media}]</span>` : ""}
+          ${post.pillar ? `<a href="network.html?tag=${encodeURIComponent(post.pillar)}" class="meta-chip" title="Explore ${post.pillar} in Taxonomy Node Map">[${post.pillar}]</a>` : ""}
+          ${post.subtopic ? `<a href="network.html?tag=${encodeURIComponent(post.subtopic)}" class="meta-chip" title="Explore ${post.subtopic} in Taxonomy Node Map">[${post.subtopic}]</a>` : ""}
         </header>
 
         <!-- TITLE & SUBTITLE -->
         <h1 class="post-title essay-title">${post.title}</h1>
-        ${post.subtitle ? `<p class="post-subtitle essay-subtitle">${post.subtitle}</p>` : ''}
+        ${post.subtitle ? `<p class="post-subtitle essay-subtitle">${post.subtitle}</p>` : ""}
 
-        ${post.url ? `
+        ${
+          post.url
+            ? `
           <!-- PROMINENT ACTION LINK (FOR RESOURCES & BOOKMARKS) -->
           <div class="post-prominent-action">
             <a href="${post.url}" target="_blank" rel="noopener noreferrer" class="btn-prominent-action">
-              <span class="action-kicker">${post.format === 'RESOURCE' ? 'ACCESS RESOURCE ↗' : (post.format === 'BOOKMARK' ? 'VIEW SOURCE ↗' : 'VISIT DESTINATION ↗')}</span>
+              <span class="action-kicker">${post.format === "RESOURCE" ? "ACCESS RESOURCE ↗" : post.format === "BOOKMARK" ? "VIEW SOURCE ↗" : "VISIT DESTINATION ↗"}</span>
               <span class="action-url-text">${post.url}</span>
             </a>
           </div>
-        ` : ''}
+        `
+            : ""
+        }
 
         <!-- TIER 2: BELOW TITLE META BAR -->
         <div class="post-header-meta-bottom">
@@ -654,7 +799,7 @@ function renderPost(postId) {
           <span>BY: <strong class="meta-author">${post.author}</strong></span>
           <span class="meta-sep">//</span>
           <span class="meta-readtime">${post.read_time}</span>
-          ${(post.source || post.via) ? `<span class="meta-sep">//</span><span>SOURCE: <strong class="meta-author">${post.source || post.via}</strong></span>` : ''}
+          ${post.source || post.via ? `<span class="meta-sep">//</span><span>SOURCE: <strong class="meta-author">${post.source || post.via}</strong></span>` : ""}
           <span class="meta-sep">//</span>
           <span>SYS_ID: <code>${post.sys_id}</code></span>
         </div>
@@ -666,44 +811,66 @@ function renderPost(postId) {
 
         <!-- TIER 3: FOOTER SECTION -->
         <footer class="post-footer-section">
-          ${post.links && post.links.length > 0 ? `
+          ${
+            post.links && post.links.length > 0
+              ? `
             <section class="footer-block footer-links">
               <h3 class="footer-block-title">// REFERENCED_RESOURCES &amp; DESTINATIONS</h3>
               <div class="resources-grid">
-                ${post.links.map(l => `
+                ${post.links
+                  .map(
+                    (l) => `
                   <div class="resource-card">
                     <div class="resource-card-header">
                       <span class="meta-chip resource-chip">[${l.type}]</span>
                       <a href="${l.url}" target="_blank" rel="noopener noreferrer"><strong>${l.title}</strong> ↗</a>
                     </div>
-                    ${l.desc ? `<p class="resource-card-desc">${l.desc}</p>` : ''}
+                    ${l.desc ? `<p class="resource-card-desc">${l.desc}</p>` : ""}
                   </div>
-                `).join('')}
+                `,
+                  )
+                  .join("")}
               </div>
             </section>
-          ` : ''}
+          `
+              : ""
+          }
 
-          ${post.backlinks && post.backlinks.length > 0 ? `
+          ${
+            post.backlinks && post.backlinks.length > 0
+              ? `
             <section class="footer-block footer-backlinks">
               <h3 class="footer-block-title">// CONNECTED_DISPATCHES (NETWORK)</h3>
               <ul class="backlinks-list">
-                ${post.backlinks.map(b => `
-                  <li><a href="${b.slug}"><strong>${b.title}</strong></a> ${b.note ? `— <em>${b.note}</em>` : ''}</li>
-                `).join('')}
+                ${post.backlinks
+                  .map(
+                    (b) => `
+                  <li><a href="${b.slug}"><strong>${b.title}</strong></a> ${b.note ? `— <em>${b.note}</em>` : ""}</li>
+                `,
+                  )
+                  .join("")}
               </ul>
             </section>
-          ` : ''}
+          `
+              : ""
+          }
 
-          ${post.tags && post.tags.length > 0 ? `
+          ${
+            post.tags && post.tags.length > 0
+              ? `
             <section class="footer-block footer-tags">
               <h3 class="footer-block-title">// TAXONOMY_INDEX</h3>
               <div class="tags-group">
-                ${post.tags.map(t => `<a href="network.html?tag=${encodeURIComponent(t)}" class="tag-pill" title="Explore #${t} in Taxonomy Node Map">#${t}</a>`).join('')}
+                ${post.tags.map((t) => `<a href="network.html?tag=${encodeURIComponent(t)}" class="tag-pill" title="Explore #${t} in Taxonomy Node Map">#${t}</a>`).join("")}
               </div>
             </section>
-          ` : ''}
+          `
+              : ""
+          }
 
-          ${post.shareable !== false ? `
+          ${
+            post.shareable !== false
+              ? `
             <section class="footer-block footer-share">
               <div class="share-actions-bar">
                 <span class="share-caption">SHARE DISPATCH:</span>
@@ -715,15 +882,19 @@ function renderPost(postId) {
                 </button>
 
                 <!-- Embed Card Button -->
-                ${post.allow_embed !== false ? `
+                ${
+                  post.allow_embed !== false
+                    ? `
                   <button type="button" class="btn-share" onclick="copyEmbedCard('${postId}')" title="Copy HTML Embed Card">
                     <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                     <span>EMBED</span>
                   </button>
-                ` : ''}
+                `
+                    : ""
+                }
 
                 <!-- X / Twitter -->
-                <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title + ' — Untitled.jpg')}&url=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on X / Twitter">
+                <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title + " — Untitled.jpg")}&url=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on X / Twitter">
                   <svg viewBox="0 0 24 24"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
                   <span>X ↗</span>
                 </a>
@@ -747,7 +918,9 @@ function renderPost(postId) {
                 </button>
               </div>
             </section>
-          ` : ''}
+          `
+              : ""
+          }
 
           <div class="post-signoff">
             <code>UNTITLED.JPG // BUILT IN ZEROES AND ONES WITH THE BLOOD AND SWEAT OF JUAN P. GIUSEPPONI // 2026</code>
@@ -768,10 +941,17 @@ function renderPost(postId) {
           { left: "$$", right: "$$", display: true },
           { left: "$", right: "$", display: false },
           { left: "\\[", right: "\\]", display: true },
-          { left: "\\(", right: "\\)", display: false }
+          { left: "\\(", right: "\\)", display: false },
         ],
-        ignoredTags: ["script", "noscript", "style", "textarea", "pre", "option"],
-        throwOnError: false
+        ignoredTags: [
+          "script",
+          "noscript",
+          "style",
+          "textarea",
+          "pre",
+          "option",
+        ],
+        throwOnError: false,
       });
     } catch (err) {
       console.log("[KaTeX] Math render skipped:", err);
@@ -802,19 +982,23 @@ function renderPost(postId) {
           nodeBkg: isLight ? "#FFFFFF" : "#141414",
           primaryColor: isLight ? "#FFFFFF" : "#141414",
           primaryTextColor: isLight ? "#1B2427" : "#F5F5F5",
-          primaryBorderColor: isLight ? "rgba(0, 0, 0, 0.18)" : "rgba(255, 255, 255, 0.18)",
-          nodeBorder: isLight ? "rgba(0, 0, 0, 0.18)" : "rgba(255, 255, 255, 0.18)",
+          primaryBorderColor: isLight
+            ? "rgba(0, 0, 0, 0.18)"
+            : "rgba(255, 255, 255, 0.18)",
+          nodeBorder: isLight
+            ? "rgba(0, 0, 0, 0.18)"
+            : "rgba(255, 255, 255, 0.18)",
           clusterBkg: "transparent",
           clusterBorder: "none",
           lineColor: "#E84A5F",
           edgeLabelBackground: isLight ? "#DEE6E9" : "#0E0E0E",
           fontFamily: "'Azeret Mono', monospace",
-          fontSize: "12px"
+          fontSize: "12px",
         },
-        securityLevel: "loose"
+        securityLevel: "loose",
       });
       mermaid.run({
-        nodes: pane.querySelectorAll(".mermaid")
+        nodes: pane.querySelectorAll(".mermaid"),
       });
     } catch (err) {
       console.log("[Mermaid] Render skipped:", err);
@@ -833,8 +1017,8 @@ if (typeof marked !== "undefined" && marked.use) {
             return `<div class="mermaid-diagram-box"><pre class="mermaid">\n${code}\n</pre></div>`;
           }
           return false;
-        }
-      }
+        },
+      },
     });
   } catch (e) {
     console.log("[Marked] Custom renderer initialization skipped:", e);
@@ -853,7 +1037,7 @@ function initApp() {
   loadDynamicPosts();
 
   // Attach click handlers to any existing static cards in DOM
-  document.querySelectorAll(".grid-card").forEach(card => {
+  document.querySelectorAll(".grid-card").forEach((card) => {
     const handler = () => {
       const postId = card.getAttribute("data-id");
       selectAndRenderPost(postId);
@@ -868,7 +1052,9 @@ function initApp() {
   });
 
   // Attach Infinite Scroll Listeners
-  const matrixCol = document.querySelector(".grid-column") || document.querySelector("[data-component='dispatch-matrix']");
+  const matrixCol =
+    document.querySelector(".grid-column") ||
+    document.querySelector("[data-component='dispatch-matrix']");
   if (matrixCol) {
     matrixCol.addEventListener("scroll", handleMatrixScroll, { passive: true });
   }
@@ -892,13 +1078,17 @@ function initApp() {
   }
 
   // Static / Non-WebComponent Format Filter Fallback Handler
-  const staticNavLinks = document.querySelectorAll("nav:not(sidebar-rail nav) .nav-link-item");
-  staticNavLinks.forEach(link => {
+  const staticNavLinks = document.querySelectorAll(
+    "nav:not(sidebar-rail nav) .nav-link-item",
+  );
+  staticNavLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       const isGridPage = Boolean(document.getElementById("card-matrix"));
       if (isGridPage) {
         e.preventDefault();
-        const filter = (link.getAttribute("data-filter") || "all").toLowerCase().replace(/s$/, "");
+        const filter = (link.getAttribute("data-filter") || "all")
+          .toLowerCase()
+          .replace(/s$/, "");
         if (activeFilter === filter && filter !== "all") {
           applyCategoryFilter("all", true);
         } else {
@@ -924,7 +1114,7 @@ function initApp() {
       }
     });
 
-    filterDropdown.querySelectorAll(".dropdown-opt").forEach(opt => {
+    filterDropdown.querySelectorAll(".dropdown-opt").forEach((opt) => {
       opt.addEventListener("click", (e) => {
         e.stopPropagation();
         const selectedFilter = opt.getAttribute("data-filter") || "all";
@@ -950,11 +1140,11 @@ function initApp() {
       }
     });
 
-    sortDropdown.querySelectorAll(".dropdown-opt").forEach(opt => {
+    sortDropdown.querySelectorAll(".dropdown-opt").forEach((opt) => {
       opt.addEventListener("click", (e) => {
         e.stopPropagation();
         const selectedSort = opt.getAttribute("data-sort") || "recent";
-        const labelText = opt.textContent.replace(/^\[|\]$/g, '');
+        const labelText = opt.textContent.replace(/^\[|\]$/g, "");
         updateSortSelection(selectedSort, labelText, true);
         closeAllControlDropdowns();
       });
@@ -969,7 +1159,8 @@ function initApp() {
     searchInput.addEventListener("input", (e) => {
       searchQuery = e.target.value;
       if (clearSearchBtn) {
-        clearSearchBtn.style.display = searchQuery.trim() !== "" ? "inline-block" : "none";
+        clearSearchBtn.style.display =
+          searchQuery.trim() !== "" ? "inline-block" : "none";
       }
       updateBrowserUrl(true);
       renderCardMatrix(true);
@@ -1038,27 +1229,35 @@ function initApp() {
     });
   }
 
-  document.querySelectorAll("#dispatch-log-dropdown .dropdown-option, #top-filter-dropdown .dropdown-option").forEach(opt => {
-    opt.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const filter = (opt.getAttribute("data-filter") || "all").toLowerCase().replace(/s$/, "");
-      applyCategoryFilter(filter, true);
-      closeAllTopDropdowns();
-      closeAllControlDropdowns();
+  document
+    .querySelectorAll(
+      "#dispatch-log-dropdown .dropdown-option, #top-filter-dropdown .dropdown-option",
+    )
+    .forEach((opt) => {
+      opt.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const filter = (opt.getAttribute("data-filter") || "all")
+          .toLowerCase()
+          .replace(/s$/, "");
+        applyCategoryFilter(filter, true);
+        closeAllTopDropdowns();
+        closeAllControlDropdowns();
+      });
     });
-  });
 
-  document.querySelectorAll("#top-sort-dropdown .dropdown-option").forEach(opt => {
-    opt.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const sort = opt.getAttribute("data-sort") || "newest";
-      applyTopSort(sort);
-      closeAllTopDropdowns();
-      closeAllControlDropdowns();
+  document
+    .querySelectorAll("#top-sort-dropdown .dropdown-option")
+    .forEach((opt) => {
+      opt.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const sort = opt.getAttribute("data-sort") || "newest";
+        applyTopSort(sort);
+        closeAllTopDropdowns();
+        closeAllControlDropdowns();
+      });
     });
-  });
 
   // Browser back/forward navigation support
   window.addEventListener("popstate", () => {
@@ -1074,25 +1273,44 @@ function initApp() {
     renderCardMatrix(true);
   });
 
-  document.querySelectorAll(".btn-return-grid").forEach(btn => {
+  document.querySelectorAll(".btn-return-grid").forEach((btn) => {
     btn.addEventListener("click", showGridFeedMobile);
   });
 
   function scrollCurrentView(toBottom = false) {
     const splitLayout = document.querySelector(".split-layout");
-    const isReaderOpen = splitLayout && (splitLayout.classList.contains("reader-open") || splitLayout.classList.contains("mobile-reader-active"));
+    const isReaderOpen =
+      splitLayout &&
+      (splitLayout.classList.contains("reader-open") ||
+        splitLayout.classList.contains("mobile-reader-active"));
 
     if (isReaderOpen) {
       const pane = document.getElementById("essay-reading-pane");
       const wrapper = document.querySelector(".reader-scroll-wrapper");
-      if (pane) pane.scrollTo({ top: toBottom ? pane.scrollHeight : 0, behavior: "smooth" });
-      if (wrapper) wrapper.scrollTo({ top: toBottom ? wrapper.scrollHeight : 0, behavior: "smooth" });
+      if (pane)
+        pane.scrollTo({
+          top: toBottom ? pane.scrollHeight : 0,
+          behavior: "smooth",
+        });
+      if (wrapper)
+        wrapper.scrollTo({
+          top: toBottom ? wrapper.scrollHeight : 0,
+          behavior: "smooth",
+        });
     } else {
-      const gridCol = document.querySelector(".grid-column") || document.querySelector("[data-component='dispatch-matrix']");
+      const gridCol =
+        document.querySelector(".grid-column") ||
+        document.querySelector("[data-component='dispatch-matrix']");
       if (gridCol) {
-        gridCol.scrollTo({ top: toBottom ? gridCol.scrollHeight : 0, behavior: "smooth" });
+        gridCol.scrollTo({
+          top: toBottom ? gridCol.scrollHeight : 0,
+          behavior: "smooth",
+        });
       }
-      window.scrollTo({ top: toBottom ? document.documentElement.scrollHeight : 0, behavior: "smooth" });
+      window.scrollTo({
+        top: toBottom ? document.documentElement.scrollHeight : 0,
+        behavior: "smooth",
+      });
     }
   }
 
@@ -1113,13 +1331,17 @@ function initApp() {
   }
 
   // Subscribe Modal Form & Cancel Button Listeners
-  document.querySelectorAll("#subscribe-modal form, .modal-form").forEach(form => {
-    form.addEventListener("submit", handleSubscribeSubmit);
-  });
+  document
+    .querySelectorAll("#subscribe-modal form, .modal-form")
+    .forEach((form) => {
+      form.addEventListener("submit", handleSubscribeSubmit);
+    });
 
-  document.querySelectorAll("#subscribe-modal .btn-modal-cancel, .btn-modal-cancel").forEach(btn => {
-    btn.addEventListener("click", closeSubscribeModal);
-  });
+  document
+    .querySelectorAll("#subscribe-modal .btn-modal-cancel, .btn-modal-cancel")
+    .forEach((btn) => {
+      btn.addEventListener("click", closeSubscribeModal);
+    });
 
   // Start 6s post-load subscribe icon callout animation
   initSubscribeAnimation();
@@ -1132,8 +1354,10 @@ if (document.readyState === "loading") {
 }
 
 function closeAllControlDropdowns() {
-  document.querySelectorAll(".custom-select-dropdown").forEach(d => d.classList.remove("open"));
-  document.querySelectorAll(".btn-matrix-pill").forEach(b => {
+  document
+    .querySelectorAll(".custom-select-dropdown")
+    .forEach((d) => d.classList.remove("open"));
+  document.querySelectorAll(".btn-matrix-pill").forEach((b) => {
     b.setAttribute("aria-expanded", "false");
     b.classList.remove("active");
   });
@@ -1153,12 +1377,15 @@ function parseUrlParamsAndApply() {
     const cleanF = filterParam.toLowerCase().trim().replace(/s$/, "");
     const valid = ["all", "essay", "note", "bookmark", "resource"];
     if (valid.includes(cleanF) || valid.includes(filterParam.toLowerCase())) {
-      activeFilter = valid.includes(cleanF) ? cleanF : filterParam.toLowerCase();
+      activeFilter = valid.includes(cleanF)
+        ? cleanF
+        : filterParam.toLowerCase();
     }
   }
 
   // 2. Pillar filter (?pillar=visual-perception or ?topic=...)
-  const pillarParam = params.get("pillar") || params.get("topic") || params.get("subtopic");
+  const pillarParam =
+    params.get("pillar") || params.get("topic") || params.get("subtopic");
   if (pillarParam) {
     activePillar = pillarParam.toLowerCase().trim();
   }
@@ -1172,7 +1399,8 @@ function parseUrlParamsAndApply() {
     const inlineInput = document.getElementById("top-inline-search-input");
     const modalInput = document.getElementById("top-search-input");
     if (searchInput) searchInput.value = searchQuery;
-    if (clearBtn) clearBtn.style.display = searchQuery ? "inline-block" : "none";
+    if (clearBtn)
+      clearBtn.style.display = searchQuery ? "inline-block" : "none";
     if (inlineInput) inlineInput.value = searchQuery;
     if (modalInput) modalInput.value = searchQuery;
   }
@@ -1190,7 +1418,12 @@ function parseUrlParamsAndApply() {
  * Sync Browser URL with In-Memory State
  */
 function updateBrowserUrl(replace = false) {
-  if (typeof window === "undefined" || !window.history || !window.history.pushState) return;
+  if (
+    typeof window === "undefined" ||
+    !window.history ||
+    !window.history.pushState
+  )
+    return;
   const url = new URL(window.location.href);
 
   if (activeFilter && activeFilter !== "all") {
@@ -1221,7 +1454,10 @@ function updateBrowserUrl(replace = false) {
     url.searchParams.delete("sort");
   }
 
-  const newUrl = url.pathname + (url.search ? url.search : "") + (window.location.hash || "");
+  const newUrl =
+    url.pathname +
+    (url.search ? url.search : "") +
+    (window.location.hash || "");
   if (replace) {
     window.history.replaceState(null, "", newUrl);
   } else {
@@ -1234,14 +1470,18 @@ function updateBrowserUrl(replace = false) {
  */
 function syncFilterUIState() {
   const cleanFilter = (activeFilter || "all").toLowerCase().replace(/s$/, "");
-  const navLinks = document.querySelectorAll("#category-filter-nav .nav-link-item, .sidebar-rail .nav-link-item");
+  const navLinks = document.querySelectorAll(
+    "#category-filter-nav .nav-link-item, .sidebar-rail .nav-link-item",
+  );
   const filterLabel = document.getElementById("active-filter-label");
   const filterValLabel = document.getElementById("current-filter-val");
   const sortValLabel = document.getElementById("current-sort-val");
   const dispatchLogBtn = document.getElementById("dispatch-log-btn");
 
-  navLinks.forEach(l => {
-    const lFilter = (l.getAttribute("data-filter") || "").toLowerCase().replace(/s$/, "");
+  navLinks.forEach((l) => {
+    const lFilter = (l.getAttribute("data-filter") || "")
+      .toLowerCase()
+      .replace(/s$/, "");
     if (cleanFilter !== "all" && lFilter === cleanFilter) {
       l.classList.add("active");
     } else {
@@ -1251,21 +1491,35 @@ function syncFilterUIState() {
 
   const rail = document.querySelector("sidebar-rail");
   if (rail) {
-    rail.setAttribute("active-filter", cleanFilter !== "all" ? cleanFilter : "");
+    rail.setAttribute(
+      "active-filter",
+      cleanFilter !== "all" ? cleanFilter : "",
+    );
   }
 
   // Highlight dropdown options
-  document.querySelectorAll("#top-filter-dropdown .dropdown-option, #dispatch-log-dropdown .dropdown-option, #filter-dropdown .dropdown-opt").forEach(opt => {
-    const f = (opt.getAttribute("data-filter") || "all").toLowerCase().replace(/s$/, "");
-    opt.classList.toggle("active", f === cleanFilter);
-  });
+  document
+    .querySelectorAll(
+      "#top-filter-dropdown .dropdown-option, #dispatch-log-dropdown .dropdown-option, #filter-dropdown .dropdown-opt",
+    )
+    .forEach((opt) => {
+      const f = (opt.getAttribute("data-filter") || "all")
+        .toLowerCase()
+        .replace(/s$/, "");
+      opt.classList.toggle("active", f === cleanFilter);
+    });
 
   // Highlight sort dropdown options
-  document.querySelectorAll("#top-sort-dropdown .dropdown-option, #sort-dropdown .dropdown-opt").forEach(opt => {
-    const s = opt.getAttribute("data-sort") || "recent";
-    const isActiveSort = s === activeSort || (s === "newest" && activeSort === "recent");
-    opt.classList.toggle("active", isActiveSort);
-  });
+  document
+    .querySelectorAll(
+      "#top-sort-dropdown .dropdown-option, #sort-dropdown .dropdown-opt",
+    )
+    .forEach((opt) => {
+      const s = opt.getAttribute("data-sort") || "recent";
+      const isActiveSort =
+        s === activeSort || (s === "newest" && activeSort === "recent");
+      opt.classList.toggle("active", isActiveSort);
+    });
 
   if (filterValLabel) {
     const labels = {
@@ -1273,12 +1527,14 @@ function syncFilterUIState() {
       essay: "ESSAYS",
       note: "NOTES",
       bookmark: "BOOKMARKS",
-      resource: "RESOURCES"
+      resource: "RESOURCES",
     };
     if (activePillar !== "all") {
-      filterValLabel.textContent = `PILLAR: ${activePillar.toUpperCase().replace(/[-_]/g, ' ')}`;
+      filterValLabel.textContent = `PILLAR: ${activePillar.toUpperCase().replace(/[-_]/g, " ")}`;
     } else {
-      filterValLabel.textContent = labels[cleanFilter] || (cleanFilter !== "all" ? cleanFilter.toUpperCase() : "ALL POSTS");
+      filterValLabel.textContent =
+        labels[cleanFilter] ||
+        (cleanFilter !== "all" ? cleanFilter.toUpperCase() : "ALL POSTS");
     }
   }
 
@@ -1287,19 +1543,22 @@ function syncFilterUIState() {
       recent: "MOST RECENT",
       oldest: "OLDEST FIRST",
       title: "ALPHABETICAL",
-      readtime: "READING TIME"
+      readtime: "READING TIME",
     };
     sortValLabel.textContent = sortLabels[activeSort] || "MOST RECENT";
   }
 
   if (dispatchLogBtn) {
-    const label = cleanFilter === "all" ? "_DISPATCH_LOG" : `_${cleanFilter.toUpperCase()}S`;
+    const label =
+      cleanFilter === "all"
+        ? "_DISPATCH_LOG"
+        : `_${cleanFilter.toUpperCase()}S`;
     dispatchLogBtn.innerHTML = `${label} &#9660;`;
   }
 
   if (filterLabel) {
     if (activePillar !== "all") {
-      filterLabel.textContent = `[PILLAR: ${activePillar.toUpperCase().replace(/[-_]/g, ' ')}]`;
+      filterLabel.textContent = `[PILLAR: ${activePillar.toUpperCase().replace(/[-_]/g, " ")}]`;
     } else {
       filterLabel.textContent = `[MODE: ${cleanFilter.toUpperCase()}_DISPATCHES]`;
     }
@@ -1338,7 +1597,10 @@ function updateSortSelection(sortKey, sortLabel, updateHistory = true) {
 
 function positionDropdown(panel, btn) {
   if (!panel) return;
-  if (panel.id === "top-search-dropdown" && (window.innerWidth <= 590 || !btn || btn.offsetParent === null)) {
+  if (
+    panel.id === "top-search-dropdown" &&
+    (window.innerWidth <= 590 || !btn || btn.offsetParent === null)
+  ) {
     panel.style.left = "50%";
     panel.style.right = "auto";
     panel.style.transform = "translateX(-50%)";
@@ -1408,8 +1670,20 @@ function toggleTopSortDropdown() {
 }
 
 function closeAllTopDropdowns(exceptId = null) {
-  const dropdowns = ["dispatch-log-dropdown", "top-search-dropdown", "top-filter-dropdown", "top-sort-dropdown", "top-nav-hamburger-dropdown"];
-  const btns = ["dispatch-log-btn", "top-navbar-search-btn", "top-navbar-filter-btn", "top-navbar-sort-btn", "top-nav-hamburger-btn"];
+  const dropdowns = [
+    "dispatch-log-dropdown",
+    "top-search-dropdown",
+    "top-filter-dropdown",
+    "top-sort-dropdown",
+    "top-nav-hamburger-dropdown",
+  ];
+  const btns = [
+    "dispatch-log-btn",
+    "top-navbar-search-btn",
+    "top-navbar-filter-btn",
+    "top-navbar-sort-btn",
+    "top-nav-hamburger-btn",
+  ];
 
   dropdowns.forEach((id, idx) => {
     if (id !== exceptId) {
@@ -1468,7 +1742,9 @@ if (typeof window !== "undefined") {
 
 // Close top dropdowns on click outside
 document.addEventListener("click", (e) => {
-  const isTopNav = e.target.closest(".sidebar-rail") || e.target.closest(".top-dropdown-panel");
+  const isTopNav =
+    e.target.closest(".sidebar-rail") ||
+    e.target.closest(".top-dropdown-panel");
   if (!isTopNav) {
     closeAllTopDropdowns();
   }
@@ -1478,7 +1754,11 @@ document.addEventListener("click", (e) => {
  * Helper to escape HTML characters
  */
 function escapeHtml(str) {
-  return (str || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  return (str || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 }
 
 /**
@@ -1569,7 +1849,10 @@ function ensureSubscribeModal() {
     });
   }
 
-  if (!modal.querySelector("#subscriber-name") && !modal.querySelector(".modal-confirmation-card")) {
+  if (
+    !modal.querySelector("#subscriber-name") &&
+    !modal.querySelector(".modal-confirmation-card")
+  ) {
     renderSubscribeForm(modal);
   }
 
@@ -1577,8 +1860,9 @@ function ensureSubscribeModal() {
 }
 
 function openSubscribeModal() {
-  const subscribeBtn = document.getElementById("sidebar-subscribe-btn") ||
-                       document.querySelector('a[aria-label="Subscribe"]');
+  const subscribeBtn =
+    document.getElementById("sidebar-subscribe-btn") ||
+    document.querySelector('a[aria-label="Subscribe"]');
   if (subscribeBtn) {
     subscribeBtn.classList.remove("subscribe-ring-vibrate");
     subscribeBtn.classList.add("subscribe-coral-active");
@@ -1586,7 +1870,10 @@ function openSubscribeModal() {
   const modal = ensureSubscribeModal();
   if (modal) {
     // Reset to form view if previously left on confirmation or empty
-    if (!modal.querySelector("#subscriber-name") || modal.querySelector(".modal-confirmation-card")) {
+    if (
+      !modal.querySelector("#subscriber-name") ||
+      modal.querySelector(".modal-confirmation-card")
+    ) {
       renderSubscribeForm(modal);
     }
     if (typeof modal.showModal === "function") {
@@ -1605,17 +1892,19 @@ function initSubscribeAnimation() {
   const ANIMATION_DURATION_MS = 4500;
 
   setTimeout(() => {
-    const subscribeTargets = document.querySelectorAll('#sidebar-subscribe-btn, a[aria-label="Subscribe"], a[title*="Subscribe"]');
+    const subscribeTargets = document.querySelectorAll(
+      '#sidebar-subscribe-btn, a[aria-label="Subscribe"], a[title*="Subscribe"]',
+    );
     if (!subscribeTargets || subscribeTargets.length === 0) return;
 
-    subscribeTargets.forEach(el => {
+    subscribeTargets.forEach((el) => {
       el.classList.add("subscribe-ring-vibrate");
       const svg = el.querySelector("svg");
       if (svg) svg.classList.add("subscribe-ring-vibrate");
     });
 
     const onAnimationDone = () => {
-      subscribeTargets.forEach(el => {
+      subscribeTargets.forEach((el) => {
         el.classList.remove("subscribe-ring-vibrate");
         el.classList.add("subscribe-coral-active");
         const svg = el.querySelector("svg");
@@ -1638,7 +1927,8 @@ function closeSubscribeModal() {
 }
 
 // Public Google Form response endpoint
-let GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLScWoT07kZjH1m5Mu1zrK4l_eFpzOytLler0cwd0j4yQTXYDJQ/formResponse";
+let GOOGLE_FORM_ACTION_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLScWoT07kZjH1m5Mu1zrK4l_eFpzOytLler0cwd0j4yQTXYDJQ/formResponse";
 const GOOGLE_FORM_EMAIL_ENTRY_ID = "entry.1020667952";
 const GOOGLE_FORM_NAME_ENTRY_ID = "entry.1290617359";
 
@@ -1646,14 +1936,18 @@ async function handleSubscribeSubmit(event) {
   event.preventDefault();
   const nameInput = document.getElementById("subscriber-name");
   const emailInput = document.getElementById("subscriber-email");
-  const submitBtn = event.target ? event.target.querySelector('button[type="submit"]') : null;
+  const submitBtn = event.target
+    ? event.target.querySelector('button[type="submit"]')
+    : null;
 
   const name = nameInput ? nameInput.value.trim() : "";
   const email = emailInput ? emailInput.value.trim() : "";
 
   if (!email) return;
 
-  const originalText = submitBtn ? submitBtn.textContent : "[ TRANSMIT SUBSCRIPTION ]";
+  const originalText = submitBtn
+    ? submitBtn.textContent
+    : "[ TRANSMIT SUBSCRIPTION ]";
   if (submitBtn) {
     submitBtn.textContent = "[ TRANSMITTING... ]";
     submitBtn.disabled = true;
@@ -1671,9 +1965,9 @@ async function handleSubscribeSubmit(event) {
       method: "POST",
       mode: "no-cors",
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: bodyParams
+      body: bodyParams,
     });
   } catch (err) {
     console.warn("[Subscription Notice]", err);
@@ -1689,41 +1983,59 @@ async function handleSubscribeSubmit(event) {
 function copyPostUrl(postId) {
   const url = getCanonicalPostUrl(postId);
   if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(url).then(() => {
-      alert(`[COPIED] Dispatch URL copied to clipboard:\n${url}`);
-    }).catch(() => {
-      prompt("Copy dispatch URL:", url);
-    });
+    navigator.clipboard
+      .writeText(url)
+      .then(() => {
+        alert(`[COPIED] Dispatch URL copied to clipboard:\n${url}`);
+      })
+      .catch(() => {
+        prompt("Copy dispatch URL:", url);
+      });
   } else {
     prompt("Copy dispatch URL:", url);
   }
 }
 
 function copyEmbedCard(postId) {
-  const post = postId ? POSTS_DATABASE[postId] : (activePostId ? POSTS_DATABASE[activePostId] : Object.values(POSTS_DATABASE)[0]);
+  const post = postId
+    ? POSTS_DATABASE[postId]
+    : activePostId
+      ? POSTS_DATABASE[activePostId]
+      : Object.values(POSTS_DATABASE)[0];
   if (!post) return;
   const currentUrl = getCanonicalPostUrl(post);
   const embedCode = `<div class="untitled-dispatch-embed" style="border:1px solid #333;background:#161616;color:#f5f5f5;padding:1.25rem;border-radius:2px;font-family:sans-serif;max-width:560px;">\n  <div style="font-family:monospace;font-size:0.75rem;color:#E84A5F;letter-spacing:0.08em;margin-bottom:0.4rem;">[ UNTITLED.JPG // ${post.format} ]</div>\n  <h3 style="margin:0 0 0.5rem 0;font-size:1.15rem;line-height:1.3;"><a href="${currentUrl}" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:none;">${post.title}</a></h3>\n  <p style="color:#cccccc;font-size:0.88rem;line-height:1.45;margin:0 0 0.75rem 0;">${post.subtitle}</p>\n  <div style="font-family:monospace;font-size:0.7rem;color:#888888;">BY ${post.author} (${post.posted_by}) • ${post.date} • ${post.read_time}</div>\n</div>`;
-  
+
   if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(embedCode).then(() => {
-      alert(`[COPIED] HTML Embed Card snippet copied to clipboard! You can paste this card into any website or blog.`);
-    }).catch(() => {
-      prompt("Copy HTML Embed code:", embedCode);
-    });
+    navigator.clipboard
+      .writeText(embedCode)
+      .then(() => {
+        alert(
+          `[COPIED] HTML Embed Card snippet copied to clipboard! You can paste this card into any website or blog.`,
+        );
+      })
+      .catch(() => {
+        prompt("Copy HTML Embed code:", embedCode);
+      });
   } else {
     prompt("Copy HTML Embed code:", embedCode);
   }
 }
 
 function shareInstagram(postId) {
-  const post = postId ? POSTS_DATABASE[postId] : (activePostId ? POSTS_DATABASE[activePostId] : Object.values(POSTS_DATABASE)[0]);
+  const post = postId
+    ? POSTS_DATABASE[postId]
+    : activePostId
+      ? POSTS_DATABASE[activePostId]
+      : Object.values(POSTS_DATABASE)[0];
   const url = getCanonicalPostUrl(post);
-  const storyText = `${post ? post.title : 'Untitled.jpg Dispatch'}\n\nRead full dispatch: ${url}`;
-  
+  const storyText = `${post ? post.title : "Untitled.jpg Dispatch"}\n\nRead full dispatch: ${url}`;
+
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(storyText).then(() => {
-      alert(`[INSTAGRAM / STORIES]\nDispatch link and title copied to clipboard for your story or bio link:\n\n${storyText}`);
+      alert(
+        `[INSTAGRAM / STORIES]\nDispatch link and title copied to clipboard for your story or bio link:\n\n${storyText}`,
+      );
     });
   } else {
     prompt("Copy dispatch text for Instagram story link:", storyText);

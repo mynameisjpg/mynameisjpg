@@ -5,10 +5,10 @@
 
 :root {
   /* 1. Color Tokens (Midnight Slate × Coral Crimson Palette) */
-  --bg-deep: #121212; /* Deep neutral charcoal black */
+  --bg-deep: #101010; /* Deep neutral charcoal black */
   --bg-panel: #161616; /* Neutral dark grey reader panel */
   --bg-card: #202020; /* Solid neutral grey card container */
-  --bg-card-hover: #262626; /* Card hover background */
+  /* --bg-card-hover: #262626; Card hover background */
   --accent-coral: #e84a5f; /* Signature Coral Crimson */
   --accent-coral-glow: rgba(232, 74, 95, 0.45);
   --accent-coral-subtle: rgba(232, 74, 95, 0.12);
@@ -30,7 +30,7 @@
   --bg-light-mode: #f5f5f5;
   --bg-light-card: #d5d5d5;
   --bg-light-card-hover: #c2c2c2;
-  --text-light-h: #212121;
+  --text-light-h: #121212;
   --text-light-body: #3b3b3b;
   --text-light-muted: #616161;
   --border-light: rgba(0, 0, 0, 0.12);
@@ -84,7 +84,7 @@
   /* 7. Animation & Transitions */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
-  --transition-spring: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-spring: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 
   /* 8. Layering & Z-Index Tokens */
   --z-base: 1;

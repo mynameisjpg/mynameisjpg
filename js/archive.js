@@ -924,11 +924,11 @@ function initThreeJSNodeMap() {
 
   // 1. Scene setup
   threeScene = new THREE.Scene();
-  threeScene.fog = new THREE.FogExp2(0x121212, 0.0012);
+  threeScene.fog = new THREE.FogExp2(0x050507, 0.00085);
 
   // 2. Camera setup
-  threeCamera = new THREE.PerspectiveCamera(45, w / h, 1, 2000);
-  threeCamera.position.set(0, 15, 340);
+  threeCamera = new THREE.PerspectiveCamera(45, w / h, 1, 2400);
+  threeCamera.position.set(0, 30, 480);
 
   // 3. WebGL Renderer
   threeRenderer = new THREE.WebGLRenderer({
@@ -952,27 +952,29 @@ function initThreeJSNodeMap() {
     threeControls = new THREE.OrbitControls(threeCamera, threeRenderer.domElement);
     threeControls.enableDamping = true;
     threeControls.dampingFactor = 0.05;
-    threeControls.rotateSpeed = 0.7;
-    threeControls.zoomSpeed = 0.9;
-    threeControls.minDistance = 80;
-    threeControls.maxDistance = 650;
+    threeControls.rotateSpeed = 0.75;
+    threeControls.zoomSpeed = 0.95;
+    threeControls.minDistance = 90;
+    threeControls.maxDistance = 850;
     threeControls.autoRotate = true;
-    threeControls.autoRotateSpeed = 0.35;
+    threeControls.autoRotateSpeed = 0.28;
   }
 
-  // 5. Dual Opposite Source Lighting (Red & Neutral)
-  const ambientLight = new THREE.AmbientLight(0x06060a, 4.5);
+  // 5. Dual Opposite Source Lighting (Red, Neutral, Cyan)
+  const ambientLight = new THREE.AmbientLight(0x0a0a10, 3.2);
   threeScene.add(ambientLight);
 
-  // Source 1: Vibrant Red/Coral Point Light (Top-Front-Right)
-  const lightRed = new THREE.PointLight(0xe84a5f, 3.0, 550);
-  lightRed.position.set(200, 150, 180);
+  const lightRed = new THREE.PointLight(0xe84a5f, 3.8, 800);
+  lightRed.position.set(250, 180, 220);
   threeScene.add(lightRed);
 
-  // Source 2: Neutral White Point Light (Bottom-Back-Left - Directly Opposite)
-  const lightNeutral = new THREE.PointLight(0xf1f5f9, 1.3, 550);
-  lightNeutral.position.set(-200, -150, -180);
+  const lightNeutral = new THREE.PointLight(0xfff5ea, 2.2, 800);
+  lightNeutral.position.set(-250, -180, -220);
   threeScene.add(lightNeutral);
+
+  const lightCyan = new THREE.PointLight(0xa0c4ff, 1.4, 700);
+  lightCyan.position.set(0, 320, 100);
+  threeScene.add(lightCyan);
 
   // Groups
   threeNodesGroup = new THREE.Group();
@@ -1002,31 +1004,118 @@ function initThreeJSNodeMap() {
 }
 
 function build3DStarfield() {
-  const particleCount = 200;
+  const particleCount = 350;
   const geometry = new THREE.BufferGeometry();
   const positions = new Float32Array(particleCount * 3);
 
   for (let i = 0; i < particleCount * 3; i += 3) {
-    positions[i] = (Math.random() - 0.5) * 900;
-    positions[i + 1] = (Math.random() - 0.5) * 900;
-    positions[i + 2] = (Math.random() - 0.5) * 900;
+    positions[i] = (Math.random() - 0.5) * 1200;
+    positions[i + 1] = (Math.random() - 0.5) * 1200;
+    positions[i + 2] = (Math.random() - 0.5) * 1200;
   }
 
   geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
 
   const material = new THREE.PointsMaterial({
     color: 0xffffff,
-    size: 2,
+    size: 1.8,
     transparent: true,
-    opacity: 0.35
+    opacity: 0.28
   });
 
   const starfield = new THREE.Points(geometry, material);
   threeParticlesGroup.add(starfield);
 }
 
+// Procedural Glitter Texture Cache
+const archiveGlitterCache = {};
+
+function getArchiveGlitterTextures(colorHexStr, tier = "tag") {
+  const cacheKey = `${colorHexStr}_${tier}`;
+  if (archiveGlitterCache[cacheKey]) return archiveGlitterCache[cacheKey];
+
+  const size = 512;
+  const canvasDiffuse = document.createElement("canvas");
+  canvasDiffuse.width = size;
+  canvasDiffuse.height = size;
+  const ctxD = canvasDiffuse.getContext("2d");
+
+  ctxD.fillStyle = colorHexStr;
+  ctxD.fillRect(0, 0, size, size);
+
+  const fleckCount = tier === "root" ? 7500 : (tier === "pillar" ? 6000 : (tier === "subtopic" ? 4800 : 3600));
+
+  for (let i = 0; i < fleckCount; i++) {
+    const x = Math.random() * size;
+    const y = Math.random() * size;
+    const r = Math.random() * 1.6 + 0.4;
+    const alpha = Math.random() * 0.85 + 0.15;
+    const isBrightGlint = Math.random() > 0.86;
+
+    if (isBrightGlint) {
+      ctxD.fillStyle = Math.random() > 0.45 ? `rgba(255, 255, 255, ${alpha})` : `rgba(255, 235, 195, ${alpha})`;
+      ctxD.beginPath();
+      ctxD.arc(x, y, r * 1.3, 0, Math.PI * 2);
+      ctxD.fill();
+    } else {
+      const brightness = Math.floor(Math.random() * 110 + 145);
+      ctxD.fillStyle = `rgba(${brightness}, ${brightness}, ${brightness}, ${alpha * 0.65})`;
+      ctxD.fillRect(x, y, r, r);
+    }
+  }
+
+  const canvasBump = document.createElement("canvas");
+  canvasBump.width = size;
+  canvasBump.height = size;
+  const ctxB = canvasBump.getContext("2d");
+  ctxB.fillStyle = "#808080";
+  ctxB.fillRect(0, 0, size, size);
+
+  const imgDataB = ctxB.getImageData(0, 0, size, size);
+  const dataB = imgDataB.data;
+  for (let i = 0; i < dataB.length; i += 4) {
+    const noise = (Math.random() - 0.5) * 120;
+    const val = Math.max(0, Math.min(255, 128 + noise));
+    dataB[i] = val;
+    dataB[i + 1] = val;
+    dataB[i + 2] = val;
+  }
+  ctxB.putImageData(imgDataB, 0, 0);
+
+  const diffTex = new THREE.CanvasTexture(canvasDiffuse);
+  diffTex.wrapS = THREE.RepeatWrapping;
+  diffTex.wrapT = THREE.RepeatWrapping;
+
+  const bumpTex = new THREE.CanvasTexture(canvasBump);
+  bumpTex.wrapS = THREE.RepeatWrapping;
+  bumpTex.wrapT = THREE.RepeatWrapping;
+
+  const result = { diffTex, bumpTex };
+  archiveGlitterCache[cacheKey] = result;
+  return result;
+}
+
+function createGlitterSphereNodeMesh(radius, colorHex, tier = "tag", emissiveIntensity = 0.22) {
+  const geo = new THREE.SphereGeometry(radius, 36, 36);
+  const colorHexStr = typeof colorHex === "number" ? "#" + colorHex.toString(16).padStart(6, "0") : colorHex;
+  const { diffTex, bumpTex } = getArchiveGlitterTextures(colorHexStr, tier);
+
+  const mat = new THREE.MeshStandardMaterial({
+    color: colorHex,
+    map: diffTex,
+    bumpMap: bumpTex,
+    bumpScale: tier === "root" || tier === "pillar" ? 0.16 : (tier === "subtopic" ? 0.13 : 0.10),
+    roughness: 0.36,
+    metalness: 0.76,
+    emissive: colorHex,
+    emissiveIntensity: emissiveIntensity,
+    roughnessMap: bumpTex
+  });
+
+  return new THREE.Mesh(geo, mat);
+}
+
 function build3DNodeMapGraph() {
-  // Clear previous meshes & lines
   while (threeNodesGroup.children.length > 0) threeNodesGroup.remove(threeNodesGroup.children[0]);
   while (threeLinesGroup.children.length > 0) threeLinesGroup.remove(threeLinesGroup.children[0]);
   threeNodes = [];
@@ -1043,90 +1132,159 @@ function build3DNodeMapGraph() {
     postsCount: ARCHIVE_POSTS.length
   };
 
-  const rootMesh = createCrystalNodeMesh(16, 0xE84A5F, 0.4);
+  const rootMesh = createGlitterSphereNodeMesh(21, 0xE84A5F, "root", 0.35);
   rootMesh.position.set(0, 0, 0);
   threeNodesGroup.add(rootMesh);
 
-  const rootSprite = create3DTextSprite("UNTITLED.JPG", "#FFFFFF", 26);
-  rootSprite.position.set(0, -22, 0);
+  const rootSprite = create3DTextSprite("UNTITLED.JPG", "#FFFFFF", 28);
+  rootSprite.position.set(0, -28, 0);
   rootMesh.add(rootSprite);
 
   const rootNodeItem = { mesh: rootMesh, labelSprite: rootSprite, data: rootData, neighbors: new Set() };
   threeNodes.push(rootNodeItem);
 
-  // 2. Extract All 4 Pillars as major node vertices
-  const pillarSet = new Set();
+  // 2. Extract Pillars & Subtopics
+  const pillarMap = {};
   ARCHIVE_POSTS.forEach(p => {
-    if (p.pillar) pillarSet.add(p.pillar);
+    const pil = p.pillar || "GENERAL PILLAR";
+    const sub = p.subtopic || "CORE THEORIES";
+    if (!pillarMap[pil]) pillarMap[pil] = { name: pil, posts: [], subtopics: {} };
+    pillarMap[pil].posts.push(p);
+    if (!pillarMap[pil].subtopics[sub]) pillarMap[pil].subtopics[sub] = [];
+    pillarMap[pil].subtopics[sub].push(p);
   });
-  const pillarList = Array.from(pillarSet);
 
-  const pillarNodeMap = {}; // name -> nodeItem
-  const R_PILLAR = 85;
-  const pillarPositions = [
-    new THREE.Vector3( R_PILLAR * 0.707,  R_PILLAR * 0.707, 0),
-    new THREE.Vector3(-R_PILLAR * 0.707,  R_PILLAR * 0.707, 0),
-    new THREE.Vector3( 0, -R_PILLAR * 0.707,  R_PILLAR * 0.707),
-    new THREE.Vector3( 0, -R_PILLAR * 0.707, -R_PILLAR * 0.707)
+  const pillarList = Object.values(pillarMap);
+  const pillarCount = pillarList.length;
+  const pillarNodeMap = {};
+  const subtopicNodeMap = {};
+
+  const R_PILLAR = 125;
+  const R_SUBTOPIC = 210;
+
+  const pillarBasisDirs = [
+    new THREE.Vector3( 0.85,  0.52,  0.0),
+    new THREE.Vector3(-0.85,  0.52,  0.0),
+    new THREE.Vector3( 0.0,  -0.75,  0.66),
+    new THREE.Vector3( 0.0,  -0.75, -0.66),
+    new THREE.Vector3( 0.65, -0.25,  0.72),
+    new THREE.Vector3(-0.65, -0.25, -0.72)
   ];
 
-  pillarList.forEach((pilName, idx) => {
-    const pos = pillarPositions[idx % pillarPositions.length];
-    const postsInPillar = ARCHIVE_POSTS.filter(p => p.pillar === pilName);
-    const pillarRadius = Math.min(18, 9.5 + postsInPillar.length * 2.2);
+  pillarList.forEach((pilObj, pIdx) => {
+    const pilName = pilObj.name;
+    const dir = (pillarBasisDirs[pIdx % pillarBasisDirs.length] || new THREE.Vector3(Math.cos(pIdx), Math.sin(pIdx), 0)).clone().normalize();
+    const pilPos = dir.clone().multiplyScalar(R_PILLAR);
+
+    const postsInPillar = pilObj.posts;
+    const pillarRadius = Math.min(20, 15 + Math.min(5, postsInPillar.length * 1.2));
 
     const pillarData = {
-      id: `pillar_${idx}`,
+      id: `pillar_${pIdx}`,
       label: pilName,
       type: "pillar",
-      color: "#FF6579",
+      color: "#FF4D64",
       postsCount: postsInPillar.length,
       postSlugs: postsInPillar.map(p => p.slug)
     };
 
-    const pillarMesh = createCrystalNodeMesh(pillarRadius, 0xFF6579, 0.28);
-    pillarMesh.position.copy(pos);
+    const pillarMesh = createGlitterSphereNodeMesh(pillarRadius, 0xFF4D64, "pillar", 0.28);
+    pillarMesh.position.copy(pilPos);
     threeNodesGroup.add(pillarMesh);
 
     const pillarSprite = create3DTextSprite(pilName.toUpperCase(), "#FFA0AD", 22);
-    pillarSprite.position.set(0, -(pillarRadius + 8), 0);
+    pillarSprite.position.set(0, -(pillarRadius + 9), 0);
     pillarMesh.add(pillarSprite);
 
     const pillarNodeItem = { mesh: pillarMesh, labelSprite: pillarSprite, data: pillarData, neighbors: new Set() };
     threeNodes.push(pillarNodeItem);
     pillarNodeMap[pilName] = pillarNodeItem;
 
-    // Connect Root to Pillar
     rootNodeItem.neighbors.add(pillarNodeItem);
     pillarNodeItem.neighbors.add(rootNodeItem);
-    create3DConnectionLine(rootNodeItem, pillarNodeItem, 0x993344, 0xe84a5f);
+    create3DConnectionLine(rootNodeItem, pillarNodeItem, 0x8A2A38, 0xFF3B56, 0.22);
+
+    // 3. Subtopics
+    const subtopicNames = Object.keys(pilObj.subtopics);
+    const subCount = subtopicNames.length;
+    const upRef = Math.abs(dir.y) < 0.9 ? new THREE.Vector3(0, 1, 0) : new THREE.Vector3(1, 0, 0);
+    const rightVec = new THREE.Vector3().crossVectors(dir, upRef).normalize();
+    const upVec = new THREE.Vector3().crossVectors(rightVec, dir).normalize();
+
+    subtopicNames.forEach((subName, sIdx) => {
+      const postsInSub = pilObj.subtopics[subName];
+      const coneAngle = subCount === 1 ? 0 : 0.38;
+      const fanAngle = subCount === 1 ? 0 : ((sIdx / (subCount - 1)) - 0.5) * Math.PI * 1.1;
+
+      const subDir = dir.clone()
+        .addScaledVector(rightVec, Math.cos(fanAngle) * coneAngle)
+        .addScaledVector(upVec, Math.sin(fanAngle) * coneAngle)
+        .normalize();
+
+      const subDist = R_SUBTOPIC + (sIdx % 2) * 18;
+      const subPos = subDir.clone().multiplyScalar(subDist);
+
+      const subRadius = Math.min(15, 11 + Math.min(4, postsInSub.length * 0.9));
+
+      const subData = {
+        id: `sub_${pIdx}_${sIdx}`,
+        label: subName,
+        type: "subtopic",
+        pillar: pilName,
+        color: "#FFA0B0",
+        postsCount: postsInSub.length,
+        postSlugs: postsInSub.map(p => p.slug)
+      };
+
+      const subMesh = createGlitterSphereNodeMesh(subRadius, 0xFFA0B0, "subtopic", 0.22);
+      subMesh.position.copy(subPos);
+      threeNodesGroup.add(subMesh);
+
+      const subSprite = create3DTextSprite(subName.toUpperCase(), "#FFD5DC", 16);
+      subSprite.position.set(0, -(subRadius + 8), 0);
+      subMesh.add(subSprite);
+
+      const subNodeItem = { mesh: subMesh, labelSprite: subSprite, data: subData, neighbors: new Set() };
+      threeNodes.push(subNodeItem);
+      subtopicNodeMap[`${pilName}:::${subName}`] = subNodeItem;
+
+      pillarNodeItem.neighbors.add(subNodeItem);
+      subNodeItem.neighbors.add(pillarNodeItem);
+      create3DConnectionLine(pillarNodeItem, subNodeItem, 0x652838, 0xFF6585, 0.14);
+    });
   });
 
-  // 3. Extract Unique Tags across the portfolio
-  const uniqueTagMap = {}; // cleanName -> { name, pillars: Set, posts: [], count: 0 }
+  // 4. Extract Unique Tags
+  const uniqueTagMap = {};
   ARCHIVE_POSTS.forEach(p => {
     if (p.tags && Array.isArray(p.tags)) {
       p.tags.forEach(t => {
         const clean = String(t).trim().toLowerCase().replace(/^#/, "");
         if (!clean) return;
         if (!uniqueTagMap[clean]) {
-          uniqueTagMap[clean] = { name: clean, pillars: new Set(), posts: [], count: 0 };
+          uniqueTagMap[clean] = {
+            name: clean,
+            pillars: new Set(),
+            subtopics: new Set(),
+            posts: [],
+            count: 0
+          };
         }
         uniqueTagMap[clean].count++;
         uniqueTagMap[clean].posts.push(p);
         if (p.pillar) uniqueTagMap[clean].pillars.add(p.pillar);
+        if (p.pillar && p.subtopic) uniqueTagMap[clean].subtopics.add(`${p.pillar}:::${p.subtopic}`);
       });
     }
   });
 
   const tagList = Object.values(uniqueTagMap);
-  const tagNodeMap = {}; // cleanName -> nodeItem
+  const tagNodeMap = {};
   const totalTags = tagList.length;
   const GOLDEN_RATIO = (1 + Math.sqrt(5)) / 2;
   const GOLDEN_ANGLE = 2 * Math.PI * (1 - 1 / GOLDEN_RATIO);
 
   tagList.forEach((tagObj, idx) => {
-    // 3D Fibonacci Sphere sampling for ultra-harmonious spherical distribution
     const y = 1 - (idx / Math.max(1, totalTags - 1)) * 2;
     const radiusAtY = Math.sqrt(Math.max(0, 1 - y * y));
     const theta = GOLDEN_ANGLE * idx;
@@ -1136,39 +1294,42 @@ function build3DNodeMapGraph() {
 
     const fibVec = new THREE.Vector3(x, y, z).normalize();
 
-    // Gently blend 30% with direction toward associated Pillar(s)
-    const pillars = Array.from(tagObj.pillars);
-    const targetPillarNodes = pillars.map(pName => pillarNodeMap[pName]).filter(Boolean);
+    const connectedSubNodes = Array.from(tagObj.subtopics).map(key => subtopicNodeMap[key]).filter(Boolean);
+    const connectedPillarNodes = Array.from(tagObj.pillars).map(pName => pillarNodeMap[pName]).filter(Boolean);
 
-    if (targetPillarNodes.length > 0) {
-      const pillarDir = new THREE.Vector3(0, 0, 0);
-      targetPillarNodes.forEach(pn => pillarDir.add(pn.mesh.position));
-      pillarDir.normalize();
-      fibVec.lerp(pillarDir, 0.30).normalize();
+    if (connectedSubNodes.length > 0) {
+      const avgSubDir = new THREE.Vector3(0, 0, 0);
+      connectedSubNodes.forEach(sn => avgSubDir.add(sn.mesh.position));
+      avgSubDir.normalize();
+      fibVec.lerp(avgSubDir, 0.42).normalize();
+    } else if (connectedPillarNodes.length > 0) {
+      const avgPilDir = new THREE.Vector3(0, 0, 0);
+      connectedPillarNodes.forEach(pn => avgPilDir.add(pn.mesh.position));
+      avgPilDir.normalize();
+      fibVec.lerp(avgPilDir, 0.35).normalize();
     }
 
-    // Outer spherical shell radius: 145 to 170 units from root
-    const tagDist = 145 + (idx % 5) * 6;
+    const tagDist = 295 + (idx % 6) * 12;
     const finalPos = fibVec.multiplyScalar(tagDist);
 
-    // Node radius scales directly with post occurrence count
-    const tagRadius = Math.min(15, 5.5 + Math.pow(tagObj.count, 0.75) * 3.5);
+    const tagRadius = Math.min(9.5, 5.2 + Math.min(4.3, Math.pow(tagObj.count, 0.75) * 1.5));
     const tagData = {
       id: `tag_${idx}`,
       label: `#${tagObj.name}`,
       rawTag: tagObj.name,
       type: "tag",
-      color: "#D4D4D4",
+      color: "#E2E8F0",
       postsCount: tagObj.count,
-      pillars: pillars
+      pillars: Array.from(tagObj.pillars),
+      subtopics: Array.from(tagObj.subtopics).map(k => k.split(":::")[1] || k)
     };
 
-    const tagMesh = createCrystalNodeMesh(tagRadius, 0xD4D4D4, 0.16);
+    const tagMesh = createGlitterSphereNodeMesh(tagRadius, 0xE2E8F0, "tag", 0.18);
     tagMesh.position.copy(finalPos);
     threeNodesGroup.add(tagMesh);
 
-    const labelFontSize = Math.min(18, 12 + tagRadius * 0.45);
-    const tagSprite = create3DTextSprite(`#${tagObj.name}`, "#F5F5F5", labelFontSize);
+    const labelFontSize = Math.min(18, 11 + tagRadius * 0.5);
+    const tagSprite = create3DTextSprite(`#${tagObj.name}`, "#F1F5F9", labelFontSize);
     tagSprite.position.set(0, -(tagRadius + 7), 0);
     tagMesh.add(tagSprite);
 
@@ -1176,61 +1337,50 @@ function build3DNodeMapGraph() {
     threeNodes.push(tagNodeItem);
     tagNodeMap[tagObj.name] = tagNodeItem;
 
-    // Connect Tag to ALL its Pillars
-    targetPillarNodes.forEach(pNode => {
-      tagNodeItem.neighbors.add(pNode);
-      pNode.neighbors.add(tagNodeItem);
-      create3DConnectionLine(pNode, tagNodeItem, 0x333333, 0xE84A5F);
-    });
+    if (connectedSubNodes.length > 0) {
+      connectedSubNodes.forEach(sNode => {
+        tagNodeItem.neighbors.add(sNode);
+        sNode.neighbors.add(tagNodeItem);
+        create3DConnectionLine(sNode, tagNodeItem, 0x2A2E38, 0xFF6080, 0.07);
+      });
+    } else {
+      connectedPillarNodes.forEach(pNode => {
+        tagNodeItem.neighbors.add(pNode);
+        pNode.neighbors.add(tagNodeItem);
+        create3DConnectionLine(pNode, tagNodeItem, 0x2A2E38, 0xFF4D64, 0.07);
+      });
+    }
   });
 
-  // 4. Connect Tags to Tags if they co-occur in the same post (Obsidian Network Cloud)
+  // 5. Connect Tags to Tags if they co-occur in the same post (Refined sequential chaining)
+  const coOccurrenceCounts = {};
   ARCHIVE_POSTS.forEach(p => {
     if (p.tags && Array.isArray(p.tags) && p.tags.length > 1) {
       const cleanTags = p.tags.map(t => String(t).trim().toLowerCase().replace(/^#/, "")).filter(Boolean);
-      for (let i = 0; i < cleanTags.length; i++) {
-        for (let j = i + 1; j < cleanTags.length; j++) {
-          const nodeA = tagNodeMap[cleanTags[i]];
-          const nodeB = tagNodeMap[cleanTags[j]];
-          if (nodeA && nodeB && nodeA !== nodeB && !nodeA.neighbors.has(nodeB)) {
-            nodeA.neighbors.add(nodeB);
-            nodeB.neighbors.add(nodeA);
-            create3DConnectionLine(nodeA, nodeB, 0x222226, 0xFF8484);
-          }
-        }
+      for (let i = 0; i < cleanTags.length - 1; i++) {
+        const tA = cleanTags[i];
+        const tB = cleanTags[i + 1];
+        const key = tA < tB ? `${tA}|${tB}` : `${tB}|${tA}`;
+        coOccurrenceCounts[key] = (coOccurrenceCounts[key] || 0) + 1;
       }
     }
   });
-}
 
-function createCrystalNodeMesh(radius, colorHex, emissiveIntensity = 0.3) {
-  // Faceted 3D crystalline quartz shard geometry
-  const geo = new THREE.IcosahedronGeometry(radius, 2);
-  const pos = geo.attributes.position;
-  const vec = new THREE.Vector3();
-  for (let i = 0; i < pos.count; i++) {
-    vec.fromBufferAttribute(pos, i);
-    const noise = Math.sin(vec.x * 0.4 + vec.y * 0.6) * Math.cos(vec.z * 0.5) * (radius * 0.22);
-    vec.normalize().multiplyScalar(radius + noise);
-    pos.setXYZ(i, vec.x, vec.y, vec.z);
-  }
-  geo.computeVertexNormals();
-
-  const mat = new THREE.MeshStandardMaterial({
-    color: colorHex,
-    emissive: colorHex,
-    emissiveIntensity: emissiveIntensity,
-    roughness: 0.45,
-    metalness: 0.1,
-    flatShading: true
+  Object.keys(coOccurrenceCounts).forEach(pairKey => {
+    const [tA, tB] = pairKey.split("|");
+    const nodeA = tagNodeMap[tA];
+    const nodeB = tagNodeMap[tB];
+    if (nodeA && nodeB && !nodeA.neighbors.has(nodeB)) {
+      nodeA.neighbors.add(nodeB);
+      nodeB.neighbors.add(nodeA);
+      create3DConnectionLine(nodeA, nodeB, 0x1E222A, 0xFFA0B0, 0.04);
+    }
   });
-  return new THREE.Mesh(geo, mat);
 }
 
 function splitTextIntoLines(text, maxCharsPerLine = 22) {
   if (!text || text.length <= maxCharsPerLine) return [text];
 
-  // If text contains a comma (e.g. "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"), split by comma
   if (text.includes(",")) {
     const parts = text.split(",").map(p => p.trim());
     if (parts.length >= 2) {
@@ -1240,7 +1390,6 @@ function splitTextIntoLines(text, maxCharsPerLine = 22) {
     }
   }
 
-  // Otherwise split by space
   const words = text.split(" ");
   const lines = [];
   let currentLine = "";
@@ -1292,7 +1441,7 @@ function create3DTextSprite(text, colorHexStr, fontSize = 20) {
   return sprite;
 }
 
-function create3DConnectionLine(fromItem, toItem, defaultColorHex, highlightColorHex) {
+function create3DConnectionLine(fromItem, toItem, defaultColorHex, highlightColorHex, defaultOpacity = 0.06) {
   const points = [];
   points.push(fromItem.mesh.position);
   points.push(toItem.mesh.position);
@@ -1301,7 +1450,7 @@ function create3DConnectionLine(fromItem, toItem, defaultColorHex, highlightColo
   const material = new THREE.LineBasicMaterial({
     color: defaultColorHex,
     transparent: true,
-    opacity: 0.4,
+    opacity: defaultOpacity,
     linewidth: 1
   });
 
@@ -1313,7 +1462,8 @@ function create3DConnectionLine(fromItem, toItem, defaultColorHex, highlightColo
     fromItem: fromItem,
     toItem: toItem,
     defaultColorHex: defaultColorHex,
-    highlightColorHex: highlightColorHex
+    highlightColorHex: highlightColorHex,
+    defaultOpacity: defaultOpacity
   });
 }
 
@@ -1322,22 +1472,19 @@ function animateThreeJS() {
 
   if (threeControls) threeControls.update();
 
-  // Subtle background starfield rotation
   if (threeParticlesGroup) {
-    threeParticlesGroup.rotation.y += 0.0003;
+    threeParticlesGroup.rotation.y += 0.00025;
   }
 
-  // Gentle rotation of 3D crystalline shard nodes to reflect lights across facets
   if (threeNodes && threeNodes.length > 0) {
     threeNodes.forEach((n, idx) => {
       if (n.mesh) {
-        n.mesh.rotation.y += 0.003 * (idx % 2 === 0 ? 1 : -1);
-        n.mesh.rotation.x += 0.0015 * (idx % 3 === 0 ? 1 : -1);
+        n.mesh.rotation.y += 0.004 * (idx % 2 === 0 ? 1 : -1);
+        n.mesh.rotation.x += 0.002 * (idx % 3 === 0 ? 1 : -1);
       }
     });
   }
 
-  // 3D Raycasting hover update
   updateThreeRaycasting();
 
   if (threeRenderer && threeScene && threeCamera) {
@@ -1361,10 +1508,9 @@ function updateThreeRaycasting() {
   if (hoveredThreeNode !== newHovered) {
     hoveredThreeNode = newHovered;
 
-    // Apply new hover effect: scale up hovered node + all neighbor nodes in network
     threeNodes.forEach(n => {
       if (hoveredThreeNode && (n === hoveredThreeNode || (hoveredThreeNode.neighbors && hoveredThreeNode.neighbors.has(n)))) {
-        const s = n === hoveredThreeNode ? 1.45 : 1.25;
+        const s = n === hoveredThreeNode ? 1.45 : 1.22;
         n.mesh.scale.set(s, s, s);
       } else {
         n.mesh.scale.set(1, 1, 1);
@@ -1377,14 +1523,17 @@ function updateThreeRaycasting() {
       if (canvas) canvas.style.cursor = "default";
     }
 
-    // Update lines highlight
     threeLines.forEach(l => {
-      const isConn = hoveredThreeNode && (l.fromItem === hoveredThreeNode || l.toItem === hoveredThreeNode);
-      l.mesh.material.color.setHex(isConn ? l.highlightColorHex : l.defaultColorHex);
-      l.mesh.material.opacity = isConn ? 0.95 : 0.25;
+      const isDirectConn = hoveredThreeNode && (l.fromItem === hoveredThreeNode || l.toItem === hoveredThreeNode);
+      if (isDirectConn) {
+        l.mesh.material.color.setHex(l.highlightColorHex);
+        l.mesh.material.opacity = 0.95;
+      } else {
+        l.mesh.material.color.setHex(l.defaultColorHex);
+        l.mesh.material.opacity = l.defaultOpacity;
+      }
     });
 
-    // Update Dock Metadata
     updateThreeDockMetadata(hoveredThreeNode);
   }
 }
@@ -1396,17 +1545,23 @@ function updateThreeDockMetadata(nodeItem) {
 
   if (nodeItem) {
     const d = nodeItem.data;
-    dockTitle.textContent = `[ 3D NODE: ${d.label} ]`;
     if (d.type === "root") {
-      dockDesc.textContent = `Central taxonomy core connecting all dispatches across 4 primary pillars.`;
+      dockTitle.textContent = `[ 3D CORE: ${d.label} ]`;
+      dockDesc.textContent = `Central taxonomy core connecting ${d.postsCount} dispatches across pillars and subtopics.`;
     } else if (d.type === "pillar") {
-      dockDesc.textContent = `Pillar category with ${d.postsCount} dispatch${d.postsCount > 1 ? 'es' : ''}. Click to filter timeline.`;
+      dockTitle.textContent = `[ 3D PILLAR: ${d.label} ]`;
+      dockDesc.textContent = `Major intellectual pillar with ${d.postsCount} dispatch${d.postsCount > 1 ? 'es' : ''}. Click to filter timeline.`;
+    } else if (d.type === "subtopic") {
+      dockTitle.textContent = `[ 3D SUBTOPIC: ${d.label} ]`;
+      dockDesc.textContent = `Subtopic under [${d.pillar}] with ${d.postsCount} dispatch${d.postsCount > 1 ? 'es' : ''}. Click to filter timeline.`;
     } else {
       const pStr = (d.pillars || []).join(" • ");
-      dockDesc.textContent = `Tag node with ${d.postsCount} dispatch${d.postsCount > 1 ? 'es' : ''}${pStr ? ' across ' + pStr : ''}. Click node to filter timeline.`;
+      const subStr = (d.subtopics || []).slice(0, 2).join(" • ");
+      dockTitle.textContent = `[ 3D TAG: ${d.label} ]`;
+      dockDesc.textContent = `Tag node with ${d.postsCount} dispatch${d.postsCount > 1 ? 'es' : ''}${subStr ? ' • ' + subStr : (pStr ? ' across ' + pStr : '')}. Click node to filter timeline.`;
     }
   } else if (!activeNodeFilter) {
-    dockTitle.textContent = "[ 3D TAGS CLOUD ACTIVE ]";
+    dockTitle.textContent = "[ 3D TAXONOMY CONSTELLATION ]";
     dockDesc.textContent = "Drag to rotate 3D constellation. Scroll to zoom. Hover over nodes to inspect network connections. Click to filter.";
   }
 }

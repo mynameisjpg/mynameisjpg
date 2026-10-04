@@ -514,7 +514,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 100%);
+  background: radial-gradient(circle at center, #0e0e11 0%, #050507 100%);
 }
 
 #nodemap-canvas {
@@ -526,10 +526,10 @@
 .nodemap-hover-dock {
   position: absolute;
   bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 3rem);
-  max-width: 680px;
+  left: 2rem;
+  transform: none;
+  width: auto;
+  max-width: 620px;
   background: rgba(18, 18, 18, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -545,6 +545,18 @@
   z-index: 20;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
   transition: all 0.2s ease;
+}
+
+@media (max-width: 980px) {
+  .nodemap-hover-dock {
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 2rem);
+    max-width: 600px;
+    bottom: 1rem;
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+  }
 }
 
 .dock-left-content {

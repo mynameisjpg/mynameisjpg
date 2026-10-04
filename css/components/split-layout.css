@@ -13,11 +13,9 @@
 
 .grid-column {
   background-color: var(--bg-deep);
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-    url("../../assets/images/bg1.jpg");
-  background-size: cover;
-  background-position: center;
+  background-image: url("../../assets/images/bg1.jpg");
+  background-size: cover, cover, cover;
+  background-position: center, center, center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 1.8rem 2.5rem 3.5rem 2.5rem; /* Shifted top padding up */
@@ -31,6 +29,25 @@
   flex-shrink: 0;
   transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   box-sizing: border-box;
+}
+
+/* Ambient Background Canvas (Central Coral Glow & Digital Glitch Artifacts) */
+.matrix-glitch-canvas {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-width);
+  width: calc(100vw - var(--sidebar-width));
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 1;
+  transition:
+    width 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.3s ease;
+}
+
+.split-layout.reader-open .matrix-glitch-canvas {
+  width: calc((100vw - var(--sidebar-width)) * 0.5);
 }
 
 .post-column {
@@ -63,11 +80,6 @@
   visibility: visible;
 }
 
-.grid-column > * {
-  position: relative;
-  z-index: 1;
-}
-
 /* ==============================================================================
    COMPONENT: UNIFIED MATRIX HEADER (LEGEND & CONTROLS ALIGNED)
    ============================================================================== */
@@ -82,7 +94,7 @@
   margin-bottom: 2rem;
   width: 100%;
   position: relative;
-  z-index: 50;
+  z-index: 60;
   transition: max-width 0.35s ease;
 }
 
@@ -411,6 +423,13 @@
     position: relative !important;
   }
 
+  .matrix-glitch-canvas {
+    left: 0 !important;
+    width: 100vw !important;
+    top: 48px !important;
+    height: calc(100vh - 48px) !important;
+  }
+
   /* Default mobile state: Grid column is visible, Post column is hidden */
   .grid-column,
   .split-layout .grid-column {
@@ -448,7 +467,7 @@
   .post-column.theme-light,
   .essay-column.theme-light,
   .split-layout .post-column.theme-light {
-    background-color: var(--bg-light-mode, #DEE6E9) !important;
+    background-color: var(--bg-light-mode, #dee6e9) !important;
   }
 
   /* Active Reader state on mobile: Hide grid, Show post reader full screen */
