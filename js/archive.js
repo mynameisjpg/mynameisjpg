@@ -51,17 +51,19 @@ function initSubscribeAnimation() {
   const ANIMATION_DURATION_MS = 4500;
 
   setTimeout(() => {
-    const subscribeTargets = document.querySelectorAll('#sidebar-subscribe-btn, a[aria-label="Subscribe"], a[title*="Subscribe"]');
+    const subscribeTargets = document.querySelectorAll(
+      '#sidebar-subscribe-btn, a[aria-label="Subscribe"], a[title*="Subscribe"]',
+    );
     if (!subscribeTargets || subscribeTargets.length === 0) return;
 
-    subscribeTargets.forEach(el => {
+    subscribeTargets.forEach((el) => {
       el.classList.add("subscribe-ring-vibrate");
       const svg = el.querySelector("svg");
       if (svg) svg.classList.add("subscribe-ring-vibrate");
     });
 
     const onAnimationDone = () => {
-      subscribeTargets.forEach(el => {
+      subscribeTargets.forEach((el) => {
         el.classList.remove("subscribe-ring-vibrate");
         el.classList.add("subscribe-coral-active");
         const svg = el.querySelector("svg");
@@ -82,10 +84,14 @@ function ingestArchivePosts(postsArray) {
   const seen = new Set();
   ARCHIVE_POSTS = [];
 
-  postsArray.forEach(p => {
+  postsArray.forEach((p) => {
     const key = p.slug || p.id || p.sys_id;
     const status = (p.status || "published").toLowerCase();
-    if (key && !seen.has(key) && (status === "published" || status === "active")) {
+    if (
+      key &&
+      !seen.has(key) &&
+      (status === "published" || status === "active")
+    ) {
       seen.add(key);
       ARCHIVE_POSTS.push(p);
     }
@@ -101,11 +107,20 @@ function ingestArchivePosts(postsArray) {
 
 function checkUrlTagParameters() {
   const urlParams = new URLSearchParams(window.location.search);
-  let tag = urlParams.get("tag") || urlParams.get("node") || urlParams.get("topic") || urlParams.get("filter");
+  let tag =
+    urlParams.get("tag") ||
+    urlParams.get("node") ||
+    urlParams.get("topic") ||
+    urlParams.get("filter");
 
   if (!tag && window.location.hash) {
     const hash = window.location.hash.replace(/^#tag-?/i, "").replace(/^#/, "");
-    if (hash && hash !== "archive" && !hash.startsWith("dispatch-") && hash !== "nodemap-canvas-wrapper") {
+    if (
+      hash &&
+      hash !== "archive" &&
+      !hash.startsWith("dispatch-") &&
+      hash !== "nodemap-canvas-wrapper"
+    ) {
       tag = decodeURIComponent(hash);
     }
   }
@@ -123,9 +138,12 @@ function updateActiveFilterBanner(isFiltered, tagText = "", matchCount = 0) {
 
   if (isFiltered && tagText) {
     const cleanTag = tagText.trim();
-    const displayTag = cleanTag.startsWith("#") ? cleanTag.toUpperCase() : `#${cleanTag.toUpperCase()}`;
+    const displayTag = cleanTag.startsWith("#")
+      ? cleanTag.toUpperCase()
+      : `#${cleanTag.toUpperCase()}`;
     if (tagNameEl) tagNameEl.textContent = displayTag;
-    if (countEl) countEl.textContent = `(${matchCount} DISPATCH${matchCount === 1 ? '' : 'ES'})`;
+    if (countEl)
+      countEl.textContent = `(${matchCount} DISPATCH${matchCount === 1 ? "" : "ES"})`;
     banner.style.display = "flex";
   } else {
     banner.style.display = "none";
@@ -140,22 +158,30 @@ function clearTagFilter() {
   url.searchParams.delete("node");
   url.searchParams.delete("topic");
   url.searchParams.delete("filter");
-  window.history.replaceState({}, "", url.pathname + (url.search ? url.search : ""));
+  window.history.replaceState(
+    {},
+    "",
+    url.pathname + (url.search ? url.search : ""),
+  );
   setNodeFilterUIState(false);
   renderTimelineList();
 }
 
 function setNodeFilterUIState(isFiltered, filterText = "") {
-  document.querySelectorAll("#clear-node-filter-btn, .btn-clear-node-filter").forEach(btn => {
-    btn.style.display = isFiltered ? "inline-flex" : "none";
-  });
-  document.querySelectorAll("#nodemap-status-label, .top-navbar-legend-badge").forEach(label => {
-    if (isFiltered) {
-      label.textContent = `FILTERED BY NODE: ${filterText.toUpperCase()}`;
-    } else {
-      label.textContent = "EXPLORE 3D TAG NODES & CONCEPTUAL VECTORS";
-    }
-  });
+  document
+    .querySelectorAll("#clear-node-filter-btn, .btn-clear-node-filter")
+    .forEach((btn) => {
+      btn.style.display = isFiltered ? "inline-flex" : "none";
+    });
+  document
+    .querySelectorAll("#nodemap-status-label, .top-navbar-legend-badge")
+    .forEach((label) => {
+      if (isFiltered) {
+        label.textContent = `FILTERED BY NODE: ${filterText.toUpperCase()}`;
+      } else {
+        label.textContent = "EXPLORE 3D TAG NODES & CONCEPTUAL VECTORS";
+      }
+    });
 }
 
 function applyTagFilterDirectly(tag) {
@@ -165,8 +191,12 @@ function applyTagFilterDirectly(tag) {
   setNodeFilterUIState(true, activeTagFilter);
 
   const tagLower = activeTagFilter.toLowerCase();
-  if (typeof threeNodes !== "undefined" && threeNodes && threeNodes.length > 0) {
-    const match = threeNodes.find(n => {
+  if (
+    typeof threeNodes !== "undefined" &&
+    threeNodes &&
+    threeNodes.length > 0
+  ) {
+    const match = threeNodes.find((n) => {
       const d = n.data;
       if (!d) return false;
       const l = (d.label || "").toLowerCase().replace(/^#/, "");
@@ -175,7 +205,7 @@ function applyTagFilterDirectly(tag) {
     });
     if (match) activeNodeFilter = match.data;
   } else if (typeof nodes !== "undefined" && nodes && nodes.length > 0) {
-    const match = nodes.find(n => {
+    const match = nodes.find((n) => {
       const l = (n.label || "").toLowerCase().replace(/^#/, "");
       const raw = (n.rawTag || "").toLowerCase();
       return l === tagLower || raw === tagLower;
@@ -230,14 +260,16 @@ function renderTagsDirectoryTable(searchVal = "") {
   const countLabel = document.getElementById("tags-table-count-label");
   if (!tbody) return;
 
-  const rawData = (window.DYNAMIC_TAGS || ARCHIVE_TAGS_DATA || []);
+  const rawData = window.DYNAMIC_TAGS || ARCHIVE_TAGS_DATA || [];
   const searchLower = (searchVal || "").toLowerCase().trim();
 
-  const filtered = rawData.filter(t => {
+  const filtered = rawData.filter((t) => {
     if (!searchLower) return true;
     const nameMatch = (t.name || "").toLowerCase().includes(searchLower);
     const typeMatch = (t.type || "").toLowerCase().includes(searchLower);
-    const postsMatch = (t.posts || []).some(p => (p.title || "").toLowerCase().includes(searchLower));
+    const postsMatch = (t.posts || []).some((p) =>
+      (p.title || "").toLowerCase().includes(searchLower),
+    );
     return nameMatch || typeMatch || postsMatch;
   });
 
@@ -256,22 +288,30 @@ function renderTagsDirectoryTable(searchVal = "") {
     return;
   }
 
-  tbody.innerHTML = filtered.map(t => {
-    const typeBadgeClass = t.type === "pillar" ? "tag-type-pillar" : (t.type === "subtopic" ? "tag-type-subtopic" : "tag-type-tag");
-    const typeLabel = t.type.toUpperCase();
+  tbody.innerHTML = filtered
+    .map((t) => {
+      const typeBadgeClass =
+        t.type === "pillar"
+          ? "tag-type-pillar"
+          : t.type === "subtopic"
+            ? "tag-type-subtopic"
+            : "tag-type-tag";
+      const typeLabel = t.type.toUpperCase();
 
-    const linksHtml = (t.links || []).map(l => {
-      const fmt = (l.format || "ESSAY").toUpperCase();
-      return `<a href="${l.url}" class="tag-dispatch-link" title="${l.title}">
+      const linksHtml = (t.links || [])
+        .map((l) => {
+          const fmt = (l.format || "ESSAY").toUpperCase();
+          return `<a href="${l.url}" class="tag-dispatch-link" title="${l.title}">
         <span class="link-fmt">[${fmt}]</span> ${l.title}
       </a>`;
-    }).join("");
+        })
+        .join("");
 
-    return `
+      return `
       <tr class="tags-table-row" data-tag="${t.name}">
         <td class="tag-name-cell">
           <a href="javascript:void(0)" class="tag-directory-filter-link" onclick="applyTagFilterDirectly('${t.name}')">
-            ${t.type === 'tag' ? '#' : ''}${t.name}
+            ${t.type === "tag" ? "#" : ""}${t.name}
           </a>
         </td>
         <td><span class="tag-type-badge ${typeBadgeClass}">${typeLabel}</span></td>
@@ -279,7 +319,8 @@ function renderTagsDirectoryTable(searchVal = "") {
         <td class="tag-links-cell">${linksHtml}</td>
       </tr>
     `;
-  }).join("");
+    })
+    .join("");
 }
 
 let activeSortOrder = "newest";
@@ -340,35 +381,43 @@ function initArchiveListeners() {
   }
 
   // Format Filter nav links
-  document.querySelectorAll("#category-filter-nav .nav-link-item").forEach(link => {
-    link.addEventListener("click", () => {
-      const fmt = link.getAttribute("data-filter") || "all";
-      if (activeFormatFilter === fmt) {
-        activeFormatFilter = "all";
-        link.classList.remove("active");
-      } else {
-        document.querySelectorAll("#category-filter-nav .nav-link-item").forEach(l => l.classList.remove("active"));
-        activeFormatFilter = fmt;
-        link.classList.add("active");
-      }
-      renderTimelineList();
+  document
+    .querySelectorAll("#category-filter-nav .nav-link-item")
+    .forEach((link) => {
+      link.addEventListener("click", () => {
+        const fmt = link.getAttribute("data-filter") || "all";
+        if (activeFormatFilter === fmt) {
+          activeFormatFilter = "all";
+          link.classList.remove("active");
+        } else {
+          document
+            .querySelectorAll("#category-filter-nav .nav-link-item")
+            .forEach((l) => l.classList.remove("active"));
+          activeFormatFilter = fmt;
+          link.classList.add("active");
+        }
+        renderTimelineList();
+      });
     });
-  });
 
   // Clear Node Filter button
-  document.querySelectorAll("#clear-node-filter-btn, .btn-clear-node-filter").forEach(btn => {
-    btn.addEventListener("click", () => {
-      activeTagFilter = null;
-      activeNodeFilter = null;
-      setNodeFilterUIState(false);
-      renderTimelineList();
-      resetNodeHighlights();
+  document
+    .querySelectorAll("#clear-node-filter-btn, .btn-clear-node-filter")
+    .forEach((btn) => {
+      btn.addEventListener("click", () => {
+        activeTagFilter = null;
+        activeNodeFilter = null;
+        setNodeFilterUIState(false);
+        renderTimelineList();
+        resetNodeHighlights();
+      });
     });
-  });
 
   // Live tag link click interceptor when already on archive.html
   document.addEventListener("click", (e) => {
-    const tagLink = e.target.closest("a[href*='archive.html?tag='], a[href*='?tag=']");
+    const tagLink = e.target.closest(
+      "a[href*='archive.html?tag='], a[href*='?tag=']",
+    );
     if (tagLink) {
       try {
         const url = new URL(tagLink.href, window.location.origin);
@@ -422,28 +471,38 @@ function initArchiveListeners() {
     });
   }
 
-  document.querySelectorAll("#dispatch-log-dropdown .dropdown-option, #top-filter-dropdown .dropdown-option").forEach(opt => {
-    opt.addEventListener("click", () => {
-      const filter = opt.getAttribute("data-filter") || "all";
-      applyTopFilter(filter);
+  document
+    .querySelectorAll(
+      "#dispatch-log-dropdown .dropdown-option, #top-filter-dropdown .dropdown-option",
+    )
+    .forEach((opt) => {
+      opt.addEventListener("click", () => {
+        const filter = opt.getAttribute("data-filter") || "all";
+        applyTopFilter(filter);
+      });
     });
-  });
 
-  document.querySelectorAll("#top-sort-dropdown .dropdown-option").forEach(opt => {
-    opt.addEventListener("click", () => {
-      const sort = opt.getAttribute("data-sort") || "newest";
-      applyTopSort(sort);
+  document
+    .querySelectorAll("#top-sort-dropdown .dropdown-option")
+    .forEach((opt) => {
+      opt.addEventListener("click", () => {
+        const sort = opt.getAttribute("data-sort") || "newest";
+        applyTopSort(sort);
+      });
     });
-  });
 
   // Subscribe Modal Form & Buttons
-  document.querySelectorAll("#subscribe-modal form, .modal-form").forEach(form => {
-    form.addEventListener("submit", handleSubscribeSubmit);
-  });
+  document
+    .querySelectorAll("#subscribe-modal form, .modal-form")
+    .forEach((form) => {
+      form.addEventListener("submit", handleSubscribeSubmit);
+    });
 
-  document.querySelectorAll("#subscribe-modal .btn-modal-cancel, .btn-modal-cancel").forEach(btn => {
-    btn.addEventListener("click", closeSubscribeModal);
-  });
+  document
+    .querySelectorAll("#subscribe-modal .btn-modal-cancel, .btn-modal-cancel")
+    .forEach((btn) => {
+      btn.addEventListener("click", closeSubscribeModal);
+    });
 
   // Image Lightbox Modal
   const lightboxModal = document.getElementById("image-lightbox-modal");
@@ -454,14 +513,18 @@ function initArchiveListeners() {
       }
     });
 
-    const lightboxContent = lightboxModal.querySelector(".image-lightbox-content");
+    const lightboxContent = lightboxModal.querySelector(
+      ".image-lightbox-content",
+    );
     if (lightboxContent) {
       lightboxContent.addEventListener("click", (e) => {
         e.stopPropagation();
       });
     }
 
-    const lightboxCloseBtn = lightboxModal.querySelector(".image-lightbox-close-btn");
+    const lightboxCloseBtn = lightboxModal.querySelector(
+      ".image-lightbox-close-btn",
+    );
     if (lightboxCloseBtn) {
       lightboxCloseBtn.addEventListener("click", closeImageLightbox);
     }
@@ -479,7 +542,10 @@ function initArchiveListeners() {
 
 function positionDropdown(panel, btn) {
   if (!panel) return;
-  if (panel.id === "top-search-dropdown" && (window.innerWidth <= 590 || !btn || btn.offsetParent === null)) {
+  if (
+    panel.id === "top-search-dropdown" &&
+    (window.innerWidth <= 590 || !btn || btn.offsetParent === null)
+  ) {
     panel.style.left = "50%";
     panel.style.right = "auto";
     panel.style.transform = "translateX(-50%)";
@@ -549,8 +615,20 @@ function toggleTopSortDropdown() {
 }
 
 function closeAllTopDropdowns(exceptId = null) {
-  const dropdowns = ["dispatch-log-dropdown", "top-search-dropdown", "top-filter-dropdown", "top-sort-dropdown", "top-nav-hamburger-dropdown"];
-  const btns = ["dispatch-log-btn", "top-navbar-search-btn", "top-navbar-filter-btn", "top-navbar-sort-btn", "top-nav-hamburger-btn"];
+  const dropdowns = [
+    "dispatch-log-dropdown",
+    "top-search-dropdown",
+    "top-filter-dropdown",
+    "top-sort-dropdown",
+    "top-nav-hamburger-dropdown",
+  ];
+  const btns = [
+    "dispatch-log-btn",
+    "top-navbar-search-btn",
+    "top-navbar-filter-btn",
+    "top-navbar-sort-btn",
+    "top-nav-hamburger-btn",
+  ];
 
   dropdowns.forEach((id, idx) => {
     if (id !== exceptId) {
@@ -581,21 +659,28 @@ function applyTopFilter(formatKey) {
   activeFormatFilter = formatKey;
 
   // Highlight dropdown options
-  document.querySelectorAll("#top-filter-dropdown .dropdown-option, #dispatch-log-dropdown .dropdown-option").forEach(opt => {
-    const filter = opt.getAttribute("data-filter") || "all";
-    opt.classList.toggle("active", filter === formatKey);
-  });
+  document
+    .querySelectorAll(
+      "#top-filter-dropdown .dropdown-option, #dispatch-log-dropdown .dropdown-option",
+    )
+    .forEach((opt) => {
+      const filter = opt.getAttribute("data-filter") || "all";
+      opt.classList.toggle("active", filter === formatKey);
+    });
 
   // Sync category nav links
-  document.querySelectorAll("#category-filter-nav .nav-link-item").forEach(link => {
-    const f = link.getAttribute("data-filter");
-    link.classList.toggle("active", f === formatKey);
-  });
+  document
+    .querySelectorAll("#category-filter-nav .nav-link-item")
+    .forEach((link) => {
+      const f = link.getAttribute("data-filter");
+      link.classList.toggle("active", f === formatKey);
+    });
 
   // Update dispatch log dropdown button label
   const btn = document.getElementById("dispatch-log-btn");
   if (btn) {
-    const label = formatKey === "all" ? "_DISPATCH_LOG" : `_${formatKey.toUpperCase()}S`;
+    const label =
+      formatKey === "all" ? "_DISPATCH_LOG" : `_${formatKey.toUpperCase()}S`;
     btn.innerHTML = `${label} &#9660;`;
   }
 
@@ -605,17 +690,23 @@ function applyTopFilter(formatKey) {
 
 function applyTopSort(sortOrder) {
   activeSortOrder = sortOrder;
-  document.querySelectorAll("#top-sort-dropdown .dropdown-option").forEach(opt => {
-    const sort = opt.getAttribute("data-sort") || "newest";
-    opt.classList.toggle("active", sort === sortOrder);
-  });
+  document
+    .querySelectorAll("#top-sort-dropdown .dropdown-option")
+    .forEach((opt) => {
+      const sort = opt.getAttribute("data-sort") || "newest";
+      opt.classList.toggle("active", sort === sortOrder);
+    });
   renderTimelineList();
   closeAllTopDropdowns();
 }
 
 /* Modal Helper Functions */
 function escapeHtmlArchive(str) {
-  return (str || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  return (str || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 }
 
 function renderSubscribeFormArchive(modal) {
@@ -684,7 +775,9 @@ function renderSubscribeConfirmationArchive(email, name) {
 }
 
 function openSubscribeModal() {
-  const subscribeBtn = document.getElementById("sidebar-subscribe-btn") || document.querySelector('a[aria-label="Subscribe"]');
+  const subscribeBtn =
+    document.getElementById("sidebar-subscribe-btn") ||
+    document.querySelector('a[aria-label="Subscribe"]');
   if (subscribeBtn) {
     subscribeBtn.classList.remove("subscribe-ring-vibrate");
     subscribeBtn.classList.add("subscribe-coral-active");
@@ -697,7 +790,10 @@ function openSubscribeModal() {
         if (e.target === modal) closeSubscribeModal();
       });
     }
-    if (!modal.querySelector("#subscriber-name") || modal.querySelector(".modal-confirmation-card")) {
+    if (
+      !modal.querySelector("#subscriber-name") ||
+      modal.querySelector(".modal-confirmation-card")
+    ) {
       renderSubscribeFormArchive(modal);
     }
     if (typeof modal.showModal === "function") modal.showModal();
@@ -713,20 +809,25 @@ async function handleSubscribeSubmit(e) {
   e.preventDefault();
   const nameInput = document.getElementById("subscriber-name");
   const emailInput = document.getElementById("subscriber-email");
-  const submitBtn = e.target ? e.target.querySelector('button[type="submit"]') : null;
+  const submitBtn = e.target
+    ? e.target.querySelector('button[type="submit"]')
+    : null;
 
   const name = nameInput ? nameInput.value.trim() : "";
   const email = emailInput ? emailInput.value.trim() : "";
 
   if (!email) return;
 
-  const originalText = submitBtn ? submitBtn.textContent : "TRANSMIT SUBSCRIPTION";
+  const originalText = submitBtn
+    ? submitBtn.textContent
+    : "TRANSMIT SUBSCRIPTION";
   if (submitBtn) {
     submitBtn.textContent = "TRANSMITTING...";
     submitBtn.disabled = true;
   }
 
-  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScWoT07kZjH1m5Mu1zrK4l_eFpzOytLler0cwd0j4yQTXYDJQ/formResponse";
+  const GOOGLE_FORM_URL =
+    "https://docs.google.com/forms/d/e/1FAIpQLScWoT07kZjH1m5Mu1zrK4l_eFpzOytLler0cwd0j4yQTXYDJQ/formResponse";
   const bodyParams = new URLSearchParams();
   bodyParams.append("entry.1020667952", email);
   if (name) bodyParams.append("entry.1290617359", name);
@@ -736,7 +837,7 @@ async function handleSubscribeSubmit(e) {
       method: "POST",
       mode: "no-cors",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: bodyParams
+      body: bodyParams,
     });
   } catch (err) {
     console.warn("[Subscription Notice]", err);
@@ -773,22 +874,25 @@ function getArchivePostUrl(post) {
  */
 function renderTimelineList() {
   const container = document.getElementById("timeline-list-container");
-  const filterStatusLabel = document.getElementById("timeline-active-filter-label");
+  const filterStatusLabel = document.getElementById(
+    "timeline-active-filter-label",
+  );
   if (!container) return;
 
   // Filter posts
-  filteredTimelinePosts = ARCHIVE_POSTS.filter(post => {
+  filteredTimelinePosts = ARCHIVE_POSTS.filter((post) => {
     // 1. Format filter
     const fmt = (post.format || "ESSAY").toLowerCase();
-    if (activeFormatFilter !== "all" && fmt !== activeFormatFilter) return false;
+    if (activeFormatFilter !== "all" && fmt !== activeFormatFilter)
+      return false;
 
     // 2. Tag / Pillar Node Filter
     if (activeTagFilter) {
       const tagLower = activeTagFilter.toLowerCase();
       const pillar = (post.pillar || "").toLowerCase();
       const subtopic = (post.subtopic || "").toLowerCase();
-      const tags = (post.tags || []).map(t => t.toLowerCase());
-      
+      const tags = (post.tags || []).map((t) => t.toLowerCase());
+
       const matchesPillar = pillar === tagLower;
       const matchesSubtopic = subtopic === tagLower;
       const matchesTag = tags.includes(tagLower);
@@ -802,7 +906,13 @@ function renderTimelineList() {
       const excerpt = (post.excerpt || "").toLowerCase();
       const pillar = (post.pillar || "").toLowerCase();
       const tags = (post.tags || []).join(" ").toLowerCase();
-      if (!title.includes(searchQuery) && !subtitle.includes(searchQuery) && !excerpt.includes(searchQuery) && !pillar.includes(searchQuery) && !tags.includes(searchQuery)) {
+      if (
+        !title.includes(searchQuery) &&
+        !subtitle.includes(searchQuery) &&
+        !excerpt.includes(searchQuery) &&
+        !pillar.includes(searchQuery) &&
+        !tags.includes(searchQuery)
+      ) {
         return false;
       }
     }
@@ -815,18 +925,25 @@ function renderTimelineList() {
   } else if (activeSortOrder === "oldest") {
     filteredTimelinePosts.sort((a, b) => new Date(a.date) - new Date(b.date));
   } else if (activeSortOrder === "title") {
-    filteredTimelinePosts.sort((a, b) => (a.title || "").localeCompare(b.title || ""));
+    filteredTimelinePosts.sort((a, b) =>
+      (a.title || "").localeCompare(b.title || ""),
+    );
   }
 
   // Update Status Label & Active Filter Notification Banner
   if (filterStatusLabel) {
     let label = `DISPATCHES: ${filteredTimelinePosts.length} TOTAL`;
     if (activeTagFilter) label += ` // NODE: ${activeTagFilter.toUpperCase()}`;
-    if (activeFormatFilter !== "all") label += ` // FORMAT: ${activeFormatFilter.toUpperCase()}`;
+    if (activeFormatFilter !== "all")
+      label += ` // FORMAT: ${activeFormatFilter.toUpperCase()}`;
     filterStatusLabel.textContent = label;
   }
 
-  updateActiveFilterBanner(!!activeTagFilter, activeTagFilter, filteredTimelinePosts.length);
+  updateActiveFilterBanner(
+    !!activeTagFilter,
+    activeTagFilter,
+    filteredTimelinePosts.length,
+  );
 
   if (filteredTimelinePosts.length === 0) {
     container.innerHTML = `
@@ -838,29 +955,36 @@ function renderTimelineList() {
     return;
   }
 
-  const html = filteredTimelinePosts.map(post => {
-    const d = new Date(post.date);
-    const dayNum = !isNaN(d.getTime()) ? d.getDate() : "--";
-    const monthShort = !isNaN(d.getTime()) ? d.toLocaleString('en-US', { month: 'short' }).toUpperCase() : "---";
-    const yearFull = !isNaN(d.getTime()) ? d.getFullYear() : "----";
-    const postUrl = getArchivePostUrl(post);
+  const html = filteredTimelinePosts
+    .map((post) => {
+      const d = new Date(post.date);
+      const dayNum = !isNaN(d.getTime()) ? d.getDate() : "--";
+      const monthShort = !isNaN(d.getTime())
+        ? d.toLocaleString("en-US", { month: "short" }).toUpperCase()
+        : "---";
+      const yearFull = !isNaN(d.getTime()) ? d.getFullYear() : "----";
+      const postUrl = getArchivePostUrl(post);
 
-    // Format reading time duration (without "READ:")
-    let readDuration = post.read_time || "8 MIN";
-    readDuration = readDuration.replace(/^READ:\s*/i, '').replace(/^READ\s+/i, '').trim().toUpperCase();
+      // Format reading time duration (without "READ:")
+      let readDuration = post.read_time || "8 MIN";
+      readDuration = readDuration
+        .replace(/^READ:\s*/i, "")
+        .replace(/^READ\s+/i, "")
+        .trim()
+        .toUpperCase();
 
-    // Image path resolution
-    let imageSrc = "assets/images/turing1.png";
-    if (post.image) {
-      if (typeof post.image === "object" && post.image.path) {
-        imageSrc = post.image.path;
-      } else if (typeof post.image === "string") {
-        imageSrc = post.image;
+      // Image path resolution
+      let imageSrc = "assets/images/turing1.png";
+      if (post.image) {
+        if (typeof post.image === "object" && post.image.path) {
+          imageSrc = post.image.path;
+        } else if (typeof post.image === "string") {
+          imageSrc = post.image;
+        }
       }
-    }
 
-    return `
-      <li class="timeline-item ${post.featured ? 'is-featured' : ''}" id="timeline-item-${post.slug}">
+      return `
+      <li class="timeline-item ${post.featured ? "is-featured" : ""}" id="timeline-item-${post.slug}">
         <!-- Column 1: Date -->
         <div class="timeline-date-col">
           <div class="timeline-date-day">${dayNum} ${monthShort}</div>
@@ -884,12 +1008,12 @@ function renderTimelineList() {
           <!-- Top Metadata: Plain text on 1 single line without chip boxes -->
           <div class="timeline-meta-top-text">
             <span class="meta-format-text">[${(post.format || "ESSAY").toUpperCase()}]</span>
-            ${post.pillar ? `<span class="meta-sep-dot">•</span><span class="meta-topic-text">${post.pillar.toUpperCase()}</span>` : ''}
-            ${post.subtopic ? `<span class="meta-sep-dot">•</span><span class="meta-topic-text">${post.subtopic.toUpperCase()}</span>` : ''}
+            ${post.pillar ? `<span class="meta-sep-dot">•</span><span class="meta-topic-text">${post.pillar.toUpperCase()}</span>` : ""}
+            ${post.subtopic ? `<span class="meta-sep-dot">•</span><span class="meta-topic-text">${post.subtopic.toUpperCase()}</span>` : ""}
           </div>
 
           <a href="${postUrl}" class="timeline-title">${post.title}</a>
-          ${post.excerpt ? `<p class="timeline-excerpt">${post.excerpt}</p>` : ''}
+          ${post.excerpt ? `<p class="timeline-excerpt">${post.excerpt}</p>` : ""}
 
           <!-- Bottom Metadata Ordered: 1. Read Dispatch Button, 2. Duration, 3. Author -->
           <div class="timeline-meta-bottom">
@@ -902,7 +1026,8 @@ function renderTimelineList() {
         </div>
       </li>
     `;
-  }).join("");
+    })
+    .join("");
 
   container.innerHTML = `<ul class="timeline-list">${html}</ul>`;
 }
@@ -914,7 +1039,9 @@ function clearAllFilters() {
   searchQuery = "";
   const searchInput = document.getElementById("archive-search-input");
   if (searchInput) searchInput.value = "";
-  document.querySelectorAll("#category-filter-nav .nav-link-item").forEach(l => l.classList.remove("active"));
+  document
+    .querySelectorAll("#category-filter-nav .nav-link-item")
+    .forEach((l) => l.classList.remove("active"));
   setNodeFilterUIState(false);
   renderTimelineList();
   resetNodeHighlights();
@@ -929,8 +1056,8 @@ function clearAllFilters() {
 // Three.js Scene Global Handles
 let threeScene, threeCamera, threeRenderer, threeControls;
 let threeNodesGroup, threeLinesGroup, threeParticlesGroup;
-let threeNodes = [];      // { mesh, labelSprite, data, initialPos, targetPos }
-let threeLines = [];      // { lineMesh, fromNode, toNode, defaultColor, highlightColor }
+let threeNodes = []; // { mesh, labelSprite, data, initialPos, targetPos }
+let threeLines = []; // { lineMesh, fromNode, toNode, defaultColor, highlightColor }
 let threeRaycaster, threeMouse;
 let hoveredThreeNode = null;
 let isThreeInitialized = false;
@@ -980,7 +1107,7 @@ function initThreeJSNodeMap() {
   threeRenderer = new THREE.WebGLRenderer({
     canvas: canvas,
     antialias: true,
-    alpha: true
+    alpha: true,
   });
   threeRenderer.setSize(w, h, false);
   threeRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -995,7 +1122,10 @@ function initThreeJSNodeMap() {
 
   // 4. Orbit Controls (Rotation, Pan, Zoom)
   if (typeof THREE.OrbitControls !== "undefined") {
-    threeControls = new THREE.OrbitControls(threeCamera, threeRenderer.domElement);
+    threeControls = new THREE.OrbitControls(
+      threeCamera,
+      threeRenderer.domElement,
+    );
     threeControls.enableDamping = true;
     threeControls.dampingFactor = 0.05;
     threeControls.rotateSpeed = 0.75;
@@ -1060,13 +1190,13 @@ function build3DStarfield() {
     positions[i + 2] = (Math.random() - 0.5) * 1200;
   }
 
-  geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
 
   const material = new THREE.PointsMaterial({
     color: 0xffffff,
     size: 1.8,
     transparent: true,
-    opacity: 0.28
+    opacity: 0.28,
   });
 
   const starfield = new THREE.Points(geometry, material);
@@ -1089,7 +1219,14 @@ function getArchiveGlitterTextures(colorHexStr, tier = "tag") {
   ctxD.fillStyle = colorHexStr;
   ctxD.fillRect(0, 0, size, size);
 
-  const fleckCount = tier === "root" ? 7500 : (tier === "pillar" ? 6000 : (tier === "subtopic" ? 4800 : 3600));
+  const fleckCount =
+    tier === "root"
+      ? 7500
+      : tier === "pillar"
+        ? 6000
+        : tier === "subtopic"
+          ? 4800
+          : 3600;
 
   for (let i = 0; i < fleckCount; i++) {
     const x = Math.random() * size;
@@ -1099,7 +1236,10 @@ function getArchiveGlitterTextures(colorHexStr, tier = "tag") {
     const isBrightGlint = Math.random() > 0.86;
 
     if (isBrightGlint) {
-      ctxD.fillStyle = Math.random() > 0.45 ? `rgba(255, 255, 255, ${alpha})` : `rgba(255, 235, 195, ${alpha})`;
+      ctxD.fillStyle =
+        Math.random() > 0.45
+          ? `rgba(255, 255, 255, ${alpha})`
+          : `rgba(255, 235, 195, ${alpha})`;
       ctxD.beginPath();
       ctxD.arc(x, y, r * 1.3, 0, Math.PI * 2);
       ctxD.fill();
@@ -1141,29 +1281,44 @@ function getArchiveGlitterTextures(colorHexStr, tier = "tag") {
   return result;
 }
 
-function createGlitterSphereNodeMesh(radius, colorHex, tier = "tag", emissiveIntensity = 0.22) {
+function createGlitterSphereNodeMesh(
+  radius,
+  colorHex,
+  tier = "tag",
+  emissiveIntensity = 0.22,
+) {
   const geo = new THREE.SphereGeometry(radius, 36, 36);
-  const colorHexStr = typeof colorHex === "number" ? "#" + colorHex.toString(16).padStart(6, "0") : colorHex;
+  const colorHexStr =
+    typeof colorHex === "number"
+      ? "#" + colorHex.toString(16).padStart(6, "0")
+      : colorHex;
   const { diffTex, bumpTex } = getArchiveGlitterTextures(colorHexStr, tier);
 
   const mat = new THREE.MeshStandardMaterial({
     color: colorHex,
     map: diffTex,
     bumpMap: bumpTex,
-    bumpScale: tier === "root" || tier === "pillar" ? 0.16 : (tier === "subtopic" ? 0.13 : 0.10),
+    bumpScale:
+      tier === "root" || tier === "pillar"
+        ? 0.16
+        : tier === "subtopic"
+          ? 0.13
+          : 0.1,
     roughness: 0.36,
     metalness: 0.76,
     emissive: colorHex,
     emissiveIntensity: emissiveIntensity,
-    roughnessMap: bumpTex
+    roughnessMap: bumpTex,
   });
 
   return new THREE.Mesh(geo, mat);
 }
 
 function build3DNodeMapGraph() {
-  while (threeNodesGroup.children.length > 0) threeNodesGroup.remove(threeNodesGroup.children[0]);
-  while (threeLinesGroup.children.length > 0) threeLinesGroup.remove(threeLinesGroup.children[0]);
+  while (threeNodesGroup.children.length > 0)
+    threeNodesGroup.remove(threeNodesGroup.children[0]);
+  while (threeLinesGroup.children.length > 0)
+    threeLinesGroup.remove(threeLinesGroup.children[0]);
   threeNodes = [];
   threeLines = [];
 
@@ -1175,10 +1330,10 @@ function build3DNodeMapGraph() {
     label: "UNTITLED.JPG",
     type: "root",
     color: "#E84A5F",
-    postsCount: ARCHIVE_POSTS.length
+    postsCount: ARCHIVE_POSTS.length,
   };
 
-  const rootMesh = createGlitterSphereNodeMesh(21, 0xE84A5F, "root", 0.35);
+  const rootMesh = createGlitterSphereNodeMesh(21, 0xe84a5f, "root", 0.35);
   rootMesh.position.set(0, 0, 0);
   threeNodesGroup.add(rootMesh);
 
@@ -1186,15 +1341,21 @@ function build3DNodeMapGraph() {
   rootSprite.position.set(0, -28, 0);
   rootMesh.add(rootSprite);
 
-  const rootNodeItem = { mesh: rootMesh, labelSprite: rootSprite, data: rootData, neighbors: new Set() };
+  const rootNodeItem = {
+    mesh: rootMesh,
+    labelSprite: rootSprite,
+    data: rootData,
+    neighbors: new Set(),
+  };
   threeNodes.push(rootNodeItem);
 
   // 2. Extract Pillars & Subtopics
   const pillarMap = {};
-  ARCHIVE_POSTS.forEach(p => {
+  ARCHIVE_POSTS.forEach((p) => {
     const pil = p.pillar || "GENERAL PILLAR";
     const sub = p.subtopic || "CORE THEORIES";
-    if (!pillarMap[pil]) pillarMap[pil] = { name: pil, posts: [], subtopics: {} };
+    if (!pillarMap[pil])
+      pillarMap[pil] = { name: pil, posts: [], subtopics: {} };
     pillarMap[pil].posts.push(p);
     if (!pillarMap[pil].subtopics[sub]) pillarMap[pil].subtopics[sub] = [];
     pillarMap[pil].subtopics[sub].push(p);
@@ -1209,21 +1370,29 @@ function build3DNodeMapGraph() {
   const R_SUBTOPIC = 210;
 
   const pillarBasisDirs = [
-    new THREE.Vector3( 0.85,  0.52,  0.0),
-    new THREE.Vector3(-0.85,  0.52,  0.0),
-    new THREE.Vector3( 0.0,  -0.75,  0.66),
-    new THREE.Vector3( 0.0,  -0.75, -0.66),
-    new THREE.Vector3( 0.65, -0.25,  0.72),
-    new THREE.Vector3(-0.65, -0.25, -0.72)
+    new THREE.Vector3(0.85, 0.52, 0.0),
+    new THREE.Vector3(-0.85, 0.52, 0.0),
+    new THREE.Vector3(0.0, -0.75, 0.66),
+    new THREE.Vector3(0.0, -0.75, -0.66),
+    new THREE.Vector3(0.65, -0.25, 0.72),
+    new THREE.Vector3(-0.65, -0.25, -0.72),
   ];
 
   pillarList.forEach((pilObj, pIdx) => {
     const pilName = pilObj.name;
-    const dir = (pillarBasisDirs[pIdx % pillarBasisDirs.length] || new THREE.Vector3(Math.cos(pIdx), Math.sin(pIdx), 0)).clone().normalize();
+    const dir = (
+      pillarBasisDirs[pIdx % pillarBasisDirs.length] ||
+      new THREE.Vector3(Math.cos(pIdx), Math.sin(pIdx), 0)
+    )
+      .clone()
+      .normalize();
     const pilPos = dir.clone().multiplyScalar(R_PILLAR);
 
     const postsInPillar = pilObj.posts;
-    const pillarRadius = Math.min(20, 15 + Math.min(5, postsInPillar.length * 1.2));
+    const pillarRadius = Math.min(
+      20,
+      15 + Math.min(5, postsInPillar.length * 1.2),
+    );
 
     const pillarData = {
       id: `pillar_${pIdx}`,
@@ -1231,38 +1400,63 @@ function build3DNodeMapGraph() {
       type: "pillar",
       color: "#FF4D64",
       postsCount: postsInPillar.length,
-      postSlugs: postsInPillar.map(p => p.slug)
+      postSlugs: postsInPillar.map((p) => p.slug),
     };
 
-    const pillarMesh = createGlitterSphereNodeMesh(pillarRadius, 0xFF4D64, "pillar", 0.28);
+    const pillarMesh = createGlitterSphereNodeMesh(
+      pillarRadius,
+      0xff4d64,
+      "pillar",
+      0.28,
+    );
     pillarMesh.position.copy(pilPos);
     threeNodesGroup.add(pillarMesh);
 
-    const pillarSprite = create3DTextSprite(pilName.toUpperCase(), "#FFA0AD", 22);
+    const pillarSprite = create3DTextSprite(
+      pilName.toUpperCase(),
+      "#FFA0AD",
+      22,
+    );
     pillarSprite.position.set(0, -(pillarRadius + 9), 0);
     pillarMesh.add(pillarSprite);
 
-    const pillarNodeItem = { mesh: pillarMesh, labelSprite: pillarSprite, data: pillarData, neighbors: new Set() };
+    const pillarNodeItem = {
+      mesh: pillarMesh,
+      labelSprite: pillarSprite,
+      data: pillarData,
+      neighbors: new Set(),
+    };
     threeNodes.push(pillarNodeItem);
     pillarNodeMap[pilName] = pillarNodeItem;
 
     rootNodeItem.neighbors.add(pillarNodeItem);
     pillarNodeItem.neighbors.add(rootNodeItem);
-    create3DConnectionLine(rootNodeItem, pillarNodeItem, 0x8A2A38, 0xFF3B56, 0.22);
+    create3DConnectionLine(
+      rootNodeItem,
+      pillarNodeItem,
+      0x8a2a38,
+      0xff3b56,
+      0.22,
+    );
 
     // 3. Subtopics
     const subtopicNames = Object.keys(pilObj.subtopics);
     const subCount = subtopicNames.length;
-    const upRef = Math.abs(dir.y) < 0.9 ? new THREE.Vector3(0, 1, 0) : new THREE.Vector3(1, 0, 0);
+    const upRef =
+      Math.abs(dir.y) < 0.9
+        ? new THREE.Vector3(0, 1, 0)
+        : new THREE.Vector3(1, 0, 0);
     const rightVec = new THREE.Vector3().crossVectors(dir, upRef).normalize();
     const upVec = new THREE.Vector3().crossVectors(rightVec, dir).normalize();
 
     subtopicNames.forEach((subName, sIdx) => {
       const postsInSub = pilObj.subtopics[subName];
       const coneAngle = subCount === 1 ? 0 : 0.38;
-      const fanAngle = subCount === 1 ? 0 : ((sIdx / (subCount - 1)) - 0.5) * Math.PI * 1.1;
+      const fanAngle =
+        subCount === 1 ? 0 : (sIdx / (subCount - 1) - 0.5) * Math.PI * 1.1;
 
-      const subDir = dir.clone()
+      const subDir = dir
+        .clone()
         .addScaledVector(rightVec, Math.cos(fanAngle) * coneAngle)
         .addScaledVector(upVec, Math.sin(fanAngle) * coneAngle)
         .normalize();
@@ -1279,32 +1473,52 @@ function build3DNodeMapGraph() {
         pillar: pilName,
         color: "#FFA0B0",
         postsCount: postsInSub.length,
-        postSlugs: postsInSub.map(p => p.slug)
+        postSlugs: postsInSub.map((p) => p.slug),
       };
 
-      const subMesh = createGlitterSphereNodeMesh(subRadius, 0xFFA0B0, "subtopic", 0.22);
+      const subMesh = createGlitterSphereNodeMesh(
+        subRadius,
+        0xffa0b0,
+        "subtopic",
+        0.22,
+      );
       subMesh.position.copy(subPos);
       threeNodesGroup.add(subMesh);
 
-      const subSprite = create3DTextSprite(subName.toUpperCase(), "#FFD5DC", 16);
+      const subSprite = create3DTextSprite(
+        subName.toUpperCase(),
+        "#FFD5DC",
+        16,
+      );
       subSprite.position.set(0, -(subRadius + 8), 0);
       subMesh.add(subSprite);
 
-      const subNodeItem = { mesh: subMesh, labelSprite: subSprite, data: subData, neighbors: new Set() };
+      const subNodeItem = {
+        mesh: subMesh,
+        labelSprite: subSprite,
+        data: subData,
+        neighbors: new Set(),
+      };
       threeNodes.push(subNodeItem);
       subtopicNodeMap[`${pilName}:::${subName}`] = subNodeItem;
 
       pillarNodeItem.neighbors.add(subNodeItem);
       subNodeItem.neighbors.add(pillarNodeItem);
-      create3DConnectionLine(pillarNodeItem, subNodeItem, 0x652838, 0xFF6585, 0.14);
+      create3DConnectionLine(
+        pillarNodeItem,
+        subNodeItem,
+        0x652838,
+        0xff6585,
+        0.14,
+      );
     });
   });
 
   // 4. Extract Unique Tags
   const uniqueTagMap = {};
-  ARCHIVE_POSTS.forEach(p => {
+  ARCHIVE_POSTS.forEach((p) => {
     if (p.tags && Array.isArray(p.tags)) {
-      p.tags.forEach(t => {
+      p.tags.forEach((t) => {
         const clean = String(t).trim().toLowerCase().replace(/^#/, "");
         if (!clean) return;
         if (!uniqueTagMap[clean]) {
@@ -1313,13 +1527,14 @@ function build3DNodeMapGraph() {
             pillars: new Set(),
             subtopics: new Set(),
             posts: [],
-            count: 0
+            count: 0,
           };
         }
         uniqueTagMap[clean].count++;
         uniqueTagMap[clean].posts.push(p);
         if (p.pillar) uniqueTagMap[clean].pillars.add(p.pillar);
-        if (p.pillar && p.subtopic) uniqueTagMap[clean].subtopics.add(`${p.pillar}:::${p.subtopic}`);
+        if (p.pillar && p.subtopic)
+          uniqueTagMap[clean].subtopics.add(`${p.pillar}:::${p.subtopic}`);
       });
     }
   });
@@ -1340,17 +1555,21 @@ function build3DNodeMapGraph() {
 
     const fibVec = new THREE.Vector3(x, y, z).normalize();
 
-    const connectedSubNodes = Array.from(tagObj.subtopics).map(key => subtopicNodeMap[key]).filter(Boolean);
-    const connectedPillarNodes = Array.from(tagObj.pillars).map(pName => pillarNodeMap[pName]).filter(Boolean);
+    const connectedSubNodes = Array.from(tagObj.subtopics)
+      .map((key) => subtopicNodeMap[key])
+      .filter(Boolean);
+    const connectedPillarNodes = Array.from(tagObj.pillars)
+      .map((pName) => pillarNodeMap[pName])
+      .filter(Boolean);
 
     if (connectedSubNodes.length > 0) {
       const avgSubDir = new THREE.Vector3(0, 0, 0);
-      connectedSubNodes.forEach(sn => avgSubDir.add(sn.mesh.position));
+      connectedSubNodes.forEach((sn) => avgSubDir.add(sn.mesh.position));
       avgSubDir.normalize();
       fibVec.lerp(avgSubDir, 0.42).normalize();
     } else if (connectedPillarNodes.length > 0) {
       const avgPilDir = new THREE.Vector3(0, 0, 0);
-      connectedPillarNodes.forEach(pn => avgPilDir.add(pn.mesh.position));
+      connectedPillarNodes.forEach((pn) => avgPilDir.add(pn.mesh.position));
       avgPilDir.normalize();
       fibVec.lerp(avgPilDir, 0.35).normalize();
     }
@@ -1358,7 +1577,10 @@ function build3DNodeMapGraph() {
     const tagDist = 295 + (idx % 6) * 12;
     const finalPos = fibVec.multiplyScalar(tagDist);
 
-    const tagRadius = Math.min(9.5, 5.2 + Math.min(4.3, Math.pow(tagObj.count, 0.75) * 1.5));
+    const tagRadius = Math.min(
+      9.5,
+      5.2 + Math.min(4.3, Math.pow(tagObj.count, 0.75) * 1.5),
+    );
     const tagData = {
       id: `tag_${idx}`,
       label: `#${tagObj.name}`,
@@ -1367,42 +1589,60 @@ function build3DNodeMapGraph() {
       color: "#E2E8F0",
       postsCount: tagObj.count,
       pillars: Array.from(tagObj.pillars),
-      subtopics: Array.from(tagObj.subtopics).map(k => k.split(":::")[1] || k)
+      subtopics: Array.from(tagObj.subtopics).map(
+        (k) => k.split(":::")[1] || k,
+      ),
     };
 
-    const tagMesh = createGlitterSphereNodeMesh(tagRadius, 0xE2E8F0, "tag", 0.18);
+    const tagMesh = createGlitterSphereNodeMesh(
+      tagRadius,
+      0xe2e8f0,
+      "tag",
+      0.18,
+    );
     tagMesh.position.copy(finalPos);
     threeNodesGroup.add(tagMesh);
 
     const labelFontSize = Math.min(18, 11 + tagRadius * 0.5);
-    const tagSprite = create3DTextSprite(`#${tagObj.name}`, "#F1F5F9", labelFontSize);
+    const tagSprite = create3DTextSprite(
+      `#${tagObj.name}`,
+      "#F1F5F9",
+      labelFontSize,
+    );
     tagSprite.position.set(0, -(tagRadius + 7), 0);
     tagMesh.add(tagSprite);
 
-    const tagNodeItem = { mesh: tagMesh, labelSprite: tagSprite, data: tagData, neighbors: new Set() };
+    const tagNodeItem = {
+      mesh: tagMesh,
+      labelSprite: tagSprite,
+      data: tagData,
+      neighbors: new Set(),
+    };
     threeNodes.push(tagNodeItem);
     tagNodeMap[tagObj.name] = tagNodeItem;
 
     if (connectedSubNodes.length > 0) {
-      connectedSubNodes.forEach(sNode => {
+      connectedSubNodes.forEach((sNode) => {
         tagNodeItem.neighbors.add(sNode);
         sNode.neighbors.add(tagNodeItem);
-        create3DConnectionLine(sNode, tagNodeItem, 0x2A2E38, 0xFF6080, 0.07);
+        create3DConnectionLine(sNode, tagNodeItem, 0x2a2e38, 0xff6080, 0.07);
       });
     } else {
-      connectedPillarNodes.forEach(pNode => {
+      connectedPillarNodes.forEach((pNode) => {
         tagNodeItem.neighbors.add(pNode);
         pNode.neighbors.add(tagNodeItem);
-        create3DConnectionLine(pNode, tagNodeItem, 0x2A2E38, 0xFF4D64, 0.07);
+        create3DConnectionLine(pNode, tagNodeItem, 0x2a2e38, 0xff4d64, 0.07);
       });
     }
   });
 
   // 5. Connect Tags to Tags if they co-occur in the same post (Refined sequential chaining)
   const coOccurrenceCounts = {};
-  ARCHIVE_POSTS.forEach(p => {
+  ARCHIVE_POSTS.forEach((p) => {
     if (p.tags && Array.isArray(p.tags) && p.tags.length > 1) {
-      const cleanTags = p.tags.map(t => String(t).trim().toLowerCase().replace(/^#/, "")).filter(Boolean);
+      const cleanTags = p.tags
+        .map((t) => String(t).trim().toLowerCase().replace(/^#/, ""))
+        .filter(Boolean);
       for (let i = 0; i < cleanTags.length - 1; i++) {
         const tA = cleanTags[i];
         const tB = cleanTags[i + 1];
@@ -1412,14 +1652,14 @@ function build3DNodeMapGraph() {
     }
   });
 
-  Object.keys(coOccurrenceCounts).forEach(pairKey => {
+  Object.keys(coOccurrenceCounts).forEach((pairKey) => {
     const [tA, tB] = pairKey.split("|");
     const nodeA = tagNodeMap[tA];
     const nodeB = tagNodeMap[tB];
     if (nodeA && nodeB && !nodeA.neighbors.has(nodeB)) {
       nodeA.neighbors.add(nodeB);
       nodeB.neighbors.add(nodeA);
-      create3DConnectionLine(nodeA, nodeB, 0x1E222A, 0xFFA0B0, 0.04);
+      create3DConnectionLine(nodeA, nodeB, 0x1e222a, 0xffa0b0, 0.04);
     }
   });
 }
@@ -1428,7 +1668,7 @@ function splitTextIntoLines(text, maxCharsPerLine = 22) {
   if (!text || text.length <= maxCharsPerLine) return [text];
 
   if (text.includes(",")) {
-    const parts = text.split(",").map(p => p.trim());
+    const parts = text.split(",").map((p) => p.trim());
     if (parts.length >= 2) {
       const line1 = parts[0] + ",";
       const line2 = parts.slice(1).join(", ");
@@ -1440,8 +1680,11 @@ function splitTextIntoLines(text, maxCharsPerLine = 22) {
   const lines = [];
   let currentLine = "";
 
-  words.forEach(w => {
-    if ((currentLine + " " + w).trim().length <= maxCharsPerLine || !currentLine) {
+  words.forEach((w) => {
+    if (
+      (currentLine + " " + w).trim().length <= maxCharsPerLine ||
+      !currentLine
+    ) {
       currentLine = currentLine ? currentLine + " " + w : w;
     } else {
       lines.push(currentLine);
@@ -1471,14 +1714,18 @@ function create3DTextSprite(text, colorHexStr, fontSize = 20) {
   tCtx.textBaseline = "middle";
 
   const lineHeight = fontSize * 1.25;
-  const startY = (canvasHeight / 2) - ((lineCount - 1) * lineHeight / 2);
+  const startY = canvasHeight / 2 - ((lineCount - 1) * lineHeight) / 2;
 
   lines.forEach((l, i) => {
-    tCtx.fillText(l, canvasWidth / 2, startY + (i * lineHeight));
+    tCtx.fillText(l, canvasWidth / 2, startY + i * lineHeight);
   });
 
   const texture = new THREE.CanvasTexture(canvasText);
-  const spriteMat = new THREE.SpriteMaterial({ map: texture, transparent: true, depthTest: false });
+  const spriteMat = new THREE.SpriteMaterial({
+    map: texture,
+    transparent: true,
+    depthTest: false,
+  });
   const sprite = new THREE.Sprite(spriteMat);
 
   const baseScaleY = lineCount > 1 ? 22 : 14;
@@ -1487,7 +1734,13 @@ function create3DTextSprite(text, colorHexStr, fontSize = 20) {
   return sprite;
 }
 
-function create3DConnectionLine(fromItem, toItem, defaultColorHex, highlightColorHex, defaultOpacity = 0.06) {
+function create3DConnectionLine(
+  fromItem,
+  toItem,
+  defaultColorHex,
+  highlightColorHex,
+  defaultOpacity = 0.06,
+) {
   const points = [];
   points.push(fromItem.mesh.position);
   points.push(toItem.mesh.position);
@@ -1497,7 +1750,7 @@ function create3DConnectionLine(fromItem, toItem, defaultColorHex, highlightColo
     color: defaultColorHex,
     transparent: true,
     opacity: defaultOpacity,
-    linewidth: 1
+    linewidth: 1,
   });
 
   const lineMesh = new THREE.Line(geometry, material);
@@ -1509,7 +1762,7 @@ function create3DConnectionLine(fromItem, toItem, defaultColorHex, highlightColo
     toItem: toItem,
     defaultColorHex: defaultColorHex,
     highlightColorHex: highlightColorHex,
-    defaultOpacity: defaultOpacity
+    defaultOpacity: defaultOpacity,
   });
 }
 
@@ -1542,20 +1795,24 @@ function updateThreeRaycasting() {
   if (!threeRaycaster || !threeCamera || !threeNodesGroup) return;
 
   threeRaycaster.setFromCamera(threeMouse, threeCamera);
-  const meshesToIntersect = threeNodes.map(n => n.mesh);
+  const meshesToIntersect = threeNodes.map((n) => n.mesh);
   const intersects = threeRaycaster.intersectObjects(meshesToIntersect);
 
   let newHovered = null;
   if (intersects.length > 0) {
     const hitMesh = intersects[0].object;
-    newHovered = threeNodes.find(n => n.mesh === hitMesh) || null;
+    newHovered = threeNodes.find((n) => n.mesh === hitMesh) || null;
   }
 
   if (hoveredThreeNode !== newHovered) {
     hoveredThreeNode = newHovered;
 
-    threeNodes.forEach(n => {
-      if (hoveredThreeNode && (n === hoveredThreeNode || (hoveredThreeNode.neighbors && hoveredThreeNode.neighbors.has(n)))) {
+    threeNodes.forEach((n) => {
+      if (
+        hoveredThreeNode &&
+        (n === hoveredThreeNode ||
+          (hoveredThreeNode.neighbors && hoveredThreeNode.neighbors.has(n)))
+      ) {
         const s = n === hoveredThreeNode ? 1.45 : 1.22;
         n.mesh.scale.set(s, s, s);
       } else {
@@ -1569,8 +1826,10 @@ function updateThreeRaycasting() {
       if (canvas) canvas.style.cursor = "default";
     }
 
-    threeLines.forEach(l => {
-      const isDirectConn = hoveredThreeNode && (l.fromItem === hoveredThreeNode || l.toItem === hoveredThreeNode);
+    threeLines.forEach((l) => {
+      const isDirectConn =
+        hoveredThreeNode &&
+        (l.fromItem === hoveredThreeNode || l.toItem === hoveredThreeNode);
       if (isDirectConn) {
         l.mesh.material.color.setHex(l.highlightColorHex);
         l.mesh.material.opacity = 0.95;
@@ -1596,19 +1855,20 @@ function updateThreeDockMetadata(nodeItem) {
       dockDesc.textContent = `Central taxonomy core connecting ${d.postsCount} dispatches across pillars and subtopics.`;
     } else if (d.type === "pillar") {
       dockTitle.textContent = `[ 3D PILLAR: ${d.label} ]`;
-      dockDesc.textContent = `Major intellectual pillar with ${d.postsCount} dispatch${d.postsCount > 1 ? 'es' : ''}. Click to filter timeline.`;
+      dockDesc.textContent = `Major intellectual pillar with ${d.postsCount} dispatch${d.postsCount > 1 ? "es" : ""}. Click to filter timeline.`;
     } else if (d.type === "subtopic") {
       dockTitle.textContent = `[ 3D SUBTOPIC: ${d.label} ]`;
-      dockDesc.textContent = `Subtopic under [${d.pillar}] with ${d.postsCount} dispatch${d.postsCount > 1 ? 'es' : ''}. Click to filter timeline.`;
+      dockDesc.textContent = `Subtopic under [${d.pillar}] with ${d.postsCount} dispatch${d.postsCount > 1 ? "es" : ""}. Click to filter timeline.`;
     } else {
       const pStr = (d.pillars || []).join(" • ");
       const subStr = (d.subtopics || []).slice(0, 2).join(" • ");
       dockTitle.textContent = `[ 3D TAG: ${d.label} ]`;
-      dockDesc.textContent = `Tag node with ${d.postsCount} dispatch${d.postsCount > 1 ? 'es' : ''}${subStr ? ' • ' + subStr : (pStr ? ' across ' + pStr : '')}. Click node to filter timeline.`;
+      dockDesc.textContent = `Tag node with ${d.postsCount} dispatch${d.postsCount > 1 ? "es" : ""}${subStr ? " • " + subStr : pStr ? " across " + pStr : ""}. Click node to filter timeline.`;
     }
   } else if (!activeNodeFilter) {
     dockTitle.textContent = "[ 3D TAXONOMY CONSTELLATION ]";
-    dockDesc.textContent = "Drag to rotate 3D constellation. Scroll to zoom. Hover over nodes to inspect network connections. Click to filter.";
+    dockDesc.textContent =
+      "Drag to rotate 3D constellation. Scroll to zoom. Hover over nodes to inspect network connections. Click to filter.";
   }
 }
 
@@ -1715,13 +1975,15 @@ function buildNodeMapData() {
     vy: 0,
     radius: 18,
     color: "#E84A5F",
-    postsCount: ARCHIVE_POSTS.length
+    postsCount: ARCHIVE_POSTS.length,
   };
   nodes.push(rootNode);
 
   // 1. Extract All 4 Pillars
   const pillarSet = new Set();
-  ARCHIVE_POSTS.forEach(p => { if (p.pillar) pillarSet.add(p.pillar); });
+  ARCHIVE_POSTS.forEach((p) => {
+    if (p.pillar) pillarSet.add(p.pillar);
+  });
   const pillarList = Array.from(pillarSet);
 
   const pillarNodeMap = {};
@@ -1733,7 +1995,7 @@ function buildNodeMapData() {
     const px = cx + Math.cos(angle) * distance;
     const py = cy + Math.sin(angle) * distance;
 
-    const postsInPillar = ARCHIVE_POSTS.filter(p => p.pillar === pilName);
+    const postsInPillar = ARCHIVE_POSTS.filter((p) => p.pillar === pilName);
     const pillarRadius = Math.min(18, 9.5 + postsInPillar.length * 2.2);
 
     const pillarNode = {
@@ -1747,7 +2009,7 @@ function buildNodeMapData() {
       radius: pillarRadius,
       color: "#FF6579",
       postsCount: postsInPillar.length,
-      postSlugs: postsInPillar.map(p => p.slug)
+      postSlugs: postsInPillar.map((p) => p.slug),
     };
     nodes.push(pillarNode);
     pillarNodeMap[pilName] = pillarNode;
@@ -1756,9 +2018,9 @@ function buildNodeMapData() {
 
   // 2. Extract Unique Tags
   const uniqueTagMap = {};
-  ARCHIVE_POSTS.forEach(p => {
+  ARCHIVE_POSTS.forEach((p) => {
     if (p.tags && Array.isArray(p.tags)) {
-      p.tags.forEach(t => {
+      p.tags.forEach((t) => {
         const clean = String(t).trim().toLowerCase().replace(/^#/, "");
         if (!clean) return;
         if (!uniqueTagMap[clean]) {
@@ -1775,12 +2037,19 @@ function buildNodeMapData() {
 
   tagList.forEach((tagObj, idx) => {
     const pillars = Array.from(tagObj.pillars);
-    const targetPillarNodes = pillars.map(pName => pillarNodeMap[pName]).filter(Boolean);
+    const targetPillarNodes = pillars
+      .map((pName) => pillarNodeMap[pName])
+      .filter(Boolean);
 
-    let tx = cx, ty = cy;
+    let tx = cx,
+      ty = cy;
     if (targetPillarNodes.length > 0) {
-      let sumX = 0, sumY = 0;
-      targetPillarNodes.forEach(pn => { sumX += pn.x; sumY += pn.y; });
+      let sumX = 0,
+        sumY = 0;
+      targetPillarNodes.forEach((pn) => {
+        sumX += pn.x;
+        sumY += pn.y;
+      });
       tx = sumX / targetPillarNodes.length;
       ty = sumY / targetPillarNodes.length;
     }
@@ -1803,20 +2072,22 @@ function buildNodeMapData() {
       radius: tagRadius,
       color: "#D4D4D4",
       postsCount: tagObj.count,
-      pillars: pillars
+      pillars: pillars,
     };
     nodes.push(tagNode);
     tagNodeMap[tagObj.name] = tagNode;
 
-    targetPillarNodes.forEach(pn => {
+    targetPillarNodes.forEach((pn) => {
       connections.push({ from: pn, to: tagNode, weight: 1 });
     });
   });
 
   // 3. Connect Co-occurring Tags in 2D
-  ARCHIVE_POSTS.forEach(p => {
+  ARCHIVE_POSTS.forEach((p) => {
     if (p.tags && Array.isArray(p.tags) && p.tags.length > 1) {
-      const cleanTags = p.tags.map(t => String(t).trim().toLowerCase().replace(/^#/, "")).filter(Boolean);
+      const cleanTags = p.tags
+        .map((t) => String(t).trim().toLowerCase().replace(/^#/, ""))
+        .filter(Boolean);
       for (let i = 0; i < cleanTags.length; i++) {
         for (let j = i + 1; j < cleanTags.length; j++) {
           const nodeA = tagNodeMap[cleanTags[i]];
@@ -1849,7 +2120,7 @@ function updatePhysics() {
   const w = canvas.width;
   const h = canvas.height;
 
-  nodes.forEach(n => {
+  nodes.forEach((n) => {
     if (n.type === "root") return; // Root stays centered
 
     n.x += n.vx;
@@ -1872,23 +2143,33 @@ function drawNodeGraph() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // Draw Lines
-  connections.forEach(conn => {
-    const isHighlighted = (hoveredNode && (conn.from === hoveredNode || conn.to === hoveredNode)) ||
-                          (activeNodeFilter && (conn.from === activeNodeFilter || conn.to === activeNodeFilter));
+  connections.forEach((conn) => {
+    const isHighlighted =
+      (hoveredNode && (conn.from === hoveredNode || conn.to === hoveredNode)) ||
+      (activeNodeFilter &&
+        (conn.from === activeNodeFilter || conn.to === activeNodeFilter));
 
     ctx.beginPath();
     ctx.moveTo(conn.from.x, conn.from.y);
     ctx.lineTo(conn.to.x, conn.to.y);
     ctx.lineWidth = isHighlighted ? 2.5 : 1;
-    ctx.strokeStyle = isHighlighted ? "rgba(232, 74, 95, 0.85)" : "rgba(255, 255, 255, 0.12)";
+    ctx.strokeStyle = isHighlighted
+      ? "rgba(232, 74, 95, 0.85)"
+      : "rgba(255, 255, 255, 0.12)";
     ctx.stroke();
   });
 
   // Draw Nodes
-  nodes.forEach(node => {
+  nodes.forEach((node) => {
     const isHovered = hoveredNode === node;
     const isActive = activeNodeFilter === node;
-    const isConnected = hoveredNode && connections.some(c => (c.from === hoveredNode && c.to === node) || (c.to === hoveredNode && c.from === node));
+    const isConnected =
+      hoveredNode &&
+      connections.some(
+        (c) =>
+          (c.from === hoveredNode && c.to === node) ||
+          (c.to === hoveredNode && c.from === node),
+      );
 
     const r = isHovered || isActive ? node.radius * 1.3 : node.radius;
 
@@ -1896,7 +2177,10 @@ function drawNodeGraph() {
     if (isHovered || isActive || isConnected) {
       ctx.beginPath();
       ctx.arc(node.x, node.y, r + 8, 0, Math.PI * 2);
-      ctx.fillStyle = node.type === "tag" ? "rgba(184, 184, 184, 0.25)" : "rgba(232, 74, 95, 0.3)";
+      ctx.fillStyle =
+        node.type === "tag"
+          ? "rgba(184, 184, 184, 0.25)"
+          : "rgba(232, 74, 95, 0.3)";
       ctx.fill();
     }
 
@@ -1917,13 +2201,14 @@ function drawNodeGraph() {
 
     // Text Label (Supports Multi-line)
     ctx.font = `${isHovered || isActive ? "600" : "400"} 10px 'Azeret Mono', monospace`;
-    ctx.fillStyle = isHovered || isActive ? "#FFFFFF" : (isConnected ? "#FFFFFF" : "#E2E8F0");
+    ctx.fillStyle =
+      isHovered || isActive ? "#FFFFFF" : isConnected ? "#FFFFFF" : "#E2E8F0";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
 
     const labelLines = splitTextIntoLines(node.label, 20);
     labelLines.forEach((l, idx) => {
-      ctx.fillText(l, node.x, node.y + r + 14 + (idx * 13));
+      ctx.fillText(l, node.x, node.y + r + 14 + idx * 13);
     });
   });
 }
@@ -1936,7 +2221,7 @@ function handleCanvasMouseMove(e) {
   const my = e.clientY - rect.top;
 
   let found = null;
-  nodes.forEach(n => {
+  nodes.forEach((n) => {
     const dist = Math.hypot(n.x - mx, n.y - my);
     if (dist < n.radius + 10) {
       found = n;
@@ -1955,13 +2240,14 @@ function handleCanvasMouseMove(e) {
     if (found.type === "root") {
       dockDesc.textContent = `Central taxonomy core connecting ${ARCHIVE_POSTS.length} dispatches across conceptual pillars.`;
     } else if (found.type === "pillar") {
-      dockDesc.textContent = `Pillar category with ${found.postsCount} dispatch${found.postsCount > 1 ? 'es' : ''}. Click to filter timeline.`;
+      dockDesc.textContent = `Pillar category with ${found.postsCount} dispatch${found.postsCount > 1 ? "es" : ""}. Click to filter timeline.`;
     } else {
-      dockDesc.textContent = `Conceptual tag node with ${found.postsCount} dispatch${found.postsCount > 1 ? 'es' : ''}. Click to filter timeline.`;
+      dockDesc.textContent = `Conceptual tag node with ${found.postsCount} dispatch${found.postsCount > 1 ? "es" : ""}. Click to filter timeline.`;
     }
   } else if (!activeNodeFilter && dockTitle && dockDesc) {
     dockTitle.textContent = "[ 3D TAGS CLOUD ACTIVE ]";
-    dockDesc.textContent = "Hover over any tag or pillar node to highlight connected dispatches. Click to filter timeline.";
+    dockDesc.textContent =
+      "Hover over any tag or pillar node to highlight connected dispatches. Click to filter timeline.";
   }
 }
 
@@ -2001,4 +2287,3 @@ function resetNodeHighlights() {
   activeNodeFilter = null;
   hoveredNode = null;
 }
-

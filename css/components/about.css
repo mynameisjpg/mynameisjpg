@@ -4,39 +4,27 @@
    Aesthetic: Post-Ironic Digital Surrealism × Swiss Literary Broadsheet
    ============================================================================== */
 
-/* Base Layout Shell */
+/* Base Layout Shell (Fixed Cyber Matrix Dark Mode) */
 .about-shell {
   margin-left: var(--sidebar-width, 48px);
   width: calc(100vw - var(--sidebar-width, 48px));
   min-height: 100vh;
   background-color: var(--bg-deep, #121212);
+  background-image: url("../../assets/images/bg1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--text-bright, #f5f5f5);
   font-family: var(--font-serif, "Platypi", Georgia, serif);
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
   box-sizing: border-box;
-  transition:
-    background-color var(--transition-normal, 0.3s ease),
-    color var(--transition-normal, 0.3s ease);
+  position: relative;
 }
 
-/* Light / Parchment Mode Support */
-.about-shell.theme-parchment {
-  --bg-deep: #dde5e8;
-  --bg-panel: #e6edf0;
-  --bg-card: #f2f6f8;
-  --bg-card-hover: #ffffff;
-  --text-bright: #141a1c;
-  --text-body: #232c2f;
-  --text-muted: #57656a;
-  --text-faint: #88969b;
-  --border-subtle: rgba(20, 26, 28, 0.12);
-  --border-faint: rgba(20, 26, 28, 0.06);
-  --border-strong: rgba(20, 26, 28, 0.22);
-}
-
-/* Scroll Container */
+/* Scroll Container Layered Above Glitch Canvas */
 .about-content-wrap {
   width: 100%;
   max-width: 1360px;
@@ -46,6 +34,8 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 /* 1. Unified Minimalist Editorial Masthead */
@@ -86,23 +76,17 @@
   box-shadow: 0 0 8px var(--accent-coral-glow, rgba(232, 74, 95, 0.6));
 }
 
-.theme-mode-toggle {
-  background: transparent;
-  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.15));
-  color: var(--text-bright, #f5f5f5);
+.about-header-status .status-pill {
   font-family: var(--font-mono, "Azeret Mono", monospace);
-  font-size: var(--text-xs, 0.58rem);
+  font-size: var(--text-xs, 0.60rem);
   letter-spacing: 0.08em;
-  padding: 0.3rem 0.75rem;
-  border-radius: var(--radius-sm, 1px);
-  cursor: pointer;
-  transition: all var(--transition-fast, 0.2s ease);
-}
-
-.theme-mode-toggle:hover {
-  border-color: var(--accent-coral, #e84a5f);
   color: var(--accent-coral, #e84a5f);
-  background: var(--accent-coral-subtle, rgba(232, 74, 95, 0.08));
+  background: rgba(232, 74, 95, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(232, 74, 95, 0.25);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm, 2px);
 }
 
 .about-header-main {
@@ -119,6 +103,7 @@
   letter-spacing: -0.025em;
   color: var(--text-bright, #f5f5f5);
   margin: 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 .about-editorial-subhead {
@@ -145,15 +130,18 @@
 }
 
 /* Left Column: Author Metadata Dossier */
+/* Left Column: Author Metadata Dossier (Frosted Glass Panel) */
 .author-dossier-panel {
-  background: var(--bg-card, #202020);
-  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
-  border-radius: var(--radius-sm, 1px);
+  background: rgba(20, 20, 20, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm, 2px);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
 /* Full Width Author Photo */
@@ -162,8 +150,8 @@
   height: 320px;
   position: relative;
   overflow: hidden;
-  background-color: #000;
-  border-bottom: 1px solid var(--border-strong, rgba(255, 255, 255, 0.16));
+  background-color: #0c0c0c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .dossier-photo-img {
@@ -178,7 +166,7 @@
 }
 
 .author-dossier-panel:hover .dossier-photo-img {
-  filter: grayscale(15%) contrast(105%);
+  filter: grayscale(10%) contrast(105%);
   transform: scale(1.02);
 }
 
@@ -187,8 +175,8 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    transparent 50%,
-    rgba(0, 0, 0, 0.75) 100%
+    transparent 45%,
+    rgba(12, 12, 12, 0.85) 100%
   );
   pointer-events: none;
 }
@@ -201,11 +189,12 @@
   font-size: var(--text-xs, 0.58rem);
   letter-spacing: 0.12em;
   color: #f5f5f5;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(4px);
-  padding: 0.25rem 0.55rem;
-  border-radius: var(--radius-sm, 1px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.28rem 0.6rem;
+  border-radius: var(--radius-sm, 2px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 /* Dossier Inner Body */
@@ -224,7 +213,7 @@
 
 .dossier-name {
   font-family: var(--font-mono, "Azeret Mono", monospace);
-  font-size: var(--text-md, 1.05rem);
+  font-size: var(--text-md, 1.08rem);
   font-weight: 600;
   color: var(--text-bright, #f5f5f5);
   letter-spacing: 0.02em;
@@ -251,20 +240,23 @@
   font-family: var(--font-mono, "Azeret Mono", monospace);
   font-size: var(--text-xs, 0.56rem);
   letter-spacing: 0.06em;
-  padding: 0.22rem 0.45rem;
-  background: var(--bg-panel, #161616);
-  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  padding: 0.25rem 0.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--text-muted, #888888);
-  border-radius: var(--radius-sm, 1px);
+  border-radius: var(--radius-sm, 2px);
 }
 
 .dossier-chip.highlight {
   color: var(--accent-coral, #e84a5f);
-  border-color: var(--accent-coral-border, rgba(232, 74, 95, 0.25));
+  border-color: rgba(232, 74, 95, 0.35);
+  background: rgba(232, 74, 95, 0.08);
 }
 
 /* ==============================================================================
-   EXCLUSIVE ACCORDION COMPONENT FOR DOSSIER
+   EXCLUSIVE ACCORDION COMPONENT FOR DOSSIER (Glassy / Blurry Layering)
    ============================================================================== */
 .dossier-accordion {
   display: flex;
@@ -273,18 +265,27 @@
 }
 
 .accordion-item {
-  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
-  border-radius: var(--radius-sm, 1px);
-  background: var(--bg-panel, #161616);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm, 2px);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   overflow: hidden;
   transition:
     border-color var(--transition-fast, 0.2s ease),
-    background-color var(--transition-fast, 0.2s ease);
+    background-color var(--transition-fast, 0.2s ease),
+    box-shadow var(--transition-fast, 0.2s ease);
+}
+
+.accordion-item:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .accordion-item[open] {
-  border-color: var(--border-strong, rgba(255, 255, 255, 0.18));
-  background: var(--bg-panel, #161616);
+  border-color: rgba(232, 74, 95, 0.35);
+  background: rgba(18, 18, 18, 0.65);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
 .accordion-item summary {
@@ -312,12 +313,13 @@
 
 .accordion-item summary:hover {
   color: var(--accent-coral, #e84a5f);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(232, 74, 95, 0.06);
 }
 
 .accordion-item[open] summary {
   color: var(--accent-coral, #e84a5f);
-  border-bottom: 1px solid var(--border-faint, rgba(255, 255, 255, 0.05));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(232, 74, 95, 0.04);
 }
 
 .accordion-toggle-icon {
@@ -335,6 +337,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
+  background: rgba(12, 12, 12, 0.3);
 }
 
 .milestone-item {
@@ -342,7 +345,7 @@
   flex-direction: column;
   gap: 0.3rem;
   padding-left: 0.75rem;
-  border-left: 2px solid var(--border-subtle, rgba(255, 255, 255, 0.14));
+  border-left: 2px solid rgba(255, 255, 255, 0.14);
   transition: border-color var(--transition-fast, 0.2s ease);
 }
 
@@ -387,8 +390,8 @@
 /* Visually Separated Education Accordion Item */
 .accordion-item-education {
   margin-top: 0.5rem;
-  border: 1px solid var(--accent-coral-border, rgba(232, 74, 95, 0.3));
-  background: var(--bg-panel, #161616);
+  border: 1px solid rgba(232, 74, 95, 0.3);
+  background: rgba(232, 74, 95, 0.04);
 }
 
 .accordion-item-education summary {
@@ -398,13 +401,14 @@
 
 .accordion-item-education[open] {
   border-color: var(--accent-coral, #e84a5f);
-  box-shadow: 0 0 16px rgba(232, 74, 95, 0.12);
+  box-shadow: 0 0 20px rgba(232, 74, 95, 0.15);
+  background: rgba(18, 18, 18, 0.75);
 }
 
 .education-specialized-divider {
   margin-top: 0.35rem;
   padding-top: 0.65rem;
-  border-top: 1px dashed var(--border-subtle, rgba(255, 255, 255, 0.14));
+  border-top: 1px dashed rgba(255, 255, 255, 0.14);
 }
 
 .education-specialized-title {
@@ -417,13 +421,13 @@
   display: block;
 }
 
-/* Dossier Action Buttons & Relays */
+/* Dossier Action Buttons & Relays (Glassy Styling) */
 .dossier-relays-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding-top: 0.5rem;
-  border-top: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .btn-cv-download {
@@ -438,7 +442,7 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   padding: 0.65rem 1rem;
-  border-radius: var(--radius-sm, 1px);
+  border-radius: var(--radius-sm, 2px);
   text-decoration: none;
   transition: all var(--transition-fast, 0.2s ease);
   box-shadow: 0 4px 12px var(--accent-coral-glow, rgba(232, 74, 95, 0.3));
@@ -463,10 +467,12 @@
   font-size: var(--text-xs, 0.58rem);
   letter-spacing: 0.06em;
   color: var(--text-muted, #888888);
-  padding: 0.4rem 0.25rem;
-  background: var(--bg-panel, #161616);
-  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
-  border-radius: var(--radius-sm, 1px);
+  padding: 0.45rem 0.35rem;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm, 2px);
   text-decoration: none;
   transition: all var(--transition-fast, 0.2s ease);
 }
@@ -474,19 +480,22 @@
 .dossier-social-link:hover {
   color: var(--text-bright, #f5f5f5);
   border-color: var(--accent-coral, #e84a5f);
-  background: var(--accent-coral-subtle, rgba(232, 74, 95, 0.08));
+  background: rgba(232, 74, 95, 0.15);
+  box-shadow: 0 0 12px rgba(232, 74, 95, 0.25);
 }
 
-/* Right Column: Editorial Manifesto Reader */
+/* Right Column: Editorial Manifesto Reader (Frosted Glass Panel) */
 .manifesto-editorial-panel {
-  background: var(--bg-card, #202020);
-  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
-  border-radius: var(--radius-sm, 1px);
+  background: rgba(20, 20, 20, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm, 2px);
   padding: 2.75rem 3.25rem;
   display: flex;
   flex-direction: column;
   gap: 1.85rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
 .manifesto-kicker-bar {
@@ -494,7 +503,7 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   font-family: var(--font-mono, "Azeret Mono", monospace);
   font-size: var(--text-xs, 0.62rem);
   letter-spacing: 0.12em;
@@ -534,19 +543,25 @@
   }
 }
 
-/* High-Contrast Editorial Pull Quote Callout */
+/* High-Contrast Editorial Pull Quote Callout (Glassy with Coral Edge) */
 .manifesto-pull-quote {
   margin: 1.5rem 0;
   padding: 1.75rem 2.25rem;
-  background: var(--bg-panel, #161616);
+  background: rgba(232, 74, 95, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-left: 3px solid var(--accent-coral, #e84a5f);
-  border-radius: var(--radius-sm, 1px);
+  border-top: 1px solid rgba(232, 74, 95, 0.15);
+  border-right: 1px solid rgba(232, 74, 95, 0.15);
+  border-bottom: 1px solid rgba(232, 74, 95, 0.15);
+  border-radius: var(--radius-sm, 2px);
   font-family: var(--font-serif, "Platypi", Georgia, serif);
   font-size: 1.25rem;
   font-style: italic;
   font-weight: 400;
   line-height: 1.7;
   color: var(--text-bright, #f5f5f5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .manifesto-signature-block {
@@ -555,7 +570,7 @@
   gap: 0.35rem;
   margin-top: 1rem;
   padding-top: 1.75rem;
-  border-top: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .signature-name {
@@ -574,7 +589,7 @@
   text-transform: uppercase;
 }
 
-/* 3. Bottom 4-Card Research Pillars Interactive Grid */
+/* 3. Bottom 4-Card Research Pillars Interactive Grid (Frosted Glass Interactive Cards) */
 .about-pillars-section {
   display: flex;
   flex-direction: column;
@@ -589,7 +604,7 @@
   flex-wrap: wrap;
   gap: 0.75rem;
   padding-bottom: 0.65rem;
-  border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .pillars-section-title {
@@ -615,10 +630,12 @@
 }
 
 .pillar-interactive-card {
-  background: var(--bg-card, #202020);
-  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
-  border-radius: var(--radius-sm, 1px);
-  padding: 1.4rem 1.3rem;
+  background: rgba(20, 20, 20, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm, 2px);
+  padding: 1.5rem 1.35rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -628,6 +645,7 @@
   transition: all var(--transition-normal, 0.25s cubic-bezier(0.16, 1, 0.3, 1));
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .pillar-interactive-card::before {
@@ -643,10 +661,10 @@
 }
 
 .pillar-interactive-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--accent-coral-border, rgba(232, 74, 95, 0.4));
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
-  background: var(--bg-card-hover, #262626);
+  transform: translateY(-4px);
+  border-color: var(--accent-coral, #e84a5f);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6), 0 0 20px rgba(232, 74, 95, 0.18);
+  background: rgba(30, 30, 30, 0.85);
 }
 
 .pillar-interactive-card:hover::before {
@@ -714,7 +732,7 @@
 .about-page-footer {
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -727,7 +745,7 @@
 }
 
 .footer-signoff-quote {
-  color: var(--text-faint, #555555);
+  color: var(--text-faint, #666666);
 }
 
 /* Responsive Breakpoints */

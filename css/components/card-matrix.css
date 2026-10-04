@@ -26,7 +26,9 @@
 
 .grid-card {
   position: relative;
-  background-color: var(--bg-card);
+  background-color: rgba(12, 12, 12, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -35,22 +37,39 @@
   transition:
     transform var(--transition-spring),
     box-shadow var(--transition-fast),
-    background-color var(--transition-fast);
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
   text-decoration: none;
   z-index: var(--z-card);
-  border: 1px solid var(--border-faint);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+/* Subtle Film Grain Noise Texture */
+.grid-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.045'/%3E%3C/svg%3E");
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 1;
+  opacity: 0.8;
 }
 
 .grid-card:hover {
   transform: scale(1.03);
   z-index: var(--z-card-hover);
-  box-shadow: var(--shadow-card-hover);
-  border-color: var(--acent-rose);
-  background-color: var(--accent-coral);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.65),
+    0 0 24px rgba(232, 74, 95, 0.25);
+  border-color: var(--accent-coral);
+  background-color: rgba(22, 14, 16, 0.86);
 }
 
 .grid-card:hover .card-caption {
-  color: var(--text-light-h);
+  color: var(--text-bright);
 }
 
 .grid-card:hover .hover-meta-reveal,
@@ -60,15 +79,17 @@
 }
 
 .grid-card.selected-active {
-  background-color: var(--accent-coral);
-  box-shadow: var(--shadow-selected);
+  /* background-color: rgba(232, 74, 95, 0.2); */
+  box-shadow:
+    0 0 32px rgba(232, 74, 95, 0.3),
+    var(--shadow-selected);
   transform: scale(1.03);
   z-index: var(--z-card-active);
-  border-color: #ffffff;
+  border-color: var(--accent-coral);
 }
 
 .grid-card.selected-active .card-caption {
-  color: #141414;
+  color: var(--text-bright);
   font-weight: 600;
 }
 
@@ -96,8 +117,13 @@
 
 .grid-card.card-featured {
   grid-column: span 2;
-  border-color: rgba(232, 74, 95, 0.3);
+  border-color: rgba(232, 74, 95, 0.35);
+  background-color: rgba(12, 12, 12, 0.78);
   animation: featuredGlowPulse 4.5s ease-in-out infinite;
+}
+
+.grid-card.card-featured .card-caption {
+  font-size: var(--text-lg);
 }
 
 .grid-card.card-featured:hover {
@@ -106,6 +132,7 @@
     0 0 30px rgba(232, 74, 95, 0.5),
     var(--shadow-card-hover);
   border-color: var(--accent-coral);
+  background-color: rgba(24, 14, 16, 0.88);
 }
 
 .grid-card.card-featured.selected-active {
@@ -180,30 +207,58 @@
   aspect-ratio: 1 / 0.95;
 }
 
+.card-caption {
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+  font-family: var(--font-serif);
+  font-size: var(--text-md);
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--text-bright);
+  transition: color var(--transition-fast);
+  padding: 0 0.15rem 0.15rem 0.15rem;
+}
+
+/* Secondary Meta Row: Post Format Pill & Date (Left) + Animated Action (Right) */
+.card-meta-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.45rem;
+  padding: 0 0.15rem 0.2rem 0.15rem;
+}
+
+.card-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
 .card-type-chip {
-  position: absolute;
-  top: 6px;
-  right: 6px;
+  position: static;
   display: inline-flex;
   align-items: center;
-  gap: 3px;
+  gap: 4px;
   font-family: var(--font-mono);
-  font-size: 0.52rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  color: rgba(255, 255, 255, 0.85);
-  background: rgba(18, 18, 18, 0.88);
+  font-size: 0.54rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   padding: 2px 6px;
-  border-radius: var(--radius-sm);
-  z-index: 5;
-  backdrop-filter: blur(4px);
+  border-radius: var(--radius-sm, 2px);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   text-transform: uppercase;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .card-type-chip svg.card-chip-icon {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   stroke: currentColor;
   fill: none;
   stroke-width: 2.2;
@@ -211,35 +266,57 @@
 }
 
 .card-type-chip.chip-essay {
-  color: var(--accent-coral);
-  border-color: rgba(232, 74, 95, 0.35);
+  color: var(--accent-coral, #e84a5f);
+  background: rgba(232, 74, 95, 0.08);
+  border-color: rgba(232, 74, 95, 0.3);
 }
 
 .card-type-chip.chip-note {
-  color: var(--text-bright);
-  border-color: rgba(255, 255, 255, 0.16);
+  color: #f5f5f5;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .card-type-chip.chip-bookmark {
-  color: var(--accent-rose);
+  color: var(--accent-rose, #ff8484);
+  background: rgba(255, 132, 132, 0.08);
   border-color: rgba(255, 132, 132, 0.3);
 }
 
 .card-type-chip.chip-resource {
-  color: var(--text-body);
-  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--text-body, #d2d2d2);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
-.card-caption {
-  margin-top: 0.65rem;
-  font-family: var(--font-serifo);
-  font-size: var(--text-md);
-  font-weight: 500;
-  line-height: 1.5;
-  color: var(--text-bright);
-  /* letter-spacing: -0.01em; */
-  transition: color var(--transition-fast);
-  padding: 0 0.15rem 0.2rem 0.15rem;
+.card-meta-date {
+  font-family: var(--font-mono, "Azeret Mono", monospace);
+  font-size: 0.62rem;
+  color: var(--text-muted, #888888);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.card-glitch-action {
+  font-family: var(--font-mono, "Azeret Mono", monospace);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text-muted, #888888);
+  text-transform: uppercase;
+  user-select: none;
+  pointer-events: none;
+  transition:
+    color var(--transition-fast),
+    text-shadow var(--transition-fast);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.grid-card:hover .card-glitch-action,
+.grid-card:focus .card-glitch-action {
+  color: var(--accent-coral, #e84a5f);
+  text-shadow: 0 0 8px rgba(232, 74, 95, 0.45);
 }
 
 .hover-meta-reveal {

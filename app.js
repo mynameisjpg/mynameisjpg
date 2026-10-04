@@ -349,7 +349,6 @@ function renderCardMatrix(resetPagination = true) {
       return `
       <article class="grid-card ${isFeatured ? "card-featured" : ""} ${isSelected ? "selected-active" : ""}" data-id="${key}" data-format="${format}" tabindex="0" role="button" aria-pressed="${isSelected}">
         <div class="card-art-box ${ratio}">
-          <span class="card-type-chip chip-${format}">[${post.format}] ${iconSvg}</span>
           ${isFeatured ? `<span class="card-featured-badge" title="Featured" aria-label="Featured"><svg viewBox="0 0 24 24" class="card-featured-icon" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>` : ""}
           ${
             post.image
@@ -364,12 +363,19 @@ function renderCardMatrix(resetPagination = true) {
           </div>
         </div>
         <h2 class="card-caption">${post.title}</h2>
+        <div class="card-meta-bottom">
+          <div class="card-meta-left">
+            <span class="card-type-chip chip-${format}">${post.format} ${iconSvg}</span>
+            <span class="card-meta-date">${post.date || ""}</span>
+          </div>
+          <span class="card-glitch-action" data-glitch-action aria-hidden="true">READ...</span>
+        </div>
       </article>
     `;
     })
     .join("");
 
-  // Re-attach Click & Key Event Handlers
+  // Re-attach Click & Key Event Handlers & Hover Glitch
   const cards = container.querySelectorAll(".grid-card");
   cards.forEach((card) => {
     const handler = () => {
@@ -383,9 +389,53 @@ function renderCardMatrix(resetPagination = true) {
         handler();
       }
     });
+
+    const glitchLabel = card.querySelector("[data-glitch-action]");
+    if (glitchLabel) {
+      card.addEventListener("mouseenter", () => triggerCardGlitchAction(glitchLabel));
+      card.addEventListener("focus", () => triggerCardGlitchAction(glitchLabel));
+    }
   });
 
   updateMatrixSentinel(visiblePosts.length, allPosts.length);
+}
+
+const CARD_GLITCH_WORDS = ["SURF...", "SEE...", "VIEW...", "VISIT...", "ENTER...", "DECODE..."];
+const CARD_GLITCH_CHARS = "#!%$>_/-*01+@&~";
+
+/**
+ * Fast Scramble Glitch Animation for Card Action Label on Hover
+ */
+function triggerCardGlitchAction(element) {
+  if (!element || element._isGlitching) return;
+  element._isGlitching = true;
+
+  let frame = 0;
+  const totalFrames = 8;
+  const shuffled = [...CARD_GLITCH_WORDS].sort(() => 0.5 - Math.random());
+  const wordA = shuffled[0];
+  const wordB = shuffled[1];
+
+  const interval = setInterval(() => {
+    frame++;
+    if (frame >= totalFrames) {
+      clearInterval(interval);
+      element.textContent = "READ...";
+      element._isGlitching = false;
+      return;
+    }
+
+    const baseWord = frame < 4 ? wordA : frame < 7 ? wordB : "READ...";
+    let scrambled = "";
+    for (let i = 0; i < baseWord.length; i++) {
+      if (Math.random() < 0.35 && i < baseWord.length - 3) {
+        scrambled += CARD_GLITCH_CHARS[Math.floor(Math.random() * CARD_GLITCH_CHARS.length)];
+      } else {
+        scrambled += baseWord[i];
+      }
+    }
+    element.textContent = scrambled;
+  }, 36);
 }
 
 /**

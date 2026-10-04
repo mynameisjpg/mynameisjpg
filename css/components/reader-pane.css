@@ -22,6 +22,11 @@
   padding: 2.25rem 4.5rem 4.5rem 4.5rem;
   box-sizing: border-box;
   width: 100%;
+  position: relative;
+  z-index: 2;
+  background-color: var(--bg-panel, #161616);
+  border-left: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.1));
+  box-shadow: -12px 0 35px rgba(0, 0, 0, 0.6);
 }
 
 .reader-content-container {
@@ -704,6 +709,13 @@
 .essay-column.theme-light {
   background-color: var(--bg-light-mode);
   color: var(--text-light-body);
+}
+
+.post-column.theme-light .reader-scroll-wrapper,
+.essay-column.theme-light .reader-scroll-wrapper {
+  background-color: var(--bg-light-mode, #dde5e8);
+  border-left-color: rgba(0, 0, 0, 0.1);
+  box-shadow: -12px 0 35px rgba(0, 0, 0, 0.15);
 }
 
 /* 1. Light Mode Headings (#121212 Deep Charcoal) */

@@ -79,7 +79,7 @@
   /* 6. Shadows & Ambient Lighting */
   --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.5);
   --shadow-card-hover: 0 10px 30px rgba(0, 0, 0, 0.8);
-  --shadow-selected: 0 0 35px var(--accent-coral-glow);
+  --shadow-selected: 0 0 25px var(--accent-coral-glow);
 
   /* 7. Animation & Transitions */
   --transition-fast: 0.2s ease;

@@ -330,16 +330,18 @@
   color: var(--accent-coral);
 }
 
-/* Edge-Stuck Vertical 3-Chevron Reader Panel Close Tab */
+/* Edge-Stuck Vertical 3-Chevron Reader Panel Close Tab (Frosted Coral Glass) */
 .btn-close-reader-edge {
   position: absolute;
-  top: 38%;
+  top: 136px; /* Aligned with top edge of post title */
   left: -36px;
-  transform: translateY(-50%);
+  transform: none;
   width: 36px;
   height: 106px;
-  background: var(--bg-panel, #161616);
-  border: 1px solid var(--accent-coral, #e84a5f);
+  background: rgba(232, 74, 95, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 74, 95, 0.35);
   border-right: none;
   border-radius: 10px 0 0 10px;
   color: var(--accent-coral, #e84a5f);
@@ -349,8 +351,8 @@
   justify-content: center;
   gap: 8px;
   cursor: pointer;
-  z-index: 300;
-  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.45);
+  z-index: 1; /* Sits underneath reader panel so panel casts shadow on tab */
+  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.35);
   padding: 0;
   transition:
     background 0.2s ease,
@@ -373,10 +375,10 @@
 }
 
 .btn-close-reader-edge:hover {
-  background: rgba(232, 74, 95, 0.16);
+  background: rgba(232, 74, 95, 0.22);
   border-color: var(--accent-coral, #e84a5f);
-  box-shadow: -4px 0 20px rgba(232, 74, 95, 0.4);
-  transform: translateY(-50%) translateX(-2px);
+  box-shadow: -4px 0 20px rgba(232, 74, 95, 0.45);
+  transform: translateX(-2px);
 }
 
 .btn-close-reader-edge:hover .close-chevron-svg {
@@ -385,13 +387,13 @@
 }
 
 .theme-light .btn-close-reader-edge {
-  background: #ffffff;
-  border-color: var(--accent-coral, #e84a5f);
-  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.12);
+  background: rgba(232, 74, 95, 0.08);
+  border-color: rgba(232, 74, 95, 0.4);
+  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.08);
 }
 
 .theme-light .btn-close-reader-edge:hover {
-  background: rgba(232, 74, 95, 0.1);
+  background: rgba(232, 74, 95, 0.18);
 }
 
 /* Return to Grid Button (Inside Reader Pane) */
