@@ -528,30 +528,92 @@
   bottom: 1.5rem;
   left: 2rem;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.85rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
   z-index: 25;
   max-width: calc(100vw - 4rem);
   pointer-events: none;
 }
 
+/* Active Node Tag/Pillar Pill Sliding in on top of the controls row */
+.nodemap-active-pill {
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--primary, #E84A5F);
+  background: rgba(16, 16, 20, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid var(--primary, #E84A5F);
+  border-radius: var(--rounded-sm, 2px);
+  padding: 0.42rem 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 14px rgba(232, 74, 95, 0.35);
+  pointer-events: auto;
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition:
+    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+  animation: slideInPill 0.32s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.nodemap-active-pill:hover {
+  transform: translateY(-2px) scale(1.02);
+  background-color: var(--primary, #E84A5F);
+  color: #101010;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 20px rgba(232, 74, 95, 0.55);
+}
+
+.nodemap-active-pill:active {
+  transform: translateY(0) scale(0.98);
+}
+
+@keyframes slideInPill {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Bottom Row: Controls Panel + Post Thumbnails Strip aligned in a crisp row */
+.nodemap-bottom-row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0.65rem;
+  max-width: 100%;
+  pointer-events: none;
+}
+
+/* Compact Visual Controls Box */
 .nodemap-hover-dock {
   position: relative;
   width: auto;
-  max-width: 580px;
-  background: rgba(18, 18, 18, 0.94);
+  height: 84px;
+  box-sizing: border-box;
+  background: rgba(16, 16, 20, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-left: 3px solid var(--primary, #E84A5F);
   border-radius: var(--rounded-sm, 2px);
-  padding: 0.85rem 1.25rem;
+  padding: 0.65rem 0.95rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
+  justify-content: center;
   z-index: 20;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
   transition: all 0.25s ease;
@@ -559,30 +621,18 @@
   flex-shrink: 0;
 }
 
-.nodemap-hover-dock.is-active-node {
-  border-color: rgba(232, 74, 95, 0.6);
-  border-left-width: 4px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8), 0 0 20px rgba(232, 74, 95, 0.25);
-}
-
-.dock-highlight-badge {
-  background: var(--primary, #E84A5F);
-  color: #FFFFFF !important;
-  padding: 0.12rem 0.45rem;
-  border-radius: 2px;
-  font-weight: 700;
-  display: inline-block;
-  letter-spacing: 0.05em;
-  box-shadow: 0 0 10px rgba(232, 74, 95, 0.5);
-  vertical-align: baseline;
+.dock-controls-visual {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
 }
 
 /* Connected Post Cards Strip sliding out to the right */
 .nodemap-posts-strip {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 0.75rem;
+  align-items: stretch;
+  gap: 0.65rem;
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: none;
@@ -590,7 +640,8 @@
   max-width: 100%;
   pointer-events: auto;
   z-index: 10;
-  padding: 0.25rem 0.25rem 0.25rem 0;
+  padding: 0;
+  height: 84px;
 }
 .nodemap-posts-strip::-webkit-scrollbar {
   display: none;
@@ -602,41 +653,67 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 88px;
-  height: 88px;
+  width: 84px;
+  height: 84px;
   flex-shrink: 0;
   border-radius: var(--rounded-sm, 2px);
   position: relative;
   text-decoration: none;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background-color: #1a1a24;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #121218;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+  box-sizing: border-box;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.2s ease,
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
   animation: slideInFromLeft 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: calc(var(--card-idx, 0) * 0.06s);
+  animation-delay: calc(var(--card-idx, 0) * 0.05s);
+  filter: grayscale(100%) contrast(1.12);
 }
 
-.nodemap-post-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(232, 74, 95, 0.94) 0%, rgba(180, 30, 55, 0.88) 100%);
-  mix-blend-mode: multiply;
-  transition: opacity 0.25s ease;
-  z-index: 1;
-}
-
+/* Default dark overlay for readability */
 .nodemap-post-card::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(232, 74, 95, 0.78);
-  transition: background 0.25s ease;
+  background: rgba(0, 0, 0, 0.42);
+  transition: background 0.2s ease;
   z-index: 2;
+}
+
+/* Featured cards: show in color with subtle looping glow matching homepage grid */
+.nodemap-post-card.is-featured {
+  filter: grayscale(0%) contrast(1.0);
+  border-color: rgba(232, 74, 95, 0.3);
+  animation:
+    slideInFromLeft 0.38s cubic-bezier(0.16, 1, 0.3, 1) both,
+    featuredGlowPulse 4.5s ease-in-out infinite;
+  animation-delay: calc(var(--card-idx, 0) * 0.05s), 0.38s;
+}
+
+.nodemap-post-card.is-featured::after {
+  background: rgba(232, 74, 95, 0.12);
+}
+
+/* Hover: show in color with subtle red glow matching homepage grid cards */
+.nodemap-post-card:hover {
+  filter: grayscale(0%) contrast(1.0);
+  transform: scale(1.03);
+  border-color: var(--primary, #E84A5F);
+  box-shadow:
+    0 0 16px rgba(232, 74, 95, 0.28),
+    0 4px 12px rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+.nodemap-post-card:hover::after {
+  background: rgba(0, 0, 0, 0.16);
 }
 
 .nodemap-post-card-inner {
@@ -654,25 +731,74 @@
 
 .nodemap-post-card-label {
   font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 700;
   color: #FFFFFF;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  line-height: 1.25;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9), 0 2px 8px rgba(0, 0, 0, 0.75);
   pointer-events: none;
 }
 
-.nodemap-post-card:hover {
-  transform: translateY(-4px) scale(1.05);
-  border-color: #FFFFFF;
-  box-shadow: 0 8px 24px rgba(232, 74, 95, 0.6), 0 0 14px rgba(255, 255, 255, 0.4);
-  z-index: 4;
+/* "SEE ALL" Square Action Card */
+.nodemap-see-all-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 84px;
+  height: 84px;
+  flex-shrink: 0;
+  border-radius: var(--rounded-sm, 2px);
+  position: relative;
+  text-decoration: none;
+  border: 1px solid var(--primary, #E84A5F);
+  background: rgba(18, 18, 22, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.45rem 0.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  cursor: pointer;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  animation: slideInFromLeft 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--card-idx, 0) * 0.05s);
 }
 
-.nodemap-post-card:hover::after {
-  background: rgba(232, 74, 95, 0.60);
+.nodemap-see-all-card:hover {
+  transform: scale(1.03);
+  background: rgba(232, 74, 95, 0.16);
+  border-color: var(--primary, #E84A5F);
+  box-shadow:
+    0 0 16px rgba(232, 74, 95, 0.28),
+    0 4px 12px rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+.see-all-slash {
+  align-self: flex-start;
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary, #E84A5F);
+  line-height: 1;
+}
+
+.see-all-text {
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--primary, #E84A5F);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+  line-height: 1.25;
+  margin-bottom: 0.15rem;
 }
 
 @keyframes slideInFromLeft {
@@ -704,31 +830,44 @@
     width: calc(100% - 2rem);
     max-width: 600px;
     bottom: 1rem;
-    flex-direction: column-reverse;
     align-items: stretch;
-    gap: 0.65rem;
+    gap: 0.5rem;
+  }
+
+  .nodemap-bottom-row {
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .nodemap-active-pill {
+    align-self: flex-start;
+    font-size: 0.65rem;
+    padding: 0.35rem 0.7rem;
   }
 
   .nodemap-hover-dock {
     width: 100%;
-    max-width: 100%;
-    padding: 0.75rem 1rem;
-    gap: 1rem;
+    height: 76px;
+    padding: 0.5rem 1rem;
+    justify-content: center;
   }
 
   .nodemap-posts-strip {
     width: 100%;
+    height: 76px;
     justify-content: flex-start;
-    padding: 0.25rem 0;
   }
 
-  .nodemap-post-card {
-    width: 78px;
-    height: 78px;
+  .nodemap-post-card,
+  .nodemap-see-all-card {
+    width: 76px;
+    height: 76px;
     animation-name: slideUpFromBottom;
   }
 
-  .nodemap-post-card-label {
+  .nodemap-post-card-label,
+  .see-all-text {
     font-size: 0.62rem;
   }
 }

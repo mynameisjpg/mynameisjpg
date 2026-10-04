@@ -176,8 +176,9 @@ function applyTagFilterDirectly(tag) {
   }
 
   setNodeFilterUIState(true, activeTagFilter);
+  updateActivePill(matchedData);
   renderSelectedNodePostsStrip(matchedData);
-  updateThreeDockMetadata(matchedData ? { data: matchedData } : null);
+  updateThreeSceneFocus();
 }
 
 async function fetchNetworkPostsJson() {
@@ -1110,6 +1111,88 @@ function getPostUrl(p) {
   return `posts/${slug}.html`;
 }
 
+function openTagsTableForNode(nodeData) {
+  if (!nodeData) return;
+  const graphBtn = document.getElementById("toggle-view-graph-btn");
+  const tableBtn = document.getElementById("toggle-view-table-btn");
+  const canvasWrapper = document.getElementById("nodemap-canvas-wrapper");
+  const tableWrapper = document.getElementById("tags-table-wrapper");
+  const searchInput = document.getElementById("tags-table-search-input");
+
+  // Switch tab buttons and view containers
+  if (tableBtn && graphBtn) {
+    tableBtn.classList.add("active");
+    graphBtn.classList.remove("active");
+  }
+  if (canvasWrapper) canvasWrapper.style.display = "none";
+  if (tableWrapper) tableWrapper.style.display = "flex";
+
+  // Determine appropriate search filter string
+  let query = "";
+  if (nodeData.type === "root") {
+    query = "";
+  } else if (nodeData.type === "pillar" || nodeData.type === "subtopic") {
+    query = (nodeData.label || "").trim();
+  } else {
+    query = (nodeData.rawTag || nodeData.label || "").replace(/^#/, "").trim();
+  }
+
+  // Pre-fill and trigger search
+  if (searchInput) {
+    searchInput.value = query;
+    searchInput.focus();
+  }
+
+  renderTagsDirectoryTable(query);
+}
+
+function updateActivePill(nodeData) {
+  const pillEl = document.getElementById("nodemap-active-pill");
+  if (!pillEl) return;
+  if (!nodeData) {
+    pillEl.style.display = "none";
+    pillEl.textContent = "";
+    pillEl.onclick = null;
+    pillEl.onkeydown = null;
+    return;
+  }
+
+  let pillText = "";
+  let queryName = "";
+  if (nodeData.type === "root") {
+    pillText = `[ CORE : UNTITLED.JPG ]`;
+    queryName = "Untitled.jpg Taxonomy";
+  } else if (nodeData.type === "pillar") {
+    pillText = `[ PILLAR : ${nodeData.label.toUpperCase()} ]`;
+    queryName = nodeData.label;
+  } else if (nodeData.type === "subtopic") {
+    pillText = `[ SUBTOPIC : ${nodeData.label.toUpperCase()} ]`;
+    queryName = nodeData.label;
+  } else {
+    const raw = (nodeData.rawTag || nodeData.label || "").toUpperCase().replace(/^#/, "");
+    pillText = `[ TAG : #${raw} ]`;
+    queryName = `#${raw}`;
+  }
+
+  pillEl.textContent = pillText;
+  pillEl.title = `Click to view ${queryName} in Tags Directory Table`;
+  pillEl.style.display = "inline-flex";
+
+  pillEl.onclick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    openTagsTableForNode(nodeData);
+  };
+
+  pillEl.onkeydown = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      e.stopPropagation();
+      openTagsTableForNode(nodeData);
+    }
+  };
+}
+
 function renderSelectedNodePostsStrip(nodeData) {
   const strip = document.getElementById("nodemap-posts-strip");
   if (!strip) return;
@@ -1121,25 +1204,112 @@ function renderSelectedNodePostsStrip(nodeData) {
 
   const posts = getPostsForNode(nodeData);
 
-  if (posts.length === 0) {
-    strip.innerHTML = "";
-    return;
-  }
+  // Chronological order: left most recent, right oldest
+  posts.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
 
-  strip.innerHTML = posts.map((p, idx) => {
+  const postCardsHtml = posts.map((p, idx) => {
     const postUrl = getPostUrl(p);
     const bgStyle = p.image ? `background-image: url('${p.image}');` : '';
     const safeTitle = (p.title || "Read Dispatch").replace(/"/g, '&quot;');
     const safeReadTime = p.read_time ? ` • ${p.read_time}` : '';
+    const isFeatured = p.featured === true || String(p.featured).toLowerCase() === 'true';
 
     return `
-      <a href="${postUrl}" class="nodemap-post-card" style="--card-idx: ${idx}; ${bgStyle}" title="${safeTitle}${safeReadTime}" target="_self">
+      <a href="${postUrl}" class="nodemap-post-card ${isFeatured ? 'is-featured' : ''}" style="--card-idx: ${idx}; ${bgStyle}" title="${safeTitle}${safeReadTime}" target="_self">
         <div class="nodemap-post-card-inner">
-          <span class="nodemap-post-card-label">READ<br>DISPATCH</span>
+          <span class="nodemap-post-card-label">READ</span>
         </div>
       </a>
     `;
   }).join("");
+
+  const tagQuery = activeTagFilter || (nodeData.type === 'tag' ? (nodeData.rawTag || nodeData.label) : nodeData.label);
+  const archiveUrl = `archive.html?tag=${encodeURIComponent(tagQuery)}`;
+  const seeAllCardHtml = `
+    <a href="${archiveUrl}" class="nodemap-see-all-card" style="--card-idx: ${posts.length};" title="View all dispatches with ${tagQuery} in Timeline" target="_self">
+      <span class="see-all-slash">//</span>
+      <span class="see-all-text">SEE<br>ALL</span>
+    </a>
+  `;
+
+  strip.innerHTML = postCardsHtml + seeAllCardHtml;
+}
+
+function updateThreeSceneFocus() {
+  if (!threeNodes || threeNodes.length === 0) return;
+
+  const activeNodeItem = activeNodeFilter ? threeNodes.find(n => n.data === activeNodeFilter) : null;
+  const isSelectedState = !!activeNodeItem;
+  const targetHoverItem = hoveredThreeNode;
+
+  threeNodes.forEach(n => {
+    if (!n.mesh) return;
+
+    if (isSelectedState) {
+      const isSelectedNode = n === activeNodeItem;
+      const isNeighbor = activeNodeItem.neighbors && activeNodeItem.neighbors.has(n);
+      const isHoveredInSelected = n === targetHoverItem;
+
+      if (isSelectedNode) {
+        const s = isHoveredInSelected ? 1.7 : 1.55;
+        n.mesh.scale.set(s, s, s);
+        if (n.mesh.material) n.mesh.material.emissiveIntensity = 0.65;
+        if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = 1.0;
+      } else if (isNeighbor) {
+        const s = isHoveredInSelected ? 1.38 : 1.25;
+        n.mesh.scale.set(s, s, s);
+        if (n.mesh.material) n.mesh.material.emissiveIntensity = 0.38;
+        if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = 0.95;
+      } else {
+        const s = isHoveredInSelected ? 1.15 : 0.72;
+        n.mesh.scale.set(s, s, s);
+        if (n.mesh.material) n.mesh.material.emissiveIntensity = 0.04;
+        if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = isHoveredInSelected ? 0.8 : 0.15;
+      }
+    } else if (targetHoverItem) {
+      const isHovered = n === targetHoverItem;
+      const isNeighbor = targetHoverItem.neighbors && targetHoverItem.neighbors.has(n);
+
+      if (isHovered) {
+        n.mesh.scale.set(1.45, 1.45, 1.45);
+        if (n.mesh.material) n.mesh.material.emissiveIntensity = 0.5;
+        if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = 1.0;
+      } else if (isNeighbor) {
+        n.mesh.scale.set(1.22, 1.22, 1.22);
+        if (n.mesh.material) n.mesh.material.emissiveIntensity = 0.3;
+        if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = 0.9;
+      } else {
+        n.mesh.scale.set(1.0, 1.0, 1.0);
+        if (n.mesh.material) n.mesh.material.emissiveIntensity = n.data && n.data.type === "root" ? 0.35 : (n.data && n.data.type === "pillar" ? 0.28 : 0.18);
+        if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = 0.65;
+      }
+    } else {
+      n.mesh.scale.set(1.0, 1.0, 1.0);
+      if (n.mesh.material) n.mesh.material.emissiveIntensity = n.data && n.data.type === "root" ? 0.35 : (n.data && n.data.type === "pillar" ? 0.28 : 0.18);
+      if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = 1.0;
+    }
+  });
+
+  // Highlight Lines
+  if (threeLines && threeLines.length > 0) {
+    const focusItem = activeNodeItem || targetHoverItem;
+    threeLines.forEach(l => {
+      if (!l.mesh || !l.mesh.material) return;
+      if (focusItem) {
+        const isDirect = l.fromItem === focusItem || l.toItem === focusItem;
+        if (isDirect) {
+          l.mesh.material.color.setHex(0xFF4D64);
+          l.mesh.material.opacity = isSelectedState ? 1.0 : 0.95;
+        } else {
+          l.mesh.material.color.setHex(l.defaultColorHex);
+          l.mesh.material.opacity = isSelectedState ? 0.015 : l.defaultOpacity;
+        }
+      } else {
+        l.mesh.material.color.setHex(l.defaultColorHex);
+        l.mesh.material.opacity = l.defaultOpacity;
+      }
+    });
+  }
 }
 
 function updateThreeRaycasting() {
@@ -1158,102 +1328,13 @@ function updateThreeRaycasting() {
   if (hoveredThreeNode !== newHovered) {
     hoveredThreeNode = newHovered;
 
-    threeNodes.forEach(n => {
-      const isTarget = hoveredThreeNode
-        ? (n === hoveredThreeNode || (hoveredThreeNode.neighbors && hoveredThreeNode.neighbors.has(n)))
-        : (activeNodeFilter && n.data === activeNodeFilter);
-      if (isTarget) {
-        const s = (hoveredThreeNode && n === hoveredThreeNode) || (activeNodeFilter && n.data === activeNodeFilter) ? 1.45 : 1.22;
-        n.mesh.scale.set(s, s, s);
-      } else {
-        n.mesh.scale.set(1, 1, 1);
-      }
-    });
-
     if (hoveredThreeNode) {
       if (canvas) canvas.style.cursor = "pointer";
     } else {
       if (canvas) canvas.style.cursor = "default";
     }
 
-    // Highlight lines connected to mouse-hovered node or active selected node; keep rest very subtle
-    const targetItem = hoveredThreeNode || (activeNodeFilter ? threeNodes.find(n => n.data === activeNodeFilter) : null);
-    threeLines.forEach(l => {
-      const isDirectConn = targetItem && (l.fromItem === targetItem || l.toItem === targetItem);
-      if (isDirectConn) {
-        l.mesh.material.color.setHex(l.highlightColorHex);
-        l.mesh.material.opacity = 0.95;
-      } else {
-        l.mesh.material.color.setHex(l.defaultColorHex);
-        l.mesh.material.opacity = l.defaultOpacity;
-      }
-    });
-
-    updateThreeDockMetadata(hoveredThreeNode);
-  }
-}
-
-function updateThreeDockMetadata(nodeItem) {
-  const dock = document.getElementById("nodemap-hover-dock");
-  const dockTitle = document.getElementById("dock-node-title");
-  const dockDesc = document.getElementById("dock-node-desc");
-  if (!dockTitle || !dockDesc) return;
-
-  const targetData = (nodeItem && nodeItem.data) ? nodeItem.data : (activeNodeFilter || null);
-  const isSelected = activeNodeFilter && targetData === activeNodeFilter;
-
-  if (dock) {
-    if (activeNodeFilter) {
-      dock.classList.add("is-active-node");
-    } else {
-      dock.classList.remove("is-active-node");
-    }
-  }
-
-  if (targetData) {
-    const posts = getPostsForNode(targetData);
-    const count = posts.length;
-    const countStr = `${count} dispatch${count !== 1 ? 'es' : ''}`;
-    const titlesPreview = posts.slice(0, 2).map(p => p.title).join(" • ");
-
-    if (targetData.type === "root") {
-      const badgeHtml = isSelected
-        ? `<span class="dock-highlight-badge">${targetData.label}</span>`
-        : targetData.label;
-      dockTitle.innerHTML = `[ 3D CORE: ${badgeHtml} ]`;
-      dockDesc.textContent = isSelected
-        ? `Central taxonomy core with ${countStr}. Click any card to read dispatch.`
-        : `Central taxonomy core connecting ${countStr} across pillars and subtopics. Click to inspect dispatches.`;
-    } else if (targetData.type === "pillar") {
-      const badgeHtml = isSelected
-        ? `<span class="dock-highlight-badge">${targetData.label.toUpperCase()}</span>`
-        : targetData.label.toUpperCase();
-      dockTitle.innerHTML = `[ 3D PILLAR: ${badgeHtml} ]`;
-      dockDesc.textContent = isSelected
-        ? `Pillar node with ${countStr} — ${titlesPreview}. Click card to read dispatch.`
-        : `Major intellectual pillar with ${countStr}. Click to load dispatches.`;
-    } else if (targetData.type === "subtopic") {
-      const badgeHtml = isSelected
-        ? `<span class="dock-highlight-badge">${targetData.label.toUpperCase()}</span>`
-        : targetData.label.toUpperCase();
-      dockTitle.innerHTML = `[ 3D SUBTOPIC: ${badgeHtml} ]`;
-      dockDesc.textContent = isSelected
-        ? `Subtopic under [${targetData.pillar || 'TAXONOMY'}] with ${countStr} — ${titlesPreview}. Click card to read dispatch.`
-        : `Subtopic under [${targetData.pillar || 'TAXONOMY'}] with ${countStr}. Click to load dispatches.`;
-    } else {
-      const raw = targetData.rawTag || targetData.label || "";
-      const cleanTag = raw.startsWith("#") ? raw.toUpperCase() : `#${raw.toUpperCase()}`;
-      const badgeHtml = isSelected
-        ? `<span class="dock-highlight-badge">${cleanTag}</span>`
-        : cleanTag;
-      dockTitle.innerHTML = `[ 3D TAG: ${badgeHtml} ]`;
-      dockDesc.textContent = isSelected
-        ? `Tag node with ${countStr} — ${titlesPreview}. Click card to read dispatch.`
-        : `Tag node with ${countStr}. Click to load dispatches.`;
-    }
-  } else {
-    dockTitle.innerHTML = "[ 3D TAXONOMY CONSTELLATION ]";
-    dockDesc.textContent = "Drag to rotate 3D constellation. Scroll to zoom. Hover over nodes to inspect network connections. Click a node to view dispatches.";
+    updateThreeSceneFocus();
   }
 }
 
@@ -1274,8 +1355,9 @@ function onThreeMouseClick() {
     activeNodeFilter = null;
     activeTagFilter = null;
     setNodeFilterUIState(false);
+    updateActivePill(null);
     renderSelectedNodePostsStrip(null);
-    updateThreeDockMetadata(hoveredThreeNode);
+    updateThreeSceneFocus();
   } else {
     // Select clicked node
     activeNodeFilter = clickedData;
@@ -1288,15 +1370,16 @@ function onThreeMouseClick() {
     }
 
     setNodeFilterUIState(true, activeTagFilter);
+    updateActivePill(clickedData);
     renderSelectedNodePostsStrip(clickedData);
-    updateThreeDockMetadata(hoveredThreeNode);
+    updateThreeSceneFocus();
   }
 }
 
 function onThreeMouseLeave() {
   threeMouse.set(-999, -999);
   hoveredThreeNode = null;
-  updateThreeDockMetadata(null);
+  updateThreeSceneFocus();
 }
 
 function onThreeWindowResize() {
@@ -1592,8 +1675,6 @@ function handleCanvasMouseMove(e) {
 
   hoveredNode = found;
   canvas.style.cursor = found ? "pointer" : "default";
-
-  updateThreeDockMetadata(found ? { data: found } : null);
 }
 
 function handleCanvasClick(e) {
@@ -1603,8 +1684,8 @@ function handleCanvasClick(e) {
     activeNodeFilter = null;
     activeTagFilter = null;
     setNodeFilterUIState(false);
+    updateActivePill(null);
     renderSelectedNodePostsStrip(null);
-    updateThreeDockMetadata(null);
   } else {
     activeNodeFilter = hoveredNode;
     if (hoveredNode.type === "pillar" || hoveredNode.type === "subtopic") {
@@ -1616,14 +1697,13 @@ function handleCanvasClick(e) {
     }
 
     setNodeFilterUIState(true, activeTagFilter);
+    updateActivePill(hoveredNode);
     renderSelectedNodePostsStrip(hoveredNode);
-    updateThreeDockMetadata({ data: hoveredNode });
   }
 }
 
 function handleCanvasMouseLeave() {
   hoveredNode = null;
-  updateThreeDockMetadata(null);
 }
 
 function resetNodeHighlights() {
@@ -1631,18 +1711,7 @@ function resetNodeHighlights() {
   activeTagFilter = null;
   hoveredNode = null;
   hoveredThreeNode = null;
+  updateActivePill(null);
   renderSelectedNodePostsStrip(null);
-  updateThreeDockMetadata(null);
-
-  if (threeNodes) {
-    threeNodes.forEach(n => {
-      if (n.mesh) n.mesh.scale.set(1, 1, 1);
-    });
-  }
-  if (threeLines) {
-    threeLines.forEach(l => {
-      l.mesh.material.color.setHex(l.defaultColorHex);
-      l.mesh.material.opacity = l.defaultOpacity;
-    });
-  }
+  updateThreeSceneFocus();
 }
