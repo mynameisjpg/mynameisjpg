@@ -17,7 +17,7 @@
       this.animationId = null;
       this.glitches = [];
       this.lastSpawnTime = 0;
-      this.nextBurstInterval = 3200 + Math.random() * 2500; // Low frequency: at least 3.2s to 5.7s between bursts
+      this.nextBurstInterval = 2400 + Math.random() * 1400; // Balanced cadence: 2.4s to 3.8s between bursts
       this.burstRemaining = 0;
       this.isPaused = false;
       this.prefersReducedMotion = false;
@@ -82,7 +82,7 @@
 
       // Start quietly with a gentle delay before the first subtle glitch
       this.lastSpawnTime = typeof performance !== "undefined" ? performance.now() : 0;
-      this.nextBurstInterval = 2500 + Math.random() * 2000;
+      this.nextBurstInterval = 2200 + Math.random() * 1200;
 
       this.start();
     }
@@ -293,29 +293,29 @@
     animate(currentTime) {
       if (this.isPaused) return;
 
-      // Low-frequency burst cadence: at least 3 to 5.5 seconds of calm quiet between events
+      // Balanced middle-ground cadence: 2.4 to 3.8 seconds between events
       if (this.burstRemaining > 0) {
         // Quick trailing glitch in the active micro-burst
-        if (currentTime - this.lastSpawnTime > 90) {
+        if (currentTime - this.lastSpawnTime > 100) {
           this.spawnGlitch();
           this.lastSpawnTime = currentTime;
           this.burstRemaining--;
           if (this.burstRemaining <= 0) {
-            // Schedule the next calm period (3.0s to 5.5s)
-            this.nextBurstInterval = 3000 + Math.random() * 2500;
+            // Schedule the next interval (2.4s to 3.8s)
+            this.nextBurstInterval = 2400 + Math.random() * 1400;
           }
         }
       } else if (currentTime - this.lastSpawnTime > this.nextBurstInterval) {
-        // Trigger a concise, subtle micro-glitch (1 to 2 units)
-        const burstCount = Math.random() > 0.45 ? 2 : 1;
+        // Trigger a concise, subtle micro-glitch (mostly 1 unit, occasionally 2)
+        const burstCount = Math.random() > 0.65 ? 2 : 1;
         for (let b = 0; b < burstCount; b++) {
           this.spawnGlitch();
         }
         this.lastSpawnTime = currentTime;
-        // Optionally schedule 1 trailing glitch 90ms later
-        this.burstRemaining = Math.random() > 0.6 ? 1 : 0;
+        // Optionally schedule 1 trailing glitch 100ms later (25% chance)
+        this.burstRemaining = Math.random() > 0.75 ? 1 : 0;
         if (this.burstRemaining <= 0) {
-          this.nextBurstInterval = 3000 + Math.random() * 2500;
+          this.nextBurstInterval = 2400 + Math.random() * 1400;
         }
       }
 
