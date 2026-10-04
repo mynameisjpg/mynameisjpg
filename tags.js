@@ -372,7 +372,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -402,7 +402,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -451,7 +451,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -481,7 +481,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -530,7 +530,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -560,7 +560,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -787,7 +787,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -807,7 +807,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -946,7 +946,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -966,7 +966,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -1128,7 +1128,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -1148,7 +1148,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -1310,7 +1310,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -1330,7 +1330,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -1370,7 +1370,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -1390,7 +1390,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -1430,7 +1430,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -1450,7 +1450,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -1962,7 +1962,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -1972,7 +1972,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -2415,7 +2415,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -2425,7 +2425,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -2793,7 +2793,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -2803,7 +2803,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -3799,7 +3799,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -3809,7 +3809,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -5223,7 +5223,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -5233,7 +5233,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -5433,7 +5433,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -5443,7 +5443,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
@@ -6059,7 +6059,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY & POLITICS OF INFORMATION",
@@ -6069,7 +6069,7 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "(II)The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
         "slug": "telebody-latent-space-pharmacopornographic-ai",
         "format": "ESSAY",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",

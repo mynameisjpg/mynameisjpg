@@ -74,7 +74,7 @@
           </div>
           <div>
             <button type="button" class="theme-mode-toggle" id="theme-mode-btn" title="Toggle Light Parchment / Dark Slate Mode">
-              [THEME: PARCHMENT ☀️]
+              THEME: PARCHMENT ☀️
             </button>
           </div>
         </div>
@@ -504,21 +504,21 @@
       const savedTheme = localStorage.getItem('about_page_theme') || 'parchment';
       if (savedTheme === 'slate') {
         shell.classList.remove('theme-parchment');
-        if (themeBtn) themeBtn.textContent = '[THEME: SLATE 🌙]';
+        if (themeBtn) themeBtn.textContent = 'THEME: SLATE 🌙';
       } else {
         shell.classList.add('theme-parchment');
-        if (themeBtn) themeBtn.textContent = '[THEME: PARCHMENT ☀️]';
+        if (themeBtn) themeBtn.textContent = 'THEME: PARCHMENT ☀️';
       }
 
       if (themeBtn) {
         themeBtn.addEventListener('click', () => {
           if (shell.classList.contains('theme-parchment')) {
             shell.classList.remove('theme-parchment');
-            themeBtn.textContent = '[THEME: SLATE 🌙]';
+            themeBtn.textContent = 'THEME: SLATE 🌙';
             localStorage.setItem('about_page_theme', 'slate');
           } else {
             shell.classList.add('theme-parchment');
-            themeBtn.textContent = '[THEME: PARCHMENT ☀️]';
+            themeBtn.textContent = 'THEME: PARCHMENT ☀️';
             localStorage.setItem('about_page_theme', 'parchment');
           }
         });

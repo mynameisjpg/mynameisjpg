@@ -115,6 +115,36 @@ function checkUrlTagParameters() {
   }
 }
 
+function updateActiveFilterBanner(isFiltered, tagText = "", matchCount = 0) {
+  const banner = document.getElementById("timeline-active-filter-banner");
+  const tagNameEl = document.getElementById("filter-banner-tag-name");
+  const countEl = document.getElementById("filter-banner-count");
+  if (!banner) return;
+
+  if (isFiltered && tagText) {
+    const cleanTag = tagText.trim();
+    const displayTag = cleanTag.startsWith("#") ? cleanTag.toUpperCase() : `#${cleanTag.toUpperCase()}`;
+    if (tagNameEl) tagNameEl.textContent = displayTag;
+    if (countEl) countEl.textContent = `(${matchCount} DISPATCH${matchCount === 1 ? '' : 'ES'})`;
+    banner.style.display = "flex";
+  } else {
+    banner.style.display = "none";
+  }
+}
+
+function clearTagFilter() {
+  activeTagFilter = null;
+  activeNodeFilter = null;
+  const url = new URL(window.location);
+  url.searchParams.delete("tag");
+  url.searchParams.delete("node");
+  url.searchParams.delete("topic");
+  url.searchParams.delete("filter");
+  window.history.replaceState({}, "", url.pathname + (url.search ? url.search : ""));
+  setNodeFilterUIState(false);
+  renderTimelineList();
+}
+
 function setNodeFilterUIState(isFiltered, filterText = "") {
   document.querySelectorAll("#clear-node-filter-btn, .btn-clear-node-filter").forEach(btn => {
     btn.style.display = isFiltered ? "inline-flex" : "none";
@@ -292,6 +322,12 @@ function initArchiveListeners() {
       searchQuery = e.target.value.toLowerCase().trim();
       renderTimelineList();
     });
+  }
+
+  // Clear Tag Filter Banner Button
+  const clearFilterBtn = document.getElementById("timeline-clear-filter-btn");
+  if (clearFilterBtn) {
+    clearFilterBtn.addEventListener("click", clearTagFilter);
   }
 
   // Top navbar search input
@@ -602,8 +638,8 @@ function renderSubscribeFormArchive(modal) {
           <input type="email" id="subscriber-email" name="email" class="modal-input" placeholder="reader@domain.xyz" required autocomplete="email" spellcheck="false">
         </div>
         <div class="modal-actions">
-          <button type="button" class="btn-modal-cancel">[ CANCEL ]</button>
-          <button type="submit" class="btn-modal-submit">[ TRANSMIT SUBSCRIPTION ]</button>
+          <button type="button" class="btn-modal-cancel">CANCEL</button>
+          <button type="submit" class="btn-modal-submit">TRANSMIT SUBSCRIPTION</button>
         </div>
       </form>
     </div>
@@ -641,7 +677,7 @@ function renderSubscribeConfirmationArchive(email, name) {
       </div>
 
       <div class="modal-actions">
-        <button type="button" class="btn-modal-submit" onclick="closeSubscribeModal()" style="min-width: 120px;">[ CLOSE ]</button>
+        <button type="button" class="btn-modal-submit" onclick="closeSubscribeModal()" style="min-width: 120px;">CLOSE</button>
       </div>
     </div>
   `;
@@ -684,9 +720,9 @@ async function handleSubscribeSubmit(e) {
 
   if (!email) return;
 
-  const originalText = submitBtn ? submitBtn.textContent : "[ TRANSMIT SUBSCRIPTION ]";
+  const originalText = submitBtn ? submitBtn.textContent : "TRANSMIT SUBSCRIPTION";
   if (submitBtn) {
-    submitBtn.textContent = "[ TRANSMITTING... ]";
+    submitBtn.textContent = "TRANSMITTING...";
     submitBtn.disabled = true;
   }
 
@@ -723,6 +759,13 @@ function openImageLightbox(src, captionText) {
 function closeImageLightbox() {
   const modal = document.getElementById("image-lightbox-modal");
   if (modal && typeof modal.close === "function") modal.close();
+}
+
+function getArchivePostUrl(post) {
+  if (!post) return "index.html";
+  const rawSlug = post.slug || post.id || post.sys_id || "";
+  const cleanSlug = String(rawSlug).replace(/^\d{4}-\d{2}-\d{2}-/, "");
+  return `posts/${cleanSlug}.html`;
 }
 
 /**
@@ -775,7 +818,7 @@ function renderTimelineList() {
     filteredTimelinePosts.sort((a, b) => (a.title || "").localeCompare(b.title || ""));
   }
 
-  // Update Status Label
+  // Update Status Label & Active Filter Notification Banner
   if (filterStatusLabel) {
     let label = `DISPATCHES: ${filteredTimelinePosts.length} TOTAL`;
     if (activeTagFilter) label += ` // NODE: ${activeTagFilter.toUpperCase()}`;
@@ -783,11 +826,13 @@ function renderTimelineList() {
     filterStatusLabel.textContent = label;
   }
 
+  updateActiveFilterBanner(!!activeTagFilter, activeTagFilter, filteredTimelinePosts.length);
+
   if (filteredTimelinePosts.length === 0) {
     container.innerHTML = `
       <div style="padding: 3rem 1.5rem; text-align: center; color: var(--text-muted);">
         <p style="font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 0.5rem;">[ NO DISPATCHES FOUND MATCHING FILTER ]</p>
-        <button type="button" onclick="clearAllFilters()" class="timeline-read-btn">[ RESET ALL FILTERS ]</button>
+        <button type="button" onclick="clearAllFilters()" class="timeline-read-btn">RESET ALL FILTERS</button>
       </div>
     `;
     return;
@@ -798,6 +843,7 @@ function renderTimelineList() {
     const dayNum = !isNaN(d.getTime()) ? d.getDate() : "--";
     const monthShort = !isNaN(d.getTime()) ? d.toLocaleString('en-US', { month: 'short' }).toUpperCase() : "---";
     const yearFull = !isNaN(d.getTime()) ? d.getFullYear() : "----";
+    const postUrl = getArchivePostUrl(post);
 
     // Format reading time duration (without "READ:")
     let readDuration = post.read_time || "8 MIN";
@@ -814,7 +860,7 @@ function renderTimelineList() {
     }
 
     return `
-      <li class="timeline-item" id="timeline-item-${post.slug}">
+      <li class="timeline-item ${post.featured ? 'is-featured' : ''}" id="timeline-item-${post.slug}">
         <!-- Column 1: Date -->
         <div class="timeline-date-col">
           <div class="timeline-date-day">${dayNum} ${monthShort}</div>
@@ -842,12 +888,12 @@ function renderTimelineList() {
             ${post.subtopic ? `<span class="meta-sep-dot">•</span><span class="meta-topic-text">${post.subtopic.toUpperCase()}</span>` : ''}
           </div>
 
-          <a href="index.html#dispatch-${post.slug}" class="timeline-title">${post.title}</a>
+          <a href="${postUrl}" class="timeline-title">${post.title}</a>
           ${post.excerpt ? `<p class="timeline-excerpt">${post.excerpt}</p>` : ''}
 
           <!-- Bottom Metadata Ordered: 1. Read Dispatch Button, 2. Duration, 3. Author -->
           <div class="timeline-meta-bottom">
-            <a href="index.html#dispatch-${post.slug}" class="timeline-read-btn">[ READ DISPATCH ↗ ]</a>
+            <a href="${postUrl}" class="timeline-read-btn">READ DISPATCH ↗</a>
             <span class="meta-sep">//</span>
             <span class="timeline-read-time">${readDuration}</span>
             <span class="meta-sep">//</span>

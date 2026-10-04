@@ -718,11 +718,11 @@ def generate_post_html_files(posts):
                 <span class="pill-arrow">▼</span>
               </button>
               <div class="custom-select-dropdown" id="filter-dropdown" role="menu">
-                <button type="button" class="dropdown-opt active" data-filter="all" role="menuitem">[ALL POSTS]</button>
-                <button type="button" class="dropdown-opt" data-filter="essay" role="menuitem">[ESSAYS]</button>
-                <button type="button" class="dropdown-opt" data-filter="note" role="menuitem">[NOTES]</button>
-                <button type="button" class="dropdown-opt" data-filter="bookmark" role="menuitem">[BOOKMARKS]</button>
-                <button type="button" class="dropdown-opt" data-filter="resource" role="menuitem">[RESOURCES]</button>
+                <button type="button" class="dropdown-opt active" data-filter="all" role="menuitem">ALL POSTS</button>
+                <button type="button" class="dropdown-opt" data-filter="essay" role="menuitem">ESSAYS</button>
+                <button type="button" class="dropdown-opt" data-filter="note" role="menuitem">NOTES</button>
+                <button type="button" class="dropdown-opt" data-filter="bookmark" role="menuitem">BOOKMARKS</button>
+                <button type="button" class="dropdown-opt" data-filter="resource" role="menuitem">RESOURCES</button>
               </div>
             </div>
 
@@ -733,10 +733,10 @@ def generate_post_html_files(posts):
                 <span class="pill-arrow">▼</span>
               </button>
               <div class="custom-select-dropdown" id="sort-dropdown" role="menu">
-                <button type="button" class="dropdown-opt active" data-sort="recent" role="menuitem">[MOST RECENT]</button>
-                <button type="button" class="dropdown-opt" data-sort="oldest" role="menuitem">[OLDEST]</button>
-                <button type="button" class="dropdown-opt" data-sort="readtime" role="menuitem">[READING TIME]</button>
-                <button type="button" class="dropdown-opt" data-sort="title" role="menuitem">[TITLE A-Z]</button>
+                <button type="button" class="dropdown-opt active" data-sort="recent" role="menuitem">MOST RECENT</button>
+                <button type="button" class="dropdown-opt" data-sort="oldest" role="menuitem">OLDEST</button>
+                <button type="button" class="dropdown-opt" data-sort="readtime" role="menuitem">READING TIME</button>
+                <button type="button" class="dropdown-opt" data-sort="title" role="menuitem">TITLE A-Z</button>
               </div>
             </div>
           </div>
@@ -759,7 +759,7 @@ def generate_post_html_files(posts):
     <article class="post-column essay-column" id="essay-reading-pane" data-component="reader-pane" aria-label="Post Reader View">
       <button type="button" class="btn-return-grid" aria-label="Return to Grid Feed">
         <span class="return-arrow">&lt;&lt;</span>
-        <span class="return-text">[ RETURN TO GRID FEED ]</span>
+        <span class="return-text">RETURN TO GRID FEED</span>
       </button>
     </article>
   </main>
@@ -785,8 +785,8 @@ def generate_post_html_files(posts):
           <input type="email" id="subscriber-email" name="email" class="modal-input" placeholder="reader@domain.xyz" required autocomplete="email" spellcheck="false">
         </div>
         <div class="modal-actions">
-          <button type="button" class="btn-modal-cancel">[ CANCEL ]</button>
-          <button type="submit" class="btn-modal-submit">[ TRANSMIT SUBSCRIPTION ]</button>
+          <button type="button" class="btn-modal-cancel">CANCEL</button>
+          <button type="submit" class="btn-modal-submit">TRANSMIT SUBSCRIPTION</button>
         </div>
       </form>
     </div>

@@ -264,12 +264,12 @@ async function loadDynamicPosts() {
   parseUrlParamsAndApply();
 
   // Check URL Hash or INITIAL_POST_SLUG for deep-link
-  const hash =
-    typeof window !== "undefined" && window.location && window.location.hash
-      ? window.location.hash.replace("#", "")
-      : "";
+  const rawHash = (window.location.hash || "").replace("#", "");
+  const cleanHash = rawHash.replace(/^dispatch-/, "");
   const targetSlug =
-    hash || (typeof window !== "undefined" ? window.INITIAL_POST_SLUG : "");
+    (POSTS_DATABASE[rawHash] ? rawHash : "") ||
+    (POSTS_DATABASE[cleanHash] ? cleanHash : "") ||
+    (typeof window !== "undefined" ? window.INITIAL_POST_SLUG : "");
 
   // Render Matrix Cards
   renderCardMatrix(true);
@@ -428,7 +428,7 @@ function updateMatrixSentinel(loadedCount, totalCount) {
       <div class="sentinel-inner">
         <button type="button" class="btn-load-more" id="btn-load-more-dispatches" aria-label="Load more dispatches">
           <span class="load-more-icon">↓</span>
-          <span class="load-more-text">[ LOAD MORE DISPATCHES ]</span>
+          <span class="load-more-text">LOAD MORE DISPATCHES</span>
           <span class="load-more-count">(${loadedCount} OF ${totalCount})</span>
         </button>
         <span class="sentinel-hint">// SCROLL OR CLICK TO REVEAL MORE</span>
@@ -736,6 +736,59 @@ function getCanonicalPostUrl(postOrId) {
 }
 
 /**
+ * Typography Scaling Preferences & Dynamic CSS Cascade
+ */
+function getSavedReaderFontSize() {
+  if (typeof window === "undefined" || !window.localStorage) return 16;
+  const saved = localStorage.getItem("untitled_reader_font_size");
+  const parsed = parseInt(saved, 10);
+  return !isNaN(parsed) && parsed >= 12 && parsed <= 24 ? parsed : 16;
+}
+
+function getReaderFontSizeDisplay(size) {
+  return size === 16 ? "DEFAULT PX" : `${size} PX`;
+}
+
+function applyReaderFontScale(size) {
+  const pane = document.getElementById("essay-reading-pane");
+  if (!pane) return;
+  const scale = size / 16;
+  pane.style.setProperty("--reader-font-scale", scale.toFixed(4));
+}
+
+function initReaderTypoScaler() {
+  const slider = document.getElementById("reader-font-slider");
+  const valBtn = document.getElementById("typo-scaler-val");
+  const pane = document.getElementById("essay-reading-pane");
+  if (!slider || !pane) return;
+
+  const currentSize = getSavedReaderFontSize();
+  slider.value = currentSize;
+  applyReaderFontScale(currentSize);
+  if (valBtn) valBtn.textContent = getReaderFontSizeDisplay(currentSize);
+
+  slider.oninput = (e) => {
+    const size = parseInt(e.target.value, 10);
+    applyReaderFontScale(size);
+    if (valBtn) valBtn.textContent = getReaderFontSizeDisplay(size);
+    if (typeof window !== "undefined" && window.localStorage) {
+      localStorage.setItem("untitled_reader_font_size", size.toString());
+    }
+  };
+
+  if (valBtn) {
+    valBtn.onclick = () => {
+      slider.value = 16;
+      applyReaderFontScale(16);
+      valBtn.textContent = "DEFAULT PX";
+      if (typeof window !== "undefined" && window.localStorage) {
+        localStorage.setItem("untitled_reader_font_size", "16");
+      }
+    };
+  }
+}
+
+/**
  * Reader Pane Component Renderer (3-Tier Metadata Architecture)
  */
 function renderPost(postId) {
@@ -752,6 +805,8 @@ function renderPost(postId) {
     pane.classList.remove("theme-light");
   }
 
+  const currentFontSize = getSavedReaderFontSize();
+
   // Construct 3-Tier DOM Template
   pane.innerHTML = `
     <!-- Edge Close Button [<<] (Floating unclipped on border) -->
@@ -762,16 +817,37 @@ function renderPost(postId) {
         <!-- Return to Grid Feed Button (Mobile / Narrow Screens) -->
         <button type="button" class="btn-return-grid" onclick="showGridFeedMobile()" aria-label="Return to Grid Feed">
           <span class="return-arrow">&lt;&lt;</span>
-          <span class="return-text">[ RETURN TO GRID FEED ]</span>
+          <span class="return-text">RETURN TO GRID FEED</span>
         </button>
+
+        <!-- TYPOGRAPHY SCALING CALIBRATOR -->
+        <div class="reader-typo-scaler" data-component="typo-scaler">
+          <span class="typo-scaler-label">TYPO _ SCALING</span>
+          <div class="typo-scaler-slider-wrap">
+            <div class="typo-scaler-track-ticks" aria-hidden="true"></div>
+            <input 
+              type="range" 
+              id="reader-font-slider" 
+              class="typo-scale-slider" 
+              min="13" 
+              max="21" 
+              step="1" 
+              value="${currentFontSize}" 
+              aria-label="Reader typography scale" 
+            />
+          </div>
+          <button type="button" id="typo-scaler-val" class="typo-scaler-val" title="Click to reset to default 16px size">
+            ${getReaderFontSizeDisplay(currentFontSize)}
+          </button>
+        </div>
 
         <!-- TIER 1: ABOVE TITLE ARCHIVAL BADGES -->
         <header class="post-header-meta-top">
           <span class="meta-chip chip-primary">[${post.format}]</span>
-          ${post.category ? `<a href="network.html?tag=${encodeURIComponent(post.category)}" class="meta-chip meta-chip-category" title="Explore ${post.category} in Taxonomy Node Map">[${post.category}]</a>` : ""}
-          ${post.media ? `<span class="meta-chip meta-chip-media">[MEDIA: ${post.media}]</span>` : ""}
-          ${post.pillar ? `<a href="network.html?tag=${encodeURIComponent(post.pillar)}" class="meta-chip" title="Explore ${post.pillar} in Taxonomy Node Map">[${post.pillar}]</a>` : ""}
-          ${post.subtopic ? `<a href="network.html?tag=${encodeURIComponent(post.subtopic)}" class="meta-chip" title="Explore ${post.subtopic} in Taxonomy Node Map">[${post.subtopic}]</a>` : ""}
+          ${post.category && post.category !== post.format && post.category !== post.pillar ? `<a href="network.html?tag=${encodeURIComponent(post.category)}" class="meta-text-link" title="Explore ${post.category} in Taxonomy Node Map">${post.category}</a>` : ""}
+          ${post.media ? `<span class="meta-text-item">MEDIA: ${post.media}</span>` : ""}
+          ${post.pillar ? `<a href="network.html?tag=${encodeURIComponent(post.pillar)}" class="meta-text-link" title="Explore ${post.pillar} in Taxonomy Node Map">${post.pillar}</a>` : ""}
+          ${post.subtopic ? `<a href="network.html?tag=${encodeURIComponent(post.subtopic)}" class="meta-text-link" title="Explore ${post.subtopic} in Taxonomy Node Map">${post.subtopic}</a>` : ""}
         </header>
 
         <!-- TITLE & SUBTITLE -->
@@ -929,6 +1005,9 @@ function renderPost(postId) {
       </div>
     </div>
   `;
+
+  // Initialize Typography Scaler Slider and Preferences
+  initReaderTypoScaler();
 
   // Smooth scroll reader to top on post change
   pane.scrollTo({ top: 0, behavior: "smooth" });
@@ -1262,11 +1341,16 @@ function initApp() {
   // Browser back/forward navigation support
   window.addEventListener("popstate", () => {
     parseUrlParamsAndApply();
-    const hash = (window.location.hash || "").replace("#", "");
-    if (hash && POSTS_DATABASE[hash]) {
-      activePostId = hash;
+    const rawHash = (window.location.hash || "").replace("#", "");
+    const cleanHash = rawHash.replace(/^dispatch-/, "");
+    const resolvedPostId =
+      (POSTS_DATABASE[rawHash] ? rawHash : "") ||
+      (POSTS_DATABASE[cleanHash] ? cleanHash : "");
+
+    if (resolvedPostId) {
+      activePostId = resolvedPostId;
       selectAndRenderPost(activePostId, false);
-    } else if (!hash && activePostId) {
+    } else if (!rawHash && activePostId) {
       activePostId = "";
       closeReaderPane();
     }
@@ -1784,8 +1868,8 @@ function renderSubscribeForm(modal) {
           <input type="email" id="subscriber-email" name="email" class="modal-input" placeholder="reader@domain.xyz" required autocomplete="email" spellcheck="false">
         </div>
         <div class="modal-actions">
-          <button type="button" class="btn-modal-cancel">[ CANCEL ]</button>
-          <button type="submit" class="btn-modal-submit">[ TRANSMIT SUBSCRIPTION ]</button>
+          <button type="button" class="btn-modal-cancel">CANCEL</button>
+          <button type="submit" class="btn-modal-submit">TRANSMIT SUBSCRIPTION</button>
         </div>
       </form>
     </div>
@@ -1823,7 +1907,7 @@ function renderSubscribeConfirmation(email, name) {
       </div>
 
       <div class="modal-actions">
-        <button type="button" class="btn-modal-submit" onclick="closeSubscribeModal()" style="min-width: 120px;">[ CLOSE ]</button>
+        <button type="button" class="btn-modal-submit" onclick="closeSubscribeModal()" style="min-width: 120px;">CLOSE</button>
       </div>
     </div>
   `;
@@ -1947,9 +2031,9 @@ async function handleSubscribeSubmit(event) {
 
   const originalText = submitBtn
     ? submitBtn.textContent
-    : "[ TRANSMIT SUBSCRIPTION ]";
+    : "TRANSMIT SUBSCRIPTION";
   if (submitBtn) {
-    submitBtn.textContent = "[ TRANSMITTING... ]";
+    submitBtn.textContent = "TRANSMITTING...";
     submitBtn.disabled = true;
   }
 

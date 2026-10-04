@@ -549,8 +549,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <input type="email" id="subscriber-email" name="email" class="modal-input" placeholder="reader@domain.xyz" required autocomplete="email" spellcheck="false">
           </div>
           <div class="modal-actions">
-            <button type="button" class="btn-modal-cancel">[ CANCEL ]</button>
-            <button type="submit" class="btn-modal-submit">[ TRANSMIT SUBSCRIPTION ]</button>
+            <button type="button" class="btn-modal-cancel">CANCEL</button>
+            <button type="submit" class="btn-modal-submit">TRANSMIT SUBSCRIPTION</button>
           </div>
         </form>
       </div>
@@ -591,7 +591,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
 
         <div class="modal-actions">
-          <button type="button" class="btn-modal-submit" onclick="window.closeSubscribeModal()" style="min-width: 120px;">[ CLOSE ]</button>
+          <button type="button" class="btn-modal-submit" onclick="window.closeSubscribeModal()" style="min-width: 120px;">CLOSE</button>
         </div>
       </div>
     `;
@@ -633,9 +633,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!email) return;
 
-    const originalText = submitBtn ? submitBtn.textContent : '[ TRANSMIT SUBSCRIPTION ]';
+    const originalText = submitBtn ? submitBtn.textContent : 'TRANSMIT SUBSCRIPTION';
     if (submitBtn) {
-      submitBtn.textContent = '[ TRANSMITTING... ]';
+      submitBtn.textContent = 'TRANSMITTING...';
       submitBtn.disabled = true;
     }
 

@@ -17,7 +17,8 @@
       this.animationId = null;
       this.glitches = [];
       this.lastSpawnTime = 0;
-      this.spawnInterval = 45; // Rapid spawning cadence (ms)
+      this.nextBurstInterval = 3200 + Math.random() * 2500; // Low frequency: at least 3.2s to 5.7s between bursts
+      this.burstRemaining = 0;
       this.isPaused = false;
       this.prefersReducedMotion = false;
 
@@ -79,10 +80,9 @@
 
       this.handleResize();
 
-      // Seed initial active glitches
-      for (let i = 0; i < 15; i++) {
-        this.spawnGlitch(true);
-      }
+      // Start quietly with a gentle delay before the first subtle glitch
+      this.lastSpawnTime = typeof performance !== "undefined" ? performance.now() : 0;
+      this.nextBurstInterval = 2500 + Math.random() * 2000;
 
       this.start();
     }
@@ -293,14 +293,30 @@
     animate(currentTime) {
       if (this.isPaused) return;
 
-      // Handle rapid spawn timer (burst 1-3 glitches per tick)
-      if (currentTime - this.lastSpawnTime > this.spawnInterval) {
-        const burstCount = Math.floor(1 + Math.random() * 3);
+      // Low-frequency burst cadence: at least 3 to 5.5 seconds of calm quiet between events
+      if (this.burstRemaining > 0) {
+        // Quick trailing glitch in the active micro-burst
+        if (currentTime - this.lastSpawnTime > 90) {
+          this.spawnGlitch();
+          this.lastSpawnTime = currentTime;
+          this.burstRemaining--;
+          if (this.burstRemaining <= 0) {
+            // Schedule the next calm period (3.0s to 5.5s)
+            this.nextBurstInterval = 3000 + Math.random() * 2500;
+          }
+        }
+      } else if (currentTime - this.lastSpawnTime > this.nextBurstInterval) {
+        // Trigger a concise, subtle micro-glitch (1 to 2 units)
+        const burstCount = Math.random() > 0.45 ? 2 : 1;
         for (let b = 0; b < burstCount; b++) {
           this.spawnGlitch();
         }
         this.lastSpawnTime = currentTime;
-        this.spawnInterval = 30 + Math.random() * 65; // Snappy irregular rhythm
+        // Optionally schedule 1 trailing glitch 90ms later
+        this.burstRemaining = Math.random() > 0.6 ? 1 : 0;
+        if (this.burstRemaining <= 0) {
+          this.nextBurstInterval = 3000 + Math.random() * 2500;
+        }
       }
 
       // Clear Canvas

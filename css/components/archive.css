@@ -191,6 +191,114 @@
   color: #121212;
 }
 
+/* Active Taxonomy Filter Notification Banner */
+.timeline-active-filter-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 2.5rem);
+  max-width: 880px;
+  margin: 0.85rem auto 0.25rem auto;
+  padding: 0.65rem 1rem;
+  background: rgba(232, 74, 95, 0.09);
+  border: 1px solid var(--primary, #E84A5F);
+  border-left: 4px solid var(--primary, #E84A5F);
+  border-radius: var(--rounded-sm, 2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 16px rgba(232, 74, 95, 0.2);
+  box-sizing: border-box;
+  animation: slideInDownBanner 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
+  flex-shrink: 0;
+  gap: 0.75rem;
+}
+
+@keyframes slideInDownBanner {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filter-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.filter-banner-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--primary, #E84A5F);
+  box-shadow: 0 0 8px var(--primary, #E84A5F);
+  animation: pulseDot 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    transform: scale(0.9);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+
+.filter-banner-text {
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.68rem;
+  color: var(--text-bright, #F5F5F5);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.filter-banner-tag {
+  color: var(--primary, #E84A5F);
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  background: rgba(232, 74, 95, 0.18);
+  border: 1px solid rgba(232, 74, 95, 0.3);
+  border-radius: 2px;
+  margin-left: 0.25rem;
+  letter-spacing: 0.08em;
+}
+
+.filter-banner-count {
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.64rem;
+  color: var(--text-muted, #888888);
+  letter-spacing: 0.05em;
+}
+
+.filter-banner-clear-btn {
+  background: transparent;
+  border: 1px solid rgba(232, 74, 95, 0.5);
+  border-radius: 2px;
+  color: var(--primary, #E84A5F);
+  font-family: var(--font-mono, 'Azeret Mono', monospace);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.65rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.filter-banner-clear-btn:hover {
+  background: var(--primary, #E84A5F);
+  color: #101010;
+  border-color: var(--primary, #E84A5F);
+  box-shadow: 0 0 12px rgba(232, 74, 95, 0.4);
+}
+
 /* Timeline Scroll Container Centered in Left Panel */
 .timeline-scroll-container {
   flex: 1;
@@ -208,6 +316,9 @@
 
 /* Timeline List Frame Centered inside Left Panel */
 .timeline-list {
+  --date-col-width: 52px;
+  --node-col-width: 18px;
+  --timeline-gap: 0.65rem;
   position: relative;
   list-style: none;
   padding: 0;
@@ -217,13 +328,13 @@
   box-sizing: border-box;
 }
 
-/* Vertical Spine Line */
+/* Vertical Spine Line — Centered exactly through the 18px node dot column */
 .timeline-list::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 60px; /* 52px date + 9px center of 18px node col - 1px */
+  left: calc(var(--date-col-width) + var(--timeline-gap) + (var(--node-col-width) / 2) - 1px);
   width: 2px;
   background: linear-gradient(
     180deg,
@@ -238,8 +349,8 @@
 .timeline-item {
   position: relative;
   display: grid;
-  grid-template-columns: 52px 18px 84px minmax(0, 1fr);
-  gap: 0.65rem;
+  grid-template-columns: var(--date-col-width) var(--node-col-width) 84px minmax(0, 1fr);
+  gap: var(--timeline-gap);
   align-items: flex-start;
   padding: 1.25rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -291,6 +402,11 @@
   background-color: var(--neutral-bg, #121212);
   border: 2px solid var(--primary, #E84A5F);
   transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-item.is-featured .timeline-node {
+  background-color: var(--primary, #E84A5F);
+  box-shadow: 0 0 10px rgba(232, 74, 95, 0.7);
 }
 
 .timeline-item:hover .timeline-node {
@@ -607,9 +723,8 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-left: 3px solid var(--primary, #E84A5F);
   border-radius: var(--rounded-sm, 2px);
-  padding: 0.65rem 0.95rem;
+  padding: 0.65rem 1.15rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -624,7 +739,11 @@
 .dock-controls-visual {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1.15rem;
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
 /* Connected Post Cards Strip sliding out to the right */
@@ -870,39 +989,6 @@
   .see-all-text {
     font-size: 0.62rem;
   }
-}
-
-.dock-left-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  flex: 1;
-  min-width: 0;
-}
-
-.dock-node-title {
-  font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--primary, #E84A5F);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.dock-node-desc {
-  font-family: var(--font-mono, 'Azeret Mono', monospace);
-  font-size: 0.62rem;
-  color: var(--text-body, #CCCCCC);
-  line-height: 1.45;
-}
-
-.dock-controls-visual {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  padding-left: 1.25rem;
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-  flex-shrink: 0;
 }
 
 .control-unit {

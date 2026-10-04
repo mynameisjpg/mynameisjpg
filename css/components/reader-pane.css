@@ -10,6 +10,7 @@
   overflow: visible !important;
   height: 100vh;
   position: relative;
+  --reader-font-scale: 1;
   transition:
     background-color var(--transition-normal),
     color var(--transition-normal);
@@ -18,7 +19,7 @@
 .reader-scroll-wrapper {
   height: 100vh;
   overflow-y: auto;
-  padding: 4.5rem 4.5rem;
+  padding: 2.25rem 4.5rem 4.5rem 4.5rem;
   box-sizing: border-box;
   width: 100%;
 }
@@ -32,12 +33,196 @@
 }
 
 /* ==============================================================================
+   TYPOGRAPHY SCALING CALIBRATOR COMPONENT
+   ============================================================================== */
+.reader-typo-scaler {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px dashed var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.70rem;
+  letter-spacing: 0.09em;
+  color: var(--text-muted);
+  user-select: none;
+  transition: border-color var(--transition-normal);
+}
+
+.theme-light .reader-typo-scaler {
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+  color: #718096;
+}
+
+.typo-scaler-label {
+  grid-column: 1;
+  justify-self: start;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+
+.theme-light .typo-scaler-label {
+  color: #718096;
+}
+
+.typo-scaler-slider-wrap {
+  grid-column: 2;
+  justify-self: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  max-width: 260px;
+  margin: 0;
+}
+
+.typo-scaler-track-ticks {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  transform: translateY(-50%);
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.22) 0px,
+    rgba(255, 255, 255, 0.22) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  pointer-events: none;
+}
+
+.theme-light .typo-scaler-track-ticks {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.22) 0px,
+    rgba(0, 0, 0, 0.22) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+}
+
+.typo-scale-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 24px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+
+.typo-scale-slider:focus {
+  outline: none;
+}
+
+/* WebKit Thumb */
+.typo-scale-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #E84A5F 0%, #E84A5F 3.2px, #161616 3.5px, #161616 6.5px, #444 7px, #161616 8px);
+  border: 1.5px solid #555555;
+  box-shadow: 0 0 6px rgba(232, 74, 95, 0.35);
+  cursor: grab;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.typo-scale-slider:active::-webkit-slider-thumb {
+  cursor: grabbing;
+  transform: scale(1.15);
+  box-shadow: 0 0 12px rgba(232, 74, 95, 0.75);
+  border-color: #E84A5F;
+}
+
+.typo-scale-slider::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 10px rgba(232, 74, 95, 0.6);
+  border-color: #E84A5F;
+}
+
+/* Firefox Thumb */
+.typo-scale-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #E84A5F 0%, #E84A5F 3.2px, #161616 3.5px, #161616 6.5px, #444 7px, #161616 8px);
+  border: 1.5px solid #555555;
+  box-shadow: 0 0 6px rgba(232, 74, 95, 0.35);
+  cursor: grab;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.typo-scale-slider:active::-moz-range-thumb {
+  cursor: grabbing;
+  transform: scale(1.15);
+  box-shadow: 0 0 12px rgba(232, 74, 95, 0.75);
+  border-color: #E84A5F;
+}
+
+.typo-scale-slider::-moz-range-thumb:hover {
+  box-shadow: 0 0 10px rgba(232, 74, 95, 0.6);
+  border-color: #E84A5F;
+}
+
+/* Light Mode Thumb overrides */
+.theme-light .typo-scale-slider::-webkit-slider-thumb {
+  background: radial-gradient(circle, #E84A5F 0%, #E84A5F 3.2px, #f7fafc 3.5px, #f7fafc 6.5px, #cbd5e0 7px, #f7fafc 8px);
+  border-color: #a0aec0;
+}
+.theme-light .typo-scale-slider::-moz-range-thumb {
+  background: radial-gradient(circle, #E84A5F 0%, #E84A5F 3.2px, #f7fafc 3.5px, #f7fafc 6.5px, #cbd5e0 7px, #f7fafc 8px);
+  border-color: #a0aec0;
+}
+
+.typo-scaler-val {
+  grid-column: 3;
+  justify-self: end;
+  background: transparent;
+  border: none;
+  padding: 0.2rem 0.4rem;
+  font-family: inherit;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 2px;
+  text-align: right;
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.typo-scaler-val:hover {
+  color: var(--accent-coral);
+  background: var(--accent-coral-subtle);
+}
+
+.theme-light .typo-scaler-val {
+  color: #718096;
+}
+.theme-light .typo-scaler-val:hover {
+  color: var(--accent-coral);
+  background: rgba(232, 74, 95, 0.08);
+}
+
+/* ==============================================================================
    DARK MODE TYPOGRAPHY HIERARCHY (Default)
    ============================================================================== */
 .post-title,
 .essay-title {
   font-family: var(--font-mono);
-  font-size: var(--text-2xl);
+  font-size: calc(var(--text-2xl) * (1 + (var(--reader-font-scale, 1) - 1) * 0.35));
   font-weight: var(--weight-semibold);
   line-height: var(--leading-tight);
   color: var(--text-bright);
@@ -48,7 +233,7 @@
 .post-subtitle,
 .essay-subtitle {
   font-family: var(--font-serif);
-  font-size: var(--text-xl);
+  font-size: calc(var(--text-xl) * (1 + (var(--reader-font-scale, 1) - 1) * 0.35));
   font-style: italic;
   color: var(--accent-coral);
   line-height: var(--leading-normal);
@@ -59,7 +244,7 @@
 .post-section-kicker,
 .essay-section-kicker {
   font-family: var(--font-mono);
-  font-size: var(--text-xl);
+  font-size: calc(var(--text-xl) * (1 + (var(--reader-font-scale, 1) - 1) * 0.35));
   font-weight: var(--weight-semibold);
   text-decoration: underline;
   text-decoration-color: var(--accent-rose);
@@ -69,42 +254,54 @@
 }
 
 .post-paragraph,
-.essay-paragraph {
+.essay-paragraph,
+.post-body-content p,
+.essay-body-content p {
   font-family: var(--font-serif);
-  font-size: var(--text-md);
-  line-height: var(--leading-relaxed);
+  font-size: calc(var(--text-md) * var(--reader-font-scale, 1));
+  line-height: calc(var(--leading-relaxed) + (var(--reader-font-scale, 1) - 1) * 0.15);
   color: var(--text-body);
   margin-bottom: 1rem;
   font-weight: var(--weight-regular); /* Platypi 400 for balanced legibility */
 }
 
 .post-paragraph strong,
-.essay-paragraph strong {
+.essay-paragraph strong,
+.post-body-content p strong,
+.essay-body-content p strong {
   font-weight: var(--weight-semibold);
   color: var(--text-bright);
 }
 
 .post-paragraph em,
-.essay-paragraph em {
+.essay-paragraph em,
+.post-body-content p em,
+.essay-body-content p em {
   font-style: italic;
 }
 
 .post-quote,
-.essay-quote {
+.essay-quote,
+.post-body-content blockquote,
+.essay-body-content blockquote {
   border-left: 2px solid var(--accent-coral);
   padding-left: 1.5rem;
   margin: 2.2rem 0;
   font-style: italic;
-  font-size: 1.08rem;
+  font-size: calc(1.08rem * var(--reader-font-scale, 1));
   color: var(--text-bright);
   line-height: 1.65;
   font-weight: var(--weight-regular);
 }
 
 .post-subheading,
-.essay-subheading {
+.essay-subheading,
+.post-body-content h2,
+.post-body-content h3,
+.essay-body-content h2,
+.essay-body-content h3 {
   font-family: var(--font-mono);
-  font-size: 0.94rem;
+  font-size: calc(0.94rem * (1 + (var(--reader-font-scale, 1) - 1) * 0.3));
   font-weight: var(--weight-medium);
   color: var(--text-bright);
   margin: 2rem 0 0.8rem 0;
@@ -119,10 +316,14 @@
 }
 
 .post-list,
-.essay-list {
+.essay-list,
+.post-body-content ul,
+.post-body-content ol,
+.essay-body-content ul,
+.essay-body-content ol {
   font-family: var(--font-serif);
-  font-size: var(--text-md);
-  line-height: var(--leading-relaxed);
+  font-size: calc(var(--text-md) * var(--reader-font-scale, 1));
+  line-height: calc(var(--leading-relaxed) + (var(--reader-font-scale, 1) - 1) * 0.15);
   color: var(--text-body);
   margin: 1.2rem 0 1.8rem 1.6rem;
 }

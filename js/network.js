@@ -287,6 +287,10 @@ function initNetworkListeners() {
       if (tableWrapper) tableWrapper.style.display = "flex";
       renderTagsDirectoryTable();
     });
+
+    if (window.location.hash === "#tags-table" || window.location.search.includes("view=table")) {
+      tableBtn.click();
+    }
   }
 
   // Tags Table Search Input
@@ -372,8 +376,8 @@ function renderSubscribeFormNetwork(modal) {
           <input type="email" id="subscriber-email" name="email" class="modal-input" placeholder="reader@domain.xyz" required autocomplete="email" spellcheck="false">
         </div>
         <div class="modal-actions">
-          <button type="button" class="btn-modal-cancel">[ CANCEL ]</button>
-          <button type="submit" class="btn-modal-submit">[ TRANSMIT SUBSCRIPTION ]</button>
+          <button type="button" class="btn-modal-cancel">CANCEL</button>
+          <button type="submit" class="btn-modal-submit">TRANSMIT SUBSCRIPTION</button>
         </div>
       </form>
     </div>
@@ -411,7 +415,7 @@ function renderSubscribeConfirmationNetwork(email, name) {
       </div>
 
       <div class="modal-actions">
-        <button type="button" class="btn-modal-submit" onclick="closeSubscribeModal()" style="min-width: 120px;">[ CLOSE ]</button>
+        <button type="button" class="btn-modal-submit" onclick="closeSubscribeModal()" style="min-width: 120px;">CLOSE</button>
       </div>
     </div>
   `;
@@ -433,9 +437,9 @@ async function handleSubscribeSubmit(e) {
 
   if (!email) return;
 
-  const originalText = submitBtn ? submitBtn.textContent : "[ TRANSMIT SUBSCRIPTION ]";
+  const originalText = submitBtn ? submitBtn.textContent : "TRANSMIT SUBSCRIPTION";
   if (submitBtn) {
-    submitBtn.textContent = "[ TRANSMITTING... ]";
+    submitBtn.textContent = "TRANSMITTING...";
     submitBtn.disabled = true;
   }
 
@@ -533,18 +537,25 @@ function initThreeJSNodeMap() {
     threeControls.autoRotateSpeed = 0.28;
   }
 
-  const ambientLight = new THREE.AmbientLight(0x0a0a10, 3.2);
+  const ambientLight = new THREE.AmbientLight(0x181824, 2.5);
   threeScene.add(ambientLight);
 
-  const lightRed = new THREE.PointLight(0xe84a5f, 3.8, 800);
+  const hemiLight = new THREE.HemisphereLight(0xffffff, 0x22223a, 1.4);
+  threeScene.add(hemiLight);
+
+  const dirLight = new THREE.DirectionalLight(0xffffff, 0.9);
+  dirLight.position.set(150, 300, 200);
+  threeScene.add(dirLight);
+
+  const lightRed = new THREE.PointLight(0xe84a5f, 3.2, 900);
   lightRed.position.set(250, 180, 220);
   threeScene.add(lightRed);
 
-  const lightNeutral = new THREE.PointLight(0xfff5ea, 2.2, 800);
+  const lightNeutral = new THREE.PointLight(0xfff5ea, 2.0, 900);
   lightNeutral.position.set(-250, -180, -220);
   threeScene.add(lightNeutral);
 
-  const lightCyan = new THREE.PointLight(0xa0c4ff, 1.4, 700);
+  const lightCyan = new THREE.PointLight(0xa0c4ff, 1.2, 800);
   lightCyan.position.set(0, 320, 100);
   threeScene.add(lightCyan);
 
@@ -996,33 +1007,47 @@ function create3DTextSprite(text, colorHexStr, fontSize = 20) {
   const lines = splitTextIntoLines(text, 22);
   const lineCount = lines.length;
 
-  const canvasWidth = 440;
-  const canvasHeight = lineCount > 1 ? 110 : 60;
+  const pixelRatio = 2;
+  const canvasWidth = 440 * pixelRatio;
+  const canvasHeight = (lineCount > 1 ? 110 : 60) * pixelRatio;
 
   const canvasText = document.createElement("canvas");
   canvasText.width = canvasWidth;
   canvasText.height = canvasHeight;
 
   const tCtx = canvasText.getContext("2d");
-  tCtx.font = `600 ${fontSize}px 'Azeret Mono', monospace`;
-  tCtx.fillStyle = colorHexStr;
+  const actualFontSize = fontSize * pixelRatio;
+  tCtx.font = `700 ${actualFontSize}px 'Azeret Mono', monospace`;
   tCtx.textAlign = "center";
   tCtx.textBaseline = "middle";
 
-  const lineHeight = fontSize * 1.25;
+  const lineHeight = actualFontSize * 1.25;
   const startY = (canvasHeight / 2) - ((lineCount - 1) * lineHeight / 2);
 
   lines.forEach((l, i) => {
-    tCtx.fillText(l, canvasWidth / 2, startY + (i * lineHeight));
+    const yPos = startY + (i * lineHeight);
+    // Dark outline / halo for contrast against 3D nodes & space
+    tCtx.strokeStyle = "rgba(10, 10, 14, 0.95)";
+    tCtx.lineWidth = 5 * pixelRatio;
+    tCtx.lineJoin = "round";
+    tCtx.strokeText(l, canvasWidth / 2, yPos);
+
+    // Sharp bright fill
+    tCtx.fillStyle = colorHexStr;
+    tCtx.fillText(l, canvasWidth / 2, yPos);
   });
 
   const texture = new THREE.CanvasTexture(canvasText);
+  texture.minFilter = THREE.LinearFilter;
   const spriteMat = new THREE.SpriteMaterial({ map: texture, transparent: true, depthTest: false });
   const sprite = new THREE.Sprite(spriteMat);
 
-  const baseScaleY = lineCount > 1 ? 22 : 14;
+  const baseScaleY = lineCount > 1 ? 23 : 15;
   const aspect = canvasWidth / canvasHeight;
-  sprite.scale.set(baseScaleY * aspect, baseScaleY, 1);
+  const scaleX = baseScaleY * aspect;
+  const scaleY = baseScaleY;
+  sprite.scale.set(scaleX, scaleY, 1);
+  sprite.userData = { baseScaleX: scaleX, baseScaleY: scaleY };
   return sprite;
 }
 
@@ -1059,6 +1084,21 @@ function animateThreeJS() {
 
   if (threeParticlesGroup) {
     threeParticlesGroup.rotation.y += 0.00025;
+  }
+
+  // Dynamic zoom compensation so text labels remain crisp and legible even when zoomed out
+  if (threeCamera && threeNodes && threeNodes.length > 0) {
+    const camDist = threeCamera.position.length();
+    const zoomFactor = Math.max(1.0, Math.min(1.75, camDist / 330));
+    threeNodes.forEach(n => {
+      if (n.labelSprite && n.labelSprite.userData && n.labelSprite.userData.baseScaleX) {
+        n.labelSprite.scale.set(
+          n.labelSprite.userData.baseScaleX * zoomFactor,
+          n.labelSprite.userData.baseScaleY * zoomFactor,
+          1
+        );
+      }
+    });
   }
 
   // Continuous subtle spin so glitter micro-flecks shimmer dynamically under scene lights
@@ -1104,11 +1144,17 @@ function getPostsForNode(nodeData) {
 }
 
 function getPostUrl(p) {
+  if (!p) return "#";
   if (p.url && !p.url.startsWith("#") && (p.url.startsWith("http") || p.url.endsWith(".html"))) {
+    if (p.url.startsWith("posts/")) {
+      const baseName = p.url.replace(/^posts\//, "").replace(/^\d{4}-\d{2}-\d{2}-/, "");
+      return `posts/${baseName}`;
+    }
     return p.url;
   }
-  const slug = (p.slug || p.id || "").replace(/\.html$/, "");
-  return `posts/${slug}.html`;
+  const rawSlug = String(p.slug || p.id || "").trim();
+  const cleanSlug = rawSlug.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.html$/, "");
+  return `posts/${cleanSlug}.html`;
 }
 
 function openTagsTableForNode(nodeData) {
@@ -1251,20 +1297,20 @@ function updateThreeSceneFocus() {
       const isHoveredInSelected = n === targetHoverItem;
 
       if (isSelectedNode) {
-        const s = isHoveredInSelected ? 1.7 : 1.55;
+        const s = isHoveredInSelected ? 1.75 : 1.6;
         n.mesh.scale.set(s, s, s);
-        if (n.mesh.material) n.mesh.material.emissiveIntensity = 0.65;
+        if (n.mesh.material) n.mesh.material.emissiveIntensity = 0.75;
         if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = 1.0;
       } else if (isNeighbor) {
-        const s = isHoveredInSelected ? 1.38 : 1.25;
+        const s = isHoveredInSelected ? 1.4 : 1.25;
         n.mesh.scale.set(s, s, s);
-        if (n.mesh.material) n.mesh.material.emissiveIntensity = 0.38;
+        if (n.mesh.material) n.mesh.material.emissiveIntensity = 0.45;
         if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = 0.95;
       } else {
-        const s = isHoveredInSelected ? 1.15 : 0.72;
+        const s = isHoveredInSelected ? 1.15 : 0.88;
         n.mesh.scale.set(s, s, s);
-        if (n.mesh.material) n.mesh.material.emissiveIntensity = 0.04;
-        if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = isHoveredInSelected ? 0.8 : 0.15;
+        if (n.mesh.material) n.mesh.material.emissiveIntensity = n.data && n.data.type === "root" ? 0.35 : (n.data && n.data.type === "pillar" ? 0.28 : 0.20);
+        if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = isHoveredInSelected ? 0.85 : 0.65;
       }
     } else if (targetHoverItem) {
       const isHovered = n === targetHoverItem;
@@ -1272,20 +1318,20 @@ function updateThreeSceneFocus() {
 
       if (isHovered) {
         n.mesh.scale.set(1.45, 1.45, 1.45);
-        if (n.mesh.material) n.mesh.material.emissiveIntensity = 0.5;
+        if (n.mesh.material) n.mesh.material.emissiveIntensity = 0.55;
         if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = 1.0;
       } else if (isNeighbor) {
         n.mesh.scale.set(1.22, 1.22, 1.22);
-        if (n.mesh.material) n.mesh.material.emissiveIntensity = 0.3;
-        if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = 0.9;
+        if (n.mesh.material) n.mesh.material.emissiveIntensity = 0.35;
+        if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = 0.92;
       } else {
         n.mesh.scale.set(1.0, 1.0, 1.0);
-        if (n.mesh.material) n.mesh.material.emissiveIntensity = n.data && n.data.type === "root" ? 0.35 : (n.data && n.data.type === "pillar" ? 0.28 : 0.18);
-        if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = 0.65;
+        if (n.mesh.material) n.mesh.material.emissiveIntensity = n.data && n.data.type === "root" ? 0.35 : (n.data && n.data.type === "pillar" ? 0.28 : 0.20);
+        if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = 0.75;
       }
     } else {
       n.mesh.scale.set(1.0, 1.0, 1.0);
-      if (n.mesh.material) n.mesh.material.emissiveIntensity = n.data && n.data.type === "root" ? 0.35 : (n.data && n.data.type === "pillar" ? 0.28 : 0.18);
+      if (n.mesh.material) n.mesh.material.emissiveIntensity = n.data && n.data.type === "root" ? 0.35 : (n.data && n.data.type === "pillar" ? 0.28 : 0.20);
       if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = 1.0;
     }
   });
@@ -1302,7 +1348,7 @@ function updateThreeSceneFocus() {
           l.mesh.material.opacity = isSelectedState ? 1.0 : 0.95;
         } else {
           l.mesh.material.color.setHex(l.defaultColorHex);
-          l.mesh.material.opacity = isSelectedState ? 0.015 : l.defaultOpacity;
+          l.mesh.material.opacity = isSelectedState ? 0.04 : l.defaultOpacity;
         }
       } else {
         l.mesh.material.color.setHex(l.defaultColorHex);
