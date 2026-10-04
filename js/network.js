@@ -1593,27 +1593,7 @@ function handleCanvasMouseMove(e) {
   hoveredNode = found;
   canvas.style.cursor = found ? "pointer" : "default";
 
-  const dockTitle = document.getElementById("dock-node-title");
-  const dockDesc = document.getElementById("dock-node-desc");
-
-  if (found && dockTitle && dockDesc) {
-    if (found.type === "root") {
-      dockTitle.textContent = `[ CORE: ${found.label} ]`;
-      dockDesc.textContent = `Central taxonomy core connecting ${NETWORK_POSTS.length} dispatches across pillars and subtopics.`;
-    } else if (found.type === "pillar") {
-      dockTitle.textContent = `[ PILLAR: ${found.label} ]`;
-      dockDesc.textContent = `Pillar category with ${found.postsCount} dispatch${found.postsCount > 1 ? 'es' : ''}. Click to filter in Timeline.`;
-    } else if (found.type === "subtopic") {
-      dockTitle.textContent = `[ SUBTOPIC: ${found.label} ]`;
-      dockDesc.textContent = `Subtopic under [${found.pillar}] with ${found.postsCount} dispatch${found.postsCount > 1 ? 'es' : ''}. Click to filter in Timeline.`;
-    } else {
-      dockTitle.textContent = `[ TAG: ${found.label} ]`;
-      dockDesc.textContent = `Tag node with ${found.postsCount} dispatch${found.postsCount > 1 ? 'es' : ''}. Click to filter in Timeline.`;
-    }
-  } else if (!activeNodeFilter && dockTitle && dockDesc) {
-    dockTitle.textContent = "[ TAXONOMY MAP ACTIVE ]";
-    dockDesc.textContent = "Hover over any node to highlight connected dispatches. Click to filter in Timeline.";
-  }
+  updateThreeDockMetadata(found ? { data: found } : null);
 }
 
 function handleCanvasClick(e) {
@@ -1623,6 +1603,8 @@ function handleCanvasClick(e) {
     activeNodeFilter = null;
     activeTagFilter = null;
     setNodeFilterUIState(false);
+    renderSelectedNodePostsStrip(null);
+    updateThreeDockMetadata(null);
   } else {
     activeNodeFilter = hoveredNode;
     if (hoveredNode.type === "pillar" || hoveredNode.type === "subtopic") {
@@ -1630,23 +1612,37 @@ function handleCanvasClick(e) {
     } else if (hoveredNode.type === "tag") {
       activeTagFilter = hoveredNode.rawTag;
     } else {
-      activeTagFilter = null;
+      activeTagFilter = "all";
     }
 
-    if (activeTagFilter) {
-      setNodeFilterUIState(true, activeTagFilter);
-      window.location.href = `archive.html?tag=${encodeURIComponent(activeTagFilter)}`;
-    } else {
-      setNodeFilterUIState(false);
-    }
+    setNodeFilterUIState(true, activeTagFilter);
+    renderSelectedNodePostsStrip(hoveredNode);
+    updateThreeDockMetadata({ data: hoveredNode });
   }
 }
 
 function handleCanvasMouseLeave() {
   hoveredNode = null;
+  updateThreeDockMetadata(null);
 }
 
 function resetNodeHighlights() {
   activeNodeFilter = null;
+  activeTagFilter = null;
   hoveredNode = null;
+  hoveredThreeNode = null;
+  renderSelectedNodePostsStrip(null);
+  updateThreeDockMetadata(null);
+
+  if (threeNodes) {
+    threeNodes.forEach(n => {
+      if (n.mesh) n.mesh.scale.set(1, 1, 1);
+    });
+  }
+  if (threeLines) {
+    threeLines.forEach(l => {
+      l.mesh.material.color.setHex(l.defaultColorHex);
+      l.mesh.material.opacity = l.defaultOpacity;
+    });
+  }
 }
