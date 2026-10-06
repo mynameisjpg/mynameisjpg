@@ -876,7 +876,7 @@
 
 .responsive-short {
   width: 100%;
-  max-width: 75%;
+  max-width: 720px;
   aspect-ratio: 9 / 16;
   height: auto;
   border-radius: var(--radius-md, 8px);
