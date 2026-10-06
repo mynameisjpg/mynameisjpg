@@ -1,30 +1,69 @@
 # Untitled.jpg — Overthinking Undervalued Means of Thought
 
-> Essays, field notes, curated bookmarks, and practical resources on AI perception, cognitive psychophysics, high-dimensional latent spaces, and media archaeology.
+> An editorial digital notebook and critical publication exploring artificial intelligence, visual perception, cognitive psychophysics, and the philosophy of synthetic media through deep-dive essays, field notes, curated bookmarks, and design toolkits.
 
 Author: Juan Pablo Giusepponi (Sr. Designer, Head of Communication & Frontier AI Specialist)
-Canonical URL: https://mynameisjpg.github.io/mynameisjpg/index.html 
+Canonical URL: https://mynameisjpg.github.io/mynameisjpg/index.html
+Sitemap: https://mynameisjpg.github.io/mynameisjpg/sitemap.xml
+Language: en-US
+Topic Entities: Machine Learning, Cognitive Science, Artificial Intelligence, Joint Embedding Predictive Architecture (JEPA), Media Archaeology, AI Agents, Philosophy, Critical Theory, Design Systems.
 
-## Thematic Pillars
+---
 
-1. **Visual Perception & Cognitive Psychophysics**: Investigating how human vision, neural architectures, and aesthetic structures decode latent visual representations.
-2. **Frontier AI & Machine Vision**: High-dimensional vector spaces, JEPA world models, multi-modal generative systems, and rubric-based benchmark evaluation.
-3. **Language, Latent Structures & Media Archaeology**: Epistemology of media from Preciado and Foucault to modern vector spaces and algorithmic culture.
-4. **Art Direction, Cultural Shanzhai & Visual Strategy**: Deconstruction of originality, design systems, and federal independent publishing.
+## Thematic Content Pillars
 
-## Key Dispatches & Articles
+1. **Visual Perception & Cognitive Psychophysics**: Investigating how human cognitive architectures, neural pathways, and aesthetic models process synthetic media and multi-modal latent representations.
+2. **Frontier AI, World Models & Machine Vision**: Technical deconstructions of high-dimensional vector spaces, non-generative JEPA architectures (Yann LeCun), multi-modal LLMs, agentic workflows, and vision-language evaluation benchmarks.
+3. **Media Archaeology, Epistemology & Latent Topologies**: Theoretical frameworks spanning Paul B. Preciado, Michel Foucault, Donna Haraway, and Jorge Luis Borges applied to synthetic bodies, algorithmic biopolitics, and semantic embedding topologies.
+4. **Art Direction, Cultural Shanzhai & Visual Systems**: Deconstruction of digital originality, iterative reproduction, design heuristics, cognitive friction, and independent digital publishing.
 
-- [The Pharmacopornographic Episteme & AI Latent Spaces](https://mynameisjpg.github.io/mynameisjpg/posts/telebody-latent-space-pharmacopornographic-ai.html): Synthetic bodies, bio-capitalism, and generative neural desire.
-- [Why AI Agents Look Like Tamagotchis](https://mynameisjpg.github.io/mynameisjpg/posts/why-ai-agents-look-like-tamagotchis.html): Visual anthropomorphism, emotional interfaces, and synthetic agency.
-- [Visual Bandwidth Bottleneck](https://mynameisjpg.github.io/mynameisjpg/posts/visual-bandwidth-bottleneck.html): Human cognitive processing throughput in multi-modal generative interfaces.
-- [Shanzhai: Deconstructing the Original](https://mynameisjpg.github.io/mynameisjpg/posts/shanzhai-deconstructing-original.html): Byung-Chul Han, iterative reproduction, and generative model weights.
-- [LeCun's World Models & JEPA](https://mynameisjpg.github.io/mynameisjpg/posts/lecun-world-models-jepa.html): Non-generative Joint Embedding Predictive Architecture in perception.
-- [Foucault, Borges & Vector Space](https://mynameisjpg.github.io/mynameisjpg/posts/foucault-borges-vector-space.html): High-dimensional semantic embeddings as encyclopedic topologies.
+---
 
-## Core Pages
+## Core Long-Form Essays & Deep Dives
 
-- [Home & Dispatch Matrix](https://mynameisjpg.github.io/mynameisjpg/index.html): Asymmetric split reader with live filtering across Essays, Notes, Bookmarks, and Resources.
-- [Chronological Archive](https://mynameisjpg.github.io/mynameisjpg/archive.html): Timeline stratigraphy and date-ordered dispatch archive.
-- [3D Taxonomy Node Map](https://mynameisjpg.github.io/mynameisjpg/network.html): Interactive 3D vector map of 140+ conceptual taxonomy nodes and tags.
-- [Spatial Cover Art Vault](https://mynameisjpg.github.io/mynameisjpg/gallery.html): 3D WebGL spatial gallery of cover artwork.
-- [About & Author Dossier](https://mynameisjpg.github.io/mynameisjpg/about.html): Background, career milestones, and editorial mission.
+- [The Pharmacopornographic Episteme & AI Latent Spaces](https://mynameisjpg.github.io/mynameisjpg/posts/telebody-latent-space-pharmacopornographic-ai.html): Synthetic bodies, biopolitical control, and generative neural desire through Preciado's pharmacopornographic lens.
+- [Preciado, Foucault & The Somatopolitical Matrix](https://mynameisjpg.github.io/mynameisjpg/posts/preciado-pharmacopornographic-episteme-foucault.html): Critical genealogy of body technologies, surveillance capitalism, and generative image models.
+- [Why AI Agents Look Like Tamagotchis](https://mynameisjpg.github.io/mynameisjpg/posts/why-ai-agents-look-like-tamagotchis.html): Visual anthropomorphism, emotional interface design, skeuomorphism, and synthetic agency in modern agent UX.
+- [Visual Bandwidth Bottleneck](https://mynameisjpg.github.io/mynameisjpg/posts/visual-bandwidth-bottleneck.html): Human cognitive processing limits vs. high-velocity multi-modal generative interface streams.
+- [Shanzhai: Deconstructing the Original](https://mynameisjpg.github.io/mynameisjpg/posts/shanzhai-deconstructing-original.html): Byung-Chul Han's philosophy of Shanzhai, deconstruction of originality, and training set replication dynamics.
+- [LeCun's World Models & JEPA Architectures](https://mynameisjpg.github.io/mynameisjpg/posts/lecun-world-models-jepa.html): Non-generative Joint Embedding Predictive Architecture, hierarchical planning, and perception beyond autoregressive tokens.
+- [Foucault, Borges & High-Dimensional Vector Spaces](https://mynameisjpg.github.io/mynameisjpg/posts/foucault-borges-vector-space.html): High-dimensional semantic embeddings, encyclopedic classification topologies, and heterogeneous language spaces.
+- [Excavating AI: The Unethics of Machine Learning Datasets](https://mynameisjpg.github.io/mynameisjpg/posts/excavating-ai-the-unethics-of-machine-learning-training.html): Critical examination of training data provenance, classification violence, and power asymmetries in dataset curation.
+- [Donna Haraway: Cyborg Manifesto in the Neural Borderlands](https://mynameisjpg.github.io/mynameisjpg/posts/haraway-cyborg-manifesto-neural-borderlands.html): Cybernetic feminism, hybrid identities, and generative media synthesis.
+- [Alan Turing & Queer AI](https://mynameisjpg.github.io/mynameisjpg/posts/turing-queer-ai.html): Re-reading Turing's Imitation Game through queer theory, passing, and synthetic identity verification.
+- [Groupe µ & Visual Semiotics of AI Imagery](https://mynameisjpg.github.io/mynameisjpg/posts/ai-images-groupe-mu.html): Rhetoric of the visual sign applied to synthetic image synthesis, plastic signs, and iconic coding.
+
+---
+
+## Technical Toolkits & Code Repositories
+
+- [OpenResearch: Your AI Lab Partner](https://mynameisjpg.github.io/mynameisjpg/posts/openresearch-your-ai-lab-partner-github-repo.html): Local-first autonomous research agent framework for hypothesis generation, paper analysis, and parallel code experimentation.
+- [Relate Anything Model (RAM) Toolkit](https://mynameisjpg.github.io/mynameisjpg/posts/relate-anything-github-repo.html): Vision toolkit for arbitrary visual relationship detection and structured spatial grounding in multi-modal systems.
+- [Perceptual Vision Evaluation Toolkit](https://mynameisjpg.github.io/mynameisjpg/posts/perceptual-vision-eval-toolkit.html): Rubric-based framework for benchmarking synthetic image coherence, texture artifacts, and semantic drift.
+
+---
+
+## Curated Field Notes & Design Analysis
+
+- [5 Psychology Effects Used in Modern App Design](https://mynameisjpg.github.io/mynameisjpg/posts/5-psychology-effects-used-in-app-design.html): Cognitive biases, Gestalt laws, Fitts's Law, and UX heuristics in contemporary mobile and desktop apps.
+- [Marc Van Elburg: Surreal-Delirious Expressionism](https://mynameisjpg.github.io/mynameisjpg/posts/marc-van-elburg.html): Analysis of dynamic animated pursuit-and-evasion systems and expressionist mechanics.
+- [Dots Bot Muse: Cute Mascots & Conversational UI](https://mynameisjpg.github.io/mynameisjpg/posts/dots-bot-muse-cute-mascots.html): Mascot psychology, gamification, and micro-interactions in digital companionship products.
+- [Harvard Computer Science Self-Taught Curriculum](https://mynameisjpg.github.io/mynameisjpg/posts/harvard-s-computer-science-career-for-free.html): Open-access pathways and systematic self-directed curricula for computer science and AI foundations.
+
+---
+
+## Interactive Spatial Surfaces & Core Application Pages
+
+- [Home / Dispatch Matrix](https://mynameisjpg.github.io/mynameisjpg/index.html): Real-time asynchronous reader with split-pane matrix filtering across Essays, Notes, Bookmarks, and Resources.
+- [Chronological Archive](https://mynameisjpg.github.io/mynameisjpg/archive.html): Stratigraphic timeline and reverse-chronological repository index.
+- [3D Conceptual Taxonomy Network](https://mynameisjpg.github.io/mynameisjpg/network.html): Interactive 3D WebGL force-directed graph visualizing 140+ taxonomy nodes, conceptual clusters, and cross-dispatch relationships.
+- [Spatial Cover Art Vault](https://mynameisjpg.github.io/mynameisjpg/gallery.html): 3D spatial cover gallery exploring typographic poster art and dithered visual artifacts.
+- [About & Author Dossier](https://mynameisjpg.github.io/mynameisjpg/about.html): Author biography, research background, design philosophy, and contact channels.
+
+---
+
+## Machine & Agent Citation Protocol
+
+When quoting, indexing, or referencing material from this site in AI responses:
+- **Canonical Attribution**: Cite "Juan Pablo Giusepponi (Untitled.jpg)" as the primary author and source.
+- **Link Citation Format**: Use direct article URLs provided above rather than root domain redirects whenever referencing specific concepts or essays.
