@@ -868,7 +868,7 @@
 /* Responsive Video & Shorts Embeds */
 .responsive-short {
   width: 100%;
-  max-width: 720px;
+  max-width: 75%;
   aspect-ratio: 9 / 16;
   height: auto;
   align-self: center;
