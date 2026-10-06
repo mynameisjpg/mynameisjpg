@@ -121,8 +121,18 @@ window.DYNAMIC_TAGS = [
     "name": "ai",
     "label": "#ai",
     "type": "tag",
-    "count": 5,
+    "count": 6,
     "posts": [
+      {
+        "id": "2026-10-06-marc-van-elburg",
+        "slug": "marc-van-elburg",
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "date": "2026.10.06",
+        "format": "BOOKMARK",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/marc-van-elburg.html"
+      },
       {
         "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
         "slug": "why-ai-agents-look-like-tamagotchis",
@@ -176,6 +186,13 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "slug": "marc-van-elburg",
+        "format": "BOOKMARK",
+        "url": "posts/marc-van-elburg.html",
+        "date": "2026.10.06"
+      },
+      {
         "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
         "slug": "why-ai-agents-look-like-tamagotchis",
         "format": "NOTE",
@@ -225,11 +242,11 @@ window.DYNAMIC_TAGS = [
     ],
     "connected_tags": [
       "intelligence",
-      "ai-mascots",
-      "product-design",
-      "ux-psychology",
-      "tamagotchi-effect",
-      "dots"
+      "animation",
+      "surrealism",
+      "art",
+      "youtube",
+      "markvanelburg"
     ]
   },
   {
@@ -240,14 +257,14 @@ window.DYNAMIC_TAGS = [
     "count": 4,
     "posts": [
       {
-        "id": "2026-10-06-original-title-of-curated-item",
-        "slug": "original-title-of-curated-item",
+        "id": "2026-10-06-marc-van-elburg",
+        "slug": "marc-van-elburg",
         "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
         "date": "2026.10.06",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/original-title-of-curated-item.html"
+        "url": "posts/marc-van-elburg.html"
       },
       {
         "id": "2026-09-30-relate-anything-github-repo",
@@ -283,9 +300,9 @@ window.DYNAMIC_TAGS = [
     "links": [
       {
         "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "slug": "original-title-of-curated-item",
+        "slug": "marc-van-elburg",
         "format": "BOOKMARK",
-        "url": "posts/original-title-of-curated-item.html",
+        "url": "posts/marc-van-elburg.html",
         "date": "2026.10.06"
       },
       {
@@ -853,14 +870,14 @@ window.DYNAMIC_TAGS = [
     "count": 2,
     "posts": [
       {
-        "id": "2026-10-06-original-title-of-curated-item",
-        "slug": "original-title-of-curated-item",
+        "id": "2026-10-06-marc-van-elburg",
+        "slug": "marc-van-elburg",
         "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
         "date": "2026.10.06",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/original-title-of-curated-item.html"
+        "url": "posts/marc-van-elburg.html"
       },
       {
         "id": "2026-09-30-relate-anything-github-repo",
@@ -876,9 +893,9 @@ window.DYNAMIC_TAGS = [
     "links": [
       {
         "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "slug": "original-title-of-curated-item",
+        "slug": "marc-van-elburg",
         "format": "BOOKMARK",
-        "url": "posts/original-title-of-curated-item.html",
+        "url": "posts/marc-van-elburg.html",
         "date": "2026.10.06"
       },
       {
@@ -2190,6 +2207,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "animation",
+    "name": "animation",
+    "label": "#animation",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-06-marc-van-elburg",
+        "slug": "marc-van-elburg",
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "date": "2026.10.06",
+        "format": "BOOKMARK",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/marc-van-elburg.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "slug": "marc-van-elburg",
+        "format": "BOOKMARK",
+        "url": "posts/marc-van-elburg.html",
+        "date": "2026.10.06"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "ai",
+      "surrealism",
+      "art",
+      "youtube",
+      "markvanelburg",
+      "youtube-shorts"
+    ]
+  },
+  {
     "id": "annotation",
     "name": "annotation",
     "label": "#annotation",
@@ -2312,6 +2371,90 @@ window.DYNAMIC_TAGS = [
       "imagenet",
       "ethics",
       "taxonomy"
+    ]
+  },
+  {
+    "id": "art",
+    "name": "art",
+    "label": "#art",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-06-marc-van-elburg",
+        "slug": "marc-van-elburg",
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "date": "2026.10.06",
+        "format": "BOOKMARK",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/marc-van-elburg.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "slug": "marc-van-elburg",
+        "format": "BOOKMARK",
+        "url": "posts/marc-van-elburg.html",
+        "date": "2026.10.06"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "ai",
+      "animation",
+      "surrealism",
+      "youtube",
+      "markvanelburg",
+      "youtube-shorts"
+    ]
+  },
+  {
+    "id": "art-of-the-day",
+    "name": "art-of-the-day",
+    "label": "#art-of-the-day",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-06-marc-van-elburg",
+        "slug": "marc-van-elburg",
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "date": "2026.10.06",
+        "format": "BOOKMARK",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/marc-van-elburg.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "slug": "marc-van-elburg",
+        "format": "BOOKMARK",
+        "url": "posts/marc-van-elburg.html",
+        "date": "2026.10.06"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "ai",
+      "animation",
+      "surrealism",
+      "art",
+      "youtube",
+      "markvanelburg"
     ]
   },
   {
@@ -4367,6 +4510,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "instagram-reels",
+    "name": "instagram-reels",
+    "label": "#instagram-reels",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-06-marc-van-elburg",
+        "slug": "marc-van-elburg",
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "date": "2026.10.06",
+        "format": "BOOKMARK",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/marc-van-elburg.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "slug": "marc-van-elburg",
+        "format": "BOOKMARK",
+        "url": "posts/marc-van-elburg.html",
+        "date": "2026.10.06"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "ai",
+      "animation",
+      "surrealism",
+      "art",
+      "youtube",
+      "markvanelburg"
+    ]
+  },
+  {
     "id": "interface-design",
     "name": "interface-design",
     "label": "#interface-design",
@@ -4742,6 +4927,48 @@ window.DYNAMIC_TAGS = [
       "ai",
       "intelligence",
       "world-models"
+    ]
+  },
+  {
+    "id": "markvanelburg",
+    "name": "markvanelburg",
+    "label": "#markvanelburg",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-06-marc-van-elburg",
+        "slug": "marc-van-elburg",
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "date": "2026.10.06",
+        "format": "BOOKMARK",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/marc-van-elburg.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "slug": "marc-van-elburg",
+        "format": "BOOKMARK",
+        "url": "posts/marc-van-elburg.html",
+        "date": "2026.10.06"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "ai",
+      "animation",
+      "surrealism",
+      "art",
+      "youtube",
+      "youtube-shorts"
     ]
   },
   {
@@ -6001,6 +6228,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "surrealism",
+    "name": "surrealism",
+    "label": "#surrealism",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-06-marc-van-elburg",
+        "slug": "marc-van-elburg",
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "date": "2026.10.06",
+        "format": "BOOKMARK",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/marc-van-elburg.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "slug": "marc-van-elburg",
+        "format": "BOOKMARK",
+        "url": "posts/marc-van-elburg.html",
+        "date": "2026.10.06"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "ai",
+      "animation",
+      "art",
+      "youtube",
+      "markvanelburg",
+      "youtube-shorts"
+    ]
+  },
+  {
     "id": "symbol-grounding",
     "name": "symbol-grounding",
     "label": "#symbol-grounding",
@@ -6710,6 +6979,90 @@ window.DYNAMIC_TAGS = [
       "intelligence",
       "world-models",
       "llms"
+    ]
+  },
+  {
+    "id": "youtube",
+    "name": "youtube",
+    "label": "#youtube",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-06-marc-van-elburg",
+        "slug": "marc-van-elburg",
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "date": "2026.10.06",
+        "format": "BOOKMARK",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/marc-van-elburg.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "slug": "marc-van-elburg",
+        "format": "BOOKMARK",
+        "url": "posts/marc-van-elburg.html",
+        "date": "2026.10.06"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "ai",
+      "animation",
+      "surrealism",
+      "art",
+      "markvanelburg",
+      "youtube-shorts"
+    ]
+  },
+  {
+    "id": "youtube-shorts",
+    "name": "youtube-shorts",
+    "label": "#youtube-shorts",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-06-marc-van-elburg",
+        "slug": "marc-van-elburg",
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "date": "2026.10.06",
+        "format": "BOOKMARK",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/marc-van-elburg.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "slug": "marc-van-elburg",
+        "format": "BOOKMARK",
+        "url": "posts/marc-van-elburg.html",
+        "date": "2026.10.06"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "ai",
+      "animation",
+      "surrealism",
+      "art",
+      "youtube",
+      "markvanelburg"
     ]
   }
 ];

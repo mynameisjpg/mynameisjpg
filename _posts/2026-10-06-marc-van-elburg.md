@@ -5,12 +5,21 @@ subtitle: "episode #7. or; how sometimes, the #$%!?! can be the product of a dyn
 excerpt: "An animated short series by Mark Van Elburg."
 date: "2026-10-06 10:15:01 -0300"
 author: "Juan P. Giusepponi"
-status: "draft"
+status: "published"
 format: "bookmark"
 topic:
   pillar: "AI Perception, Culture & Representation"
   subtopic: "Computer vision vs. human perception"
-tags: []
+tags:
+  - "ai"
+  - "animation"
+  - "surrealism"
+  - "art"
+  - "youtube"
+  - "markvanelburg"
+  - "youtube-shorts"
+  - "instagram-reels"
+  - "art-of-the-day"
 reading_time: "Animated Reel (2:20min)"
 theme: "dark"
 featured: false
