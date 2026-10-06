@@ -40,12 +40,18 @@
     }
 
     html, body {
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
       height: 100dvh;
       margin: 0;
       padding: 0;
       overflow: hidden;
+      overflow-x: hidden;
+      position: fixed;
+      inset: 0;
+      overscroll-behavior: none;
+      touch-action: none;
       background-color: #0c0d0e;
       background-image: 
         radial-gradient(circle at 50% 10%, rgba(232, 74, 95, 0.08) 0%, transparent 50%),
@@ -55,7 +61,6 @@
       background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
       font-family: var(--font-mono);
       color: var(--text-bright);
-      position: fixed;
     }
 
     /* Ambient CRT Scanline Overlay */
@@ -75,7 +80,9 @@
        ============================================================================== */
     .app-viewport {
       position: relative;
-      width: 100vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
       height: 100dvh;
       display: flex;
       flex-direction: column;
@@ -83,6 +90,8 @@
       align-items: center;
       z-index: 2;
       overflow: hidden;
+      overflow-x: hidden;
+      overscroll-behavior: none;
     }
 
     /* Top Navigation Header (Full Width Edge-to-Edge) */
@@ -181,14 +190,16 @@
     .carousel-stage {
       position: relative;
       width: 100%;
+      max-width: 100%;
       flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
       perspective: 1200px;
       perspective-origin: 50% 50%;
-      overflow: visible;
+      overflow: hidden;
       touch-action: pan-y;
+      overscroll-behavior: none;
       cursor: grab;
     }
 
@@ -1084,7 +1095,9 @@
 
           // Image path resolution
           const coverPath = post.image || (post.thumbnail ? post.thumbnail.replace('thumbnails/', '') : 'assets/images/this-is-not-a-human.jpg');
-          const postUrl = `posts/${post.slug}.html`;
+          const rawSlug = String(post.slug || post.id || post.sys_id || '').trim();
+          const cleanSlug = rawSlug.replace(/^posts\//, '').replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.html$/, '');
+          const postUrl = `posts/${cleanSlug}.html`;
 
           card.innerHTML = `
             <div class="card-cover-container">
@@ -1321,22 +1334,53 @@
 
       // 8. Event Listeners Setup
       function setupEventListeners() {
+        let startTouchY = 0;
+        let isHorizontalGesture = false;
+
         // Touch events on stage
         stage.addEventListener('touchstart', (e) => {
           if (e.touches.length === 1) {
+            startTouchY = e.touches[0].clientY;
+            isHorizontalGesture = false;
             handleDragStart(e.touches[0].clientX);
           }
         }, { passive: true });
 
         window.addEventListener('touchmove', (e) => {
           if (isDragging && e.touches.length === 1) {
-            handleDragMove(e.touches[0].clientX);
+            const touch = e.touches[0];
+            const diffX = Math.abs(touch.clientX - startX);
+            const diffY = Math.abs(touch.clientY - startTouchY);
+
+            if (!isHorizontalGesture && (diffX > 4 || diffY > 4)) {
+              isHorizontalGesture = diffX >= diffY;
+            }
+
+            if (isHorizontalGesture) {
+              if (e.cancelable) e.preventDefault();
+              handleDragMove(touch.clientX);
+            }
           }
-        }, { passive: true });
+        }, { passive: false });
 
         window.addEventListener('touchend', () => {
-          handleDragEnd();
+          if (isDragging) {
+            handleDragEnd();
+          }
         });
+
+        window.addEventListener('touchcancel', () => {
+          if (isDragging) {
+            handleDragEnd();
+          }
+        });
+
+        // Lock window scroll position so document never shifts horizontally
+        window.addEventListener('scroll', () => {
+          if (window.scrollX !== 0 || window.scrollY !== 0) {
+            window.scrollTo(0, 0);
+          }
+        }, { passive: true });
 
         // Mouse Drag events
         stage.addEventListener('mousedown', (e) => {

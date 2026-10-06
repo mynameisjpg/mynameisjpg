@@ -241,11 +241,11 @@ function renderTagsDirectoryTable(searchVal = "") {
 
   tbody.innerHTML = filtered.map(t => {
     const typeBadgeClass = t.type === "pillar" ? "tag-type-pillar" : (t.type === "subtopic" ? "tag-type-subtopic" : "tag-type-tag");
-    const typeLabel = t.type.toUpperCase();
-
-    const linksHtml = (t.links || []).map(l => {
+    const postsList = t.links || t.posts || [];
+    const linksHtml = postsList.map(l => {
       const fmt = (l.format || "ESSAY").toUpperCase();
-      return `<a href="${l.url}" class="tag-dispatch-link" title="${l.title}">
+      const postUrl = getPostUrl(l);
+      return `<a href="${postUrl}" class="tag-dispatch-link" title="${l.title}">
         <span class="link-fmt">[${fmt}]</span> ${l.title}
       </a>`;
     }).join("");
@@ -1145,16 +1145,30 @@ function getPostsForNode(nodeData) {
 
 function getPostUrl(p) {
   if (!p) return "#";
-  const rawSlug = String(p.slug || p.id || "").trim();
+  const rawSlug = String(p.slug || p.id || p.sys_id || "").trim();
   if (rawSlug) {
-    const cleanSlug = rawSlug.replace(/^posts\//, "").replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.html$/, "");
-    return `posts/${cleanSlug}.html`;
+    const cleanSlug = rawSlug
+      .replace(/^posts\//, "")
+      .replace(/^\d{4}-\d{2}-\d{2}-/, "")
+      .replace(/\.html$/, "")
+      .trim();
+    if (cleanSlug) return `posts/${cleanSlug}.html`;
   }
   if (p.url && !p.url.startsWith("http") && p.url.includes(".html")) {
-    const baseName = p.url.replace(/^posts\//, "").replace(/^\d{4}-\d{2}-\d{2}-/, "");
+    const baseName = p.url
+      .replace(/^posts\//, "")
+      .replace(/^\d{4}-\d{2}-\d{2}-/, "")
+      .trim();
     return `posts/${baseName}`;
   }
-  return p.url || "#";
+  if (p.title) {
+    const titleSlug = p.title
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+    if (titleSlug) return `posts/${titleSlug}.html`;
+  }
+  return "index.html";
 }
 
 function openTagsTableForNode(nodeData) {
