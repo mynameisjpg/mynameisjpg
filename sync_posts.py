@@ -715,11 +715,40 @@ def generate_post_html_files(posts):
 
   <!-- Twitter / X Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@untitled_jpg">
   <meta name="twitter:title" content="{title}">
   <meta name="twitter:description" content="{description}">
   <meta name="twitter:image" content="{og_image}">
   <meta name="twitter:image:alt" content="{image_alt}">
+
+  <!-- Schema.org JSON-LD (BlogPosting / Article) -->
+  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{title}",
+    "description": "{description}",
+    "datePublished": "{iso_published_time}",
+    "dateModified": "{iso_published_time}",
+    "author": {{
+      "@type": "Person",
+      "name": "Juan Pablo Giusepponi",
+      "url": "https://mynameisjpg.github.io/mynameisjpg/about.html"
+    }},
+    "publisher": {{
+      "@type": "Organization",
+      "name": "Untitled.jpg",
+      "logo": {{
+        "@type": "ImageObject",
+        "url": "https://mynameisjpg.github.io/mynameisjpg/assets/images/favicon.svg"
+      }}
+    }},
+    "mainEntityOfPage": {{
+      "@type": "WebPage",
+      "@id": "{post_url}"
+    }},
+    "image": "{og_image}"
+  }}
+  </script>
 
   <base href="../">
 
@@ -729,11 +758,12 @@ def generate_post_html_files(posts):
   <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&family=Platypi:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
   
   <!-- Math Rendering (KaTeX), Markdown (Marked.js), & Diagrams (Mermaid.js) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"></noscript>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 
   <!-- Design System Stylesheets -->
   <link rel="stylesheet" href="index.css">
@@ -743,8 +773,8 @@ def generate_post_html_files(posts):
   <link rel="shortcut icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="apple-touch-icon" href="assets/images/favicon.svg">
   
-  <!-- Autonomous Web Components -->
-  <script src="js/components/sidebar-rail.js"></script>
+  <!-- Autonomous Web Components (Deferred) -->
+  <script defer src="js/components/sidebar-rail.js"></script>
 </head>
 <body>
 
@@ -883,6 +913,58 @@ def generate_post_html_files(posts):
             f.write(post_html_content)
 
     print(f"  [OK] Generated {len(posts)} post HTML files in {POSTS_HTML_DIR.name}/")
+    generate_sitemap(posts)
+
+def generate_sitemap(posts):
+    """
+    Generates an XML sitemap (sitemap.xml) for all core publication pages and dispatches.
+    """
+    base_url = "https://mynameisjpg.github.io/mynameisjpg"
+    static_pages = [
+        {"loc": f"{base_url}/index.html", "priority": "1.0", "changefreq": "daily"},
+        {"loc": f"{base_url}/about.html", "priority": "0.8", "changefreq": "monthly"},
+        {"loc": f"{base_url}/archive.html", "priority": "0.8", "changefreq": "weekly"},
+        {"loc": f"{base_url}/gallery.html", "priority": "0.8", "changefreq": "monthly"},
+        {"loc": f"{base_url}/network.html", "priority": "0.8", "changefreq": "weekly"},
+    ]
+    
+    xml_lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+    ]
+    
+    for page in static_pages:
+        xml_lines.append("  <url>")
+        xml_lines.append(f"    <loc>{page['loc']}</loc>")
+        xml_lines.append(f"    <changefreq>{page['changefreq']}</changefreq>")
+        xml_lines.append(f"    <priority>{page['priority']}</priority>")
+        xml_lines.append("  </url>")
+        
+    for p in posts:
+        raw_slug = p.get("slug", "")
+        clean_slug = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', raw_slug)
+        post_url = f"{base_url}/posts/{clean_slug}.html"
+        raw_date = p.get("date", "")
+        post_date = raw_date.replace(".", "-").replace("/", "-") if raw_date else ""
+        
+        xml_lines.append("  <url>")
+        xml_lines.append(f"    <loc>{post_url}</loc>")
+        if post_date:
+            xml_lines.append(f"    <lastmod>{post_date}</lastmod>")
+        xml_lines.append("    <changefreq>monthly</changefreq>")
+        xml_lines.append("    <priority>0.7</priority>")
+        xml_lines.append("  </url>")
+        
+    xml_lines.append("</urlset>")
+    
+    sitemap_path = BASE_DIR / "sitemap.xml"
+    with open(sitemap_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(xml_lines) + "\n")
+        
+    if ROOT_DIR != BASE_DIR:
+        shutil.copy2(sitemap_path, ROOT_DIR / "sitemap.xml")
+        
+    print(f"  [OK] Generated sitemap.xml with {len(static_pages) + len(posts)} URLs")
 
 def compile_tags_database(posts):
     """

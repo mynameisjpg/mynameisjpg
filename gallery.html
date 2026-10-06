@@ -5,30 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cover Art Spatial Vault — Untitled.jpg</title>
   <meta name="description" content="Ultra-minimalist 3D spatial gallery displaying cover art floating in space for Untitled.jpg.">
-  <link rel="canonical" href="https://mynameisjpg.github.io/gallery.html">
+  <link rel="canonical" href="https://mynameisjpg.github.io/mynameisjpg/gallery.html">
 
   <!-- Open Graph / LinkedIn / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Untitled.jpg">
   <meta property="og:title" content="Cover Art Spatial Vault — Untitled.jpg">
   <meta property="og:description" content="Ultra-minimalist 3D spatial gallery displaying cover art floating in space for Untitled.jpg.">
-  <meta property="og:url" content="https://mynameisjpg.github.io/gallery.html">
-  <meta property="og:image" content="https://mynameisjpg.github.io/assets/images/favicon.svg">
+  <meta property="og:url" content="https://mynameisjpg.github.io/mynameisjpg/gallery.html">
+  <meta property="og:image" content="https://mynameisjpg.github.io/mynameisjpg/assets/images/favicon.svg">
 
   <!-- Twitter / X Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@untitled_jpg">
   <meta name="twitter:title" content="Cover Art Spatial Vault — Untitled.jpg">
   <meta name="twitter:description" content="Ultra-minimalist 3D spatial gallery displaying cover art floating in space for Untitled.jpg.">
-  <meta name="twitter:image" content="https://mynameisjpg.github.io/assets/images/favicon.svg">
+  <meta name="twitter:image" content="https://mynameisjpg.github.io/mynameisjpg/assets/images/favicon.svg">
   
   <!-- Typography: Azeret Mono (UI), Platypi (Prose) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Platypi:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
   
-  <!-- Three.js 3D WebGL Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Three.js 3D WebGL Library (Deferred) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
   <!-- Modular Design System Stylesheet -->
   <link rel="stylesheet" href="index.css?v=4">
@@ -36,8 +35,8 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="shortcut icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <!-- Autonomous Web Components -->
-  <script src="js/components/sidebar-rail.js?v=4"></script>
+  <!-- Autonomous Web Components (Deferred) -->
+  <script defer src="js/components/sidebar-rail.js?v=4"></script>
 </head>
 <body class="gallery-page">
 
@@ -50,7 +49,8 @@
   <!-- ====================================================================
        ULTRA-MINIMAL 3D SPATIAL VIEWPORT
        ==================================================================== -->
-  <div class="gallery-spatial-viewport">
+  <main class="gallery-spatial-viewport">
+    <h1 class="sr-only">Cover Art Spatial Vault — Untitled.jpg</h1>
     
     <!-- Top-Left Subtle Spatial Control Hint -->
     <div class="minimal-spatial-hint">
@@ -97,7 +97,7 @@
       </div>
     </aside>
 
-  </div>
+  </main>
 
   <!-- ====================================================================
        FULL-HEIGHT ARTWORK VIEW MODAL WITH SHARE & DOWNLOAD
@@ -153,7 +153,7 @@
   </dialog>
 
   <!-- JavaScript Dependencies -->
-  <script src="posts.js?v=4"></script>
-  <script src="js/gallery.js?v=4"></script>
+  <script defer src="posts.js?v=4"></script>
+  <script defer src="js/gallery.js?v=4"></script>
 </body>
 </html>

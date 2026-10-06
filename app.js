@@ -297,12 +297,20 @@ function renderCardMatrix(resetPagination = true) {
   const allPosts = getFilteredAndSortedPosts();
 
   if (allPosts.length === 0) {
+    const queryDisplay = searchQuery.trim() ? `QUERY: "${searchQuery}"` : "";
+    const filterDisplay = activeFilter !== "all" ? `FORMAT: [${activeFilter.toUpperCase()}]` : "";
+    const pillarDisplay = activePillar !== "all" ? `PILLAR: [${activePillar.toUpperCase()}]` : "";
+    const activeFiltersText = [queryDisplay, filterDisplay, pillarDisplay].filter(Boolean).join(" // ") || "CURRENT_SELECTION";
+
     container.innerHTML = `
-      <div style="grid-column: 1 / -1; padding: 3rem 1.5rem; text-align: center; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.78rem; border: 1px dashed var(--border-subtle); border-radius: var(--radius-md);">
-        [NO DISPATCHES FOUND MATCHING SELECTION]
-        <br><br>
-        <button type="button" onclick="resetMatrixFilters()" style="background: rgba(232,74,95,0.15); border: 1px solid var(--accent-coral); color: var(--text-bright); padding: 0.4rem 0.8rem; font-family: inherit; font-size: 0.72rem; cursor: pointer; border-radius: 2px;">
-          RESET FILTERS
+      <div class="matrix-empty-state" role="status" aria-live="polite">
+        <div class="empty-state-tag">[ SYS_ALERT // NO_MATCHING_DISPATCHES ]</div>
+        <h2 class="empty-state-title">No dispatches found</h2>
+        <p class="empty-state-desc">
+          No records in the dispatch matrix match <code>${activeFiltersText}</code>. Reset filters or broaden your query to reveal active dispatches.
+        </p>
+        <button type="button" class="btn-reset-filters" id="btn-empty-reset" onclick="resetMatrixFilters()" aria-label="Reset all filters and search query">
+          <span aria-hidden="true">✕</span> RESET FILTERS &amp; SEARCH
         </button>
       </div>
     `;
@@ -796,7 +804,7 @@ function getCanonicalPostUrl(postOrId) {
       .replace(/\/$/, "");
     return `${origin}${basePath}/posts/${clean}.html`;
   }
-  return `https://mynameisjpg.github.io/posts/${clean}.html`;
+  return `https://mynameisjpg.github.io/mynameisjpg/posts/${clean}.html`;
 }
 
 /**

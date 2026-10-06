@@ -1,0 +1,30 @@
+# Untitled.jpg — Overthinking Undervalued Means of Thought
+
+> Essays, field notes, curated bookmarks, and practical resources on AI perception, cognitive psychophysics, high-dimensional latent spaces, and media archaeology.
+
+Author: Juan Pablo Giusepponi (Sr. Designer, Head of Communication & Frontier AI Specialist)
+Canonical URL: https://mynameisjpg.github.io/mynameisjpg/index.html 
+
+## Thematic Pillars
+
+1. **Visual Perception & Cognitive Psychophysics**: Investigating how human vision, neural architectures, and aesthetic structures decode latent visual representations.
+2. **Frontier AI & Machine Vision**: High-dimensional vector spaces, JEPA world models, multi-modal generative systems, and rubric-based benchmark evaluation.
+3. **Language, Latent Structures & Media Archaeology**: Epistemology of media from Preciado and Foucault to modern vector spaces and algorithmic culture.
+4. **Art Direction, Cultural Shanzhai & Visual Strategy**: Deconstruction of originality, design systems, and federal independent publishing.
+
+## Key Dispatches & Articles
+
+- [The Pharmacopornographic Episteme & AI Latent Spaces](https://mynameisjpg.github.io/mynameisjpg/posts/telebody-latent-space-pharmacopornographic-ai.html): Synthetic bodies, bio-capitalism, and generative neural desire.
+- [Why AI Agents Look Like Tamagotchis](https://mynameisjpg.github.io/mynameisjpg/posts/why-ai-agents-look-like-tamagotchis.html): Visual anthropomorphism, emotional interfaces, and synthetic agency.
+- [Visual Bandwidth Bottleneck](https://mynameisjpg.github.io/mynameisjpg/posts/visual-bandwidth-bottleneck.html): Human cognitive processing throughput in multi-modal generative interfaces.
+- [Shanzhai: Deconstructing the Original](https://mynameisjpg.github.io/mynameisjpg/posts/shanzhai-deconstructing-original.html): Byung-Chul Han, iterative reproduction, and generative model weights.
+- [LeCun's World Models & JEPA](https://mynameisjpg.github.io/mynameisjpg/posts/lecun-world-models-jepa.html): Non-generative Joint Embedding Predictive Architecture in perception.
+- [Foucault, Borges & Vector Space](https://mynameisjpg.github.io/mynameisjpg/posts/foucault-borges-vector-space.html): High-dimensional semantic embeddings as encyclopedic topologies.
+
+## Core Pages
+
+- [Home & Dispatch Matrix](https://mynameisjpg.github.io/mynameisjpg/index.html): Asymmetric split reader with live filtering across Essays, Notes, Bookmarks, and Resources.
+- [Chronological Archive](https://mynameisjpg.github.io/mynameisjpg/archive.html): Timeline stratigraphy and date-ordered dispatch archive.
+- [3D Taxonomy Node Map](https://mynameisjpg.github.io/mynameisjpg/network.html): Interactive 3D vector map of 140+ conceptual taxonomy nodes and tags.
+- [Spatial Cover Art Vault](https://mynameisjpg.github.io/mynameisjpg/gallery.html): 3D WebGL spatial gallery of cover artwork.
+- [About & Author Dossier](https://mynameisjpg.github.io/mynameisjpg/about.html): Background, career milestones, and editorial mission.

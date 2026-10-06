@@ -454,3 +454,88 @@
   background: rgba(18, 18, 18, 0.6);
   border-radius: var(--radius-sm, 3px);
 }
+
+/* ==============================================================================
+   COMPONENT: MATRIX EMPTY STATE (0 RESULTS)
+   ============================================================================== */
+.matrix-empty-state {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3.5rem 2rem;
+  background: rgba(14, 14, 18, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px dashed rgba(232, 74, 95, 0.35);
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5), inset 0 0 24px rgba(232, 74, 95, 0.05);
+  margin: 1.5rem auto 3rem auto;
+  max-width: 580px;
+  width: 100%;
+}
+
+.empty-state-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--accent-coral);
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.empty-state-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-bright);
+  margin-bottom: 0.6rem;
+}
+
+.empty-state-desc {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 440px;
+  margin-bottom: 1.6rem;
+}
+
+.empty-state-desc code {
+  color: var(--accent-coral);
+  background: rgba(232, 74, 95, 0.12);
+  padding: 0.15rem 0.4rem;
+  border-radius: 2px;
+}
+
+.btn-reset-filters {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(232, 74, 95, 0.15);
+  border: 1px solid var(--accent-coral);
+  color: var(--text-bright);
+  padding: 0.6rem 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: var(--radius-sm, 3px);
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(232, 74, 95, 0.2);
+}
+
+.btn-reset-filters:hover {
+  background: var(--accent-coral);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(232, 74, 95, 0.4);
+}
+
+.btn-reset-filters:active {
+  transform: translateY(0);
+}

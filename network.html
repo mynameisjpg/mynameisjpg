@@ -5,16 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taxonomy Node Map — Untitled.jpg</title>
   <meta name="description" content="Interactive 3D taxonomy node map and conceptual vectors of all dispatches in Untitled.jpg.">
+  <link rel="canonical" href="https://mynameisjpg.github.io/mynameisjpg/network.html">
+
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Untitled.jpg">
+  <meta property="og:title" content="Taxonomy Node Map — Untitled.jpg">
+  <meta property="og:description" content="Interactive 3D taxonomy node map and conceptual vectors of all dispatches in Untitled.jpg.">
+  <meta property="og:url" content="https://mynameisjpg.github.io/mynameisjpg/network.html">
+  <meta property="og:image" content="https://mynameisjpg.github.io/mynameisjpg/assets/images/favicon.svg">
+
+  <!-- Twitter / X Cards (No handle) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Taxonomy Node Map — Untitled.jpg">
+  <meta name="twitter:description" content="Interactive 3D taxonomy node map and conceptual vectors of all dispatches in Untitled.jpg.">
+  <meta name="twitter:image" content="https://mynameisjpg.github.io/mynameisjpg/assets/images/favicon.svg">
   
   <!-- Typography: Azeret Mono (UI), Platypi (Prose), JetBrains Mono (ASCII & Code) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&family=Platypi:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
   
-  <!-- Math & Markdown Dependencies -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <!-- Math Rendering (KaTeX) - Non-blocking & Deferred -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"></noscript>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
 
   <!-- Master Design System Stylesheet (Includes tokens, base, & components) -->
   <link rel="stylesheet" href="index.css">
@@ -22,8 +38,8 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="shortcut icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <!-- Autonomous Web Components -->
-  <script src="js/components/sidebar-rail.js"></script>
+  <!-- Autonomous Web Components (Deferred) -->
+  <script defer src="js/components/sidebar-rail.js"></script>
 </head>
 <body>
 
@@ -67,6 +83,7 @@
        COMPONENT 2: FULL VIEW TAXONOMY NODE MAP LAYOUT
        ==================================================================== -->
   <main class="network-full-shell">
+    <h1 class="sr-only">Taxonomy Node Map — Untitled.jpg</h1>
 
     <!-- FULL VIEW INTERACTIVE TAXONOMY NODE MAP & TAGS DIRECTORY -->
     <section class="nodemap-column full-view" aria-label="Interactive Taxonomy Node Map">
@@ -218,13 +235,13 @@
   </dialog>
 
   <!-- WebGL 3D Graph Engine (Three.js & OrbitControls) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 
   <!-- Dynamic Posts Feed & Tags Database -->
-  <script src="posts.js"></script>
-  <script src="tags.js"></script>
+  <script defer src="posts.js"></script>
+  <script defer src="tags.js"></script>
   <!-- Dedicated Network Node Map Engine Script -->
-  <script src="js/network.js"></script>
+  <script defer src="js/network.js"></script>
 </body>
 </html>

@@ -23,11 +23,40 @@
 
   <!-- Twitter / X Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@untitled_jpg">
   <meta name="twitter:title" content="Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis">
   <meta name="twitter:description" content="Built on foundational psychophysics from David Cycleback's Art Perception and Rudolf Arnheim's visual psychology, this toolkit provides automated perceptual diagnostics for generated graphics and web UI components.">
   <meta name="twitter:image" content="https://mynameisjpg.github.io/mynameisjpg/assets/images/perception_eval.jpg">
   <meta name="twitter:image:alt" content="In coral red and black, vintage engraved eyes are fractured and obscured by corrupted UI windows, pixel grids, and degraded scanline textures.">
+
+  <!-- Schema.org JSON-LD (BlogPosting / Article) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+    "description": "Built on foundational psychophysics from David Cycleback's Art Perception and Rudolf Arnheim's visual psychology, this toolkit provides automated perceptual diagnostics for generated graphics and web UI components.",
+    "datePublished": "2026-09-28",
+    "dateModified": "2026-09-28",
+    "author": {
+      "@type": "Person",
+      "name": "Juan Pablo Giusepponi",
+      "url": "https://mynameisjpg.github.io/mynameisjpg/about.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Untitled.jpg",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mynameisjpg.github.io/mynameisjpg/assets/images/favicon.svg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mynameisjpg.github.io/mynameisjpg/posts/perceptual-vision-eval-toolkit.html"
+    },
+    "image": "https://mynameisjpg.github.io/mynameisjpg/assets/images/perception_eval.jpg"
+  }
+  </script>
 
   <base href="../">
 
@@ -37,11 +66,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&family=Platypi:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
   
   <!-- Math Rendering (KaTeX), Markdown (Marked.js), & Diagrams (Mermaid.js) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"></noscript>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 
   <!-- Design System Stylesheets -->
   <link rel="stylesheet" href="index.css">
@@ -51,8 +81,8 @@
   <link rel="shortcut icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="apple-touch-icon" href="assets/images/favicon.svg">
   
-  <!-- Autonomous Web Components -->
-  <script src="js/components/sidebar-rail.js"></script>
+  <!-- Autonomous Web Components (Deferred) -->
+  <script defer src="js/components/sidebar-rail.js"></script>
 </head>
 <body>
 
