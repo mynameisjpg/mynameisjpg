@@ -766,7 +766,7 @@ def generate_post_html_files(posts):
   <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 
   <!-- Design System Stylesheets -->
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="index.css?v=5">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
