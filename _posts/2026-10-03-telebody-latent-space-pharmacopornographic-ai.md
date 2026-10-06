@@ -12,7 +12,7 @@ status: "published"
 format: "essay"
 
 topic:
-  pillar: "Philosophy & Politics of Information"
+  pillar: "Philosophy and Critical Theory"
   subtopic: "Biopolitics, Somatic Technologies & Body Epistemology"
 
 tags:
