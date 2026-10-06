@@ -866,7 +866,6 @@
 }
 
 /* Responsive Video & Shorts Embeds */
-.shorts-container,
 .video-embed-container {
   display: flex;
   justify-content: center;
@@ -877,7 +876,7 @@
 
 .responsive-short {
   width: 100%;
-  max-width: 360px;
+  max-width: 75%;
   aspect-ratio: 9 / 16;
   height: auto;
   border-radius: var(--radius-md, 8px);
@@ -887,7 +886,7 @@
 
 .responsive-video {
   width: 100%;
-  max-width: 720px;
+  max-width: 75%;
   aspect-ratio: 16 / 9;
   height: auto;
   border-radius: var(--radius-md, 8px);

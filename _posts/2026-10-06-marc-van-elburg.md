@@ -45,9 +45,7 @@ sys_id: "SYS_202610_BOO"
 ---
 
 <!-- Centered Responsive Video Embed -->
-<div class="shorts-container">
   <iframe class="responsive-short" src="https://www.youtube.com/embed/e00FwQ3fjKI" title="the #%&*gH**+!! /? ! episode#7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
 
 ## Some great comments from the instagram reel:
 
