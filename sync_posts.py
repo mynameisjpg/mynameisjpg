@@ -449,11 +449,38 @@ def clean_and_convert_markdown(md_text):
         else:
             flush_list()
 
-        # 9. Direct HTML Tag pass-through
-        if stripped.startswith("<h") or stripped.startswith("<div") or stripped.startswith("<p") or stripped.startswith("<table"):
-            html_blocks.append(stripped)
-            i += 1
-            continue
+        # 9. Direct HTML Tag / Block pass-through (iframes, divs, styles, comments, embeds)
+        if re.match(r"^<(?:!--|[a-zA-Z0-9_-]+|\/[a-zA-Z0-9_-]+)", stripped):
+            flush_list()
+            flush_table()
+            if stripped.startswith("<style"):
+                style_lines = [line]
+                if not stripped.endswith("</style>"):
+                    i += 1
+                    while i < len(lines):
+                        style_lines.append(lines[i])
+                        if "</style>" in lines[i]:
+                            break
+                        i += 1
+                html_blocks.append("\n".join(style_lines))
+                i += 1
+                continue
+            elif stripped.startswith("<!--"):
+                comment_lines = [line]
+                if not stripped.endswith("-->"):
+                    i += 1
+                    while i < len(lines):
+                        comment_lines.append(lines[i])
+                        if "-->" in lines[i]:
+                            break
+                        i += 1
+                html_blocks.append("\n".join(comment_lines))
+                i += 1
+                continue
+            else:
+                html_blocks.append(stripped)
+                i += 1
+                continue
 
         # 10. Standard Paragraph
         html_blocks.append(f'<p class="post-paragraph essay-paragraph">{format_inline_markdown(stripped)}</p>')
