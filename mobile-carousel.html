@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Untitled.jpg — 3D Mobile Carousel</title>
+  <meta name="description" content="3D Mobile Carousel viewer for Untitled.jpg dispatches. Explore essays, notes, bookmarks and toolkits in an immersive full-screen vertical card experience.">
+  <link rel="canonical" href="https://mynameisjpg.github.io/mynameisjpg/mobile-carousel.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Untitled.jpg">
+  <meta property="og:title" content="Untitled.jpg — 3D Mobile Carousel">
+  <meta property="og:description" content="Immersive 3D Mobile Carousel for Untitled.jpg dispatches.">
+  <meta property="og:image" content="https://mynameisjpg.github.io/mynameisjpg/assets/images/favicon.svg">
+
+  <!-- Typography: Azeret Mono (UI), Platypi (Editorial Prose) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Platypi:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- CSS Design Tokens & Base -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+
+  <style>
+    /* ==============================================================================
+       MOBILE 3D CAROUSEL STYLES
+       ============================================================================== */
+    :root {
+      --carousel-card-width: min(88vw, 410px);
+      --carousel-card-height: min(82dvh, 700px);
+      --carousel-gap: 20px;
+    }
+
+    * {
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    html, body {
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #0c0d0e;
+      background-image: 
+        radial-gradient(circle at 50% 10%, rgba(232, 74, 95, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 132, 132, 0.04) 0%, transparent 40%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+      font-family: var(--font-mono);
+      color: var(--text-bright);
+      position: fixed;
+    }
+
+    /* Ambient CRT Scanline Overlay */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+      background-size: 100% 4px;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.35;
+    }
+
+    /* ==============================================================================
+       APP CONTAINER & TOP CHROME
+       ============================================================================== */
+    .app-viewport {
+      position: relative;
+      width: 100vw;
+      height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    /* Top Navigation Header (Full Width Edge-to-Edge) */
+    .carousel-header {
+      width: 100%;
+      height: 56px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 20;
+      flex-shrink: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(12, 13, 14, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .brand-logo-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-bright);
+    }
+
+    .brand-logo-img {
+      height: 22px;
+      width: auto;
+    }
+
+    .brand-moniker {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .brand-moniker span {
+      color: var(--accent-coral);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .counter-badge {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--accent-rose);
+      background: rgba(232, 74, 95, 0.12);
+      border: 1px solid rgba(232, 74, 95, 0.28);
+      padding: 3px 8px;
+      border-radius: 2px;
+    }
+
+    .header-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-bright);
+      padding: 5px 9px;
+      border-radius: 2px;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.18s ease;
+    }
+
+    .header-btn:hover, .header-btn:active {
+      background: var(--accent-coral);
+      color: #fff;
+      border-color: var(--accent-coral);
+      box-shadow: 0 0 10px rgba(232, 74, 95, 0.4);
+    }
+
+    .header-btn svg {
+      width: 12px;
+      height: 12px;
+      fill: currentColor;
+    }
+
+    /* ==============================================================================
+       3D CAROUSEL STAGE & TRACK
+       ============================================================================== */
+    .carousel-stage {
+      position: relative;
+      width: 100%;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1200px;
+      perspective-origin: 50% 50%;
+      overflow: visible;
+      touch-action: pan-y;
+      cursor: grab;
+    }
+
+    .carousel-stage:active {
+      cursor: grabbing;
+    }
+
+    .carousel-track {
+      position: relative;
+      width: var(--carousel-card-width);
+      height: var(--carousel-card-height);
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+
+    /* ==============================================================================
+       POST CARD STRUCTURE
+       ============================================================================== */
+    .carousel-card {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+      background: #18191a;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.04);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transform-origin: 50% 50%;
+      will-change: transform, opacity, filter;
+      transition: box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .carousel-card.is-active {
+      border-color: rgba(232, 74, 95, 0.5);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 25px rgba(232, 74, 95, 0.25);
+    }
+
+    /* Click shield on adjacent cards to prevent inner button clicks while backgrounded */
+    .carousel-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(12, 13, 14, 0.25);
+      z-index: 10;
+      pointer-events: auto;
+      cursor: pointer;
+      opacity: 1;
+      transition: opacity 0.25s ease;
+    }
+
+    .carousel-card.is-active::after {
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    /* Card Top Status Bar (Transparent Overlay on Image) */
+    .card-status-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+      border-bottom: none;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      z-index: 6;
+      pointer-events: none;
+    }
+
+    .format-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 7px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .format-essay { background: rgba(232, 74, 95, 0.25); color: #ff8484; border: 1px solid rgba(232, 74, 95, 0.5); }
+    .format-note { background: rgba(100, 200, 255, 0.2); color: #8ad8ff; border: 1px solid rgba(100, 200, 255, 0.4); }
+    .format-bookmark { background: rgba(245, 180, 50, 0.2); color: #ffd166; border: 1px solid rgba(245, 180, 50, 0.4); }
+    .format-resource { background: rgba(76, 217, 100, 0.2); color: #72ec8f; border: 1px solid rgba(76, 217, 100, 0.4); }
+
+    .card-meta-date {
+      color: #f0f0f0;
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+    }
+
+    /* Card Cover Art Section (Occupies ~72% of card height) */
+    .card-cover-container {
+      position: relative;
+      width: 100%;
+      height: 72%;
+      background: #08090a;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .card-cover-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .carousel-card.is-active:hover .card-cover-img {
+      transform: scale(1.03);
+    }
+
+    /* Ambient Vignette & Gradient Overlay */
+    .card-cover-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    /* Cover Action Buttons (Fullscreen & Download) */
+    .cover-actions {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      display: flex;
+      gap: 6px;
+      z-index: 5;
+    }
+
+    .cover-action-btn {
+      height: 34px;
+      padding: 0 10px;
+      border-radius: 3px;
+      background: rgba(18, 19, 20, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #f0f0f0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: all 0.16s ease;
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+
+    .cover-action-btn.btn-fullscreen {
+      width: 34px;
+      padding: 0;
+    }
+
+    .cover-action-btn:hover, .cover-action-btn:active {
+      background: var(--accent-coral);
+      color: #fff;
+      border-color: var(--accent-coral);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(232, 74, 95, 0.5);
+    }
+
+    .cover-action-btn svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    /* Card Details & Metadata Section (Occupies ~28% of card height) */
+    .card-body {
+      padding: 10px 14px 12px 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 20%;
+      flex: 0 0 28%;
+      overflow: hidden;
+      background: #18191a;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .card-pillar-tag {
+      font-size: 0.54rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-coral);
+      margin-bottom: 2px;
+      line-height: 1.2;
+    }
+
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: clamp(0.86rem, 2.5vw, 0.98rem);
+      font-weight: 600;
+      line-height: 1.5;
+      color: #ffffff;
+      margin: 8px 0 8px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-excerpt {
+      font-family: var(--font-serif);
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: #b5bcc2;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 6px;
+    }
+
+    /* Card Main CTA Button */
+    .card-actions-row {
+      display: flex;
+      width: 100%;
+      margin-top: auto;
+      padding-top: 4px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .btn-read-post {
+      width: 100%;
+      height: 36px;
+      background: var(--accent-coral);
+      border: 1px solid var(--accent-coral);
+      color: #ffffff;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+      border-radius: 2px;
+      box-shadow: 0 4px 14px rgba(232, 74, 95, 0.35);
+      transition: all 0.18s ease;
+      cursor: pointer;
+    }
+
+    .btn-read-post:hover, .btn-read-post:active {
+      background: #ff5a6e;
+      box-shadow: 0 6px 18px rgba(232, 74, 95, 0.6);
+      transform: translateY(-1px);
+    }
+
+    .btn-read-post svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    .btn-source-ext {
+      width: 42px;
+      height: 42px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #d0d0d0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: all 0.18s ease;
+      flex-shrink: 0;
+    }
+
+    .btn-source-ext:hover, .btn-source-ext:active {
+      background: #252628;
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-source-ext svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    /* ==============================================================================
+       BOTTOM CONTROLS & NAVIGATOR (Full Width Edge-to-Edge)
+       ============================================================================== */
+    .carousel-footer {
+      width: 100%;
+      padding: 10px 16px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      z-index: 20;
+      flex-shrink: 0;
+    }
+
+    .swipe-hint-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #808890;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 4px 12px;
+      border-radius: 20px;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      transition: opacity 0.4s ease;
+    }
+
+    .swipe-hint-pill.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .swipe-hint-pill span.arrow {
+      color: var(--accent-coral);
+      animation: pulseArrow 1.5s infinite;
+    }
+
+    @keyframes pulseArrow {
+      0%, 100% { opacity: 0.4; transform: translateX(0); }
+      50% { opacity: 1; transform: translateX(2px); }
+    }
+
+    .footer-nav-row {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .nav-arrow-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 3px;
+      background: rgba(22, 23, 24, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: all 0.18s ease;
+    }
+
+    .nav-arrow-btn:hover, .nav-arrow-btn:active {
+      background: var(--accent-coral);
+      border-color: var(--accent-coral);
+      color: #fff;
+      box-shadow: 0 0 12px rgba(232, 74, 95, 0.4);
+    }
+
+    .nav-arrow-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* Progress Dots Pill */
+    .progress-dots-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 6px 12px;
+      background: rgba(18, 19, 20, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      max-width: 60vw;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .progress-dots-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .progress-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .progress-dot.is-active {
+      width: 18px;
+      border-radius: 3px;
+      background: var(--accent-coral);
+      box-shadow: 0 0 8px rgba(232, 74, 95, 0.6);
+    }
+
+    /* ==============================================================================
+       FILTER MODAL / DRAWER
+       ============================================================================== */
+    .filter-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .filter-modal-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .filter-modal-sheet {
+      width: 100%;
+      max-width: 500px;
+      max-height: 85dvh;
+      background: #141516;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: none;
+      border-radius: 12px 12px 0 0;
+      box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.8);
+      padding: 20px 20px 30px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      overflow-y: auto;
+      transform: translateY(100%);
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .filter-modal-backdrop.is-open .filter-modal-sheet {
+      transform: translateY(0);
+    }
+
+    .filter-sheet-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 12px;
+    }
+
+    .filter-sheet-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .filter-close-btn {
+      background: none;
+      border: none;
+      color: #888;
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .filter-close-btn:hover {
+      color: #fff;
+    }
+
+    .filter-group-title {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-coral);
+      margin-bottom: 8px;
+    }
+
+    .filter-pills-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .filter-option-btn {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #c0c0c0;
+      padding: 6px 12px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .filter-option-btn.is-selected {
+      background: var(--accent-coral);
+      border-color: var(--accent-coral);
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 0 10px rgba(232, 74, 95, 0.4);
+    }
+
+    /* ==============================================================================
+       FULLSCREEN IMAGE LIGHTBOX MODAL
+       ============================================================================== */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 5, 6, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 200;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 16px;
+    }
+
+    .lightbox-modal.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lightbox-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .lightbox-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 60vw;
+    }
+
+    .lightbox-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .lightbox-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 3px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.16s ease;
+    }
+
+    .lightbox-btn:hover, .lightbox-btn:active {
+      background: var(--accent-coral);
+      border-color: var(--accent-coral);
+    }
+
+    .lightbox-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .lightbox-body {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lightbox-img {
+      max-width: 95vw;
+      max-height: 80dvh;
+      object-fit: contain;
+      border-radius: 2px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+      transition: transform 0.25s ease;
+      cursor: zoom-in;
+    }
+
+    .lightbox-img.is-zoomed {
+      transform: scale(1.8);
+      cursor: zoom-out;
+    }
+
+    .lightbox-footer {
+      text-align: center;
+      font-size: 0.62rem;
+      color: #777;
+      padding-top: 8px;
+    }
+
+    /* ==============================================================================
+       RESPONSIVE ADAPTATIONS
+       ============================================================================== */
+    @media (min-width: 768px) {
+      :root {
+        --carousel-card-width: 420px;
+        --carousel-card-height: 720px;
+      }
+    }
+
+    @media (max-height: 680px) {
+      .card-body {
+        padding: 8px 12px 10px 12px;
+      }
+      .btn-read-post {
+        height: 32px;
+        font-size: 0.64rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-viewport">
+    
+    <!-- Top Chrome Header -->
+    <header class="carousel-header">
+      <a href="index.html" class="brand-logo-link" title="Return to Untitled.jpg Home">
+        <img src="assets/images/favicon.svg" alt="Untitled.jpg Logo" class="brand-logo-img">
+        <span class="brand-moniker">Untitled<span>.jpg</span></span>
+      </a>
+
+      <div class="header-actions">
+        <div id="cardCounter" class="counter-badge">[ 01 / 18 ]</div>
+        <button id="openFilterBtn" class="header-btn" title="Filter Dispatches">
+          <svg viewBox="0 0 24 24"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/></svg>
+          <span>Filter</span>
+        </button>
+        <a href="index.html" class="header-btn" title="Switch to Grid View">
+          <svg viewBox="0 0 24 24"><path d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"/></svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- 3D Carousel Stage -->
+    <main class="carousel-stage" id="carouselStage" aria-label="Dispatches 3D Carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <!-- Cards will be populated dynamically -->
+      </div>
+    </main>
+
+    <!-- Bottom Controls & Navigation -->
+    <footer class="carousel-footer">
+      <div class="swipe-hint-pill" id="swipeHint">
+        <span class="arrow">◀</span>
+        <span>Swipe or tap sides to explore</span>
+        <span class="arrow">▶</span>
+      </div>
+
+      <div class="footer-nav-row">
+        <button id="prevBtn" class="nav-arrow-btn" aria-label="Previous Dispatch" title="Previous">
+          <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+
+        <div class="progress-dots-container" id="progressDotsTrack">
+          <!-- Dots dynamically populated -->
+        </div>
+
+        <button id="nextBtn" class="nav-arrow-btn" aria-label="Next Dispatch" title="Next">
+          <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </button>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Filter Modal Sheet -->
+  <div class="filter-modal-backdrop" id="filterModal">
+    <div class="filter-modal-sheet">
+      <div class="filter-sheet-header">
+        <span class="filter-sheet-title">Filter Dispatches</span>
+        <button class="filter-close-btn" id="closeFilterBtn">✕</button>
+      </div>
+
+      <div>
+        <div class="filter-group-title">By Format</div>
+        <div class="filter-pills-wrap" id="formatFilters">
+          <button class="filter-option-btn is-selected" data-filter-type="format" data-value="ALL">All Formats</button>
+          <button class="filter-option-btn" data-filter-type="format" data-value="ESSAY">Essays</button>
+          <button class="filter-option-btn" data-filter-type="format" data-value="NOTE">Notes</button>
+          <button class="filter-option-btn" data-filter-type="format" data-value="BOOKMARK">Bookmarks</button>
+          <button class="filter-option-btn" data-filter-type="format" data-value="RESOURCE">Resources</button>
+        </div>
+      </div>
+
+      <div>
+        <div class="filter-group-title">By Conceptual Pillar</div>
+        <div class="filter-pills-wrap" id="pillarFilters">
+          <button class="filter-option-btn is-selected" data-filter-type="pillar" data-value="ALL">All Pillars</button>
+          <button class="filter-option-btn" data-filter-type="pillar" data-value="AI Perception, Culture & Representation">AI Perception</button>
+          <button class="filter-option-btn" data-filter-type="pillar" data-value="Visual Perception & Psychology of Seeing">Visual Perception</button>
+          <button class="filter-option-btn" data-filter-type="pillar" data-value="Language, LLMs & Artificial Intelligence">Language & LLMs</button>
+          <button class="filter-option-btn" data-filter-type="pillar" data-value="Philosophy of the Image, Tech & Visual Culture">Philosophy of Image</button>
+          <button class="filter-option-btn" data-filter-type="pillar" data-value="Philosophy and Critical Theory">Critical Theory</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fullscreen Cover Art Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-header">
+      <span class="lightbox-title" id="lightboxTitle">Cover Artwork</span>
+      <div class="lightbox-actions">
+        <a id="lightboxDownloadBtn" class="lightbox-btn" target="_blank" rel="noopener noreferrer" download title="Download Original Artwork">
+          <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        </a>
+        <button id="lightboxCloseBtn" class="lightbox-btn" title="Close Lightbox">
+          <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="lightbox-body" id="lightboxBody">
+      <img src="" alt="Artwork Preview" class="lightbox-img" id="lightboxImg">
+    </div>
+
+    <div class="lightbox-footer">
+      <span>Tap image to zoom · Tap close or swipe down to exit</span>
+    </div>
+  </div>
+
+  <!-- Include dynamic posts database -->
+  <script src="posts.js"></script>
+
+  <script>
+    /* ==============================================================================
+       3D MOBILE CAROUSEL CONTROLLER
+       ============================================================================== */
+    (function() {
+      'use strict';
+
+      // State
+      let allPosts = [];
+      let filteredPosts = [];
+      let currentIndex = 0;
+      let activeFormatFilter = 'ALL';
+      let activePillarFilter = 'ALL';
+
+      // Gesture / Physics State
+      let isDragging = false;
+      let startX = 0;
+      let currentX = 0;
+      let dragOffset = 0;
+      let lastDeltaX = 0;
+      let velocityX = 0;
+      let lastMoveTime = 0;
+      let hasInteracted = false;
+
+      // DOM Elements
+      const stage = document.getElementById('carouselStage');
+      const track = document.getElementById('carouselTrack');
+      const cardCounter = document.getElementById('cardCounter');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const progressDotsTrack = document.getElementById('progressDotsTrack');
+      const swipeHint = document.getElementById('swipeHint');
+
+      // Filter Modal DOM
+      const filterModal = document.getElementById('filterModal');
+      const openFilterBtn = document.getElementById('openFilterBtn');
+      const closeFilterBtn = document.getElementById('closeFilterBtn');
+      const formatFilters = document.getElementById('formatFilters');
+      const pillarFilters = document.getElementById('pillarFilters');
+
+      // Lightbox DOM
+      const lightboxModal = document.getElementById('lightboxModal');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxTitle = document.getElementById('lightboxTitle');
+      const lightboxDownloadBtn = document.getElementById('lightboxDownloadBtn');
+      const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
+
+      // 1. Initialize and Load Posts Data
+      async function init() {
+        if (window.DYNAMIC_POSTS && Array.isArray(window.DYNAMIC_POSTS) && window.DYNAMIC_POSTS.length > 0) {
+          allPosts = window.DYNAMIC_POSTS;
+        } else {
+          try {
+            const res = await fetch('posts.json');
+            allPosts = await res.json();
+          } catch (e) {
+            console.error('Failed to load posts.json', e);
+          }
+        }
+
+        applyFilters();
+        setupEventListeners();
+      }
+
+      // 2. Filter Handler
+      function applyFilters() {
+        filteredPosts = allPosts.filter(post => {
+          // Format filter
+          if (activeFormatFilter !== 'ALL') {
+            const pFormat = (post.format || '').toUpperCase();
+            if (pFormat !== activeFormatFilter) return false;
+          }
+          // Pillar filter
+          if (activePillarFilter !== 'ALL') {
+            const pPillar = (post.pillar || '').toUpperCase();
+            const filterTarget = activePillarFilter.toUpperCase();
+            if (!pPillar.includes(filterTarget) && !filterTarget.includes(pPillar)) return false;
+          }
+          return true;
+        });
+
+        currentIndex = 0;
+        renderCards();
+        renderDots();
+        updateCarouselTransforms(0, true);
+        updateCounter();
+      }
+
+      // 3. Render Post Cards
+      function renderCards() {
+        track.innerHTML = '';
+
+        if (filteredPosts.length === 0) {
+          track.innerHTML = `
+            <div class="carousel-card is-active" style="display:flex;align-items:center;justify-content:center;padding:30px;text-align:center;">
+              <h3 style="font-family:var(--font-serif);color:#fff;margin-bottom:12px;">No Dispatches Found</h3>
+              <p style="font-size:0.72rem;color:#888;margin-bottom:20px;">Try adjusting your format or pillar filters.</p>
+              <button class="header-btn" onclick="window.resetFilters()">Reset Filters</button>
+            </div>
+          `;
+          return;
+        }
+
+        filteredPosts.forEach((post, idx) => {
+          const card = document.createElement('article');
+          card.className = `carousel-card ${idx === currentIndex ? 'is-active' : ''}`;
+          card.dataset.index = idx;
+
+          // Format styling class
+          const formatLower = (post.format || 'essay').toLowerCase();
+          const formatClass = `format-${formatLower}`;
+
+          // Image path resolution
+          const coverPath = post.image || (post.thumbnail ? post.thumbnail.replace('thumbnails/', '') : 'assets/images/this-is-not-a-human.jpg');
+          const postUrl = `posts/${post.slug}.html`;
+
+          card.innerHTML = `
+            <div class="card-cover-container">
+              <div class="card-status-bar">
+                <span class="format-badge ${formatClass}">[${post.format || 'ESSAY'}]</span>
+                <span class="card-meta-date">${post.date || '2026.10.06'}</span>
+              </div>
+
+              <img src="${coverPath}" alt="${post.title || 'Dispatch Cover'}" class="card-cover-img" loading="${idx < 3 ? 'eager' : 'lazy'}">
+              <div class="card-cover-overlay"></div>
+              
+              <div class="cover-actions">
+                <button class="cover-action-btn btn-fullscreen" data-index="${idx}" title="Fullscreen Artwork" aria-label="Fullscreen Artwork">
+                  <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                </button>
+                <a href="${coverPath}" target="_blank" rel="noopener noreferrer" download="${post.slug || 'dispatch'}-cover" class="cover-action-btn btn-download" title="Download Artwork" aria-label="Download Artwork">
+                  <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                  <span>DOWNLOAD</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div>
+                <div class="card-pillar-tag">${post.pillar || 'PHILOSOPHY & CULTURE'}</div>
+                <h2 class="card-title">${post.title || 'Untitled Dispatch'}</h2>
+                <p class="card-excerpt">${post.subtitle || post.excerpt || ''}</p>
+              </div>
+
+              <div class="card-actions-row">
+                <a href="${postUrl}" class="btn-read-post">
+                  <span>Read Dispatch</span>
+                  <svg viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42 5.43 5.43H5v2z"/></svg>
+                </a>
+              </div>
+            </div>
+          `;
+
+          // Tap on adjacent card to activate it
+          card.addEventListener('click', (e) => {
+            if (idx !== currentIndex && !isDragging) {
+              e.preventDefault();
+              e.stopPropagation();
+              goToIndex(idx);
+            }
+          });
+
+          track.appendChild(card);
+        });
+
+        // Add Fullscreen trigger listener
+        track.querySelectorAll('.btn-fullscreen').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const pIdx = parseInt(btn.dataset.index, 10);
+            openLightbox(filteredPosts[pIdx]);
+          });
+        });
+      }
+
+      // 4. Render Progress Dots
+      function renderDots() {
+        progressDotsTrack.innerHTML = '';
+        filteredPosts.forEach((_, idx) => {
+          const dot = document.createElement('div');
+          dot.className = `progress-dot ${idx === currentIndex ? 'is-active' : ''}`;
+          dot.dataset.index = idx;
+          dot.addEventListener('click', () => goToIndex(idx));
+          progressDotsTrack.appendChild(dot);
+        });
+      }
+
+      // 5. 3D Transformation Math & Rendering Engine (Infinite Seamless Loop)
+      function updateCarouselTransforms(offset = 0, instant = false) {
+        const cards = track.querySelectorAll('.carousel-card');
+        const cardWidth = track.offsetWidth || 380;
+        const total = filteredPosts.length;
+        if (total === 0) return;
+
+        // Effective position with continuous fractional offset
+        const effectivePosition = currentIndex - (offset / cardWidth);
+
+        cards.forEach((card, idx) => {
+          let diff = idx - effectivePosition;
+
+          // Infinite circular wrap-around: shortest angular distance on the ring
+          if (total > 1) {
+            diff = ((diff + total / 2) % total + total) % total - total / 2;
+          }
+
+          // Only render visible adjacent range for optimal GPU usage
+          if (Math.abs(diff) > 3.5) {
+            card.style.display = 'none';
+            return;
+          }
+          card.style.display = 'flex';
+
+          // 3D Parameters:
+          // Center card: scale 1, rotateY 0, translateZ 0
+          // Adjacent cards: scaled down, pushed back in Z space, rotated outwards
+          const normalizedDiff = Math.max(-3, Math.min(3, diff));
+          
+          // Horizontal translation along cylinder curve
+          const translateX = normalizedDiff * (cardWidth * 0.78);
+          // Depth push
+          const translateZ = -Math.abs(normalizedDiff) * 140;
+          // Outward 3D angle
+          const rotateY = -normalizedDiff * 22;
+          // Scale compression
+          const scale = Math.max(0.72, 1 - Math.abs(normalizedDiff) * 0.15);
+          // Opacity falloff
+          const opacity = Math.max(0.1, 1 - Math.abs(normalizedDiff) * 0.45);
+          // Z-index stacking
+          const zIndex = 100 - Math.round(Math.abs(normalizedDiff) * 10);
+
+          card.style.zIndex = zIndex;
+          card.style.opacity = opacity;
+          card.style.transition = (isDragging || instant) ? 'none' : 'transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease';
+          card.style.transform = `translateX(${translateX}px) translateZ(${translateZ}px) rotateY(${rotateY}deg) scale(${scale})`;
+
+          if (Math.abs(diff) < 0.35) {
+            card.classList.add('is-active');
+          } else {
+            card.classList.remove('is-active');
+          }
+        });
+
+        // Update Dots
+        const dots = progressDotsTrack.querySelectorAll('.progress-dot');
+        dots.forEach((dot, idx) => {
+          if (idx === currentIndex) {
+            dot.classList.add('is-active');
+            dot.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          } else {
+            dot.classList.remove('is-active');
+          }
+        });
+      }
+
+      // 6. Navigation Controls (Endless Looping)
+      function goToIndex(newIndex) {
+        if (filteredPosts.length === 0) return;
+        const total = filteredPosts.length;
+        currentIndex = ((newIndex % total) + total) % total;
+        updateCarouselTransforms(0, false);
+        updateCounter();
+        dismissHint();
+      }
+
+      function next() {
+        const total = filteredPosts.length;
+        if (total <= 1) return;
+        currentIndex = (currentIndex + 1) % total;
+        updateCarouselTransforms(0, false);
+        updateCounter();
+        dismissHint();
+      }
+
+      function prev() {
+        const total = filteredPosts.length;
+        if (total <= 1) return;
+        currentIndex = (currentIndex - 1 + total) % total;
+        updateCarouselTransforms(0, false);
+        updateCounter();
+        dismissHint();
+      }
+
+      function updateCounter() {
+        if (filteredPosts.length === 0) {
+          cardCounter.textContent = `[ 0 / 0 ]`;
+        } else {
+          const padCurr = String(currentIndex + 1).padStart(2, '0');
+          const padTotal = String(filteredPosts.length).padStart(2, '0');
+          cardCounter.textContent = `[ ${padCurr} / ${padTotal} ]`;
+        }
+      }
+
+      function dismissHint() {
+        if (!hasInteracted) {
+          hasInteracted = true;
+          swipeHint.classList.add('is-hidden');
+        }
+      }
+
+      // 7. Touch & Mouse Gesture Physics
+      function handleDragStart(clientX) {
+        isDragging = true;
+        startX = clientX;
+        currentX = clientX;
+        dragOffset = 0;
+        velocityX = 0;
+        lastDeltaX = 0;
+        lastMoveTime = performance.now();
+        dismissHint();
+      }
+
+      function handleDragMove(clientX) {
+        if (!isDragging) return;
+        const now = performance.now();
+        const dt = now - lastMoveTime || 16;
+        const deltaX = clientX - currentX;
+
+        currentX = clientX;
+        dragOffset = currentX - startX;
+
+        // Instant velocity tracking
+        velocityX = (deltaX / dt) * 1000;
+        lastDeltaX = deltaX;
+        lastMoveTime = now;
+
+        updateCarouselTransforms(dragOffset, true);
+      }
+
+      function handleDragEnd() {
+        if (!isDragging) return;
+        isDragging = false;
+
+        const cardWidth = track.offsetWidth || 380;
+        const threshold = cardWidth * 0.22;
+        const total = filteredPosts.length;
+
+        if (total > 0) {
+          // Determine destination based on distance and velocity with modulo wrapping
+          if (dragOffset < -threshold || velocityX < -300) {
+            currentIndex = (currentIndex + 1) % total;
+          } else if (dragOffset > threshold || velocityX > 300) {
+            currentIndex = (currentIndex - 1 + total) % total;
+          }
+        }
+
+        updateCarouselTransforms(0, false);
+        updateCounter();
+      }
+
+      // 8. Event Listeners Setup
+      function setupEventListeners() {
+        // Touch events on stage
+        stage.addEventListener('touchstart', (e) => {
+          if (e.touches.length === 1) {
+            handleDragStart(e.touches[0].clientX);
+          }
+        }, { passive: true });
+
+        window.addEventListener('touchmove', (e) => {
+          if (isDragging && e.touches.length === 1) {
+            handleDragMove(e.touches[0].clientX);
+          }
+        }, { passive: true });
+
+        window.addEventListener('touchend', () => {
+          handleDragEnd();
+        });
+
+        // Mouse Drag events
+        stage.addEventListener('mousedown', (e) => {
+          if (e.button === 0) {
+            handleDragStart(e.clientX);
+          }
+        });
+
+        window.addEventListener('mousemove', (e) => {
+          if (isDragging) {
+            handleDragMove(e.clientX);
+          }
+        });
+
+        window.addEventListener('mouseup', () => {
+          handleDragEnd();
+        });
+
+        // Mouse Wheel / Trackpad horizontal scroll
+        let wheelTimeout;
+        stage.addEventListener('wheel', (e) => {
+          if (Math.abs(e.deltaX) > 15 || Math.abs(e.deltaY) > 20) {
+            e.preventDefault();
+            clearTimeout(wheelTimeout);
+            wheelTimeout = setTimeout(() => {
+              if (e.deltaX > 20 || e.deltaY > 20) {
+                next();
+              } else if (e.deltaX < -20 || e.deltaY < -20) {
+                prev();
+              }
+            }, 50);
+          }
+        }, { passive: false });
+
+        // Keyboard Arrow Navigation
+        window.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowRight' || e.key === 'KeyL') {
+            next();
+          } else if (e.key === 'ArrowLeft' || e.key === 'KeyH') {
+            prev();
+          } else if (e.key === 'Escape') {
+            closeLightbox();
+            closeFilter();
+          }
+        });
+
+        // Prev / Next button clicks
+        prevBtn.addEventListener('click', prev);
+        nextBtn.addEventListener('click', next);
+
+        // Filter modal triggers
+        openFilterBtn.addEventListener('click', () => {
+          filterModal.classList.add('is-open');
+        });
+
+        closeFilterBtn.addEventListener('click', closeFilter);
+
+        filterModal.addEventListener('click', (e) => {
+          if (e.target === filterModal) closeFilter();
+        });
+
+        // Filter button selection
+        formatFilters.querySelectorAll('.filter-option-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            formatFilters.querySelectorAll('.filter-option-btn').forEach(b => b.classList.remove('is-selected'));
+            btn.classList.add('is-selected');
+            activeFormatFilter = btn.dataset.value;
+            applyFilters();
+          });
+        });
+
+        pillarFilters.querySelectorAll('.filter-option-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            pillarFilters.querySelectorAll('.filter-option-btn').forEach(b => b.classList.remove('is-selected'));
+            btn.classList.add('is-selected');
+            activePillarFilter = btn.dataset.value;
+            applyFilters();
+          });
+        });
+
+        // Lightbox modal listeners
+        lightboxCloseBtn.addEventListener('click', closeLightbox);
+        lightboxModal.addEventListener('click', (e) => {
+          if (e.target === lightboxModal || e.target === document.getElementById('lightboxBody')) {
+            closeLightbox();
+          }
+        });
+
+        lightboxImg.addEventListener('click', () => {
+          lightboxImg.classList.toggle('is-zoomed');
+        });
+
+        // Window resize adaptation
+        window.addEventListener('resize', () => {
+          updateCarouselTransforms(0, true);
+        });
+      }
+
+      function closeFilter() {
+        filterModal.classList.remove('is-open');
+      }
+
+      // Lightbox Handlers
+      function openLightbox(post) {
+        if (!post) return;
+        const coverPath = post.image || (post.thumbnail ? post.thumbnail.replace('thumbnails/', '') : 'assets/images/this-is-not-a-human.jpg');
+        lightboxImg.src = coverPath;
+        lightboxImg.classList.remove('is-zoomed');
+        lightboxTitle.textContent = post.title || 'Artwork Preview';
+        lightboxDownloadBtn.href = coverPath;
+        lightboxDownloadBtn.download = `${post.slug || 'artwork'}-cover`;
+        lightboxModal.classList.add('is-open');
+      }
+
+      function closeLightbox() {
+        lightboxModal.classList.remove('is-open');
+        lightboxImg.classList.remove('is-zoomed');
+      }
+
+      window.resetFilters = function() {
+        activeFormatFilter = 'ALL';
+        activePillarFilter = 'ALL';
+        formatFilters.querySelectorAll('.filter-option-btn').forEach(b => b.classList.toggle('is-selected', b.dataset.value === 'ALL'));
+        pillarFilters.querySelectorAll('.filter-option-btn').forEach(b => b.classList.toggle('is-selected', b.dataset.value === 'ALL'));
+        applyFilters();
+      };
+
+      // Boot
+      document.addEventListener('DOMContentLoaded', init);
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        init();
+      }
+
+    })();
+  </script>
+</body>
+</html>

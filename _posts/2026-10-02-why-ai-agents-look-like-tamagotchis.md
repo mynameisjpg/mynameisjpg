@@ -14,7 +14,7 @@ category: "observations"
 
 topic:
   pillar: "Philosophy of the Image, Tech & Visual Culture"
-  subtopic: "Interface Politics & Product Psychology"
+  subtopic: "Interface politics & product psychology"
 
 tags:
   - "ai-mascots"

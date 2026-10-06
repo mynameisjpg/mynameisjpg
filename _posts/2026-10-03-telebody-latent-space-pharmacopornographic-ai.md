@@ -13,7 +13,7 @@ format: "essay"
 
 topic:
   pillar: "Philosophy and Critical Theory"
-  subtopic: "Biopolitics, Somatic Technologies & Body Epistemology"
+  subtopic: "Somatopolitics & Latent Space"
 
 tags:
   - "paul-b-preciado"

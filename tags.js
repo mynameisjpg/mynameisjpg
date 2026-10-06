@@ -74,7 +74,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
         "url": "posts/lecun-world-models-jepa.html"
       }
     ],
@@ -136,7 +136,6 @@ window.DYNAMIC_TAGS = [
     ],
     "subtopics": [
       "COMPUTER VISION VS. HUMAN PERCEPTION",
-      "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
       "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
       "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
       "LLM ARCHITECTURES AND MECHANICS",
@@ -185,7 +184,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.28",
         "format": "NOTE",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "DECONSTRUCTION & CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/shanzhai-deconstructing-original.html"
       },
       {
@@ -205,7 +204,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
         "url": "posts/ai-images-groupe-mu.html"
       },
       {
@@ -301,7 +300,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
+        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       },
       {
@@ -383,7 +382,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
         "url": "posts/lecun-world-models-jepa.html"
       }
     ],
@@ -428,7 +427,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.02",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "subtopic": "COGNITIVE AND VISUAL BIASES",
         "url": "posts/5-psychology-effects-used-in-app-design.html"
       },
       {
@@ -493,7 +492,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       },
       {
@@ -503,7 +502,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       },
       {
@@ -545,7 +544,8 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+      "SOMATOPOLITICS & LATENT SPACE",
       "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
     ],
     "connected_tags": [
@@ -571,7 +571,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       },
       {
@@ -581,7 +581,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       },
       {
@@ -623,7 +623,8 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+      "SOMATOPOLITICS & LATENT SPACE",
       "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
     ],
     "connected_tags": [
@@ -649,7 +650,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       },
       {
@@ -659,7 +660,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       },
       {
@@ -669,7 +670,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.28",
         "format": "NOTE",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "DECONSTRUCTION & CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/shanzhai-deconstructing-original.html"
       }
     ],
@@ -701,8 +702,9 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
-      "DECONSTRUCTION & CULTURE"
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+      "EPISTEMOLOGY OF REPRESENTATION",
+      "SOMATOPOLITICS & LATENT SPACE"
     ],
     "connected_tags": [
       "paul-b-preciado",
@@ -827,7 +829,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
         "url": "posts/ai-images-groupe-mu.html"
       }
     ],
@@ -860,7 +862,7 @@ window.DYNAMIC_TAGS = [
     ],
     "subtopics": [
       "ANATOMY AND PSYCHOPHYSICS OF VISION",
-      "MODES OF SEEING & VISUAL SEMIOTICS"
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
     ],
     "connected_tags": [
       "psychophysics",
@@ -972,56 +974,6 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
-    "id": "subtopic-biopolitics-somatic-technologies-body-epistemology",
-    "name": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
-    "label": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
-    "type": "subtopic",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
-      },
-      {
-        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "format": "ESSAY",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "format": "ESSAY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
-        "date": "2026.10.03"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY AND CRITICAL THEORY"
-    ],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
     "id": "subtopic-computer-vision-vs-human-perception",
     "name": "COMPUTER VISION VS. HUMAN PERCEPTION",
     "label": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -1072,6 +1024,106 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "subtopic-epistemology-of-representation",
+    "name": "EPISTEMOLOGY OF REPRESENTATION",
+    "label": "EPISTEMOLOGY OF REPRESENTATION",
+    "type": "subtopic",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "date": "2026.09.28",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/shanzhai-deconstructing-original.html"
+      },
+      {
+        "id": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-vector-space.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "slug": "shanzhai-deconstructing-original",
+        "format": "NOTE",
+        "url": "posts/shanzhai-deconstructing-original.html",
+        "date": "2026.09.28"
+      },
+      {
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "slug": "foucault-borges-vector-space",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-vector-space.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
+    "id": "subtopic-human-vs-machine-intelligence-and-benchmarking",
+    "name": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+    "label": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+    "type": "subtopic",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "date": "2026.09.26",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
+      },
+      {
+        "id": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "date": "2026.09.24",
+        "format": "ESSAY",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+        "url": "posts/lecun-world-models-jepa.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "format": "RESOURCE",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "slug": "lecun-world-models-jepa",
+        "format": "ESSAY",
+        "url": "posts/lecun-world-models-jepa.html",
+        "date": "2026.09.24"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
     "id": "pillar-philosophy-and-critical-theory",
     "name": "PHILOSOPHY AND CRITICAL THEORY",
     "label": "PHILOSOPHY AND CRITICAL THEORY",
@@ -1085,7 +1137,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       },
       {
@@ -1095,7 +1147,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
     ],
@@ -1193,7 +1245,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       },
       {
@@ -1203,7 +1255,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.28",
         "format": "NOTE",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "DECONSTRUCTION & CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/shanzhai-deconstructing-original.html"
       }
     ],
@@ -1228,8 +1280,8 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
-      "DECONSTRUCTION & CULTURE"
+      "EPISTEMOLOGY OF REPRESENTATION",
+      "SOMATOPOLITICS & LATENT SPACE"
     ],
     "connected_tags": [
       "philosophy",
@@ -1375,7 +1427,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       },
       {
@@ -1385,7 +1437,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
         "url": "posts/ai-images-groupe-mu.html"
       }
     ],
@@ -1410,8 +1462,8 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
-      "MODES OF SEEING & VISUAL SEMIOTICS"
+      "MODES OF SEEING AND VISUAL SEMIOTICS",
+      "SOMATOPOLITICS & LATENT SPACE"
     ],
     "connected_tags": [
       "paul-b-preciado",
@@ -1507,7 +1559,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
         "url": "posts/ai-images-groupe-mu.html"
       }
     ],
@@ -1532,7 +1584,7 @@ window.DYNAMIC_TAGS = [
     ],
     "subtopics": [
       "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-      "MODES OF SEEING & VISUAL SEMIOTICS"
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
     ],
     "connected_tags": [
       "ai-mascots",
@@ -1567,7 +1619,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
         "url": "posts/lecun-world-models-jepa.html"
       }
     ],
@@ -1592,7 +1644,7 @@ window.DYNAMIC_TAGS = [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
     ],
     "subtopics": [
-      "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
       "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
     ],
     "connected_tags": [
@@ -1618,7 +1670,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       },
       {
@@ -1628,7 +1680,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
     ],
@@ -1652,7 +1704,8 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+      "SOMATOPOLITICS & LATENT SPACE"
     ],
     "connected_tags": [
       "pharmacopornography",
@@ -1677,7 +1730,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       },
       {
@@ -1687,7 +1740,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
     ],
@@ -1711,7 +1764,8 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+      "SOMATOPOLITICS & LATENT SPACE"
     ],
     "connected_tags": [
       "paul-b-preciado",
@@ -1736,7 +1790,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       },
       {
@@ -1746,7 +1800,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
     ],
@@ -1770,7 +1824,8 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+      "SOMATOPOLITICS & LATENT SPACE"
     ],
     "connected_tags": [
       "paul-b-preciado",
@@ -1854,7 +1909,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       },
       {
@@ -1889,7 +1944,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
       "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
     ],
     "connected_tags": [
@@ -2023,133 +2078,67 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "subtopic-deconstruction-culture",
-    "name": "DECONSTRUCTION & CULTURE",
-    "label": "DECONSTRUCTION & CULTURE",
+    "id": "subtopic-biopolitics-pharmacopornography",
+    "name": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+    "label": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
     "type": "subtopic",
     "count": 1,
     "posts": [
       {
-        "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "shanzhai-deconstructing-original",
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "date": "2026.09.28",
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY AND CRITICAL THEORY"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
+    "id": "subtopic-cognitive-and-visual-biases",
+    "name": "COGNITIVE AND VISUAL BIASES",
+    "label": "COGNITIVE AND VISUAL BIASES",
+    "type": "subtopic",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "title": "5 Psychology Effects Used in App Design",
+        "date": "2026.10.02",
         "format": "NOTE",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "DECONSTRUCTION & CULTURE",
-        "url": "posts/shanzhai-deconstructing-original.html"
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "COGNITIVE AND VISUAL BIASES",
+        "url": "posts/5-psychology-effects-used-in-app-design.html"
       }
     ],
     "links": [
       {
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "shanzhai-deconstructing-original",
+        "title": "5 Psychology Effects Used in App Design",
+        "slug": "5-psychology-effects-used-in-app-design",
         "format": "NOTE",
-        "url": "posts/shanzhai-deconstructing-original.html",
-        "date": "2026.09.28"
+        "url": "posts/5-psychology-effects-used-in-app-design.html",
+        "date": "2026.10.02"
       }
     ],
     "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
-    "id": "subtopic-epistemology-of-representation",
-    "name": "EPISTEMOLOGY OF REPRESENTATION",
-    "label": "EPISTEMOLOGY OF REPRESENTATION",
-    "type": "subtopic",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
-    "id": "subtopic-human-vs-machine-intelligence-world-models",
-    "name": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
-    "label": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
-    "type": "subtopic",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "lecun-world-models-jepa",
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "date": "2026.09.24",
-        "format": "ESSAY",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
-        "url": "posts/lecun-world-models-jepa.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "lecun-world-models-jepa",
-        "format": "ESSAY",
-        "url": "posts/lecun-world-models-jepa.html",
-        "date": "2026.09.24"
-      }
-    ],
-    "pillars": [
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
-    ],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
-    "id": "subtopic-human-vs-machine-intelligence-and-benchmarking",
-    "name": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-    "label": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-    "type": "subtopic",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "date": "2026.09.26",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/harvard-s-computer-science-career-for-free.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "format": "RESOURCE",
-        "url": "posts/harvard-s-computer-science-career-for-free.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
     ],
     "subtopics": [],
     "connected_tags": []
@@ -2221,9 +2210,9 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
-    "id": "subtopic-modes-of-seeing-visual-semiotics",
-    "name": "MODES OF SEEING & VISUAL SEMIOTICS",
-    "label": "MODES OF SEEING & VISUAL SEMIOTICS",
+    "id": "subtopic-modes-of-seeing-and-visual-semiotics",
+    "name": "MODES OF SEEING AND VISUAL SEMIOTICS",
+    "label": "MODES OF SEEING AND VISUAL SEMIOTICS",
     "type": "subtopic",
     "count": 1,
     "posts": [
@@ -2234,7 +2223,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
         "url": "posts/ai-images-groupe-mu.html"
       }
     ],
@@ -2254,34 +2243,34 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
-    "id": "subtopic-psychophysics-of-digital-interfaces",
-    "name": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
-    "label": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+    "id": "subtopic-somatopolitics-latent-space",
+    "name": "SOMATOPOLITICS & LATENT SPACE",
+    "label": "SOMATOPOLITICS & LATENT SPACE",
     "type": "subtopic",
     "count": 1,
     "posts": [
       {
-        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
-        "slug": "5-psychology-effects-used-in-app-design",
-        "title": "5 Psychology Effects Used in App Design",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
-        "url": "posts/5-psychology-effects-used-in-app-design.html"
+        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       }
     ],
     "links": [
       {
-        "title": "5 Psychology Effects Used in App Design",
-        "slug": "5-psychology-effects-used-in-app-design",
-        "format": "NOTE",
-        "url": "posts/5-psychology-effects-used-in-app-design.html",
-        "date": "2026.10.02"
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "format": "ESSAY",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
+        "date": "2026.10.03"
       }
     ],
     "pillars": [
-      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+      "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [],
     "connected_tags": []
@@ -2320,9 +2309,9 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
-    "id": "subtopic-the-ethics-of-synthetic-media",
-    "name": "THE ETHICS OF SYNTHETIC MEDIA",
-    "label": "THE ETHICS OF SYNTHETIC MEDIA",
+    "id": "subtopic-the-political-economy-of-synthetic-media-and-digital-labor",
+    "name": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
+    "label": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
     "type": "subtopic",
     "count": 1,
     "posts": [
@@ -2333,7 +2322,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
+        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
     ],
@@ -2576,7 +2565,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.02",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "subtopic": "COGNITIVE AND VISUAL BIASES",
         "url": "posts/5-psychology-effects-used-in-app-design.html"
       }
     ],
@@ -2593,7 +2582,7 @@ window.DYNAMIC_TAGS = [
       "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
     ],
     "subtopics": [
-      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+      "COGNITIVE AND VISUAL BIASES"
     ],
     "connected_tags": [
       "observations",
@@ -2618,7 +2607,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
+        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
     ],
@@ -2635,7 +2624,7 @@ window.DYNAMIC_TAGS = [
       "AI PERCEPTION, CULTURE & REPRESENTATION"
     ],
     "subtopics": [
-      "THE ETHICS OF SYNTHETIC MEDIA"
+      "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
     ],
     "connected_tags": [
       "vision-models",
@@ -2743,7 +2732,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.28",
         "format": "NOTE",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "DECONSTRUCTION & CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/shanzhai-deconstructing-original.html"
       }
     ],
@@ -2760,7 +2749,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "DECONSTRUCTION & CULTURE"
+      "EPISTEMOLOGY OF REPRESENTATION"
     ],
     "connected_tags": [
       "byung-chul-han",
@@ -2868,7 +2857,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       }
     ],
@@ -2885,7 +2874,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+      "SOMATOPOLITICS & LATENT SPACE"
     ],
     "connected_tags": [
       "paul-b-preciado",
@@ -3036,7 +3025,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
     ],
@@ -3053,7 +3042,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY"
     ],
     "connected_tags": [
       "paul-b-preciado",
@@ -3246,7 +3235,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       }
     ],
@@ -3263,7 +3252,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+      "SOMATOPOLITICS & LATENT SPACE"
     ],
     "connected_tags": [
       "paul-b-preciado",
@@ -3708,7 +3697,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.28",
         "format": "NOTE",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "DECONSTRUCTION & CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/shanzhai-deconstructing-original.html"
       }
     ],
@@ -3725,7 +3714,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "DECONSTRUCTION & CULTURE"
+      "EPISTEMOLOGY OF REPRESENTATION"
     ],
     "connected_tags": [
       "byung-chul-han",
@@ -3833,7 +3822,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.02",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "subtopic": "COGNITIVE AND VISUAL BIASES",
         "url": "posts/5-psychology-effects-used-in-app-design.html"
       }
     ],
@@ -3850,7 +3839,7 @@ window.DYNAMIC_TAGS = [
       "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
     ],
     "subtopics": [
-      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+      "COGNITIVE AND VISUAL BIASES"
     ],
     "connected_tags": [
       "observations",
@@ -4001,7 +3990,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
         "url": "posts/lecun-world-models-jepa.html"
       }
     ],
@@ -4018,7 +4007,7 @@ window.DYNAMIC_TAGS = [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
     ],
     "subtopics": [
-      "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS"
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
     ],
     "connected_tags": [
       "yann-lecun",
@@ -4085,7 +4074,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
+        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
     ],
@@ -4102,7 +4091,7 @@ window.DYNAMIC_TAGS = [
       "AI PERCEPTION, CULTURE & REPRESENTATION"
     ],
     "subtopics": [
-      "THE ETHICS OF SYNTHETIC MEDIA"
+      "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
     ],
     "connected_tags": [
       "vision-models",
@@ -4294,7 +4283,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       }
     ],
@@ -4311,7 +4300,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+      "SOMATOPOLITICS & LATENT SPACE"
     ],
     "connected_tags": [
       "paul-b-preciado",
@@ -4336,7 +4325,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
     ],
@@ -4353,7 +4342,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY"
     ],
     "connected_tags": [
       "paul-b-preciado",
@@ -4378,7 +4367,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
     ],
@@ -4395,7 +4384,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY"
     ],
     "connected_tags": [
       "paul-b-preciado",
@@ -4588,7 +4577,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
         "url": "posts/ai-images-groupe-mu.html"
       }
     ],
@@ -4605,7 +4594,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "MODES OF SEEING & VISUAL SEMIOTICS"
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
     ],
     "connected_tags": [
       "semiotics",
@@ -4629,7 +4618,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
+        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
     ],
@@ -4646,7 +4635,7 @@ window.DYNAMIC_TAGS = [
       "AI PERCEPTION, CULTURE & REPRESENTATION"
     ],
     "subtopics": [
-      "THE ETHICS OF SYNTHETIC MEDIA"
+      "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
     ],
     "connected_tags": [
       "vision-models",
@@ -4712,7 +4701,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
+        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
     ],
@@ -4729,7 +4718,7 @@ window.DYNAMIC_TAGS = [
       "AI PERCEPTION, CULTURE & REPRESENTATION"
     ],
     "subtopics": [
-      "THE ETHICS OF SYNTHETIC MEDIA"
+      "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
     ],
     "connected_tags": [
       "vision-models",
@@ -4963,7 +4952,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
         "url": "posts/lecun-world-models-jepa.html"
       }
     ],
@@ -4980,7 +4969,7 @@ window.DYNAMIC_TAGS = [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
     ],
     "subtopics": [
-      "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS"
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
     ],
     "connected_tags": [
       "yann-lecun",
@@ -5131,7 +5120,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.02",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "subtopic": "COGNITIVE AND VISUAL BIASES",
         "url": "posts/5-psychology-effects-used-in-app-design.html"
       }
     ],
@@ -5148,7 +5137,7 @@ window.DYNAMIC_TAGS = [
       "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
     ],
     "subtopics": [
-      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+      "COGNITIVE AND VISUAL BIASES"
     ],
     "connected_tags": [
       "observations",
@@ -5215,7 +5204,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
         "url": "posts/lecun-world-models-jepa.html"
       }
     ],
@@ -5232,7 +5221,7 @@ window.DYNAMIC_TAGS = [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
     ],
     "subtopics": [
-      "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS"
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
     ],
     "connected_tags": [
       "yann-lecun",
@@ -5341,7 +5330,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
     ],
@@ -5358,7 +5347,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY"
     ],
     "connected_tags": [
       "paul-b-preciado",
@@ -5509,7 +5498,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.02",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "subtopic": "COGNITIVE AND VISUAL BIASES",
         "url": "posts/5-psychology-effects-used-in-app-design.html"
       }
     ],
@@ -5526,7 +5515,7 @@ window.DYNAMIC_TAGS = [
       "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
     ],
     "subtopics": [
-      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+      "COGNITIVE AND VISUAL BIASES"
     ],
     "connected_tags": [
       "app-design",
@@ -5677,7 +5666,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
         "url": "posts/lecun-world-models-jepa.html"
       }
     ],
@@ -5694,7 +5683,7 @@ window.DYNAMIC_TAGS = [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
     ],
     "subtopics": [
-      "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS"
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
     ],
     "connected_tags": [
       "yann-lecun",
@@ -5719,7 +5708,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
         "url": "posts/ai-images-groupe-mu.html"
       }
     ],
@@ -5736,7 +5725,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "MODES OF SEEING & VISUAL SEMIOTICS"
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
     ],
     "connected_tags": [
       "semiotics",
@@ -5760,7 +5749,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
     ],
@@ -5777,7 +5766,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY"
     ],
     "connected_tags": [
       "paul-b-preciado",
@@ -5802,7 +5791,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       }
     ],
@@ -5819,7 +5808,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+      "SOMATOPOLITICS & LATENT SPACE"
     ],
     "connected_tags": [
       "paul-b-preciado",
@@ -5970,7 +5959,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.02",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "subtopic": "COGNITIVE AND VISUAL BIASES",
         "url": "posts/5-psychology-effects-used-in-app-design.html"
       }
     ],
@@ -5987,7 +5976,7 @@ window.DYNAMIC_TAGS = [
       "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
     ],
     "subtopics": [
-      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+      "COGNITIVE AND VISUAL BIASES"
     ],
     "connected_tags": [
       "observations",
@@ -6012,7 +6001,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       }
     ],
@@ -6029,7 +6018,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+      "SOMATOPOLITICS & LATENT SPACE"
     ],
     "connected_tags": [
       "paul-b-preciado",
@@ -6138,7 +6127,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.28",
         "format": "NOTE",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "DECONSTRUCTION & CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/shanzhai-deconstructing-original.html"
       }
     ],
@@ -6155,7 +6144,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "DECONSTRUCTION & CULTURE"
+      "EPISTEMOLOGY OF REPRESENTATION"
     ],
     "connected_tags": [
       "byung-chul-han",
@@ -6305,7 +6294,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.28",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING & VISUAL SEMIOTICS",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
         "url": "posts/ai-images-groupe-mu.html"
       }
     ],
@@ -6322,7 +6311,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "MODES OF SEEING & VISUAL SEMIOTICS"
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
     ],
     "connected_tags": [
       "groupe-mu",
@@ -6346,7 +6335,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
         "url": "posts/lecun-world-models-jepa.html"
       }
     ],
@@ -6363,7 +6352,7 @@ window.DYNAMIC_TAGS = [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
     ],
     "subtopics": [
-      "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS"
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
     ],
     "connected_tags": [
       "yann-lecun",
@@ -6388,7 +6377,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.28",
         "format": "NOTE",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "DECONSTRUCTION & CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/shanzhai-deconstructing-original.html"
       }
     ],
@@ -6405,7 +6394,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "DECONSTRUCTION & CULTURE"
+      "EPISTEMOLOGY OF REPRESENTATION"
     ],
     "connected_tags": [
       "byung-chul-han",
@@ -6555,7 +6544,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
       }
     ],
@@ -6572,7 +6561,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY"
     ],
     "connected_tags": [
       "paul-b-preciado",
@@ -6639,7 +6628,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
         "url": "posts/lecun-world-models-jepa.html"
       }
     ],
@@ -6656,7 +6645,7 @@ window.DYNAMIC_TAGS = [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
     ],
     "subtopics": [
-      "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS"
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
     ],
     "connected_tags": [
       "yann-lecun",
@@ -6681,7 +6670,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
+        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
     ],
@@ -6698,7 +6687,7 @@ window.DYNAMIC_TAGS = [
       "AI PERCEPTION, CULTURE & REPRESENTATION"
     ],
     "subtopics": [
-      "THE ETHICS OF SYNTHETIC MEDIA"
+      "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
     ],
     "connected_tags": [
       "vision-models",
@@ -6722,7 +6711,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.03",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
         "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
       }
     ],
@@ -6739,7 +6728,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY AND CRITICAL THEORY"
     ],
     "subtopics": [
-      "BIOPOLITICS, SOMATIC TECHNOLOGIES & BODY EPISTEMOLOGY"
+      "SOMATOPOLITICS & LATENT SPACE"
     ],
     "connected_tags": [
       "paul-b-preciado",
@@ -6764,7 +6753,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.02",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "subtopic": "COGNITIVE AND VISUAL BIASES",
         "url": "posts/5-psychology-effects-used-in-app-design.html"
       }
     ],
@@ -6781,7 +6770,7 @@ window.DYNAMIC_TAGS = [
       "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
     ],
     "subtopics": [
-      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+      "COGNITIVE AND VISUAL BIASES"
     ],
     "connected_tags": [
       "observations",
@@ -6806,7 +6795,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.02",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "subtopic": "COGNITIVE AND VISUAL BIASES",
         "url": "posts/5-psychology-effects-used-in-app-design.html"
       }
     ],
@@ -6823,7 +6812,7 @@ window.DYNAMIC_TAGS = [
       "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
     ],
     "subtopics": [
-      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+      "COGNITIVE AND VISUAL BIASES"
     ],
     "connected_tags": [
       "observations",
@@ -6890,7 +6879,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.02",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "subtopic": "COGNITIVE AND VISUAL BIASES",
         "url": "posts/5-psychology-effects-used-in-app-design.html"
       }
     ],
@@ -6907,7 +6896,7 @@ window.DYNAMIC_TAGS = [
       "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
     ],
     "subtopics": [
-      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+      "COGNITIVE AND VISUAL BIASES"
     ],
     "connected_tags": [
       "observations",
@@ -6932,7 +6921,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.02",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "PSYCHOPHYSICS OF DIGITAL INTERFACES",
+        "subtopic": "COGNITIVE AND VISUAL BIASES",
         "url": "posts/5-psychology-effects-used-in-app-design.html"
       }
     ],
@@ -6949,7 +6938,7 @@ window.DYNAMIC_TAGS = [
       "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
     ],
     "subtopics": [
-      "PSYCHOPHYSICS OF DIGITAL INTERFACES"
+      "COGNITIVE AND VISUAL BIASES"
     ],
     "connected_tags": [
       "observations",
@@ -7058,7 +7047,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
         "url": "posts/lecun-world-models-jepa.html"
       }
     ],
@@ -7075,7 +7064,7 @@ window.DYNAMIC_TAGS = [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
     ],
     "subtopics": [
-      "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS"
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
     ],
     "connected_tags": [
       "yann-lecun",
@@ -7184,7 +7173,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "THE ETHICS OF SYNTHETIC MEDIA",
+        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
     ],
@@ -7201,7 +7190,7 @@ window.DYNAMIC_TAGS = [
       "AI PERCEPTION, CULTURE & REPRESENTATION"
     ],
     "subtopics": [
-      "THE ETHICS OF SYNTHETIC MEDIA"
+      "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
     ],
     "connected_tags": [
       "image",
@@ -7267,7 +7256,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
         "url": "posts/lecun-world-models-jepa.html"
       }
     ],
@@ -7284,7 +7273,7 @@ window.DYNAMIC_TAGS = [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
     ],
     "subtopics": [
-      "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS"
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
     ],
     "connected_tags": [
       "yann-lecun",
@@ -7309,7 +7298,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.09.24",
         "format": "ESSAY",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
         "url": "posts/lecun-world-models-jepa.html"
       }
     ],
@@ -7326,7 +7315,7 @@ window.DYNAMIC_TAGS = [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
     ],
     "subtopics": [
-      "HUMAN VS. MACHINE INTELLIGENCE & WORLD MODELS"
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
     ],
     "connected_tags": [
       "jepa",

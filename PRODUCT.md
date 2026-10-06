@@ -29,7 +29,7 @@ A personal, open digital workspace published under the moniker `Untitled.jpg` (`
 ## Capabilities and Constraints
 
 - **Content Taxonomy**: 4 Core Formats — Essays (`/essays`), Notes (`/notes`), Bookmarks (`/bookmarks`), Resources (`/resources`).
-- **Topics (Metadata Tags)**: Visual Perception & Psychology of Seeing; AI Perception, Culture & Representation; Language, LLMs & Artificial Intelligence; Philosophy of the Image, Tech & Visual Culture.
+- **Topics (Metadata Tags)**: AI Perception, Culture & Representation; Visual Perception & Psychology of Seeing; Language, LLMs & Artificial Intelligence; Philosophy of the Image, Tech & Visual Culture; Philosophy and Critical Theory.
 - **Visual Structure**: Fixed left sidebar navigation rail with newsletter subscribe CTA button; asymmetrical 2-column grid (65% Essays/Notes, 35% Bookmarks/Resources).
 - **Per-Post Predefined Theme Modes**: Each dispatch sets its own visual theme (`theme: dark` in Midnight Slate `#1B2427` or `theme: light` in Off-White `#DEE6E9`) via Markdown frontmatter.
 - **Archival Badging**: Raw metadata chips pinned to card corners (`[FORMAT: ESSAY]`, `[MODE: DARK]`, `[TOPIC: AI PERCEPTION]`).
@@ -58,46 +58,48 @@ A personal, open digital workspace published under the moniker `Untitled.jpg` (`
 
 # Content Architecture
 
-##1. Content Pillars:
+## 1. Content Pillars:
 
-- The four main conceptual pillars under which 90% of the content should fall into.
-  ├── 1: Visual Perception & Psychology of Seeing
-  | ├── Sub-topic 1.1: Anatomy and psychophysics of vision
-  | ├── Sub-topic 1.2: Visual illusions and optical paradoxes
-  | ├── Sub-topic 1.3: Cognitive and Visual Biases
-  | ├── Sub-topic 1.4: Perceptual mechanics and Gestalt
-  | ├── Sub-topic 1.5: Multi-sensory integration and cross-modal perception
-  | └── Sub-topic 1.6: Attention and trained perception
+- The five main conceptual pillars under which content falls into:
+  ├── 1: AI Perception, Culture & Representation
+  | ├── Sub-topic 1.1: Synthetic and statistical images ("the mean image")
+  | ├── Sub-topic 1.2: Latent spaces and AI archives
+  | ├── Sub-topic 1.3: Generative technologies and prompt engineering
+  | ├── Sub-topic 1.4: Computer vision vs. human perception
+  | ├── Sub-topic 1.5: The political economy of synthetic media and digital labor
+  | ├── Sub-topic 1.6: Societal and algorithmic biases
+  | └── Sub-topic 1.7: Synthetic Identity & Normative Machines
   |
-  ├── 2: AI Perception, Culture and Representation
-  | ├── Sub-topic 2.1: Synthetic and statistical images ("the mean image")
-  | ├── Sub-topic 2.2: Latent spaces and AI archives
-  | ├── Sub-topic 2.3: Generative technologies and prompt engineering
-  | ├── Sub-topic 2.4: Computer vision vs. human perception
-  | ├── Sub-topic 2.5: The political economy of synthetic media and digital labor
-  | ├── Sub-topic 2.6: Societal and algorithmic biases
-  | ├── Sub-topic 2.7: Generative media, synthetic imagery & visual culture
-  | ├── Sub-topic 2.8: Machine vision, latent spaces & algorithmic representation
-  | └── Sub-topic 2.9: Political economy, ethics & societal impacts of AI
+  ├── 2: Visual Perception & Psychology of Seeing
+  | ├── Sub-topic 2.1: Anatomy and psychophysics of vision
+  | ├── Sub-topic 2.2: Visual illusions and optical paradoxes
+  | ├── Sub-topic 2.3: Cognitive and Visual Biases
+  | ├── Sub-topic 2.4: Perceptual mechanics and Gestalt
+  | ├── Sub-topic 2.5: Multi-sensory integration and cross-modal perception
+  | └── Sub-topic 2.6: Attention and trained perception
   |
-  ├── 3: Language, LLMs and artificial intelligence
+  ├── 3: Language, LLMs & Artificial Intelligence
   | ├── Sub-topic 3.1: LLM architectures and mechanics
   | ├── Sub-topic 3.2: Human vs. machine intelligence and benchmarking
   | ├── Sub-topic 3.3: Language, meaning and symbolic grounding
   | ├── Sub-topic 3.4: Agentic systems and human agency
   | ├── Sub-topic 3.5: Conversational voice AI and speech processing
-  | ├── Sub-topic 3.6: AI safety, alignment and extreme risk evaluation
-  | ├── Sub-topic 3.7: Large language models, architectures & computational reasoning
-  | ├── Sub-topic 3.8: Machine vs. human cognition, agentic systems & autonomy
-  | └── Sub-topic 3.9: Semantics, symbolic grounding & knowledge systems
+  | └── Sub-topic 3.6: AI safety, alignment and extreme risk evaluation
   |
-  └── 4: Philosophy of the image, tech and visual culture
-  ├── Sub-topic 4.1: Modes of seeing and visual semiotics
-  ├── Sub-topic 4.2: Photography, truth and simulation
-  ├── Sub-topic 4.3: Epistemology of representation
-  ├── Sub-topic 4.4: Aesthetics as ideology and interface politics
-  ├── Sub-topic 4.5: Media ecology and psychological projection
-  └── Sub-topic 4.6: The archival impulse and digital memory systems
+  ├── 4: Philosophy of the Image, Tech & Visual Culture
+  | ├── Sub-topic 4.1: Modes of seeing and visual semiotics
+  | ├── Sub-topic 4.2: Photography, truth and simulation
+  | ├── Sub-topic 4.3: Epistemology of representation
+  | ├── Sub-topic 4.4: Aesthetics as ideology and interface politics
+  | ├── Sub-topic 4.5: Media ecology and psychological projection
+  | ├── Sub-topic 4.6: The archival impulse and digital memory systems
+  | └── Sub-topic 4.7: Interface politics & product psychology
+  |
+  └── 5: Philosophy and Critical Theory
+    ├── Sub-topic 5.1: Epistemic Paradigms & Foucault
+    ├── Sub-topic 5.2: Critical Theory of Technology
+    ├── Sub-topic 5.3: Biopolitics & Pharmacopornography
+    └── Sub-topic 5.4: Somatopolitics & Latent Space
 
 ##2. Content Types / Post Formats:
 ├── **Essays**: ~1500-3000 words. Deep-dive investigations of a single topic within one of the four pillars.

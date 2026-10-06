@@ -25,6 +25,7 @@ topic:
   # - "Visual Perception & Psychology of Seeing"
   # - "Language, LLMs & Artificial Intelligence"
   # - "Philosophy of the Image, Tech & Visual Culture"
+  # - "Philosophy and Critical Theory"
   pillar: "AI Perception, Culture & Representation"
   subtopic: "Synthetic Identity & Normative Machines"
 

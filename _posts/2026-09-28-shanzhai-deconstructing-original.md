@@ -14,7 +14,7 @@ category: "reflection"
 
 topic:
   pillar: "Philosophy of the Image, Tech & Visual Culture"
-  subtopic: "Deconstruction & Culture"
+  subtopic: "Epistemology of representation"
 
 tags:
   - "byung-chul-han"

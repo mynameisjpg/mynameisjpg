@@ -40,7 +40,7 @@ bookmark_url: "https://hai.stanford.edu/news/spatial-intelligence"
 
 topic:
   pillar: "Language, LLMs & Artificial Intelligence"
-  subtopic: "World Models & Spatial Intelligence"
+  subtopic: "Human vs. machine intelligence and benchmarking"
 
 tags:
   - "spatial-intelligence"

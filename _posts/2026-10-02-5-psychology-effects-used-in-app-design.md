@@ -9,7 +9,7 @@ status: "published"
 format: "note"
 topic:
   pillar: "Visual Perception & Psychology of Seeing"
-  subtopic: "Psychophysics of Digital Interfaces"
+  subtopic: "Cognitive and Visual Biases"
 tags:
   - "observations"
   - "app-design"

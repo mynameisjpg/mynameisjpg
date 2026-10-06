@@ -9,7 +9,7 @@ status: "published"
 format: "bookmark"
 topic:
   pillar: "AI Perception, Culture & Representation"
-  subtopic: "The Ethics of Synthetic Media"
+  subtopic: "The political economy of synthetic media and digital labor"
 tags:
   - "vision-models"
   - "image"

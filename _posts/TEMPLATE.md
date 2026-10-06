@@ -37,8 +37,9 @@ topic:
   # - "Visual Perception & Psychology of Seeing"
   # - "Language, LLMs & Artificial Intelligence"
   # - "Philosophy of the Image, Tech & Visual Culture"
+  # - "Philosophy and Critical Theory"
   pillar: "AI Perception, Culture & Representation"
-  subtopic: "Latent Spaces & Vector Embeddings"
+  subtopic: "Latent spaces and AI archives"
 
 tags:
   - "vector-space"

@@ -1145,16 +1145,16 @@ function getPostsForNode(nodeData) {
 
 function getPostUrl(p) {
   if (!p) return "#";
-  if (p.url && !p.url.startsWith("#") && (p.url.startsWith("http") || p.url.endsWith(".html"))) {
-    if (p.url.startsWith("posts/")) {
-      const baseName = p.url.replace(/^posts\//, "").replace(/^\d{4}-\d{2}-\d{2}-/, "");
-      return `posts/${baseName}`;
-    }
-    return p.url;
-  }
   const rawSlug = String(p.slug || p.id || "").trim();
-  const cleanSlug = rawSlug.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.html$/, "");
-  return `posts/${cleanSlug}.html`;
+  if (rawSlug) {
+    const cleanSlug = rawSlug.replace(/^posts\//, "").replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.html$/, "");
+    return `posts/${cleanSlug}.html`;
+  }
+  if (p.url && !p.url.startsWith("http") && p.url.includes(".html")) {
+    const baseName = p.url.replace(/^posts\//, "").replace(/^\d{4}-\d{2}-\d{2}-/, "");
+    return `posts/${baseName}`;
+  }
+  return p.url || "#";
 }
 
 function openTagsTableForNode(nodeData) {
@@ -1255,13 +1255,14 @@ function renderSelectedNodePostsStrip(nodeData) {
 
   const postCardsHtml = posts.map((p, idx) => {
     const postUrl = getPostUrl(p);
-    const bgStyle = p.image ? `background-image: url('${p.image}');` : '';
+    const coverImg = p.image || (p.thumbnail ? p.thumbnail.replace('thumbnails/', '') : '');
+    const bgStyle = coverImg ? `background-image: url('${coverImg}');` : '';
     const safeTitle = (p.title || "Read Dispatch").replace(/"/g, '&quot;');
     const safeReadTime = p.read_time ? ` • ${p.read_time}` : '';
     const isFeatured = p.featured === true || String(p.featured).toLowerCase() === 'true';
 
     return `
-      <a href="${postUrl}" class="nodemap-post-card ${isFeatured ? 'is-featured' : ''}" style="--card-idx: ${idx}; ${bgStyle}" title="${safeTitle}${safeReadTime}" target="_self">
+      <a href="${postUrl}" class="nodemap-post-card ${isFeatured ? 'is-featured' : ''}" style="--card-idx: ${idx}; ${bgStyle}" title="${safeTitle}${safeReadTime}" aria-label="${safeTitle}" target="_self">
         <div class="nodemap-post-card-inner">
           <span class="nodemap-post-card-label">READ</span>
         </div>

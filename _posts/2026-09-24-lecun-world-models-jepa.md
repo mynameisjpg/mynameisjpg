@@ -14,7 +14,7 @@ format: "essay"
 
 topic:
   pillar: "Language, LLMs & Artificial Intelligence"
-  subtopic: "Human vs. Machine Intelligence & World Models"
+  subtopic: "Human vs. machine intelligence and benchmarking"
 
 tags:
   - "yann-lecun"

@@ -16,7 +16,7 @@ bookmark_url: "https://monoskop.org/images/4/4c/Haraway_Donna_1985_A_Manifesto_f
 
 topic:
   pillar: "Philosophy of the Image, Tech & Visual Culture"
-  subtopic: "Aesthetics as Ideology and Interface Politics"
+  subtopic: "Aesthetics as ideology and interface politics"
 
 tags:
   - "haraway"

@@ -13,7 +13,7 @@ format: "essay"
 
 topic:
   pillar: "Philosophy of the Image, Tech & Visual Culture"
-  subtopic: "Modes of Seeing & Visual Semiotics"
+  subtopic: "Modes of seeing and visual semiotics"
 
 tags:
   - "semiotics"

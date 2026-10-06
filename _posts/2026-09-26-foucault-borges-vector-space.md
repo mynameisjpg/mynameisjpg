@@ -14,7 +14,7 @@ format: "essay"
 
 topic:
   pillar: "Philosophy of the Image, Tech & Visual Culture"
-  subtopic: "Epistemology of Representation"
+  subtopic: "Epistemology of representation"
 
 tags:
   - "foucault"

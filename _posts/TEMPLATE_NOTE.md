@@ -28,7 +28,7 @@ category: "reflection"
 
 topic:
   pillar: "Visual Perception & Psychology of Seeing"
-  subtopic: "Psychophysics of Digital Interfaces"
+  subtopic: "Anatomy and psychophysics of vision"
 
 tags:
   - "working-notes"

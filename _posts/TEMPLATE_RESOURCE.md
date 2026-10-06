@@ -36,7 +36,7 @@ resource_url: "https://github.com/username/repository-name"
 
 topic:
   pillar: "Philosophy of the Image, Tech & Visual Culture"
-  subtopic: "Aesthetics & Interface Politics"
+  subtopic: "Aesthetics as ideology and interface politics"
 
 tags:
   - "toolkit"

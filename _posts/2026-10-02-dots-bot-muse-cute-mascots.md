@@ -13,7 +13,7 @@ format: "essay"
 
 topic:
   pillar: "Philosophy of the Image, Tech & Visual Culture"
-  subtopic: "Aesthetics as Ideology and Interface Politics"
+  subtopic: "Aesthetics as ideology and interface politics"
 
 tags:
   - "ai-mascots"
