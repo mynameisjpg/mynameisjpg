@@ -973,15 +973,16 @@ function renderTimelineList() {
         .trim()
         .toUpperCase();
 
-      // Image path resolution
-      let imageSrc = "assets/images/turing1.png";
+      // Image path resolution (Thumbnail for list, Full resolution for lightbox)
+      let fullImageSrc = "assets/images/turing1.png";
       if (post.image) {
         if (typeof post.image === "object" && post.image.path) {
-          imageSrc = post.image.path;
+          fullImageSrc = post.image.path;
         } else if (typeof post.image === "string") {
-          imageSrc = post.image;
+          fullImageSrc = post.image;
         }
       }
+      const thumbSrc = post.thumbnail || fullImageSrc;
 
       return `
       <li class="timeline-item ${post.featured ? "is-featured" : ""}" id="timeline-item-${post.slug}">
@@ -998,8 +999,8 @@ function renderTimelineList() {
 
         <!-- Column 3: Thumbnail Box (Fixed 120px Height, Clickable Lightbox) -->
         <div class="timeline-thumb-col">
-          <div class="timeline-thumb-box" onclick="openImageLightbox('${imageSrc}', '${post.title.replace(/'/g, "\\'")}')" title="Click to view full image">
-            <img src="${imageSrc}" alt="${post.title}" class="timeline-thumb-img" onerror="this.src='assets/images/turing1.png'" />
+          <div class="timeline-thumb-box" onclick="openImageLightbox('${fullImageSrc}', '${post.title.replace(/'/g, "\\'")}')" title="Click to view full image">
+            <img src="${thumbSrc}" alt="${post.title}" class="timeline-thumb-img" loading="lazy" decoding="async" onerror="this.src='assets/images/turing1.png'" />
           </div>
         </div>
 

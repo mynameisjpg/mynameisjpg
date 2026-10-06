@@ -287,12 +287,14 @@
 .resource-card:hover .resource-card-link-text strong,
 .resource-card:focus-visible .resource-card-link-text strong,
 .resource-card a:hover {
-  color: var(--accent-coral);
+  color: var(--accent-rose);
 }
 
 .resource-card .resource-card-arrow {
   display: inline-block;
-  transition: transform var(--transition-fast), color var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .resource-card:hover .resource-card-arrow,
@@ -512,6 +514,7 @@
 .essay-column.theme-light .resource-card {
   background: var(--bg-light-card);
   border-color: var(--border-light);
+  color: var(--text-light-h, #121212);
 }
 
 .theme-light .resource-card:hover,
@@ -522,9 +525,9 @@
 .essay-column.theme-light .resource-card:focus-visible {
   transform: translateY(-3px);
   background: var(--bg-light-card-hover);
-  border-color: rgba(232, 74, 95, 0.4);
+  border-color: rgba(0, 0, 0, 0.22);
   box-shadow:
-    0 10px 24px rgba(0, 0, 0, 0.1),
+    0 10px 24px rgba(0, 0, 0, 0.12),
     0 0 16px rgba(232, 74, 95, 0.12);
 }
 
@@ -537,23 +540,58 @@
   font-weight: var(--weight-semibold);
 }
 
+.theme-light .resource-card .resource-card-link-text,
+.theme-light .resource-card .resource-card-link-text strong,
+.theme-light .resource-card strong,
 .theme-light .resource-card a,
+.post-column.theme-light .resource-card .resource-card-link-text,
+.post-column.theme-light .resource-card .resource-card-link-text strong,
+.post-column.theme-light .resource-card strong,
 .post-column.theme-light .resource-card a,
+.essay-column.theme-light .resource-card .resource-card-link-text,
+.essay-column.theme-light .resource-card .resource-card-link-text strong,
+.essay-column.theme-light .resource-card strong,
 .essay-column.theme-light .resource-card a {
-  color: var(--text-light-h);
+  color: #121212;
   font-weight: var(--weight-semibold);
+  transition: color var(--transition-fast);
 }
 
-.theme-light .resource-card a:hover,
-.post-column.theme-light .resource-card a:hover,
-.essay-column.theme-light .resource-card a:hover {
+.theme-light .resource-card:hover .resource-card-link-text,
+.theme-light .resource-card:hover .resource-card-link-text strong,
+.theme-light .resource-card:hover strong,
+.theme-light .resource-card:focus-visible .resource-card-link-text,
+.theme-light .resource-card:focus-visible .resource-card-link-text strong,
+.post-column.theme-light .resource-card:hover .resource-card-link-text,
+.post-column.theme-light .resource-card:hover .resource-card-link-text strong,
+.post-column.theme-light .resource-card:hover strong,
+.post-column.theme-light .resource-card:focus-visible .resource-card-link-text strong,
+.essay-column.theme-light .resource-card:hover .resource-card-link-text,
+.essay-column.theme-light .resource-card:hover .resource-card-link-text strong,
+.essay-column.theme-light .resource-card:hover strong,
+.essay-column.theme-light .resource-card:focus-visible .resource-card-link-text strong {
+  color: #050505;
+}
+
+.theme-light .resource-card .resource-card-arrow,
+.post-column.theme-light .resource-card .resource-card-arrow,
+.essay-column.theme-light .resource-card .resource-card-arrow {
+  color: #121212;
+}
+
+.theme-light .resource-card:hover .resource-card-arrow,
+.post-column.theme-light .resource-card:hover .resource-card-arrow,
+.essay-column.theme-light .resource-card:hover .resource-card-arrow {
   color: var(--accent-coral);
 }
 
 .theme-light .resource-card p,
+.theme-light .resource-card .resource-card-desc,
 .post-column.theme-light .resource-card p,
-.essay-column.theme-light .resource-card p {
-  color: var(--text-light-muted);
+.post-column.theme-light .resource-card .resource-card-desc,
+.essay-column.theme-light .resource-card p,
+.essay-column.theme-light .resource-card .resource-card-desc {
+  color: var(--text-light-body, #3b3b3b);
   font-weight: var(--weight-regular);
 }
 

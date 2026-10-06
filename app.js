@@ -351,9 +351,9 @@ function renderCardMatrix(resetPagination = true) {
         <div class="card-art-box ${ratio}">
           ${isFeatured ? `<span class="card-featured-badge" title="Featured" aria-label="Featured"><svg viewBox="0 0 24 24" class="card-featured-icon" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>` : ""}
           ${
-            post.image
+            post.thumbnail || post.image
               ? `
-            <img src="${post.image}" alt="${post.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <img src="${post.thumbnail || post.image}" alt="${post.title}" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
             <div style="display:none;">${ART_FALLBACKS[artKey]}</div>
           `
               : ART_FALLBACKS[artKey]

@@ -24,6 +24,15 @@ if sys.platform == "win32":
     except Exception:
         pass
 
+# Optional Image Processing Library (Pillow)
+try:
+    from PIL import Image, ImageOps
+    HAS_PIL = True
+except ImportError:
+    Image = None
+    ImageOps = None
+    HAS_PIL = False
+
 # Path configurations
 BASE_DIR = Path(__file__).resolve().parent
 POSTS_DIR = BASE_DIR / "_posts"
@@ -89,6 +98,71 @@ def get_image_dimensions(image_rel_or_path):
         pass
         
     return 1200, 630
+
+def generate_thumbnail(image_rel_or_path, max_width=640, quality=82):
+    """
+    Generates an optimized downscaled WebP thumbnail in assets/images/thumbnails/.
+    Preserves aspect ratio, resamples with LANCZOS, and converts color profiles safely.
+    Skips generation if thumbnail is already newer than source image.
+    Returns relative web path (e.g. 'assets/images/thumbnails/telebodies.webp').
+    """
+    if not image_rel_or_path:
+        return ""
+        
+    clean_path = str(image_rel_or_path).lstrip("/").lstrip("./")
+    target_path = BASE_DIR / clean_path
+    if not target_path.exists():
+        target_path = ROOT_DIR / clean_path
+    if not target_path.exists() or target_path.is_dir():
+        return clean_path
+
+    # Only process standard raster image extensions
+    valid_exts = {".jpg", ".jpeg", ".png", ".webp", ".avif"}
+    if target_path.suffix.lower() not in valid_exts:
+        return clean_path
+
+    thumb_dir = BASE_DIR / "assets" / "images" / "thumbnails"
+    thumb_dir.mkdir(parents=True, exist_ok=True)
+    
+    thumb_filename = f"{target_path.stem}.webp"
+    thumb_path = thumb_dir / thumb_filename
+    thumb_rel_path = f"assets/images/thumbnails/{thumb_filename}"
+
+    # Cache check: if thumb exists and is newer than source, skip regeneration
+    try:
+        if thumb_path.exists() and thumb_path.stat().st_mtime >= target_path.stat().st_mtime:
+            return thumb_rel_path
+    except Exception:
+        pass
+
+    if not HAS_PIL:
+        return clean_path
+
+    try:
+        with Image.open(target_path) as img:
+            img = ImageOps.exif_transpose(img)
+            
+            orig_w, orig_h = img.size
+            if orig_w <= max_width:
+                new_w, new_h = orig_w, orig_h
+            else:
+                scale = max_width / float(orig_w)
+                new_w = int(max_width)
+                new_h = int(orig_h * scale)
+                img = img.resize((new_w, new_h), resample=Image.Resampling.LANCZOS)
+
+            # Ensure compatible mode for WebP
+            if img.mode in ("RGBA", "LA") or (img.mode == "P" and "transparency" in img.info):
+                img = img.convert("RGBA")
+            elif img.mode != "RGB":
+                img = img.convert("RGB")
+
+            img.save(thumb_path, "WEBP", quality=quality, method=6)
+            print(f"    [THUMB] Generated: {thumb_filename} ({orig_w}x{orig_h} -> {new_w}x{new_h})")
+            return thumb_rel_path
+    except Exception as e:
+        print(f"    [WARN] Thumbnail generation fallback for {target_path.name}: {e}")
+        return clean_path
 
 def slugify(text):
     """Normalize text into a clean URL-safe slug."""
@@ -444,6 +518,9 @@ def compile_posts():
                 
             aspect_ratio = meta.get("aspect_ratio") or "h-tall-1"
             
+            # Generate or reuse optimized downscaled thumbnail
+            thumbnail = generate_thumbnail(image) if image else ""
+            
             # Convert body to clean rich HTML
             html_content = clean_and_convert_markdown(body)
             
@@ -501,6 +578,7 @@ def compile_posts():
                 "read_time": (meta.get("reading_time") or meta.get("read_time") or "8 MIN READ").upper(),
                 "via": source,
                 "image": image,
+                "thumbnail": thumbnail,
                 "image_alt": img_alt,
                 "aspect_ratio": aspect_ratio,
                 "links": normalized_links,

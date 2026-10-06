@@ -24,6 +24,7 @@ window.DYNAMIC_POSTS = [
     "read_time": "22 MIN READ",
     "via": "",
     "image": "assets/images/telebodies.jpg",
+    "thumbnail": "assets/images/thumbnails/telebodies.webp",
     "image_alt": "Red-haloed human silhouette amid a black-and-white glitch art collage of static CRT screens, circuit boards, pill icons, and binary code.",
     "aspect_ratio": "h-tall-1",
     "links": [],
@@ -70,6 +71,7 @@ window.DYNAMIC_POSTS = [
     "read_time": "20 MIN READ",
     "via": "",
     "image": "assets/images/somatic_gov.jpg",
+    "thumbnail": "assets/images/thumbnails/somatic_gov.webp",
     "image_alt": "Glitch-art collage in black, white, and coral red featuring human silhouettes, brain MRI scans, chemical structures, circuit traces, and industrial gears.",
     "aspect_ratio": "h-tall-1",
     "links": [
@@ -145,6 +147,7 @@ window.DYNAMIC_POSTS = [
     "read_time": "5 MIN READ",
     "via": "",
     "image": "assets/images/ai_tamagotchi.png",
+    "thumbnail": "assets/images/thumbnails/ai_tamagotchi.webp",
     "image_alt": "Glitch art in black, white, and coral red featuring cute cartoon creatures, a robot, and a heart amid heavy digital artifacts, scanlines, and pixel noise.",
     "aspect_ratio": "h-tall-1",
     "links": [],
@@ -193,6 +196,7 @@ window.DYNAMIC_POSTS = [
     "read_time": "20 MIN READ",
     "via": "",
     "image": "assets/images/cute_ai.jpg",
+    "thumbnail": "assets/images/thumbnails/cute_ai.webp",
     "image_alt": "Glitch art in black, white, and coral pink featuring cute cartoon creatures, a robot, and a heart amid heavy digital artifacts, scanlines, and pixel noise.",
     "aspect_ratio": "h-tall-1",
     "links": [
@@ -266,6 +270,7 @@ window.DYNAMIC_POSTS = [
     "read_time": "3 MIN READ",
     "via": "",
     "image": "assets/images/5-psychological-effects.png",
+    "thumbnail": "assets/images/thumbnails/5-psychological-effects.webp",
     "image_alt": "Glitch art collage in black and coral red showing cracked human silhouettes, an exposed brain, a maze screen, a padlock, and a wireframe hand holding a phone.",
     "aspect_ratio": "h-tall-1",
     "links": [
@@ -320,6 +325,7 @@ window.DYNAMIC_POSTS = [
     "read_time": "CODE TOOLKIT",
     "via": "",
     "image": "assets/images/relate_anything.jpg",
+    "thumbnail": "assets/images/thumbnails/relate_anything.webp",
     "image_alt": "High-contrast B&W art of a seated guitarist beside a speaker, overlaid with coral-red diagrammatic outlines, directional arrows, and blank label blocks.",
     "aspect_ratio": "h-tall-1",
     "links": [
@@ -380,6 +386,7 @@ window.DYNAMIC_POSTS = [
     "read_time": "4 MIN READ",
     "via": "",
     "image": "assets/images/visual_bandwidth.jpg",
+    "thumbnail": "assets/images/thumbnails/visual_bandwidth.webp",
     "image_alt": "Red-toned glitch artwork of a close-up eye overlaid with static and scan lines. The pupil reflects an old television screen displaying a person's face.",
     "aspect_ratio": "h-tall-1",
     "links": [
@@ -438,6 +445,7 @@ window.DYNAMIC_POSTS = [
     "read_time": "4 MIN READ",
     "via": "",
     "image": "assets/images/shanzhai.jpg",
+    "thumbnail": "assets/images/thumbnails/shanzhai.webp",
     "image_alt": "Archival artwork exploring transformation and fluid memory.",
     "aspect_ratio": "h-tall-1",
     "links": [
@@ -483,6 +491,7 @@ window.DYNAMIC_POSTS = [
     "read_time": "CODE TOOLKIT",
     "via": "",
     "image": "assets/images/perception_eval.jpg",
+    "thumbnail": "assets/images/thumbnails/perception_eval.webp",
     "image_alt": "In coral red and black, vintage engraved eyes are fractured and obscured by corrupted UI windows, pixel grids, and degraded scanline textures.",
     "aspect_ratio": "h-tall-1",
     "links": [
@@ -545,6 +554,7 @@ window.DYNAMIC_POSTS = [
     "read_time": "CURATED READ",
     "via": "Donna Haraway's 1985 Cyborg Manifesto",
     "image": "assets/images/donna_haraway.jpg",
+    "thumbnail": "assets/images/thumbnails/donna_haraway.webp",
     "image_alt": "Coral-red pixel glitches and neural diagrams bleed across a woman making hand-binoculars, fusing her with a jellyfish and fractured brain scans.",
     "aspect_ratio": "h-tall-1",
     "links": [
@@ -603,6 +613,7 @@ window.DYNAMIC_POSTS = [
     "read_time": "8 MIN READ",
     "via": "",
     "image": "assets/images/groupemu.jpg",
+    "thumbnail": "assets/images/thumbnails/groupemu.webp",
     "image_alt": "Coral red and black glitch art: fractured human figures dissolve and warp into printed circuit boards, technical schematics, and pixelated tears.",
     "aspect_ratio": "h-tall-1",
     "links": [
@@ -659,6 +670,7 @@ window.DYNAMIC_POSTS = [
     "read_time": "FULL COURSE",
     "via": "",
     "image": "assets/images/harvard1.jpg",
+    "thumbnail": "assets/images/thumbnails/harvard1.webp",
     "image_alt": "Digital collage of a computer science class",
     "aspect_ratio": "h-tall-1",
     "links": [],
@@ -702,6 +714,7 @@ window.DYNAMIC_POSTS = [
     "read_time": "8 MIN READ",
     "via": "",
     "image": "assets/images/foucault-borges.jpg",
+    "thumbnail": "assets/images/thumbnails/foucault-borges.webp",
     "image_alt": "Red and black archival glitch collage featuring Michel Foucault inside a fractured frame alongside Jorge Luis Borges standing in a circular labyrinth with open books.",
     "aspect_ratio": "h-tall-1",
     "links": [
@@ -772,6 +785,7 @@ window.DYNAMIC_POSTS = [
     "read_time": "CURATED READ",
     "via": "Kate Crawford and Trevor Paglen, “Excavating AI: The Politics of Training Sets for Machine Learning (September 19, 2019) https://excavating.ai",
     "image": "assets/images/this-is-not-a-human.jpg",
+    "thumbnail": "assets/images/thumbnails/this-is-not-a-human.webp",
     "image_alt": "Ceci n'est pas un être humain.",
     "aspect_ratio": "h-tall-1",
     "links": [],
@@ -810,6 +824,7 @@ window.DYNAMIC_POSTS = [
     "read_time": "8 MIN READ",
     "via": "",
     "image": "assets/images/turing-ai.jpg",
+    "thumbnail": "assets/images/thumbnails/turing-ai.webp",
     "image_alt": "Coral-pink and black glitch collage featuring Alan Turing, surrounded by brain scans, circuit boards, Rorschach inkblots, and digital artifacts.",
     "aspect_ratio": "h-tall-1",
     "links": [
@@ -883,6 +898,7 @@ window.DYNAMIC_POSTS = [
     "read_time": "20 MIN READ",
     "via": "",
     "image": "assets/images/llms-dont-think.jpg",
+    "thumbnail": "assets/images/thumbnails/llms-dont-think.webp",
     "image_alt": "Digital art of a glowing red human brain centrally positioned against a dark background of glitchy binary code, circuit board patterns, and pixelated human face silhouettes.",
     "aspect_ratio": "h-tall-1",
     "links": [
