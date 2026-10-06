@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 UNTITLED.JPG — Markdown Post Compiler & Content Synchronizer
 Scans `_posts/*.md` and generates `posts.json` & `posts.js` for seamless client-side hydration.
@@ -26,11 +25,11 @@ if sys.platform == "win32":
 
 # Optional Image Processing Library (Pillow)
 try:
-    from PIL import Image, ImageOps
+    from PIL import Image, ImageOps  # type: ignore # noqa: F401
     HAS_PIL = True
-except ImportError:
-    Image = None
-    ImageOps = None
+except (ImportError, ModuleNotFoundError):
+    Image = None  # type: ignore
+    ImageOps = None  # type: ignore
     HAS_PIL = False
 
 # Path configurations
@@ -135,12 +134,12 @@ def generate_thumbnail(image_rel_or_path, max_width=640, quality=82):
     except Exception:
         pass
 
-    if not HAS_PIL:
+    if not HAS_PIL or Image is None or ImageOps is None:
         return clean_path
 
     try:
-        with Image.open(target_path) as img:
-            img = ImageOps.exif_transpose(img)
+        with Image.open(target_path) as img:  # type: ignore
+            img = ImageOps.exif_transpose(img)  # type: ignore
             
             orig_w, orig_h = img.size
             if orig_w <= max_width:
