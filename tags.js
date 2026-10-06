@@ -237,8 +237,18 @@ window.DYNAMIC_TAGS = [
     "name": "AI PERCEPTION, CULTURE & REPRESENTATION",
     "label": "AI PERCEPTION, CULTURE & REPRESENTATION",
     "type": "pillar",
-    "count": 3,
+    "count": 4,
     "posts": [
+      {
+        "id": "2026-10-06-original-title-of-curated-item",
+        "slug": "original-title-of-curated-item",
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "date": "2026.10.06",
+        "format": "BOOKMARK",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/original-title-of-curated-item.html"
+      },
       {
         "id": "2026-09-30-relate-anything-github-repo",
         "slug": "relate-anything-github-repo",
@@ -271,6 +281,13 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "links": [
+      {
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "slug": "original-title-of-curated-item",
+        "format": "BOOKMARK",
+        "url": "posts/original-title-of-curated-item.html",
+        "date": "2026.10.06"
+      },
       {
         "title": "Relate Anything [github repo]",
         "slug": "relate-anything-github-repo",
@@ -824,6 +841,56 @@ window.DYNAMIC_TAGS = [
     "pillars": [
       "PHILOSOPHY & POLITICS OF INFORMATION",
       "PHILOSOPHY AND CRITICAL THEORY"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
+    "id": "subtopic-computer-vision-vs-human-perception",
+    "name": "COMPUTER VISION VS. HUMAN PERCEPTION",
+    "label": "COMPUTER VISION VS. HUMAN PERCEPTION",
+    "type": "subtopic",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-06-original-title-of-curated-item",
+        "slug": "original-title-of-curated-item",
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "date": "2026.10.06",
+        "format": "BOOKMARK",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/original-title-of-curated-item.html"
+      },
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "slug": "original-title-of-curated-item",
+        "format": "BOOKMARK",
+        "url": "posts/original-title-of-curated-item.html",
+        "date": "2026.10.06"
+      },
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION"
     ],
     "subtopics": [],
     "connected_tags": []
@@ -1720,39 +1787,6 @@ window.DYNAMIC_TAGS = [
       "ai",
       "models"
     ]
-  },
-  {
-    "id": "subtopic-computer-vision-vs-human-perception",
-    "name": "COMPUTER VISION VS. HUMAN PERCEPTION",
-    "label": "COMPUTER VISION VS. HUMAN PERCEPTION",
-    "type": "subtopic",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      }
-    ],
-    "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
-    ],
-    "subtopics": [],
-    "connected_tags": []
   },
   {
     "id": "subtopic-deconstruction-culture",
