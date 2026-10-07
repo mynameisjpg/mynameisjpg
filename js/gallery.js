@@ -11,13 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
   let galleryPosts = [];
   let currentIndex = 0;
 
-  // Filter helper: Exclude drafts and empty/missing images
+  // Filter helper: Exclude drafts, empty/missing images, and posts with gallery: false
   function isPublishedWithImage(post) {
     const isPublished =
       !post.status || post.status.toLowerCase() === "published";
     const hasImage =
       post.image && typeof post.image === "string" && post.image.trim() !== "";
-    return isPublished && hasImage;
+    const isGalleryAllowed = post.gallery !== false && post.in_gallery !== false;
+    return isPublished && hasImage && isGalleryAllowed;
   }
 
   // Robust POSTS_DATA extraction (Handles window.DYNAMIC_POSTS, window.POSTS_DATA, or fallback posts.json)

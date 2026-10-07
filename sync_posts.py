@@ -579,6 +579,9 @@ def compile_posts():
             allow_embed = meta.get("allow_embed", True)
             if isinstance(allow_embed, str):
                 allow_embed = allow_embed.lower() != "false"
+            gallery = meta.get("gallery", meta.get("in_gallery", True))
+            if isinstance(gallery, str):
+                gallery = gallery.lower() != "false"
 
             post_obj = {
                 "id": slug,
@@ -598,6 +601,7 @@ def compile_posts():
                 "featured": is_featured,
                 "shareable": shareable,
                 "allow_embed": allow_embed,
+                "gallery": gallery,
                 "status": meta.get("status", "published"),
                 "date": formatted_date,
                 "author": meta.get("author", "Juan P. Giusepponi"),
