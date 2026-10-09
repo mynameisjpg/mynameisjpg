@@ -165,12 +165,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       img.onerror = (err) => {
         console.warn(
-          `[SPATIAL 3D GALLERY] Failed to load image: ${post.image}`,
+          `[SPATIAL 3D GALLERY] Failed to load image: ${post.thumbnail || post.image}`,
           err,
         );
       };
 
-      img.src = post.image;
+      // Use lightweight WebP thumbnail for ultra-fast 3D space rendering (~150KB vs 5.5MB)
+      img.src = post.thumbnail || post.image;
     });
 
     // Interaction & Camera Controls (Scroll Zoom)
@@ -328,7 +329,7 @@ document.addEventListener("DOMContentLoaded", () => {
           .map(
             (post, i) => `
           <div class="css-3d-card" data-index="${i}" style="position: absolute; inset: 0; transform-style: preserve-3d; cursor: pointer; transition: transform 0.5s ease, opacity 0.5s ease;">
-            <img src="${post.image}" alt="${escapeHtml(post.title)}" style="width:100%; height:100%; object-fit:contain; background:#050505; border:1px solid rgba(255,255,255,0.15); box-shadow:0 15px 40px rgba(0,0,0,0.9);" />
+            <img src="${post.thumbnail || post.image}" alt="${escapeHtml(post.title)}" style="width:100%; height:100%; object-fit:contain; background:#050505; border:1px solid rgba(255,255,255,0.15); box-shadow:0 15px 40px rgba(0,0,0,0.9);" />
           </div>
         `,
           )
@@ -405,9 +406,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // High-res image preload cache
+  const highResCache = new Set();
+
+  function preloadHighRes(post) {
+    if (!post || !post.image || highResCache.has(post.image)) return;
+    const preloadImg = new Image();
+    preloadImg.onload = () => highResCache.add(post.image);
+    preloadImg.src = post.image;
+  }
+
   function updateHUDPanel(index) {
     const post = galleryPosts[index];
     if (!post) return;
+
+    // Preload high-res master image for currently focused and adjacent items in background
+    preloadHighRes(post);
+    if (galleryPosts.length > 1) {
+      preloadHighRes(galleryPosts[(index + 1) % galleryPosts.length]);
+    }
 
     const counterEl = document.getElementById("hud-counter-val");
     const formatEl = document.getElementById("hud-format-val");
@@ -495,7 +512,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const hudPanel = document.querySelector(".floating-hud-panel");
     if (hudPanel) hudPanel.style.display = "none";
 
-    if (img) img.src = post.image;
+    // 1. Instantly display cached thumbnail / lightweight image (0ms perceived delay)
+    const initialSrc = post.thumbnail || post.image;
+    if (img) {
+      img.src = initialSrc;
+
+      // 2. Seamlessly upgrade to high-res master image once loaded
+      if (post.image && post.thumbnail && post.image !== post.thumbnail) {
+        if (highResCache.has(post.image)) {
+          img.src = post.image;
+        } else {
+          const highRes = new Image();
+          highRes.onload = () => {
+            highResCache.add(post.image);
+            if (img.src.includes(post.thumbnail) || img.src === initialSrc) {
+              img.src = post.image;
+            }
+          };
+          highRes.src = post.image;
+        }
+      }
+    }
+
     if (downloadLink) {
       downloadLink.href = post.image;
       const ext = post.image.split(".").pop() || "png";
