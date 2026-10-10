@@ -172,8 +172,18 @@ window.DYNAMIC_TAGS = [
     "name": "ai",
     "label": "#ai",
     "type": "tag",
-    "count": 8,
+    "count": 9,
     "posts": [
+      {
+        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "date": "2026.10.10",
+        "format": "BOOKMARK",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
+      },
       {
         "id": "2026-10-09-save-70x-tokens-code-review-graph",
         "slug": "save-70x-tokens-code-review-graph",
@@ -257,6 +267,13 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "format": "BOOKMARK",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
+        "date": "2026.10.10"
+      },
+      {
         "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "slug": "save-70x-tokens-code-review-graph",
         "format": "RESOURCE",
@@ -319,6 +336,7 @@ window.DYNAMIC_TAGS = [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
+      "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
       "COMPUTER VISION VS. HUMAN PERCEPTION",
       "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
       "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
@@ -326,13 +344,112 @@ window.DYNAMIC_TAGS = [
       "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
     ],
     "connected_tags": [
+      "ai-agents",
       "toolkit",
       "repo",
       "github",
-      "ai-agents",
       "intelligence",
-      "graphify"
+      "video"
     ]
+  },
+  {
+    "id": "pillar-language-llms-artificial-intelligence",
+    "name": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+    "label": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+    "type": "pillar",
+    "count": 5,
+    "posts": [
+      {
+        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "date": "2026.10.10",
+        "format": "BOOKMARK",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
+      },
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      },
+      {
+        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "date": "2026.10.06",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
+      },
+      {
+        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "date": "2026.09.26",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
+      },
+      {
+        "id": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "date": "2026.09.24",
+        "format": "ESSAY",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+        "url": "posts/lecun-world-models-jepa.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "format": "BOOKMARK",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
+        "date": "2026.10.06"
+      },
+      {
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "format": "RESOURCE",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "slug": "lecun-world-models-jepa",
+        "format": "ESSAY",
+        "url": "posts/lecun-world-models-jepa.html",
+        "date": "2026.09.24"
+      }
+    ],
+    "pillars": [],
+    "subtopics": [],
+    "connected_tags": []
   },
   {
     "id": "visual-perception",
@@ -522,88 +639,6 @@ window.DYNAMIC_TAGS = [
         "format": "ESSAY",
         "url": "posts/turing-queer-ai.html",
         "date": "2026.09.25"
-      }
-    ],
-    "pillars": [],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
-    "id": "pillar-language-llms-artificial-intelligence",
-    "name": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-    "label": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-    "type": "pillar",
-    "count": 4,
-    "posts": [
-      {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
-      },
-      {
-        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "date": "2026.10.06",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
-      },
-      {
-        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "date": "2026.09.26",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/harvard-s-computer-science-career-for-free.html"
-      },
-      {
-        "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "lecun-world-models-jepa",
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "date": "2026.09.24",
-        "format": "ESSAY",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/lecun-world-models-jepa.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "format": "RESOURCE",
-        "url": "posts/harvard-s-computer-science-career-for-free.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "lecun-world-models-jepa",
-        "format": "ESSAY",
-        "url": "posts/lecun-world-models-jepa.html",
-        "date": "2026.09.24"
       }
     ],
     "pillars": [],
@@ -1181,6 +1216,83 @@ window.DYNAMIC_TAGS = [
     ],
     "subtopics": [],
     "connected_tags": []
+  },
+  {
+    "id": "ai-agents",
+    "name": "ai-agents",
+    "label": "#ai-agents",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "date": "2026.10.10",
+        "format": "BOOKMARK",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
+      },
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      },
+      {
+        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "date": "2026.10.06",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "format": "BOOKMARK",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
+        "date": "2026.10.06"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+      "LLM ARCHITECTURES AND MECHANICS"
+    ],
+    "connected_tags": [
+      "ai",
+      "toolkit",
+      "repo",
+      "github",
+      "video",
+      "fail"
+    ]
   },
   {
     "id": "biopolitics",
@@ -1978,65 +2090,6 @@ window.DYNAMIC_TAGS = [
     "pillars": [],
     "subtopics": [],
     "connected_tags": []
-  },
-  {
-    "id": "ai-agents",
-    "name": "ai-agents",
-    "label": "#ai-agents",
-    "type": "tag",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
-      },
-      {
-        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "date": "2026.10.06",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
-        "date": "2026.10.06"
-      }
-    ],
-    "pillars": [
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
-    ],
-    "subtopics": [
-      "LLM ARCHITECTURES AND MECHANICS"
-    ],
-    "connected_tags": [
-      "toolkit",
-      "ai",
-      "repo",
-      "github",
-      "graphify",
-      "graph"
-    ]
   },
   {
     "id": "ai-mascots",
@@ -3473,6 +3526,67 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "video",
+    "name": "video",
+    "label": "#video",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "date": "2026.10.11",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
+      },
+      {
+        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "date": "2026.10.10",
+        "format": "BOOKMARK",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "format": "NOTE",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "format": "BOOKMARK",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+      "ANATOMY AND PSYCHOPHYSICS OF VISION"
+    ],
+    "connected_tags": [
+      "reflections",
+      "observations",
+      "visual-perception",
+      "generative-video",
+      "foveated-vision",
+      "ai-evaluations"
+    ]
+  },
+  {
     "id": "visual-semiotics",
     "name": "visual-semiotics",
     "label": "#visual-semiotics",
@@ -3531,6 +3645,39 @@ window.DYNAMIC_TAGS = [
       "vision",
       "attention"
     ]
+  },
+  {
+    "id": "subtopic-ai-safety-alignment-and-extreme-risk-evaluation",
+    "name": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+    "label": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+    "type": "subtopic",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "date": "2026.10.10",
+        "format": "BOOKMARK",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "format": "BOOKMARK",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [],
+    "connected_tags": []
   },
   {
     "id": "subtopic-biopolitics-pharmacopornography",
@@ -3815,6 +3962,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "ai-fails",
+    "name": "ai-fails",
+    "label": "#ai-fails",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "date": "2026.10.10",
+        "format": "BOOKMARK",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "format": "BOOKMARK",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION"
+    ],
+    "connected_tags": [
+      "video",
+      "ai",
+      "ai-agents",
+      "fail",
+      "stories",
+      "risk"
+    ]
+  },
+  {
     "id": "ai-models",
     "name": "ai-models",
     "label": "#ai-models",
@@ -3854,6 +4043,48 @@ window.DYNAMIC_TAGS = [
       "science",
       "research",
       "deep-research"
+    ]
+  },
+  {
+    "id": "ai-safety",
+    "name": "ai-safety",
+    "label": "#ai-safety",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "date": "2026.10.10",
+        "format": "BOOKMARK",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "format": "BOOKMARK",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION"
+    ],
+    "connected_tags": [
+      "video",
+      "ai",
+      "ai-agents",
+      "fail",
+      "stories",
+      "ai-fails"
     ]
   },
   {
@@ -4737,6 +4968,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "claude",
+    "name": "claude",
+    "label": "#claude",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "date": "2026.10.10",
+        "format": "BOOKMARK",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "format": "BOOKMARK",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION"
+    ],
+    "connected_tags": [
+      "video",
+      "ai",
+      "ai-agents",
+      "fail",
+      "stories",
+      "ai-fails"
+    ]
+  },
+  {
     "id": "cognitive-load",
     "name": "cognitive-load",
     "label": "#cognitive-load",
@@ -5572,6 +5845,48 @@ window.DYNAMIC_TAGS = [
       "imagenet",
       "archeology",
       "taxonomy"
+    ]
+  },
+  {
+    "id": "fail",
+    "name": "fail",
+    "label": "#fail",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "date": "2026.10.10",
+        "format": "BOOKMARK",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "format": "BOOKMARK",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION"
+    ],
+    "connected_tags": [
+      "video",
+      "ai",
+      "ai-agents",
+      "stories",
+      "ai-fails",
+      "risk"
     ]
   },
   {
@@ -7211,6 +7526,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "opus",
+    "name": "opus",
+    "label": "#opus",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "date": "2026.10.10",
+        "format": "BOOKMARK",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "format": "BOOKMARK",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION"
+    ],
+    "connected_tags": [
+      "video",
+      "ai",
+      "ai-agents",
+      "fail",
+      "stories",
+      "ai-fails"
+    ]
+  },
+  {
     "id": "pasquinelli",
     "name": "pasquinelli",
     "label": "#pasquinelli",
@@ -7715,6 +8072,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "risk",
+    "name": "risk",
+    "label": "#risk",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "date": "2026.10.10",
+        "format": "BOOKMARK",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "format": "BOOKMARK",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION"
+    ],
+    "connected_tags": [
+      "video",
+      "ai",
+      "ai-agents",
+      "fail",
+      "stories",
+      "ai-fails"
+    ]
+  },
+  {
     "id": "saccadic-suppression",
     "name": "saccadic-suppression",
     "label": "#saccadic-suppression",
@@ -8089,6 +8488,48 @@ window.DYNAMIC_TAGS = [
       "capitalism",
       "biopolitics",
       "pharmacopornography"
+    ]
+  },
+  {
+    "id": "stories",
+    "name": "stories",
+    "label": "#stories",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "date": "2026.10.10",
+        "format": "BOOKMARK",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "format": "BOOKMARK",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION"
+    ],
+    "connected_tags": [
+      "video",
+      "ai",
+      "ai-agents",
+      "fail",
+      "ai-fails",
+      "risk"
     ]
   },
   {
@@ -8592,48 +9033,6 @@ window.DYNAMIC_TAGS = [
       "ai",
       "intelligence",
       "world-models"
-    ]
-  },
-  {
-    "id": "video",
-    "name": "video",
-    "label": "#video",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
-        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
-        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.11",
-        "format": "NOTE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
-        "format": "NOTE",
-        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.11"
-      }
-    ],
-    "pillars": [
-      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
-    ],
-    "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION"
-    ],
-    "connected_tags": [
-      "reflections",
-      "observations",
-      "visual-perception",
-      "generative-video",
-      "foveated-vision",
-      "ai-evaluations"
     ]
   },
   {

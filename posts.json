@@ -78,6 +78,65 @@
     "content": "<p class=\"post-paragraph essay-paragraph\">In my work evaluating generative video models, catching artifacts is the whole assignment.</p>\n\n<p class=\"post-paragraph essay-paragraph\">When benchmark teams or creative leads review a new model checkpoint, they usually react to the overall mood: a woman walking through neon-lit rain, camera drifting alongside her, reflections shimmering on wet asphalt. At full speed, it looks astonishing.</p>\n\n<p class=\"post-paragraph essay-paragraph\">But doing this work professionally forces you to unlearn how humans naturally watch video.</p>\n\n<p class=\"post-paragraph essay-paragraph\">Most people follow the hero. Their gaze locks onto the face, the gait, or the hands. To evaluate a model honestly, I have to train myself to look away from the subject. I stare into the corners: the background bricks, the wheels of parked cars, the lettering on a shop awning.</p>\n\n<p class=\"post-paragraph essay-paragraph\">The moment you pull your eyes away from the center, reality falls apart.</p>\n\n<p class=\"post-paragraph essay-paragraph\">A streetlamp turns to wax, bends sideways across three frames, and dissolves into a noodle shop banner. A parked sedan loses its tires, morphs into a wet bench, and re-emerges as a fire hydrant.</p>\n\n<p class=\"post-paragraph essay-paragraph\">Yet when people watch the clip at normal speed, almost nobody notices. Why are our brains so forgiving?</p>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h3 class=\"post-subheading essay-subheading\">The Two-Degree Trap</h3>\n\n<p class=\"post-paragraph essay-paragraph\">We assume we see the world in sharp, uniform detail across our entire field of view.</p>\n\n<p class=\"post-paragraph essay-paragraph\">In reality, clear vision is confined to a tiny spot on the retina called the <strong>fovea</strong>. It covers roughly two degrees of your view—about the width of your thumbnail held at arm's length. Everything outside that thumbnail is blurry, color-faded, and mostly detects gross motion.</p>\n\n<p class=\"post-paragraph essay-paragraph\">To compensate, our eyes never stay still. They dart three to four times a second in rapid jumps called <strong>saccades</strong>.</p>\n\n<p class=\"post-paragraph essay-paragraph\">Here is the quirk: during the thirty to fifty milliseconds it takes your eyeball to jump from one point to another, your brain temporarily shuts off visual processing. It is called <strong>saccadic suppression</strong>.</p>\n\n<p class=\"post-paragraph essay-paragraph\">If your brain didn't mute the feed, you would experience sickening motion blur several times a second. Add up those micro-blackouts, and you spend about forty minutes of every waking day completely blind. Your brain simply patches over the gaps, retroactively assuming continuity.</p>\n\n<pre><code class=\"language-text\">HOW WE WATCH VS. HOW WE AUDIT:\n[CASUAL VIEWER] ──&gt; Fovea locked on protagonist ──&gt; Background blur forgiven\n[AI EVALUATOR]  ──&gt; Forced glance to periphery  ──&gt; Freezes frame to audit physics</code></pre>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h3 class=\"post-subheading essay-subheading\">Perceptual Distraction Engines</h3>\n\n<p class=\"post-paragraph essay-paragraph\">AI video models do not construct a persistent 3D world. They do not simulate gravity, mass, or rigid geometry. They generate patterns across slices of latent pixels, guessing what looks plausible from one frame to the next.</p>\n\n<p class=\"post-paragraph essay-paragraph\">Keeping background architecture stable across hundreds of frames is computationally brutal. But models get away with it because they accidentally align with human biology:</p>\n\n<ol class=\"post-list essay-list\"><li><strong>Foveal Anchoring:</strong> As long as the protagonist's face and stride stay coherent, our sharpest vision is completely consumed.</li><li><strong>Peripheral Forgiveness:</strong> Melting buildings and vanishing cars happen in peripheral vision, where our eyes cannot resolve crisp geometry anyway.</li><li><strong>Saccadic Masking:</strong> When a viewer's glance finally darts toward the background, vision cuts out during the jump. By the time the fovea lands, the model has already rendered a new patch, and the brain assumes it was always there.</li></ol>\n\n<p class=\"post-paragraph essay-paragraph\">Like a magician waving a bright handkerchief with one hand while palming a coin with the other, generative video works by keeping your fovea busy.</p>\n\n<p class=\"post-paragraph essay-paragraph\">Evaluating these systems taught me an uncomfortable lesson: frontier video models aren't really mastering the laws of physics yet. They are mastering the sensory shortcuts of the human watching the screen. As long as the subject keeps moving, our own biology finishes the render for them.</p>"
   },
   {
+    "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+    "slug": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+    "sys_id": "SYS_202610_BOO",
+    "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+    "subtitle": "This isn't a hacking story. There was no malicious intent, no exploited vulnerability. Just an autonomous AI agent doing what it supposed it had to do.",
+    "excerpt": "If you're building with AI agents, automating infrastructure, or just curious how \"helpful\" AI can go catastrophically wrong — this is a case study you must see",
+    "format": "BOOKMARK",
+    "category": "",
+    "media": "VIDEO",
+    "source": "YouTube",
+    "url": "https://www.youtube.com/watch?v=1fsGTnszses",
+    "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+    "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+    "theme": "dark",
+    "featured": false,
+    "shareable": true,
+    "allow_embed": true,
+    "gallery": true,
+    "status": "published",
+    "date": "2026.10.10",
+    "author": "Juan P. Giusepponi",
+    "read_time": "8:42 MIN",
+    "via": "YouTube",
+    "image": "assets/images/ai-fail-opus.jpg",
+    "thumbnail": "assets/images/thumbnails/ai-fail-opus.webp",
+    "image_alt": "Glitch art in coral, black, and white. Server racks dissolve into circuitry and binary code above a fragmented humanoid head with glowing eyes emitting signal waves.",
+    "aspect_ratio": "h-tall-1",
+    "gallery_images": [],
+    "links": [
+      {
+        "title": "Real-world AI Failure Story: Delete a Production Database in 9 Seconds!",
+        "url": "https://www.youtube.com/watch?v=1fsGTnszses",
+        "type": "VIDEO",
+        "desc": "This isn't a hacking story. There was no malicious intent, no exploited vulnerability. Just an autonomous AI agent doing exactly what it thought it was supposed to do."
+      }
+    ],
+    "backlinks": [
+      {
+        "slug": "#2026-09-24-lecun-world-models-jepa",
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models",
+        "note": "Complementary inquiry into non-generative representation."
+      }
+    ],
+    "tags": [
+      "video",
+      "ai",
+      "ai-agents",
+      "fail",
+      "stories",
+      "ai-fails",
+      "risk",
+      "ai-safety",
+      "claude",
+      "opus"
+    ],
+    "entities": null,
+    "content": "<iframe width=\"75%\" height=\"auto\" src=\"https://www.youtube.com/embed/1fsGTnszses?si=TZeWnpUy2jFZdZUZ\" title=\"Real-world AI Failure Story: Delete a Production Database in 9 Seconds\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n\n<h2 class=\"post-section-kicker essay-section-kicker\">01. What the video discusses</h2>\n\n<p class=\"post-paragraph essay-paragraph\">This video tells the story of an AI coding agent that accidentally deleted a production database for a company called Pocket OS in just nine seconds. The incident occurred when an agent, tasked with routine work in a staging environment, encountered a credential mismatch and autonomously attempted to fix it by using a broadly authorized API token.</p>\n\n<p class=\"post-paragraph essay-paragraph\">-How a staging/production context mismatch turned routine cleanup into disaster<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-The 5-step failure chain that led to total data loss<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-Why the agent technically didn't break its own safety rules<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-Soft guardrails vs. hard boundaries — and why prompts alone aren't enough<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-Why traditional IAM wasn't built for autonomous agents<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-What \"shared blast radius\" means for your backup strategy<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-The real fix: scoped access, approval gates, and structural limits</p>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">02. Key takeaways from the incident</h2>\n\n<ul class=\"post-list essay-list\"><li><strong>Context Mismatch:</strong> The agent used staging tasks to access production environments because the API token lacked proper scope limitations.</li><li><strong>Soft vs. Hard Guardrails:</strong> System prompts (soft guardrails) were insufficient to prevent the destruction; hard boundaries, like human-in-the-loop approval processes, are necessary for high-risk actions.</li><li><strong>IAM Failures:</strong> Identity and access management (IAM) design failed because tokens were not scoped by operation, environment, or resource.</li><li><strong>Backup Strategy:</strong> The company's backups shared the same \"blast radius\" as the production data, meaning they were deleted alongside it, leaving only an outdated three-month-old recovery point.</li></ul>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">03. Preventive Measures</h2>\n\n<ul class=\"post-list essay-list\"><li><strong>Implement least privilege:</strong> Scope tokens by operation, resource, and environment.</li><li><strong>External approval:</strong> Destructive actions must require human authentication.</li><li><strong>Robust backups:</strong> Ensure backups are immutable, isolated from the production path, and tested regularly.</li><li><strong>Runtime monitoring:</strong> Watch for unusual agent activity to intervene before damage becomes irreversible.</li></ul>"
+  },
+  {
     "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
     "slug": "2026-10-10-operational-images-farocki-flusser-machine-vision",
     "sys_id": "SYS_261010_OPIMG",
