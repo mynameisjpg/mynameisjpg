@@ -20,7 +20,7 @@ window.DYNAMIC_POSTS = [
     "allow_embed": true,
     "gallery": true,
     "status": "published",
-    "date": "2026.10.11",
+    "date": "2026.10.10",
     "author": "Juan P. Giusepponi",
     "read_time": "4 MIN READ",
     "via": "",
@@ -32,7 +32,7 @@ window.DYNAMIC_POSTS = [
       {
         "path": "assets/images/saccadic-vision.jpg",
         "image": "assets/images/saccadic-vision.jpg",
-        "thumbnail": "assets/images/saccadic-vision.jpg",
+        "thumbnail": "assets/images/thumbnails/saccadic-vision.webp",
         "alt": "Saccadic vision diagram",
         "title": ""
       }
@@ -387,7 +387,7 @@ window.DYNAMIC_POSTS = [
       {
         "path": "assets/images/visual_semiotics.jpg",
         "image": "assets/images/visual_semiotics.jpg",
-        "thumbnail": "assets/images/visual_semiotics.jpg",
+        "thumbnail": "assets/images/thumbnails/visual_semiotics.webp",
         "alt": "Glitch art depiction of a pixelated abstract tree",
         "title": ""
       }

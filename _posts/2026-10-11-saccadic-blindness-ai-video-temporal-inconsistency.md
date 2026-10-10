@@ -3,8 +3,8 @@ title: "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Backgroun
 subtitle: "Your eyes go blind several times a second. Generative video quietly relies on that flaw."
 excerpt: "As an AI evaluator, spotting video glitches means fighting your own biology. Here is why our brains forgive melting backgrounds in real-time playback."
 
-date: 2026-10-11 12:00:00 -0300
-last_modified_at: 2026-10-11 12:00:00 -0300
+date: 2026-10-10 12:00:00 -0300
+last_modified_at: 2026-10-10 12:00:00 -0300
 
 author: "Juan P. Giusepponi"
 status: "published"

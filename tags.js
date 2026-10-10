@@ -743,7 +743,7 @@ window.DYNAMIC_TAGS = [
         "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.11",
+        "date": "2026.10.10",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -786,7 +786,7 @@ window.DYNAMIC_TAGS = [
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "format": "NOTE",
         "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.11"
+        "date": "2026.10.10"
       },
       {
         "title": "5 Psychology Effects Used in App Design",
@@ -922,7 +922,7 @@ window.DYNAMIC_TAGS = [
         "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.11",
+        "date": "2026.10.10",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -965,7 +965,7 @@ window.DYNAMIC_TAGS = [
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "format": "NOTE",
         "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.11"
+        "date": "2026.10.10"
       },
       {
         "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
@@ -1017,7 +1017,7 @@ window.DYNAMIC_TAGS = [
         "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.11",
+        "date": "2026.10.10",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -1060,7 +1060,7 @@ window.DYNAMIC_TAGS = [
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "format": "NOTE",
         "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.11"
+        "date": "2026.10.10"
       },
       {
         "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
@@ -1112,7 +1112,7 @@ window.DYNAMIC_TAGS = [
         "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.11",
+        "date": "2026.10.10",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -1145,7 +1145,7 @@ window.DYNAMIC_TAGS = [
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "format": "NOTE",
         "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.11"
+        "date": "2026.10.10"
       },
       {
         "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
@@ -1414,7 +1414,7 @@ window.DYNAMIC_TAGS = [
         "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.11",
+        "date": "2026.10.10",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -1447,7 +1447,7 @@ window.DYNAMIC_TAGS = [
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "format": "NOTE",
         "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.11"
+        "date": "2026.10.10"
       },
       {
         "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
@@ -2944,7 +2944,7 @@ window.DYNAMIC_TAGS = [
         "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.11",
+        "date": "2026.10.10",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -2967,7 +2967,7 @@ window.DYNAMIC_TAGS = [
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "format": "NOTE",
         "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.11"
+        "date": "2026.10.10"
       },
       {
         "title": "5 Psychology Effects Used in App Design",
@@ -3362,7 +3362,7 @@ window.DYNAMIC_TAGS = [
         "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.11",
+        "date": "2026.10.10",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -3385,7 +3385,7 @@ window.DYNAMIC_TAGS = [
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "format": "NOTE",
         "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.11"
+        "date": "2026.10.10"
       },
       {
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
@@ -3542,7 +3542,7 @@ window.DYNAMIC_TAGS = [
         "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.11",
+        "date": "2026.10.10",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -3565,7 +3565,7 @@ window.DYNAMIC_TAGS = [
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "format": "NOTE",
         "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.11"
+        "date": "2026.10.10"
       },
       {
         "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
@@ -3876,7 +3876,7 @@ window.DYNAMIC_TAGS = [
         "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.11",
+        "date": "2026.10.10",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -3889,7 +3889,7 @@ window.DYNAMIC_TAGS = [
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "format": "NOTE",
         "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.11"
+        "date": "2026.10.10"
       }
     ],
     "pillars": [
@@ -4044,7 +4044,7 @@ window.DYNAMIC_TAGS = [
         "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.11",
+        "date": "2026.10.10",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -4057,7 +4057,7 @@ window.DYNAMIC_TAGS = [
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "format": "NOTE",
         "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.11"
+        "date": "2026.10.10"
       }
     ],
     "pillars": [
@@ -5974,7 +5974,7 @@ window.DYNAMIC_TAGS = [
         "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.11",
+        "date": "2026.10.10",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -5987,7 +5987,7 @@ window.DYNAMIC_TAGS = [
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "format": "NOTE",
         "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.11"
+        "date": "2026.10.10"
       }
     ],
     "pillars": [
@@ -6058,7 +6058,7 @@ window.DYNAMIC_TAGS = [
         "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.11",
+        "date": "2026.10.10",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -6071,7 +6071,7 @@ window.DYNAMIC_TAGS = [
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "format": "NOTE",
         "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.11"
+        "date": "2026.10.10"
       }
     ],
     "pillars": [
@@ -8368,7 +8368,7 @@ window.DYNAMIC_TAGS = [
         "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.11",
+        "date": "2026.10.10",
         "format": "NOTE",
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -8381,7 +8381,7 @@ window.DYNAMIC_TAGS = [
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "format": "NOTE",
         "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.11"
+        "date": "2026.10.10"
       }
     ],
     "pillars": [
