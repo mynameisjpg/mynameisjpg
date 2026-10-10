@@ -15,7 +15,7 @@ window.DYNAMIC_POSTS = [
     "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
     "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
     "theme": "dark",
-    "featured": false,
+    "featured": true,
     "shareable": true,
     "allow_embed": true,
     "gallery": true,
