@@ -66,8 +66,8 @@ image:
   alt: "An engraved human eye layered with digital circuit lines and pixel glitch effects in reddish-pink against a textured black background.."
 
 gallery_images:
-  - path: "operational_web.png"
-    alt: "Abtrasct glitch design"
+  - path: "assets/images/operational_web.png"
+    alt: "Abstract glitch design"
 ---
 
 ## 01. The Image That Does Not Want to Be Seen

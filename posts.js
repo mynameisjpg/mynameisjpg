@@ -108,10 +108,10 @@ window.DYNAMIC_POSTS = [
     "aspect_ratio": "h-tall-1",
     "gallery_images": [
       {
-        "path": "operational_web.png",
-        "image": "operational_web.png",
-        "thumbnail": "operational_web.png",
-        "alt": "Abtrasct glitch design",
+        "path": "assets/images/operational_web.png",
+        "image": "assets/images/operational_web.png",
+        "thumbnail": "assets/images/thumbnails/operational_web.webp",
+        "alt": "Abstract glitch design",
         "title": ""
       }
     ],
@@ -252,9 +252,9 @@ window.DYNAMIC_POSTS = [
     "aspect_ratio": "h-tall-1",
     "gallery_images": [
       {
-        "path": "visual_semiotics.jpg",
-        "image": "visual_semiotics.jpg",
-        "thumbnail": "visual_semiotics.jpg",
+        "path": "assets/images/visual_semiotics.jpg",
+        "image": "assets/images/visual_semiotics.jpg",
+        "thumbnail": "assets/images/visual_semiotics.jpg",
         "alt": "Glitch art depiction of a pixelated abstract tree",
         "title": ""
       }
