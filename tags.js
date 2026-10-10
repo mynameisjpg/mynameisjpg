@@ -670,7 +670,7 @@ window.DYNAMIC_TAGS = [
       "plastic-signs",
       "iconicity",
       "generative-ai",
-      "psychophysics"
+      "vision"
     ]
   },
   {
@@ -1038,7 +1038,7 @@ window.DYNAMIC_TAGS = [
       "plastic-signs",
       "iconicity",
       "visual-perception",
-      "paul-b-preciado"
+      "aesthetics"
     ]
   },
   {
@@ -1193,7 +1193,7 @@ window.DYNAMIC_TAGS = [
       "iconicity",
       "generative-ai",
       "visual-perception",
-      "ai-mascots"
+      "aesthetics"
     ]
   },
   {
@@ -2293,7 +2293,8 @@ window.DYNAMIC_TAGS = [
       "groupe-mu",
       "plastic-signs",
       "generative-ai",
-      "visual-perception"
+      "visual-perception",
+      "aesthetics"
     ]
   },
   {
@@ -2650,7 +2651,8 @@ window.DYNAMIC_TAGS = [
       "groupe-mu",
       "iconicity",
       "generative-ai",
-      "visual-perception"
+      "visual-perception",
+      "aesthetics"
     ]
   },
   {
@@ -2947,7 +2949,8 @@ window.DYNAMIC_TAGS = [
       "plastic-signs",
       "iconicity",
       "generative-ai",
-      "visual-perception"
+      "visual-perception",
+      "aesthetics"
     ]
   },
   {
@@ -3067,6 +3070,67 @@ window.DYNAMIC_TAGS = [
       "episteme",
       "rag",
       "latent-space"
+    ]
+  },
+  {
+    "id": "vision",
+    "name": "vision",
+    "label": "#vision",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-09-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "date": "2026.10.09",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/ai-images-groupe-mu.html"
+      },
+      {
+        "id": "2026-09-29-visual-bandwidth-bottleneck",
+        "slug": "visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "date": "2026.09.29",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/visual-bandwidth-bottleneck.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "slug": "ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "posts/ai-images-groupe-mu.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "slug": "visual-bandwidth-bottleneck",
+        "format": "NOTE",
+        "url": "posts/visual-bandwidth-bottleneck.html",
+        "date": "2026.09.29"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "visual-perception",
+      "semiotics",
+      "groupe-mu",
+      "plastic-signs",
+      "iconicity",
+      "generative-ai"
     ]
   },
   {
@@ -3266,6 +3330,48 @@ window.DYNAMIC_TAGS = [
     ],
     "subtopics": [],
     "connected_tags": []
+  },
+  {
+    "id": "aesthetics",
+    "name": "aesthetics",
+    "label": "#aesthetics",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-09-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "date": "2026.10.09",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/ai-images-groupe-mu.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "slug": "ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "posts/ai-images-groupe-mu.html",
+        "date": "2026.10.09"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "semiotics",
+      "groupe-mu",
+      "plastic-signs",
+      "iconicity",
+      "generative-ai",
+      "vision"
+    ]
   },
   {
     "id": "ai-models",
@@ -4690,6 +4796,48 @@ window.DYNAMIC_TAGS = [
       "informatics",
       "networks",
       "ai"
+    ]
+  },
+  {
+    "id": "design",
+    "name": "design",
+    "label": "#design",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-09-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "date": "2026.10.09",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/ai-images-groupe-mu.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "slug": "ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "posts/ai-images-groupe-mu.html",
+        "date": "2026.10.09"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "semiotics",
+      "groupe-mu",
+      "plastic-signs",
+      "iconicity",
+      "generative-ai",
+      "aesthetics"
     ]
   },
   {
@@ -7711,48 +7859,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "vision",
-    "name": "vision",
-    "label": "#vision",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-29-visual-bandwidth-bottleneck",
-        "slug": "visual-bandwidth-bottleneck",
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "date": "2026.09.29",
-        "format": "NOTE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/visual-bandwidth-bottleneck.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "slug": "visual-bandwidth-bottleneck",
-        "format": "NOTE",
-        "url": "posts/visual-bandwidth-bottleneck.html",
-        "date": "2026.09.29"
-      }
-    ],
-    "pillars": [
-      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
-    ],
-    "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION"
-    ],
-    "connected_tags": [
-      "visual-perception",
-      "psychophysics",
-      "fovea",
-      "predictive-processing",
-      "ui-design",
-      "cognitive-load"
-    ]
-  },
-  {
     "id": "vision-models",
     "name": "vision-models",
     "label": "#vision-models",
@@ -7791,6 +7897,48 @@ window.DYNAMIC_TAGS = [
       "ethics",
       "archeology",
       "taxonomy"
+    ]
+  },
+  {
+    "id": "visual-rhetoric",
+    "name": "visual-rhetoric",
+    "label": "#visual-rhetoric",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-09-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "date": "2026.10.09",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/ai-images-groupe-mu.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "slug": "ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "posts/ai-images-groupe-mu.html",
+        "date": "2026.10.09"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "semiotics",
+      "groupe-mu",
+      "plastic-signs",
+      "iconicity",
+      "generative-ai",
+      "aesthetics"
     ]
   },
   {

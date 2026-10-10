@@ -21,6 +21,10 @@ tags:
   - "plastic-signs"
   - "iconicity"
   - "generative-ai"
+  - "aesthetics"
+  - "vision"
+  - "visual-rhetoric"
+  - "design"
   - "visual-perception"
 
 theme: "dark"
@@ -50,7 +54,7 @@ allow_embed: true
 canonical_url: ""
 
 image:
-  path: "assets/images/groupemu.jpg"
+  path: "assets/images/groupe-mu.jpg"
   alt: "Coral red and black glitch art: fractured human figures dissolve and warp into printed circuit boards, technical schematics, and pixelated tears."
 ---
 
