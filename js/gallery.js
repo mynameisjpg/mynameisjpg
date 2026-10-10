@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let galleryPosts = [];
   let currentIndex = 0;
+  const highResCache = new Set();
 
   // Filter helper: Exclude drafts, empty/missing images, and posts with gallery: false
   function isPublishedWithImage(post) {
@@ -406,8 +407,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // High-res image preload cache
-  const highResCache = new Set();
+  // High-res image preload helper
 
   function preloadHighRes(post) {
     if (!post || !post.image || highResCache.has(post.image)) return;
