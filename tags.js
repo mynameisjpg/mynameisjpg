@@ -5,8 +5,18 @@ window.DYNAMIC_TAGS = [
     "name": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
     "label": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
     "type": "pillar",
-    "count": 8,
+    "count": 9,
     "posts": [
+      {
+        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
+      },
       {
         "id": "2026-10-09-ai-images-groupe-mu",
         "slug": "ai-images-groupe-mu",
@@ -89,6 +99,13 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "links": [
+      {
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "format": "ESSAY",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
+        "date": "2026.10.10"
+      },
       {
         "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
         "slug": "ai-images-groupe-mu",
@@ -741,6 +758,73 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "subtopic-modes-of-seeing-and-visual-semiotics",
+    "name": "MODES OF SEEING AND VISUAL SEMIOTICS",
+    "label": "MODES OF SEEING AND VISUAL SEMIOTICS",
+    "type": "subtopic",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
+      },
+      {
+        "id": "2026-10-09-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "date": "2026.10.09",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/ai-images-groupe-mu.html"
+      },
+      {
+        "id": "2026-09-28-ai-groupe-mu-v1",
+        "slug": "ai-groupe-mu-v1",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
+        "date": "2026.09.28",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/ai-groupe-mu-v1.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "format": "ESSAY",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "slug": "ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "posts/ai-images-groupe-mu.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
+        "slug": "ai-groupe-mu-v1",
+        "format": "ESSAY",
+        "url": "posts/ai-groupe-mu-v1.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
     "id": "pillar-visual-perception-psychology-of-seeing",
     "name": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
     "label": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
@@ -1276,6 +1360,85 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "politics",
+    "name": "politics",
+    "label": "#politics",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
+      },
+      {
+        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
+      },
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "format": "ESSAY",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "format": "ESSAY",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
+        "date": "2026.10.03"
+      },
+      {
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY AND CRITICAL THEORY",
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+      "MODES OF SEEING AND VISUAL SEMIOTICS",
+      "SOMATOPOLITICS & LATENT SPACE"
+    ],
+    "connected_tags": [
+      "paul-b-preciado",
+      "pharmacopornography",
+      "biopolitics",
+      "philosophy",
+      "epistemology",
+      "harun-farocki"
+    ]
+  },
+  {
     "id": "repo",
     "name": "repo",
     "label": "#repo",
@@ -1351,6 +1514,84 @@ window.DYNAMIC_TAGS = [
       "ai-agents",
       "graphify",
       "graph"
+    ]
+  },
+  {
+    "id": "vision",
+    "name": "vision",
+    "label": "#vision",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
+      },
+      {
+        "id": "2026-10-09-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "date": "2026.10.09",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/ai-images-groupe-mu.html"
+      },
+      {
+        "id": "2026-09-29-visual-bandwidth-bottleneck",
+        "slug": "visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "date": "2026.09.29",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/visual-bandwidth-bottleneck.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "format": "ESSAY",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "slug": "ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "posts/ai-images-groupe-mu.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "slug": "visual-bandwidth-bottleneck",
+        "format": "NOTE",
+        "url": "posts/visual-bandwidth-bottleneck.html",
+        "date": "2026.09.29"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "visual-perception",
+      "harun-farocki",
+      "vilem-flusser",
+      "operational-images",
+      "computer-vision",
+      "attention"
     ]
   },
   {
@@ -1599,56 +1840,6 @@ window.DYNAMIC_TAGS = [
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
-    ],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
-    "id": "subtopic-modes-of-seeing-and-visual-semiotics",
-    "name": "MODES OF SEEING AND VISUAL SEMIOTICS",
-    "label": "MODES OF SEEING AND VISUAL SEMIOTICS",
-    "type": "subtopic",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-10-09-ai-images-groupe-mu",
-        "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "date": "2026.10.09",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/ai-images-groupe-mu.html"
-      },
-      {
-        "id": "2026-09-28-ai-groupe-mu-v1",
-        "slug": "ai-groupe-mu-v1",
-        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "date": "2026.09.28",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/ai-groupe-mu-v1.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "slug": "ai-images-groupe-mu",
-        "format": "ESSAY",
-        "url": "posts/ai-images-groupe-mu.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "ai-groupe-mu-v1",
-        "format": "ESSAY",
-        "url": "posts/ai-groupe-mu-v1.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [],
     "connected_tags": []
@@ -1938,6 +2129,67 @@ window.DYNAMIC_TAGS = [
       "bernard-stiegler",
       "pharmacopornography",
       "cognitive-proletarianization"
+    ]
+  },
+  {
+    "id": "computer-vision",
+    "name": "computer-vision",
+    "label": "#computer-vision",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
+      },
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "format": "ESSAY",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "harun-farocki",
+      "vilem-flusser",
+      "operational-images",
+      "vision",
+      "attention",
+      "politics"
     ]
   },
   {
@@ -2656,66 +2908,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "politics",
-    "name": "politics",
-    "label": "#politics",
-    "type": "tag",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
-      },
-      {
-        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "format": "ESSAY",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "format": "ESSAY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
-        "date": "2026.10.03"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY AND CRITICAL THEORY"
-    ],
-    "subtopics": [
-      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-      "SOMATOPOLITICS & LATENT SPACE"
-    ],
-    "connected_tags": [
-      "paul-b-preciado",
-      "pharmacopornography",
-      "biopolitics",
-      "philosophy",
-      "epistemology",
-      "generative-ai"
-    ]
-  },
-  {
     "id": "psychophysics",
     "name": "psychophysics",
     "label": "#psychophysics",
@@ -3073,64 +3265,63 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "vision",
-    "name": "vision",
-    "label": "#vision",
+    "id": "visual-semiotics",
+    "name": "visual-semiotics",
+    "label": "#visual-semiotics",
     "type": "tag",
     "count": 2,
     "posts": [
       {
-        "id": "2026-10-09-ai-images-groupe-mu",
-        "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "date": "2026.10.09",
+        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "date": "2026.10.10",
         "format": "ESSAY",
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/ai-images-groupe-mu.html"
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
       },
       {
-        "id": "2026-09-29-visual-bandwidth-bottleneck",
-        "slug": "visual-bandwidth-bottleneck",
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "date": "2026.09.29",
-        "format": "NOTE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/visual-bandwidth-bottleneck.html"
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
       }
     ],
     "links": [
       {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "slug": "ai-images-groupe-mu",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "slug": "operational-images-farocki-flusser-machine-vision",
         "format": "ESSAY",
-        "url": "posts/ai-images-groupe-mu.html",
-        "date": "2026.10.09"
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
+        "date": "2026.10.10"
       },
       {
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "slug": "visual-bandwidth-bottleneck",
-        "format": "NOTE",
-        "url": "posts/visual-bandwidth-bottleneck.html",
-        "date": "2026.09.29"
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
       }
     ],
     "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
       "MODES OF SEEING AND VISUAL SEMIOTICS"
     ],
     "connected_tags": [
-      "visual-perception",
-      "semiotics",
-      "groupe-mu",
-      "plastic-signs",
-      "iconicity",
-      "generative-ai"
+      "harun-farocki",
+      "vilem-flusser",
+      "operational-images",
+      "computer-vision",
+      "vision",
+      "attention"
     ]
   },
   {
@@ -3626,6 +3817,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "apparatus",
+    "name": "apparatus",
+    "label": "#apparatus",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "format": "ESSAY",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "harun-farocki",
+      "vilem-flusser",
+      "operational-images",
+      "computer-vision",
+      "vision",
+      "attention"
+    ]
+  },
+  {
     "id": "archeology",
     "name": "archeology",
     "label": "#archeology",
@@ -3748,6 +3981,48 @@ window.DYNAMIC_TAGS = [
       "art",
       "youtube",
       "markvanelburg"
+    ]
+  },
+  {
+    "id": "attention",
+    "name": "attention",
+    "label": "#attention",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "format": "ESSAY",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "harun-farocki",
+      "vilem-flusser",
+      "operational-images",
+      "computer-vision",
+      "vision",
+      "politics"
     ]
   },
   {
@@ -4335,48 +4610,6 @@ window.DYNAMIC_TAGS = [
       "networks",
       "ai",
       "llm"
-    ]
-  },
-  {
-    "id": "computer-vision",
-    "name": "computer-vision",
-    "label": "#computer-vision",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [
-      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
-    ],
-    "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION"
-    ],
-    "connected_tags": [
-      "toolkit",
-      "free",
-      "download",
-      "psychophysics",
-      "visual-perception",
-      "skill"
     ]
   },
   {
@@ -5512,6 +5745,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "harun-farocki",
+    "name": "harun-farocki",
+    "label": "#harun-farocki",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "format": "ESSAY",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "vilem-flusser",
+      "operational-images",
+      "computer-vision",
+      "vision",
+      "attention",
+      "politics"
+    ]
+  },
+  {
     "id": "human-ai-pairing",
     "name": "human-ai-pairing",
     "label": "#human-ai-pairing",
@@ -5551,6 +5826,48 @@ window.DYNAMIC_TAGS = [
       "cyborg-feminism",
       "curated-read",
       "borderlands"
+    ]
+  },
+  {
+    "id": "human-vision",
+    "name": "human-vision",
+    "label": "#human-vision",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "format": "ESSAY",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "harun-farocki",
+      "vilem-flusser",
+      "operational-images",
+      "computer-vision",
+      "vision",
+      "attention"
     ]
   },
   {
@@ -6518,6 +6835,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "operational-images",
+    "name": "operational-images",
+    "label": "#operational-images",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "format": "ESSAY",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "harun-farocki",
+      "vilem-flusser",
+      "computer-vision",
+      "vision",
+      "attention",
+      "politics"
+    ]
+  },
+  {
     "id": "pasquinelli",
     "name": "pasquinelli",
     "label": "#pasquinelli",
@@ -7063,6 +7422,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "saliency-maps",
+    "name": "saliency-maps",
+    "label": "#saliency-maps",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "format": "ESSAY",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "harun-farocki",
+      "vilem-flusser",
+      "operational-images",
+      "computer-vision",
+      "vision",
+      "attention"
+    ]
+  },
+  {
     "id": "science",
     "name": "science",
     "label": "#science",
@@ -7395,6 +7796,48 @@ window.DYNAMIC_TAGS = [
       "youtube",
       "markvanelburg",
       "youtube-shorts"
+    ]
+  },
+  {
+    "id": "surveillance",
+    "name": "surveillance",
+    "label": "#surveillance",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "format": "ESSAY",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "harun-farocki",
+      "vilem-flusser",
+      "operational-images",
+      "computer-vision",
+      "vision",
+      "attention"
     ]
   },
   {
@@ -7817,6 +8260,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "vilem-flusser",
+    "name": "vilem-flusser",
+    "label": "#vilem-flusser",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "format": "ESSAY",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "harun-farocki",
+      "operational-images",
+      "computer-vision",
+      "vision",
+      "attention",
+      "politics"
+    ]
+  },
+  {
     "id": "viral-loops",
     "name": "viral-loops",
     "label": "#viral-loops",
@@ -7939,48 +8424,6 @@ window.DYNAMIC_TAGS = [
       "iconicity",
       "generative-ai",
       "aesthetics"
-    ]
-  },
-  {
-    "id": "visual-semiotics",
-    "name": "visual-semiotics",
-    "label": "#visual-semiotics",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-02-dots-bot-muse-cute-mascots",
-        "slug": "dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "date": "2026.10.02",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/dots-bot-muse-cute-mascots.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "slug": "dots-bot-muse-cute-mascots",
-        "format": "ESSAY",
-        "url": "posts/dots-bot-muse-cute-mascots.html",
-        "date": "2026.10.02"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
-    ],
-    "connected_tags": [
-      "ai-mascots",
-      "dots",
-      "muse",
-      "grok-bot",
-      "openai",
-      "grok"
     ]
   },
   {

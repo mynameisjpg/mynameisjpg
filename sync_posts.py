@@ -614,6 +614,7 @@ def compile_posts():
                 "links": normalized_links,
                 "backlinks": normalized_backlinks,
                 "tags": meta.get("tags", []),
+                "entities": meta.get("entities"),
                 "content": html_content
             }
             posts.append(post_obj)
@@ -644,6 +645,82 @@ def compile_posts():
 
     print(f"\n[SUCCESS] Compiled {len(posts)} full posts into {OUTPUT_JSON.name} & {OUTPUT_JS.name}\n")
     return True
+
+# Canonical Knowledge Graph Entity Mappings for GEO & Schema.org Grounding (Gap A)
+CANONICAL_ENTITIES = {
+    "groupe-mu": {"@type": "Organization", "name": "Groupe µ", "sameAs": "https://en.wikipedia.org/wiki/Groupe_%CE%BC"},
+    "foucault": {"@type": "Person", "name": "Michel Foucault", "sameAs": "https://en.wikipedia.org/wiki/Michel_Foucault"},
+    "borges": {"@type": "Person", "name": "Jorge Luis Borges", "sameAs": "https://en.wikipedia.org/wiki/Jorge_Luis_Borges"},
+    "paul-b-preciado": {"@type": "Person", "name": "Paul B. Preciado", "sameAs": "https://en.wikipedia.org/wiki/Paul_B._Preciado"},
+    "yann-lecun": {"@type": "Person", "name": "Yann LeCun", "sameAs": "https://en.wikipedia.org/wiki/Yann_LeCun"},
+    "alan-turing": {"@type": "Person", "name": "Alan Turing", "sameAs": "https://en.wikipedia.org/wiki/Alan_Turing"},
+    "donna-haraway": {"@type": "Person", "name": "Donna Haraway", "sameAs": "https://en.wikipedia.org/wiki/Donna_Haraway"},
+    "haraway": {"@type": "Person", "name": "Donna Haraway", "sameAs": "https://en.wikipedia.org/wiki/Donna_Haraway"},
+    "byung-chul-han": {"@type": "Person", "name": "Byung-Chul Han", "sameAs": "https://en.wikipedia.org/wiki/Byung-Chul_Han"},
+    "bernard-stiegler": {"@type": "Person", "name": "Bernard Stiegler", "sameAs": "https://en.wikipedia.org/wiki/Bernard_Stiegler"},
+    "semiotics": {"@type": "Thing", "name": "Visual Semiotics", "sameAs": "https://en.wikipedia.org/wiki/Visual_semiotics"},
+    "visual-semiotics": {"@type": "Thing", "name": "Visual Semiotics", "sameAs": "https://en.wikipedia.org/wiki/Visual_semiotics"},
+    "plastic-signs": {"@type": "Thing", "name": "Plastic Sign (Visual Semiotics)", "sameAs": "https://en.wikipedia.org/wiki/Visual_semiotics"},
+    "jepa": {"@type": "Thing", "name": "Joint Embedding Predictive Architecture", "sameAs": "https://en.wikipedia.org/wiki/Yann_LeCun#World_models_and_JEPA"},
+    "world-models": {"@type": "Thing", "name": "World Models (Artificial Intelligence)", "sameAs": "https://en.wikipedia.org/wiki/World_model_(artificial_intelligence)"},
+    "embeddings": {"@type": "Thing", "name": "Word Embedding", "sameAs": "https://en.wikipedia.org/wiki/Word_embedding"},
+    "vector-databases": {"@type": "Thing", "name": "Vector Database", "sameAs": "https://en.wikipedia.org/wiki/Vector_database"},
+    "generative-ai": {"@type": "Thing", "name": "Generative Artificial Intelligence", "sameAs": "https://en.wikipedia.org/wiki/Generative_artificial_intelligence"},
+    "psychophysics": {"@type": "Thing", "name": "Psychophysics", "sameAs": "https://en.wikipedia.org/wiki/Psychophysics"},
+    "visual-perception": {"@type": "Thing", "name": "Visual Perception", "sameAs": "https://en.wikipedia.org/wiki/Visual_perception"},
+    "gestalt": {"@type": "Thing", "name": "Gestalt Psychology", "sameAs": "https://en.wikipedia.org/wiki/Gestalt_psychology"},
+    "biopolitics": {"@type": "Thing", "name": "Biopolitics", "sameAs": "https://en.wikipedia.org/wiki/Biopolitics"},
+    "knowledge-graphs": {"@type": "Thing", "name": "Knowledge Graph", "sameAs": "https://en.wikipedia.org/wiki/Knowledge_graph"},
+    "tree-sitter": {"@type": "SoftwareApplication", "name": "Tree-sitter", "sameAs": "https://en.wikipedia.org/wiki/Tree-sitter_(parser)"},
+    "shanzhai": {"@type": "Thing", "name": "Shanzhai", "sameAs": "https://en.wikipedia.org/wiki/Shanzhai"},
+    "cyborg-manifesto": {"@type": "CreativeWork", "name": "A Cyborg Manifesto", "sameAs": "https://en.wikipedia.org/wiki/A_Cyborg_Manifesto"},
+    "llms": {"@type": "Thing", "name": "Large Language Model", "sameAs": "https://en.wikipedia.org/wiki/Large_language_model"},
+    "imitation-game": {"@type": "Thing", "name": "Turing Test", "sameAs": "https://en.wikipedia.org/wiki/Turing_test"},
+    "tamagotchi-effect": {"@type": "Thing", "name": "Tamagotchi Effect", "sameAs": "https://en.wikipedia.org/wiki/Tamagotchi_effect"},
+    "kindchenschema": {"@type": "Thing", "name": "Kindchenschema (Baby Schema)", "sameAs": "https://en.wikipedia.org/wiki/Cuteness#Kindchenschema"}
+}
+
+def resolve_post_entities(post):
+    """
+    Extracts structured 'about' and 'mentions' entities for Schema.org JSON-LD
+    to enable precise AI answer engine (Perplexity, ChatGPT, Claude) entity resolution.
+    Supports explicit frontmatter override or automatic extraction from tags/title/slug.
+    """
+    custom_entities = post.get("entities")
+    if isinstance(custom_entities, dict):
+        about = custom_entities.get("about", [])
+        mentions = custom_entities.get("mentions", [])
+        return about, mentions
+
+    raw_tags = post.get("tags") or []
+    slug = (post.get("slug") or "").lower()
+    title = (post.get("title") or "").lower()
+
+    tag_keys = set()
+    for t in raw_tags:
+        k = str(t).strip().lower().lstrip("#")
+        tag_keys.add(k)
+        tag_keys.add(slugify(k))
+
+    matched_entities = []
+    seen_urls = set()
+
+    for k, entity in CANONICAL_ENTITIES.items():
+        if entity["sameAs"] in seen_urls:
+            continue
+        if k in tag_keys or k in slug or f" {k} " in f" {title} " or f"({k})" in title or f"[{k}]" in title:
+            matched_entities.append(entity)
+            seen_urls.add(entity["sameAs"])
+
+    if not matched_entities:
+        pillar = post.get("pillar")
+        about = [{"@type": "Thing", "name": pillar or "Artificial Intelligence"}]
+        mentions = []
+        return about, mentions
+
+    about = matched_entities[:2]
+    mentions = matched_entities[2:8]
+    return about, mentions
 
 def generate_post_html_files(posts):
     """
@@ -721,6 +798,69 @@ def generate_post_html_files(posts):
         raw_alt = post.get("image_alt") or post.get("subtitle") or title
         image_alt = raw_alt.replace('"', '&quot;').replace('\n', ' ').strip()
 
+        # Build GEO & EEAT-compliant Schema.org JSON-LD (Gap A & Gap C)
+        author_schema = {
+            "@type": "Person",
+            "name": "Juan Pablo Giusepponi",
+            "jobTitle": "Sr. Designer, Head of Communication & Frontier AI Specialist",
+            "url": "https://mynameisjpg.github.io/mynameisjpg/about.html",
+            "image": "https://mynameisjpg.github.io/mynameisjpg/assets/images/self-jpg1.jpg",
+            "sameAs": [
+                "https://github.com/mynameisjpg",
+                "https://mynameisjpg.github.io/mynameisjpg/"
+            ],
+            "knowsAbout": [
+                "Artificial Intelligence",
+                "Visual Semiotics",
+                "Cognitive Psychophysics",
+                "Latent Space Topologies",
+                "Machine Learning",
+                "Joint Embedding Predictive Architecture",
+                "Design Systems",
+                "Epistemology"
+            ]
+        }
+
+        schema_dict = {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": title,
+            "description": description,
+            "datePublished": iso_published_time,
+            "dateModified": iso_published_time,
+            "inLanguage": "en-US",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": post_url
+            },
+            "author": author_schema,
+            "publisher": {
+                "@type": "Organization",
+                "name": "Untitled.jpg",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://mynameisjpg.github.io/mynameisjpg/assets/images/favicon.svg"
+                }
+            },
+            "image": og_image
+        }
+
+        if post.get("pillar"):
+            schema_dict["articleSection"] = post.get("pillar")
+
+        raw_tags = post.get("tags") or []
+        clean_tags = [str(t).strip().lstrip("#") for t in raw_tags if str(t).strip()]
+        if clean_tags:
+            schema_dict["keywords"] = clean_tags
+
+        about_ents, mention_ents = resolve_post_entities(post)
+        if about_ents:
+            schema_dict["about"] = about_ents
+        if mention_ents:
+            schema_dict["mentions"] = mention_ents
+
+        schema_json_ld = json.dumps(schema_dict, indent=2, ensure_ascii=False)
+
         post_html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -751,34 +891,9 @@ def generate_post_html_files(posts):
   <meta name="twitter:image" content="{og_image}">
   <meta name="twitter:image:alt" content="{image_alt}">
 
-  <!-- Schema.org JSON-LD (BlogPosting / Article) -->
+  <!-- Schema.org JSON-LD (BlogPosting / Article with GEO & EEAT Grounding) -->
   <script type="application/ld+json">
-  {{
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "{title}",
-    "description": "{description}",
-    "datePublished": "{iso_published_time}",
-    "dateModified": "{iso_published_time}",
-    "author": {{
-      "@type": "Person",
-      "name": "Juan Pablo Giusepponi",
-      "url": "https://mynameisjpg.github.io/mynameisjpg/about.html"
-    }},
-    "publisher": {{
-      "@type": "Organization",
-      "name": "Untitled.jpg",
-      "logo": {{
-        "@type": "ImageObject",
-        "url": "https://mynameisjpg.github.io/mynameisjpg/assets/images/favicon.svg"
-      }}
-    }},
-    "mainEntityOfPage": {{
-      "@type": "WebPage",
-      "@id": "{post_url}"
-    }},
-    "image": "{og_image}"
-  }}
+{schema_json_ld}
   </script>
 
   <base href="../">
