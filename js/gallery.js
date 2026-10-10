@@ -12,14 +12,85 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentIndex = 0;
   const highResCache = new Set();
 
-  // Filter helper: Exclude drafts, empty/missing images, and posts with gallery: false
-  function isPublishedWithImage(post) {
-    const isPublished =
-      !post.status || post.status.toLowerCase() === "published";
-    const hasImage =
-      post.image && typeof post.image === "string" && post.image.trim() !== "";
-    const isGalleryAllowed = post.gallery !== false && post.in_gallery !== false;
-    return isPublished && hasImage && isGalleryAllowed;
+  // Extract and flatten all published cover images AND extra gallery_images into standalone artwork items
+  function extractGalleryArtworks(posts) {
+    const artworks = [];
+    if (!Array.isArray(posts)) return artworks;
+
+    posts.forEach((post) => {
+      const isPublished =
+        !post.status || post.status.toLowerCase() === "published";
+      const isGalleryAllowed =
+        post.gallery !== false && post.in_gallery !== false;
+      if (!isPublished || !isGalleryAllowed) return;
+
+      // 1. Primary Cover Artwork (if valid)
+      if (
+        post.image &&
+        typeof post.image === "string" &&
+        post.image.trim() !== ""
+      ) {
+        artworks.push({
+          id: post.id || post.slug,
+          slug: post.slug || post.id,
+          title: post.title,
+          artworkTitle: post.title,
+          subtitle: post.subtitle || "",
+          pillar: post.pillar || "",
+          format: post.format || "POST",
+          date: post.date || "",
+          image: post.image,
+          thumbnail: post.thumbnail || post.image,
+          alt: post.image_alt || post.title || "",
+          isCover: true,
+          post: post,
+        });
+      }
+
+      // 2. Additional Gallery Images from YAML (gallery_images)
+      if (Array.isArray(post.gallery_images)) {
+        post.gallery_images.forEach((gImg, idx) => {
+          const imgPath =
+            typeof gImg === "string" ? gImg : gImg?.path || gImg?.image;
+          if (
+            imgPath &&
+            typeof imgPath === "string" &&
+            imgPath.trim() !== ""
+          ) {
+            const thumbPath =
+              typeof gImg === "object" && gImg.thumbnail
+                ? gImg.thumbnail
+                : imgPath;
+            const customTitle =
+              typeof gImg === "object" && gImg.title && gImg.title.trim() !== ""
+                ? gImg.title
+                : `${post.title} — Plate 0${idx + 1}`;
+            const customAlt =
+              typeof gImg === "object" && gImg.alt && gImg.alt.trim() !== ""
+                ? gImg.alt
+                : customTitle;
+
+            artworks.push({
+              id: `${post.slug || post.id}-plate-${idx + 1}`,
+              slug: post.slug || post.id,
+              title: post.title,
+              artworkTitle: customTitle,
+              subtitle: post.subtitle || "",
+              pillar: post.pillar || "",
+              format: post.format || "POST",
+              date: post.date || "",
+              image: imgPath,
+              thumbnail: thumbPath,
+              alt: customAlt,
+              isCover: false,
+              post: post,
+            });
+          }
+        });
+      }
+    });
+
+    return artworks;
   }
 
   // Robust POSTS_DATA extraction (Handles window.DYNAMIC_POSTS, window.POSTS_DATA, or fallback posts.json)
@@ -37,13 +108,13 @@ document.addEventListener("DOMContentLoaded", () => {
           : [];
 
   if (dataSrc.length > 0) {
-    galleryPosts = dataSrc.filter(isPublishedWithImage);
+    galleryPosts = extractGalleryArtworks(dataSrc);
     initGallery();
   } else {
     fetch("posts.json")
       .then((res) => res.json())
       .then((data) => {
-        galleryPosts = data.filter(isPublishedWithImage);
+        galleryPosts = extractGalleryArtworks(data);
         initGallery();
       })
       .catch((err) =>
@@ -331,6 +402,14 @@ document.addEventListener("DOMContentLoaded", () => {
             (post, i) => `
           <div class="css-3d-card" data-index="${i}" style="position: absolute; inset: 0; transform-style: preserve-3d; cursor: pointer; transition: transform 0.5s ease, opacity 0.5s ease;">
             <img src="${post.thumbnail || post.image}" alt="${escapeHtml(post.title)}" style="width:100%; height:100%; object-fit:contain; background:#050505; border:1px solid rgba(255,255,255,0.15); box-shadow:0 15px 40px rgba(0,0,0,0.9);" />
+            ${isAnimatedGif(post.image) ? `
+              <div class="gallery-gif-indicator" style="pointer-events:none;">
+                <div class="gallery-gif-glass-orb" style="width:56px; height:56px;">
+                  <svg class="gallery-gif-play-icon" viewBox="0 0 24 24" style="width:20px; height:20px;"><polygon points="6,4 20,12 6,20"></polygon></svg>
+                </div>
+                <span class="gallery-gif-glass-badge" style="font-size:0.55rem; padding:0.2rem 0.55rem;">ANIMATED [GIF]</span>
+              </div>
+            ` : ""}
           </div>
         `,
           )
@@ -407,6 +486,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Helper: Detect animated GIF formats
+  function isAnimatedGif(url) {
+    if (!url || typeof url !== "string") return false;
+    const clean = url.split("?")[0].split("#")[0].toLowerCase();
+    return clean.endsWith(".gif");
+  }
+
   // High-res image preload helper
 
   function preloadHighRes(post) {
@@ -435,7 +521,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (counterEl)
       counterEl.textContent = `${String(index + 1).padStart(2, "0")} / ${String(galleryPosts.length).padStart(2, "0")}`;
     if (formatEl) formatEl.textContent = `[ ${post.format || "POST"} ]`;
-    if (titleEl) titleEl.textContent = post.title;
+    if (titleEl) titleEl.textContent = post.artworkTitle || post.title;
     if (pillarEl)
       pillarEl.textContent = `${post.date || ""} • ${post.pillar || "AI PERCEPTION & CULTURE"}`;
     if (linkEl) {
@@ -444,6 +530,13 @@ document.addEventListener("DOMContentLoaded", () => {
         "",
       );
       linkEl.href = `posts/${cleanSlug}.html`;
+    }
+
+    // Toggle transparent blurry glass play button if active artwork is an animated GIF
+    const isGif = isAnimatedGif(post.image);
+    const gifIndicator = document.getElementById("gallery-gif-indicator");
+    if (gifIndicator) {
+      gifIndicator.style.display = isGif ? "flex" : "none";
     }
   }
 
@@ -485,6 +578,15 @@ document.addEventListener("DOMContentLoaded", () => {
         if (window.focusGalleryIndex) window.focusGalleryIndex(nextIdx);
       }
     });
+
+    // Wire up transparent blurry glass play button click
+    const gifIndicator = document.getElementById("gallery-gif-indicator");
+    if (gifIndicator) {
+      gifIndicator.addEventListener("click", (e) => {
+        e.stopPropagation();
+        openFullViewModal(galleryPosts[currentIndex]);
+      });
+    }
   }
 
   // ==============================================================================
@@ -508,9 +610,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!modal || !post) return;
 
-    // Hide HUD panel when opening lightbox view
+    // Hide HUD panel and GIF indicator when opening lightbox view
     const hudPanel = document.querySelector(".floating-hud-panel");
     if (hudPanel) hudPanel.style.display = "none";
+    const gifIndicator = document.getElementById("gallery-gif-indicator");
+    if (gifIndicator) gifIndicator.style.display = "none";
 
     // 1. Instantly display cached thumbnail / lightweight image (0ms perceived delay)
     const initialSrc = post.thumbnail || post.image;
@@ -550,6 +654,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // Restore HUD panel when closing lightbox view
     const hudPanel = document.querySelector(".floating-hud-panel");
     if (hudPanel) hudPanel.style.display = "flex";
+    // Restore GIF indicator if currently focused artwork is a GIF
+    const post = galleryPosts[currentIndex];
+    const gifIndicator = document.getElementById("gallery-gif-indicator");
+    if (gifIndicator && post && isAnimatedGif(post.image)) {
+      gifIndicator.style.display = "flex";
+    }
   }
 
   window.openFullViewModal = openFullViewModal;

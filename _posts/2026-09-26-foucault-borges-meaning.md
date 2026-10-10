@@ -65,6 +65,10 @@ canonical_url: ""
 image:
   path: "assets/images/foucault-borges.gif"
   alt: "Red and black archival glitch collage featuring Michel Foucault inside a fractured frame alongside Jorge Luis Borges standing in a circular labyrinth with open books."
+
+gallery_images:
+  - path: "assets/images/foucault-borges.jpg"
+    alt: "Red and black archival glitch collage featuring Michel Foucault inside a fractured frame alongside Jorge Luis Borges standing in a circular labyrinth with open books"
 ---
 
 ## 01. The Laughter of Borges and the Spatial Grid

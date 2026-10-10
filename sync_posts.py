@@ -546,6 +546,30 @@ def compile_posts():
             
             # Generate or reuse optimized downscaled thumbnail
             thumbnail = generate_thumbnail(image) if image else ""
+
+            # Gallery Images (Option A: additional artworks to populate 3D spatial gallery)
+            raw_gallery_imgs = meta.get("gallery_images") or []
+            normalized_gallery_images = []
+            if isinstance(raw_gallery_imgs, list):
+                for g_item in raw_gallery_imgs:
+                    g_path = ""
+                    g_alt = ""
+                    g_title = ""
+                    if isinstance(g_item, dict):
+                        g_path = str(g_item.get("path") or g_item.get("image") or "").strip()
+                        g_alt = str(g_item.get("alt") or "").strip()
+                        g_title = str(g_item.get("title") or "").strip()
+                    elif isinstance(g_item, str):
+                        g_path = g_item.strip()
+                    if g_path:
+                        g_thumb = generate_thumbnail(g_path)
+                        normalized_gallery_images.append({
+                            "path": g_path,
+                            "image": g_path,
+                            "thumbnail": g_thumb,
+                            "alt": g_alt,
+                            "title": g_title
+                        })
             
             # Convert body to clean rich HTML
             html_content = clean_and_convert_markdown(body)
@@ -611,6 +635,7 @@ def compile_posts():
                 "thumbnail": thumbnail,
                 "image_alt": img_alt,
                 "aspect_ratio": aspect_ratio,
+                "gallery_images": normalized_gallery_images,
                 "links": normalized_links,
                 "backlinks": normalized_backlinks,
                 "tags": meta.get("tags", []),

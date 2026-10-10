@@ -448,3 +448,115 @@ body.gallery-page {
     transform: translateY(0px);
   }
 }
+
+/* ==============================================================================
+   TRANSPARENT BLURRY GLASS PLAY BUTTON (ANIMATED GIF INDICATOR)
+   ============================================================================== */
+.gallery-gif-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 25;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  pointer-events: auto;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  user-select: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+.gallery-gif-glass-orb {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: rgba(18, 18, 22, 0.42);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.75),
+    inset 0 1px 2px rgba(255, 255, 255, 0.45),
+    0 0 25px rgba(232, 74, 95, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: gifPulseGlow 3s ease-in-out infinite;
+}
+
+.gallery-gif-play-icon {
+  width: 26px;
+  height: 26px;
+  fill: #ffffff;
+  color: #ffffff;
+  transform: translateX(2px); /* Optical center */
+  transition: transform 0.25s ease, fill 0.25s ease;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.6));
+}
+
+.gallery-gif-glass-badge {
+  font-family: var(--font-mono, "Azeret Mono", monospace);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(10, 10, 12, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  font-weight: 500;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  transition: all 0.25s ease;
+}
+
+.gallery-gif-indicator:hover .gallery-gif-glass-orb,
+.gallery-gif-indicator:focus-visible .gallery-gif-glass-orb {
+  transform: scale(1.12);
+  background: rgba(232, 74, 95, 0.28);
+  border-color: rgba(232, 74, 95, 0.75);
+  box-shadow: 
+    0 24px 55px rgba(0, 0, 0, 0.85),
+    inset 0 1px 2px rgba(255, 255, 255, 0.65),
+    0 0 35px rgba(232, 74, 95, 0.45);
+}
+
+.gallery-gif-indicator:hover .gallery-gif-play-icon,
+.gallery-gif-indicator:focus-visible .gallery-gif-play-icon {
+  fill: var(--accent-coral, #e84a5f);
+  transform: translateX(3px) scale(1.08);
+}
+
+.gallery-gif-indicator:hover .gallery-gif-glass-badge,
+.gallery-gif-indicator:focus-visible .gallery-gif-glass-badge {
+  border-color: rgba(232, 74, 95, 0.55);
+  color: #ffffff;
+  background: rgba(18, 18, 22, 0.9);
+  box-shadow: 0 4px 20px rgba(232, 74, 95, 0.25);
+}
+
+@keyframes gifPulseGlow {
+  0%, 100% {
+    box-shadow: 
+      0 20px 45px rgba(0, 0, 0, 0.75),
+      inset 0 1px 2px rgba(255, 255, 255, 0.45),
+      0 0 20px rgba(232, 74, 95, 0.15);
+  }
+  50% {
+    box-shadow: 
+      0 22px 50px rgba(0, 0, 0, 0.85),
+      inset 0 1px 2px rgba(255, 255, 255, 0.55),
+      0 0 32px rgba(232, 74, 95, 0.35);
+  }
+}
+

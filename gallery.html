@@ -30,7 +30,7 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
   <!-- Modular Design System Stylesheet -->
-  <link rel="stylesheet" href="index.css?v=5">
+  <link rel="stylesheet" href="index.css?v=6">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -70,6 +70,16 @@
 
     <!-- 3D Canvas Element -->
     <div id="spatial-canvas-container"></div>
+
+    <!-- Transparent Blurry Glass Play Button for Animated GIF Artworks -->
+    <button type="button" id="gallery-gif-indicator" class="gallery-gif-indicator" style="display:none;" aria-label="Animated Artwork — Click to view full animation" title="Animated Artwork — Click to view full animation">
+      <div class="gallery-gif-glass-orb">
+        <svg class="gallery-gif-play-icon" viewBox="0 0 24 24">
+          <polygon points="6,4 20,12 6,20"></polygon>
+        </svg>
+      </div>
+      <span class="gallery-gif-glass-badge">&#9654; ANIMATED [GIF]</span>
+    </button>
 
     <!-- ====================================================================
          FLOATING CORNER HUD PANEL
@@ -154,6 +164,6 @@
 
   <!-- JavaScript Dependencies -->
   <script defer src="posts.js?v=5"></script>
-  <script defer src="js/gallery.js?v=6"></script>
+  <script defer src="js/gallery.js?v=8"></script>
 </body>
 </html>

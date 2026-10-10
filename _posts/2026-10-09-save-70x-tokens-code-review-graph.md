@@ -29,6 +29,9 @@ allow_embed: true
 image:
   path: "assets/images/knowledge-graphs.jpg"
   alt: "Architectural blueprint layered with black network nodes and digital glitch distortions in black, white, and coral-red tones."
+gallery_images:
+  - path: ""
+    alt: ""
 links:
   - title: "Graphify - another knowledge graph repo"
     url: "https://github.com/Graphify-Labs/graphify"
