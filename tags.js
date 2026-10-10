@@ -1,6 +1,173 @@
 /** Auto-generated from _posts/*.md by sync_posts.py */
 window.DYNAMIC_TAGS = [
   {
+    "id": "pillar-philosophy-of-the-image-tech-visual-culture",
+    "name": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+    "label": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+    "type": "pillar",
+    "count": 9,
+    "posts": [
+      {
+        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
+      },
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      },
+      {
+        "id": "2026-10-09-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "date": "2026.10.09",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/ai-images-groupe-mu.html"
+      },
+      {
+        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
+      },
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      },
+      {
+        "id": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "date": "2026.09.28",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/shanzhai-deconstructing-original.html"
+      },
+      {
+        "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
+        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
+        "date": "2026.09.28",
+        "format": "BOOKMARK",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
+      },
+      {
+        "id": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-vector-space.html"
+      },
+      {
+        "id": "2026-09-26-foucault-borges-meaning",
+        "slug": "foucault-borges-meaning",
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-meaning.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "format": "ESSAY",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "slug": "ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "posts/ai-images-groupe-mu.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "format": "NOTE",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
+        "date": "2026.10.02"
+      },
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      },
+      {
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "slug": "shanzhai-deconstructing-original",
+        "format": "NOTE",
+        "url": "posts/shanzhai-deconstructing-original.html",
+        "date": "2026.09.28"
+      },
+      {
+        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
+        "slug": "haraway-cyborg-manifesto-neural-borderlands",
+        "format": "BOOKMARK",
+        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
+        "date": "2026.09.28"
+      },
+      {
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "slug": "foucault-borges-vector-space",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-vector-space.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "slug": "foucault-borges-meaning",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-meaning.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "pillars": [],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
     "id": "ai",
     "name": "ai",
     "label": "#ai",
@@ -186,156 +353,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "pillar-philosophy-of-the-image-tech-visual-culture",
-    "name": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-    "label": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-    "type": "pillar",
-    "count": 8,
-    "posts": [
-      {
-        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
-      },
-      {
-        "id": "2026-10-09-ai-images-groupe-mu",
-        "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "date": "2026.10.09",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/ai-images-groupe-mu.html"
-      },
-      {
-        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
-      },
-      {
-        "id": "2026-10-02-dots-bot-muse-cute-mascots",
-        "slug": "dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "date": "2026.10.02",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/dots-bot-muse-cute-mascots.html"
-      },
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "shanzhai-deconstructing-original",
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/shanzhai-deconstructing-original.html"
-      },
-      {
-        "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "date": "2026.09.28",
-        "format": "BOOKMARK",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-meaning",
-        "slug": "foucault-borges-meaning",
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-meaning.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "format": "ESSAY",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "slug": "ai-images-groupe-mu",
-        "format": "ESSAY",
-        "url": "posts/ai-images-groupe-mu.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "format": "NOTE",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "slug": "dots-bot-muse-cute-mascots",
-        "format": "ESSAY",
-        "url": "posts/dots-bot-muse-cute-mascots.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "shanzhai-deconstructing-original",
-        "format": "NOTE",
-        "url": "posts/shanzhai-deconstructing-original.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "format": "BOOKMARK",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "slug": "foucault-borges-meaning",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-meaning.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
     "id": "pillar-language-llms-artificial-intelligence",
     "name": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
     "label": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -435,6 +452,121 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "philosophy",
+    "name": "philosophy",
+    "label": "#philosophy",
+    "type": "tag",
+    "count": 5,
+    "posts": [
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      },
+      {
+        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
+      },
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      },
+      {
+        "id": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "date": "2026.09.28",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/shanzhai-deconstructing-original.html"
+      },
+      {
+        "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
+        "title": "Excavating AI (the unEthics of Machine Learning Training)",
+        "date": "2026.09.26",
+        "format": "BOOKMARK",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "format": "ESSAY",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
+        "date": "2026.10.03"
+      },
+      {
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      },
+      {
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "slug": "shanzhai-deconstructing-original",
+        "format": "NOTE",
+        "url": "posts/shanzhai-deconstructing-original.html",
+        "date": "2026.09.28"
+      },
+      {
+        "title": "Excavating AI (the unEthics of Machine Learning Training)",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
+        "format": "BOOKMARK",
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "PHILOSOPHY AND CRITICAL THEORY",
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+      "EPISTEMOLOGY OF REPRESENTATION",
+      "SOMATOPOLITICS & LATENT SPACE",
+      "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
+    ],
+    "connected_tags": [
+      "paul-b-preciado",
+      "byung-chul-han",
+      "pharmacopornography",
+      "biopolitics",
+      "politics",
+      "epistemology"
+    ]
+  },
+  {
     "id": "pillar-ai-perception-culture-representation",
     "name": "AI PERCEPTION, CULTURE & REPRESENTATION",
     "label": "AI PERCEPTION, CULTURE & REPRESENTATION",
@@ -513,6 +645,90 @@ window.DYNAMIC_TAGS = [
       }
     ],
     "pillars": [],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
+    "id": "subtopic-epistemology-of-representation",
+    "name": "EPISTEMOLOGY OF REPRESENTATION",
+    "label": "EPISTEMOLOGY OF REPRESENTATION",
+    "type": "subtopic",
+    "count": 4,
+    "posts": [
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      },
+      {
+        "id": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "date": "2026.09.28",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/shanzhai-deconstructing-original.html"
+      },
+      {
+        "id": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-vector-space.html"
+      },
+      {
+        "id": "2026-09-26-foucault-borges-meaning",
+        "slug": "foucault-borges-meaning",
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-meaning.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "slug": "shanzhai-deconstructing-original",
+        "format": "NOTE",
+        "url": "posts/shanzhai-deconstructing-original.html",
+        "date": "2026.09.28"
+      },
+      {
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "slug": "foucault-borges-vector-space",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-vector-space.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "slug": "foucault-borges-meaning",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-meaning.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
     "subtopics": [],
     "connected_tags": []
   },
@@ -597,104 +813,6 @@ window.DYNAMIC_TAGS = [
     "pillars": [],
     "subtopics": [],
     "connected_tags": []
-  },
-  {
-    "id": "philosophy",
-    "name": "philosophy",
-    "label": "#philosophy",
-    "type": "tag",
-    "count": 4,
-    "posts": [
-      {
-        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
-      },
-      {
-        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
-      },
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "shanzhai-deconstructing-original",
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/shanzhai-deconstructing-original.html"
-      },
-      {
-        "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "date": "2026.09.26",
-        "format": "BOOKMARK",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "format": "ESSAY",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "format": "ESSAY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "shanzhai-deconstructing-original",
-        "format": "NOTE",
-        "url": "posts/shanzhai-deconstructing-original.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "format": "BOOKMARK",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
-      "PHILOSOPHY AND CRITICAL THEORY",
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-      "EPISTEMOLOGY OF REPRESENTATION",
-      "SOMATOPOLITICS & LATENT SPACE",
-      "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
-    ],
-    "connected_tags": [
-      "paul-b-preciado",
-      "byung-chul-han",
-      "pharmacopornography",
-      "biopolitics",
-      "politics",
-      "epistemology"
-    ]
   },
   {
     "id": "toolkit",
@@ -1046,73 +1164,6 @@ window.DYNAMIC_TAGS = [
     ],
     "pillars": [
       "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
-    ],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
-    "id": "subtopic-epistemology-of-representation",
-    "name": "EPISTEMOLOGY OF REPRESENTATION",
-    "label": "EPISTEMOLOGY OF REPRESENTATION",
-    "type": "subtopic",
-    "count": 3,
-    "posts": [
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "shanzhai-deconstructing-original",
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/shanzhai-deconstructing-original.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-meaning",
-        "slug": "foucault-borges-meaning",
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-meaning.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "shanzhai-deconstructing-original",
-        "format": "NOTE",
-        "url": "posts/shanzhai-deconstructing-original.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "slug": "foucault-borges-meaning",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-meaning.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [],
     "connected_tags": []
@@ -1668,6 +1719,84 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "visual-semiotics",
+    "name": "visual-semiotics",
+    "label": "#visual-semiotics",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
+      },
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      },
+      {
+        "id": "2026-10-02-dots-bot-muse-cute-mascots",
+        "slug": "dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "date": "2026.10.02",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+        "url": "posts/dots-bot-muse-cute-mascots.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "format": "ESSAY",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "slug": "dots-bot-muse-cute-mascots",
+        "format": "ESSAY",
+        "url": "posts/dots-bot-muse-cute-mascots.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+      "EPISTEMOLOGY OF REPRESENTATION",
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "harun-farocki",
+      "vilem-flusser",
+      "operational-images",
+      "computer-vision",
+      "vision",
+      "attention"
+    ]
+  },
+  {
     "id": "subtopic-aesthetics-as-ideology-and-interface-politics",
     "name": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
     "label": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
@@ -1966,6 +2095,66 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "aesthetics",
+    "name": "aesthetics",
+    "label": "#aesthetics",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      },
+      {
+        "id": "2026-10-09-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "date": "2026.10.09",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/ai-images-groupe-mu.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "slug": "ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "posts/ai-images-groupe-mu.html",
+        "date": "2026.10.09"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION",
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "design",
+      "branding",
+      "visual-culture",
+      "visual-semiotics",
+      "philosophy",
+      "susan-sontag"
+    ]
+  },
+  {
     "id": "ai-mascots",
     "name": "ai-mascots",
     "label": "#ai-mascots",
@@ -2204,6 +2393,66 @@ window.DYNAMIC_TAGS = [
       "vision",
       "attention",
       "politics"
+    ]
+  },
+  {
+    "id": "design",
+    "name": "design",
+    "label": "#design",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      },
+      {
+        "id": "2026-10-09-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "date": "2026.10.09",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/ai-images-groupe-mu.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "slug": "ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "posts/ai-images-groupe-mu.html",
+        "date": "2026.10.09"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION",
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "aesthetics",
+      "branding",
+      "visual-culture",
+      "visual-semiotics",
+      "philosophy",
+      "susan-sontag"
     ]
   },
   {
@@ -3344,66 +3593,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "visual-semiotics",
-    "name": "visual-semiotics",
-    "label": "#visual-semiotics",
-    "type": "tag",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
-      },
-      {
-        "id": "2026-10-02-dots-bot-muse-cute-mascots",
-        "slug": "dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "date": "2026.10.02",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/dots-bot-muse-cute-mascots.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "format": "ESSAY",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "slug": "dots-bot-muse-cute-mascots",
-        "format": "ESSAY",
-        "url": "posts/dots-bot-muse-cute-mascots.html",
-        "date": "2026.10.02"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-      "MODES OF SEEING AND VISUAL SEMIOTICS"
-    ],
-    "connected_tags": [
-      "harun-farocki",
-      "vilem-flusser",
-      "operational-images",
-      "computer-vision",
-      "vision",
-      "attention"
-    ]
-  },
-  {
     "id": "subtopic-ai-safety-alignment-and-extreme-risk-evaluation",
     "name": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
     "label": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
@@ -3633,48 +3822,6 @@ window.DYNAMIC_TAGS = [
     ],
     "subtopics": [],
     "connected_tags": []
-  },
-  {
-    "id": "aesthetics",
-    "name": "aesthetics",
-    "label": "#aesthetics",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-09-ai-images-groupe-mu",
-        "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "date": "2026.10.09",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/ai-images-groupe-mu.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "slug": "ai-images-groupe-mu",
-        "format": "ESSAY",
-        "url": "posts/ai-images-groupe-mu.html",
-        "date": "2026.10.09"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "MODES OF SEEING AND VISUAL SEMIOTICS"
-    ],
-    "connected_tags": [
-      "semiotics",
-      "groupe-mu",
-      "plastic-signs",
-      "iconicity",
-      "generative-ai",
-      "vision"
-    ]
   },
   {
     "id": "ai-ethics",
@@ -4558,6 +4705,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "branding",
+    "name": "branding",
+    "label": "#branding",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION"
+    ],
+    "connected_tags": [
+      "design",
+      "visual-culture",
+      "visual-semiotics",
+      "philosophy",
+      "susan-sontag",
+      "identity-politics"
+    ]
+  },
+  {
     "id": "canvas-api",
     "name": "canvas-api",
     "label": "#canvas-api",
@@ -4975,6 +5164,48 @@ window.DYNAMIC_TAGS = [
       "networks",
       "ai",
       "llm"
+    ]
+  },
+  {
+    "id": "coreification",
+    "name": "coreification",
+    "label": "#coreification",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION"
+    ],
+    "connected_tags": [
+      "branding",
+      "design",
+      "visual-culture",
+      "visual-semiotics",
+      "philosophy",
+      "susan-sontag"
     ]
   },
   {
@@ -5397,48 +5628,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "design",
-    "name": "design",
-    "label": "#design",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-09-ai-images-groupe-mu",
-        "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "date": "2026.10.09",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/ai-images-groupe-mu.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "slug": "ai-images-groupe-mu",
-        "format": "ESSAY",
-        "url": "posts/ai-images-groupe-mu.html",
-        "date": "2026.10.09"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "MODES OF SEEING AND VISUAL SEMIOTICS"
-    ],
-    "connected_tags": [
-      "semiotics",
-      "groupe-mu",
-      "plastic-signs",
-      "iconicity",
-      "generative-ai",
-      "aesthetics"
-    ]
-  },
-  {
     "id": "design-psychology",
     "name": "design-psychology",
     "label": "#design-psychology",
@@ -5688,6 +5877,48 @@ window.DYNAMIC_TAGS = [
       "stories",
       "ai-fails",
       "risk"
+    ]
+  },
+  {
+    "id": "fashion",
+    "name": "fashion",
+    "label": "#fashion",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION"
+    ],
+    "connected_tags": [
+      "branding",
+      "design",
+      "visual-culture",
+      "visual-semiotics",
+      "philosophy",
+      "susan-sontag"
     ]
   },
   {
@@ -6402,6 +6633,90 @@ window.DYNAMIC_TAGS = [
       "generative-ai",
       "aesthetics",
       "vision"
+    ]
+  },
+  {
+    "id": "identity",
+    "name": "identity",
+    "label": "#identity",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION"
+    ],
+    "connected_tags": [
+      "branding",
+      "design",
+      "visual-culture",
+      "visual-semiotics",
+      "philosophy",
+      "susan-sontag"
+    ]
+  },
+  {
+    "id": "identity-politics",
+    "name": "identity-politics",
+    "label": "#identity-politics",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION"
+    ],
+    "connected_tags": [
+      "branding",
+      "design",
+      "visual-culture",
+      "visual-semiotics",
+      "philosophy",
+      "susan-sontag"
     ]
   },
   {
@@ -7455,6 +7770,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "photography",
+    "name": "photography",
+    "label": "#photography",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION"
+    ],
+    "connected_tags": [
+      "branding",
+      "design",
+      "visual-culture",
+      "visual-semiotics",
+      "philosophy",
+      "susan-sontag"
+    ]
+  },
+  {
     "id": "physics",
     "name": "physics",
     "label": "#physics",
@@ -8420,6 +8777,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "status-economy",
+    "name": "status-economy",
+    "label": "#status-economy",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION"
+    ],
+    "connected_tags": [
+      "branding",
+      "design",
+      "visual-culture",
+      "visual-semiotics",
+      "philosophy",
+      "susan-sontag"
+    ]
+  },
+  {
     "id": "stories",
     "name": "stories",
     "label": "#stories",
@@ -8459,6 +8858,48 @@ window.DYNAMIC_TAGS = [
       "fail",
       "ai-fails",
       "risk"
+    ]
+  },
+  {
+    "id": "subculture",
+    "name": "subculture",
+    "label": "#subculture",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION"
+    ],
+    "connected_tags": [
+      "branding",
+      "design",
+      "visual-culture",
+      "visual-semiotics",
+      "philosophy",
+      "susan-sontag"
     ]
   },
   {
@@ -8543,6 +8984,48 @@ window.DYNAMIC_TAGS = [
       "computer-vision",
       "vision",
       "attention"
+    ]
+  },
+  {
+    "id": "susan-sontag",
+    "name": "susan-sontag",
+    "label": "#susan-sontag",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION"
+    ],
+    "connected_tags": [
+      "branding",
+      "design",
+      "visual-culture",
+      "visual-semiotics",
+      "philosophy",
+      "identity-politics"
     ]
   },
   {
@@ -9089,6 +9572,48 @@ window.DYNAMIC_TAGS = [
       "archeology",
       "taxonomy",
       "philosophy"
+    ]
+  },
+  {
+    "id": "visual-culture",
+    "name": "visual-culture",
+    "label": "#visual-culture",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION"
+    ],
+    "connected_tags": [
+      "branding",
+      "design",
+      "visual-semiotics",
+      "philosophy",
+      "susan-sontag",
+      "identity-politics"
     ]
   },
   {
