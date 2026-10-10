@@ -31,29 +31,26 @@ format: "bookmark"
 media: "article"
 
 # Source / Origin (Publication, Lab, Author or Platform name):
-source: "Stanford AI Lab / Fei-Fei Li"
+source: "Source Name"
 
 # ------------------------------------------------------------------------------
 # PROMINENT DESTINATION LINK (Renders Coral Red Button in Top Metadata)
 # ------------------------------------------------------------------------------
-bookmark_url: "https://hai.stanford.edu/news/spatial-intelligence"
+bookmark_url: "https://..."
 
 topic:
   pillar: "Language, LLMs & Artificial Intelligence"
   subtopic: "Human vs. machine intelligence and benchmarking"
 
 tags:
-  - "spatial-intelligence"
-  - "curated-read"
-  - "fei-fei-li"
-  - "world-models"
+  - "ai"
 
 # ------------------------------------------------------------------------------
 # DISPLAY & SPECS
 # ------------------------------------------------------------------------------
 theme: "dark"
 featured: false
-sys_id: "SYS_260926_BKMK"
+sys_id: "_"
 reading_time: "Curated Read" # "Curated Read" | "6 min read"
 
 # ------------------------------------------------------------------------------
@@ -61,9 +58,9 @@ reading_time: "Curated Read" # "Curated Read" | "6 min read"
 # ------------------------------------------------------------------------------
 links:
   - title: "Original Source Publication"
-    url: "https://hai.stanford.edu/news/spatial-intelligence"
+    url: "https://"
     type: "article" # "article" | "paper" | "video" | "book"
-    description: "Primary keynote transcript and conference presentation slides."
+    description: "Short description."
 
 backlinks:
   - slug: "#2026-09-24-lecun-world-models-jepa"
@@ -74,13 +71,13 @@ shareable: true
 allow_embed: true
 
 image:
-  path: "assets/images/foucault1.png"
-  alt: "Spatial intelligence conceptual artwork"
+  path: "assets/images/..."
+  alt: "alt text"
 ---
 
 ## 01. Archival Excerpt
 
-> _"Spatial intelligence is not merely the ability to generate pixels on a screen. It is the capacity of embodied organisms to infer physical geometry, anticipate dynamics, and act purposefully within 3D space."_ — Fei-Fei Li
+> _"Quote."_ — Author
 
 ---
 

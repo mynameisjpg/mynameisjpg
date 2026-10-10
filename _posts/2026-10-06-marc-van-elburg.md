@@ -1,7 +1,7 @@
 ---
 # UNTITLED.JPG DISPATCH METADATA
 title: "@marc.van.elburg's Surreal-Delirious Expressionism"
-subtitle: "episode #7. or; how sometimes, the #$%!?! can be the product of a dynamic of pursuit and evasion between a paranoid controlling agent and a free moving point.."
+subtitle: "episode #7 of this insane animations"
 excerpt: "An animated short series by Mark Van Elburg."
 date: "2026-10-06 10:15:01 -0300"
 author: "Juan P. Giusepponi"

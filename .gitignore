@@ -4,17 +4,7 @@ dist/
 *.spec
 
 # DispatchCreator Executables & Launchers
-DispatchCreator.exe
-DispatchCreator.spec
-Launch_Dispatch_Creator.bat
-dispatch_creator_launcher.py
-DispatchCreator/
-dispatch_creator*
-css/post-creator.css
-js/post-creator.js
-post-creator.html
-post_creator_server.py
-custom_options.json
+dispatch-editor/
 
 # System & Python cache files
 .DS_Store
@@ -29,3 +19,5 @@ email/
 .env*
 
 node_modules/
+
+connect.mjs

@@ -5,8 +5,28 @@ window.DYNAMIC_TAGS = [
     "name": "ai",
     "label": "#ai",
     "type": "tag",
-    "count": 7,
+    "count": 9,
     "posts": [
+      {
+        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
+      },
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      },
       {
         "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
         "slug": "openresearch-your-ai-lab-partner-github-repo",
@@ -80,6 +100,20 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "format": "RESOURCE",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      },
+      {
         "title": "OpenResearch: Your AI Lab Partner [github repo]",
         "slug": "openresearch-your-ai-lab-partner-github-repo",
         "format": "RESOURCE",
@@ -143,11 +177,11 @@ window.DYNAMIC_TAGS = [
     ],
     "connected_tags": [
       "toolkit",
-      "github",
       "repo",
-      "intelligence",
-      "science",
-      "research"
+      "github",
+      "ai-agents",
+      "graphify",
+      "graph"
     ]
   },
   {
@@ -267,6 +301,219 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "pillar-language-llms-artificial-intelligence",
+    "name": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+    "label": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+    "type": "pillar",
+    "count": 5,
+    "posts": [
+      {
+        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
+      },
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      },
+      {
+        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "date": "2026.10.06",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
+      },
+      {
+        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "date": "2026.09.26",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
+      },
+      {
+        "id": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "date": "2026.09.24",
+        "format": "ESSAY",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+        "url": "posts/lecun-world-models-jepa.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "format": "RESOURCE",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
+        "date": "2026.10.06"
+      },
+      {
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "format": "RESOURCE",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "slug": "lecun-world-models-jepa",
+        "format": "ESSAY",
+        "url": "posts/lecun-world-models-jepa.html",
+        "date": "2026.09.24"
+      }
+    ],
+    "pillars": [],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
+    "id": "toolkit",
+    "name": "toolkit",
+    "label": "#toolkit",
+    "type": "tag",
+    "count": 5,
+    "posts": [
+      {
+        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
+      },
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      },
+      {
+        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "date": "2026.10.06",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
+      },
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      },
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "format": "RESOURCE",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
+        "date": "2026.10.06"
+      },
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "COMPUTER VISION VS. HUMAN PERCEPTION",
+      "LLM ARCHITECTURES AND MECHANICS"
+    ],
+    "connected_tags": [
+      "ai",
+      "repo",
+      "github",
+      "ai-agents",
+      "graphify",
+      "graph"
+    ]
+  },
+  {
     "id": "pillar-ai-perception-culture-representation",
     "name": "AI PERCEPTION, CULTURE & REPRESENTATION",
     "label": "AI PERCEPTION, CULTURE & REPRESENTATION",
@@ -349,12 +596,32 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
-    "id": "pillar-language-llms-artificial-intelligence",
-    "name": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-    "label": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-    "type": "pillar",
-    "count": 3,
+    "id": "github",
+    "name": "github",
+    "label": "#github",
+    "type": "tag",
+    "count": 4,
     "posts": [
+      {
+        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
+      },
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      },
       {
         "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
         "slug": "openresearch-your-ai-lab-partner-github-repo",
@@ -366,27 +633,31 @@ window.DYNAMIC_TAGS = [
         "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
       },
       {
-        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "date": "2026.09.26",
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
         "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/harvard-s-computer-science-career-for-free.html"
-      },
-      {
-        "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "lecun-world-models-jepa",
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "date": "2026.09.24",
-        "format": "ESSAY",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/lecun-world-models-jepa.html"
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
       }
     ],
     "links": [
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "format": "RESOURCE",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      },
       {
         "title": "OpenResearch: Your AI Lab Partner [github repo]",
         "slug": "openresearch-your-ai-lab-partner-github-repo",
@@ -395,21 +666,189 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.06"
       },
       {
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "harvard-s-computer-science-career-for-free",
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
         "format": "RESOURCE",
-        "url": "posts/harvard-s-computer-science-career-for-free.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "lecun-world-models-jepa",
-        "format": "ESSAY",
-        "url": "posts/lecun-world-models-jepa.html",
-        "date": "2026.09.24"
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
       }
     ],
-    "pillars": [],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION",
+      "LLM ARCHITECTURES AND MECHANICS"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "ai",
+      "repo",
+      "ai-agents",
+      "graphify",
+      "graph"
+    ]
+  },
+  {
+    "id": "repo",
+    "name": "repo",
+    "label": "#repo",
+    "type": "tag",
+    "count": 4,
+    "posts": [
+      {
+        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
+      },
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      },
+      {
+        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "date": "2026.10.06",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
+      },
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "format": "RESOURCE",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
+        "date": "2026.10.06"
+      },
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION",
+      "LLM ARCHITECTURES AND MECHANICS"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "ai",
+      "github",
+      "ai-agents",
+      "graphify",
+      "graph"
+    ]
+  },
+  {
+    "id": "subtopic-llm-architectures-and-mechanics",
+    "name": "LLM ARCHITECTURES AND MECHANICS",
+    "label": "LLM ARCHITECTURES AND MECHANICS",
+    "type": "subtopic",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
+      },
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      },
+      {
+        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "date": "2026.10.06",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "format": "RESOURCE",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
+        "date": "2026.10.06"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
     "subtopics": [],
     "connected_tags": []
   },
@@ -477,6 +916,82 @@ window.DYNAMIC_TAGS = [
     "pillars": [],
     "subtopics": [],
     "connected_tags": []
+  },
+  {
+    "id": "ai-agents",
+    "name": "ai-agents",
+    "label": "#ai-agents",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
+      },
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      },
+      {
+        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "date": "2026.10.06",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "format": "RESOURCE",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
+        "date": "2026.10.06"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "LLM ARCHITECTURES AND MECHANICS"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "ai",
+      "repo",
+      "github",
+      "graphify",
+      "graph"
+    ]
   },
   {
     "id": "biopolitics",
@@ -713,86 +1228,6 @@ window.DYNAMIC_TAGS = [
       "biopolitics",
       "politics",
       "epistemology"
-    ]
-  },
-  {
-    "id": "toolkit",
-    "name": "toolkit",
-    "label": "#toolkit",
-    "type": "tag",
-    "count": 3,
-    "posts": [
-      {
-        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "date": "2026.10.06",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
-      },
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
-      },
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      },
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
-    ],
-    "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION",
-      "COMPUTER VISION VS. HUMAN PERCEPTION",
-      "LLM ARCHITECTURES AND MECHANICS"
-    ],
-    "connected_tags": [
-      "github",
-      "repo",
-      "ai",
-      "science",
-      "research",
-      "deep-research"
     ]
   },
   {
@@ -1232,6 +1667,65 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "antigravity",
+    "name": "antigravity",
+    "label": "#antigravity",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
+      },
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "format": "RESOURCE",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "LLM ARCHITECTURES AND MECHANICS"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "ai",
+      "graphify",
+      "graph",
+      "vs-code",
+      "ai-agents"
+    ]
+  },
+  {
     "id": "byung-chul-han",
     "name": "byung-chul-han",
     "label": "#byung-chul-han",
@@ -1475,64 +1969,121 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "github",
-    "name": "github",
-    "label": "#github",
+    "id": "graph",
+    "name": "graph",
+    "label": "#graph",
     "type": "tag",
     "count": 2,
     "posts": [
       {
-        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "date": "2026.10.06",
+        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
       },
       {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
         "format": "RESOURCE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
       }
     ],
     "links": [
       {
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
         "format": "RESOURCE",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
-        "date": "2026.10.06"
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
+        "date": "2026.10.09"
       },
       {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
         "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
       }
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
     ],
     "subtopics": [
-      "COMPUTER VISION VS. HUMAN PERCEPTION",
       "LLM ARCHITECTURES AND MECHANICS"
     ],
     "connected_tags": [
       "toolkit",
-      "repo",
       "ai",
-      "science",
-      "research",
-      "deep-research"
+      "graphify",
+      "antigravity",
+      "vs-code",
+      "ai-agents"
+    ]
+  },
+  {
+    "id": "graphify",
+    "name": "graphify",
+    "label": "#graphify",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
+      },
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "format": "RESOURCE",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "LLM ARCHITECTURES AND MECHANICS"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "ai",
+      "graph",
+      "antigravity",
+      "vs-code",
+      "ai-agents"
     ]
   },
   {
@@ -1654,6 +2205,65 @@ window.DYNAMIC_TAGS = [
       "imitation-game",
       "sociomorphic-ai",
       "pasquinelli"
+    ]
+  },
+  {
+    "id": "knowledge-graphs",
+    "name": "knowledge-graphs",
+    "label": "#knowledge-graphs",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
+      },
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "format": "RESOURCE",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "LLM ARCHITECTURES AND MECHANICS"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "ai",
+      "graphify",
+      "graph",
+      "antigravity",
+      "vs-code"
     ]
   },
   {
@@ -1957,67 +2567,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "repo",
-    "name": "repo",
-    "label": "#repo",
-    "type": "tag",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "date": "2026.10.06",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
-      },
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      }
-    ],
-    "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
-    ],
-    "subtopics": [
-      "COMPUTER VISION VS. HUMAN PERCEPTION",
-      "LLM ARCHITECTURES AND MECHANICS"
-    ],
-    "connected_tags": [
-      "toolkit",
-      "github",
-      "ai",
-      "science",
-      "research",
-      "deep-research"
-    ]
-  },
-  {
     "id": "tamagotchi-effect",
     "name": "tamagotchi-effect",
     "label": "#tamagotchi-effect",
@@ -2075,6 +2624,65 @@ window.DYNAMIC_TAGS = [
       "ux-psychology",
       "frontier-ai",
       "ai"
+    ]
+  },
+  {
+    "id": "vs-code",
+    "name": "vs-code",
+    "label": "#vs-code",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
+      },
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
+        "format": "RESOURCE",
+        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "LLM ARCHITECTURES AND MECHANICS"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "ai",
+      "graphify",
+      "graph",
+      "antigravity",
+      "ai-agents"
     ]
   },
   {
@@ -2172,39 +2780,6 @@ window.DYNAMIC_TAGS = [
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
-    "id": "subtopic-llm-architectures-and-mechanics",
-    "name": "LLM ARCHITECTURES AND MECHANICS",
-    "label": "LLM ARCHITECTURES AND MECHANICS",
-    "type": "subtopic",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "date": "2026.10.06",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
-        "date": "2026.10.06"
-      }
-    ],
-    "pillars": [
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
     ],
     "subtopics": [],
     "connected_tags": []
@@ -2340,48 +2915,6 @@ window.DYNAMIC_TAGS = [
     ],
     "subtopics": [],
     "connected_tags": []
-  },
-  {
-    "id": "ai-agents",
-    "name": "ai-agents",
-    "label": "#ai-agents",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "date": "2026.10.06",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
-        "date": "2026.10.06"
-      }
-    ],
-    "pillars": [
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
-    ],
-    "subtopics": [
-      "LLM ARCHITECTURES AND MECHANICS"
-    ],
-    "connected_tags": [
-      "toolkit",
-      "github",
-      "repo",
-      "science",
-      "research",
-      "deep-research"
-    ]
   },
   {
     "id": "ai-models",
