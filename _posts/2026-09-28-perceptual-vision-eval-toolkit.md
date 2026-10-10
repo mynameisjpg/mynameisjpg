@@ -46,9 +46,12 @@ links:
     description: "Source code, unit test suites, and interactive HTML5 Canvas demo for automated visual perceptual evaluation."
 
 backlinks:
-  - slug: "#2026-09-28-ai-images-groupe-mu"
-    title: "Why AI Images Look Perfect Until You Look Closer: Groupe µ"
-    note: "Theoretical grounding for plastic signs (form, color, texture) in computer vision."
+  - slug: "#2026-10-09-ai-images-groupe-mu"
+    title: "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI"
+    note: "From Traité du signe visuel to latent diffusion: why generative models master surface rendering while stumbling on physical logic."
+  - slug: "#2026-09-29-visual-bandwidth-bottleneck"
+    title: "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post"
+    note: "The retina captures 10^7 bits per second, but consciousness processes barely 25. Here is how your visual system fakes a continuous reality"
 
 shareable: true
 allow_embed: true

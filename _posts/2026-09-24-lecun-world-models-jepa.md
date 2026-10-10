@@ -57,9 +57,9 @@ backlinks:
   - slug: "#2026-09-25-turing-queer-ai"
     title: "Turing & Queer AI: Synthetic Bodies, Mimicry, and Representation"
     note: "Examines how statistical optimization drives automated conformity."
-  - slug: "#2026-09-26-foucault-borges-vector-space"
-    title: "The 'Chinese Encyclopedia' of Vector Space"
-    note: "Analyzes vector databases as epistemological taxonomies of representation."
+  - slug: "#2026-09-26-foucault-borges-meaning"
+    title: "Foucault, Borges, and the Invisible Grids of AI"
+    note: "How machines stopped sorting the world into folders and started mapping it in space."
 
 shareable: true
 allow_embed: true

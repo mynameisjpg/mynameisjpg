@@ -63,9 +63,9 @@ links:
     description: "Short description."
 
 backlinks:
-  - slug: "#2026-09-24-lecun-world-models-jepa"
-    title: "Why LLMs Don't Think: Yann LeCun's World Models"
-    note: "Complementary inquiry into non-generative representation."
+  - slug: ""
+    title: ""
+    note: ""
 
 shareable: true
 allow_embed: true

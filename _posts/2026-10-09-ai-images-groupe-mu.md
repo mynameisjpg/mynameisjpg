@@ -60,13 +60,13 @@ image:
 
 ## 01. The Trap of Verbal Thinking: Why Images Are Not Sentences
 
-When scholars first started analyzing images with semiotics in the mid-twentieth century, they usually fell into one of two traps. One was traditional art criticism, which leaned heavily on personal intuition, poetic adjectives, and vague feelings. The other was what Groupe µ, a collective of Belgian linguists and semioticians founded at the University of Liège, called "linguistic imperialism."
+When scholars first started analyzing images with semiotics in the mid-twentieth century, they usually fell into one of two traps. One was traditional art criticism, which leaned heavily on personal intuition, poetic adjectives, and vague feelings. The other was what Groupe µ, a collective of Belgian linguists and semioticians founded at the University of Liège, called `linguistic imperialism`.
 
-For decades, critics tried treating images like written sentences. They borrowed terms like syntax, grammar, and vocabulary, forcing them onto brushstrokes and photography without stopping to ask whether pictures actually function like speech.
+For decades, critics tried treating images like written sentences. They borrowed terms like _syntax_, _grammar_, and _vocabulary_, forcing them onto brushstrokes and photography without stopping to ask whether pictures actually function like speech.
 
 Spoken and written language relies on arbitrary symbols. A picture works on our visual system directly. Light hits the eye, and the brain immediately starts extracting edges, contrast, and depth.
 
-In their 1992 book _Traité du signe visuel_ ("Treatise on the Visual Sign"), Groupe µ built a framework made specifically for visual perception. Their core insight was that any image operates on two distinct channels: the **iconic sign** and the **plastic sign**.
+In their 1992 book _Traité du signe visuel_ ("Treatise on the Visual Sign"), [Groupe µ](https://en.wikipedia.org/wiki/Groupe_%CE%BC) built a framework made specifically for visual perception. Their core insight was that any image operates on two distinct channels: the **iconic sign** and the **plastic sign**.
 
 That distinction cuts right to the heart of generative AI. Image generators like Midjourney, Stable Diffusion, and FLUX have mastered the plastic side of an image, while remaining almost completely blind to the iconic one.
 

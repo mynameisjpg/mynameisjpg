@@ -34,7 +34,10 @@ links:
     url: "https://github.com/Graphify-Labs/graphify"
     type: "repo"
     description: ""
-backlinks: []
+backlinks:
+  - slug: "#2026-09-26-harvard-s-computer-science-career-for-free"
+    title: "Harvard's Computer Science Career for FREE? Yes, CS50 is public!"
+    note: "As all education should be: open, free and public"
 category: "repo"
 resource_url: "https://github.com/tirth8205/code-review-graph"
 sys_id: "SYS_202610_RES"

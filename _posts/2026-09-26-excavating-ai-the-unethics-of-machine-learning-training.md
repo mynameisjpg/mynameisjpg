@@ -23,6 +23,11 @@ reading_time: "Curated Read"
 image:
   path: "assets/images/this-is-not-a-human.jpg"
   alt: "Ceci n'est pas un être humain."
+backlinks:
+  - slug: "#2026-10-03-preciado-pharmacopornographic-episteme-foucault"
+    title: "(I) The Pharmacopornographic Machine: Capitalism Below the Waist"
+    note: "Cognitive capitalism and post-Fordism missed the body. Synthetic hormones, algorithmic desire, and molecular governmentality redefined modern power"
+
 media: "article"
 source: "Kate Crawford and Trevor Paglen, “Excavating AI: The Politics of Training Sets for Machine Learning (September 19, 2019) https://excavating.ai"
 bookmark_url: "https://excavating.ai/"
