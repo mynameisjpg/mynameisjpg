@@ -2,7 +2,7 @@
 # UNTITLED.JPG DISPATCH METADATA
 title: "Real AI Failure Story: Deleted a Production Database in 9 Seconds!"
 subtitle: "This isn't a hacking story. There was no malicious intent, no exploited vulnerability. Just an autonomous AI agent doing what it supposed it had to do."
-excerpt: "If you're building with AI agents, automating infrastructure, or just curious how \"helpful\" AI can go catastrophically wrong — this is a case study you must see"
+excerpt: 'If you''re building with AI agents, automating infrastructure, or just curious how "helpful" AI can go catastrophically wrong — this is a case study you must see'
 date: "2026-10-10 11:57:34 -0300"
 author: "Juan P. Giusepponi"
 status: "published"
@@ -29,6 +29,9 @@ allow_embed: true
 image:
   path: "assets/images/ai-fail-opus.jpg"
   alt: "Glitch art in coral, black, and white. Server racks dissolve into circuitry and binary code above a fragmented humanoid head with glowing eyes emitting signal waves."
+gallery-images:
+  path: "assets/images/ai-fail-claude.jpg"
+  alt: "Glitch art in coral, black, and white. Server racks dissolve into circuitry and binary code above a fragmented humanoid head with glowing eyes emitting signal waves."
 links:
   - title: "Real-world AI Failure Story: Delete a Production Database in 9 Seconds!"
     url: "https://www.youtube.com/watch?v=1fsGTnszses"
@@ -45,8 +48,7 @@ sys_id: "SYS_202610_BOO"
 ---
 
 <!-- Responsive Embed -->
-<iframe width="75%" height="auto" src="https://www.youtube.com/embed/1fsGTnszses?si=TZeWnpUy2jFZdZUZ" title="Real-world AI Failure Story: Delete a Production Database in 9 Seconds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+<iframe class="responsive-video" src="https://www.youtube.com/embed/1fsGTnszses?si=TZeWnpUy2jFZdZUZ" title="Real-world AI Failure Story: Delete a Production Database in 9 Seconds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## 01. What the video discusses
 
@@ -63,7 +65,6 @@ This video tells the story of an AI coding agent that accidentally deleted a pro
 ---
 
 ## 02. Key takeaways from the incident
-
 
 - **Context Mismatch:** The agent used staging tasks to access production environments because the API token lacked proper scope limitations.
 - **Soft vs. Hard Guardrails:** System prompts (soft guardrails) were insufficient to prevent the destruction; hard boundaries, like human-in-the-loop approval processes, are necessary for high-risk actions.
