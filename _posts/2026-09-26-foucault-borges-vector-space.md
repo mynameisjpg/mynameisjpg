@@ -8,7 +8,7 @@ last_modified_at: 2026-09-26 12:00:00 -0300
 
 author: "Juan P. Giusepponi"
 #posted_by: "JPG"
-status: "published"
+status: "draft"
 
 format: "essay"
 
@@ -66,9 +66,10 @@ image:
   path: "assets/images/foucault-borges.jpg"
   alt: "Red and black archival glitch collage featuring Michel Foucault inside a fractured frame alongside Jorge Luis Borges standing in a circular labyrinth with open books."
 ---
+
 ## 01. The Laughter of Borges and the Spatial Grid
 
-In the preface to *The Order of Things* (1966), Michel Foucault admits his book began with laughter. He had been reading a short piece by Jorge Luis Borges about a fictional Chinese encyclopedia called *The Celestial Emporium of Benevolent Knowledge*. In it, animals are divided into categories that refuse to make ordinary sense:
+In the preface to _The Order of Things_ (1966), Michel Foucault admits his book began with laughter. He had been reading a short piece by Jorge Luis Borges about a fictional Chinese encyclopedia called _The Celestial Emporium of Benevolent Knowledge_. In it, animals are divided into categories that refuse to make ordinary sense:
 
 ```mermaid
 flowchart TD
@@ -81,7 +82,7 @@ flowchart TD
 
 The joke works because the list feels impossible to hold in your head. It is not that sirens or embalmed dogs do not exist. It is that we cannot imagine the tabletop where all fourteen of these things could sit side by side.
 
-Foucault used that disorientation to introduce his central idea: the **episteme** (*épistémè*). Every culture operates on an unspoken, invisible grid. It is the underlying spatial arrangement that determines what can be compared, what belongs together, and what counts as coherent thought.
+Foucault used that disorientation to introduce his central idea: the **episteme** (_épistémè_). Every culture operates on an unspoken, invisible grid. It is the underlying spatial arrangement that determines what can be compared, what belongs together, and what counts as coherent thought.
 
 If you want to understand how modern AI organizes knowledge, look past the chat interface. High-dimensional vector embeddings and latent spaces are the modern digital equivalent of Foucault's grid.
 
@@ -129,17 +130,17 @@ Meaning is no longer defined by an explicit definition in a dictionary. It is de
 
 Moving from relational tables to latent representations is not just an optimization choice. It changes what the system considers "true":
 
-| Dimension | Classical SQL Episteme | Vector Latent Episteme |
-| :--- | :--- | :--- |
-| **Structure** | Top-down, discrete, rule-based | Emergent, continuous, probabilistic |
-| **Boundaries** | Hard binary edges (`WHERE type = 'animal'`) | Soft contours ($\text{distance} < 0.25$) |
-| **Flexibility** | Breaks on out-of-schema entries | Handles metaphors, typos, and synonyms |
-| **Failure Mode** | Returns `NULL` or a syntax error | Hallucinates or drifts into strange semantic valleys |
-| **Authority** | The database administrator's schema | The weights of the embedding model |
+| Dimension        | Classical SQL Episteme                      | Vector Latent Episteme                               |
+| :--------------- | :------------------------------------------ | :--------------------------------------------------- |
+| **Structure**    | Top-down, discrete, rule-based              | Emergent, continuous, probabilistic                  |
+| **Boundaries**   | Hard binary edges (`WHERE type = 'animal'`) | Soft contours ($\text{distance} < 0.25$)             |
+| **Flexibility**  | Breaks on out-of-schema entries             | Handles metaphors, typos, and synonyms               |
+| **Failure Mode** | Returns `NULL` or a syntax error            | Hallucinates or drifts into strange semantic valleys |
+| **Authority**    | The database administrator's schema         | The weights of the embedding model                   |
 
 When an AI retrieval system pulls context for a prompt, it answers Foucault's original question:
 
-> *"Under what spatial order do these fragments of human thought belong together?"*
+> _"Under what spatial order do these fragments of human thought belong together?"_
 
 ---
 

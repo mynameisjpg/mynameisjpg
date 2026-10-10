@@ -5,18 +5,8 @@ window.DYNAMIC_TAGS = [
     "name": "ai",
     "label": "#ai",
     "type": "tag",
-    "count": 9,
+    "count": 8,
     "posts": [
-      {
-        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
-      },
       {
         "id": "2026-10-09-save-70x-tokens-code-review-graph",
         "slug": "save-70x-tokens-code-review-graph",
@@ -100,13 +90,6 @@ window.DYNAMIC_TAGS = [
     ],
     "links": [
       {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "format": "RESOURCE",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
-        "date": "2026.10.09"
-      },
-      {
         "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "slug": "save-70x-tokens-code-review-graph",
         "format": "RESOURCE",
@@ -180,8 +163,8 @@ window.DYNAMIC_TAGS = [
       "repo",
       "github",
       "ai-agents",
-      "graphify",
-      "graph"
+      "intelligence",
+      "graphify"
     ]
   },
   {
@@ -189,7 +172,7 @@ window.DYNAMIC_TAGS = [
     "name": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
     "label": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
     "type": "pillar",
-    "count": 6,
+    "count": 7,
     "posts": [
       {
         "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
@@ -250,6 +233,16 @@ window.DYNAMIC_TAGS = [
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-vector-space.html"
+      },
+      {
+        "id": "2026-09-26-foucault-borges-meaning",
+        "slug": "foucault-borges-meaning",
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-meaning.html"
       }
     ],
     "links": [
@@ -294,224 +287,18 @@ window.DYNAMIC_TAGS = [
         "format": "ESSAY",
         "url": "posts/foucault-borges-vector-space.html",
         "date": "2026.09.26"
-      }
-    ],
-    "pillars": [],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
-    "id": "pillar-language-llms-artificial-intelligence",
-    "name": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-    "label": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-    "type": "pillar",
-    "count": 5,
-    "posts": [
-      {
-        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
       },
       {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
-      },
-      {
-        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "date": "2026.10.06",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
-      },
-      {
-        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "date": "2026.09.26",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/harvard-s-computer-science-career-for-free.html"
-      },
-      {
-        "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "lecun-world-models-jepa",
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "date": "2026.09.24",
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "slug": "foucault-borges-meaning",
         "format": "ESSAY",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/lecun-world-models-jepa.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "format": "RESOURCE",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "format": "RESOURCE",
-        "url": "posts/harvard-s-computer-science-career-for-free.html",
+        "url": "posts/foucault-borges-meaning.html",
         "date": "2026.09.26"
-      },
-      {
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "lecun-world-models-jepa",
-        "format": "ESSAY",
-        "url": "posts/lecun-world-models-jepa.html",
-        "date": "2026.09.24"
       }
     ],
     "pillars": [],
     "subtopics": [],
     "connected_tags": []
-  },
-  {
-    "id": "toolkit",
-    "name": "toolkit",
-    "label": "#toolkit",
-    "type": "tag",
-    "count": 5,
-    "posts": [
-      {
-        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
-      },
-      {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
-      },
-      {
-        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "date": "2026.10.06",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
-      },
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
-      },
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "format": "RESOURCE",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      },
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
-    ],
-    "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION",
-      "COMPUTER VISION VS. HUMAN PERCEPTION",
-      "LLM ARCHITECTURES AND MECHANICS"
-    ],
-    "connected_tags": [
-      "ai",
-      "repo",
-      "github",
-      "ai-agents",
-      "graphify",
-      "graph"
-    ]
   },
   {
     "id": "pillar-ai-perception-culture-representation",
@@ -596,22 +383,12 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
-    "id": "github",
-    "name": "github",
-    "label": "#github",
-    "type": "tag",
+    "id": "pillar-language-llms-artificial-intelligence",
+    "name": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+    "label": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+    "type": "pillar",
     "count": 4,
     "posts": [
-      {
-        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
-      },
       {
         "id": "2026-10-09-save-70x-tokens-code-review-graph",
         "slug": "save-70x-tokens-code-review-graph",
@@ -633,24 +410,27 @@ window.DYNAMIC_TAGS = [
         "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
       },
       {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
+        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "date": "2026.09.26",
         "format": "RESOURCE",
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
+      },
+      {
+        "id": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "date": "2026.09.24",
+        "format": "ESSAY",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+        "url": "posts/lecun-world-models-jepa.html"
       }
     ],
     "links": [
-      {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "format": "RESOURCE",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
-        "date": "2026.10.09"
-      },
       {
         "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "slug": "save-70x-tokens-code-review-graph",
@@ -666,47 +446,31 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.06"
       },
       {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "slug": "harvard-s-computer-science-career-for-free",
         "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "slug": "lecun-world-models-jepa",
+        "format": "ESSAY",
+        "url": "posts/lecun-world-models-jepa.html",
+        "date": "2026.09.24"
       }
     ],
-    "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
-    ],
-    "subtopics": [
-      "COMPUTER VISION VS. HUMAN PERCEPTION",
-      "LLM ARCHITECTURES AND MECHANICS"
-    ],
-    "connected_tags": [
-      "toolkit",
-      "ai",
-      "repo",
-      "ai-agents",
-      "graphify",
-      "graph"
-    ]
+    "pillars": [],
+    "subtopics": [],
+    "connected_tags": []
   },
   {
-    "id": "repo",
-    "name": "repo",
-    "label": "#repo",
+    "id": "toolkit",
+    "name": "toolkit",
+    "label": "#toolkit",
     "type": "tag",
     "count": 4,
     "posts": [
-      {
-        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
-      },
       {
         "id": "2026-10-09-save-70x-tokens-code-review-graph",
         "slug": "save-70x-tokens-code-review-graph",
@@ -736,16 +500,19 @@ window.DYNAMIC_TAGS = [
         "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
+      },
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
       }
     ],
     "links": [
-      {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "format": "RESOURCE",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
-        "date": "2026.10.09"
-      },
       {
         "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "slug": "save-70x-tokens-code-review-graph",
@@ -766,19 +533,28 @@ window.DYNAMIC_TAGS = [
         "format": "RESOURCE",
         "url": "posts/relate-anything-github-repo.html",
         "date": "2026.09.30"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
       }
     ],
     "pillars": [
       "AI PERCEPTION, CULTURE & REPRESENTATION",
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
     ],
     "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
       "COMPUTER VISION VS. HUMAN PERCEPTION",
       "LLM ARCHITECTURES AND MECHANICS"
     ],
     "connected_tags": [
-      "toolkit",
       "ai",
+      "repo",
       "github",
       "ai-agents",
       "graphify",
@@ -786,68 +562,68 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "subtopic-llm-architectures-and-mechanics",
-    "name": "LLM ARCHITECTURES AND MECHANICS",
-    "label": "LLM ARCHITECTURES AND MECHANICS",
+    "id": "subtopic-epistemology-of-representation",
+    "name": "EPISTEMOLOGY OF REPRESENTATION",
+    "label": "EPISTEMOLOGY OF REPRESENTATION",
     "type": "subtopic",
     "count": 3,
     "posts": [
       {
-        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
+        "id": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "date": "2026.09.28",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/shanzhai-deconstructing-original.html"
       },
       {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
+        "id": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-vector-space.html"
       },
       {
-        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "date": "2026.10.06",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
+        "id": "2026-09-26-foucault-borges-meaning",
+        "slug": "foucault-borges-meaning",
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-meaning.html"
       }
     ],
     "links": [
       {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "format": "RESOURCE",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
-        "date": "2026.10.09"
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "slug": "shanzhai-deconstructing-original",
+        "format": "NOTE",
+        "url": "posts/shanzhai-deconstructing-original.html",
+        "date": "2026.09.28"
       },
       {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "slug": "foucault-borges-vector-space",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-vector-space.html",
+        "date": "2026.09.26"
       },
       {
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
-        "date": "2026.10.06"
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "slug": "foucault-borges-meaning",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-meaning.html",
+        "date": "2026.09.26"
       }
     ],
     "pillars": [
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [],
     "connected_tags": []
@@ -916,82 +692,6 @@ window.DYNAMIC_TAGS = [
     "pillars": [],
     "subtopics": [],
     "connected_tags": []
-  },
-  {
-    "id": "ai-agents",
-    "name": "ai-agents",
-    "label": "#ai-agents",
-    "type": "tag",
-    "count": 3,
-    "posts": [
-      {
-        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
-      },
-      {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
-      },
-      {
-        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "date": "2026.10.06",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "format": "RESOURCE",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
-        "date": "2026.10.06"
-      }
-    ],
-    "pillars": [
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
-    ],
-    "subtopics": [
-      "LLM ARCHITECTURES AND MECHANICS"
-    ],
-    "connected_tags": [
-      "toolkit",
-      "ai",
-      "repo",
-      "github",
-      "graphify",
-      "graph"
-    ]
   },
   {
     "id": "biopolitics",
@@ -1152,6 +852,84 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "github",
+    "name": "github",
+    "label": "#github",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      },
+      {
+        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "date": "2026.10.06",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
+      },
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
+        "date": "2026.10.06"
+      },
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION",
+      "LLM ARCHITECTURES AND MECHANICS"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "ai",
+      "repo",
+      "ai-agents",
+      "graphify",
+      "graph"
+    ]
+  },
+  {
     "id": "philosophy",
     "name": "philosophy",
     "label": "#philosophy",
@@ -1228,6 +1006,84 @@ window.DYNAMIC_TAGS = [
       "biopolitics",
       "politics",
       "epistemology"
+    ]
+  },
+  {
+    "id": "repo",
+    "name": "repo",
+    "label": "#repo",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      },
+      {
+        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "date": "2026.10.06",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
+      },
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
+        "date": "2026.10.06"
+      },
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      }
+    ],
+    "pillars": [
+      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION",
+      "LLM ARCHITECTURES AND MECHANICS"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "ai",
+      "github",
+      "ai-agents",
+      "graphify",
+      "graph"
     ]
   },
   {
@@ -1459,56 +1315,6 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
-    "id": "subtopic-epistemology-of-representation",
-    "name": "EPISTEMOLOGY OF REPRESENTATION",
-    "label": "EPISTEMOLOGY OF REPRESENTATION",
-    "type": "subtopic",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "shanzhai-deconstructing-original",
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/shanzhai-deconstructing-original.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "shanzhai-deconstructing-original",
-        "format": "NOTE",
-        "url": "posts/shanzhai-deconstructing-original.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
     "id": "subtopic-human-vs-machine-intelligence-and-benchmarking",
     "name": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
     "label": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -1550,6 +1356,56 @@ window.DYNAMIC_TAGS = [
         "format": "ESSAY",
         "url": "posts/lecun-world-models-jepa.html",
         "date": "2026.09.24"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
+    "id": "subtopic-llm-architectures-and-mechanics",
+    "name": "LLM ARCHITECTURES AND MECHANICS",
+    "label": "LLM ARCHITECTURES AND MECHANICS",
+    "type": "subtopic",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      },
+      {
+        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "date": "2026.10.06",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
+        "date": "2026.10.06"
       }
     ],
     "pillars": [
@@ -1605,6 +1461,65 @@ window.DYNAMIC_TAGS = [
     "pillars": [],
     "subtopics": [],
     "connected_tags": []
+  },
+  {
+    "id": "ai-agents",
+    "name": "ai-agents",
+    "label": "#ai-agents",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      },
+      {
+        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "date": "2026.10.06",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
+        "date": "2026.10.06"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "LLM ARCHITECTURES AND MECHANICS"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "ai",
+      "repo",
+      "github",
+      "graphify",
+      "graph"
+    ]
   },
   {
     "id": "ai-mascots",
@@ -1667,62 +1582,62 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "antigravity",
-    "name": "antigravity",
-    "label": "#antigravity",
+    "id": "borges",
+    "name": "borges",
+    "label": "#borges",
     "type": "tag",
     "count": 2,
     "posts": [
       {
-        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
+        "id": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-vector-space.html"
       },
       {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
+        "id": "2026-09-26-foucault-borges-meaning",
+        "slug": "foucault-borges-meaning",
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-meaning.html"
       }
     ],
     "links": [
       {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "format": "RESOURCE",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
-        "date": "2026.10.09"
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "slug": "foucault-borges-vector-space",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-vector-space.html",
+        "date": "2026.09.26"
       },
       {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "slug": "foucault-borges-meaning",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-meaning.html",
+        "date": "2026.09.26"
       }
     ],
     "pillars": [
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "LLM ARCHITECTURES AND MECHANICS"
+      "EPISTEMOLOGY OF REPRESENTATION"
     ],
     "connected_tags": [
-      "toolkit",
-      "ai",
-      "graphify",
-      "graph",
-      "vs-code",
-      "ai-agents"
+      "foucault",
+      "vector-databases",
+      "embeddings",
+      "episteme",
+      "rag",
+      "latent-space"
     ]
   },
   {
@@ -1844,6 +1759,183 @@ window.DYNAMIC_TAGS = [
       "ux-psychology",
       "frontier-ai",
       "ai"
+    ]
+  },
+  {
+    "id": "embeddings",
+    "name": "embeddings",
+    "label": "#embeddings",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-vector-space.html"
+      },
+      {
+        "id": "2026-09-26-foucault-borges-meaning",
+        "slug": "foucault-borges-meaning",
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-meaning.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "slug": "foucault-borges-vector-space",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-vector-space.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "slug": "foucault-borges-meaning",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-meaning.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION"
+    ],
+    "connected_tags": [
+      "foucault",
+      "borges",
+      "vector-databases",
+      "episteme",
+      "rag",
+      "latent-space"
+    ]
+  },
+  {
+    "id": "episteme",
+    "name": "episteme",
+    "label": "#episteme",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-vector-space.html"
+      },
+      {
+        "id": "2026-09-26-foucault-borges-meaning",
+        "slug": "foucault-borges-meaning",
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-meaning.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "slug": "foucault-borges-vector-space",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-vector-space.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "slug": "foucault-borges-meaning",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-meaning.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION"
+    ],
+    "connected_tags": [
+      "foucault",
+      "borges",
+      "vector-databases",
+      "embeddings",
+      "rag",
+      "latent-space"
+    ]
+  },
+  {
+    "id": "foucault",
+    "name": "foucault",
+    "label": "#foucault",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-vector-space.html"
+      },
+      {
+        "id": "2026-09-26-foucault-borges-meaning",
+        "slug": "foucault-borges-meaning",
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-meaning.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "slug": "foucault-borges-vector-space",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-vector-space.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "slug": "foucault-borges-meaning",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-meaning.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION"
+    ],
+    "connected_tags": [
+      "borges",
+      "vector-databases",
+      "embeddings",
+      "episteme",
+      "rag",
+      "latent-space"
     ]
   },
   {
@@ -1969,124 +2061,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "graph",
-    "name": "graph",
-    "label": "#graph",
-    "type": "tag",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
-      },
-      {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "format": "RESOURCE",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
-      }
-    ],
-    "pillars": [
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
-    ],
-    "subtopics": [
-      "LLM ARCHITECTURES AND MECHANICS"
-    ],
-    "connected_tags": [
-      "toolkit",
-      "ai",
-      "graphify",
-      "antigravity",
-      "vs-code",
-      "ai-agents"
-    ]
-  },
-  {
-    "id": "graphify",
-    "name": "graphify",
-    "label": "#graphify",
-    "type": "tag",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
-      },
-      {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "format": "RESOURCE",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
-      }
-    ],
-    "pillars": [
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
-    ],
-    "subtopics": [
-      "LLM ARCHITECTURES AND MECHANICS"
-    ],
-    "connected_tags": [
-      "toolkit",
-      "ai",
-      "graph",
-      "antigravity",
-      "vs-code",
-      "ai-agents"
-    ]
-  },
-  {
     "id": "groupe-mu",
     "name": "groupe-mu",
     "label": "#groupe-mu",
@@ -2208,62 +2182,62 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "knowledge-graphs",
-    "name": "knowledge-graphs",
-    "label": "#knowledge-graphs",
+    "id": "latent-space",
+    "name": "latent-space",
+    "label": "#latent-space",
     "type": "tag",
     "count": 2,
     "posts": [
       {
-        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
+        "id": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-vector-space.html"
       },
       {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
+        "id": "2026-09-26-foucault-borges-meaning",
+        "slug": "foucault-borges-meaning",
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-meaning.html"
       }
     ],
     "links": [
       {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "format": "RESOURCE",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
-        "date": "2026.10.09"
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "slug": "foucault-borges-vector-space",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-vector-space.html",
+        "date": "2026.09.26"
       },
       {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "slug": "foucault-borges-meaning",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-meaning.html",
+        "date": "2026.09.26"
       }
     ],
     "pillars": [
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "LLM ARCHITECTURES AND MECHANICS"
+      "EPISTEMOLOGY OF REPRESENTATION"
     ],
     "connected_tags": [
-      "toolkit",
-      "ai",
-      "graphify",
-      "graph",
-      "antigravity",
-      "vs-code"
+      "foucault",
+      "borges",
+      "vector-databases",
+      "embeddings",
+      "episteme",
+      "rag"
     ]
   },
   {
@@ -2384,6 +2358,65 @@ window.DYNAMIC_TAGS = [
       "politics",
       "epistemology",
       "generative-ai"
+    ]
+  },
+  {
+    "id": "philosophy-of-ai",
+    "name": "philosophy-of-ai",
+    "label": "#philosophy-of-ai",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-vector-space.html"
+      },
+      {
+        "id": "2026-09-26-foucault-borges-meaning",
+        "slug": "foucault-borges-meaning",
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-meaning.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "slug": "foucault-borges-vector-space",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-vector-space.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "slug": "foucault-borges-meaning",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-meaning.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION"
+    ],
+    "connected_tags": [
+      "foucault",
+      "borges",
+      "vector-databases",
+      "embeddings",
+      "episteme",
+      "rag"
     ]
   },
   {
@@ -2567,6 +2600,65 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "rag",
+    "name": "rag",
+    "label": "#rag",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-vector-space.html"
+      },
+      {
+        "id": "2026-09-26-foucault-borges-meaning",
+        "slug": "foucault-borges-meaning",
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-meaning.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "slug": "foucault-borges-vector-space",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-vector-space.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "slug": "foucault-borges-meaning",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-meaning.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION"
+    ],
+    "connected_tags": [
+      "foucault",
+      "borges",
+      "vector-databases",
+      "embeddings",
+      "episteme",
+      "latent-space"
+    ]
+  },
+  {
     "id": "tamagotchi-effect",
     "name": "tamagotchi-effect",
     "label": "#tamagotchi-effect",
@@ -2627,62 +2719,62 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "vs-code",
-    "name": "vs-code",
-    "label": "#vs-code",
+    "id": "vector-databases",
+    "name": "vector-databases",
+    "label": "#vector-databases",
     "type": "tag",
     "count": 2,
     "posts": [
       {
-        "id": "2026-10-09-you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html"
+        "id": "2026-09-26-foucault-borges-vector-space",
+        "slug": "foucault-borges-vector-space",
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-vector-space.html"
       },
       {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
+        "id": "2026-09-26-foucault-borges-meaning",
+        "slug": "foucault-borges-meaning",
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "date": "2026.09.26",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/foucault-borges-meaning.html"
       }
     ],
     "links": [
       {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
-        "slug": "you-need-to-graph-your-agent-s-workspace-code-review-graph copy",
-        "format": "RESOURCE",
-        "url": "posts/you-need-to-graph-your-agent-s-workspace-code-review-graph copy.html",
-        "date": "2026.10.09"
+        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
+        "slug": "foucault-borges-vector-space",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-vector-space.html",
+        "date": "2026.09.26"
       },
       {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
+        "title": "Foucault, Borges, and the Invisible Grids of AI",
+        "slug": "foucault-borges-meaning",
+        "format": "ESSAY",
+        "url": "posts/foucault-borges-meaning.html",
+        "date": "2026.09.26"
       }
     ],
     "pillars": [
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
     "subtopics": [
-      "LLM ARCHITECTURES AND MECHANICS"
+      "EPISTEMOLOGY OF REPRESENTATION"
     ],
     "connected_tags": [
-      "toolkit",
-      "ai",
-      "graphify",
-      "graph",
-      "antigravity",
-      "ai-agents"
+      "foucault",
+      "borges",
+      "embeddings",
+      "episteme",
+      "rag",
+      "latent-space"
     ]
   },
   {
@@ -3085,6 +3177,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "antigravity",
+    "name": "antigravity",
+    "label": "#antigravity",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "LLM ARCHITECTURES AND MECHANICS"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "ai",
+      "graphify",
+      "graph",
+      "vs-code",
+      "ai-agents"
+    ]
+  },
+  {
     "id": "app-design",
     "name": "app-design",
     "label": "#app-design",
@@ -3458,48 +3592,6 @@ window.DYNAMIC_TAGS = [
       "cyborg-feminism",
       "curated-read",
       "human-ai-pairing"
-    ]
-  },
-  {
-    "id": "borges",
-    "name": "borges",
-    "label": "#borges",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "EPISTEMOLOGY OF REPRESENTATION"
-    ],
-    "connected_tags": [
-      "foucault",
-      "vector-databases",
-      "embeddings",
-      "episteme",
-      "rag",
-      "latent-space"
     ]
   },
   {
@@ -4468,48 +4560,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "embeddings",
-    "name": "embeddings",
-    "label": "#embeddings",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "EPISTEMOLOGY OF REPRESENTATION"
-    ],
-    "connected_tags": [
-      "foucault",
-      "borges",
-      "vector-databases",
-      "episteme",
-      "rag",
-      "latent-space"
-    ]
-  },
-  {
     "id": "energy-based-models",
     "name": "energy-based-models",
     "label": "#energy-based-models",
@@ -4552,48 +4602,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "episteme",
-    "name": "episteme",
-    "label": "#episteme",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "EPISTEMOLOGY OF REPRESENTATION"
-    ],
-    "connected_tags": [
-      "foucault",
-      "borges",
-      "vector-databases",
-      "embeddings",
-      "rag",
-      "latent-space"
-    ]
-  },
-  {
     "id": "ethics",
     "name": "ethics",
     "label": "#ethics",
@@ -4632,48 +4640,6 @@ window.DYNAMIC_TAGS = [
       "imagenet",
       "archeology",
       "taxonomy"
-    ]
-  },
-  {
-    "id": "foucault",
-    "name": "foucault",
-    "label": "#foucault",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "EPISTEMOLOGY OF REPRESENTATION"
-    ],
-    "connected_tags": [
-      "borges",
-      "vector-databases",
-      "embeddings",
-      "episteme",
-      "rag",
-      "latent-space"
     ]
   },
   {
@@ -4926,6 +4892,90 @@ window.DYNAMIC_TAGS = [
       "capitalism",
       "biopolitics",
       "pharmacopornography"
+    ]
+  },
+  {
+    "id": "graph",
+    "name": "graph",
+    "label": "#graph",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "LLM ARCHITECTURES AND MECHANICS"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "ai",
+      "graphify",
+      "antigravity",
+      "vs-code",
+      "ai-agents"
+    ]
+  },
+  {
+    "id": "graphify",
+    "name": "graphify",
+    "label": "#graphify",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "LLM ARCHITECTURES AND MECHANICS"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "ai",
+      "graph",
+      "antigravity",
+      "vs-code",
+      "ai-agents"
     ]
   },
   {
@@ -5556,45 +5606,45 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "latent-space",
-    "name": "latent-space",
-    "label": "#latent-space",
+    "id": "knowledge-graphs",
+    "name": "knowledge-graphs",
+    "label": "#knowledge-graphs",
     "type": "tag",
     "count": 1,
     "posts": [
       {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
       }
     ],
     "links": [
       {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
       }
     ],
     "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
     ],
     "subtopics": [
-      "EPISTEMOLOGY OF REPRESENTATION"
+      "LLM ARCHITECTURES AND MECHANICS"
     ],
     "connected_tags": [
-      "foucault",
-      "borges",
-      "vector-databases",
-      "embeddings",
-      "episteme",
-      "rag"
+      "toolkit",
+      "ai",
+      "graphify",
+      "graph",
+      "antigravity",
+      "vs-code"
     ]
   },
   {
@@ -6144,48 +6194,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "philosophy-of-ai",
-    "name": "philosophy-of-ai",
-    "label": "#philosophy-of-ai",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "EPISTEMOLOGY OF REPRESENTATION"
-    ],
-    "connected_tags": [
-      "foucault",
-      "borges",
-      "vector-databases",
-      "embeddings",
-      "episteme",
-      "rag"
-    ]
-  },
-  {
     "id": "physics",
     "name": "physics",
     "label": "#physics",
@@ -6602,48 +6610,6 @@ window.DYNAMIC_TAGS = [
       "sociomorphic-ai",
       "pasquinelli",
       "epistemology"
-    ]
-  },
-  {
-    "id": "rag",
-    "name": "rag",
-    "label": "#rag",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "EPISTEMOLOGY OF REPRESENTATION"
-    ],
-    "connected_tags": [
-      "foucault",
-      "borges",
-      "vector-databases",
-      "embeddings",
-      "episteme",
-      "latent-space"
     ]
   },
   {
@@ -7525,48 +7491,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "vector-databases",
-    "name": "vector-databases",
-    "label": "#vector-databases",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "EPISTEMOLOGY OF REPRESENTATION"
-    ],
-    "connected_tags": [
-      "foucault",
-      "borges",
-      "embeddings",
-      "episteme",
-      "rag",
-      "latent-space"
-    ]
-  },
-  {
     "id": "vicreg",
     "name": "vicreg",
     "label": "#vicreg",
@@ -7773,6 +7697,48 @@ window.DYNAMIC_TAGS = [
       "grok-bot",
       "openai",
       "grok"
+    ]
+  },
+  {
+    "id": "vs-code",
+    "name": "vs-code",
+    "label": "#vs-code",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      }
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "LLM ARCHITECTURES AND MECHANICS"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "ai",
+      "graphify",
+      "graph",
+      "antigravity",
+      "ai-agents"
     ]
   },
   {
