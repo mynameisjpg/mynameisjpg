@@ -97,8 +97,6 @@ mynameisjpg/
 ├── js/ & app.js            # Client-side routing, filtering, and reader hydration
 ├── posts/                  # Compiled standalone post HTML pages (generated)
 ├── sync_posts.py           # Core Python post compiler & metadata watcher
-├── post_creator_server.py  # Local Dispatch Creator backend server
-├── DispatchCreator.exe     # Standalone Dispatch Creator desktop utility
 ├── PRODUCT.md              # Product specifications & architectural contract
 ├── DESIGN.md               # Visual design tokens & UI guidelines
 ├── index.html              # Asymmetrical 2-column main application entry point
