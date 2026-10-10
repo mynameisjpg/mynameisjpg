@@ -1,7 +1,7 @@
 ---
 # UNTITLED.JPG DISPATCH METADATA
-title: "You need to graph your agent's workspace [code-review-graph]"
-subtitle: "High-level summary of what this tool, dataset, or utility accomplishes."
+title: "Use up to 70x less tokens with this tool [code-review-graph]"
+subtitle: "code-review-graph builds a structural map of the code,keeps it updated incrementally, and serves compact context over MCP."
 excerpt: "Reduce your token consumption up to 70x by building a graph of your workspace."
 date: "2026-10-09 22:45:59 -0300"
 author: "Juan P. Giusepponi"

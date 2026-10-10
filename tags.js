@@ -20,7 +20,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-09-save-70x-tokens-code-review-graph",
         "slug": "save-70x-tokens-code-review-graph",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "date": "2026.10.09",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -107,7 +107,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.09"
       },
       {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "slug": "save-70x-tokens-code-review-graph",
         "format": "RESOURCE",
         "url": "posts/save-70x-tokens-code-review-graph.html",
@@ -320,7 +320,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-09-save-70x-tokens-code-review-graph",
         "slug": "save-70x-tokens-code-review-graph",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "date": "2026.10.09",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -367,7 +367,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.09"
       },
       {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "slug": "save-70x-tokens-code-review-graph",
         "format": "RESOURCE",
         "url": "posts/save-70x-tokens-code-review-graph.html",
@@ -419,7 +419,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-09-save-70x-tokens-code-review-graph",
         "slug": "save-70x-tokens-code-review-graph",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "date": "2026.10.09",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -466,7 +466,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.09"
       },
       {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "slug": "save-70x-tokens-code-review-graph",
         "format": "RESOURCE",
         "url": "posts/save-70x-tokens-code-review-graph.html",
@@ -615,7 +615,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-09-save-70x-tokens-code-review-graph",
         "slug": "save-70x-tokens-code-review-graph",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "date": "2026.10.09",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -652,7 +652,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.09"
       },
       {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "slug": "save-70x-tokens-code-review-graph",
         "format": "RESOURCE",
         "url": "posts/save-70x-tokens-code-review-graph.html",
@@ -710,7 +710,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-09-save-70x-tokens-code-review-graph",
         "slug": "save-70x-tokens-code-review-graph",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "date": "2026.10.09",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -747,7 +747,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.09"
       },
       {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "slug": "save-70x-tokens-code-review-graph",
         "format": "RESOURCE",
         "url": "posts/save-70x-tokens-code-review-graph.html",
@@ -805,7 +805,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-09-save-70x-tokens-code-review-graph",
         "slug": "save-70x-tokens-code-review-graph",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "date": "2026.10.09",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -832,7 +832,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.09"
       },
       {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "slug": "save-70x-tokens-code-review-graph",
         "format": "RESOURCE",
         "url": "posts/save-70x-tokens-code-review-graph.html",
@@ -937,7 +937,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-09-save-70x-tokens-code-review-graph",
         "slug": "save-70x-tokens-code-review-graph",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "date": "2026.10.09",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -964,7 +964,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.09"
       },
       {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "slug": "save-70x-tokens-code-review-graph",
         "format": "RESOURCE",
         "url": "posts/save-70x-tokens-code-review-graph.html",
@@ -1686,7 +1686,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-09-save-70x-tokens-code-review-graph",
         "slug": "save-70x-tokens-code-review-graph",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "date": "2026.10.09",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -1703,7 +1703,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.09"
       },
       {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "slug": "save-70x-tokens-code-review-graph",
         "format": "RESOURCE",
         "url": "posts/save-70x-tokens-code-review-graph.html",
@@ -1988,7 +1988,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-09-save-70x-tokens-code-review-graph",
         "slug": "save-70x-tokens-code-review-graph",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "date": "2026.10.09",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -2005,7 +2005,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.09"
       },
       {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "slug": "save-70x-tokens-code-review-graph",
         "format": "RESOURCE",
         "url": "posts/save-70x-tokens-code-review-graph.html",
@@ -2047,7 +2047,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-09-save-70x-tokens-code-review-graph",
         "slug": "save-70x-tokens-code-review-graph",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "date": "2026.10.09",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -2064,7 +2064,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.09"
       },
       {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "slug": "save-70x-tokens-code-review-graph",
         "format": "RESOURCE",
         "url": "posts/save-70x-tokens-code-review-graph.html",
@@ -2227,7 +2227,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-09-save-70x-tokens-code-review-graph",
         "slug": "save-70x-tokens-code-review-graph",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "date": "2026.10.09",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -2244,7 +2244,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.09"
       },
       {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "slug": "save-70x-tokens-code-review-graph",
         "format": "RESOURCE",
         "url": "posts/save-70x-tokens-code-review-graph.html",
@@ -2646,7 +2646,7 @@ window.DYNAMIC_TAGS = [
       {
         "id": "2026-10-09-save-70x-tokens-code-review-graph",
         "slug": "save-70x-tokens-code-review-graph",
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "date": "2026.10.09",
         "format": "RESOURCE",
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -2663,7 +2663,7 @@ window.DYNAMIC_TAGS = [
         "date": "2026.10.09"
       },
       {
-        "title": "You need to graph your agent's workspace [code-review-graph]",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
         "slug": "save-70x-tokens-code-review-graph",
         "format": "RESOURCE",
         "url": "posts/save-70x-tokens-code-review-graph.html",
