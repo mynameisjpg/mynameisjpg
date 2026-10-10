@@ -335,6 +335,118 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "visual-perception",
+    "name": "visual-perception",
+    "label": "#visual-perception",
+    "type": "tag",
+    "count": 5,
+    "posts": [
+      {
+        "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "date": "2026.10.11",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
+      },
+      {
+        "id": "2026-10-09-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "date": "2026.10.09",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/ai-images-groupe-mu.html"
+      },
+      {
+        "id": "2026-09-29-visual-bandwidth-bottleneck",
+        "slug": "visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "date": "2026.09.29",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/visual-bandwidth-bottleneck.html"
+      },
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      },
+      {
+        "id": "2026-09-28-ai-groupe-mu-v1",
+        "slug": "ai-groupe-mu-v1",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
+        "date": "2026.09.28",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/ai-groupe-mu-v1.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "format": "NOTE",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "slug": "ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "posts/ai-images-groupe-mu.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "slug": "visual-bandwidth-bottleneck",
+        "format": "NOTE",
+        "url": "posts/visual-bandwidth-bottleneck.html",
+        "date": "2026.09.29"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      },
+      {
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
+        "slug": "ai-groupe-mu-v1",
+        "format": "ESSAY",
+        "url": "posts/ai-groupe-mu-v1.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "generative-ai",
+      "vision",
+      "semiotics",
+      "groupe-mu",
+      "plastic-signs",
+      "iconicity"
+    ]
+  },
+  {
     "id": "pillar-ai-perception-culture-representation",
     "name": "AI PERCEPTION, CULTURE & REPRESENTATION",
     "label": "AI PERCEPTION, CULTURE & REPRESENTATION",
@@ -499,6 +611,185 @@ window.DYNAMIC_TAGS = [
     "connected_tags": []
   },
   {
+    "id": "pillar-visual-perception-psychology-of-seeing",
+    "name": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+    "label": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+    "type": "pillar",
+    "count": 4,
+    "posts": [
+      {
+        "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "date": "2026.10.11",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
+      },
+      {
+        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "title": "5 Psychology Effects Used in App Design",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "COGNITIVE AND VISUAL BIASES",
+        "url": "posts/5-psychology-effects-used-in-app-design.html"
+      },
+      {
+        "id": "2026-09-29-visual-bandwidth-bottleneck",
+        "slug": "visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "date": "2026.09.29",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/visual-bandwidth-bottleneck.html"
+      },
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "format": "NOTE",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "5 Psychology Effects Used in App Design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "format": "NOTE",
+        "url": "posts/5-psychology-effects-used-in-app-design.html",
+        "date": "2026.10.02"
+      },
+      {
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "slug": "visual-bandwidth-bottleneck",
+        "format": "NOTE",
+        "url": "posts/visual-bandwidth-bottleneck.html",
+        "date": "2026.09.29"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
+    "id": "generative-ai",
+    "name": "generative-ai",
+    "label": "#generative-ai",
+    "type": "tag",
+    "count": 4,
+    "posts": [
+      {
+        "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "date": "2026.10.11",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
+      },
+      {
+        "id": "2026-10-09-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "date": "2026.10.09",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/ai-images-groupe-mu.html"
+      },
+      {
+        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
+      },
+      {
+        "id": "2026-09-28-ai-groupe-mu-v1",
+        "slug": "ai-groupe-mu-v1",
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
+        "date": "2026.09.28",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/ai-groupe-mu-v1.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "format": "NOTE",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "slug": "ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "posts/ai-images-groupe-mu.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "format": "ESSAY",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
+        "date": "2026.10.03"
+      },
+      {
+        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
+        "slug": "ai-groupe-mu-v1",
+        "format": "ESSAY",
+        "url": "posts/ai-groupe-mu-v1.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY AND CRITICAL THEORY",
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "MODES OF SEEING AND VISUAL SEMIOTICS",
+      "SOMATOPOLITICS & LATENT SPACE"
+    ],
+    "connected_tags": [
+      "visual-perception",
+      "vision",
+      "semiotics",
+      "groupe-mu",
+      "plastic-signs",
+      "iconicity"
+    ]
+  },
+  {
     "id": "toolkit",
     "name": "toolkit",
     "label": "#toolkit",
@@ -596,12 +887,32 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "visual-perception",
-    "name": "visual-perception",
-    "label": "#visual-perception",
+    "id": "vision",
+    "name": "vision",
+    "label": "#vision",
     "type": "tag",
     "count": 4,
     "posts": [
+      {
+        "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "date": "2026.10.11",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
+      },
+      {
+        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
+      },
       {
         "id": "2026-10-09-ai-images-groupe-mu",
         "slug": "ai-images-groupe-mu",
@@ -611,6 +922,81 @@ window.DYNAMIC_TAGS = [
         "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
         "url": "posts/ai-images-groupe-mu.html"
+      },
+      {
+        "id": "2026-09-29-visual-bandwidth-bottleneck",
+        "slug": "visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "date": "2026.09.29",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/visual-bandwidth-bottleneck.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "format": "NOTE",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
+        "slug": "operational-images-farocki-flusser-machine-vision",
+        "format": "ESSAY",
+        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "slug": "ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "posts/ai-images-groupe-mu.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "slug": "visual-bandwidth-bottleneck",
+        "format": "NOTE",
+        "url": "posts/visual-bandwidth-bottleneck.html",
+        "date": "2026.09.29"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "visual-perception",
+      "generative-ai",
+      "reflections",
+      "observations",
+      "generative-video",
+      "foveated-vision"
+    ]
+  },
+  {
+    "id": "subtopic-anatomy-and-psychophysics-of-vision",
+    "name": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+    "label": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+    "type": "subtopic",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "date": "2026.10.11",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
       },
       {
         "id": "2026-09-29-visual-bandwidth-bottleneck",
@@ -631,25 +1017,15 @@ window.DYNAMIC_TAGS = [
         "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
         "url": "posts/perceptual-vision-eval-toolkit.html"
-      },
-      {
-        "id": "2026-09-28-ai-groupe-mu-v1",
-        "slug": "ai-groupe-mu-v1",
-        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "date": "2026.09.28",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/ai-groupe-mu-v1.html"
       }
     ],
     "links": [
       {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "slug": "ai-images-groupe-mu",
-        "format": "ESSAY",
-        "url": "posts/ai-images-groupe-mu.html",
-        "date": "2026.10.09"
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "format": "NOTE",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
+        "date": "2026.10.11"
       },
       {
         "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
@@ -664,31 +1040,13 @@ window.DYNAMIC_TAGS = [
         "format": "RESOURCE",
         "url": "posts/perceptual-vision-eval-toolkit.html",
         "date": "2026.09.28"
-      },
-      {
-        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "ai-groupe-mu-v1",
-        "format": "ESSAY",
-        "url": "posts/ai-groupe-mu-v1.html",
-        "date": "2026.09.28"
       }
     ],
     "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
       "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
     ],
-    "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION",
-      "MODES OF SEEING AND VISUAL SEMIOTICS"
-    ],
-    "connected_tags": [
-      "semiotics",
-      "groupe-mu",
-      "plastic-signs",
-      "iconicity",
-      "generative-ai",
-      "vision"
-    ]
+    "subtopics": [],
+    "connected_tags": []
   },
   {
     "id": "subtopic-epistemology-of-representation",
@@ -821,71 +1179,6 @@ window.DYNAMIC_TAGS = [
     "pillars": [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
     ],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
-    "id": "pillar-visual-perception-psychology-of-seeing",
-    "name": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-    "label": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-    "type": "pillar",
-    "count": 3,
-    "posts": [
-      {
-        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
-        "slug": "5-psychology-effects-used-in-app-design",
-        "title": "5 Psychology Effects Used in App Design",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "COGNITIVE AND VISUAL BIASES",
-        "url": "posts/5-psychology-effects-used-in-app-design.html"
-      },
-      {
-        "id": "2026-09-29-visual-bandwidth-bottleneck",
-        "slug": "visual-bandwidth-bottleneck",
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "date": "2026.09.29",
-        "format": "NOTE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/visual-bandwidth-bottleneck.html"
-      },
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "5 Psychology Effects Used in App Design",
-        "slug": "5-psychology-effects-used-in-app-design",
-        "format": "NOTE",
-        "url": "posts/5-psychology-effects-used-in-app-design.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "slug": "visual-bandwidth-bottleneck",
-        "format": "NOTE",
-        "url": "posts/visual-bandwidth-bottleneck.html",
-        "date": "2026.09.29"
-      },
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [],
     "subtopics": [],
     "connected_tags": []
   },
@@ -1045,84 +1338,6 @@ window.DYNAMIC_TAGS = [
       "philosophy",
       "politics",
       "queer-theory"
-    ]
-  },
-  {
-    "id": "generative-ai",
-    "name": "generative-ai",
-    "label": "#generative-ai",
-    "type": "tag",
-    "count": 3,
-    "posts": [
-      {
-        "id": "2026-10-09-ai-images-groupe-mu",
-        "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "date": "2026.10.09",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/ai-images-groupe-mu.html"
-      },
-      {
-        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY AND CRITICAL THEORY",
-        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
-      },
-      {
-        "id": "2026-09-28-ai-groupe-mu-v1",
-        "slug": "ai-groupe-mu-v1",
-        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "date": "2026.09.28",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/ai-groupe-mu-v1.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "slug": "ai-images-groupe-mu",
-        "format": "ESSAY",
-        "url": "posts/ai-images-groupe-mu.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "format": "ESSAY",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "slug": "ai-groupe-mu-v1",
-        "format": "ESSAY",
-        "url": "posts/ai-groupe-mu-v1.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY AND CRITICAL THEORY",
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "MODES OF SEEING AND VISUAL SEMIOTICS",
-      "SOMATOPOLITICS & LATENT SPACE"
-    ],
-    "connected_tags": [
-      "semiotics",
-      "groupe-mu",
-      "plastic-signs",
-      "iconicity",
-      "visual-perception",
-      "aesthetics"
     ]
   },
   {
@@ -1517,84 +1732,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "vision",
-    "name": "vision",
-    "label": "#vision",
-    "type": "tag",
-    "count": 3,
-    "posts": [
-      {
-        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
-      },
-      {
-        "id": "2026-10-09-ai-images-groupe-mu",
-        "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "date": "2026.10.09",
-        "format": "ESSAY",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/ai-images-groupe-mu.html"
-      },
-      {
-        "id": "2026-09-29-visual-bandwidth-bottleneck",
-        "slug": "visual-bandwidth-bottleneck",
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "date": "2026.09.29",
-        "format": "NOTE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/visual-bandwidth-bottleneck.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "format": "ESSAY",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "slug": "ai-images-groupe-mu",
-        "format": "ESSAY",
-        "url": "posts/ai-images-groupe-mu.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "slug": "visual-bandwidth-bottleneck",
-        "format": "NOTE",
-        "url": "posts/visual-bandwidth-bottleneck.html",
-        "date": "2026.09.29"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
-    ],
-    "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION",
-      "MODES OF SEEING AND VISUAL SEMIOTICS"
-    ],
-    "connected_tags": [
-      "visual-perception",
-      "harun-farocki",
-      "vilem-flusser",
-      "operational-images",
-      "computer-vision",
-      "attention"
-    ]
-  },
-  {
     "id": "subtopic-aesthetics-as-ideology-and-interface-politics",
     "name": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
     "label": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
@@ -1640,56 +1777,6 @@ window.DYNAMIC_TAGS = [
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [],
-    "connected_tags": []
-  },
-  {
-    "id": "subtopic-anatomy-and-psychophysics-of-vision",
-    "name": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-    "label": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-    "type": "subtopic",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-09-29-visual-bandwidth-bottleneck",
-        "slug": "visual-bandwidth-bottleneck",
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "date": "2026.09.29",
-        "format": "NOTE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/visual-bandwidth-bottleneck.html"
-      },
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "slug": "visual-bandwidth-bottleneck",
-        "format": "NOTE",
-        "url": "posts/visual-bandwidth-bottleneck.html",
-        "date": "2026.09.29"
-      },
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [
-      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
     ],
     "subtopics": [],
     "connected_tags": []
@@ -2670,6 +2757,66 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "observations",
+    "name": "observations",
+    "label": "#observations",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "date": "2026.10.11",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
+      },
+      {
+        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "title": "5 Psychology Effects Used in App Design",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "COGNITIVE AND VISUAL BIASES",
+        "url": "posts/5-psychology-effects-used-in-app-design.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "format": "NOTE",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "5 Psychology Effects Used in App Design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "format": "NOTE",
+        "url": "posts/5-psychology-effects-used-in-app-design.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "COGNITIVE AND VISUAL BIASES"
+    ],
+    "connected_tags": [
+      "reflections",
+      "visual-perception",
+      "generative-video",
+      "foveated-vision",
+      "ai-evaluations",
+      "saccadic-suppression"
+    ]
+  },
+  {
     "id": "paul-b-preciado",
     "name": "paul-b-preciado",
     "label": "#paul-b-preciado",
@@ -3084,6 +3231,67 @@ window.DYNAMIC_TAGS = [
       "embeddings",
       "episteme",
       "latent-space"
+    ]
+  },
+  {
+    "id": "reflections",
+    "name": "reflections",
+    "label": "#reflections",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "date": "2026.10.11",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
+      },
+      {
+        "id": "2026-09-28-shanzhai-deconstructing-original",
+        "slug": "shanzhai-deconstructing-original",
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "date": "2026.09.28",
+        "format": "NOTE",
+        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/shanzhai-deconstructing-original.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "format": "NOTE",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
+        "slug": "shanzhai-deconstructing-original",
+        "format": "NOTE",
+        "url": "posts/shanzhai-deconstructing-original.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "EPISTEMOLOGY OF REPRESENTATION"
+    ],
+    "connected_tags": [
+      "observations",
+      "visual-perception",
+      "generative-video",
+      "foveated-vision",
+      "ai-evaluations",
+      "saccadic-suppression"
     ]
   },
   {
@@ -3565,6 +3773,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "ai-evaluations",
+    "name": "ai-evaluations",
+    "label": "#ai-evaluations",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "date": "2026.10.11",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "format": "NOTE",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION"
+    ],
+    "connected_tags": [
+      "reflections",
+      "observations",
+      "visual-perception",
+      "generative-video",
+      "foveated-vision",
+      "saccadic-suppression"
+    ]
+  },
+  {
     "id": "ai-models",
     "name": "ai-models",
     "label": "#ai-models",
@@ -3604,6 +3854,48 @@ window.DYNAMIC_TAGS = [
       "science",
       "research",
       "deep-research"
+    ]
+  },
+  {
+    "id": "ai-video",
+    "name": "ai-video",
+    "label": "#ai-video",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "date": "2026.10.11",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "format": "NOTE",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION"
+    ],
+    "connected_tags": [
+      "reflections",
+      "observations",
+      "visual-perception",
+      "generative-video",
+      "foveated-vision",
+      "ai-evaluations"
     ]
   },
   {
@@ -5325,6 +5617,48 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
+    "id": "foveated-vision",
+    "name": "foveated-vision",
+    "label": "#foveated-vision",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "date": "2026.10.11",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "format": "NOTE",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION"
+    ],
+    "connected_tags": [
+      "reflections",
+      "observations",
+      "visual-perception",
+      "generative-video",
+      "ai-evaluations",
+      "saccadic-suppression"
+    ]
+  },
+  {
     "id": "frontier-ai",
     "name": "frontier-ai",
     "label": "#frontier-ai",
@@ -5364,6 +5698,48 @@ window.DYNAMIC_TAGS = [
       "tamagotchi-effect",
       "dots",
       "ai"
+    ]
+  },
+  {
+    "id": "generative-video",
+    "name": "generative-video",
+    "label": "#generative-video",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "date": "2026.10.11",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "format": "NOTE",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION"
+    ],
+    "connected_tags": [
+      "reflections",
+      "observations",
+      "visual-perception",
+      "foveated-vision",
+      "ai-evaluations",
+      "saccadic-suppression"
     ]
   },
   {
@@ -6751,48 +7127,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "observations",
-    "name": "observations",
-    "label": "#observations",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
-        "slug": "5-psychology-effects-used-in-app-design",
-        "title": "5 Psychology Effects Used in App Design",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
-        "subtopic": "COGNITIVE AND VISUAL BIASES",
-        "url": "posts/5-psychology-effects-used-in-app-design.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "5 Psychology Effects Used in App Design",
-        "slug": "5-psychology-effects-used-in-app-design",
-        "format": "NOTE",
-        "url": "posts/5-psychology-effects-used-in-app-design.html",
-        "date": "2026.10.02"
-      }
-    ],
-    "pillars": [
-      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
-    ],
-    "subtopics": [
-      "COGNITIVE AND VISUAL BIASES"
-    ],
-    "connected_tags": [
-      "app-design",
-      "ui",
-      "ux",
-      "psychology",
-      "lists",
-      "tips"
-    ]
-  },
-  {
     "id": "openai",
     "name": "openai",
     "label": "#openai",
@@ -7297,47 +7631,6 @@ window.DYNAMIC_TAGS = [
     ]
   },
   {
-    "id": "reflections",
-    "name": "reflections",
-    "label": "#reflections",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "shanzhai-deconstructing-original",
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "pillar": "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/shanzhai-deconstructing-original.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "shanzhai-deconstructing-original",
-        "format": "NOTE",
-        "url": "posts/shanzhai-deconstructing-original.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE, TECH & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "EPISTEMOLOGY OF REPRESENTATION"
-    ],
-    "connected_tags": [
-      "byung-chul-han",
-      "shanzhai",
-      "deconstruction",
-      "authorship",
-      "philosophy"
-    ]
-  },
-  {
     "id": "relational",
     "name": "relational",
     "label": "#relational",
@@ -7419,6 +7712,48 @@ window.DYNAMIC_TAGS = [
       "science",
       "deep-research",
       "ai"
+    ]
+  },
+  {
+    "id": "saccadic-suppression",
+    "name": "saccadic-suppression",
+    "label": "#saccadic-suppression",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "date": "2026.10.11",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "format": "NOTE",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION"
+    ],
+    "connected_tags": [
+      "reflections",
+      "observations",
+      "visual-perception",
+      "generative-video",
+      "foveated-vision",
+      "ai-evaluations"
     ]
   },
   {
@@ -8257,6 +8592,48 @@ window.DYNAMIC_TAGS = [
       "ai",
       "intelligence",
       "world-models"
+    ]
+  },
+  {
+    "id": "video",
+    "name": "video",
+    "label": "#video",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-11-saccadic-blindness-ai-video-temporal-inconsistency",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "date": "2026.10.11",
+        "format": "NOTE",
+        "pillar": "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "format": "NOTE",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOLOGY OF SEEING"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION"
+    ],
+    "connected_tags": [
+      "reflections",
+      "observations",
+      "visual-perception",
+      "generative-video",
+      "foveated-vision",
+      "ai-evaluations"
     ]
   },
   {

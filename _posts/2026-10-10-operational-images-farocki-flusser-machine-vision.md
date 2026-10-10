@@ -84,7 +84,7 @@ Machine vision tears up that contract. A self-driving car processing camera feed
 
 ## 02. Flusser’s Apparatus: The Image as Encoded Program
 
-Two decades before Farocki analyzed military video, Czech-Brazilian philosopher Vilém Flusser anticipated this transformation in _Towards a Philosophy of Photography_ (1983).
+Two decades before Farocki analyzed military video, Czech-Brazilian philosopher <a href="https://en.wikipedia.org/wiki/Vil%C3%A9m_Flusser" target="_blank">Vilém Flusser</a> anticipated this transformation in _Towards a Philosophy of Photography_ (1983).
 
 Flusser divided human history by how we externalize thought. First came traditional images (cave paintings, tapestries, frescos), which abstracted the four dimensions of space and time into two flat dimensions. Then came writing, which unspooled images into linear, historical lines of text.
 
@@ -101,13 +101,13 @@ A technical image (a photograph, a video feed, a satellite radar map) appears to
 
 Flusser observed that the person holding a modern camera is rarely an autonomous artist. They are a _functionary_. They press buttons, switch lenses, and explore the pre-programmed possibilities built into the device by its engineers.
 
-In modern deep learning, the apparatus has swallowed the human functionary entirely. Convolutional neural networks (CNNs) and Vision Transformers (ViTs) do not look at reality through a viewfinder. They digest light as float32 tensors. The pixels are not representations of trees, faces, or streets. They are activation values designed to traverse a multi-layer computational graph.
+In modern deep learning, the apparatus has swallowed the human functionary entirely. Convolutional neural networks (CNNs) and <a href="https://en.wikipedia.org/wiki/Vision_transformer" target="_blank">Vision Transformers (ViTs)</a> do not look at reality through a viewfinder. They digest light as float32 tensors. The pixels are not representations of trees, faces, or streets. They are activation values designed to traverse a multi-layer computational graph.
 
 ---
 
 ## 03. What Saliency Maps Actually Reveal
 
-When engineers want to show what a vision model is paying attention to, they usually generate a **saliency map** using tools like Grad-CAM.
+When engineers want to show what a vision model is paying attention to, they usually generate a **saliency map** using tools like <a href="https://en.wikipedia.org/wiki/Class_activation_mapping#Grad-CAM_and_CAM_comparison" target="_blank">Grad-CAM</a>.
 
 These look like heatmaps layered over the original image. Bright red and yellow spots highlight which parts of the picture tipped the model's decision toward a label—such as "pedestrian," "stop sign," or "dog."
 
