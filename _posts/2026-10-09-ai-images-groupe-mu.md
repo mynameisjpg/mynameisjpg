@@ -54,7 +54,7 @@ allow_embed: true
 canonical_url: ""
 
 image:
-  path: "assets/images/groupe-mu.jpg"
+  path: "assets/images/groupe-mu.png"
   alt: "Coral red and black glitch art: fractured human figures dissolve and warp into printed circuit boards, technical schematics, and pixelated tears."
 ---
 
