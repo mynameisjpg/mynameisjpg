@@ -64,8 +64,13 @@ shareable: true
 allow_embed: true
 
 image:
-  path: "assets/images/somatic_gov.jpg"
+  path: "assets/images/telebodies.gif"
   alt: "Glitch-art collage in black, white, and coral red featuring human silhouettes, brain MRI scans, chemical structures, circuit traces, and industrial gears."
+gallery-images:
+  - path: "assets/images/preciado-bodies.jpg"
+    alt: "."
+  - path: "assets/images/telebodies.jpg"
+    alt: "Glitch-art collage in black, white, and coral red featuring human silhouettes, brain MRI scans, chemical structures, circuit traces, and industrial gears"
 ---
 
 ## 01. The Blind Spot Above the Waist

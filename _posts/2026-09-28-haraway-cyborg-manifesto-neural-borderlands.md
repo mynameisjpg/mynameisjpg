@@ -51,8 +51,12 @@ shareable: true
 allow_embed: true
 
 image:
-  path: "assets/images/donna_haraway.jpg"
+  path: "assets/images/donna_haraway.gif"
   alt: "Coral-red pixel glitches and neural diagrams bleed across a woman making hand-binoculars, fusing her with a jellyfish and fractured brain scans."
+
+gallery-images:
+  - path: "assets/images/donna_haraway.jpg"
+    alt: "Coral-red pixel glitches and neural diagrams bleed across a woman making hand-binoculars, fusing her with a jellyfish and fractured brain scans."
 ---
 
 ## 01. Archival Excerpt

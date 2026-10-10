@@ -17,12 +17,19 @@ tags:
   - "ethics"
   - "archeology"
   - "taxonomy"
+  - "philosophy"
+  - "ai-ethics"
+
 theme: "dark"
 featured: false
 reading_time: "Curated Read"
 image:
   path: "assets/images/this-is-not-a-human.jpg"
   alt: "Ceci n'est pas un être humain."
+gallery-images:
+  - path: "assets/images/operational-surveillance.gif"
+    alt: "Eye traps human figure."
+
 backlinks:
   - slug: "#2026-10-03-preciado-pharmacopornographic-episteme-foucault"
     title: "(I) The Pharmacopornographic Machine: Capitalism Below the Waist"
