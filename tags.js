@@ -12,15 +12,47 @@
     "name": "AI",
     "label": "AI",
     "type": "foundation",
-    "count": 0,
-    "posts": [],
-    "links": [],
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
     "foundations": [],
     "pillars": [
+      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "Language & LLMs"
     ],
-    "subtopics": [],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
     "order": 1,
     "description": "Artificial intelligence, machine learning models, neural architectures, and synthetic cognition.",
     "connected_tags": []
@@ -100,16 +132,48 @@
     "name": "Tech",
     "label": "Tech",
     "type": "foundation",
-    "count": 0,
-    "posts": [],
-    "links": [],
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
     "foundations": [],
     "pillars": [
+      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "Critical Theory",
       "Language & LLMs"
     ],
-    "subtopics": [],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
     "order": 6,
     "description": "Technological infrastructures, software frameworks, code architectures, and digital systems.",
     "connected_tags": []
@@ -119,16 +183,48 @@
     "name": "Vision",
     "label": "Vision",
     "type": "foundation",
-    "count": 0,
-    "posts": [],
-    "links": [],
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
     "foundations": [],
     "pillars": [
+      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "Philosophy of the Image",
       "Visual Perception"
     ],
-    "subtopics": [],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
     "order": 7,
     "description": "Human ocular mechanics, computer vision, foveal resolution, optical illusions, and visual rendering.",
     "connected_tags": []
@@ -156,15 +252,47 @@
     "name": "Tools",
     "label": "Tools",
     "type": "foundation",
-    "count": 0,
-    "posts": [],
-    "links": [],
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
     "foundations": [],
     "pillars": [
+      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "Language & LLMs"
     ],
-    "subtopics": [],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
     "order": 9,
     "description": "Developer utilities, benchmarking toolkits, evaluation frameworks, and pragmatic workflow instrumentation.",
     "connected_tags": []
@@ -174,17 +302,49 @@
     "name": "Analysis",
     "label": "Analysis",
     "type": "foundation",
-    "count": 0,
-    "posts": [],
-    "links": [],
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
     "foundations": [],
     "pillars": [
+      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "Critical Theory",
       "Language & LLMs",
       "Visual Perception"
     ],
-    "subtopics": [],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
     "order": 10,
     "description": "Forensic deconstruction, empirical evaluation, benchmark metrics, and theoretical examination.",
     "connected_tags": []
@@ -194,16 +354,48 @@
     "name": "Data",
     "label": "Data",
     "type": "foundation",
-    "count": 0,
-    "posts": [],
-    "links": [],
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
     "foundations": [],
     "pillars": [
+      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "Critical Theory",
       "Language & LLMs"
     ],
-    "subtopics": [],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
     "order": 11,
     "description": "Training datasets, high-dimensional vector spaces, empirical evidence, and data ecology.",
     "connected_tags": []
@@ -230,15 +422,47 @@
     "name": "Graphics",
     "label": "Graphics",
     "type": "foundation",
-    "count": 0,
-    "posts": [],
-    "links": [],
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
     "foundations": [],
     "pillars": [
+      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "Philosophy of the Image"
     ],
-    "subtopics": [],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
     "order": 13,
     "description": "Scientific figures, diagrams, data visualization, digital raster and vector representation.",
     "connected_tags": []
@@ -248,15 +472,47 @@
     "name": "Art",
     "label": "Art",
     "type": "foundation",
-    "count": 0,
-    "posts": [],
-    "links": [],
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
     "foundations": [],
     "pillars": [
+      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "Philosophy of the Image"
     ],
-    "subtopics": [],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
     "order": 14,
     "description": "Digital aesthetics, post-ironic visual culture, generative image creation, and media archaeology.",
     "connected_tags": []
@@ -266,9 +522,38 @@
     "name": "AI Perception",
     "label": "AI Perception",
     "type": "pillar",
-    "count": 0,
-    "posts": [],
-    "links": [],
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
     "foundations": [
       "AI",
       "Analysis",
@@ -370,6 +655,803 @@
     "order": 99,
     "description": "Examining how the human visual system constructs reality from sensory signals -exploring the physiological mechanics of sight, optical paradoxes, Gestalt organization, and cognitive biases.",
     "connected_tags": []
+  },
+  {
+    "id": "subtopic-synthetic-statistical-images",
+    "name": "SYNTHETIC AND STATISTICAL IMAGES",
+    "label": "SYNTHETIC AND STATISTICAL IMAGES",
+    "type": "subtopic",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Art",
+      "Data",
+      "Graphics",
+      "Tech",
+      "Tools",
+      "Vision"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
+    "id": "benchmark-design",
+    "name": "benchmark-design",
+    "label": "#benchmark-design",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Art",
+      "Data",
+      "Graphics",
+      "Tech",
+      "Tools",
+      "Vision"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION"
+    ],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
+    "connected_tags": [
+      "multimodal-ai",
+      "scientific-visualization",
+      "charts",
+      "data-visualization",
+      "graphs",
+      "visualization"
+    ]
+  },
+  {
+    "id": "benchmarks",
+    "name": "benchmarks",
+    "label": "#benchmarks",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Art",
+      "Data",
+      "Graphics",
+      "Tech",
+      "Tools",
+      "Vision"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION"
+    ],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
+    "connected_tags": [
+      "multimodal-ai",
+      "benchmark-design",
+      "scientific-visualization",
+      "charts",
+      "data-visualization",
+      "graphs"
+    ]
+  },
+  {
+    "id": "charts",
+    "name": "charts",
+    "label": "#charts",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Art",
+      "Data",
+      "Graphics",
+      "Tech",
+      "Tools",
+      "Vision"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION"
+    ],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
+    "connected_tags": [
+      "multimodal-ai",
+      "benchmark-design",
+      "scientific-visualization",
+      "data-visualization",
+      "graphs",
+      "visualization"
+    ]
+  },
+  {
+    "id": "charxiv",
+    "name": "charxiv",
+    "label": "#charxiv",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Art",
+      "Data",
+      "Graphics",
+      "Tech",
+      "Tools",
+      "Vision"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION"
+    ],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
+    "connected_tags": [
+      "multimodal-ai",
+      "benchmark-design",
+      "scientific-visualization",
+      "charts",
+      "data-visualization",
+      "graphs"
+    ]
+  },
+  {
+    "id": "data-analysis",
+    "name": "data-analysis",
+    "label": "#data-analysis",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Art",
+      "Data",
+      "Graphics",
+      "Tech",
+      "Tools",
+      "Vision"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION"
+    ],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
+    "connected_tags": [
+      "multimodal-ai",
+      "benchmark-design",
+      "scientific-visualization",
+      "charts",
+      "data-visualization",
+      "graphs"
+    ]
+  },
+  {
+    "id": "data-visualization",
+    "name": "data-visualization",
+    "label": "#data-visualization",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Art",
+      "Data",
+      "Graphics",
+      "Tech",
+      "Tools",
+      "Vision"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION"
+    ],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
+    "connected_tags": [
+      "multimodal-ai",
+      "benchmark-design",
+      "scientific-visualization",
+      "charts",
+      "graphs",
+      "visualization"
+    ]
+  },
+  {
+    "id": "deep-learning",
+    "name": "deep-learning",
+    "label": "#deep-learning",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Art",
+      "Data",
+      "Graphics",
+      "Tech",
+      "Tools",
+      "Vision"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION"
+    ],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
+    "connected_tags": [
+      "multimodal-ai",
+      "benchmark-design",
+      "scientific-visualization",
+      "charts",
+      "data-visualization",
+      "graphs"
+    ]
+  },
+  {
+    "id": "graphs",
+    "name": "graphs",
+    "label": "#graphs",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Art",
+      "Data",
+      "Graphics",
+      "Tech",
+      "Tools",
+      "Vision"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION"
+    ],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
+    "connected_tags": [
+      "multimodal-ai",
+      "benchmark-design",
+      "scientific-visualization",
+      "charts",
+      "data-visualization",
+      "visualization"
+    ]
+  },
+  {
+    "id": "multimodal-ai",
+    "name": "multimodal-ai",
+    "label": "#multimodal-ai",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Art",
+      "Data",
+      "Graphics",
+      "Tech",
+      "Tools",
+      "Vision"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION"
+    ],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
+    "connected_tags": [
+      "benchmark-design",
+      "scientific-visualization",
+      "charts",
+      "data-visualization",
+      "graphs",
+      "visualization"
+    ]
+  },
+  {
+    "id": "scientific-visualization",
+    "name": "scientific-visualization",
+    "label": "#scientific-visualization",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Art",
+      "Data",
+      "Graphics",
+      "Tech",
+      "Tools",
+      "Vision"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION"
+    ],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
+    "connected_tags": [
+      "multimodal-ai",
+      "benchmark-design",
+      "charts",
+      "data-visualization",
+      "graphs",
+      "visualization"
+    ]
+  },
+  {
+    "id": "vision-models",
+    "name": "vision-models",
+    "label": "#vision-models",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Art",
+      "Data",
+      "Graphics",
+      "Tech",
+      "Tools",
+      "Vision"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION"
+    ],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
+    "connected_tags": [
+      "multimodal-ai",
+      "benchmark-design",
+      "scientific-visualization",
+      "charts",
+      "data-visualization",
+      "graphs"
+    ]
+  },
+  {
+    "id": "visualization",
+    "name": "visualization",
+    "label": "#visualization",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "title": "The Poverty of Synthetic Ground Truth",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
+        "url": "posts/poverty-of-synthetic-ground-truth.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The Poverty of Synthetic Ground Truth",
+        "slug": "poverty-of-synthetic-ground-truth",
+        "format": "ESSAY",
+        "url": "posts/poverty-of-synthetic-ground-truth.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Art",
+      "Data",
+      "Graphics",
+      "Tech",
+      "Tools",
+      "Vision"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION"
+    ],
+    "subtopics": [
+      "SYNTHETIC AND STATISTICAL IMAGES"
+    ],
+    "connected_tags": [
+      "multimodal-ai",
+      "benchmark-design",
+      "scientific-visualization",
+      "charts",
+      "data-visualization",
+      "graphs"
+    ]
   }
 ];
 });
