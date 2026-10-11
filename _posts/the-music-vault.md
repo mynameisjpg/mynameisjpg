@@ -25,8 +25,8 @@ featured: true
 shareable: true
 allow_embed: true
 image:
-  path: "assets/images/..."
-  alt: "alt text"
+  path: "assets/images/music-vault.jpg"
+  alt: "Coral-red and black archival collage: a brutalist acoustic dish atop rocky ground, jagged audio waveforms, and a vintage phonograph beside rusty gears and wire."
 links: []
 backlinks:
   - slug: "#2026-10-11-marina-herlop-dja-dja"
