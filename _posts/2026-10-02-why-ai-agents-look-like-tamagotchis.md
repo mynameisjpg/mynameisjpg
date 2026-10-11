@@ -13,7 +13,7 @@ format: "note"
 category: "observations"
 
 topic:
-  pillar: "Philosophy of the Image, Tech & Visual Culture"
+  pillar: "Philosophy of the Image & Visual Culture"
   subtopic: "Interface politics & product psychology"
 
 tags:

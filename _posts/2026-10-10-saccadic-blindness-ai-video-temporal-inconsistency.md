@@ -13,13 +13,12 @@ format: "note"
 category: "reflections"
 
 topic:
-  pillar: "Visual Perception & Psychology of Seeing"
-  subtopic: "Anatomy and Psychophysics of Vision"
+  pillar: "Visual Perception & Psychophysics"
+  subtopic: "Anatomy and psychophysics of vision"
 
 tags:
   - "reflections"
   - "observations"
-  - "visual-perception"
   - "generative-video"
   - "foveated-vision"
   - "ai-evaluations"

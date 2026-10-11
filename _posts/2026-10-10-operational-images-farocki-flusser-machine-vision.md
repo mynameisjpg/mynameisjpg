@@ -12,7 +12,7 @@ status: "published"
 format: "essay"
 
 topic:
-  pillar: "Philosophy of the Image, Tech & Visual Culture"
+  pillar: "Philosophy of the Image & Visual Culture"
   subtopic: "Modes of seeing and visual semiotics"
 
 tags:

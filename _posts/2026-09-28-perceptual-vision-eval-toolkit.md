@@ -14,7 +14,7 @@ category: "tool/software"
 resource_url: "https://github.com/mynameisjpg/perceptual-vision-eval"
 
 topic:
-  pillar: "Visual Perception & Psychology of Seeing"
+  pillar: "Visual Perception & Psychophysics"
   subtopic: "Anatomy and psychophysics of vision"
 
 tags:
@@ -22,7 +22,6 @@ tags:
   - "free"
   - "download"
   - "psychophysics"
-  - "visual-perception"
   - "skill"
   - "image-analysis"
   - "canvas-api"

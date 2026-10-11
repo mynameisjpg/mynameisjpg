@@ -291,12 +291,14 @@ function renderTagsDirectoryTable(searchVal = "") {
   tbody.innerHTML = filtered
     .map((t) => {
       const typeBadgeClass =
-        t.type === "pillar"
-          ? "tag-type-pillar"
-          : t.type === "subtopic"
-            ? "tag-type-subtopic"
-            : "tag-type-tag";
-      const typeLabel = t.type.toUpperCase();
+        t.type === "foundation"
+          ? "tag-type-foundation"
+          : t.type === "pillar"
+            ? "tag-type-pillar"
+            : t.type === "subtopic"
+              ? "tag-type-subtopic"
+              : "tag-type-tag";
+      const typeLabel = (t.type || "tag").toUpperCase();
 
       const linksHtml = (t.links || [])
         .map((l) => {

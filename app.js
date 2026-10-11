@@ -1,2242 +1,678 @@
 /* ==============================================================================
-   UNTITLED.JPG — DYNAMIC CLIENT APPLICATION & CONTENT HYDRATION
+   UNTITLED.JPG — CORE APPLICATION ORCHESTRATOR & STATE HUB (app.js)
    Brand: Juan Pablo Giusepponi — "Overthinking Undervalued Means"
+   Modular Component Architecture:
+   - js/components/card-matrix.js          -> Asymmetric 3x3 Card Grid & Pagination
+   - js/components/reader-pane.js          -> Markdown, KaTeX, Mermaid & Reading View
+   - js/components/navigation-controls.js  -> Header Dropdowns, Search & Filter Controls
+   - js/components/subscribe-modal.js      -> Newsletter Dialog & Google Forms Pipeline
    ============================================================================== */
 
-/**
- * In-Memory Post Store
- * Hydrated dynamically from posts.js (window.DYNAMIC_POSTS) and posts.json
- */
-let POSTS_DATABASE = {};
+(function () {
+  "use strict";
 
-function ingestPostList(postsArray) {
-  if (!Array.isArray(postsArray)) return;
-  postsArray.forEach((p) => {
-    const key = p.slug || p.id || p.sys_id;
-    if (key) {
-      POSTS_DATABASE[key] = p;
-      if (p.sys_id) POSTS_DATABASE[p.sys_id] = p;
-      if (p.slug) {
-        POSTS_DATABASE[p.slug] = p;
-        const cleanSlug = p.slug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
-        if (cleanSlug && cleanSlug !== p.slug) {
-          POSTS_DATABASE[cleanSlug] = p;
-        }
-      }
-      if (p.id) POSTS_DATABASE[p.id] = p;
+  /**
+   * In-Memory Post Store & Taxonomy State
+   */
+  let POSTS_DATABASE = {};
+  let cachedUniquePublishedPosts = null;
 
-      // Map static/legacy card data-id aliases
-      const s = (p.slug || "").toLowerCase();
-      if (s.includes("turing")) {
-        POSTS_DATABASE["post-turing"] = p;
-        POSTS_DATABASE["turing"] = p;
-      }
-      if (s.includes("foucault")) {
-        POSTS_DATABASE["post-foucault"] = p;
-        POSTS_DATABASE["foucault"] = p;
-      }
-      if (s.includes("jepa") || s.includes("lecun")) {
-        POSTS_DATABASE["post-jepa"] = p;
-        POSTS_DATABASE["jepa"] = p;
-      }
-      if (s.includes("excavating")) {
-        POSTS_DATABASE["post-excavating"] = p;
-        POSTS_DATABASE["excavating"] = p;
-      }
-    }
-  });
-}
+  let activePostId = "";
+  let activeFilter = "all";
+  let activePillar = "all";
+  let activeSort = "recent";
+  let searchQuery = "";
 
-// Ingest immediate global feed if loaded via posts.js (Works 100% offline & on file:///)
-if (typeof window !== "undefined" && window.DYNAMIC_POSTS) {
-  ingestPostList(window.DYNAMIC_POSTS);
-}
+  let matrixVisibleCount = 8;
+  const MATRIX_BATCH_SIZE = 8;
 
-let activePostId = "";
-let activeFilter = "all";
-let activePillar = "all";
-let activeSort = "recent";
-let searchQuery = "";
-
-let matrixVisibleCount = 8;
-const MATRIX_BATCH_SIZE = 8;
-let matrixObserver = null;
-
-/**
- * Robust Pillar Matching Helper
- * Maps slugs/keywords (e.g. 'visual-perception', 'ai-perception', 'language-llms', 'philosophy-image')
- * to posts' metadata fields (pillar, subtopic, category, tags).
- */
-function matchesPillar(post, query) {
-  if (!query || query === "all") return true;
-  const q = String(query).toLowerCase().replace(/[-_]/g, " ").trim();
-  const pillar = String(post.pillar || "").toLowerCase();
-  const subtopic = String(post.subtopic || "").toLowerCase();
-  const category = String(post.category || "").toLowerCase();
-  const tags = Array.isArray(post.tags)
-    ? post.tags.map((t) => String(t).toLowerCase()).join(" ")
-    : "";
-
-  // 1. Direct substring match
-  if (pillar.includes(q)) return true;
-
-  // 2. Canonical Pillar Aliases
-  if (
-    (q.includes("visual") && q.includes("perception")) ||
-    q === "pillar 1" ||
-    q === "1"
-  ) {
-    return (
-      pillar.includes("visual perception") || pillar.includes("psychophysics")
-    );
-  }
-  if (
-    (q.includes("ai") &&
-      (q.includes("perception") ||
-        q.includes("vision") ||
-        q.includes("machine"))) ||
-    q === "pillar 2" ||
-    q === "2"
-  ) {
-    return (
-      pillar.includes("ai perception") ||
-      pillar.includes("machine vision") ||
-      pillar.includes("generative")
-    );
-  }
-  if (
-    q.includes("language") ||
-    q.includes("llm") ||
-    q.includes("cognitive") ||
-    q === "pillar 3" ||
-    q === "3"
-  ) {
-    return (
-      pillar.includes("language") ||
-      pillar.includes("llm") ||
-      pillar.includes("cognitive")
-    );
-  }
-  if (
-    q.includes("philosophy") ||
-    q.includes("image") ||
-    q.includes("culture") ||
-    q === "pillar 4" ||
-    q === "4"
-  ) {
-    return (
-      pillar.includes("philosophy") ||
-      pillar.includes("image") ||
-      pillar.includes("culture")
-    );
+  function invalidatePostsCache() {
+    cachedUniquePublishedPosts = null;
   }
 
-  // 3. Match against subtopic, category, or tags
-  return subtopic.includes(q) || category.includes(q) || tags.includes(q);
-}
-
-/**
- * Filter & Sort Helper for Dispatches
- * Rules enforced:
- * 1. Only "published" status dispatches (excludes "draft" or "archived").
- * 2. Featured posts ("featured: true") take priority / sort to top.
- * 3. Applies format filter, pillar filter, search query, and selected sort order.
- */
-function getFilteredAndSortedPosts() {
-  const uniquePosts = [];
-  const seen = new Set();
-
-  Object.values(POSTS_DATABASE).forEach((post) => {
-    const uniqueKey = post.slug || post.id || post.sys_id;
-    const statusStr = (post.status || "published").toLowerCase();
-    const isPublished = statusStr === "published" || statusStr === "active";
-    if (uniqueKey && !seen.has(uniqueKey) && isPublished) {
-      seen.add(uniqueKey);
-      uniquePosts.push(post);
-    }
-  });
-
-  // Filter by Format, Pillar & Search Query
-  let filtered = uniquePosts.filter((post) => {
-    const postFormat = (post.format || "ESSAY")
-      .toLowerCase()
-      .trim()
-      .replace(/s$/, "");
-    const curFilter = (activeFilter || "all")
-      .toLowerCase()
-      .trim()
-      .replace(/s$/, "");
-    if (curFilter !== "all" && postFormat !== curFilter) return false;
-
-    if (activePillar !== "all" && !matchesPillar(post, activePillar))
-      return false;
-
-    if (searchQuery.trim() !== "") {
-      const q = searchQuery.toLowerCase().trim();
-      const matchTitle = (post.title || "").toLowerCase().includes(q);
-      const matchSubtitle = (post.subtitle || "").toLowerCase().includes(q);
-      const matchExcerpt = (post.excerpt || "").toLowerCase().includes(q);
-      const matchPillar = (post.pillar || "").toLowerCase().includes(q);
-      const matchSubtopic = (post.subtopic || "").toLowerCase().includes(q);
-      const matchCategory = (post.category || "").toLowerCase().includes(q);
-      const matchTags =
-        Array.isArray(post.tags) &&
-        post.tags.some((t) => String(t).toLowerCase().includes(q));
-      if (
-        !matchTitle &&
-        !matchSubtitle &&
-        !matchExcerpt &&
-        !matchPillar &&
-        !matchSubtopic &&
-        !matchCategory &&
-        !matchTags
-      ) {
-        return false;
-      }
-    }
-    return true;
-  });
-
-  // Sort: Primary activeSort order (default: Most Recent First)
-  filtered.sort((a, b) => {
-    if (activeSort === "recent") {
-      const cmp = (b.date || "").localeCompare(a.date || "");
-      if (cmp !== 0) return cmp;
-      const isFeatA = Boolean(a.featured);
-      const isFeatB = Boolean(b.featured);
-      if (isFeatA && !isFeatB) return -1;
-      if (!isFeatA && isFeatB) return 1;
-      return 0;
-    } else if (activeSort === "oldest") {
-      const cmp = (a.date || "").localeCompare(b.date || "");
-      if (cmp !== 0) return cmp;
-      return 0;
-    } else if (activeSort === "readtime") {
-      const parseTime = (str) => parseInt((str || "").replace(/\D/g, "")) || 0;
-      return parseTime(b.read_time) - parseTime(a.read_time);
-    } else if (activeSort === "title") {
-      return (a.title || "").localeCompare(b.title || "");
-    }
-    return (b.date || "").localeCompare(a.date || "");
-  });
-
-  return filtered;
-}
-
-/**
- * Fallback Geometric Art Vectors for Card Matrix
- */
-const ART_FALLBACKS = {
-  coral: `<svg class="card-art-svg" viewBox="0 0 180 230"><rect width="180" height="230" fill="#E84A5F"/><rect x="25" y="30" width="65" height="55" fill="#C73649"/><rect x="105" y="45" width="50" height="105" fill="#FF7084"/><ellipse cx="78" cy="130" rx="30" ry="42" fill="#170508"/></svg>`,
-  charcoal: `<svg class="card-art-svg" viewBox="0 0 180 255"><rect width="180" height="255" fill="#181818"/><path d="M90,35 Q130,55 125,120 Q120,185 145,255 L35,255 Q60,185 55,120 Q50,55 90,35 Z" fill="#757575"/><ellipse cx="90" cy="85" rx="24" ry="34" fill="#E0E0E0"/><rect x="150" y="30" width="9" height="9" fill="#E84A5F"/></svg>`,
-  eye: `<svg class="card-art-svg" viewBox="0 0 180 205"><rect width="180" height="205" fill="#191919"/><ellipse cx="90" cy="85" rx="45" ry="60" fill="#8E8E8E"/><path d="M72,65 Q88,62 104,65 Q100,115 88,128 Q76,115 72,65 Z" fill="#E8E8E8"/></svg>`,
-  circle: `<svg class="card-art-svg" viewBox="0 0 180 185"><rect width="180" height="185" fill="#1B1B1B"/><ellipse cx="90" cy="92" rx="55" ry="36" fill="#808080"/><ellipse cx="90" cy="92" rx="45" ry="30" fill="#CCCCCC"/><circle cx="90" cy="92" r="22" fill="#141414"/><circle cx="90" cy="92" r="12" fill="#E84A5F"/></svg>`,
-};
-
-/**
- * Dynamically Fetch posts.json (Live HTTP Server / Production Build)
- */
-async function loadDynamicPosts() {
-  const isSubdir =
-    typeof window !== "undefined" &&
-    window.location.pathname.includes("/posts/");
-  const jsonPath = isSubdir
-    ? "../posts.json?t=" + Date.now()
-    : "posts.json?t=" + Date.now();
-
-  try {
-    const res = await fetch(jsonPath);
-    if (res.ok) {
-      const data = await res.json();
-      if (Array.isArray(data) && data.length > 0) {
-        ingestPostList(data);
-        console.log(
-          `[UNTITLED.JPG] Loaded ${data.length} dispatches live from posts.json`,
-        );
-      }
-    }
-  } catch (err) {
-    // Offline / file protocol fallback (already populated by posts.js)
-    console.log("[UNTITLED.JPG] Running with direct script posts feed.");
-  }
-
-  // Parse URL search parameters (?filter=essay, ?pillar=visual-perception, etc.)
-  parseUrlParamsAndApply();
-
-  // Check URL Hash or INITIAL_POST_SLUG for deep-link
-  const rawHash = (window.location.hash || "").replace("#", "");
-  const cleanHash = rawHash.replace(/^dispatch-/, "");
-  const targetSlug =
-    (POSTS_DATABASE[rawHash] ? rawHash : "") ||
-    (POSTS_DATABASE[cleanHash] ? cleanHash : "") ||
-    (typeof window !== "undefined" ? window.INITIAL_POST_SLUG : "");
-
-  // Render Matrix Cards
-  renderCardMatrix(true);
-
-  if (targetSlug && POSTS_DATABASE[targetSlug]) {
-    activePostId = targetSlug;
-    selectAndRenderPost(activePostId, false);
-  } else {
-    activePostId = "";
-    closeReaderPane();
-  }
-}
-
-/**
- * Dynamically Render the Asymmetric Card Grid Matrix
- */
-function renderCardMatrix(resetPagination = true) {
-  const container = document.getElementById("card-matrix");
-  if (!container) return;
-
-  if (resetPagination) {
-    matrixVisibleCount = MATRIX_BATCH_SIZE;
-  }
-
-  const allPosts = getFilteredAndSortedPosts();
-
-  if (allPosts.length === 0) {
-    const queryDisplay = searchQuery.trim() ? `QUERY: "${searchQuery}"` : "";
-    const filterDisplay = activeFilter !== "all" ? `FORMAT: [${activeFilter.toUpperCase()}]` : "";
-    const pillarDisplay = activePillar !== "all" ? `PILLAR: [${activePillar.toUpperCase()}]` : "";
-    const activeFiltersText = [queryDisplay, filterDisplay, pillarDisplay].filter(Boolean).join(" // ") || "CURRENT_SELECTION";
-
-    container.innerHTML = `
-      <div class="matrix-empty-state" role="status" aria-live="polite">
-        <div class="empty-state-tag">[ SYS_ALERT // NO_MATCHING_DISPATCHES ]</div>
-        <h2 class="empty-state-title">No dispatches found</h2>
-        <p class="empty-state-desc">
-          No records in the dispatch matrix match <code>${activeFiltersText}</code>. Reset filters or broaden your query to reveal active dispatches.
-        </p>
-        <button type="button" class="btn-reset-filters" id="btn-empty-reset" onclick="resetMatrixFilters()" aria-label="Reset all filters and search query">
-          <span aria-hidden="true">✕</span> RESET FILTERS &amp; SEARCH
-        </button>
-      </div>
-    `;
-    updateMatrixSentinel(0, 0);
-    return;
-  }
-
-  const visiblePosts = allPosts.slice(0, matrixVisibleCount);
-
-  const ratios = [
-    "h-tall-1",
-    "h-tall-2",
-    "h-med",
-    "h-square",
-    "h-wide",
-    "h-tall-1",
-  ];
-  const fallbackArts = [
-    "coral",
-    "charcoal",
-    "eye",
-    "circle",
-    "charcoal",
-    "coral",
-  ];
-
-  const FORMAT_ICONS = {
-    essay: `<svg viewBox="0 0 24 24" class="card-chip-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>`,
-    note: `<svg viewBox="0 0 24 24" class="card-chip-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>`,
-    bookmark: `<svg viewBox="0 0 24 24" class="card-chip-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>`,
-    resource: `<svg viewBox="0 0 24 24" class="card-chip-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>`,
-  };
-
-  container.innerHTML = visiblePosts
-    .map((post, idx) => {
-      const key = post.slug || post.id || post.sys_id;
-      const ratio = post.aspect_ratio || ratios[idx % ratios.length];
-      const format = (post.format || "ESSAY").toLowerCase();
-      const isFeatured = Boolean(post.featured);
-      const artKey = fallbackArts[idx % fallbackArts.length];
-      const isSelected = key === activePostId || post.sys_id === activePostId;
-      const iconSvg = FORMAT_ICONS[format] || FORMAT_ICONS.essay;
-
-      return `
-      <article class="grid-card ${isFeatured ? "card-featured" : ""} ${isSelected ? "selected-active" : ""}" data-id="${key}" data-format="${format}" tabindex="0" role="button" aria-pressed="${isSelected}">
-        <div class="card-art-box ${ratio}">
-          ${isFeatured ? `<span class="card-featured-badge" title="Featured" aria-label="Featured"><svg viewBox="0 0 24 24" class="card-featured-icon" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>` : ""}
-          ${
-            post.thumbnail || post.image
-              ? `
-            <img src="${post.thumbnail || post.image}" alt="${post.title}" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div style="display:none;">${ART_FALLBACKS[artKey]}</div>
-          `
-              : ART_FALLBACKS[artKey]
+  function ingestPostList(postsArray) {
+    if (!Array.isArray(postsArray)) return;
+    invalidatePostsCache();
+    postsArray.forEach((p) => {
+      const key = p.slug || p.id || p.sys_id;
+      if (key) {
+        POSTS_DATABASE[key] = p;
+        if (p.sys_id) POSTS_DATABASE[p.sys_id] = p;
+        if (p.slug) {
+          POSTS_DATABASE[p.slug] = p;
+          const cleanSlug = p.slug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
+          if (cleanSlug && cleanSlug !== p.slug) {
+            POSTS_DATABASE[cleanSlug] = p;
           }
-          <div class="hover-meta-reveal">
-            <span class="meta-sub">${post.date} • ${post.read_time} • ${post.pillar || "DISPATCH"}</span>
-          </div>
-        </div>
-        <h2 class="card-caption">${post.title}</h2>
-        <div class="card-meta-bottom">
-          <div class="card-meta-left">
-            <span class="card-type-chip chip-${format}">${post.format} ${iconSvg}</span>
-            <span class="card-meta-date">${post.date || ""}</span>
-          </div>
-          <span class="card-glitch-action" data-glitch-action aria-hidden="true">READ...</span>
-        </div>
-      </article>
-    `;
-    })
-    .join("");
+        }
+        if (p.id) POSTS_DATABASE[p.id] = p;
 
-  // Re-attach Click & Key Event Handlers & Hover Glitch
-  const cards = container.querySelectorAll(".grid-card");
-  cards.forEach((card) => {
-    const handler = () => {
-      const postId = card.getAttribute("data-id");
-      selectAndRenderPost(postId);
-    };
-    card.addEventListener("click", handler);
-    card.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        handler();
+        // Map static/legacy card data-id aliases
+        const s = (p.slug || "").toLowerCase();
+        if (s.includes("turing")) {
+          POSTS_DATABASE["post-turing"] = p;
+          POSTS_DATABASE["turing"] = p;
+        }
+        if (s.includes("foucault")) {
+          POSTS_DATABASE["post-foucault"] = p;
+          POSTS_DATABASE["foucault"] = p;
+        }
+        if (s.includes("jepa") || s.includes("lecun")) {
+          POSTS_DATABASE["post-jepa"] = p;
+          POSTS_DATABASE["jepa"] = p;
+        }
+        if (s.includes("excavating")) {
+          POSTS_DATABASE["post-excavating"] = p;
+          POSTS_DATABASE["excavating"] = p;
+        }
       }
     });
-
-    const glitchLabel = card.querySelector("[data-glitch-action]");
-    if (glitchLabel) {
-      card.addEventListener("mouseenter", () =>
-        triggerCardGlitchAction(glitchLabel),
-      );
-      card.addEventListener("focus", () =>
-        triggerCardGlitchAction(glitchLabel),
-      );
-    }
-  });
-
-  updateMatrixSentinel(visiblePosts.length, allPosts.length);
-}
-
-const CARD_GLITCH_WORDS = [
-  "SURF...",
-  "SEE...",
-  "VIEW...",
-  "VISIT...",
-  "ENTER...",
-  "DECODE...",
-];
-const CARD_GLITCH_CHARS = "#!%$>_/-*01+@&~";
-
-/**
- * Fast Scramble Glitch Animation for Card Action Label on Hover
- */
-function triggerCardGlitchAction(element) {
-  if (!element || element._isGlitching) return;
-  element._isGlitching = true;
-
-  let frame = 0;
-  const totalFrames = 8;
-  const shuffled = [...CARD_GLITCH_WORDS].sort(() => 0.5 - Math.random());
-  const wordA = shuffled[0];
-  const wordB = shuffled[1];
-
-  const interval = setInterval(() => {
-    frame++;
-    if (frame >= totalFrames) {
-      clearInterval(interval);
-      element.textContent = "READ...";
-      element._isGlitching = false;
-      return;
-    }
-
-    const baseWord = frame < 4 ? wordA : frame < 7 ? wordB : "READ...";
-    let scrambled = "";
-    for (let i = 0; i < baseWord.length; i++) {
-      if (Math.random() < 0.35 && i < baseWord.length - 3) {
-        scrambled +=
-          CARD_GLITCH_CHARS[
-            Math.floor(Math.random() * CARD_GLITCH_CHARS.length)
-          ];
-      } else {
-        scrambled += baseWord[i];
-      }
-    }
-    element.textContent = scrambled;
-  }, 36);
-}
-
-/**
- * Load More Dispatches Batch Handler
- */
-function loadMoreDispatches() {
-  const allPosts = getFilteredAndSortedPosts();
-  if (matrixVisibleCount < allPosts.length) {
-    matrixVisibleCount += MATRIX_BATCH_SIZE;
-    renderCardMatrix(false);
-  }
-}
-
-/**
- * Infinite Scroll Sentinel Status & Observer
- */
-function updateMatrixSentinel(loadedCount, totalCount) {
-  let sentinel = document.getElementById("matrix-sentinel");
-  const matrixCol =
-    document.querySelector(".grid-column") ||
-    document.querySelector("[data-component='dispatch-matrix']");
-
-  if (!sentinel && matrixCol) {
-    sentinel = document.createElement("div");
-    sentinel.id = "matrix-sentinel";
-    sentinel.className = "matrix-sentinel-loader";
-    matrixCol.appendChild(sentinel);
   }
 
-  if (!sentinel) return;
-
-  if (loadedCount === 0) {
-    sentinel.style.display = "none";
-    return;
-  }
-
-  sentinel.style.display = "flex";
-  if (loadedCount < totalCount) {
-    sentinel.innerHTML = `
-      <div class="sentinel-inner">
-        <button type="button" class="btn-load-more" id="btn-load-more-dispatches" aria-label="Load more dispatches">
-          <span class="load-more-icon">↓</span>
-          <span class="load-more-text">LOAD MORE DISPATCHES</span>
-          <span class="load-more-count">(${loadedCount} OF ${totalCount})</span>
-        </button>
-        <span class="sentinel-hint">// SCROLL OR CLICK TO REVEAL MORE</span>
-      </div>
-    `;
-    const loadBtn = document.getElementById("btn-load-more-dispatches");
-    if (loadBtn) {
-      loadBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        loadMoreDispatches();
-      });
-    }
-    setupSentinelObserver();
-  } else {
-    sentinel.innerHTML = `
-      <div class="sentinel-inner">
-        <span class="sentinel-text">[ ALL DISPATCHES LOADED • ${totalCount} TOTAL ]</span>
-      </div>
-    `;
-    if (matrixObserver) {
-      matrixObserver.disconnect();
-      matrixObserver = null;
-    }
-  }
-}
-
-function setupSentinelObserver() {
-  if (matrixObserver) {
-    matrixObserver.disconnect();
-    matrixObserver = null;
-  }
-
-  const sentinel = document.getElementById("matrix-sentinel");
-  if (!sentinel) return;
-
-  if ("IntersectionObserver" in window) {
-    matrixObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const allPosts = getFilteredAndSortedPosts();
-            if (matrixVisibleCount < allPosts.length) {
-              loadMoreDispatches();
-            }
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "80px",
-      },
-    );
-
-    matrixObserver.observe(sentinel);
-  }
-}
-
-let scrollThrottleTimeout = null;
-function handleMatrixScroll() {
-  if (scrollThrottleTimeout) return;
-  scrollThrottleTimeout = setTimeout(() => {
-    scrollThrottleTimeout = null;
-    const allPosts = getFilteredAndSortedPosts();
-    if (matrixVisibleCount >= allPosts.length) return;
-
-    const matrixCol =
-      document.querySelector(".grid-column") ||
-      document.querySelector("[data-component='dispatch-matrix']");
-    if (matrixCol) {
-      const scrollBottom = matrixCol.scrollTop + matrixCol.clientHeight;
-      const scrollHeight = matrixCol.scrollHeight;
-      if (scrollHeight - scrollBottom < 300) {
-        loadMoreDispatches();
-        return;
-      }
-    }
-
-    // Window scroll check
-    const winScrollBottom = window.scrollY + window.innerHeight;
-    const docHeight = document.documentElement.scrollHeight;
-    if (docHeight - winScrollBottom < 350) {
-      loadMoreDispatches();
-    }
-  }, 100);
-}
-
-function resetMatrixFilters() {
-  activeFilter = "all";
-  activeSort = "recent";
-  searchQuery = "";
-
-  const searchInput = document.getElementById("matrix-search-input");
-  const clearBtn = document.getElementById("clear-search-btn");
-  if (searchInput) searchInput.value = "";
-  if (clearBtn) clearBtn.style.display = "none";
-
-  applyCategoryFilter("all");
-  updateSortSelection("recent", "MOST RECENT");
-  renderCardMatrix(true);
-}
-
-/**
- * Full Page Reset (Brand Logo & Home Icon)
- * Resets category filter, search query, sort order, matrix scroll, and selects top dispatch
- */
-function resetPage() {
-  resetMatrixFilters();
-
-  const matrixCol =
-    document.querySelector(".grid-column") ||
-    document.querySelector("[data-component='dispatch-matrix']");
-  if (matrixCol) matrixCol.scrollTop = 0;
-  window.scrollTo({ top: 0, behavior: "smooth" });
-
-  const posts = getFilteredAndSortedPosts();
-  if (posts.length > 0) {
-    const firstPostId = posts[0].slug || posts[0].id || posts[0].sys_id;
-    selectAndRenderPost(firstPostId);
-  }
-}
-
-/**
- * Mobile Sliding Viewport Functions (< 980px Width or Short Height)
- */
-function showReaderPaneMobile() {
-  const splitLayout = document.querySelector(".split-layout");
-  if (splitLayout) {
-    splitLayout.classList.add("mobile-reader-active");
-  }
-}
-
-function showGridFeedMobile() {
-  const splitLayout = document.querySelector(".split-layout");
-  if (splitLayout) {
-    splitLayout.classList.remove("mobile-reader-active");
-    splitLayout.classList.remove("reader-open");
-  }
-  activePostId = "";
-  const cards = document.querySelectorAll(".grid-card");
-  cards.forEach((c) => {
-    c.classList.remove("selected-active");
-    c.setAttribute("aria-pressed", "false");
-  });
-  if (
-    typeof window !== "undefined" &&
-    window.history &&
-    window.history.replaceState
-  ) {
-    window.history.replaceState(
-      null,
-      "",
-      window.location.pathname + window.location.search,
-    );
-  }
-}
-
-// Touch swipe gesture listeners
-let touchStartX = 0;
-let touchStartY = 0;
-
-document.addEventListener(
-  "touchstart",
-  (e) => {
-    if (e.touches && e.touches.length > 0) {
-      touchStartX = e.touches[0].clientX;
-      touchStartY = e.touches[0].clientY;
-    }
-  },
-  { passive: true },
-);
-
-document.addEventListener(
-  "touchend",
-  (e) => {
-    if (e.changedTouches && e.changedTouches.length > 0) {
-      const touchEndX = e.changedTouches[0].clientX;
-      const touchEndY = e.changedTouches[0].clientY;
-      const diffX = touchEndX - touchStartX;
-      const diffY = touchEndY - touchStartY;
-
-      if (Math.abs(diffX) > 60 && Math.abs(diffX) > Math.abs(diffY) * 1.4) {
-        if (diffX < 0) {
-          showReaderPaneMobile();
-        } else {
-          showGridFeedMobile();
-        }
-      }
-    }
-  },
-  { passive: true },
-);
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    showGridFeedMobile();
-  }
-});
-
-/**
- * Select a Card and Render in Reader Pane
- */
-function selectAndRenderPost(postId, updateUrl = true) {
-  if (!postId || !POSTS_DATABASE[postId]) return;
-  activePostId = postId;
-  const targetPost = POSTS_DATABASE[postId];
-  const rawSlug = targetPost
-    ? targetPost.slug || targetPost.id || targetPost.sys_id
-    : postId;
-  const canonicalSlug = String(rawSlug).replace(/^\d{4}-\d{2}-\d{2}-/, "");
-
-  const cards = document.querySelectorAll(".grid-card");
-  cards.forEach((c) => {
-    const cardId = c.getAttribute("data-id");
-    if (
-      cardId === postId ||
-      (targetPost &&
-        (cardId === targetPost.slug || cardId === targetPost.sys_id))
-    ) {
-      c.classList.add("selected-active");
-      c.setAttribute("aria-pressed", "true");
-    } else {
-      c.classList.remove("selected-active");
-      c.setAttribute("aria-pressed", "false");
-    }
-  });
-
-  renderPost(postId);
-
-  const splitLayout = document.querySelector(".split-layout");
-  if (splitLayout) {
-    splitLayout.classList.add("reader-open");
-  }
-
-  if (window.innerWidth <= 980 || window.innerHeight <= 700) {
-    showReaderPaneMobile();
-  }
-
-  // Update URL Hash for direct deep-linking
-  if (
-    updateUrl &&
-    typeof window !== "undefined" &&
-    window.history &&
-    window.history.replaceState
-  ) {
-    window.history.replaceState(null, "", "#" + canonicalSlug);
-  }
-}
-
-/**
- * Close Reader Pane & Return to Full Grid View
- */
-function closeReaderPane() {
-  activePostId = "";
-  const splitLayout = document.querySelector(".split-layout");
-  if (splitLayout) {
-    splitLayout.classList.remove("reader-open");
-    splitLayout.classList.remove("mobile-reader-active");
-  }
-
-  const cards = document.querySelectorAll(".grid-card");
-  cards.forEach((c) => {
-    c.classList.remove("selected-active");
-    c.setAttribute("aria-pressed", "false");
-  });
-
-  if (
-    typeof window !== "undefined" &&
-    window.history &&
-    window.history.replaceState
-  ) {
-    window.history.replaceState(
-      null,
-      "",
-      window.location.pathname + window.location.search,
-    );
-  }
-}
-
-/**
- * Helper to get canonical permanent URL without dates in the slug
- */
-function getCanonicalPostUrl(postOrId) {
-  const post =
-    typeof postOrId === "object" && postOrId
-      ? postOrId
-      : POSTS_DATABASE[postOrId] ||
-        (activePostId ? POSTS_DATABASE[activePostId] : null);
-  const raw = post ? post.slug || post.id || post.sys_id || postOrId : postOrId;
-  const clean = String(raw || "").replace(/^\d{4}-\d{2}-\d{2}-/, "");
-
-  if (
-    typeof window !== "undefined" &&
-    window.location &&
-    window.location.origin
-  ) {
-    const origin = window.location.origin;
-    // Extract base pathname removing any /posts/... or index.html
-    const basePath = window.location.pathname
-      .replace(/\/posts\/.*$/, "/")
-      .replace(/\/index\.html$/, "/")
-      .replace(/\/$/, "");
-    return `${origin}${basePath}/posts/${clean}.html`;
-  }
-  return `https://mynameisjpg.github.io/mynameisjpg/posts/${clean}.html`;
-}
-
-/**
- * Typography Scaling Preferences & Dynamic CSS Cascade
- */
-function getSavedReaderFontSize() {
-  if (typeof window === "undefined" || !window.localStorage) return 16;
-  const saved = localStorage.getItem("untitled_reader_font_size");
-  const parsed = parseInt(saved, 10);
-  return !isNaN(parsed) && parsed >= 12 && parsed <= 24 ? parsed : 16;
-}
-
-function getReaderFontSizeDisplay(size) {
-  return size === 16 ? "DEFAULT PX" : `${size} PX`;
-}
-
-function applyReaderFontScale(size) {
-  const pane = document.getElementById("essay-reading-pane");
-  if (!pane) return;
-  const scale = size / 16;
-  pane.style.setProperty("--reader-font-scale", scale.toFixed(4));
-}
-
-function initReaderTypoScaler() {
-  const slider = document.getElementById("reader-font-slider");
-  const valBtn = document.getElementById("typo-scaler-val");
-  const pane = document.getElementById("essay-reading-pane");
-  if (!slider || !pane) return;
-
-  const currentSize = getSavedReaderFontSize();
-  slider.value = currentSize;
-  applyReaderFontScale(currentSize);
-  if (valBtn) valBtn.textContent = getReaderFontSizeDisplay(currentSize);
-
-  slider.oninput = (e) => {
-    const size = parseInt(e.target.value, 10);
-    applyReaderFontScale(size);
-    if (valBtn) valBtn.textContent = getReaderFontSizeDisplay(size);
-    if (typeof window !== "undefined" && window.localStorage) {
-      localStorage.setItem("untitled_reader_font_size", size.toString());
-    }
-  };
-
-  if (valBtn) {
-    valBtn.onclick = () => {
-      slider.value = 16;
-      applyReaderFontScale(16);
-      valBtn.textContent = "DEFAULT PX";
-      if (typeof window !== "undefined" && window.localStorage) {
-        localStorage.setItem("untitled_reader_font_size", "16");
-      }
-    };
-  }
-}
-
-/**
- * Reader Pane Component Renderer (3-Tier Metadata Architecture)
- */
-function renderPost(postId) {
-  const post = POSTS_DATABASE[postId] || Object.values(POSTS_DATABASE)[0];
-  const pane = document.getElementById("essay-reading-pane");
-  if (!pane || !post) return;
-
-  const pageUrl = getCanonicalPostUrl(post);
-
-  // Apply Per-Post Theme Mode
-  if (post.theme === "light") {
-    pane.classList.add("theme-light");
-  } else {
-    pane.classList.remove("theme-light");
-  }
-
-  const currentFontSize = getSavedReaderFontSize();
-
-  // Construct 3-Tier DOM Template
-  pane.innerHTML = `
-    <!-- Edge Close Button (Vertical 3-Chevron Drawer Tab) -->
-    <button type="button" class="btn-close-reader-edge" onclick="closeReaderPane()" title="Close reader panel (ESC)" aria-label="Close reader panel">
-      <svg class="close-chevron-svg" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg>
-      <svg class="close-chevron-svg" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg>
-      <svg class="close-chevron-svg" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg>
-    </button>
-
-    <div class="reader-scroll-wrapper">
-      <div class="reader-content-container">
-        <!-- Return to Grid Feed Button (Mobile / Narrow Screens) -->
-        <button type="button" class="btn-return-grid" onclick="showGridFeedMobile()" aria-label="Return to Grid Feed">
-          <span class="return-arrow">&lt;&lt;</span>
-          <span class="return-text">RETURN TO GRID FEED</span>
-        </button>
-
-        <!-- TYPOGRAPHY SCALING CALIBRATOR -->
-        <div class="reader-typo-scaler" data-component="typo-scaler">
-          <span class="typo-scaler-label">TYPO _ SCALING</span>
-          <div class="typo-scaler-slider-wrap">
-            <div class="typo-scaler-track-ticks" aria-hidden="true"></div>
-            <input 
-              type="range" 
-              id="reader-font-slider" 
-              class="typo-scale-slider" 
-              min="13" 
-              max="21" 
-              step="1" 
-              value="${currentFontSize}" 
-              aria-label="Reader typography scale" 
-            />
-          </div>
-          <button type="button" id="typo-scaler-val" class="typo-scaler-val" title="Click to reset to default 16px size">
-            ${getReaderFontSizeDisplay(currentFontSize)}
-          </button>
-        </div>
-
-        <!-- TIER 1: ABOVE TITLE ARCHIVAL BADGES -->
-        <header class="post-header-meta-top">
-          <span class="meta-chip chip-primary">[${post.format}]</span>
-          ${post.category && post.category !== post.format && post.category !== post.pillar ? `<a href="network.html?tag=${encodeURIComponent(post.category)}" class="meta-text-link" title="Explore ${post.category} in Taxonomy Node Map">${post.category}</a>` : ""}
-          ${post.media ? `<span class="meta-text-item">MEDIA: ${post.media}</span>` : ""}
-          ${post.pillar ? `<a href="network.html?tag=${encodeURIComponent(post.pillar)}" class="meta-text-link" title="Explore ${post.pillar} in Taxonomy Node Map">${post.pillar}</a>` : ""}
-          ${post.subtopic ? `<a href="network.html?tag=${encodeURIComponent(post.subtopic)}" class="meta-text-link" title="Explore ${post.subtopic} in Taxonomy Node Map">${post.subtopic}</a>` : ""}
-        </header>
-
-        <!-- TITLE & SUBTITLE -->
-        <h1 class="post-title essay-title">${post.title}</h1>
-        ${post.subtitle ? `<p class="post-subtitle essay-subtitle">${post.subtitle}</p>` : ""}
-
-        ${
-          post.url
-            ? `
-          <!-- PROMINENT ACTION LINK (FOR RESOURCES & BOOKMARKS) -->
-          <div class="post-prominent-action">
-            <a href="${post.url}" target="_blank" rel="noopener noreferrer" class="btn-prominent-action">
-              <span class="action-kicker">${
-                post.format === "RESOURCE"
-                  ? Boolean(
-                      post.download ||
-                        (post.url &&
-                          (post.url.endsWith(".pdf") ||
-                            post.url.endsWith(".zip") ||
-                            post.url.endsWith(".tar.gz") ||
-                            post.url.includes("download") ||
-                            (post.url.includes("github.com") &&
-                              post.url.includes("/releases")))),
-                    )
-                    ? "DOWNLOAD IT ↗"
-                    : "ACCESS RESOURCE ↗"
-                  : post.format === "BOOKMARK"
-                  ? "VIEW SOURCE ↗"
-                  : "VISIT DESTINATION ↗"
-              }</span>
-              <span class="action-url-text">${post.url}</span>
-            </a>
-          </div>
-        `
-            : ""
-        }
-
-        <!-- TIER 2: BELOW TITLE META BAR -->
-        <div class="post-header-meta-bottom">
-          <span>DATE: <time>${post.date}</time></span>
-          <span class="meta-sep">//</span>
-          <span>BY: <strong class="meta-author">${post.author}</strong></span>
-          <span class="meta-sep">//</span>
-          <span class="meta-readtime">${post.read_time}</span>
-          ${post.source || post.via ? `<span class="meta-sep">//</span><span>SOURCE: <strong class="meta-author">${post.source || post.via}</strong></span>` : ""}
-          <span class="meta-sep">//</span>
-          <span>SYS_ID: <code>${post.sys_id}</code></span>
-        </div>
-
-        <!-- MAIN BODY PROSE -->
-        <div class="post-body-content essay-body-content">
-          ${post.content}
-        </div>
-
-        <!-- TIER 3: FOOTER SECTION -->
-        <footer class="post-footer-section">
-          ${
-            post.links && post.links.length > 0
-              ? `
-            <section class="footer-block footer-links">
-              <h3 class="footer-block-title">// REFERENCED_RESOURCES &amp; DESTINATIONS</h3>
-              <div class="resources-grid">
-                ${post.links
-                  .map(
-                    (l) => `
-                  <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="resource-card">
-                    <div class="resource-card-header">
-                      <span class="meta-chip resource-chip">[${l.type}]</span>
-                      <span class="resource-card-link-text"><strong>${l.title}</strong> <span class="resource-card-arrow" aria-hidden="true">↗</span></span>
-                    </div>
-                    ${l.desc ? `<p class="resource-card-desc">${l.desc}</p>` : ""}
-                  </a>
-                `,
-                  )
-                  .join("")}
-              </div>
-            </section>
-          `
-              : ""
-          }
-
-          ${
-            post.backlinks && post.backlinks.length > 0
-              ? `
-            <section class="footer-block footer-backlinks">
-              <h3 class="footer-block-title">// CONNECTED_DISPATCHES (NETWORK)</h3>
-              <ul class="backlinks-list">
-                ${post.backlinks
-                  .map(
-                    (b) => `
-                  <li><a href="${b.slug}"><strong>${b.title}</strong></a> ${b.note ? `— <em>${b.note}</em>` : ""}</li>
-                `,
-                  )
-                  .join("")}
-              </ul>
-            </section>
-          `
-              : ""
-          }
-
-          ${
-            post.tags && post.tags.length > 0
-              ? `
-            <section class="footer-block footer-tags">
-              <h3 class="footer-block-title">// TAXONOMY_INDEX</h3>
-              <div class="tags-group">
-                ${post.tags.map((t) => `<a href="network.html?tag=${encodeURIComponent(t)}" class="tag-pill" title="Explore #${t} in Taxonomy Node Map">#${t}</a>`).join("")}
-              </div>
-            </section>
-          `
-              : ""
-          }
-
-          ${
-            post.shareable !== false
-              ? `
-            <section class="footer-block footer-share">
-              <div class="share-actions-bar">
-                <span class="share-caption">SHARE DISPATCH:</span>
-                
-                <!-- Copy URL Button -->
-                <button type="button" class="btn-share" onclick="copyPostUrl('${postId}')" title="Copy Link to Clipboard">
-                  <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-                  <span>COPY URL</span>
-                </button>
-
-                <!-- Embed Card Button -->
-                ${
-                  post.allow_embed !== false
-                    ? `
-                  <button type="button" class="btn-share" onclick="copyEmbedCard('${postId}')" title="Copy HTML Embed Card">
-                    <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    <span>EMBED</span>
-                  </button>
-                `
-                    : ""
-                }
-
-                <!-- X / Twitter -->
-                <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title + " — Untitled.jpg")}&url=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on X / Twitter">
-                  <svg viewBox="0 0 24 24"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
-                  <span>X ↗</span>
-                </a>
-
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on LinkedIn">
-                  <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                  <span>LINKEDIN ↗</span>
-                </a>
-
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on Facebook">
-                  <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                  <span>FB ↗</span>
-                </a>
-
-                <!-- Instagram Stories -->
-                <button type="button" class="btn-share" onclick="shareInstagram('${postId}')" title="Copy for Instagram Stories">
-                  <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                  <span>IG ↗</span>
-                </button>
-              </div>
-            </section>
-          `
-              : ""
-          }
-
-          <div class="post-signoff">
-            <code>UNTITLED.JPG // BUILT IN ZEROES AND ONES WITH THE BLOOD AND SWEAT OF JUAN P. GIUSEPPONI // 2026</code>
-          </div>
-        </footer>
-      </div>
-    </div>
-  `;
-
-  // Initialize Typography Scaler Slider and Preferences
-  initReaderTypoScaler();
-
-  // Smooth scroll reader to top on post change
-  pane.scrollTo({ top: 0, behavior: "smooth" });
-
-  // Auto-render KaTeX math formulas if available
-  if (typeof renderMathInElement === "function") {
-    try {
-      renderMathInElement(pane, {
-        delimiters: [
-          { left: "$$", right: "$$", display: true },
-          { left: "$", right: "$", display: false },
-          { left: "\\[", right: "\\]", display: true },
-          { left: "\\(", right: "\\)", display: false },
-        ],
-        ignoredTags: [
-          "script",
-          "noscript",
-          "style",
-          "textarea",
-          "pre",
-          "option",
-        ],
-        throwOnError: false,
-      });
-    } catch (err) {
-      console.log("[KaTeX] Math render skipped:", err);
-    }
-  }
-
-  // Auto-render Mermaid diagrams if available
-  if (typeof mermaid !== "undefined") {
-    try {
-      // Auto-convert standard markdown code blocks (e.g. from marked default parser) into mermaid diagram boxes
-      pane.querySelectorAll("pre code.language-mermaid").forEach((el) => {
-        const pre = el.parentElement;
-        const rawCode = el.textContent;
-        const container = document.createElement("div");
-        container.className = "mermaid-diagram-box";
-        container.innerHTML = `<pre class="mermaid">\n${rawCode}\n</pre>`;
-        pre.replaceWith(container);
-      });
-
-      const isLight = pane.classList.contains("theme-light");
-      mermaid.initialize({
-        startOnLoad: false,
-        theme: isLight ? "neutral" : "dark",
-        themeVariables: {
-          darkMode: !isLight,
-          background: "transparent",
-          mainBkg: isLight ? "#FFFFFF" : "#141414",
-          nodeBkg: isLight ? "#FFFFFF" : "#141414",
-          primaryColor: isLight ? "#FFFFFF" : "#141414",
-          primaryTextColor: isLight ? "#1B2427" : "#F5F5F5",
-          primaryBorderColor: isLight
-            ? "rgba(0, 0, 0, 0.18)"
-            : "rgba(255, 255, 255, 0.18)",
-          nodeBorder: isLight
-            ? "rgba(0, 0, 0, 0.18)"
-            : "rgba(255, 255, 255, 0.18)",
-          clusterBkg: "transparent",
-          clusterBorder: "none",
-          lineColor: "#E84A5F",
-          edgeLabelBackground: isLight ? "#DEE6E9" : "#0E0E0E",
-          fontFamily: "'Azeret Mono', monospace",
-          fontSize: "12px",
-        },
-        securityLevel: "loose",
-      });
-      mermaid.run({
-        nodes: pane.querySelectorAll(".mermaid"),
-      });
-    } catch (err) {
-      console.log("[Mermaid] Render skipped:", err);
-    }
-  }
-}
-
-// Configure Marked.js renderer for Mermaid diagrams if marked is present
-if (typeof marked !== "undefined" && marked.use) {
-  try {
-    marked.use({
-      renderer: {
-        code(code, infostring, escaped) {
-          const lang = (infostring || "").trim().toLowerCase();
-          if (lang === "mermaid") {
-            return `<div class="mermaid-diagram-box"><pre class="mermaid">\n${code}\n</pre></div>`;
-          }
-          return false;
-        },
-      },
-    });
-  } catch (e) {
-    console.log("[Marked] Custom renderer initialization skipped:", e);
-  }
-}
-
-/**
- * Initialize Interactive Behaviors & Category Filter Nav
- */
-function initApp() {
+  // Immediate global feed ingestion if loaded via posts.js (Zero-CORS offline & file:///)
   if (typeof window !== "undefined" && window.DYNAMIC_POSTS) {
     ingestPostList(window.DYNAMIC_POSTS);
   }
 
-  // Load dynamic posts & initialize UI
-  loadDynamicPosts();
+  /**
+   * Robust Pillar Matching Helper
+   * Delegates directly to window.TaxonomyLookup when available
+   */
+  function matchesPillar(post, query) {
+    if (!query || query === "all") return true;
+    if (!post) return false;
 
-  // Attach click handlers to any existing static cards in DOM
-  document.querySelectorAll(".grid-card").forEach((card) => {
-    const handler = () => {
-      const postId = card.getAttribute("data-id");
-      selectAndRenderPost(postId);
-    };
-    card.addEventListener("click", handler);
-    card.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        handler();
+    if (
+      typeof window !== "undefined" &&
+      window.TaxonomyLookup &&
+      typeof window.TaxonomyLookup.matches === "function"
+    ) {
+      return window.TaxonomyLookup.matches(post, query);
+    }
+
+    const q = String(query).toLowerCase().replace(/[-_]/g, " ").trim();
+    const pillar = String(post.pillar || "").toLowerCase();
+    const subtopic = String(post.subtopic || "").toLowerCase();
+    const category = String(post.category || "").toLowerCase();
+    const tags = Array.isArray(post.tags)
+      ? post.tags.map((t) => String(t).toLowerCase()).join(" ")
+      : "";
+
+    if (pillar.includes(q)) return true;
+    return subtopic.includes(q) || category.includes(q) || tags.includes(q);
+  }
+
+  /**
+   * Filter & Sort Helper for Dispatches
+   */
+  function getFilteredAndSortedPosts() {
+    if (!cachedUniquePublishedPosts) {
+      const uniquePosts = [];
+      const seen = new Set();
+
+      Object.values(POSTS_DATABASE).forEach((post) => {
+        const uniqueKey = post.slug || post.id || post.sys_id;
+        const statusStr = (post.status || "published").toLowerCase();
+        const isPublished = statusStr === "published" || statusStr === "active";
+        if (uniqueKey && !seen.has(uniqueKey) && isPublished) {
+          seen.add(uniqueKey);
+          uniquePosts.push(post);
+        }
+      });
+      cachedUniquePublishedPosts = uniquePosts;
+    }
+
+    // Filter by Format, Pillar & Search Query
+    let filtered = cachedUniquePublishedPosts.filter((post) => {
+      const postFormat = (post.format || "ESSAY")
+        .toLowerCase()
+        .trim()
+        .replace(/s$/, "");
+      const curFilter = (activeFilter || "all")
+        .toLowerCase()
+        .trim()
+        .replace(/s$/, "");
+      if (curFilter !== "all" && postFormat !== curFilter) return false;
+
+      if (activePillar !== "all" && !matchesPillar(post, activePillar)) {
+        return false;
       }
-    });
-  });
 
-  // Attach Infinite Scroll Listeners
-  const matrixCol =
-    document.querySelector(".grid-column") ||
-    document.querySelector("[data-component='dispatch-matrix']");
-  if (matrixCol) {
-    matrixCol.addEventListener("scroll", handleMatrixScroll, { passive: true });
-  }
-  window.addEventListener("scroll", handleMatrixScroll, { passive: true });
-
-  // Reset page on brand logo or home icon click
-  const brandLogo = document.querySelector(".brand-logo-v");
-  if (brandLogo) {
-    brandLogo.addEventListener("click", (e) => {
-      e.preventDefault();
-      resetPage();
-    });
-  }
-
-  const homeBtn = document.getElementById("sidebar-home-btn");
-  if (homeBtn) {
-    homeBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      resetPage();
-    });
-  }
-
-  // Static / Non-WebComponent Format Filter Fallback Handler
-  const staticNavLinks = document.querySelectorAll(
-    "nav:not(sidebar-rail nav) .nav-link-item",
-  );
-  staticNavLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      const isGridPage = Boolean(document.getElementById("card-matrix"));
-      if (isGridPage) {
-        e.preventDefault();
-        const filter = (link.getAttribute("data-filter") || "all")
-          .toLowerCase()
-          .replace(/s$/, "");
-        if (activeFilter === filter && filter !== "all") {
-          applyCategoryFilter("all", true);
-        } else {
-          applyCategoryFilter(filter, true);
+      if (searchQuery.trim() !== "") {
+        const q = searchQuery.toLowerCase().trim();
+        const matchTitle = (post.title || "").toLowerCase().includes(q);
+        const matchSubtitle = (post.subtitle || "").toLowerCase().includes(q);
+        const matchExcerpt = (post.excerpt || "").toLowerCase().includes(q);
+        const matchPillar = (post.pillar || "").toLowerCase().includes(q);
+        const matchSubtopic = (post.subtopic || "").toLowerCase().includes(q);
+        const matchCategory = (post.category || "").toLowerCase().includes(q);
+        const matchTags =
+          Array.isArray(post.tags) &&
+          post.tags.some((t) => String(t).toLowerCase().includes(q));
+        if (
+          !matchTitle &&
+          !matchSubtitle &&
+          !matchExcerpt &&
+          !matchPillar &&
+          !matchSubtopic &&
+          !matchCategory &&
+          !matchTags
+        ) {
+          return false;
         }
       }
+      return true;
     });
-  });
 
-  // Filter Pill Button & Dropdown
-  const filterBtn = document.getElementById("filter-pill-btn");
-  const filterDropdown = document.getElementById("filter-dropdown");
-
-  if (filterBtn && filterDropdown) {
-    filterBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const isOpen = filterDropdown.classList.contains("open");
-      closeAllControlDropdowns();
-      if (!isOpen) {
-        filterDropdown.classList.add("open");
-        filterBtn.setAttribute("aria-expanded", "true");
-        filterBtn.classList.add("active");
+    // Sort order (default: Most Recent First)
+    filtered.sort((a, b) => {
+      if (activeSort === "recent") {
+        const cmp = (b.date || "").localeCompare(a.date || "");
+        if (cmp !== 0) return cmp;
+        const isFeatA = Boolean(a.featured);
+        const isFeatB = Boolean(b.featured);
+        if (isFeatA && !isFeatB) return -1;
+        if (!isFeatA && isFeatB) return 1;
+        return 0;
+      } else if (activeSort === "oldest") {
+        return (a.date || "").localeCompare(b.date || "");
+      } else if (activeSort === "readtime") {
+        const parseTime = (str) => parseInt((str || "").replace(/\D/g, "")) || 0;
+        return parseTime(b.read_time) - parseTime(a.read_time);
+      } else if (activeSort === "title") {
+        return (a.title || "").localeCompare(b.title || "");
       }
+      return (b.date || "").localeCompare(a.date || "");
     });
 
-    filterDropdown.querySelectorAll(".dropdown-opt").forEach((opt) => {
-      opt.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const selectedFilter = opt.getAttribute("data-filter") || "all";
-        applyCategoryFilter(selectedFilter, true);
-        closeAllControlDropdowns();
-      });
-    });
+    return filtered;
   }
 
-  // Sort Pill Button & Dropdown
-  const sortBtn = document.getElementById("sort-pill-btn");
-  const sortDropdown = document.getElementById("sort-dropdown");
+  /**
+   * Dynamically Fetch posts.json (Live HTTP Server / Production Build)
+   */
+  async function loadDynamicPosts() {
+    const isSubdir =
+      typeof window !== "undefined" &&
+      window.location.pathname.includes("/posts/");
+    const jsonPath = isSubdir
+      ? "../posts.json?t=" + Date.now()
+      : "posts.json?t=" + Date.now();
 
-  if (sortBtn && sortDropdown) {
-    sortBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const isOpen = sortDropdown.classList.contains("open");
-      closeAllControlDropdowns();
-      if (!isOpen) {
-        sortDropdown.classList.add("open");
-        sortBtn.setAttribute("aria-expanded", "true");
-        sortBtn.classList.add("active");
+    try {
+      const res = await fetch(jsonPath);
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data) && data.length > 0) {
+          ingestPostList(data);
+          console.log(
+            `[UNTITLED.JPG] Loaded ${data.length} dispatches live from posts.json`,
+          );
+        }
       }
-    });
+    } catch (err) {
+      console.log("[UNTITLED.JPG] Running with direct script posts feed.");
+    }
 
-    sortDropdown.querySelectorAll(".dropdown-opt").forEach((opt) => {
-      opt.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const selectedSort = opt.getAttribute("data-sort") || "recent";
-        const labelText = opt.textContent.replace(/^\[|\]$/g, "");
-        updateSortSelection(selectedSort, labelText, true);
-        closeAllControlDropdowns();
-      });
-    });
-  }
-
-  // Quick Search Input Handler
-  const searchInput = document.getElementById("matrix-search-input");
-  const clearSearchBtn = document.getElementById("clear-search-btn");
-
-  if (searchInput) {
-    searchInput.addEventListener("input", (e) => {
-      searchQuery = e.target.value;
-      if (clearSearchBtn) {
-        clearSearchBtn.style.display =
-          searchQuery.trim() !== "" ? "inline-block" : "none";
-      }
-      updateBrowserUrl(true);
-      renderCardMatrix(true);
-    });
-  }
-
-  if (clearSearchBtn) {
-    clearSearchBtn.addEventListener("click", () => {
-      if (searchInput) searchInput.value = "";
-      searchQuery = "";
-      clearSearchBtn.style.display = "none";
-      updateBrowserUrl(true);
-      renderCardMatrix(true);
-    });
-  }
-
-  // Close dropdowns on outside click
-  document.addEventListener("click", () => {
-    closeAllControlDropdowns();
-  });
-
-  // Centralized Top Navigation & Rail Listeners
-  const dispatchLogBtn = document.getElementById("dispatch-log-btn");
-  if (dispatchLogBtn) {
-    dispatchLogBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      toggleDispatchLogDropdown();
-    });
-  }
-
-  const topFilterBtn = document.getElementById("top-navbar-filter-btn");
-  if (topFilterBtn) {
-    topFilterBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      toggleTopFilterDropdown();
-    });
-  }
-
-  const topSortBtn = document.getElementById("top-navbar-sort-btn");
-  if (topSortBtn) {
-    topSortBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      toggleTopSortDropdown();
-    });
-  }
-
-  const sidebarSubscribeBtn = document.getElementById("sidebar-subscribe-btn");
-  if (sidebarSubscribeBtn) {
-    sidebarSubscribeBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      openSubscribeModal();
-    });
-  }
-
-  const topInlineSearch = document.getElementById("top-inline-search-input");
-  if (topInlineSearch) {
-    topInlineSearch.addEventListener("input", (e) => {
-      handleTopInlineSearch(e.target.value);
-    });
-  }
-
-  const topSearchInput = document.getElementById("top-search-input");
-  if (topSearchInput) {
-    topSearchInput.addEventListener("input", (e) => {
-      handleTopInlineSearch(e.target.value);
-    });
-  }
-
-  document
-    .querySelectorAll(
-      "#dispatch-log-dropdown .dropdown-option, #top-filter-dropdown .dropdown-option",
-    )
-    .forEach((opt) => {
-      opt.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const filter = (opt.getAttribute("data-filter") || "all")
-          .toLowerCase()
-          .replace(/s$/, "");
-        applyCategoryFilter(filter, true);
-        closeAllTopDropdowns();
-        closeAllControlDropdowns();
-      });
-    });
-
-  document
-    .querySelectorAll("#top-sort-dropdown .dropdown-option")
-    .forEach((opt) => {
-      opt.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const sort = opt.getAttribute("data-sort") || "newest";
-        applyTopSort(sort);
-        closeAllTopDropdowns();
-        closeAllControlDropdowns();
-      });
-    });
-
-  // Browser back/forward navigation support
-  window.addEventListener("popstate", () => {
+    // Parse URL search parameters (?filter=essay, ?pillar=visual-perception, etc.)
     parseUrlParamsAndApply();
+
+    // Check URL Hash or INITIAL_POST_SLUG for deep-link
     const rawHash = (window.location.hash || "").replace("#", "");
     const cleanHash = rawHash.replace(/^dispatch-/, "");
-    const resolvedPostId =
+    const targetSlug =
       (POSTS_DATABASE[rawHash] ? rawHash : "") ||
-      (POSTS_DATABASE[cleanHash] ? cleanHash : "");
+      (POSTS_DATABASE[cleanHash] ? cleanHash : "") ||
+      (typeof window !== "undefined" ? window.INITIAL_POST_SLUG : "");
 
-    if (resolvedPostId) {
-      activePostId = resolvedPostId;
-      selectAndRenderPost(activePostId, false);
-    } else if (!rawHash && activePostId) {
-      activePostId = "";
-      closeReaderPane();
+    // Render Matrix Cards
+    if (window.renderCardMatrix) {
+      window.renderCardMatrix(true);
+    } else if (window.CardMatrix && window.CardMatrix.render) {
+      window.CardMatrix.render(true);
     }
-    renderCardMatrix(true);
-  });
 
-  document.querySelectorAll(".btn-return-grid").forEach((btn) => {
-    btn.addEventListener("click", showGridFeedMobile);
-  });
-
-  function scrollCurrentView(toBottom = false) {
-    const splitLayout = document.querySelector(".split-layout");
-    const isReaderOpen =
-      splitLayout &&
-      (splitLayout.classList.contains("reader-open") ||
-        splitLayout.classList.contains("mobile-reader-active"));
-
-    if (isReaderOpen) {
-      const pane = document.getElementById("essay-reading-pane");
-      const wrapper = document.querySelector(".reader-scroll-wrapper");
-      if (pane)
-        pane.scrollTo({
-          top: toBottom ? pane.scrollHeight : 0,
-          behavior: "smooth",
-        });
-      if (wrapper)
-        wrapper.scrollTo({
-          top: toBottom ? wrapper.scrollHeight : 0,
-          behavior: "smooth",
-        });
-    } else {
-      const gridCol =
-        document.querySelector(".grid-column") ||
-        document.querySelector("[data-component='dispatch-matrix']");
-      if (gridCol) {
-        gridCol.scrollTo({
-          top: toBottom ? gridCol.scrollHeight : 0,
-          behavior: "smooth",
-        });
+    // Auto-select deep-linked dispatch
+    if (targetSlug && POSTS_DATABASE[targetSlug]) {
+      if (window.selectAndRenderPost) {
+        window.selectAndRenderPost(targetSlug, false);
+      } else if (window.ReaderPane && window.ReaderPane.selectAndRenderPost) {
+        window.ReaderPane.selectAndRenderPost(targetSlug, false);
       }
-      window.scrollTo({
-        top: toBottom ? document.documentElement.scrollHeight : 0,
-        behavior: "smooth",
-      });
-    }
-  }
-
-  const scrollTopBtn = document.getElementById("btn-scroll-top");
-  if (scrollTopBtn) {
-    scrollTopBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      scrollCurrentView(false);
-    });
-  }
-
-  const scrollBottomBtn = document.getElementById("btn-scroll-bottom");
-  if (scrollBottomBtn) {
-    scrollBottomBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      scrollCurrentView(true);
-    });
-  }
-
-  // Subscribe Modal Form & Cancel Button Listeners
-  document
-    .querySelectorAll("#subscribe-modal form, .modal-form")
-    .forEach((form) => {
-      form.addEventListener("submit", handleSubscribeSubmit);
-    });
-
-  document
-    .querySelectorAll("#subscribe-modal .btn-modal-cancel, .btn-modal-cancel")
-    .forEach((btn) => {
-      btn.addEventListener("click", closeSubscribeModal);
-    });
-
-  // Start 6s post-load subscribe icon callout animation
-  initSubscribeAnimation();
-}
-
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initApp);
-} else {
-  initApp();
-}
-
-function closeAllControlDropdowns() {
-  document
-    .querySelectorAll(".custom-select-dropdown")
-    .forEach((d) => d.classList.remove("open"));
-  document.querySelectorAll(".btn-matrix-pill").forEach((b) => {
-    b.setAttribute("aria-expanded", "false");
-    b.classList.remove("active");
-  });
-}
-
-/**
- * URL Parameter Parser & Syncer
- */
-function parseUrlParamsAndApply() {
-  if (typeof window === "undefined" || !window.location) return;
-
-  const params = new URLSearchParams(window.location.search);
-
-  // 1. Format filter (?filter=essay or ?format=note)
-  const filterParam = params.get("filter") || params.get("format");
-  if (filterParam) {
-    const cleanF = filterParam.toLowerCase().trim().replace(/s$/, "");
-    const valid = ["all", "essay", "note", "bookmark", "resource"];
-    if (valid.includes(cleanF) || valid.includes(filterParam.toLowerCase())) {
-      activeFilter = valid.includes(cleanF)
-        ? cleanF
-        : filterParam.toLowerCase();
-    }
-  }
-
-  // 2. Pillar filter (?pillar=visual-perception or ?topic=...)
-  const pillarParam =
-    params.get("pillar") || params.get("topic") || params.get("subtopic");
-  if (pillarParam) {
-    activePillar = pillarParam.toLowerCase().trim();
-  }
-
-  // 3. Search query (?search=... or ?q=...)
-  const qParam = params.get("search") || params.get("q");
-  if (qParam) {
-    searchQuery = qParam.trim();
-    const searchInput = document.getElementById("matrix-search-input");
-    const clearBtn = document.getElementById("clear-search-btn");
-    const inlineInput = document.getElementById("top-inline-search-input");
-    const modalInput = document.getElementById("top-search-input");
-    if (searchInput) searchInput.value = searchQuery;
-    if (clearBtn)
-      clearBtn.style.display = searchQuery ? "inline-block" : "none";
-    if (inlineInput) inlineInput.value = searchQuery;
-    if (modalInput) modalInput.value = searchQuery;
-  }
-
-  // 4. Sort order (?sort=newest or ?sort=oldest)
-  const sortParam = params.get("sort");
-  if (sortParam) {
-    activeSort = sortParam === "newest" ? "recent" : sortParam.toLowerCase();
-  }
-
-  syncFilterUIState();
-}
-
-/**
- * Sync Browser URL with In-Memory State
- */
-function updateBrowserUrl(replace = false) {
-  if (
-    typeof window === "undefined" ||
-    !window.history ||
-    !window.history.pushState
-  )
-    return;
-  const url = new URL(window.location.href);
-
-  if (activeFilter && activeFilter !== "all") {
-    url.searchParams.set("filter", activeFilter);
-  } else {
-    url.searchParams.delete("filter");
-    url.searchParams.delete("format");
-  }
-
-  if (activePillar && activePillar !== "all") {
-    url.searchParams.set("pillar", activePillar);
-  } else {
-    url.searchParams.delete("pillar");
-    url.searchParams.delete("topic");
-    url.searchParams.delete("subtopic");
-  }
-
-  if (searchQuery && searchQuery.trim()) {
-    url.searchParams.set("search", searchQuery.trim());
-  } else {
-    url.searchParams.delete("search");
-    url.searchParams.delete("q");
-  }
-
-  if (activeSort && activeSort !== "recent") {
-    url.searchParams.set("sort", activeSort);
-  } else {
-    url.searchParams.delete("sort");
-  }
-
-  const newUrl =
-    url.pathname +
-    (url.search ? url.search : "") +
-    (window.location.hash || "");
-  if (replace) {
-    window.history.replaceState(null, "", newUrl);
-  } else {
-    window.history.pushState(null, "", newUrl);
-  }
-}
-
-/**
- * Synchronize Active UI Filter & Sort Indicators
- */
-function syncFilterUIState() {
-  const cleanFilter = (activeFilter || "all").toLowerCase().replace(/s$/, "");
-  const navLinks = document.querySelectorAll(
-    "#category-filter-nav .nav-link-item, .sidebar-rail .nav-link-item",
-  );
-  const filterLabel = document.getElementById("active-filter-label");
-  const filterValLabel = document.getElementById("current-filter-val");
-  const sortValLabel = document.getElementById("current-sort-val");
-  const dispatchLogBtn = document.getElementById("dispatch-log-btn");
-
-  navLinks.forEach((l) => {
-    const lFilter = (l.getAttribute("data-filter") || "")
-      .toLowerCase()
-      .replace(/s$/, "");
-    if (cleanFilter !== "all" && lFilter === cleanFilter) {
-      l.classList.add("active");
     } else {
-      l.classList.remove("active");
+      activePostId = "";
+      if (window.closeReaderPane) window.closeReaderPane();
+      else if (window.ReaderPane && window.ReaderPane.closeReaderPane) {
+        window.ReaderPane.closeReaderPane();
+      }
     }
-  });
-
-  const rail = document.querySelector("sidebar-rail");
-  if (rail) {
-    rail.setAttribute(
-      "active-filter",
-      cleanFilter !== "all" ? cleanFilter : "",
-    );
   }
 
-  // Highlight dropdown options
-  document
-    .querySelectorAll(
-      "#top-filter-dropdown .dropdown-option, #dispatch-log-dropdown .dropdown-option, #filter-dropdown .dropdown-opt",
+  /**
+   * URL Parameter Parser & Syncer
+   */
+  function parseUrlParamsAndApply() {
+    if (typeof window === "undefined" || !window.location) return;
+    const params = new URLSearchParams(window.location.search);
+
+    // 1. Format filter
+    const filterParam = params.get("filter") || params.get("format");
+    if (filterParam) {
+      const cleanF = filterParam.toLowerCase().trim().replace(/s$/, "");
+      const valid = ["all", "essay", "note", "bookmark", "resource"];
+      if (valid.includes(cleanF) || valid.includes(filterParam.toLowerCase())) {
+        activeFilter = valid.includes(cleanF)
+          ? cleanF
+          : filterParam.toLowerCase();
+      }
+    }
+
+    // 2. Pillar filter
+    const pillarParam =
+      params.get("pillar") || params.get("topic") || params.get("subtopic");
+    if (pillarParam) {
+      activePillar = pillarParam.toLowerCase().trim();
+    }
+
+    // 3. Search query
+    const qParam = params.get("search") || params.get("q");
+    if (qParam) {
+      searchQuery = qParam.trim();
+      const searchInput = document.getElementById("matrix-search-input");
+      const clearBtn = document.getElementById("clear-search-btn");
+      const inlineInput = document.getElementById("top-inline-search-input");
+      const modalInput = document.getElementById("top-search-input");
+      if (searchInput) searchInput.value = searchQuery;
+      if (clearBtn) clearBtn.style.display = searchQuery ? "inline-block" : "none";
+      if (inlineInput) inlineInput.value = searchQuery;
+      if (modalInput) modalInput.value = searchQuery;
+    }
+
+    // 4. Sort order
+    const sortParam = params.get("sort");
+    if (sortParam) {
+      activeSort = sortParam === "newest" ? "recent" : sortParam.toLowerCase();
+    }
+
+    syncFilterUIState();
+  }
+
+  /**
+   * Sync Browser URL with In-Memory State
+   */
+  function updateBrowserUrl(replace = false) {
+    if (
+      typeof window === "undefined" ||
+      !window.history ||
+      !window.history.pushState
     )
-    .forEach((opt) => {
-      const f = (opt.getAttribute("data-filter") || "all")
+      return;
+    const url = new URL(window.location.href);
+
+    if (activeFilter && activeFilter !== "all") {
+      url.searchParams.set("filter", activeFilter);
+    } else {
+      url.searchParams.delete("filter");
+      url.searchParams.delete("format");
+    }
+
+    if (activePillar && activePillar !== "all") {
+      url.searchParams.set("pillar", activePillar);
+    } else {
+      url.searchParams.delete("pillar");
+      url.searchParams.delete("topic");
+      url.searchParams.delete("subtopic");
+    }
+
+    if (searchQuery && searchQuery.trim()) {
+      url.searchParams.set("search", searchQuery.trim());
+    } else {
+      url.searchParams.delete("search");
+      url.searchParams.delete("q");
+    }
+
+    if (activeSort && activeSort !== "recent") {
+      url.searchParams.set("sort", activeSort);
+    } else {
+      url.searchParams.delete("sort");
+    }
+
+    const newUrl =
+      url.pathname +
+      (url.search ? url.search : "") +
+      (window.location.hash || "");
+    if (replace) {
+      window.history.replaceState(null, "", newUrl);
+    } else {
+      window.history.pushState(null, "", newUrl);
+    }
+  }
+
+  /**
+   * Synchronize Active UI Filter & Sort Indicators
+   */
+  function syncFilterUIState() {
+    const cleanFilter = (activeFilter || "all").toLowerCase().replace(/s$/, "");
+    const navLinks = document.querySelectorAll(
+      "#category-filter-nav .nav-link-item, .sidebar-rail .nav-link-item",
+    );
+    const filterLabel = document.getElementById("active-filter-label");
+    const filterValLabel = document.getElementById("current-filter-val");
+    const sortValLabel = document.getElementById("current-sort-val");
+    const dispatchLogBtn = document.getElementById("dispatch-log-btn");
+
+    navLinks.forEach((l) => {
+      const lFilter = (l.getAttribute("data-filter") || "")
         .toLowerCase()
         .replace(/s$/, "");
-      opt.classList.toggle("active", f === cleanFilter);
-    });
-
-  // Highlight sort dropdown options
-  document
-    .querySelectorAll(
-      "#top-sort-dropdown .dropdown-option, #sort-dropdown .dropdown-opt",
-    )
-    .forEach((opt) => {
-      const s = opt.getAttribute("data-sort") || "recent";
-      const isActiveSort =
-        s === activeSort || (s === "newest" && activeSort === "recent");
-      opt.classList.toggle("active", isActiveSort);
-    });
-
-  if (filterValLabel) {
-    const labels = {
-      all: "ALL POSTS",
-      essay: "ESSAYS",
-      note: "NOTES",
-      bookmark: "BOOKMARKS",
-      resource: "RESOURCES",
-    };
-    if (activePillar !== "all") {
-      filterValLabel.textContent = `PILLAR: ${activePillar.toUpperCase().replace(/[-_]/g, " ")}`;
-    } else {
-      filterValLabel.textContent =
-        labels[cleanFilter] ||
-        (cleanFilter !== "all" ? cleanFilter.toUpperCase() : "ALL POSTS");
-    }
-  }
-
-  if (sortValLabel) {
-    const sortLabels = {
-      recent: "MOST RECENT",
-      oldest: "OLDEST FIRST",
-      title: "ALPHABETICAL",
-      readtime: "READING TIME",
-    };
-    sortValLabel.textContent = sortLabels[activeSort] || "MOST RECENT";
-  }
-
-  if (dispatchLogBtn) {
-    const label =
-      cleanFilter === "all"
-        ? "_DISPATCH_LOG"
-        : `_${cleanFilter.toUpperCase()}S`;
-    dispatchLogBtn.innerHTML = `${label} &#9660;`;
-  }
-
-  if (filterLabel) {
-    if (activePillar !== "all") {
-      filterLabel.textContent = `[PILLAR: ${activePillar.toUpperCase().replace(/[-_]/g, " ")}]`;
-    } else {
-      filterLabel.textContent = `[MODE: ${cleanFilter.toUpperCase()}_DISPATCHES]`;
-    }
-  }
-}
-
-/**
- * Filter Cards by Format
- */
-function applyCategoryFilter(filter, updateHistory = true) {
-  const clean = (filter || "all").toLowerCase().trim().replace(/s$/, "");
-  activeFilter = clean === "all" ? "all" : clean;
-  activePillar = "all"; // Reset pillar when format is explicitly picked
-  syncFilterUIState();
-  if (updateHistory) updateBrowserUrl(false);
-  renderCardMatrix(true);
-}
-
-/**
- * Filter Cards by Inquiry Pillar
- */
-function applyPillarFilter(pillar, updateHistory = true) {
-  activePillar = pillar || "all";
-  activeFilter = "all";
-  syncFilterUIState();
-  if (updateHistory) updateBrowserUrl(false);
-  renderCardMatrix(true);
-}
-
-function updateSortSelection(sortKey, sortLabel, updateHistory = true) {
-  activeSort = sortKey === "newest" ? "recent" : sortKey;
-  syncFilterUIState();
-  if (updateHistory) updateBrowserUrl(false);
-  renderCardMatrix(true);
-}
-
-function positionDropdown(panel, btn) {
-  if (!panel) return;
-  if (
-    panel.id === "top-search-dropdown" &&
-    (window.innerWidth <= 590 || !btn || btn.offsetParent === null)
-  ) {
-    panel.style.left = "50%";
-    panel.style.right = "auto";
-    panel.style.transform = "translateX(-50%)";
-    panel.style.top = "54px";
-    return;
-  }
-  if (!btn || btn.offsetParent === null) return;
-  panel.style.transform = "none";
-  const rect = btn.getBoundingClientRect();
-  if (btn.id === "dispatch-log-btn") {
-    panel.style.left = `${Math.max(8, rect.left)}px`;
-    panel.style.right = "auto";
-  } else {
-    const rightOffset = Math.max(8, window.innerWidth - rect.right);
-    panel.style.left = "auto";
-    panel.style.right = `${rightOffset}px`;
-    panel.style.top = `${rect.bottom + 4}px`;
-  }
-}
-
-function toggleDispatchLogDropdown() {
-  closeAllTopDropdowns("dispatch-log-dropdown");
-  const panel = document.getElementById("dispatch-log-dropdown");
-  const btn = document.getElementById("dispatch-log-btn");
-  if (!panel) return;
-  const isHidden = panel.style.display === "none" || !panel.style.display;
-  panel.style.display = isHidden ? "flex" : "none";
-  if (btn) btn.classList.toggle("active", isHidden);
-  if (isHidden) positionDropdown(panel, btn);
-}
-
-function toggleTopSearchDropdown() {
-  closeAllTopDropdowns("top-search-dropdown");
-  const panel = document.getElementById("top-search-dropdown");
-  const btn = document.getElementById("top-navbar-search-btn");
-  if (!panel) return;
-  const isHidden = panel.style.display === "none" || !panel.style.display;
-  panel.style.display = isHidden ? "block" : "none";
-  if (btn) btn.classList.toggle("active", isHidden);
-  if (isHidden) {
-    positionDropdown(panel, btn);
-    const input = document.getElementById("top-search-input");
-    if (input) input.focus();
-  }
-}
-
-function toggleTopFilterDropdown() {
-  closeAllTopDropdowns("top-filter-dropdown");
-  const panel = document.getElementById("top-filter-dropdown");
-  const btn = document.getElementById("top-navbar-filter-btn");
-  if (!panel) return;
-  const isHidden = panel.style.display === "none" || !panel.style.display;
-  panel.style.display = isHidden ? "flex" : "none";
-  if (btn) btn.classList.toggle("active", isHidden);
-  if (isHidden) positionDropdown(panel, btn);
-}
-
-function toggleTopSortDropdown() {
-  closeAllTopDropdowns("top-sort-dropdown");
-  const panel = document.getElementById("top-sort-dropdown");
-  const btn = document.getElementById("top-navbar-sort-btn");
-  if (!panel) return;
-  const isHidden = panel.style.display === "none" || !panel.style.display;
-  panel.style.display = isHidden ? "flex" : "none";
-  if (btn) btn.classList.toggle("active", isHidden);
-  if (isHidden) positionDropdown(panel, btn);
-}
-
-function closeAllTopDropdowns(exceptId = null) {
-  const dropdowns = [
-    "dispatch-log-dropdown",
-    "top-search-dropdown",
-    "top-filter-dropdown",
-    "top-sort-dropdown",
-    "top-nav-hamburger-dropdown",
-  ];
-  const btns = [
-    "dispatch-log-btn",
-    "top-navbar-search-btn",
-    "top-navbar-filter-btn",
-    "top-navbar-sort-btn",
-    "top-nav-hamburger-btn",
-  ];
-
-  dropdowns.forEach((id, idx) => {
-    if (id !== exceptId) {
-      const panel = document.getElementById(id);
-      const btn = document.getElementById(btns[idx]);
-      if (panel) panel.style.display = "none";
-      if (btn) {
-        btn.classList.remove("active");
-        btn.setAttribute("aria-expanded", "false");
-      }
-    }
-  });
-}
-
-function handleTopInlineSearch(val) {
-  searchQuery = (val || "").trim();
-
-  // Sync inputs
-  const inlineInput = document.getElementById("top-inline-search-input");
-  const modalInput = document.getElementById("top-search-input");
-  const searchInput = document.getElementById("matrix-search-input");
-  const clearBtn = document.getElementById("clear-search-btn");
-
-  if (inlineInput && inlineInput.value !== val) inlineInput.value = val;
-  if (modalInput && modalInput.value !== val) modalInput.value = val;
-  if (searchInput && searchInput.value !== val) searchInput.value = val;
-  if (clearBtn) clearBtn.style.display = searchQuery ? "inline-block" : "none";
-
-  updateBrowserUrl(true);
-  matrixVisibleCount = MATRIX_BATCH_SIZE;
-  renderCardMatrix(true);
-}
-
-function applyTopFilter(formatKey) {
-  applyCategoryFilter(formatKey, true);
-  closeAllTopDropdowns();
-}
-
-function applyTopSort(sortOrder) {
-  updateSortSelection(sortOrder, sortOrder.toUpperCase(), true);
-  closeAllTopDropdowns();
-}
-
-// Global Exposure for Web Components and Inline Triggers
-if (typeof window !== "undefined") {
-  window.applyCategoryFilter = applyCategoryFilter;
-  window.applyPillarFilter = applyPillarFilter;
-  window.resetMatrixFilters = resetMatrixFilters;
-  window.resetPage = resetPage;
-  window.toggleDispatchLogDropdown = toggleDispatchLogDropdown;
-  window.toggleTopSearchDropdown = toggleTopSearchDropdown;
-  window.toggleTopFilterDropdown = toggleTopFilterDropdown;
-  window.toggleTopSortDropdown = toggleTopSortDropdown;
-  window.closeAllTopDropdowns = closeAllTopDropdowns;
-}
-
-// Close top dropdowns on click outside
-document.addEventListener("click", (e) => {
-  const isTopNav =
-    e.target.closest(".sidebar-rail") ||
-    e.target.closest(".top-dropdown-panel");
-  if (!isTopNav) {
-    closeAllTopDropdowns();
-  }
-});
-
-/**
- * Helper to escape HTML characters
- */
-function escapeHtml(str) {
-  return (str || "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
-
-/**
- * Global Newsletter Modal Dialog Handlers
- */
-function renderSubscribeForm(modal) {
-  if (!modal) modal = document.getElementById("subscribe-modal");
-  if (!modal) return;
-
-  modal.innerHTML = `
-    <div class="modal-box">
-      <div class="modal-header-tag">[ DISPATCH_SUBSCRIPTION // FREQUENCY: FORTNIGHTLY ]</div>
-      <h2 id="modal-heading" class="modal-title">Subscribe to Untitled.jpg</h2>
-      <p class="modal-description">Deep-dive essays and technical dispatches on AI perception, cognitive psychophysics, high-dimensional latent space, and media archaeology.</p>
-      
-      <form class="modal-form" id="subscribe-form" method="dialog">
-        <div class="modal-input-group">
-          <label for="subscriber-name" class="modal-input-label">IDENTITY (NAME):</label>
-          <input type="text" id="subscriber-name" name="name" class="modal-input" placeholder="Your Name / Alias" autocomplete="name">
-        </div>
-        <div class="modal-input-group">
-          <label for="subscriber-email" class="modal-input-label">TRANSMISSION_ENDPOINT (EMAIL):</label>
-          <input type="email" id="subscriber-email" name="email" class="modal-input" placeholder="reader@domain.xyz" required autocomplete="email" spellcheck="false">
-        </div>
-        <div class="modal-actions">
-          <button type="button" class="btn-modal-cancel">CANCEL</button>
-          <button type="submit" class="btn-modal-submit">TRANSMIT SUBSCRIPTION</button>
-        </div>
-      </form>
-    </div>
-  `;
-
-  const form = modal.querySelector("form");
-  if (form) {
-    form.addEventListener("submit", handleSubscribeSubmit);
-  }
-
-  const cancelBtn = modal.querySelector(".btn-modal-cancel");
-  if (cancelBtn) {
-    cancelBtn.addEventListener("click", closeSubscribeModal);
-  }
-}
-
-function renderSubscribeConfirmation(email, name) {
-  const modal = document.getElementById("subscribe-modal");
-  if (!modal) return;
-
-  const safeEmail = escapeHtml(email || "");
-  const safeName = escapeHtml(name || "");
-
-  modal.innerHTML = `
-    <div class="modal-box modal-success-anim" role="status" aria-live="polite">
-      <div class="modal-header-tag">[ TRANSMISSION_RECEIVED // STATUS: CONFIRMED ]</div>
-      <h2 id="modal-heading" class="modal-title">Subscription Confirmed</h2>
-      <p class="modal-description" style="margin-bottom: 1.2rem;">
-        Thank you for subscribing to <strong>Untitled.jpg</strong> dispatches. Technical essays on AI perception, cognitive psychophysics, and latent space geometry will be transmitted to your endpoint.
-      </p>
-      
-      <div class="modal-confirmation-card">
-        <div class="modal-confirmation-tag">[ REGISTERED_ENDPOINT ]</div>
-        <div class="modal-confirmation-value">${safeEmail}${safeName ? ` <span style="color:var(--text-muted);font-size:var(--text-sm);margin-left:0.4rem;">(${safeName})</span>` : ""}</div>
-      </div>
-
-      <div class="modal-actions">
-        <button type="button" class="btn-modal-submit" onclick="closeSubscribeModal()" style="min-width: 120px;">CLOSE</button>
-      </div>
-    </div>
-  `;
-}
-
-function ensureSubscribeModal() {
-  let modal = document.getElementById("subscribe-modal");
-  if (!modal) {
-    modal = document.createElement("dialog");
-    modal.id = "subscribe-modal";
-    modal.className = "modal-dialog";
-    modal.setAttribute("data-component", "subscribe-modal");
-    modal.setAttribute("aria-labelledby", "modal-heading");
-    document.body.appendChild(modal);
-  }
-
-  if (!modal.dataset.backdropBound) {
-    modal.dataset.backdropBound = "true";
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        closeSubscribeModal();
+      if (cleanFilter !== "all" && lFilter === cleanFilter) {
+        l.classList.add("active");
+      } else {
+        l.classList.remove("active");
       }
     });
-  }
 
-  if (
-    !modal.querySelector("#subscriber-name") &&
-    !modal.querySelector(".modal-confirmation-card")
-  ) {
-    renderSubscribeForm(modal);
-  }
-
-  return modal;
-}
-
-function openSubscribeModal() {
-  const subscribeBtn =
-    document.getElementById("sidebar-subscribe-btn") ||
-    document.querySelector('a[aria-label="Subscribe"]');
-  if (subscribeBtn) {
-    subscribeBtn.classList.remove("subscribe-ring-vibrate");
-    subscribeBtn.classList.add("subscribe-coral-active");
-  }
-  const modal = ensureSubscribeModal();
-  if (modal) {
-    // Reset to form view if previously left on confirmation or empty
-    if (
-      !modal.querySelector("#subscriber-name") ||
-      modal.querySelector(".modal-confirmation-card")
-    ) {
-      renderSubscribeForm(modal);
-    }
-    if (typeof modal.showModal === "function") {
-      modal.showModal();
-    }
-  }
-}
-
-let isSubscribeAnimScheduled = false;
-
-function initSubscribeAnimation() {
-  if (isSubscribeAnimScheduled) return;
-  isSubscribeAnimScheduled = true;
-
-  const DELAY_MS = 6000;
-  const ANIMATION_DURATION_MS = 4500;
-
-  setTimeout(() => {
-    const subscribeTargets = document.querySelectorAll(
-      '#sidebar-subscribe-btn, a[aria-label="Subscribe"], a[title*="Subscribe"]',
-    );
-    if (!subscribeTargets || subscribeTargets.length === 0) return;
-
-    subscribeTargets.forEach((el) => {
-      el.classList.add("subscribe-ring-vibrate");
-      const svg = el.querySelector("svg");
-      if (svg) svg.classList.add("subscribe-ring-vibrate");
-    });
-
-    const onAnimationDone = () => {
-      subscribeTargets.forEach((el) => {
-        el.classList.remove("subscribe-ring-vibrate");
-        el.classList.add("subscribe-coral-active");
-        const svg = el.querySelector("svg");
-        if (svg) {
-          svg.classList.remove("subscribe-ring-vibrate");
-          svg.classList.add("subscribe-coral-active");
-        }
-      });
-    };
-
-    setTimeout(onAnimationDone, ANIMATION_DURATION_MS + 100);
-  }, DELAY_MS);
-}
-
-function closeSubscribeModal() {
-  const modal = document.getElementById("subscribe-modal");
-  if (modal && typeof modal.close === "function") {
-    modal.close();
-  }
-}
-
-// Public Google Form response endpoint
-let GOOGLE_FORM_ACTION_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLScWoT07kZjH1m5Mu1zrK4l_eFpzOytLler0cwd0j4yQTXYDJQ/formResponse";
-const GOOGLE_FORM_EMAIL_ENTRY_ID = "entry.1020667952";
-const GOOGLE_FORM_NAME_ENTRY_ID = "entry.1290617359";
-
-async function handleSubscribeSubmit(event) {
-  event.preventDefault();
-  const nameInput = document.getElementById("subscriber-name");
-  const emailInput = document.getElementById("subscriber-email");
-  const submitBtn = event.target
-    ? event.target.querySelector('button[type="submit"]')
-    : null;
-
-  const name = nameInput ? nameInput.value.trim() : "";
-  const email = emailInput ? emailInput.value.trim() : "";
-
-  if (!email) return;
-
-  const originalText = submitBtn
-    ? submitBtn.textContent
-    : "TRANSMIT SUBSCRIPTION";
-  if (submitBtn) {
-    submitBtn.textContent = "TRANSMITTING...";
-    submitBtn.disabled = true;
-  }
-
-  // Use URLSearchParams for application/x-www-form-urlencoded format required by Google Forms
-  const bodyParams = new URLSearchParams();
-  bodyParams.append(GOOGLE_FORM_EMAIL_ENTRY_ID, email);
-  if (GOOGLE_FORM_NAME_ENTRY_ID && name) {
-    bodyParams.append(GOOGLE_FORM_NAME_ENTRY_ID, name);
-  }
-
-  try {
-    await fetch(GOOGLE_FORM_ACTION_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: bodyParams,
-    });
-  } catch (err) {
-    console.warn("[Subscription Notice]", err);
-  } finally {
-    // Switch modal into confirmation view seamlessly without system alert
-    renderSubscribeConfirmation(email, name);
-  }
-}
-
-/**
- * Dispatch Sharing Handlers
- */
-function copyPostUrl(postId) {
-  const url = getCanonicalPostUrl(postId);
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard
-      .writeText(url)
-      .then(() => {
-        alert(`[COPIED] Dispatch URL copied to clipboard:\n${url}`);
-      })
-      .catch(() => {
-        prompt("Copy dispatch URL:", url);
-      });
-  } else {
-    prompt("Copy dispatch URL:", url);
-  }
-}
-
-function copyEmbedCard(postId) {
-  const post = postId
-    ? POSTS_DATABASE[postId]
-    : activePostId
-      ? POSTS_DATABASE[activePostId]
-      : Object.values(POSTS_DATABASE)[0];
-  if (!post) return;
-  const currentUrl = getCanonicalPostUrl(post);
-  const embedCode = `<div class="untitled-dispatch-embed" style="border:1px solid #333;background:#161616;color:#f5f5f5;padding:1.25rem;border-radius:2px;font-family:sans-serif;max-width:560px;">\n  <div style="font-family:monospace;font-size:0.75rem;color:#E84A5F;letter-spacing:0.08em;margin-bottom:0.4rem;">[ UNTITLED.JPG // ${post.format} ]</div>\n  <h3 style="margin:0 0 0.5rem 0;font-size:1.15rem;line-height:1.3;"><a href="${currentUrl}" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:none;">${post.title}</a></h3>\n  <p style="color:#cccccc;font-size:0.88rem;line-height:1.45;margin:0 0 0.75rem 0;">${post.subtitle}</p>\n  <div style="font-family:monospace;font-size:0.7rem;color:#888888;">BY ${post.author} (${post.posted_by}) • ${post.date} • ${post.read_time}</div>\n</div>`;
-
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard
-      .writeText(embedCode)
-      .then(() => {
-        alert(
-          `[COPIED] HTML Embed Card snippet copied to clipboard! You can paste this card into any website or blog.`,
-        );
-      })
-      .catch(() => {
-        prompt("Copy HTML Embed code:", embedCode);
-      });
-  } else {
-    prompt("Copy HTML Embed code:", embedCode);
-  }
-}
-
-function shareInstagram(postId) {
-  const post = postId
-    ? POSTS_DATABASE[postId]
-    : activePostId
-      ? POSTS_DATABASE[activePostId]
-      : Object.values(POSTS_DATABASE)[0];
-  const url = getCanonicalPostUrl(post);
-  const storyText = `${post ? post.title : "Untitled.jpg Dispatch"}\n\nRead full dispatch: ${url}`;
-
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(storyText).then(() => {
-      alert(
-        `[INSTAGRAM / STORIES]\nDispatch link and title copied to clipboard for your story or bio link:\n\n${storyText}`,
+    const rail = document.querySelector("sidebar-rail");
+    if (rail) {
+      rail.setAttribute(
+        "active-filter",
+        cleanFilter !== "all" ? cleanFilter : "",
       );
-    });
-  } else {
-    prompt("Copy dispatch text for Instagram story link:", storyText);
-  }
-}
-
-// Global Browser Hash Listener for Back/Forward Navigation & Deep-Linking
-if (typeof window !== "undefined") {
-  window.addEventListener("hashchange", () => {
-    const hash = window.location.hash.replace("#", "");
-    if (hash && POSTS_DATABASE[hash]) {
-      selectAndRenderPost(hash, false);
-    } else if (!hash) {
-      closeReaderPane();
     }
-  });
 
-  // ESC Key to Close Reader Pane
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      const splitLayout = document.querySelector(".split-layout");
-      if (splitLayout && splitLayout.classList.contains("reader-open")) {
-        closeReaderPane();
+    // Highlight dropdown options
+    document
+      .querySelectorAll(
+        "#top-filter-dropdown .dropdown-option, #dispatch-log-dropdown .dropdown-option, #filter-dropdown .dropdown-opt",
+      )
+      .forEach((opt) => {
+        const f = (opt.getAttribute("data-filter") || "all")
+          .toLowerCase()
+          .replace(/s$/, "");
+        opt.classList.toggle("active", f === cleanFilter);
+      });
+
+    // Highlight sort dropdown options
+    document
+      .querySelectorAll(
+        "#top-sort-dropdown .dropdown-option, #sort-dropdown .dropdown-opt",
+      )
+      .forEach((opt) => {
+        const s = opt.getAttribute("data-sort") || "recent";
+        const isActiveSort =
+          s === activeSort || (s === "newest" && activeSort === "recent");
+        opt.classList.toggle("active", isActiveSort);
+      });
+
+    if (filterValLabel) {
+      const labels = {
+        all: "ALL POSTS",
+        essay: "ESSAYS",
+        note: "NOTES",
+        bookmark: "BOOKMARKS",
+        resource: "RESOURCES",
+      };
+      if (activePillar !== "all") {
+        filterValLabel.textContent = `PILLAR: ${activePillar.toUpperCase().replace(/[-_]/g, " ")}`;
+      } else {
+        filterValLabel.textContent =
+          labels[cleanFilter] ||
+          (cleanFilter !== "all" ? cleanFilter.toUpperCase() : "ALL POSTS");
       }
     }
-  });
-}
+
+    if (sortValLabel) {
+      const sortLabels = {
+        recent: "MOST RECENT",
+        oldest: "OLDEST FIRST",
+        title: "ALPHABETICAL",
+        readtime: "READING TIME",
+      };
+      sortValLabel.textContent = sortLabels[activeSort] || "MOST RECENT";
+    }
+
+    if (dispatchLogBtn) {
+      const label =
+        cleanFilter === "all"
+          ? "_DISPATCH_LOG"
+          : `_${cleanFilter.toUpperCase()}S`;
+      dispatchLogBtn.innerHTML = `${label} &#9660;`;
+    }
+
+    if (filterLabel) {
+      if (activePillar !== "all") {
+        filterLabel.textContent = `[PILLAR: ${activePillar.toUpperCase().replace(/[-_]/g, " ")}]`;
+      } else {
+        filterLabel.textContent = `[MODE: ${cleanFilter.toUpperCase()}_DISPATCHES]`;
+      }
+    }
+  }
+
+  /**
+   * Full Page Reset (Brand Logo & Home Icon)
+   */
+  function resetPage() {
+    if (window.resetMatrixFilters) {
+      window.resetMatrixFilters();
+    } else if (window.CardMatrix && window.CardMatrix.resetFilters) {
+      window.CardMatrix.resetFilters();
+    }
+
+    const matrixCol =
+      document.querySelector(".grid-column") ||
+      document.querySelector("[data-component='dispatch-matrix']");
+    if (matrixCol) matrixCol.scrollTop = 0;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    const posts = getFilteredAndSortedPosts();
+    if (posts.length > 0) {
+      const firstPostId = posts[0].slug || posts[0].id || posts[0].sys_id;
+      if (window.selectAndRenderPost) {
+        window.selectAndRenderPost(firstPostId);
+      } else if (window.ReaderPane && window.ReaderPane.selectAndRenderPost) {
+        window.ReaderPane.selectAndRenderPost(firstPostId);
+      }
+    }
+  }
+
+  /**
+   * Ensure Modular Components are loaded
+   */
+  function ensureComponentScripts(callback) {
+    const components = [
+      { name: "SubscribeModal", src: "js/components/subscribe-modal.js" },
+      { name: "CardMatrix", src: "js/components/card-matrix.js" },
+      { name: "ReaderPane", src: "js/components/reader-pane.js" },
+      { name: "NavigationControls", src: "js/components/navigation-controls.js" },
+    ];
+
+    const missing = components.filter(
+      (c) => typeof window[c.name] === "undefined",
+    );
+    if (missing.length === 0) {
+      if (callback) callback();
+      return;
+    }
+
+    let loaded = 0;
+    missing.forEach((c) => {
+      const s = document.createElement("script");
+      s.src = c.src;
+      s.onload = () => {
+        loaded++;
+        if (loaded === missing.length && callback) callback();
+      };
+      s.onerror = () => {
+        console.warn(`[UNTITLED.JPG] Component script note: ${c.src}`);
+        loaded++;
+        if (loaded === missing.length && callback) callback();
+      };
+      document.head.appendChild(s);
+    });
+  }
+
+  /**
+   * Initialize Client Application & Wire Components
+   */
+  function initApp() {
+    ensureComponentScripts(() => {
+      if (typeof window !== "undefined" && window.DYNAMIC_POSTS) {
+        ingestPostList(window.DYNAMIC_POSTS);
+      }
+
+      // Initialize Navigation & Controls Listeners
+      if (window.NavigationControls && window.NavigationControls.init) {
+        window.NavigationControls.init();
+      }
+
+      // Initialize Subscribe Hint Animation
+      if (window.SubscribeModal && window.SubscribeModal.initAnimation) {
+        window.SubscribeModal.initAnimation();
+      }
+
+      // Reset page on brand logo or home icon click
+      const brandLogo = document.querySelector(".brand-logo-v");
+      if (brandLogo) {
+        brandLogo.addEventListener("click", (e) => {
+          e.preventDefault();
+          resetPage();
+        });
+      }
+
+      const homeBtn = document.getElementById("sidebar-home-btn");
+      if (homeBtn) {
+        homeBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          resetPage();
+        });
+      }
+
+      // Static Format Filter Fallback Links
+      const staticNavLinks = document.querySelectorAll(
+        "nav:not(sidebar-rail nav) .nav-link-item",
+      );
+      staticNavLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const filter = (link.getAttribute("data-filter") || "all")
+            .toLowerCase()
+            .replace(/s$/, "");
+          if (window.applyCategoryFilter) {
+            window.applyCategoryFilter(filter, true);
+          }
+        });
+      });
+
+      // Attach Infinite Scroll Listeners
+      const matrixCol =
+        document.querySelector(".grid-column") ||
+        document.querySelector("[data-component='dispatch-matrix']");
+      if (matrixCol && window.handleMatrixScroll) {
+        matrixCol.addEventListener("scroll", window.handleMatrixScroll, {
+          passive: true,
+        });
+      }
+      if (window.handleMatrixScroll) {
+        window.addEventListener("scroll", window.handleMatrixScroll, {
+          passive: true,
+        });
+      }
+
+      // Load dynamic posts & render UI
+      loadDynamicPosts();
+    });
+  }
+
+  // DOMContentLoaded Listener
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initApp);
+  } else {
+    initApp();
+  }
+
+  // Global Browser Hash Listener for Deep-Linking
+  if (typeof window !== "undefined") {
+    window.addEventListener("hashchange", () => {
+      const hash = window.location.hash.replace("#", "");
+      if (hash && POSTS_DATABASE[hash]) {
+        if (window.selectAndRenderPost) {
+          window.selectAndRenderPost(hash, false);
+        } else if (window.ReaderPane && window.ReaderPane.selectAndRenderPost) {
+          window.ReaderPane.selectAndRenderPost(hash, false);
+        }
+      } else if (!hash) {
+        if (window.closeReaderPane) window.closeReaderPane();
+        else if (window.ReaderPane && window.ReaderPane.closeReaderPane) {
+          window.ReaderPane.closeReaderPane();
+        }
+      }
+    });
+  }
+
+  // Unified State & Component Interface
+  const UntitledApp = {
+    get postsDatabase() {
+      return POSTS_DATABASE;
+    },
+    get activePostId() {
+      return activePostId;
+    },
+    set activePostId(val) {
+      activePostId = val;
+    },
+    get activeFilter() {
+      return activeFilter;
+    },
+    set activeFilter(val) {
+      activeFilter = val;
+    },
+    get activePillar() {
+      return activePillar;
+    },
+    set activePillar(val) {
+      activePillar = val;
+    },
+    get activeSort() {
+      return activeSort;
+    },
+    set activeSort(val) {
+      activeSort = val;
+    },
+    get searchQuery() {
+      return searchQuery;
+    },
+    set searchQuery(val) {
+      searchQuery = val;
+    },
+    get matrixVisibleCount() {
+      return matrixVisibleCount;
+    },
+    set matrixVisibleCount(val) {
+      matrixVisibleCount = val;
+    },
+    get MATRIX_BATCH_SIZE() {
+      return MATRIX_BATCH_SIZE;
+    },
+
+    ingestPostList,
+    getFilteredAndSortedPosts,
+    matchesPillar,
+    loadDynamicPosts,
+    parseUrlParamsAndApply,
+    updateBrowserUrl,
+    syncFilterUIState,
+    resetPage,
+  };
+
+  if (typeof window !== "undefined") {
+    window.UntitledApp = UntitledApp;
+    window.POSTS_DATABASE = POSTS_DATABASE;
+    window.getFilteredAndSortedPosts = getFilteredAndSortedPosts;
+    window.matchesPillar = matchesPillar;
+    window.loadDynamicPosts = loadDynamicPosts;
+    window.updateBrowserUrl = updateBrowserUrl;
+    window.parseUrlParamsAndApply = parseUrlParamsAndApply;
+    window.syncFilterUIState = syncFilterUIState;
+    window.resetPage = resetPage;
+  }
+})();

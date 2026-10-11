@@ -1,97 +1,222 @@
-<!DOCTYPE html>
+"""
+Standalone HTML Post Page & Schema.org JSON-LD Generation Subsystem for UNTITLED.JPG
+"""
+
+import re
+import json
+from .config import CANONICAL_ENTITIES, POSTS_HTML_DIR
+from .images import get_image_dimensions
+from .parser import slugify
+
+def resolve_post_entities(post):
+    """
+    Extracts structured 'about' and 'mentions' entities for Schema.org JSON-LD
+    to enable precise AI answer engine (Perplexity, ChatGPT, Claude) entity resolution.
+    Supports explicit frontmatter override or automatic extraction from tags/title/slug.
+    """
+    custom_entities = post.get("entities")
+    if isinstance(custom_entities, dict):
+        about = custom_entities.get("about", [])
+        mentions = custom_entities.get("mentions", [])
+        return about, mentions
+
+    raw_tags = post.get("tags") or []
+    slug = (post.get("slug") or "").lower()
+    title = (post.get("title") or "").lower()
+
+    tag_keys = set()
+    for t in raw_tags:
+        k = str(t).strip().lower().lstrip("#")
+        tag_keys.add(k)
+        tag_keys.add(slugify(k))
+
+    matched_entities = []
+    seen_urls = set()
+
+    for k, entity in CANONICAL_ENTITIES.items():
+        if entity["sameAs"] in seen_urls:
+            continue
+        if k in tag_keys or k in slug or f" {k} " in f" {title} " or f"({k})" in title or f"[{k}]" in title:
+            matched_entities.append(entity)
+            seen_urls.add(entity["sameAs"])
+
+    if not matched_entities:
+        pillar = post.get("pillar")
+        about = [{"@type": "Thing", "name": pillar or "Artificial Intelligence"}]
+        mentions = []
+        return about, mentions
+
+    about = matched_entities[:2]
+    mentions = matched_entities[2:8]
+    return about, mentions
+
+def generate_post_html_files(posts):
+    """
+    Generates standalone post HTML pages under /posts/[slug].html.
+    Each page contains exact Open Graph & Twitter Card metadata for LinkedIn, X, FB,
+    and boots the full split-layout application with the current post active.
+    """
+    POSTS_HTML_DIR.mkdir(parents=True, exist_ok=True)
+    SITE_ORIGIN = "https://mynameisjpg.github.io/mynameisjpg"
+    DEFAULT_OG_IMAGE = f"{SITE_ORIGIN}/assets/images/favicon.svg"
+
+    for post in posts:
+        raw_slug = post.get("slug") or post.get("id") or post.get("sys_id")
+        if not raw_slug:
+            continue
+
+        # Strip date prefix (e.g., "2026-09-24-lecun-..." -> "lecun-...")
+        clean_slug = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', raw_slug)
+
+        title = (post.get("title") or "Untitled Dispatch").replace('"', '&quot;')
+        
+        # Ensure description is at least 100 characters (LinkedIn requirement)
+        # and capped under 300 characters for optimal card rendering.
+        excerpt = (post.get("excerpt") or "").strip()
+        subtitle = (post.get("subtitle") or "").strip()
+        
+        candidates = []
+        if excerpt and len(excerpt) >= 100:
+            candidates.append(excerpt)
+        if subtitle and len(subtitle) >= 100:
+            candidates.append(subtitle)
+        if subtitle and excerpt and subtitle != excerpt:
+            combined = f"{subtitle} {excerpt}"
+            if len(combined) >= 100:
+                candidates.append(combined)
+        if excerpt:
+            candidates.append(excerpt)
+        if subtitle:
+            candidates.append(subtitle)
+        candidates.append("Untitled.jpg — Dispatches on AI perception, cognitive psychophysics, high-dimensional latent space, and media archaeology.")
+        
+        description = candidates[0]
+        for c in candidates:
+            if len(c) >= 100:
+                description = c
+                break
+        
+        if len(description) > 300:
+            description = description[:297].rsplit(' ', 1)[0] + '...'
+        description = description.replace('"', '&quot;').replace('\n', ' ').strip()
+
+        post_url = f"{SITE_ORIGIN}/posts/{clean_slug}.html"
+        
+        # ISO 8601 publish date (YYYY-MM-DD)
+        raw_post_date = str(post.get("date", ""))
+        iso_date_match = re.search(r'(\d{4})[-.](\d{2})[-.](\d{2})', raw_post_date)
+        iso_published_time = f"{iso_date_match.group(1)}-{iso_date_match.group(2)}-{iso_date_match.group(3)}" if iso_date_match else raw_post_date
+
+        # Resolve absolute image URL and real dimensions
+        raw_image = post.get("image") or ""
+        if raw_image.startswith("http://") or raw_image.startswith("https://"):
+            og_image = raw_image
+        elif raw_image:
+            clean_img = raw_image.lstrip("./").lstrip("/")
+            og_image = f"{SITE_ORIGIN}/{clean_img}"
+        else:
+            og_image = DEFAULT_OG_IMAGE
+
+        img_w, img_h = get_image_dimensions(raw_image)
+
+        raw_alt = post.get("image_alt") or post.get("subtitle") or title
+        image_alt = raw_alt.replace('"', '&quot;').replace('\n', ' ').strip()
+
+        author_schema = {
+            "@type": "Person",
+            "name": "Juan Pablo Giusepponi",
+            "jobTitle": "Sr. Designer, Head of Communication & Frontier AI Specialist",
+            "url": "https://mynameisjpg.github.io/mynameisjpg/about.html",
+            "image": "https://mynameisjpg.github.io/mynameisjpg/assets/images/self-jpg1.jpg",
+            "sameAs": [
+                "https://github.com/mynameisjpg",
+                "https://mynameisjpg.github.io/mynameisjpg/"
+            ],
+            "knowsAbout": [
+                "Artificial Intelligence",
+                "Visual Semiotics",
+                "Cognitive Psychophysics",
+                "Latent Space Topologies",
+                "Machine Learning",
+                "Joint Embedding Predictive Architecture",
+                "Design Systems",
+                "Epistemology"
+            ]
+        }
+
+        schema_dict = {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": title,
+            "description": description,
+            "datePublished": iso_published_time,
+            "dateModified": iso_published_time,
+            "inLanguage": "en-US",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": post_url
+            },
+            "author": author_schema,
+            "publisher": {
+                "@type": "Organization",
+                "name": "Untitled.jpg",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://mynameisjpg.github.io/mynameisjpg/assets/images/favicon.svg"
+                }
+            },
+            "image": og_image
+        }
+
+        if post.get("pillar"):
+            schema_dict["articleSection"] = post.get("pillar")
+
+        raw_tags = post.get("tags") or []
+        clean_tags = [str(t).strip().lstrip("#") for t in raw_tags if str(t).strip()]
+        if clean_tags:
+            schema_dict["keywords"] = clean_tags
+
+        about_ents, mention_ents = resolve_post_entities(post)
+        if about_ents:
+            schema_dict["about"] = about_ents
+        if mention_ents:
+            schema_dict["mentions"] = mention_ents
+
+        schema_json_ld = json.dumps(schema_dict, indent=2, ensure_ascii=False)
+
+        post_html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Real AI Failure Story: Deleted a Production Database in 9 Seconds! — Untitled.jpg</title>
-  <meta name="description" content="If you're building with AI agents, automating infrastructure, or just curious how &quot;helpful&quot; AI can go catastrophically wrong — this is a case study you must see">
-  <link rel="canonical" href="https://mynameisjpg.github.io/mynameisjpg/posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html">
+  <title>{title} — Untitled.jpg</title>
+  <meta name="description" content="{description}">
+  <link rel="canonical" href="{post_url}">
 
   <!-- Open Graph / LinkedIn / Facebook / WhatsApp -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Untitled.jpg">
-  <meta property="og:title" content="Real AI Failure Story: Deleted a Production Database in 9 Seconds!">
-  <meta property="og:description" content="If you're building with AI agents, automating infrastructure, or just curious how &quot;helpful&quot; AI can go catastrophically wrong — this is a case study you must see">
-  <meta property="og:url" content="https://mynameisjpg.github.io/mynameisjpg/posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html">
-  <meta name="image" property="og:image" content="https://mynameisjpg.github.io/mynameisjpg/assets/images/ai-fail-opus.jpg">
-  <meta property="og:image:secure_url" content="https://mynameisjpg.github.io/mynameisjpg/assets/images/ai-fail-opus.jpg">
-  <meta property="og:image:width" content="896">
-  <meta property="og:image:height" content="1200">
-  <meta property="og:image:alt" content="Glitch art in coral, black, and white. Server racks dissolve into circuitry and binary code above a fragmented humanoid head with glowing eyes emitting signal waves.">
-  <meta property="article:published_time" content="2026-10-10">
-  <meta property="article:author" content="Juan P. Giusepponi">
+  <meta property="og:title" content="{title}">
+  <meta property="og:description" content="{description}">
+  <meta property="og:url" content="{post_url}">
+  <meta name="image" property="og:image" content="{og_image}">
+  <meta property="og:image:secure_url" content="{og_image}">
+  <meta property="og:image:width" content="{img_w}">
+  <meta property="og:image:height" content="{img_h}">
+  <meta property="og:image:alt" content="{image_alt}">
+  <meta property="article:published_time" content="{iso_published_time}">
+  <meta property="article:author" content="{post.get('author', 'Juan P. Giusepponi')}">
 
   <!-- Twitter / X Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Real AI Failure Story: Deleted a Production Database in 9 Seconds!">
-  <meta name="twitter:description" content="If you're building with AI agents, automating infrastructure, or just curious how &quot;helpful&quot; AI can go catastrophically wrong — this is a case study you must see">
-  <meta name="twitter:image" content="https://mynameisjpg.github.io/mynameisjpg/assets/images/ai-fail-opus.jpg">
-  <meta name="twitter:image:alt" content="Glitch art in coral, black, and white. Server racks dissolve into circuitry and binary code above a fragmented humanoid head with glowing eyes emitting signal waves.">
+  <meta name="twitter:title" content="{title}">
+  <meta name="twitter:description" content="{description}">
+  <meta name="twitter:image" content="{og_image}">
+  <meta name="twitter:image:alt" content="{image_alt}">
 
   <!-- Schema.org JSON-LD (BlogPosting / Article with GEO & EEAT Grounding) -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
-  "description": "If you're building with AI agents, automating infrastructure, or just curious how &quot;helpful&quot; AI can go catastrophically wrong — this is a case study you must see",
-  "datePublished": "2026-10-10",
-  "dateModified": "2026-10-10",
-  "inLanguage": "en-US",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://mynameisjpg.github.io/mynameisjpg/posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Juan Pablo Giusepponi",
-    "jobTitle": "Sr. Designer, Head of Communication & Frontier AI Specialist",
-    "url": "https://mynameisjpg.github.io/mynameisjpg/about.html",
-    "image": "https://mynameisjpg.github.io/mynameisjpg/assets/images/self-jpg1.jpg",
-    "sameAs": [
-      "https://github.com/mynameisjpg",
-      "https://mynameisjpg.github.io/mynameisjpg/"
-    ],
-    "knowsAbout": [
-      "Artificial Intelligence",
-      "Visual Semiotics",
-      "Cognitive Psychophysics",
-      "Latent Space Topologies",
-      "Machine Learning",
-      "Joint Embedding Predictive Architecture",
-      "Design Systems",
-      "Epistemology"
-    ]
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Untitled.jpg",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://mynameisjpg.github.io/mynameisjpg/assets/images/favicon.svg"
-    }
-  },
-  "image": "https://mynameisjpg.github.io/mynameisjpg/assets/images/ai-fail-opus.jpg",
-  "articleSection": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-  "keywords": [
-    "video",
-    "ai",
-    "ai-agents",
-    "fail",
-    "stories",
-    "ai-fails",
-    "risk",
-    "ai-safety",
-    "claude",
-    "opus"
-  ],
-  "about": [
-    {
-      "@type": "Thing",
-      "name": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
-    }
-  ]
-}
+{schema_json_ld}
   </script>
 
   <base href="../">
@@ -245,7 +370,7 @@
 
   <!-- Specify active post slug for deep-load -->
   <script>
-    window.INITIAL_POST_SLUG = "real-ai-failure-story-deleted-a-production-database-in-9-seconds";
+    window.INITIAL_POST_SLUG = "{clean_slug}";
   </script>
   <script src="pillars.js"></script>
   <script src="posts.js"></script>
@@ -256,3 +381,9 @@
   <script src="app.js"></script>
 </body>
 </html>
+"""
+        target_file = POSTS_HTML_DIR / f"{clean_slug}.html"
+        with open(target_file, "w", encoding="utf-8") as f:
+            f.write(post_html_content)
+
+    print(f"  [OK] Generated {len(posts)} post HTML files in {POSTS_HTML_DIR.name}/")

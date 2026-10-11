@@ -8,7 +8,7 @@ author: "Juan P. Giusepponi"
 status: "published"
 format: "note"
 topic:
-  pillar: "Visual Perception & Psychology of Seeing"
+  pillar: "Visual Perception & Psychophysics"
   subtopic: "Cognitive and Visual Biases"
 tags:
   - "observations"

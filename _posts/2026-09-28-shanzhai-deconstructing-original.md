@@ -13,7 +13,7 @@ format: "note"
 category: "reflection"
 
 topic:
-  pillar: "Philosophy of the Image, Tech & Visual Culture"
+  pillar: "Philosophy of the Image & Visual Culture"
   subtopic: "Epistemology of representation"
 
 tags:

@@ -240,7 +240,8 @@ function renderTagsDirectoryTable(searchVal = "") {
   }
 
   tbody.innerHTML = filtered.map(t => {
-    const typeBadgeClass = t.type === "pillar" ? "tag-type-pillar" : (t.type === "subtopic" ? "tag-type-subtopic" : "tag-type-tag");
+    const typeBadgeClass = t.type === "foundation" ? "tag-type-foundation" : (t.type === "pillar" ? "tag-type-pillar" : (t.type === "subtopic" ? "tag-type-subtopic" : "tag-type-tag"));
+    const typeLabel = (t.type || "tag").toUpperCase();
     const postsList = t.links || t.posts || [];
     const linksHtml = postsList.map(l => {
       const fmt = (l.format || "ESSAY").toUpperCase();

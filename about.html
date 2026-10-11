@@ -60,6 +60,9 @@
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="shortcut icon" type="image/svg+xml" href="assets/images/favicon.svg">
   
+  <!-- Canonical Taxonomy Registry (Content Pillars & Subtopics) -->
+  <script src="pillars.js"></script>
+
   <!-- Autonomous Web Component for Navigation Rail (Deferred) -->
   <script defer src="js/components/sidebar-rail.js"></script>
 </head>
@@ -544,6 +547,30 @@
           }
         });
       });
+      // Auto-hydrate Content Pillars from Canonical Registry (pillars.js)
+      if (window.DYNAMIC_PILLARS && window.DYNAMIC_PILLARS.length > 0) {
+        const grid = document.querySelector('.pillars-cards-grid');
+        const headerTitle = document.querySelector('.pillars-section-title');
+        if (headerTitle) {
+          const countWords = ["ZERO", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT"];
+          const countLabel = countWords[window.DYNAMIC_PILLARS.length] || window.DYNAMIC_PILLARS.length;
+          headerTitle.textContent = `SYS_TAXONOMY // THE ${countLabel} INQUIRY PILLARS`;
+        }
+        if (grid) {
+          grid.innerHTML = window.DYNAMIC_PILLARS.map(p => `
+            <a href="index.html?topic=${encodeURIComponent(p.slug)}" class="pillar-interactive-card" title="Explore ${p.short_title || p.title} dispatches">
+              <div class="pillar-card-content">
+                <h4 class="pillar-card-title"><span class="pillar-number">[ ${p.number} ]</span> ${p.title}</h4>
+                <p class="pillar-card-desc">${p.description}</p>
+              </div>
+              <div class="pillar-card-footer">
+                <span>EXPLORE DISPATCHES</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+            </a>
+          `).join('');
+        }
+      }
     });
   </script>
 

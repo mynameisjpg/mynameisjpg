@@ -30,9 +30,9 @@ topic:
   subtopic: "Synthetic Identity & Normative Machines"
 
 tags:
-  - "epistemology"
+  - ""
   - "philosophy-of-tech"
-  - "latent-space"
+  - ""
 
 # ------------------------------------------------------------------------------
 # DISPLAY & METRICS
@@ -91,16 +91,6 @@ CONCEPTUAL FLOW DIAGRAM:
 ---
 
 ## 03. High-Density Mathematical & Conceptual Formulations
-
-Mathematical formulations and definitions when applicable:
-
-$$\text{Similarity}(\mathbf{A}, \mathbf{B}) = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{A}\|_2 \|\mathbf{B}\|_2}$$
-
-| Dimension | Classical Framework | Computational Modernity |
-| :--- | :--- | :--- |
-| **Episteme** | Discrete Taxonomy | Continuous Latent Space |
-| **Logic** | Top-down Rules | Statistical Optimization |
-| **Boundary** | Binary Boundary | Metric Angle & Distance |
 
 ---
 

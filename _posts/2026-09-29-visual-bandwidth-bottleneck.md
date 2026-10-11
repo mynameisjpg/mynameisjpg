@@ -13,11 +13,10 @@ format: "note"
 category: "observations"
 
 topic:
-  pillar: "Visual Perception & Psychology of Seeing"
+  pillar: "Visual Perception & Psychophysics"
   subtopic: "Anatomy and psychophysics of vision"
 
 tags:
-  - "visual-perception"
   - "psychophysics"
   - "fovea"
   - "predictive-processing"

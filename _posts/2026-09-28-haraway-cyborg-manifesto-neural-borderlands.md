@@ -15,7 +15,7 @@ source: "Donna Haraway's 1985 Cyborg Manifesto"
 bookmark_url: "https://monoskop.org/images/4/4c/Haraway_Donna_1985_A_Manifesto_for_Cyborgs_Science_Technology_and_Socialist_Feminism_in_the_1980s.pdf"
 
 topic:
-  pillar: "Philosophy of the Image, Tech & Visual Culture"
+  pillar: "Philosophy of the Image & Visual Culture"
   subtopic: "Aesthetics as ideology and interface politics"
 
 tags:

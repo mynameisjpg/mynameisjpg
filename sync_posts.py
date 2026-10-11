@@ -7,489 +7,36 @@ Usage:
   python sync_posts.py --watch  # Watch _posts folder for changes and auto-recompile
 """
 
-import os
 import sys
 import re
 import json
 import time
 import shutil
-import struct
 from pathlib import Path
 
-# Fix Windows console encoding for terminal outputs
-if sys.platform == "win32":
-    try:
-        sys.stdout.reconfigure(encoding='utf-8')
-    except Exception:
-        pass
-
-# Optional Image Processing Library (Pillow)
-try:
-    from PIL import Image, ImageOps  # type: ignore # noqa: F401
-    HAS_PIL = True
-except (ImportError, ModuleNotFoundError):
-    Image = None  # type: ignore
-    ImageOps = None  # type: ignore
-    HAS_PIL = False
-
-# Path configurations
-BASE_DIR = Path(__file__).resolve().parent
-POSTS_DIR = BASE_DIR / "_posts"
-OUTPUT_JSON = BASE_DIR / "posts.json"
-OUTPUT_JS = BASE_DIR / "posts.js"
-OUTPUT_TAGS_JSON = BASE_DIR / "tags.json"
-OUTPUT_TAGS_JS = BASE_DIR / "tags.js"
-POSTS_HTML_DIR = BASE_DIR / "posts"
-ROOT_DIR = BASE_DIR.parent if (BASE_DIR.parent / "index.html").exists() else BASE_DIR
-
-def get_image_dimensions(image_rel_or_path):
-    """
-    Reads actual pixel dimensions (width, height) directly from PNG, JPEG, or WebP headers
-    without external dependencies. Falls back to (1200, 630) if missing or unreadable.
-    """
-    if not image_rel_or_path:
-        return 1200, 630
-    
-    clean_path = str(image_rel_or_path).lstrip("/").lstrip("./")
-    target_path = BASE_DIR / clean_path
-    if not target_path.exists():
-        target_path = ROOT_DIR / clean_path
-    if not target_path.exists():
-        return 1200, 630
-
-    try:
-        with open(target_path, "rb") as f:
-            data = f.read(65536) # Read first 64KB
-        size = len(data)
-        
-        # 1. PNG
-        if size >= 24 and data[:8] == b'\x89PNG\r\n\x1a\n' and data[12:16] == b'IHDR':
-            w, h = struct.unpack('>LL', data[16:24])
-            return int(w), int(h)
-            
-        # 2. JPEG
-        if size >= 2 and data[:2] == b'\xff\xd8':
-            idx = 2
-            while idx < size - 8:
-                if data[idx] != 0xff:
-                    idx += 1
-                    continue
-                marker = data[idx+1]
-                # SOF markers with dimensions
-                if marker in (0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7, 0xc9, 0xca, 0xcb, 0xcd, 0xce, 0xcf):
-                    h, w = struct.unpack('>HH', data[idx+5:idx+9])
-                    return int(w), int(h)
-                if idx + 4 > size:
-                    break
-                length = struct.unpack('>H', data[idx+2:idx+4])[0]
-                idx += 2 + length
-                
-        # 3. WebP
-        if size >= 30 and data[:4] == b'RIFF' and data[8:12] == b'WEBP':
-            if data[12:16] == b'VP8 ':
-                w, h = struct.unpack('<HH', data[26:30])
-                return int(w & 0x3fff), int(h & 0x3fff)
-            elif data[12:16] == b'VP8X':
-                w = struct.unpack('<I', data[24:27] + b'\x00')[0] + 1
-                h = struct.unpack('<I', data[27:30] + b'\x00')[0] + 1
-                return int(w), int(h)
-    except Exception:
-        pass
-        
-    return 1200, 630
-
-def generate_thumbnail(image_rel_or_path, max_width=640, quality=82):
-    """
-    Generates an optimized downscaled WebP thumbnail in assets/images/thumbnails/.
-    Preserves aspect ratio, resamples with LANCZOS, and converts color profiles safely.
-    Skips generation if thumbnail is already newer than source image.
-    Returns relative web path (e.g. 'assets/images/thumbnails/telebodies.webp').
-    """
-    if not image_rel_or_path:
-        return ""
-        
-    clean_path = str(image_rel_or_path).lstrip("/").lstrip("./")
-    target_path = BASE_DIR / clean_path
-    if not target_path.exists():
-        target_path = ROOT_DIR / clean_path
-    if not target_path.exists() or target_path.is_dir():
-        return clean_path
-
-    # Only process standard raster image extensions
-    valid_exts = {".jpg", ".jpeg", ".png", ".webp", ".avif"}
-    if target_path.suffix.lower() not in valid_exts:
-        return clean_path
-
-    thumb_dir = BASE_DIR / "assets" / "images" / "thumbnails"
-    thumb_dir.mkdir(parents=True, exist_ok=True)
-    
-    thumb_filename = f"{target_path.stem}.webp"
-    thumb_path = thumb_dir / thumb_filename
-    thumb_rel_path = f"assets/images/thumbnails/{thumb_filename}"
-
-    # Cache check: if thumb exists and is newer than source, skip regeneration
-    try:
-        if thumb_path.exists() and thumb_path.stat().st_mtime >= target_path.stat().st_mtime:
-            return thumb_rel_path
-    except Exception:
-        pass
-
-    if not HAS_PIL or Image is None or ImageOps is None:
-        return clean_path
-
-    try:
-        with Image.open(target_path) as img:  # type: ignore
-            img = ImageOps.exif_transpose(img)  # type: ignore
-            
-            orig_w, orig_h = img.size
-            if orig_w <= max_width:
-                new_w, new_h = orig_w, orig_h
-            else:
-                scale = max_width / float(orig_w)
-                new_w = int(max_width)
-                new_h = int(orig_h * scale)
-                img = img.resize((new_w, new_h), resample=Image.Resampling.LANCZOS)
-
-            # Ensure compatible mode for WebP
-            if img.mode in ("RGBA", "LA") or (img.mode == "P" and "transparency" in img.info):
-                img = img.convert("RGBA")
-            elif img.mode != "RGB":
-                img = img.convert("RGB")
-
-            img.save(thumb_path, "WEBP", quality=quality, method=6)
-            print(f"    [THUMB] Generated: {thumb_filename} ({orig_w}x{orig_h} -> {new_w}x{new_h})")
-            return thumb_rel_path
-    except Exception as e:
-        print(f"    [WARN] Thumbnail generation fallback for {target_path.name}: {e}")
-        return clean_path
-
-def slugify(text):
-    """Normalize text into a clean URL-safe slug."""
-    if not text:
-        return ""
-    return re.sub(r'[^a-z0-9]+', '-', str(text).lower()).strip('-')
-
-def parse_yaml_frontmatter(text):
-    """Robust YAML front-matter parser."""
-    match = re.match(r"^---\s*\n(.*?)\n---\s*\n(.*)$", text, re.DOTALL)
-    if not match:
-        return {}, text
-    
-    yaml_text = match.group(1)
-    body_text = match.group(2)
-    
-    # Try importing PyYAML if available
-    try:
-        import yaml
-        metadata = yaml.safe_load(yaml_text) or {}
-        return metadata, body_text
-    except Exception:
-        pass
-
-    # Basic YAML parser fallback
-    metadata = {}
-    lines = yaml_text.splitlines()
-    current_key = None
-    
-    for line in lines:
-        stripped = line.strip()
-        if not stripped or stripped.startswith("#"):
-            continue
-        
-        indented_kv = re.match(r"^\s+([a-zA-Z0-9_-]+):\s*(.*)$", line)
-        top_kv = re.match(r"^([a-zA-Z0-9_-]+):\s*(.*)$", line)
-        
-        if line.startswith("  - ") or line.startswith("- "):
-            item = stripped.lstrip("- ").strip('"\'')
-            if current_key:
-                if not isinstance(metadata.get(current_key), list):
-                    metadata[current_key] = []
-                metadata[current_key].append(item)
-        elif indented_kv and current_key:
-            sub_key = indented_kv.group(1)
-            sub_val = indented_kv.group(2).strip().strip('"\'')
-            if not isinstance(metadata.get(current_key), dict):
-                metadata[current_key] = {}
-            metadata[current_key][sub_key] = sub_val
-        elif top_kv and not line.startswith(" ") and not line.startswith("\t"):
-            key = top_kv.group(1)
-            val = top_kv.group(2).strip().strip('"\'')
-            current_key = key
-            
-            if val == "":
-                metadata[key] = {}
-            elif val.lower() == "true":
-                metadata[key] = True
-            elif val.lower() == "false":
-                metadata[key] = False
-            else:
-                metadata[key] = val
-    
-    return metadata, body_text
-
-
-def format_inline_markdown(text):
-    """Transforms inline Markdown: bold, italic, code, math, links."""
-    # Escape HTML special chars inside text (preserving intentional tags if any)
-    out = text
-    # Math inline: $E = mc^2$ -> <span class="math-inline">$E = mc^2$</span>
-    out = re.sub(r'(?<!\\)\$([^\$]+?)\$', r'<span class="math-inline">$\1$</span>', out)
-    # Bold + Italic: ***text*** or ___text___
-    out = re.sub(r'\*\*\*(.+?)\*\*\*', r'<strong><em>\1</em></strong>', out)
-    # Bold: **text**
-    out = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', out)
-    # Italic: *text* or _text_
-    out = re.sub(r'(?<!\w)\*([^\*]+?)\*(?!\w)', r'<em>\1</em>', out)
-    out = re.sub(r'(?<!\w)_([^_]+?)_(?!\w)', r'<em>\1</em>', out)
-    # Code inline: `code` (with HTML entity escaping for < and >)
-    def _code_repl(m):
-        code_str = m.group(1).replace('<', '&lt;').replace('>', '&gt;')
-        return f'<code>{code_str}</code>'
-    out = re.sub(r'`([^`]+?)`', _code_repl, out)
-    # Links: [text](url)
-    out = re.sub(r'\[([^\]]+?)\]\(([^)]+?)\)', r'<a href="\2" target="_blank" rel="noopener noreferrer">\1</a>', out)
-    return out
-
-def clean_and_convert_markdown(md_text):
-    """Converts full Markdown body to rich, semantic HTML."""
-    # Strip legacy HTML tags if any were accidentally preserved
-    cleaned = md_text
-    cleaned = re.sub(r'<header class="post-header-meta-top">.*?</header>', '', cleaned, flags=re.DOTALL)
-    cleaned = re.sub(r'<h1 class="post-title">.*?</h1>', '', cleaned, flags=re.DOTALL)
-    cleaned = re.sub(r'<p class="post-subtitle">.*?</p>', '', cleaned, flags=re.DOTALL)
-    cleaned = re.sub(r'<div class="post-header-meta-bottom">.*?</div>', '', cleaned, flags=re.DOTALL)
-    cleaned = re.sub(r'<footer class="post-footer-section">.*?</footer>', '', cleaned, flags=re.DOTALL)
-    cleaned = re.sub(r'<!-- ===.*?=== -->', '', cleaned)
-    cleaned = re.sub(r'<!--.*?-->', '', cleaned, flags=re.DOTALL)
-
-    lines = cleaned.splitlines()
-    html_blocks = []
-    
-    in_code_block = False
-    code_lang = ""
-    code_buffer = []
-    
-    in_table = False
-    table_buffer = []
-    
-    in_list = False
-    list_type = "ul" # or "ol"
-    list_items = []
-    
-    def flush_list():
-        nonlocal in_list, list_type, list_items
-        if in_list and list_items:
-            tag = list_type
-            items_html = "".join([f"<li>{item}</li>" for item in list_items])
-            html_blocks.append(f"<{tag} class=\"post-list essay-list\">{items_html}</{tag}>")
-            list_items = []
-            in_list = False
-
-    def flush_table():
-        nonlocal in_table, table_buffer
-        if in_table and table_buffer:
-            rows = table_buffer
-            table_html = ['<div class="table-responsive"><table class="post-table essay-table">']
-            # First row is header
-            if len(rows) > 0:
-                header_cols = [c.strip() for c in rows[0].strip('|').split('|')]
-                table_html.append('<thead><tr>')
-                for c in header_cols:
-                    table_html.append(f'<th>{format_inline_markdown(c)}</th>')
-                table_html.append('</tr></thead>')
-            # Check for body rows (skipping delimiter row like |---|---|)
-            table_html.append('<tbody>')
-            for r in rows[1:]:
-                if re.match(r'^\s*\|?\s*[-:\s|]+\s*\|?\s*$', r):
-                    continue
-                cols = [c.strip() for c in r.strip('|').split('|')]
-                table_html.append('<tr>')
-                for c in cols:
-                    table_html.append(f'<td>{format_inline_markdown(c)}</td>')
-                table_html.append('</tr>')
-            table_html.append('</tbody></table></div>')
-            html_blocks.append("\n".join(table_html))
-            table_buffer = []
-            in_table = False
-
-    i = 0
-    while i < len(lines):
-        line = lines[i]
-        stripped = line.strip()
-
-        # 1. Code Block Fence
-        if stripped.startswith("```"):
-            flush_list()
-            flush_table()
-            if in_code_block:
-                if code_lang == "mermaid":
-                    raw_mermaid = "\n".join(code_buffer)
-                    html_blocks.append(f'<div class="mermaid-diagram-box"><pre class="mermaid">\n{raw_mermaid}\n</pre></div>')
-                else:
-                    escaped_code = "\n".join(code_buffer).replace("<", "&lt;").replace(">", "&gt;")
-                    html_blocks.append(f'<pre><code class="language-{code_lang}">{escaped_code}</code></pre>')
-                code_buffer = []
-                in_code_block = False
-            else:
-                code_lang = stripped.lstrip("`").strip().lower() or "text"
-                code_buffer = []
-                in_code_block = True
-            i += 1
-            continue
-
-        if in_code_block:
-            code_buffer.append(line)
-            i += 1
-            continue
-
-        # 2. Markdown Table Detection (starts and ends with |)
-        if stripped.startswith("|") and stripped.endswith("|"):
-            flush_list()
-            in_table = True
-            table_buffer.append(stripped)
-            i += 1
-            continue
-        elif in_table:
-            flush_table()
-
-        # 3. Empty Line
-        if not stripped:
-            flush_list()
-            flush_table()
-            i += 1
-            continue
-
-        # 4. Horizontal Rule
-        if re.match(r'^(?:---|\*\*\*|___)$', stripped):
-            flush_list()
-            flush_table()
-            html_blocks.append('<hr class="post-divider essay-divider" />')
-            i += 1
-            continue
-
-        # 5. Math Display Block ($$...$$)
-        if stripped.startswith("$$"):
-            flush_list()
-            flush_table()
-            if stripped.endswith("$$") and len(stripped) > 2:
-                math_expr = stripped[2:-2].strip()
-                html_blocks.append(f'<div class="math-block">$${math_expr}$$</div>')
-                i += 1
-                continue
-            else:
-                # Multi-line math block
-                math_lines = [stripped[2:]]
-                i += 1
-                while i < len(lines):
-                    m_line = lines[i].strip()
-                    if m_line.endswith("$$"):
-                        math_lines.append(m_line[:-2])
-                        i += 1
-                        break
-                    else:
-                        math_lines.append(lines[i])
-                        i += 1
-                math_expr = "\n".join(math_lines).strip()
-                html_blocks.append(f'<div class="math-block">$${math_expr}$$</div>')
-                continue
-
-        # 6. Headings
-        h1_m = re.match(r'^#\s+(.+)$', stripped)
-        h2_m = re.match(r'^##\s+(.+)$', stripped)
-        h3_m = re.match(r'^###\s+(.+)$', stripped)
-
-        if h2_m:
-            flush_list()
-            flush_table()
-            html_blocks.append(f'<h2 class="post-section-kicker essay-section-kicker">{format_inline_markdown(h2_m.group(1))}</h2>')
-            i += 1
-            continue
-        if h3_m:
-            flush_list()
-            flush_table()
-            html_blocks.append(f'<h3 class="post-subheading essay-subheading">{format_inline_markdown(h3_m.group(1))}</h3>')
-            i += 1
-            continue
-        if h1_m:
-            flush_list()
-            flush_table()
-            html_blocks.append(f'<h2 class="post-section-kicker essay-section-kicker">{format_inline_markdown(h1_m.group(1))}</h2>')
-            i += 1
-            continue
-
-        # 7. Blockquote
-        if stripped.startswith(">"):
-            flush_list()
-            flush_table()
-            quote_text = re.sub(r'^>\s*', '', stripped)
-            html_blocks.append(f'<blockquote class="post-quote essay-quote">{format_inline_markdown(quote_text)}</blockquote>')
-            i += 1
-            continue
-
-        # 8. Lists (Ordered: 1. Item, Unordered: - Item / * Item)
-        ol_m = re.match(r'^\d+\.\s+(.+)$', stripped)
-        ul_m = re.match(r'^[-*]\s+(.+)$', stripped)
-
-        if ol_m:
-            if not in_list or list_type != "ol":
-                flush_list()
-                in_list = True
-                list_type = "ol"
-            list_items.append(format_inline_markdown(ol_m.group(1)))
-            i += 1
-            continue
-        elif ul_m:
-            if not in_list or list_type != "ul":
-                flush_list()
-                in_list = True
-                list_type = "ul"
-            list_items.append(format_inline_markdown(ul_m.group(1)))
-            i += 1
-            continue
-        else:
-            flush_list()
-
-        # 9. Direct HTML Tag / Block pass-through (iframes, divs, styles, comments, embeds)
-        if re.match(r"^<(?:!--|[a-zA-Z0-9_-]+|\/[a-zA-Z0-9_-]+)", stripped):
-            flush_list()
-            flush_table()
-            if stripped.startswith("<style"):
-                style_lines = [line]
-                if not stripped.endswith("</style>"):
-                    i += 1
-                    while i < len(lines):
-                        style_lines.append(lines[i])
-                        if "</style>" in lines[i]:
-                            break
-                        i += 1
-                html_blocks.append("\n".join(style_lines))
-                i += 1
-                continue
-            elif stripped.startswith("<!--"):
-                comment_lines = [line]
-                if not stripped.endswith("-->"):
-                    i += 1
-                    while i < len(lines):
-                        comment_lines.append(lines[i])
-                        if "-->" in lines[i]:
-                            break
-                        i += 1
-                html_blocks.append("\n".join(comment_lines))
-                i += 1
-                continue
-            else:
-                html_blocks.append(stripped)
-                i += 1
-                continue
-
-        # 10. Standard Paragraph
-        html_blocks.append(f'<p class="post-paragraph essay-paragraph">{format_inline_markdown(stripped)}</p>')
-        i += 1
-
-    flush_list()
-    flush_table()
-
-    return "\n\n".join(html_blocks)
+from builder.config import (
+    BASE_DIR,
+    POSTS_DIR,
+    OUTPUT_JSON,
+    OUTPUT_JS,
+    PILLARS_JSON,
+    ROOT_DIR,
+)
+from builder.taxonomy import (
+    load_taxonomy_data,
+    sync_pillars_js,
+    match_canonical_pillar,
+    match_canonical_subtopic,
+)
+from builder.images import generate_thumbnail
+from builder.parser import (
+    slugify,
+    parse_yaml_frontmatter,
+    clean_and_convert_markdown,
+)
+from builder.tags import compile_tags_database
+from builder.html_page import generate_post_html_files
+from builder.sitemap import generate_sitemap
 
 def compile_posts():
     """Reads all Markdown files in _posts/ and outputs posts.json & posts.js."""
@@ -497,6 +44,10 @@ def compile_posts():
         print(f"Error: Directory {POSTS_DIR} not found.")
         return False
         
+    canonical_pillars, canonical_foundations = load_taxonomy_data()
+    if canonical_pillars or canonical_foundations:
+        sync_pillars_js(canonical_pillars, canonical_foundations)
+
     posts = []
     # Sort files chronologically descending
     for file_path in sorted(POSTS_DIR.glob("*.md"), reverse=True):
@@ -513,10 +64,36 @@ def compile_posts():
             slug = file_path.stem
             sys_id = meta.get("sys_id") or f"SYS_{slug.upper()}"
             
-            # Topic hierarchy
+            # Topic hierarchy & canonical taxonomy resolution
             topic = meta.get("topic", {})
-            pillar = topic.get("pillar", "") if isinstance(topic, dict) else meta.get("pillar", "")
-            subtopic = topic.get("subtopic", "") if isinstance(topic, dict) else meta.get("subtopic", "")
+            raw_pillar = topic.get("pillar", "") if isinstance(topic, dict) else meta.get("pillar", "")
+            raw_subtopic = topic.get("subtopic", "") if isinstance(topic, dict) else meta.get("subtopic", "")
+
+            matched_pil = match_canonical_pillar(raw_pillar, canonical_pillars)
+            pillar = matched_pil["title"] if matched_pil else raw_pillar
+            pillar_id = matched_pil["id"] if matched_pil else (slugify(raw_pillar) if raw_pillar else "")
+
+            matched_sub = match_canonical_subtopic(raw_subtopic, canonical_pillars)
+            subtopic = matched_sub["title"] if matched_sub else raw_subtopic
+            subtopic_id = matched_sub["id"] if matched_sub else (slugify(raw_subtopic) if raw_subtopic else "")
+
+            # Foundations resolution (inherited from matched pillar + explicit post frontmatter)
+            inherited_foundations = matched_pil.get("foundations", []) if matched_pil else []
+            raw_meta_foundations = meta.get("foundations") or meta.get("foundation") or []
+            if isinstance(raw_meta_foundations, str):
+                raw_meta_foundations = [f.strip().lower() for f in raw_meta_foundations.split(",") if f.strip()]
+            elif isinstance(raw_meta_foundations, list):
+                raw_meta_foundations = [str(f).strip().lower() for f in raw_meta_foundations if f]
+            else:
+                raw_meta_foundations = []
+
+            combined_foundations = []
+            seen_f = set()
+            for f_item in inherited_foundations + raw_meta_foundations:
+                f_slug = slugify(f_item)
+                if f_slug and f_slug not in seen_f:
+                    seen_f.add(f_slug)
+                    combined_foundations.append(f_slug)
             
             # Format-specific metadata
             category = meta.get("category", "")
@@ -547,7 +124,7 @@ def compile_posts():
             # Generate or reuse optimized downscaled thumbnail
             thumbnail = generate_thumbnail(image) if image else ""
 
-            # Gallery Images (Option A: additional artworks to populate 3D spatial gallery)
+            # Gallery Images (additional artworks to populate 3D spatial gallery)
             raw_gallery_imgs = meta.get("gallery_images") or []
             normalized_gallery_images = []
             if isinstance(raw_gallery_imgs, list):
@@ -619,8 +196,11 @@ def compile_posts():
                 "media": media.upper() if media else "",
                 "source": source,
                 "url": target_url,
-                "pillar": pillar.upper(),
-                "subtopic": subtopic.upper(),
+                "pillar": pillar.upper() if pillar else "",
+                "pillar_id": pillar_id,
+                "foundations": combined_foundations,
+                "subtopic": subtopic.upper() if subtopic else "",
+                "subtopic_id": subtopic_id,
                 "theme": meta.get("theme", "dark"),
                 "featured": is_featured,
                 "shareable": shareable,
@@ -652,8 +232,19 @@ def compile_posts():
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(posts, f, indent=2, ensure_ascii=False)
 
-    # Write to posts.js (for zero-CORS direct file:/// and browser execution)
-    js_content = f"/** Auto-generated from _posts/*.md by sync_posts.py */\nwindow.DYNAMIC_POSTS = {json.dumps(posts, indent=2, ensure_ascii=False)};\n"
+    # Write to posts.js (for zero-CORS direct file:/// and browser/Node execution)
+    js_content = (
+        "/** Auto-generated from _posts/*.md by sync_posts.py */\n"
+        "(function (root, factory) {\n"
+        "  var data = factory();\n"
+        "  if (typeof module === 'object' && module.exports) { module.exports = data; }\n"
+        "  if (typeof root !== 'undefined') { root.DYNAMIC_POSTS = data; }\n"
+        "  if (typeof window !== 'undefined') { window.DYNAMIC_POSTS = data; }\n"
+        "  if (typeof global !== 'undefined') { global.DYNAMIC_POSTS = data; }\n"
+        "})(typeof self !== 'undefined' ? self : this, function () {\n"
+        f"  return {json.dumps(posts, indent=2, ensure_ascii=False)};\n"
+        "});\n"
+    )
     with open(OUTPUT_JS, "w", encoding="utf-8") as f:
         f.write(js_content)
         
@@ -663,6 +254,9 @@ def compile_posts():
     # Generate individual post HTML files for social media link previews and direct loading
     generate_post_html_files(posts)
 
+    # Generate sitemap
+    generate_sitemap(posts)
+
     # Also sync copies to repository root if separate
     if ROOT_DIR != BASE_DIR:
         shutil.copy2(OUTPUT_JSON, ROOT_DIR / "posts.json")
@@ -670,591 +264,6 @@ def compile_posts():
 
     print(f"\n[SUCCESS] Compiled {len(posts)} full posts into {OUTPUT_JSON.name} & {OUTPUT_JS.name}\n")
     return True
-
-# Canonical Knowledge Graph Entity Mappings for GEO & Schema.org Grounding (Gap A)
-CANONICAL_ENTITIES = {
-    "groupe-mu": {"@type": "Organization", "name": "Groupe µ", "sameAs": "https://en.wikipedia.org/wiki/Groupe_%CE%BC"},
-    "foucault": {"@type": "Person", "name": "Michel Foucault", "sameAs": "https://en.wikipedia.org/wiki/Michel_Foucault"},
-    "borges": {"@type": "Person", "name": "Jorge Luis Borges", "sameAs": "https://en.wikipedia.org/wiki/Jorge_Luis_Borges"},
-    "paul-b-preciado": {"@type": "Person", "name": "Paul B. Preciado", "sameAs": "https://en.wikipedia.org/wiki/Paul_B._Preciado"},
-    "yann-lecun": {"@type": "Person", "name": "Yann LeCun", "sameAs": "https://en.wikipedia.org/wiki/Yann_LeCun"},
-    "alan-turing": {"@type": "Person", "name": "Alan Turing", "sameAs": "https://en.wikipedia.org/wiki/Alan_Turing"},
-    "donna-haraway": {"@type": "Person", "name": "Donna Haraway", "sameAs": "https://en.wikipedia.org/wiki/Donna_Haraway"},
-    "haraway": {"@type": "Person", "name": "Donna Haraway", "sameAs": "https://en.wikipedia.org/wiki/Donna_Haraway"},
-    "byung-chul-han": {"@type": "Person", "name": "Byung-Chul Han", "sameAs": "https://en.wikipedia.org/wiki/Byung-Chul_Han"},
-    "bernard-stiegler": {"@type": "Person", "name": "Bernard Stiegler", "sameAs": "https://en.wikipedia.org/wiki/Bernard_Stiegler"},
-    "semiotics": {"@type": "Thing", "name": "Visual Semiotics", "sameAs": "https://en.wikipedia.org/wiki/Visual_semiotics"},
-    "visual-semiotics": {"@type": "Thing", "name": "Visual Semiotics", "sameAs": "https://en.wikipedia.org/wiki/Visual_semiotics"},
-    "plastic-signs": {"@type": "Thing", "name": "Plastic Sign (Visual Semiotics)", "sameAs": "https://en.wikipedia.org/wiki/Visual_semiotics"},
-    "jepa": {"@type": "Thing", "name": "Joint Embedding Predictive Architecture", "sameAs": "https://en.wikipedia.org/wiki/Yann_LeCun#World_models_and_JEPA"},
-    "world-models": {"@type": "Thing", "name": "World Models (Artificial Intelligence)", "sameAs": "https://en.wikipedia.org/wiki/World_model_(artificial_intelligence)"},
-    "embeddings": {"@type": "Thing", "name": "Word Embedding", "sameAs": "https://en.wikipedia.org/wiki/Word_embedding"},
-    "vector-databases": {"@type": "Thing", "name": "Vector Database", "sameAs": "https://en.wikipedia.org/wiki/Vector_database"},
-    "generative-ai": {"@type": "Thing", "name": "Generative Artificial Intelligence", "sameAs": "https://en.wikipedia.org/wiki/Generative_artificial_intelligence"},
-    "psychophysics": {"@type": "Thing", "name": "Psychophysics", "sameAs": "https://en.wikipedia.org/wiki/Psychophysics"},
-    "visual-perception": {"@type": "Thing", "name": "Visual Perception", "sameAs": "https://en.wikipedia.org/wiki/Visual_perception"},
-    "gestalt": {"@type": "Thing", "name": "Gestalt Psychology", "sameAs": "https://en.wikipedia.org/wiki/Gestalt_psychology"},
-    "biopolitics": {"@type": "Thing", "name": "Biopolitics", "sameAs": "https://en.wikipedia.org/wiki/Biopolitics"},
-    "knowledge-graphs": {"@type": "Thing", "name": "Knowledge Graph", "sameAs": "https://en.wikipedia.org/wiki/Knowledge_graph"},
-    "tree-sitter": {"@type": "SoftwareApplication", "name": "Tree-sitter", "sameAs": "https://en.wikipedia.org/wiki/Tree-sitter_(parser)"},
-    "shanzhai": {"@type": "Thing", "name": "Shanzhai", "sameAs": "https://en.wikipedia.org/wiki/Shanzhai"},
-    "cyborg-manifesto": {"@type": "CreativeWork", "name": "A Cyborg Manifesto", "sameAs": "https://en.wikipedia.org/wiki/A_Cyborg_Manifesto"},
-    "llms": {"@type": "Thing", "name": "Large Language Model", "sameAs": "https://en.wikipedia.org/wiki/Large_language_model"},
-    "imitation-game": {"@type": "Thing", "name": "Turing Test", "sameAs": "https://en.wikipedia.org/wiki/Turing_test"},
-    "tamagotchi-effect": {"@type": "Thing", "name": "Tamagotchi Effect", "sameAs": "https://en.wikipedia.org/wiki/Tamagotchi_effect"},
-    "kindchenschema": {"@type": "Thing", "name": "Kindchenschema (Baby Schema)", "sameAs": "https://en.wikipedia.org/wiki/Cuteness#Kindchenschema"}
-}
-
-def resolve_post_entities(post):
-    """
-    Extracts structured 'about' and 'mentions' entities for Schema.org JSON-LD
-    to enable precise AI answer engine (Perplexity, ChatGPT, Claude) entity resolution.
-    Supports explicit frontmatter override or automatic extraction from tags/title/slug.
-    """
-    custom_entities = post.get("entities")
-    if isinstance(custom_entities, dict):
-        about = custom_entities.get("about", [])
-        mentions = custom_entities.get("mentions", [])
-        return about, mentions
-
-    raw_tags = post.get("tags") or []
-    slug = (post.get("slug") or "").lower()
-    title = (post.get("title") or "").lower()
-
-    tag_keys = set()
-    for t in raw_tags:
-        k = str(t).strip().lower().lstrip("#")
-        tag_keys.add(k)
-        tag_keys.add(slugify(k))
-
-    matched_entities = []
-    seen_urls = set()
-
-    for k, entity in CANONICAL_ENTITIES.items():
-        if entity["sameAs"] in seen_urls:
-            continue
-        if k in tag_keys or k in slug or f" {k} " in f" {title} " or f"({k})" in title or f"[{k}]" in title:
-            matched_entities.append(entity)
-            seen_urls.add(entity["sameAs"])
-
-    if not matched_entities:
-        pillar = post.get("pillar")
-        about = [{"@type": "Thing", "name": pillar or "Artificial Intelligence"}]
-        mentions = []
-        return about, mentions
-
-    about = matched_entities[:2]
-    mentions = matched_entities[2:8]
-    return about, mentions
-
-def generate_post_html_files(posts):
-    """
-    Generates standalone post HTML pages under /posts/[slug].html.
-    Each page contains exact Open Graph & Twitter Card metadata for LinkedIn, X, FB,
-    and boots the full split-layout application with the current post active.
-    """
-    POSTS_HTML_DIR.mkdir(parents=True, exist_ok=True)
-    SITE_ORIGIN = "https://mynameisjpg.github.io/mynameisjpg"
-    DEFAULT_OG_IMAGE = f"{SITE_ORIGIN}/assets/images/favicon.svg"
-
-    for post in posts:
-        raw_slug = post.get("slug") or post.get("id") or post.get("sys_id")
-        if not raw_slug:
-            continue
-
-        # Strip date prefix (e.g., "2026-09-24-lecun-..." -> "lecun-...")
-        clean_slug = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', raw_slug)
-
-        title = (post.get("title") or "Untitled Dispatch").replace('"', '&quot;')
-        
-        # Ensure description is at least 100 characters (LinkedIn warning requirement)
-        # and capped under 300 characters for optimal card rendering.
-        excerpt = (post.get("excerpt") or "").strip()
-        subtitle = (post.get("subtitle") or "").strip()
-        
-        candidates = []
-        if excerpt and len(excerpt) >= 100:
-            candidates.append(excerpt)
-        if subtitle and len(subtitle) >= 100:
-            candidates.append(subtitle)
-        if subtitle and excerpt and subtitle != excerpt:
-            combined = f"{subtitle} {excerpt}"
-            if len(combined) >= 100:
-                candidates.append(combined)
-        if excerpt:
-            candidates.append(excerpt)
-        if subtitle:
-            candidates.append(subtitle)
-        candidates.append("Untitled.jpg — Dispatches on AI perception, cognitive psychophysics, high-dimensional latent space, and media archaeology.")
-        
-        # Pick the first candidate with >= 100 characters, or fallback to the longest available
-        description = candidates[0]
-        for c in candidates:
-            if len(c) >= 100:
-                description = c
-                break
-        
-        # Clean quotes and clamp to 300 characters without cutting words awkwardly
-        if len(description) > 300:
-            description = description[:297].rsplit(' ', 1)[0] + '...'
-        description = description.replace('"', '&quot;').replace('\n', ' ').strip()
-
-        post_url = f"{SITE_ORIGIN}/posts/{clean_slug}.html"
-        
-        # ISO 8601 publish date (YYYY-MM-DD) for LinkedIn and schema crawlers
-        raw_post_date = str(post.get("date", ""))
-        iso_date_match = re.search(r'(\d{4})[-.](\d{2})[-.](\d{2})', raw_post_date)
-        iso_published_time = f"{iso_date_match.group(1)}-{iso_date_match.group(2)}-{iso_date_match.group(3)}" if iso_date_match else raw_post_date
-
-        # Resolve absolute image URL and real dimensions for Open Graph crawlers
-        raw_image = post.get("image") or ""
-        if raw_image.startswith("http://") or raw_image.startswith("https://"):
-            og_image = raw_image
-        elif raw_image:
-            clean_img = raw_image.lstrip("./").lstrip("/")
-            og_image = f"{SITE_ORIGIN}/{clean_img}"
-        else:
-            og_image = DEFAULT_OG_IMAGE
-
-        # Measure actual pixel dimensions of the image
-        img_w, img_h = get_image_dimensions(raw_image)
-
-        # Alt text for the image: use image_alt, falling back to subtitle or title
-        raw_alt = post.get("image_alt") or post.get("subtitle") or title
-        image_alt = raw_alt.replace('"', '&quot;').replace('\n', ' ').strip()
-
-        # Build GEO & EEAT-compliant Schema.org JSON-LD (Gap A & Gap C)
-        author_schema = {
-            "@type": "Person",
-            "name": "Juan Pablo Giusepponi",
-            "jobTitle": "Sr. Designer, Head of Communication & Frontier AI Specialist",
-            "url": "https://mynameisjpg.github.io/mynameisjpg/about.html",
-            "image": "https://mynameisjpg.github.io/mynameisjpg/assets/images/self-jpg1.jpg",
-            "sameAs": [
-                "https://github.com/mynameisjpg",
-                "https://mynameisjpg.github.io/mynameisjpg/"
-            ],
-            "knowsAbout": [
-                "Artificial Intelligence",
-                "Visual Semiotics",
-                "Cognitive Psychophysics",
-                "Latent Space Topologies",
-                "Machine Learning",
-                "Joint Embedding Predictive Architecture",
-                "Design Systems",
-                "Epistemology"
-            ]
-        }
-
-        schema_dict = {
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": title,
-            "description": description,
-            "datePublished": iso_published_time,
-            "dateModified": iso_published_time,
-            "inLanguage": "en-US",
-            "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": post_url
-            },
-            "author": author_schema,
-            "publisher": {
-                "@type": "Organization",
-                "name": "Untitled.jpg",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://mynameisjpg.github.io/mynameisjpg/assets/images/favicon.svg"
-                }
-            },
-            "image": og_image
-        }
-
-        if post.get("pillar"):
-            schema_dict["articleSection"] = post.get("pillar")
-
-        raw_tags = post.get("tags") or []
-        clean_tags = [str(t).strip().lstrip("#") for t in raw_tags if str(t).strip()]
-        if clean_tags:
-            schema_dict["keywords"] = clean_tags
-
-        about_ents, mention_ents = resolve_post_entities(post)
-        if about_ents:
-            schema_dict["about"] = about_ents
-        if mention_ents:
-            schema_dict["mentions"] = mention_ents
-
-        schema_json_ld = json.dumps(schema_dict, indent=2, ensure_ascii=False)
-
-        post_html_content = f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title} — Untitled.jpg</title>
-  <meta name="description" content="{description}">
-  <link rel="canonical" href="{post_url}">
-
-  <!-- Open Graph / LinkedIn / Facebook / WhatsApp -->
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Untitled.jpg">
-  <meta property="og:title" content="{title}">
-  <meta property="og:description" content="{description}">
-  <meta property="og:url" content="{post_url}">
-  <meta name="image" property="og:image" content="{og_image}">
-  <meta property="og:image:secure_url" content="{og_image}">
-  <meta property="og:image:width" content="{img_w}">
-  <meta property="og:image:height" content="{img_h}">
-  <meta property="og:image:alt" content="{image_alt}">
-  <meta property="article:published_time" content="{iso_published_time}">
-  <meta property="article:author" content="{post.get('author', 'Juan P. Giusepponi')}">
-
-  <!-- Twitter / X Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{title}">
-  <meta name="twitter:description" content="{description}">
-  <meta name="twitter:image" content="{og_image}">
-  <meta name="twitter:image:alt" content="{image_alt}">
-
-  <!-- Schema.org JSON-LD (BlogPosting / Article with GEO & EEAT Grounding) -->
-  <script type="application/ld+json">
-{schema_json_ld}
-  </script>
-
-  <base href="../">
-
-  <!-- Typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&family=Platypi:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  
-  <!-- Math Rendering (KaTeX), Markdown (Marked.js), & Diagrams (Mermaid.js) -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"></noscript>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-
-  <!-- Design System Stylesheets -->
-  <link rel="stylesheet" href="index.css?v=5">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <link rel="shortcut icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
-  
-  <!-- Autonomous Web Components (Deferred) -->
-  <script defer src="js/components/sidebar-rail.js"></script>
-</head>
-<body>
-
-  <!-- Sidebar Rail Component -->
-  <sidebar-rail active-page="home" has-search></sidebar-rail>
-
-  <!-- Interactive Dropdown Overlays -->
-  <div id="dispatch-log-dropdown" class="top-dropdown-panel menu-dropdown-panel dispatch-log-panel" style="display:none;">
-    <div class="dropdown-header">[ DISPATCH LOG ]</div>
-    <button type="button" class="dropdown-option active" data-filter="all">SHOW ALL DISPATCHES</button>
-    <button type="button" class="dropdown-option" data-filter="essay">_ESSAYS</button>
-    <button type="button" class="dropdown-option" data-filter="note">_NOTES</button>
-    <button type="button" class="dropdown-option" data-filter="bookmark">_BOOKMARKS</button>
-    <button type="button" class="dropdown-option" data-filter="resource">_RESOURCES</button>
-  </div>
-
-  <div id="top-search-dropdown" class="top-dropdown-panel search-dropdown-panel" style="display:none;">
-    <input type="text" id="top-search-input" name="search" placeholder="SEARCH DISPATCHES..." aria-label="Search dispatches" autocomplete="off" spellcheck="false" />
-  </div>
-
-  <div id="top-filter-dropdown" class="top-dropdown-panel menu-dropdown-panel filter-panel" style="display:none;">
-    <div class="dropdown-header">[ FILTER BY FORMAT ]</div>
-    <button type="button" class="dropdown-option active" data-filter="all">SHOW ALL DISPATCHES</button>
-    <button type="button" class="dropdown-option" data-filter="essay">_ESSAYS</button>
-    <button type="button" class="dropdown-option" data-filter="note">_NOTES</button>
-    <button type="button" class="dropdown-option" data-filter="bookmark">_BOOKMARKS</button>
-    <button type="button" class="dropdown-option" data-filter="resource">_RESOURCES</button>
-  </div>
-
-  <div id="top-sort-dropdown" class="top-dropdown-panel menu-dropdown-panel sort-panel" style="display:none;">
-    <div class="dropdown-header">[ SORT ORDER ]</div>
-    <button type="button" class="dropdown-option active" data-sort="newest">NEWEST FIRST &#8595;</button>
-    <button type="button" class="dropdown-option" data-sort="oldest">OLDEST FIRST &#8593;</button>
-    <button type="button" class="dropdown-option" data-sort="title">ALPHABETICAL (A-Z)</button>
-  </div>
-
-  <!-- Split 50-50 Layout -->
-  <main class="split-layout reader-open" data-component="split-shell">
-    <section class="grid-column" data-component="dispatch-matrix" aria-label="Dispatch Grid Matrix">
-      <div class="matrix-header-group">
-        <div class="header-col-left">
-          <span class="header-legend">SYS_LOG // ASYMMETRIC_DISPATCH_MATRIX</span>
-          <div class="controls-row-left">
-            <div class="custom-select-wrapper flex-pill">
-              <button type="button" class="btn-matrix-pill" id="filter-pill-btn" aria-haspopup="true" aria-expanded="false" title="Filter by format">
-                <span class="pill-label">FILTER:</span>
-                <span class="pill-value" id="current-filter-val">ALL POSTS</span>
-                <span class="pill-arrow">▼</span>
-              </button>
-              <div class="custom-select-dropdown" id="filter-dropdown" role="menu">
-                <button type="button" class="dropdown-opt active" data-filter="all" role="menuitem">ALL POSTS</button>
-                <button type="button" class="dropdown-opt" data-filter="essay" role="menuitem">ESSAYS</button>
-                <button type="button" class="dropdown-opt" data-filter="note" role="menuitem">NOTES</button>
-                <button type="button" class="dropdown-opt" data-filter="bookmark" role="menuitem">BOOKMARKS</button>
-                <button type="button" class="dropdown-opt" data-filter="resource" role="menuitem">RESOURCES</button>
-              </div>
-            </div>
-
-            <div class="custom-select-wrapper flex-pill">
-              <button type="button" class="btn-matrix-pill" id="sort-pill-btn" aria-haspopup="true" aria-expanded="false" title="Sort dispatches">
-                <span class="pill-label">SORT:</span>
-                <span class="pill-value" id="current-sort-val">MOST RECENT</span>
-                <span class="pill-arrow">▼</span>
-              </button>
-              <div class="custom-select-dropdown" id="sort-dropdown" role="menu">
-                <button type="button" class="dropdown-opt active" data-sort="recent" role="menuitem">MOST RECENT</button>
-                <button type="button" class="dropdown-opt" data-sort="oldest" role="menuitem">OLDEST</button>
-                <button type="button" class="dropdown-opt" data-sort="readtime" role="menuitem">READING TIME</button>
-                <button type="button" class="dropdown-opt" data-sort="title" role="menuitem">TITLE A-Z</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="header-col-right">
-          <span class="header-legend filter-status" id="active-filter-label">[MODE: ALL_DISPATCHES]</span>
-          <div class="matrix-search-box">
-            <svg viewBox="0 0 24 24" class="search-icon-svg"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" id="matrix-search-input" placeholder="SEARCH DISPATCHES..." aria-label="Search dispatches" autocomplete="off" />
-            <button type="button" id="clear-search-btn" style="display: none;" title="Clear search">✕</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-grid-matrix" id="card-matrix"></div>
-    </section>
-
-    <!-- Reading Pane -->
-    <article class="post-column essay-column" id="essay-reading-pane" data-component="reader-pane" aria-label="Post Reader View">
-      <button type="button" class="btn-return-grid" aria-label="Return to Grid Feed">
-        <span class="return-arrow">&lt;&lt;</span>
-        <span class="return-text">RETURN TO GRID FEED</span>
-      </button>
-    </article>
-  </main>
-
-  <div class="floating-nav-buttons" data-component="floating-controls">
-    <button type="button" class="btn-nav-action" id="btn-scroll-top" title="Scroll Reader to Top">↑ TOP</button>
-    <button type="button" class="btn-nav-action" id="btn-scroll-bottom" title="Scroll Reader to Bottom">↓ BOTTOM</button>
-  </div>
-
-  <dialog id="subscribe-modal" class="modal-dialog" data-component="subscribe-modal" aria-labelledby="modal-heading">
-    <div class="modal-box">
-      <div class="modal-header-tag">[ DISPATCH_SUBSCRIPTION // FREQUENCY: FORTNIGHTLY ]</div>
-      <h2 id="modal-heading" class="modal-title">Subscribe to Untitled.jpg</h2>
-      <p class="modal-description">Deep-dive essays and technical dispatches on AI perception, cognitive psychophysics, high-dimensional latent space, and media archaeology.</p>
-      
-      <form class="modal-form" id="subscribe-form" method="dialog">
-        <div class="modal-input-group">
-          <label for="subscriber-name" class="modal-input-label">IDENTITY (NAME):</label>
-          <input type="text" id="subscriber-name" name="name" class="modal-input" placeholder="Your Name / Alias" autocomplete="name">
-        </div>
-        <div class="modal-input-group">
-          <label for="subscriber-email" class="modal-input-label">TRANSMISSION_ENDPOINT (EMAIL):</label>
-          <input type="email" id="subscriber-email" name="email" class="modal-input" placeholder="reader@domain.xyz" required autocomplete="email" spellcheck="false">
-        </div>
-        <div class="modal-actions">
-          <button type="button" class="btn-modal-cancel">CANCEL</button>
-          <button type="submit" class="btn-modal-submit">TRANSMIT SUBSCRIPTION</button>
-        </div>
-      </form>
-    </div>
-  </dialog>
-
-  <!-- Specify active post slug for deep-load -->
-  <script>
-    window.INITIAL_POST_SLUG = "{clean_slug}";
-  </script>
-  <script src="posts.js"></script>
-  <script src="app.js"></script>
-</body>
-</html>
-"""
-        target_file = POSTS_HTML_DIR / f"{clean_slug}.html"
-        with open(target_file, "w", encoding="utf-8") as f:
-            f.write(post_html_content)
-
-    print(f"  [OK] Generated {len(posts)} post HTML files in {POSTS_HTML_DIR.name}/")
-    generate_sitemap(posts)
-
-def generate_sitemap(posts):
-    """
-    Generates an XML sitemap (sitemap.xml) for all core publication pages and dispatches.
-    """
-    base_url = "https://mynameisjpg.github.io/mynameisjpg"
-    static_pages = [
-        {"loc": f"{base_url}/index.html", "priority": "1.0", "changefreq": "daily"},
-        {"loc": f"{base_url}/about.html", "priority": "0.8", "changefreq": "monthly"},
-        {"loc": f"{base_url}/archive.html", "priority": "0.8", "changefreq": "weekly"},
-        {"loc": f"{base_url}/gallery.html", "priority": "0.8", "changefreq": "monthly"},
-        {"loc": f"{base_url}/network.html", "priority": "0.8", "changefreq": "weekly"},
-    ]
-    
-    xml_lines = [
-        '<?xml version="1.0" encoding="UTF-8"?>',
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-    ]
-    
-    for page in static_pages:
-        xml_lines.append("  <url>")
-        xml_lines.append(f"    <loc>{page['loc']}</loc>")
-        xml_lines.append(f"    <changefreq>{page['changefreq']}</changefreq>")
-        xml_lines.append(f"    <priority>{page['priority']}</priority>")
-        xml_lines.append("  </url>")
-        
-    for p in posts:
-        raw_slug = p.get("slug", "")
-        clean_slug = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', raw_slug)
-        post_url = f"{base_url}/posts/{clean_slug}.html"
-        raw_date = p.get("date", "")
-        post_date = raw_date.replace(".", "-").replace("/", "-") if raw_date else ""
-        
-        xml_lines.append("  <url>")
-        xml_lines.append(f"    <loc>{post_url}</loc>")
-        if post_date:
-            xml_lines.append(f"    <lastmod>{post_date}</lastmod>")
-        xml_lines.append("    <changefreq>monthly</changefreq>")
-        xml_lines.append("    <priority>0.7</priority>")
-        xml_lines.append("  </url>")
-        
-    xml_lines.append("</urlset>")
-    
-    sitemap_path = BASE_DIR / "sitemap.xml"
-    with open(sitemap_path, "w", encoding="utf-8") as f:
-        f.write("\n".join(xml_lines) + "\n")
-        
-    if ROOT_DIR != BASE_DIR:
-        shutil.copy2(sitemap_path, ROOT_DIR / "sitemap.xml")
-        
-    print(f"  [OK] Generated sitemap.xml with {len(static_pages) + len(posts)} URLs")
-
-def compile_tags_database(posts):
-    """
-    Builds a comprehensive index of all tags, pillars, and subtopics across all dispatches.
-    Generates tags.json and tags.js containing occurrence stats, connected dispatches, and links.
-    """
-    tags_map = {}
-
-    def get_or_create(tag_id, name, entity_type):
-        key = (entity_type, tag_id)
-        if key not in tags_map:
-            tags_map[key] = {
-                "id": tag_id,
-                "name": name,
-                "label": f"#{name}" if entity_type == "tag" else name,
-                "type": entity_type,
-                "count": 0,
-                "posts": [],
-                "links": [],
-                "pillars": set(),
-                "subtopics": set(),
-                "co_occurring": {}
-            }
-        return tags_map[key]
-
-    for p in posts:
-        raw_slug = p.get("slug", "")
-        clean_slug = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', raw_slug)
-
-        post_summary = {
-            "id": p.get("id"),
-            "slug": clean_slug,
-            "title": p.get("title"),
-            "date": p.get("date"),
-            "format": p.get("format"),
-            "pillar": p.get("pillar"),
-            "subtopic": p.get("subtopic"),
-            "url": f"posts/{clean_slug}.html"
-        }
-
-        link_entry = {
-            "title": p.get("title"),
-            "slug": clean_slug,
-            "format": p.get("format"),
-            "url": f"posts/{clean_slug}.html",
-            "date": p.get("date")
-        }
-
-        # 1. Process Pillar
-        pillar = p.get("pillar")
-        if pillar:
-            pil_id = f"pillar-{slugify(pillar)}"
-            pil_item = get_or_create(pil_id, pillar, "pillar")
-            pil_item["count"] += 1
-            pil_item["posts"].append(post_summary)
-            pil_item["links"].append(link_entry)
-
-        # 2. Process Subtopic
-        subtopic = p.get("subtopic")
-        if subtopic:
-            sub_id = f"subtopic-{slugify(subtopic)}"
-            sub_item = get_or_create(sub_id, subtopic, "subtopic")
-            sub_item["count"] += 1
-            sub_item["posts"].append(post_summary)
-            sub_item["links"].append(link_entry)
-            if pillar:
-                sub_item["pillars"].add(pillar)
-
-        # 3. Process Tags
-        post_tags = p.get("tags") or []
-        if isinstance(post_tags, str):
-            post_tags = [t.strip() for t in post_tags.split(",") if t.strip()]
-
-        for tag in post_tags:
-            tag_clean = str(tag).strip().lower().lstrip("#")
-            if not tag_clean:
-                continue
-            tag_id = slugify(tag_clean)
-            tag_item = get_or_create(tag_id, tag_clean, "tag")
-            tag_item["count"] += 1
-            tag_item["posts"].append(post_summary)
-            tag_item["links"].append(link_entry)
-            if pillar:
-                tag_item["pillars"].add(pillar)
-            if subtopic:
-                tag_item["subtopics"].add(subtopic)
-
-            # Track co-occurrences with other tags in same post
-            for other_tag in post_tags:
-                other_clean = str(other_tag).strip().lower().lstrip("#")
-                if other_clean and other_clean != tag_clean:
-                    tag_item["co_occurring"][other_clean] = tag_item["co_occurring"].get(other_clean, 0) + 1
-
-    # Format final list sorted by count descending, then name
-    tags_list = []
-    for item in tags_map.values():
-        item["pillars"] = sorted(list(item["pillars"]))
-        item["subtopics"] = sorted(list(item["subtopics"]))
-        co_sorted = sorted(item["co_occurring"].items(), key=lambda x: x[1], reverse=True)
-        item["connected_tags"] = [k for k, _ in co_sorted[:6]]
-        del item["co_occurring"]
-        tags_list.append(item)
-
-    tags_list.sort(key=lambda x: (-x["count"], x["name"]))
-
-    # Write tags.json
-    with open(OUTPUT_TAGS_JSON, "w", encoding="utf-8") as f:
-        json.dump(tags_list, f, indent=2, ensure_ascii=False)
-
-    # Write tags.js (for zero-CORS direct file:/// and browser execution)
-    tags_js_content = f"/** Auto-generated from _posts/*.md by sync_posts.py */\nwindow.DYNAMIC_TAGS = {json.dumps(tags_list, indent=2, ensure_ascii=False)};\n"
-    with open(OUTPUT_TAGS_JS, "w", encoding="utf-8") as f:
-        f.write(tags_js_content)
-
-    if ROOT_DIR != BASE_DIR:
-        shutil.copy2(OUTPUT_TAGS_JSON, ROOT_DIR / "tags.json")
-        shutil.copy2(OUTPUT_TAGS_JS, ROOT_DIR / "tags.js")
-
-    print(f"  [OK] Generated {len(tags_list)} taxonomy entries in {OUTPUT_TAGS_JSON.name} & {OUTPUT_TAGS_JS.name}")
 
 def watch_posts():
     """Watches _posts/ folder and auto-recompiles on change."""
@@ -1270,9 +279,15 @@ def watch_posts():
                 if file_path not in last_mtimes or last_mtimes[file_path] != mtime:
                     last_mtimes[file_path] = mtime
                     changed = True
+
+            if PILLARS_JSON.exists():
+                p_mtime = PILLARS_JSON.stat().st_mtime
+                if PILLARS_JSON not in last_mtimes or last_mtimes[PILLARS_JSON] != p_mtime:
+                    last_mtimes[PILLARS_JSON] = p_mtime
+                    changed = True
                     
             if changed:
-                print(f"[{time.strftime('%H:%M:%S')}] Detected change in _posts/. Recompiling...")
+                print(f"[{time.strftime('%H:%M:%S')}] Detected change in _posts/ or pillars.json. Recompiling...")
                 compile_posts()
                 
             time.sleep(1)

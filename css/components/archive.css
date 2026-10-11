@@ -1255,6 +1255,12 @@
   letter-spacing: 0.06em;
 }
 
+.tag-type-foundation {
+  background: rgba(78, 149, 255, 0.15);
+  color: #79B8FF;
+  border: 1px solid rgba(78, 149, 255, 0.35);
+}
+
 .tag-type-pillar {
   background: rgba(232, 74, 95, 0.15);
   color: var(--primary, #E84A5F);
