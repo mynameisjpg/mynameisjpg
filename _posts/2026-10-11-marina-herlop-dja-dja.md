@@ -27,8 +27,8 @@ featured: false
 shareable: true
 allow_embed: true
 image:
-  path: "assets/images/.png"
-  alt: ""
+  path: "assets/images/marina-herlop.jpg"
+  alt: "Marina Herlop's album cover for Dja Dja"
 links: []
 backlinks:
   - slug: "the-music-vault"
