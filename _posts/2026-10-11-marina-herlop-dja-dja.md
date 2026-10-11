@@ -31,12 +31,9 @@ image:
   alt: ""
 links: []
 backlinks:
-  - slug: "#"
-    title: ""
-    note: ""
-  - slug: "#"
-    title: ""
-    note: ""
+  - slug: "the-music-vault"
+    title: "THE MUSIC VAULT"
+    note: "The most beloved sonoric experiences I can share"
 media: "music"
 source: "Marina Herlop - Dja Dja (2026) @ Spotify"
 bookmark_url: "https://open.spotify.com/album/2EzFFqkhvaXUaTzcWwWUDZ?si=_NKv0FV7T7KSWwJf-xvHvA"
@@ -44,11 +41,10 @@ sys_id: "SYS_202610_BOO"
 ---
 
 <div style="text-align: center;"> <h2>No words would ever be fair to describe:</h1>
-
+<br>
 
 <!-- Responsive Embed -->
 <div style="display: flex; justify-content: center;"><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2EzFFqkhvaXUaTzcWwWUDZ?utm_source=generator&si=f69dabd2e73d4d1c" width="75%" height="600" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
-
 
 ---
 

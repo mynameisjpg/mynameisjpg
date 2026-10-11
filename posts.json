@@ -2,7 +2,7 @@
   {
     "id": "the-music-vault",
     "slug": "the-music-vault",
-    "sys_id": "SYS_202609_BOO",
+    "sys_id": "SYS_202609_MUS",
     "title": "THE MUSIC VAULT",
     "subtitle": "",
     "excerpt": "",
@@ -21,7 +21,7 @@
     "subtopic": "ART VAULTS",
     "subtopic_id": "art-vaults",
     "theme": "dark",
-    "featured": false,
+    "featured": true,
     "shareable": true,
     "allow_embed": true,
     "gallery": true,
@@ -52,10 +52,11 @@
       "spotify",
       "sound",
       "perception",
-      "aesthetics"
+      "aesthetics",
+      "vault"
     ],
     "entities": null,
-    "content": "<h2 class=\"post-section-kicker essay-section-kicker\">01. Archival Excerpt</h2>\n\n<blockquote class=\"post-quote essay-quote\"><em>\"Quote.\"</em> — Author</blockquote>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">02. Editorial Commentary & Context</h2>\n\n<p class=\"post-paragraph essay-paragraph\">Provide your own analysis of why this external piece is significant:</p>\n\n<ul class=\"post-list essay-list\"><li><strong>What does it challenge?</strong> The prevailing assumption that language alone is sufficient for general intelligence.</li><li><strong>What does it introduce?</strong> The requirement for embodied 3D causal grounding.</li><li><strong>Where does it connect?</strong> Yann LeCun's world model framework and Gibsonian visual affordances.</li></ul>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">03. Key Takeaways</h2>\n\n<ol class=\"post-list essay-list\"><li><strong>Pixel Generation <span class=\"math-inline\">$\\neq$</span> Spatial Reasoning:</strong> Diffusion models generate photorealistic 2D textures without understanding 3D collision boundaries.</li><li><strong>The Embodiment Gap:</strong> True spatial perception requires continuous feedback between sensory perception and physical action.</li><li><strong>Implications for Interface Design:</strong> Moving beyond flat screens toward spatial computational environments.</li></ol>"
+    "content": "<h2 class=\"post-section-kicker essay-section-kicker\">[ Untitled.jpg - Music Vault ]</h2>\n\n<p class=\"post-paragraph essay-paragraph\">You'll see all my recommended #Music dispatches below as a Spotify playlist and in the Connected_Dispatches footer ↓↓↓</p>\n\n<br>\n\n<div style=\"display: flex; justify-content: center;\">\n\n<iframe data-testid=\"embed-iframe\" style=\"border-radius:8px\" src=\"https://open.spotify.com/embed/playlist/6tEJWWKnL59iiEpkCwQ45U?utm_source=generator&theme=0&si=7532e93ac3374332\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>\n\n</div>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">Connected_Dispatches</h2>\n\n<h3 class=\"post-subheading essay-subheading\">1. <strong>Sonoric Revelation</strong> | <a href=\"2026-10-11-marina-herlop-dja-dja.html\" target=\"_blank\" rel=\"noopener noreferrer\">Marina Herlop's Dja Dja</a></h3>"
   },
   {
     "id": "2026-10-11-marina-herlop-dja-dja",
@@ -96,14 +97,9 @@
     "links": [],
     "backlinks": [
       {
-        "slug": "#",
-        "title": "",
-        "note": ""
-      },
-      {
-        "slug": "#",
-        "title": "",
-        "note": ""
+        "slug": "the-music-vault",
+        "title": "THE MUSIC VAULT",
+        "note": "The most beloved sonoric experiences I can share"
       }
     ],
     "tags": [
@@ -119,7 +115,7 @@
       "share"
     ],
     "entities": null,
-    "content": "<div style=\"text-align: center;\"> <h2>No words would ever be fair to describe:</h1>\n\n<div style=\"display: flex; justify-content: center;\"><iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/album/2EzFFqkhvaXUaTzcWwWUDZ?utm_source=generator&si=f69dabd2e73d4d1c\" width=\"75%\" height=\"600\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe></div>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">01. This is what tickles my ears.</h2>\n\n<h3 class=\"post-subheading essay-subheading\">I constantly crave for music that gives me sounds and auditory experiences I've never met before. This is a great example of that.</div></h3>"
+    "content": "<div style=\"text-align: center;\"> <h2>No words would ever be fair to describe:</h1>\n\n<br>\n\n<div style=\"display: flex; justify-content: center;\"><iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/album/2EzFFqkhvaXUaTzcWwWUDZ?utm_source=generator&si=f69dabd2e73d4d1c\" width=\"75%\" height=\"600\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe></div>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">01. This is what tickles my ears.</h2>\n\n<h3 class=\"post-subheading essay-subheading\">I constantly crave for music that gives me sounds and auditory experiences I've never met before. This is a great example of that.</div></h3>"
   },
   {
     "id": "2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency",

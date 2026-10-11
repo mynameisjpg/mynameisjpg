@@ -20,7 +20,7 @@ tags:
   - "aesthetics"
   - "vault"
 reading_time: "Curated Playlist WIP"
-theme: "light"
+theme: "dark"
 featured: true
 shareable: true
 allow_embed: true
@@ -39,24 +39,17 @@ bookmark_url: "https://open.spotify.com/playlist/6tEJWWKnL59iiEpkCwQ45U?si=7d710
 sys_id: "SYS_202609_MUS"
 ---
 
-## 01. Archival Excerpt
+## [ Untitled.jpg - Music Vault ]
 
-> _"Quote."_ — Author
+You'll see all my recommended #Music dispatches below as a Spotify playlist and in the Connected_Dispatches footer ↓↓↓
+<br>
 
----
-
-## 02. Editorial Commentary & Context
-
-Provide your own analysis of why this external piece is significant:
-
-- **What does it challenge?** The prevailing assumption that language alone is sufficient for general intelligence.
-- **What does it introduce?** The requirement for embodied 3D causal grounding.
-- **Where does it connect?** Yann LeCun's world model framework and Gibsonian visual affordances.
+<div style="display: flex; justify-content: center;">
+<iframe data-testid="embed-iframe" style="border-radius:8px" src="https://open.spotify.com/embed/playlist/6tEJWWKnL59iiEpkCwQ45U?utm_source=generator&theme=0&si=7532e93ac3374332" width="100%" height="600" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
 
 ---
 
-## 03. Key Takeaways
+## Connected_Dispatches
 
-1. **Pixel Generation $\neq$ Spatial Reasoning:** Diffusion models generate photorealistic 2D textures without understanding 3D collision boundaries.
-2. **The Embodiment Gap:** True spatial perception requires continuous feedback between sensory perception and physical action.
-3. **Implications for Interface Design:** Moving beyond flat screens toward spatial computational environments.
+### 1. **Sonoric Revelation** | [Marina Herlop's Dja Dja](2026-10-11-marina-herlop-dja-dja.html)

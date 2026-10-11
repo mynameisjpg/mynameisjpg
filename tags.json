@@ -18543,6 +18543,58 @@
     ]
   },
   {
+    "id": "vault",
+    "name": "vault",
+    "label": "#vault",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "the-music-vault",
+        "slug": "the-music-vault",
+        "title": "THE MUSIC VAULT",
+        "date": "2026.09.26",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-music-vault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "THE MUSIC VAULT",
+        "slug": "the-music-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-music-vault.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "ART VAULTS"
+    ],
+    "connected_tags": [
+      "art-of-the-day",
+      "music",
+      "musicians",
+      "playlist",
+      "spotify",
+      "sound"
+    ]
+  },
+  {
     "id": "vicreg",
     "name": "vicreg",
     "label": "#vicreg",
