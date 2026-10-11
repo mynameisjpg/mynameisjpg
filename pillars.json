@@ -423,11 +423,7 @@
       "slug": "art-worth-sharing",
       "title": "Art worth sharing",
       "short_title": "Art Sharing",
-      "foundations": [
-        "art",
-        "perception",
-        "design"
-      ],
+      "foundations": ["art", "perception", "design"],
       "description": "Curated artistic creations, expansive soundscapes, avant-garde audiovisual experiences, and aesthetic artifacts.",
       "subtopics": [
         {
