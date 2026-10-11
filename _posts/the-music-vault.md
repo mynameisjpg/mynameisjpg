@@ -25,7 +25,7 @@ featured: true
 shareable: true
 allow_embed: true
 image:
-  path: "assets/images/music-vault.jpg"
+  path: "assets/images/music-vault.gif"
   alt: "Coral-red and black archival collage: a brutalist acoustic dish atop rocky ground, jagged audio waveforms, and a vintage phonograph beside rusty gears and wire."
 links: []
 backlinks:
