@@ -145,6 +145,23 @@
   }
 
   /**
+   * Smoothly anchor a card in the viewport center during width transitions
+   */
+  function scrollCardIntoViewWithTransition(cardEl) {
+    if (!cardEl) return;
+    const doScroll = () => {
+      try {
+        cardEl.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+      } catch (e) {
+        cardEl.scrollIntoView();
+      }
+    };
+    doScroll();
+    setTimeout(doScroll, 180);
+    setTimeout(doScroll, 360);
+  }
+
+  /**
    * Select a Card and Render in Reader Pane
    */
   function selectAndRenderPost(postId, updateUrl = true) {
@@ -157,6 +174,7 @@
       : postId;
     const canonicalSlug = String(rawSlug).replace(/^\d{4}-\d{2}-\d{2}-/, "");
 
+    let targetCard = null;
     const cards = document.querySelectorAll(".grid-card");
     cards.forEach((c) => {
       const cardId = c.getAttribute("data-id");
@@ -167,6 +185,7 @@
       ) {
         c.classList.add("selected-active");
         c.setAttribute("aria-pressed", "true");
+        targetCard = c;
       } else {
         c.classList.remove("selected-active");
         c.setAttribute("aria-pressed", "false");
@@ -178,6 +197,10 @@
     const splitLayout = document.querySelector(".split-layout");
     if (splitLayout) {
       splitLayout.classList.add("reader-open");
+    }
+
+    if (targetCard) {
+      scrollCardIntoViewWithTransition(targetCard);
     }
 
     if (window.innerWidth <= 980 || window.innerHeight <= 700) {
@@ -199,6 +222,12 @@
    * Close Reader Pane & Return to Full Grid View
    */
   function closeReaderPane() {
+    const activeId = getActivePostId();
+    const activeCard = activeId
+      ? document.querySelector(`.grid-card[data-id="${activeId}"]`) ||
+        document.querySelector(".grid-card.selected-active")
+      : null;
+
     setActivePostId("");
     const splitLayout = document.querySelector(".split-layout");
     if (splitLayout) {
@@ -211,6 +240,10 @@
       c.classList.remove("selected-active");
       c.setAttribute("aria-pressed", "false");
     });
+
+    if (activeCard) {
+      scrollCardIntoViewWithTransition(activeCard);
+    }
 
     if (
       typeof window !== "undefined" &&
@@ -471,75 +504,86 @@
     // Smooth scroll reader to top on post change
     pane.scrollTo({ top: 0, behavior: "smooth" });
 
-    // Auto-render KaTeX math formulas if available
-    if (typeof renderMathInElement === "function") {
-      try {
-        renderMathInElement(pane, {
-          delimiters: [
-            { left: "$$", right: "$$", display: true },
-            { left: "$", right: "$", display: false },
-            { left: "\\[", right: "\\]", display: true },
-            { left: "\\(", right: "\\)", display: false },
-          ],
-          ignoredTags: [
-            "script",
-            "noscript",
-            "style",
-            "textarea",
-            "pre",
-            "option",
-          ],
-          throwOnError: false,
-        });
-      } catch (err) {
-        console.log("[KaTeX] Math render skipped:", err);
+    // Defer heavy KaTeX math parsing & Mermaid diagram rendering until after the drawer transition completes (350ms)
+    const runDeferredEnhancements = () => {
+      // Auto-render KaTeX math formulas if available
+      if (typeof renderMathInElement === "function") {
+        try {
+          renderMathInElement(pane, {
+            delimiters: [
+              { left: "$$", right: "$$", display: true },
+              { left: "$", right: "$", display: false },
+              { left: "\\[", right: "\\]", display: true },
+              { left: "\\(", right: "\\)", display: false },
+            ],
+            ignoredTags: [
+              "script",
+              "noscript",
+              "style",
+              "textarea",
+              "pre",
+              "option",
+            ],
+            throwOnError: false,
+          });
+        } catch (err) {
+          console.log("[KaTeX] Math render skipped:", err);
+        }
       }
-    }
 
-    // Auto-render Mermaid diagrams if available
-    if (typeof mermaid !== "undefined") {
-      try {
-        pane.querySelectorAll("pre code.language-mermaid").forEach((el) => {
-          const pre = el.parentElement;
-          const rawCode = el.textContent;
-          const container = document.createElement("div");
-          container.className = "mermaid-diagram-box";
-          container.innerHTML = `<pre class="mermaid">\n${rawCode}\n</pre>`;
-          pre.replaceWith(container);
-        });
+      // Auto-render Mermaid diagrams if available
+      if (typeof mermaid !== "undefined") {
+        try {
+          pane.querySelectorAll("pre code.language-mermaid").forEach((el) => {
+            const pre = el.parentElement;
+            const rawCode = el.textContent;
+            const container = document.createElement("div");
+            container.className = "mermaid-diagram-box";
+            container.innerHTML = `<pre class="mermaid">\n${rawCode}\n</pre>`;
+            pre.replaceWith(container);
+          });
 
-        const isLight = pane.classList.contains("theme-light");
-        mermaid.initialize({
-          startOnLoad: false,
-          theme: isLight ? "neutral" : "dark",
-          themeVariables: {
-            darkMode: !isLight,
-            background: "transparent",
-            mainBkg: isLight ? "#FFFFFF" : "#141414",
-            nodeBkg: isLight ? "#FFFFFF" : "#141414",
-            primaryColor: isLight ? "#FFFFFF" : "#141414",
-            primaryTextColor: isLight ? "#1B2427" : "#F5F5F5",
-            primaryBorderColor: isLight
-              ? "rgba(0, 0, 0, 0.18)"
-              : "rgba(255, 255, 255, 0.18)",
-            nodeBorder: isLight
-              ? "rgba(0, 0, 0, 0.18)"
-              : "rgba(255, 255, 255, 0.18)",
-            clusterBkg: "transparent",
-            clusterBorder: "none",
-            lineColor: "#E84A5F",
-            edgeLabelBackground: isLight ? "#DEE6E9" : "#0E0E0E",
-            fontFamily: "'Azeret Mono', monospace",
-            fontSize: "12px",
-          },
-          securityLevel: "loose",
-        });
-        mermaid.run({
-          nodes: pane.querySelectorAll(".mermaid"),
-        });
-      } catch (err) {
-        console.log("[Mermaid] Render skipped:", err);
+          const isLight = pane.classList.contains("theme-light");
+          mermaid.initialize({
+            startOnLoad: false,
+            theme: isLight ? "neutral" : "dark",
+            themeVariables: {
+              darkMode: !isLight,
+              background: "transparent",
+              mainBkg: isLight ? "#FFFFFF" : "#141414",
+              nodeBkg: isLight ? "#FFFFFF" : "#141414",
+              primaryColor: isLight ? "#FFFFFF" : "#141414",
+              primaryTextColor: isLight ? "#1B2427" : "#F5F5F5",
+              primaryBorderColor: isLight
+                ? "rgba(0, 0, 0, 0.18)"
+                : "rgba(255, 255, 255, 0.18)",
+              nodeBorder: isLight
+                ? "rgba(0, 0, 0, 0.18)"
+                : "rgba(255, 255, 255, 0.18)",
+              clusterBkg: "transparent",
+              clusterBorder: "none",
+              lineColor: "#E84A5F",
+              edgeLabelBackground: isLight ? "#DEE6E9" : "#0E0E0E",
+              fontFamily: "'Azeret Mono', monospace",
+              fontSize: "12px",
+            },
+            securityLevel: "loose",
+          });
+          mermaid.run({
+            nodes: pane.querySelectorAll(".mermaid"),
+          });
+        } catch (err) {
+          console.log("[Mermaid] Render skipped:", err);
+        }
       }
+    };
+
+    if ("requestIdleCallback" in window) {
+      setTimeout(() => {
+        requestIdleCallback(runDeferredEnhancements, { timeout: 1000 });
+      }, 360);
+    } else {
+      setTimeout(runDeferredEnhancements, 360);
     }
   }
 

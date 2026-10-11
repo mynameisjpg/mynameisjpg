@@ -1,5 +1,5 @@
 /**
- * UNTITLED.JPG — COMPONENT: NAVIGATION & CONTROLS (js/components/navigation-controls.js)
+ * UNTITLED.JPG - COMPONENT: NAVIGATION & CONTROLS (js/components/navigation-controls.js)
  * Manages top navigation dropdowns (Dispatch Log, Search, Format Filter, Sort Order),
  * instant-sync debounced search input handling, category & pillar filter selection,
  * outside click dismissal, and global keyboard shortcuts (j/k/Escape).
@@ -318,7 +318,9 @@
         opt.addEventListener("click", (e) => {
           e.preventDefault();
           e.stopPropagation();
-          const sortKey = (opt.getAttribute("data-sort") || "newest").toLowerCase();
+          const sortKey = (
+            opt.getAttribute("data-sort") || "newest"
+          ).toLowerCase();
           updateSortSelection(sortKey, opt.textContent.trim(), true);
           closeAllTopDropdowns();
         });
@@ -330,7 +332,9 @@
     });
 
     // Subscribe trigger
-    const sidebarSubscribeBtn = document.getElementById("sidebar-subscribe-btn");
+    const sidebarSubscribeBtn = document.getElementById(
+      "sidebar-subscribe-btn",
+    );
     if (sidebarSubscribeBtn) {
       sidebarSubscribeBtn.addEventListener("click", (e) => {
         e.preventDefault();
@@ -344,7 +348,8 @@
     function scrollCurrentView(toBottom = false) {
       const splitLayout = document.querySelector(".split-layout");
       const isMobile = window.innerWidth <= 980;
-      const isReaderActive = splitLayout && splitLayout.classList.contains("mobile-reader-active");
+      const isReaderActive =
+        splitLayout && splitLayout.classList.contains("mobile-reader-active");
 
       if (isMobile && !isReaderActive) {
         const matrixCol =
@@ -352,8 +357,16 @@
           document.querySelector("[data-component='dispatch-matrix']");
         const target = matrixCol || window;
         if (toBottom) {
-          if (matrixCol) matrixCol.scrollTo({ top: matrixCol.scrollHeight, behavior: "smooth" });
-          else window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+          if (matrixCol)
+            matrixCol.scrollTo({
+              top: matrixCol.scrollHeight,
+              behavior: "smooth",
+            });
+          else
+            window.scrollTo({
+              top: document.body.scrollHeight,
+              behavior: "smooth",
+            });
         } else {
           if (matrixCol) matrixCol.scrollTo({ top: 0, behavior: "smooth" });
           else window.scrollTo({ top: 0, behavior: "smooth" });
@@ -361,7 +374,10 @@
       } else {
         const pane = document.getElementById("essay-reading-pane");
         if (pane) {
-          pane.scrollTo({ top: toBottom ? pane.scrollHeight : 0, behavior: "smooth" });
+          pane.scrollTo({
+            top: toBottom ? pane.scrollHeight : 0,
+            behavior: "smooth",
+          });
         }
       }
     }
@@ -380,35 +396,271 @@
 
     // Global Keyboard Shortcuts (j / k / Escape)
     document.addEventListener("keydown", (e) => {
-      const activeTag = document.activeElement ? document.activeElement.tagName.toLowerCase() : "";
-      if (activeTag === "input" || activeTag === "textarea" || activeTag === "select") return;
+      const activeTag = document.activeElement
+        ? document.activeElement.tagName.toLowerCase()
+        : "";
+      if (
+        activeTag === "input" ||
+        activeTag === "textarea" ||
+        activeTag === "select"
+      )
+        return;
 
       if (e.key === "j" || e.key === "ArrowDown") {
         const appState = getAppState();
-        const posts = typeof appState.getFilteredAndSortedPosts === "function" ? appState.getFilteredAndSortedPosts() : [];
+        const posts =
+          typeof appState.getFilteredAndSortedPosts === "function"
+            ? appState.getFilteredAndSortedPosts()
+            : [];
         if (posts.length > 0) {
           const currentId = appState.activePostId || window.activePostId || "";
-          const curIndex = posts.findIndex((p) => (p.slug || p.id || p.sys_id) === currentId);
+          const curIndex = posts.findIndex(
+            (p) => (p.slug || p.id || p.sys_id) === currentId,
+          );
           const nextIndex = curIndex < posts.length - 1 ? curIndex + 1 : 0;
           const nextPost = posts[nextIndex];
           if (nextPost && window.selectAndRenderPost) {
-            window.selectAndRenderPost(nextPost.slug || nextPost.id || nextPost.sys_id);
+            window.selectAndRenderPost(
+              nextPost.slug || nextPost.id || nextPost.sys_id,
+            );
           }
         }
       } else if (e.key === "k" || e.key === "ArrowUp") {
         const appState = getAppState();
-        const posts = typeof appState.getFilteredAndSortedPosts === "function" ? appState.getFilteredAndSortedPosts() : [];
+        const posts =
+          typeof appState.getFilteredAndSortedPosts === "function"
+            ? appState.getFilteredAndSortedPosts()
+            : [];
         if (posts.length > 0) {
           const currentId = appState.activePostId || window.activePostId || "";
-          const curIndex = posts.findIndex((p) => (p.slug || p.id || p.sys_id) === currentId);
+          const curIndex = posts.findIndex(
+            (p) => (p.slug || p.id || p.sys_id) === currentId,
+          );
           const prevIndex = curIndex > 0 ? curIndex - 1 : posts.length - 1;
           const prevPost = posts[prevIndex];
           if (prevPost && window.selectAndRenderPost) {
-            window.selectAndRenderPost(prevPost.slug || prevPost.id || prevPost.sys_id);
+            window.selectAndRenderPost(
+              prevPost.slug || prevPost.id || prevPost.sys_id,
+            );
           }
         }
       }
     });
+  }
+
+  /**
+   * Synchronize Active UI Filter & Sort Indicators in the DOM
+   */
+  function syncFilterUIState() {
+    const app = getAppState();
+    const activeFilter = app.activeFilter || window.activeFilter || "all";
+    const activePillar = app.activePillar || window.activePillar || "all";
+    const activeSort = app.activeSort || window.activeSort || "recent";
+
+    const cleanFilter = (activeFilter || "all").toLowerCase().replace(/s$/, "");
+    const navLinks = document.querySelectorAll(
+      "#category-filter-nav .nav-link-item, .sidebar-rail .nav-link-item",
+    );
+    const filterLabel = document.getElementById("active-filter-label");
+    const filterValLabel = document.getElementById("current-filter-val");
+    const sortValLabel = document.getElementById("current-sort-val");
+    const dispatchLogBtn = document.getElementById("dispatch-log-btn");
+
+    navLinks.forEach((l) => {
+      const lFilter = (l.getAttribute("data-filter") || "")
+        .toLowerCase()
+        .replace(/s$/, "");
+      if (cleanFilter !== "all" && lFilter === cleanFilter) {
+        l.classList.add("active");
+      } else {
+        l.classList.remove("active");
+      }
+    });
+
+    const rail = document.querySelector("sidebar-rail");
+    if (rail) {
+      rail.setAttribute(
+        "active-filter",
+        cleanFilter !== "all" ? cleanFilter : "",
+      );
+    }
+
+    // Highlight dropdown options
+    document
+      .querySelectorAll(
+        "#top-filter-dropdown .dropdown-option, #dispatch-log-dropdown .dropdown-option, #filter-dropdown .dropdown-opt",
+      )
+      .forEach((opt) => {
+        const f = (opt.getAttribute("data-filter") || "all")
+          .toLowerCase()
+          .replace(/s$/, "");
+        opt.classList.toggle("active", f === cleanFilter);
+      });
+
+    // Highlight sort dropdown options
+    document
+      .querySelectorAll(
+        "#top-sort-dropdown .dropdown-option, #sort-dropdown .dropdown-opt",
+      )
+      .forEach((opt) => {
+        const s = opt.getAttribute("data-sort") || "recent";
+        const isActiveSort =
+          s === activeSort || (s === "newest" && activeSort === "recent");
+        opt.classList.toggle("active", isActiveSort);
+      });
+
+    if (filterValLabel) {
+      const labels = {
+        all: "ALL POSTS",
+        essay: "ESSAYS",
+        note: "NOTES",
+        bookmark: "BOOKMARKS",
+        resource: "RESOURCES",
+      };
+      if (activePillar !== "all") {
+        filterValLabel.textContent = `PILLAR: ${activePillar.toUpperCase().replace(/[-_]/g, " ")}`;
+      } else {
+        filterValLabel.textContent =
+          labels[cleanFilter] ||
+          (cleanFilter !== "all" ? cleanFilter.toUpperCase() : "ALL POSTS");
+      }
+    }
+
+    if (sortValLabel) {
+      const sortLabels = {
+        recent: "MOST RECENT",
+        oldest: "OLDEST FIRST",
+        title: "ALPHABETICAL",
+        readtime: "READING TIME",
+      };
+      sortValLabel.textContent = sortLabels[activeSort] || "MOST RECENT";
+    }
+
+    if (dispatchLogBtn) {
+      const label =
+        cleanFilter === "all"
+          ? "_DISPATCH_LOG"
+          : `_${cleanFilter.toUpperCase()}S`;
+      dispatchLogBtn.innerHTML = `${label} &#9660;`;
+    }
+
+    if (filterLabel) {
+      if (activePillar !== "all") {
+        filterLabel.textContent = `[PILLAR: ${activePillar.toUpperCase().replace(/[-_]/g, " ")}]`;
+      } else {
+        filterLabel.textContent = `[MODE: ${cleanFilter.toUpperCase()}_DISPATCHES]`;
+      }
+    }
+  }
+
+  /**
+   * Sync Browser URL with In-Memory State
+   */
+  function updateBrowserUrl(replace = false) {
+    if (
+      typeof window === "undefined" ||
+      !window.history ||
+      !window.history.pushState
+    )
+      return;
+    const url = new URL(window.location.href);
+    const app = getAppState();
+    const activeFilter = app.activeFilter || window.activeFilter || "all";
+    const activePillar = app.activePillar || window.activePillar || "all";
+    const activeSort = app.activeSort || window.activeSort || "recent";
+    const searchQuery = app.searchQuery || window.searchQuery || "";
+
+    if (activeFilter && activeFilter !== "all") {
+      url.searchParams.set("filter", activeFilter);
+    } else {
+      url.searchParams.delete("filter");
+      url.searchParams.delete("format");
+    }
+
+    if (activePillar && activePillar !== "all") {
+      url.searchParams.set("pillar", activePillar);
+    } else {
+      url.searchParams.delete("pillar");
+      url.searchParams.delete("topic");
+      url.searchParams.delete("subtopic");
+    }
+
+    if (searchQuery && searchQuery.trim()) {
+      url.searchParams.set("search", searchQuery.trim());
+    } else {
+      url.searchParams.delete("search");
+      url.searchParams.delete("q");
+    }
+
+    if (activeSort && activeSort !== "recent") {
+      url.searchParams.set("sort", activeSort);
+    } else {
+      url.searchParams.delete("sort");
+    }
+
+    const newUrl =
+      url.pathname +
+      (url.search ? url.search : "") +
+      (window.location.hash || "");
+    if (replace) {
+      window.history.replaceState(null, "", newUrl);
+    } else {
+      window.history.pushState(null, "", newUrl);
+    }
+  }
+
+  /**
+   * URL Parameter Parser & Syncer
+   */
+  function parseUrlParamsAndApply() {
+    if (typeof window === "undefined" || !window.location) return;
+    const params = new URLSearchParams(window.location.search);
+    const app = getAppState();
+
+    // 1. Format filter
+    const filterParam = params.get("filter") || params.get("format");
+    if (filterParam) {
+      const cleanF = filterParam.toLowerCase().trim().replace(/s$/, "");
+      const valid = ["all", "essay", "note", "bookmark", "resource"];
+      const val = valid.includes(cleanF) ? cleanF : filterParam.toLowerCase();
+      if ("activeFilter" in app) app.activeFilter = val;
+      if (typeof window !== "undefined") window.activeFilter = val;
+    }
+
+    // 2. Pillar filter
+    const pillarParam =
+      params.get("pillar") || params.get("topic") || params.get("subtopic");
+    if (pillarParam) {
+      const val = pillarParam.toLowerCase().trim();
+      if ("activePillar" in app) app.activePillar = val;
+      if (typeof window !== "undefined") window.activePillar = val;
+    }
+
+    // 3. Search query
+    const qParam = params.get("search") || params.get("q");
+    if (qParam) {
+      const val = qParam.trim();
+      if ("searchQuery" in app) app.searchQuery = val;
+      if (typeof window !== "undefined") window.searchQuery = val;
+      const searchInput = document.getElementById("matrix-search-input");
+      const clearBtn = document.getElementById("clear-search-btn");
+      const inlineInput = document.getElementById("top-inline-search-input");
+      const modalInput = document.getElementById("top-search-input");
+      if (searchInput) searchInput.value = val;
+      if (clearBtn) clearBtn.style.display = val ? "inline-block" : "none";
+      if (inlineInput) inlineInput.value = val;
+      if (modalInput) modalInput.value = val;
+    }
+
+    // 4. Sort order
+    const sortParam = params.get("sort");
+    if (sortParam) {
+      const val = sortParam === "newest" ? "recent" : sortParam.toLowerCase();
+      if ("activeSort" in app) app.activeSort = val;
+      if (typeof window !== "undefined") window.activeSort = val;
+    }
+
+    syncFilterUIState();
   }
 
   // Component Export
@@ -427,6 +679,10 @@
     applyTopFilter,
     applyTopSort,
     positionDropdown,
+    syncFilterUIState,
+    syncUIState: syncFilterUIState,
+    updateBrowserUrl,
+    parseUrlParamsAndApply,
   };
 
   if (typeof window !== "undefined") {
@@ -439,5 +695,8 @@
     window.applyTopSort = applyTopSort;
     window.closeAllTopDropdowns = closeAllTopDropdowns;
     window.closeAllControlDropdowns = closeAllControlDropdowns;
+    window.syncFilterUIState = syncFilterUIState;
+    window.updateBrowserUrl = updateBrowserUrl;
+    window.parseUrlParamsAndApply = parseUrlParamsAndApply;
   }
 })();

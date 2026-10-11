@@ -13,9 +13,6 @@
   margin: 0 auto;
   width: 100%;
   padding-bottom: 4rem;
-  transition:
-    max-width 0.35s ease,
-    grid-template-columns 0.35s ease;
 }
 
 .split-layout.reader-open .card-grid-matrix {
@@ -29,6 +26,7 @@
   background-color: rgba(12, 12, 12, 0.72);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  contain: layout paint;
   display: flex;
   flex-direction: column;
   cursor: pointer;

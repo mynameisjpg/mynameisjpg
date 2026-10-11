@@ -1,11 +1,11 @@
 /* ==============================================================================
-   UNTITLED.JPG — CORE APPLICATION ORCHESTRATOR & STATE HUB (app.js)
-   Brand: Juan Pablo Giusepponi — "Overthinking Undervalued Means"
+   UNTITLED.JPG - CORE APPLICATION ORCHESTRATOR & STATE HUB (app.js)
+   Brand: Juan Pablo Giusepponi - "Overthinking Undervalued Means"
    Modular Component Architecture:
    - js/components/card-matrix.js          -> Asymmetric 3x3 Card Grid & Pagination
    - js/components/reader-pane.js          -> Markdown, KaTeX, Mermaid & Reading View
-   - js/components/navigation-controls.js  -> Header Dropdowns, Search & Filter Controls
-   - js/components/subscribe-modal.js      -> Newsletter Dialog & Google Forms Pipeline
+   - js/components/navigation-controls.js  -> Header Dropdowns, Search, Routing & Filters
+   - js/components/subscribe-modal.js      -> Newsletter Dialog & Pipeline
    ============================================================================== */
 
 (function () {
@@ -14,7 +14,7 @@
   /**
    * In-Memory Post Store & Taxonomy State
    */
-  let POSTS_DATABASE = {};
+  const POSTS_DATABASE = {};
   let cachedUniquePublishedPosts = null;
 
   let activePostId = "";
@@ -35,35 +35,16 @@
     invalidatePostsCache();
     postsArray.forEach((p) => {
       const key = p.slug || p.id || p.sys_id;
-      if (key) {
-        POSTS_DATABASE[key] = p;
-        if (p.sys_id) POSTS_DATABASE[p.sys_id] = p;
-        if (p.slug) {
-          POSTS_DATABASE[p.slug] = p;
-          const cleanSlug = p.slug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
-          if (cleanSlug && cleanSlug !== p.slug) {
-            POSTS_DATABASE[cleanSlug] = p;
-          }
-        }
-        if (p.id) POSTS_DATABASE[p.id] = p;
+      if (!key) return;
 
-        // Map static/legacy card data-id aliases
-        const s = (p.slug || "").toLowerCase();
-        if (s.includes("turing")) {
-          POSTS_DATABASE["post-turing"] = p;
-          POSTS_DATABASE["turing"] = p;
-        }
-        if (s.includes("foucault")) {
-          POSTS_DATABASE["post-foucault"] = p;
-          POSTS_DATABASE["foucault"] = p;
-        }
-        if (s.includes("jepa") || s.includes("lecun")) {
-          POSTS_DATABASE["post-jepa"] = p;
-          POSTS_DATABASE["jepa"] = p;
-        }
-        if (s.includes("excavating")) {
-          POSTS_DATABASE["post-excavating"] = p;
-          POSTS_DATABASE["excavating"] = p;
+      POSTS_DATABASE[key] = p;
+      if (p.sys_id) POSTS_DATABASE[p.sys_id] = p;
+      if (p.id) POSTS_DATABASE[p.id] = p;
+      if (p.slug) {
+        POSTS_DATABASE[p.slug] = p;
+        const cleanSlug = p.slug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
+        if (cleanSlug && cleanSlug !== p.slug) {
+          POSTS_DATABASE[cleanSlug] = p;
         }
       }
     });
@@ -103,7 +84,7 @@
   }
 
   /**
-   * Filter & Sort Helper for Dispatches
+   * Filter & Sort Engine for Dispatches
    */
   function getFilteredAndSortedPosts() {
     if (!cachedUniquePublishedPosts) {
@@ -177,7 +158,8 @@
       } else if (activeSort === "oldest") {
         return (a.date || "").localeCompare(b.date || "");
       } else if (activeSort === "readtime") {
-        const parseTime = (str) => parseInt((str || "").replace(/\D/g, "")) || 0;
+        const parseTime = (str) =>
+          parseInt((str || "").replace(/\D/g, "")) || 0;
         return parseTime(b.read_time) - parseTime(a.read_time);
       } else if (activeSort === "title") {
         return (a.title || "").localeCompare(b.title || "");
@@ -215,7 +197,9 @@
     }
 
     // Parse URL search parameters (?filter=essay, ?pillar=visual-perception, etc.)
-    parseUrlParamsAndApply();
+    if (window.parseUrlParamsAndApply) {
+      window.parseUrlParamsAndApply();
+    }
 
     // Check URL Hash or INITIAL_POST_SLUG for deep-link
     const rawHash = (window.location.hash || "").replace("#", "");
@@ -249,206 +233,6 @@
   }
 
   /**
-   * URL Parameter Parser & Syncer
-   */
-  function parseUrlParamsAndApply() {
-    if (typeof window === "undefined" || !window.location) return;
-    const params = new URLSearchParams(window.location.search);
-
-    // 1. Format filter
-    const filterParam = params.get("filter") || params.get("format");
-    if (filterParam) {
-      const cleanF = filterParam.toLowerCase().trim().replace(/s$/, "");
-      const valid = ["all", "essay", "note", "bookmark", "resource"];
-      if (valid.includes(cleanF) || valid.includes(filterParam.toLowerCase())) {
-        activeFilter = valid.includes(cleanF)
-          ? cleanF
-          : filterParam.toLowerCase();
-      }
-    }
-
-    // 2. Pillar filter
-    const pillarParam =
-      params.get("pillar") || params.get("topic") || params.get("subtopic");
-    if (pillarParam) {
-      activePillar = pillarParam.toLowerCase().trim();
-    }
-
-    // 3. Search query
-    const qParam = params.get("search") || params.get("q");
-    if (qParam) {
-      searchQuery = qParam.trim();
-      const searchInput = document.getElementById("matrix-search-input");
-      const clearBtn = document.getElementById("clear-search-btn");
-      const inlineInput = document.getElementById("top-inline-search-input");
-      const modalInput = document.getElementById("top-search-input");
-      if (searchInput) searchInput.value = searchQuery;
-      if (clearBtn) clearBtn.style.display = searchQuery ? "inline-block" : "none";
-      if (inlineInput) inlineInput.value = searchQuery;
-      if (modalInput) modalInput.value = searchQuery;
-    }
-
-    // 4. Sort order
-    const sortParam = params.get("sort");
-    if (sortParam) {
-      activeSort = sortParam === "newest" ? "recent" : sortParam.toLowerCase();
-    }
-
-    syncFilterUIState();
-  }
-
-  /**
-   * Sync Browser URL with In-Memory State
-   */
-  function updateBrowserUrl(replace = false) {
-    if (
-      typeof window === "undefined" ||
-      !window.history ||
-      !window.history.pushState
-    )
-      return;
-    const url = new URL(window.location.href);
-
-    if (activeFilter && activeFilter !== "all") {
-      url.searchParams.set("filter", activeFilter);
-    } else {
-      url.searchParams.delete("filter");
-      url.searchParams.delete("format");
-    }
-
-    if (activePillar && activePillar !== "all") {
-      url.searchParams.set("pillar", activePillar);
-    } else {
-      url.searchParams.delete("pillar");
-      url.searchParams.delete("topic");
-      url.searchParams.delete("subtopic");
-    }
-
-    if (searchQuery && searchQuery.trim()) {
-      url.searchParams.set("search", searchQuery.trim());
-    } else {
-      url.searchParams.delete("search");
-      url.searchParams.delete("q");
-    }
-
-    if (activeSort && activeSort !== "recent") {
-      url.searchParams.set("sort", activeSort);
-    } else {
-      url.searchParams.delete("sort");
-    }
-
-    const newUrl =
-      url.pathname +
-      (url.search ? url.search : "") +
-      (window.location.hash || "");
-    if (replace) {
-      window.history.replaceState(null, "", newUrl);
-    } else {
-      window.history.pushState(null, "", newUrl);
-    }
-  }
-
-  /**
-   * Synchronize Active UI Filter & Sort Indicators
-   */
-  function syncFilterUIState() {
-    const cleanFilter = (activeFilter || "all").toLowerCase().replace(/s$/, "");
-    const navLinks = document.querySelectorAll(
-      "#category-filter-nav .nav-link-item, .sidebar-rail .nav-link-item",
-    );
-    const filterLabel = document.getElementById("active-filter-label");
-    const filterValLabel = document.getElementById("current-filter-val");
-    const sortValLabel = document.getElementById("current-sort-val");
-    const dispatchLogBtn = document.getElementById("dispatch-log-btn");
-
-    navLinks.forEach((l) => {
-      const lFilter = (l.getAttribute("data-filter") || "")
-        .toLowerCase()
-        .replace(/s$/, "");
-      if (cleanFilter !== "all" && lFilter === cleanFilter) {
-        l.classList.add("active");
-      } else {
-        l.classList.remove("active");
-      }
-    });
-
-    const rail = document.querySelector("sidebar-rail");
-    if (rail) {
-      rail.setAttribute(
-        "active-filter",
-        cleanFilter !== "all" ? cleanFilter : "",
-      );
-    }
-
-    // Highlight dropdown options
-    document
-      .querySelectorAll(
-        "#top-filter-dropdown .dropdown-option, #dispatch-log-dropdown .dropdown-option, #filter-dropdown .dropdown-opt",
-      )
-      .forEach((opt) => {
-        const f = (opt.getAttribute("data-filter") || "all")
-          .toLowerCase()
-          .replace(/s$/, "");
-        opt.classList.toggle("active", f === cleanFilter);
-      });
-
-    // Highlight sort dropdown options
-    document
-      .querySelectorAll(
-        "#top-sort-dropdown .dropdown-option, #sort-dropdown .dropdown-opt",
-      )
-      .forEach((opt) => {
-        const s = opt.getAttribute("data-sort") || "recent";
-        const isActiveSort =
-          s === activeSort || (s === "newest" && activeSort === "recent");
-        opt.classList.toggle("active", isActiveSort);
-      });
-
-    if (filterValLabel) {
-      const labels = {
-        all: "ALL POSTS",
-        essay: "ESSAYS",
-        note: "NOTES",
-        bookmark: "BOOKMARKS",
-        resource: "RESOURCES",
-      };
-      if (activePillar !== "all") {
-        filterValLabel.textContent = `PILLAR: ${activePillar.toUpperCase().replace(/[-_]/g, " ")}`;
-      } else {
-        filterValLabel.textContent =
-          labels[cleanFilter] ||
-          (cleanFilter !== "all" ? cleanFilter.toUpperCase() : "ALL POSTS");
-      }
-    }
-
-    if (sortValLabel) {
-      const sortLabels = {
-        recent: "MOST RECENT",
-        oldest: "OLDEST FIRST",
-        title: "ALPHABETICAL",
-        readtime: "READING TIME",
-      };
-      sortValLabel.textContent = sortLabels[activeSort] || "MOST RECENT";
-    }
-
-    if (dispatchLogBtn) {
-      const label =
-        cleanFilter === "all"
-          ? "_DISPATCH_LOG"
-          : `_${cleanFilter.toUpperCase()}S`;
-      dispatchLogBtn.innerHTML = `${label} &#9660;`;
-    }
-
-    if (filterLabel) {
-      if (activePillar !== "all") {
-        filterLabel.textContent = `[PILLAR: ${activePillar.toUpperCase().replace(/[-_]/g, " ")}]`;
-      } else {
-        filterLabel.textContent = `[MODE: ${cleanFilter.toUpperCase()}_DISPATCHES]`;
-      }
-    }
-  }
-
-  /**
    * Full Page Reset (Brand Logo & Home Icon)
    */
   function resetPage() {
@@ -476,111 +260,73 @@
   }
 
   /**
-   * Ensure Modular Components are loaded
-   */
-  function ensureComponentScripts(callback) {
-    const components = [
-      { name: "SubscribeModal", src: "js/components/subscribe-modal.js" },
-      { name: "CardMatrix", src: "js/components/card-matrix.js" },
-      { name: "ReaderPane", src: "js/components/reader-pane.js" },
-      { name: "NavigationControls", src: "js/components/navigation-controls.js" },
-    ];
-
-    const missing = components.filter(
-      (c) => typeof window[c.name] === "undefined",
-    );
-    if (missing.length === 0) {
-      if (callback) callback();
-      return;
-    }
-
-    let loaded = 0;
-    missing.forEach((c) => {
-      const s = document.createElement("script");
-      s.src = c.src;
-      s.onload = () => {
-        loaded++;
-        if (loaded === missing.length && callback) callback();
-      };
-      s.onerror = () => {
-        console.warn(`[UNTITLED.JPG] Component script note: ${c.src}`);
-        loaded++;
-        if (loaded === missing.length && callback) callback();
-      };
-      document.head.appendChild(s);
-    });
-  }
-
-  /**
    * Initialize Client Application & Wire Components
    */
   function initApp() {
-    ensureComponentScripts(() => {
-      if (typeof window !== "undefined" && window.DYNAMIC_POSTS) {
-        ingestPostList(window.DYNAMIC_POSTS);
-      }
+    if (typeof window !== "undefined" && window.DYNAMIC_POSTS) {
+      ingestPostList(window.DYNAMIC_POSTS);
+    }
 
-      // Initialize Navigation & Controls Listeners
-      if (window.NavigationControls && window.NavigationControls.init) {
-        window.NavigationControls.init();
-      }
+    // Initialize Navigation & Controls Listeners
+    if (window.NavigationControls && window.NavigationControls.init) {
+      window.NavigationControls.init();
+    }
 
-      // Initialize Subscribe Hint Animation
-      if (window.SubscribeModal && window.SubscribeModal.initAnimation) {
-        window.SubscribeModal.initAnimation();
-      }
+    // Initialize Subscribe Hint Animation
+    if (window.SubscribeModal && window.SubscribeModal.initAnimation) {
+      window.SubscribeModal.initAnimation();
+    }
 
-      // Reset page on brand logo or home icon click
-      const brandLogo = document.querySelector(".brand-logo-v");
-      if (brandLogo) {
-        brandLogo.addEventListener("click", (e) => {
-          e.preventDefault();
-          resetPage();
-        });
-      }
-
-      const homeBtn = document.getElementById("sidebar-home-btn");
-      if (homeBtn) {
-        homeBtn.addEventListener("click", (e) => {
-          e.preventDefault();
-          resetPage();
-        });
-      }
-
-      // Static Format Filter Fallback Links
-      const staticNavLinks = document.querySelectorAll(
-        "nav:not(sidebar-rail nav) .nav-link-item",
-      );
-      staticNavLinks.forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault();
-          const filter = (link.getAttribute("data-filter") || "all")
-            .toLowerCase()
-            .replace(/s$/, "");
-          if (window.applyCategoryFilter) {
-            window.applyCategoryFilter(filter, true);
-          }
-        });
+    // Reset page on brand logo or home icon click
+    const brandLogo = document.querySelector(".brand-logo-v");
+    if (brandLogo) {
+      brandLogo.addEventListener("click", (e) => {
+        e.preventDefault();
+        resetPage();
       });
+    }
 
-      // Attach Infinite Scroll Listeners
-      const matrixCol =
-        document.querySelector(".grid-column") ||
-        document.querySelector("[data-component='dispatch-matrix']");
-      if (matrixCol && window.handleMatrixScroll) {
-        matrixCol.addEventListener("scroll", window.handleMatrixScroll, {
-          passive: true,
-        });
-      }
-      if (window.handleMatrixScroll) {
-        window.addEventListener("scroll", window.handleMatrixScroll, {
-          passive: true,
-        });
-      }
+    const homeBtn = document.getElementById("sidebar-home-btn");
+    if (homeBtn) {
+      homeBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        resetPage();
+      });
+    }
 
-      // Load dynamic posts & render UI
-      loadDynamicPosts();
+    // Static Format Filter Fallback Links
+    const staticNavLinks = document.querySelectorAll(
+      "nav:not(sidebar-rail nav) .nav-link-item",
+    );
+    staticNavLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const filter = (link.getAttribute("data-filter") || "all")
+          .toLowerCase()
+          .replace(/s$/, "");
+        if (window.applyCategoryFilter) {
+          window.applyCategoryFilter(filter, true);
+        }
+      });
     });
+
+    // Attach Infinite Scroll Listeners
+    const matrixCol =
+      document.querySelector(".grid-column") ||
+      document.querySelector("[data-component='dispatch-matrix']");
+    if (matrixCol && window.handleMatrixScroll) {
+      matrixCol.addEventListener("scroll", window.handleMatrixScroll, {
+        passive: true,
+      });
+    }
+    if (window.handleMatrixScroll) {
+      window.addEventListener("scroll", window.handleMatrixScroll, {
+        passive: true,
+      });
+    }
+
+    // Load dynamic posts & render UI
+    loadDynamicPosts();
   }
 
   // DOMContentLoaded Listener
@@ -658,10 +404,16 @@
     getFilteredAndSortedPosts,
     matchesPillar,
     loadDynamicPosts,
-    parseUrlParamsAndApply,
-    updateBrowserUrl,
-    syncFilterUIState,
     resetPage,
+    parseUrlParamsAndApply: () => {
+      if (window.parseUrlParamsAndApply) window.parseUrlParamsAndApply();
+    },
+    updateBrowserUrl: (r) => {
+      if (window.updateBrowserUrl) window.updateBrowserUrl(r);
+    },
+    syncFilterUIState: () => {
+      if (window.syncFilterUIState) window.syncFilterUIState();
+    },
   };
 
   if (typeof window !== "undefined") {
@@ -670,9 +422,6 @@
     window.getFilteredAndSortedPosts = getFilteredAndSortedPosts;
     window.matchesPillar = matchesPillar;
     window.loadDynamicPosts = loadDynamicPosts;
-    window.updateBrowserUrl = updateBrowserUrl;
-    window.parseUrlParamsAndApply = parseUrlParamsAndApply;
-    window.syncFilterUIState = syncFilterUIState;
     window.resetPage = resetPage;
   }
 })();
