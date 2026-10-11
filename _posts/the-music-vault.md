@@ -18,9 +18,10 @@ tags:
   - "sound"
   - "perception"
   - "aesthetics"
+  - "vault"
 reading_time: "Curated Playlist WIP"
-theme: "dark"
-featured: false
+theme: "light"
+featured: true
 shareable: true
 allow_embed: true
 image:
@@ -35,7 +36,7 @@ backlinks:
 media: "music"
 source: "[ Untitled.mp3 ] Curated Music Recommendations"
 bookmark_url: "https://open.spotify.com/playlist/6tEJWWKnL59iiEpkCwQ45U?si=7d71091e094b4df2"
-sys_id: "SYS_202609_BOO"
+sys_id: "SYS_202609_MUS"
 ---
 
 ## 01. Archival Excerpt

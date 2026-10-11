@@ -297,8 +297,38 @@
     "name": "Design",
     "label": "Design",
     "type": "foundation",
-    "count": 9,
+    "count": 11,
     "posts": [
+      {
+        "id": "the-music-vault",
+        "slug": "the-music-vault",
+        "title": "THE MUSIC VAULT",
+        "date": "2026.09.26",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-music-vault.html"
+      },
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "OTHERWORLDLY MUSIC",
+        "url": "posts/marina-herlop-dja-dja.html"
+      },
       {
         "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
         "slug": "operational-images-farocki-flusser-machine-vision",
@@ -482,6 +512,20 @@
     ],
     "links": [
       {
+        "title": "THE MUSIC VAULT",
+        "slug": "the-music-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-music-vault.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      },
+      {
         "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
         "slug": "operational-images-farocki-flusser-machine-vision",
         "format": "ESSAY",
@@ -547,14 +591,17 @@
     ],
     "foundations": [],
     "pillars": [
+      "ART WORTH SHARING",
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
       "Philosophy of the Image"
     ],
     "subtopics": [
       "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+      "ART VAULTS",
       "EPISTEMOLOGY OF REPRESENTATION",
       "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-      "MODES OF SEEING AND VISUAL SEMIOTICS"
+      "MODES OF SEEING AND VISUAL SEMIOTICS",
+      "OTHERWORLDLY MUSIC"
     ],
     "order": 2,
     "description": "Interface design, visual architecture, usability heuristics, product systems, and aesthetic mechanics.",
@@ -885,8 +932,38 @@
     "name": "Perception",
     "label": "Perception",
     "type": "foundation",
-    "count": 4,
+    "count": 6,
     "posts": [
+      {
+        "id": "the-music-vault",
+        "slug": "the-music-vault",
+        "title": "THE MUSIC VAULT",
+        "date": "2026.09.26",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-music-vault.html"
+      },
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "OTHERWORLDLY MUSIC",
+        "url": "posts/marina-herlop-dja-dja.html"
+      },
       {
         "id": "2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
@@ -954,6 +1031,20 @@
     ],
     "links": [
       {
+        "title": "THE MUSIC VAULT",
+        "slug": "the-music-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-music-vault.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      },
+      {
         "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "format": "NOTE",
@@ -984,12 +1075,15 @@
     ],
     "foundations": [],
     "pillars": [
+      "ART WORTH SHARING",
       "VISUAL PERCEPTION & PSYCHOPHYSICS",
       "Visual Perception"
     ],
     "subtopics": [
       "ANATOMY AND PSYCHOPHYSICS OF VISION",
-      "COGNITIVE AND VISUAL BIASES"
+      "ART VAULTS",
+      "COGNITIVE AND VISUAL BIASES",
+      "OTHERWORLDLY MUSIC"
     ],
     "order": 4,
     "description": "Biological sensory mechanics, psychophysics, predictive processing, and synthetic machine sight.",
@@ -4258,8 +4352,38 @@
     "name": "Art",
     "label": "Art",
     "type": "foundation",
-    "count": 14,
+    "count": 16,
     "posts": [
+      {
+        "id": "the-music-vault",
+        "slug": "the-music-vault",
+        "title": "THE MUSIC VAULT",
+        "date": "2026.09.26",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-music-vault.html"
+      },
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "OTHERWORLDLY MUSIC",
+        "url": "posts/marina-herlop-dja-dja.html"
+      },
       {
         "id": "2026-10-10-poverty-of-synthetic-ground-truth",
         "slug": "poverty-of-synthetic-ground-truth",
@@ -4543,6 +4667,20 @@
     ],
     "links": [
       {
+        "title": "THE MUSIC VAULT",
+        "slug": "the-music-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-music-vault.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      },
+      {
         "title": "The Poverty of Synthetic Ground Truth",
         "slug": "poverty-of-synthetic-ground-truth",
         "format": "ESSAY",
@@ -4645,15 +4783,19 @@
     "pillars": [
       "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
+      "ART WORTH SHARING",
+      "Art Sharing",
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
       "Philosophy of the Image"
     ],
     "subtopics": [
       "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
+      "ART VAULTS",
       "COMPUTER VISION VS. HUMAN PERCEPTION",
       "EPISTEMOLOGY OF REPRESENTATION",
       "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
       "MODES OF SEEING AND VISUAL SEMIOTICS",
+      "OTHERWORLDLY MUSIC",
       "SYNTHETIC AND STATISTICAL IMAGES",
       "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
       "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
@@ -5351,8 +5493,8 @@
   },
   {
     "id": "pillar-art-worth-sharing",
-    "name": "ART WORTH SHARING",
-    "label": "ART WORTH SHARING",
+    "name": "Art Sharing",
+    "label": "Art Sharing",
     "type": "pillar",
     "count": 2,
     "posts": [
@@ -5362,7 +5504,11 @@
         "title": "THE MUSIC VAULT",
         "date": "2026.09.26",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-music-vault.html"
@@ -5373,7 +5519,11 @@
         "title": "Marina Herlop's Dja Dja",
         "date": "2026.10.11",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
         "url": "posts/marina-herlop-dja-dja.html"
@@ -5395,9 +5545,15 @@
         "date": "2026.10.11"
       }
     ],
-    "foundations": [],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
     "pillars": [],
     "subtopics": [],
+    "order": 99,
+    "description": "Curated artistic creations, expansive soundscapes, avant-garde audiovisual experiences, and aesthetic artifacts.",
     "connected_tags": []
   },
   {
@@ -6138,7 +6294,11 @@
         "title": "THE MUSIC VAULT",
         "date": "2026.09.26",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-music-vault.html"
@@ -6153,7 +6313,11 @@
         "date": "2026.09.26"
       }
     ],
-    "foundations": [],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
     "pillars": [
       "ART WORTH SHARING"
     ],
@@ -6318,7 +6482,11 @@
         "title": "Marina Herlop's Dja Dja",
         "date": "2026.10.11",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
         "url": "posts/marina-herlop-dja-dja.html"
@@ -6333,7 +6501,11 @@
         "date": "2026.10.11"
       }
     ],
-    "foundations": [],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
     "pillars": [
       "ART WORTH SHARING"
     ],
@@ -6698,7 +6870,11 @@
         "title": "THE MUSIC VAULT",
         "date": "2026.09.26",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-music-vault.html"
@@ -6772,6 +6948,7 @@
       "Branding",
       "Design",
       "Graphics",
+      "Perception",
       "Philosophy",
       "Psychology",
       "Semiotics",
@@ -6913,7 +7090,11 @@
         "title": "THE MUSIC VAULT",
         "date": "2026.09.26",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-music-vault.html"
@@ -6924,7 +7105,11 @@
         "title": "Marina Herlop's Dja Dja",
         "date": "2026.10.11",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
         "url": "posts/marina-herlop-dja-dja.html"
@@ -6978,7 +7163,9 @@
       "Analysis",
       "Art",
       "Data",
+      "Design",
       "Graphics",
+      "Perception",
       "Tech",
       "Tools",
       "Vision"
@@ -8768,7 +8955,11 @@
         "title": "THE MUSIC VAULT",
         "date": "2026.09.26",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-music-vault.html"
@@ -8779,7 +8970,11 @@
         "title": "Marina Herlop's Dja Dja",
         "date": "2026.10.11",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
         "url": "posts/marina-herlop-dja-dja.html"
@@ -8801,7 +8996,11 @@
         "date": "2026.10.11"
       }
     ],
-    "foundations": [],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
     "pillars": [
       "ART WORTH SHARING"
     ],
@@ -10616,7 +10815,11 @@
         "title": "Marina Herlop's Dja Dja",
         "date": "2026.10.11",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
         "url": "posts/marina-herlop-dja-dja.html"
@@ -10631,7 +10834,11 @@
         "date": "2026.10.11"
       }
     ],
-    "foundations": [],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
     "pillars": [
       "ART WORTH SHARING"
     ],
@@ -10782,7 +10989,11 @@
         "title": "Marina Herlop's Dja Dja",
         "date": "2026.10.11",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
         "url": "posts/marina-herlop-dja-dja.html"
@@ -10797,7 +11008,11 @@
         "date": "2026.10.11"
       }
     ],
-    "foundations": [],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
     "pillars": [
       "ART WORTH SHARING"
     ],
@@ -14837,7 +15052,11 @@
         "title": "Marina Herlop's Dja Dja",
         "date": "2026.10.11",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
         "url": "posts/marina-herlop-dja-dja.html"
@@ -14852,7 +15071,11 @@
         "date": "2026.10.11"
       }
     ],
-    "foundations": [],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
     "pillars": [
       "ART WORTH SHARING"
     ],
@@ -15413,7 +15636,11 @@
         "title": "Marina Herlop's Dja Dja",
         "date": "2026.10.11",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
         "url": "posts/marina-herlop-dja-dja.html"
@@ -15428,7 +15655,11 @@
         "date": "2026.10.11"
       }
     ],
-    "foundations": [],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
     "pillars": [
       "ART WORTH SHARING"
     ],
@@ -15457,7 +15688,11 @@
         "title": "THE MUSIC VAULT",
         "date": "2026.09.26",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-music-vault.html"
@@ -15472,7 +15707,11 @@
         "date": "2026.09.26"
       }
     ],
-    "foundations": [],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
     "pillars": [
       "ART WORTH SHARING"
     ],
@@ -15978,7 +16217,11 @@
         "title": "THE MUSIC VAULT",
         "date": "2026.09.26",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-music-vault.html"
@@ -15993,7 +16236,11 @@
         "date": "2026.09.26"
       }
     ],
-    "foundations": [],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
     "pillars": [
       "ART WORTH SHARING"
     ],
@@ -16428,7 +16675,11 @@
         "title": "Marina Herlop's Dja Dja",
         "date": "2026.10.11",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
         "url": "posts/marina-herlop-dja-dja.html"
@@ -16443,7 +16694,11 @@
         "date": "2026.10.11"
       }
     ],
-    "foundations": [],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
     "pillars": [
       "ART WORTH SHARING"
     ],
@@ -16996,7 +17251,11 @@
         "title": "Marina Herlop's Dja Dja",
         "date": "2026.10.11",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
         "url": "posts/marina-herlop-dja-dja.html"
@@ -17011,7 +17270,11 @@
         "date": "2026.10.11"
       }
     ],
-    "foundations": [],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
     "pillars": [
       "ART WORTH SHARING"
     ],
@@ -17274,7 +17537,11 @@
         "title": "THE MUSIC VAULT",
         "date": "2026.09.26",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-music-vault.html"
@@ -17289,7 +17556,11 @@
         "date": "2026.09.26"
       }
     ],
-    "foundations": [],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
     "pillars": [
       "ART WORTH SHARING"
     ],
@@ -17318,7 +17589,11 @@
         "title": "Marina Herlop's Dja Dja",
         "date": "2026.10.11",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
         "url": "posts/marina-herlop-dja-dja.html"
@@ -17333,7 +17608,11 @@
         "date": "2026.10.11"
       }
     ],
-    "foundations": [],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
     "pillars": [
       "ART WORTH SHARING"
     ],
@@ -17362,7 +17641,11 @@
         "title": "THE MUSIC VAULT",
         "date": "2026.09.26",
         "format": "BOOKMARK",
-        "foundations": [],
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-music-vault.html"
@@ -17377,7 +17660,11 @@
         "date": "2026.09.26"
       }
     ],
-    "foundations": [],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
     "pillars": [
       "ART WORTH SHARING"
     ],

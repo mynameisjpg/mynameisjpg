@@ -123,7 +123,7 @@
       "slug": "art",
       "order": 14,
       "description": "Digital aesthetics, post-ironic visual culture, generative image creation, and media archaeology.",
-      "pillars": ["ai-perception", "philosophy-image"]
+      "pillars": ["ai-perception", "philosophy-image", "art-worth-sharing"]
     }
   ],
   "pillars": [
@@ -414,6 +414,42 @@
           "title": "Authenticity, Knowledge Systems & Data Ecology",
           "slug": "authenticity-knowledge",
           "description": "Scientific semiotics, graphical integrity, empirical validation, and multimodal benchmark ecology."
+        }
+      ]
+    },
+    {
+      "id": "art-worth-sharing",
+      "code": "6",
+      "slug": "art-worth-sharing",
+      "title": "Art worth sharing",
+      "short_title": "Art Sharing",
+      "foundations": [
+        "art",
+        "perception",
+        "design"
+      ],
+      "description": "Curated artistic creations, expansive soundscapes, avant-garde audiovisual experiences, and aesthetic artifacts.",
+      "subtopics": [
+        {
+          "id": "otherworldly-music",
+          "code": "6.1",
+          "title": "Otherworldly Music",
+          "slug": "otherworldly-music",
+          "description": "Expansive sonic landscapes, vocal explorations, and future-forward auditory compositions."
+        },
+        {
+          "id": "animated-magic",
+          "code": "6.2",
+          "title": "Animated Magic",
+          "slug": "animated-magic",
+          "description": "Visual experiments, frame-by-frame alchemy, and spellbinding animation work."
+        },
+        {
+          "id": "art-vaults",
+          "code": "6.3",
+          "title": "Art Vaults",
+          "slug": "art-vaults",
+          "description": "Curated digital archives, artist retrospectives, and deep aesthetic repositories."
         }
       ]
     }
