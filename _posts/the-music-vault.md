@@ -36,12 +36,11 @@ backlinks:
 media: "music"
 source: "[ Untitled.mp3 ] Curated Music Recommendations"
 bookmark_url: "https://open.spotify.com/playlist/6tEJWWKnL59iiEpkCwQ45U?si=7d71091e094b4df2"
-sys_id: "SYS_202609_MUS"
+sys_id: "SYS_VAULT_MUS"
 ---
 
-## [ Untitled.jpg - Music Vault ]
+### ⏯️ You'll see all my recommended #Music dispatches below as a Spotify playlist and in the Connected_Dispatches footer ↓↓↓
 
-You'll see all my recommended #Music dispatches below as a Spotify playlist and in the Connected_Dispatches footer ↓↓↓
 <br>
 
 <div style="display: flex; justify-content: center;">
@@ -50,6 +49,6 @@ You'll see all my recommended #Music dispatches below as a Spotify playlist and 
 
 ---
 
-## Connected_Dispatches
+## Recommended_Dispatches
 
 ### 1. **Sonoric Revelation** | [Marina Herlop's Dja Dja](2026-10-11-marina-herlop-dja-dja.html)
