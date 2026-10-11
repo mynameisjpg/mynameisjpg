@@ -21,13 +21,13 @@ tags:
   - "vault"
 reading_time: "Curated Playlist WIP"
 theme: "dark"
-featured: true
+featured: false
 shareable: true
 allow_embed: true
 image:
   path: "assets/images/music-vault.gif"
   alt: "Coral-red and black archival collage: a brutalist acoustic dish atop rocky ground, jagged audio waveforms, and a vintage phonograph beside rusty gears and wire."
-links: []
+links:
 backlinks:
   - slug: "#2026-10-11-marina-herlop-dja-dja"
     title: "Marina Herlop's Dja Dja"
