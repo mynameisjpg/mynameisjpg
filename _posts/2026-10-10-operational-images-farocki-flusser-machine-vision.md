@@ -30,7 +30,7 @@ tags:
   - "apparatus"
 
 theme: "dark"
-featured: true
+featured: false
 toc: true
 math: false
 

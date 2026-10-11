@@ -51,4 +51,4 @@ sys_id: "SYS_VAULT_MUS"
 
 ## Recommended_Dispatches
 
-### 1. **Sonoric Revelation** | [Marina Herlop's Dja Dja](2026-10-11-marina-herlop-dja-dja.html)
+### 1. **Marina Herlop** | [Dja Dja (2026)](2026-10-11-marina-herlop-dja-dja.html)
