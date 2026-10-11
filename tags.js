@@ -303,7 +303,7 @@
         "id": "the-music-vault",
         "slug": "the-music-vault",
         "title": "THE MUSIC VAULT",
-        "date": "2026.09.26",
+        "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
@@ -516,7 +516,7 @@
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
-        "date": "2026.09.26"
+        "date": "2026.10.11"
       },
       {
         "title": "Marina Herlop's Dja Dja",
@@ -938,7 +938,7 @@
         "id": "the-music-vault",
         "slug": "the-music-vault",
         "title": "THE MUSIC VAULT",
-        "date": "2026.09.26",
+        "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
@@ -1035,7 +1035,7 @@
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
-        "date": "2026.09.26"
+        "date": "2026.10.11"
       },
       {
         "title": "Marina Herlop's Dja Dja",
@@ -4358,7 +4358,7 @@
         "id": "the-music-vault",
         "slug": "the-music-vault",
         "title": "THE MUSIC VAULT",
-        "date": "2026.09.26",
+        "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
@@ -4671,7 +4671,7 @@
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
-        "date": "2026.09.26"
+        "date": "2026.10.11"
       },
       {
         "title": "Marina Herlop's Dja Dja",
@@ -5502,7 +5502,7 @@
         "id": "the-music-vault",
         "slug": "the-music-vault",
         "title": "THE MUSIC VAULT",
-        "date": "2026.09.26",
+        "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
@@ -5535,7 +5535,7 @@
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
-        "date": "2026.09.26"
+        "date": "2026.10.11"
       },
       {
         "title": "Marina Herlop's Dja Dja",
@@ -6292,7 +6292,7 @@
         "id": "the-music-vault",
         "slug": "the-music-vault",
         "title": "THE MUSIC VAULT",
-        "date": "2026.09.26",
+        "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
@@ -6310,7 +6310,7 @@
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
-        "date": "2026.09.26"
+        "date": "2026.10.11"
       }
     ],
     "foundations": [
@@ -6868,7 +6868,7 @@
         "id": "the-music-vault",
         "slug": "the-music-vault",
         "title": "THE MUSIC VAULT",
-        "date": "2026.09.26",
+        "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
@@ -6926,7 +6926,7 @@
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
-        "date": "2026.09.26"
+        "date": "2026.10.11"
       },
       {
         "title": "Images are Dead. Brands Should Know.",
@@ -7088,7 +7088,7 @@
         "id": "the-music-vault",
         "slug": "the-music-vault",
         "title": "THE MUSIC VAULT",
-        "date": "2026.09.26",
+        "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
@@ -7141,7 +7141,7 @@
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
-        "date": "2026.09.26"
+        "date": "2026.10.11"
       },
       {
         "title": "Marina Herlop's Dja Dja",
@@ -8953,7 +8953,7 @@
         "id": "the-music-vault",
         "slug": "the-music-vault",
         "title": "THE MUSIC VAULT",
-        "date": "2026.09.26",
+        "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
@@ -8986,7 +8986,7 @@
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
-        "date": "2026.09.26"
+        "date": "2026.10.11"
       },
       {
         "title": "Marina Herlop's Dja Dja",
@@ -15686,7 +15686,7 @@
         "id": "the-music-vault",
         "slug": "the-music-vault",
         "title": "THE MUSIC VAULT",
-        "date": "2026.09.26",
+        "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
@@ -15704,7 +15704,7 @@
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
-        "date": "2026.09.26"
+        "date": "2026.10.11"
       }
     ],
     "foundations": [
@@ -16215,7 +16215,7 @@
         "id": "the-music-vault",
         "slug": "the-music-vault",
         "title": "THE MUSIC VAULT",
-        "date": "2026.09.26",
+        "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
@@ -16233,7 +16233,7 @@
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
-        "date": "2026.09.26"
+        "date": "2026.10.11"
       }
     ],
     "foundations": [
@@ -17535,7 +17535,7 @@
         "id": "the-music-vault",
         "slug": "the-music-vault",
         "title": "THE MUSIC VAULT",
-        "date": "2026.09.26",
+        "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
@@ -17553,7 +17553,7 @@
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
-        "date": "2026.09.26"
+        "date": "2026.10.11"
       }
     ],
     "foundations": [
@@ -17639,7 +17639,7 @@
         "id": "the-music-vault",
         "slug": "the-music-vault",
         "title": "THE MUSIC VAULT",
-        "date": "2026.09.26",
+        "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
@@ -17657,7 +17657,7 @@
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
-        "date": "2026.09.26"
+        "date": "2026.10.11"
       }
     ],
     "foundations": [
@@ -18561,7 +18561,7 @@
         "id": "the-music-vault",
         "slug": "the-music-vault",
         "title": "THE MUSIC VAULT",
-        "date": "2026.09.26",
+        "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
@@ -18579,7 +18579,7 @@
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
-        "date": "2026.09.26"
+        "date": "2026.10.11"
       }
     ],
     "foundations": [
