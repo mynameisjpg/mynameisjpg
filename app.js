@@ -34,19 +34,13 @@
     if (!Array.isArray(postsArray)) return;
     invalidatePostsCache();
     postsArray.forEach((p) => {
-      const key = p.slug || p.id || p.sys_id;
-      if (!key) return;
-
-      POSTS_DATABASE[key] = p;
-      if (p.sys_id) POSTS_DATABASE[p.sys_id] = p;
-      if (p.id) POSTS_DATABASE[p.id] = p;
-      if (p.slug) {
-        POSTS_DATABASE[p.slug] = p;
-        const cleanSlug = p.slug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
-        if (cleanSlug && cleanSlug !== p.slug) {
-          POSTS_DATABASE[cleanSlug] = p;
-        }
-      }
+      const keys = [
+        p.slug,
+        p.id,
+        p.sys_id,
+        p.slug ? p.slug.replace(/^\d{4}-\d{2}-\d{2}-/, "") : "",
+      ].filter(Boolean);
+      keys.forEach((k) => (POSTS_DATABASE[k] = p));
     });
   }
 
@@ -56,6 +50,18 @@
   }
 
   /**
+   * Component Delegates: Unified bridge across global & module namespaces
+   */
+  const selectAndRenderPost = (id, scroll) =>
+    (window.selectAndRenderPost || window.ReaderPane?.selectAndRenderPost)?.(id, scroll);
+  const closeReaderPane = () =>
+    (window.closeReaderPane || window.ReaderPane?.closeReaderPane)?.();
+  const renderCardMatrix = (reset) =>
+    (window.renderCardMatrix || window.CardMatrix?.render)?.(reset);
+  const resetMatrixFilters = () =>
+    (window.resetMatrixFilters || window.CardMatrix?.resetFilters)?.();
+
+  /**
    * Robust Pillar Matching Helper
    * Delegates directly to window.TaxonomyLookup when available
    */
@@ -63,24 +69,22 @@
     if (!query || query === "all") return true;
     if (!post) return false;
 
-    if (
-      typeof window !== "undefined" &&
-      window.TaxonomyLookup &&
-      typeof window.TaxonomyLookup.matches === "function"
-    ) {
+    if (window.TaxonomyLookup?.matches) {
       return window.TaxonomyLookup.matches(post, query);
     }
 
     const q = String(query).toLowerCase().replace(/[-_]/g, " ").trim();
-    const pillar = String(post.pillar || "").toLowerCase();
-    const subtopic = String(post.subtopic || "").toLowerCase();
-    const category = String(post.category || "").toLowerCase();
-    const tags = Array.isArray(post.tags)
-      ? post.tags.map((t) => String(t).toLowerCase()).join(" ")
-      : "";
+    const searchSpace = [
+      post.pillar,
+      post.subtopic,
+      post.category,
+      ...(Array.isArray(post.tags) ? post.tags : []),
+    ]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase();
 
-    if (pillar.includes(q)) return true;
-    return subtopic.includes(q) || category.includes(q) || tags.includes(q);
+    return searchSpace.includes(q);
   }
 
   /**
@@ -210,25 +214,14 @@
       (typeof window !== "undefined" ? window.INITIAL_POST_SLUG : "");
 
     // Render Matrix Cards
-    if (window.renderCardMatrix) {
-      window.renderCardMatrix(true);
-    } else if (window.CardMatrix && window.CardMatrix.render) {
-      window.CardMatrix.render(true);
-    }
+    renderCardMatrix(true);
 
     // Auto-select deep-linked dispatch
     if (targetSlug && POSTS_DATABASE[targetSlug]) {
-      if (window.selectAndRenderPost) {
-        window.selectAndRenderPost(targetSlug, false);
-      } else if (window.ReaderPane && window.ReaderPane.selectAndRenderPost) {
-        window.ReaderPane.selectAndRenderPost(targetSlug, false);
-      }
+      selectAndRenderPost(targetSlug, false);
     } else {
       activePostId = "";
-      if (window.closeReaderPane) window.closeReaderPane();
-      else if (window.ReaderPane && window.ReaderPane.closeReaderPane) {
-        window.ReaderPane.closeReaderPane();
-      }
+      closeReaderPane();
     }
   }
 
@@ -236,11 +229,7 @@
    * Full Page Reset (Brand Logo & Home Icon)
    */
   function resetPage() {
-    if (window.resetMatrixFilters) {
-      window.resetMatrixFilters();
-    } else if (window.CardMatrix && window.CardMatrix.resetFilters) {
-      window.CardMatrix.resetFilters();
-    }
+    resetMatrixFilters();
 
     const matrixCol =
       document.querySelector(".grid-column") ||
@@ -251,11 +240,7 @@
     const posts = getFilteredAndSortedPosts();
     if (posts.length > 0) {
       const firstPostId = posts[0].slug || posts[0].id || posts[0].sys_id;
-      if (window.selectAndRenderPost) {
-        window.selectAndRenderPost(firstPostId);
-      } else if (window.ReaderPane && window.ReaderPane.selectAndRenderPost) {
-        window.ReaderPane.selectAndRenderPost(firstPostId);
-      }
+      selectAndRenderPost(firstPostId);
     }
   }
 
@@ -341,16 +326,9 @@
     window.addEventListener("hashchange", () => {
       const hash = window.location.hash.replace("#", "");
       if (hash && POSTS_DATABASE[hash]) {
-        if (window.selectAndRenderPost) {
-          window.selectAndRenderPost(hash, false);
-        } else if (window.ReaderPane && window.ReaderPane.selectAndRenderPost) {
-          window.ReaderPane.selectAndRenderPost(hash, false);
-        }
+        selectAndRenderPost(hash, false);
       } else if (!hash) {
-        if (window.closeReaderPane) window.closeReaderPane();
-        else if (window.ReaderPane && window.ReaderPane.closeReaderPane) {
-          window.ReaderPane.closeReaderPane();
-        }
+        closeReaderPane();
       }
     });
   }

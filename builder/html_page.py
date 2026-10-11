@@ -50,6 +50,46 @@ def resolve_post_entities(post):
     mentions = matched_entities[2:8]
     return about, mentions
 
+AUTHOR_SCHEMA = {
+    "@type": "Person",
+    "name": "Juan Pablo Giusepponi",
+    "jobTitle": "Sr. Designer, Head of Communication & Frontier AI Specialist",
+    "url": "https://mynameisjpg.github.io/mynameisjpg/about.html",
+    "image": "https://mynameisjpg.github.io/mynameisjpg/assets/images/self-jpg1.jpg",
+    "sameAs": [
+        "https://github.com/mynameisjpg",
+        "https://mynameisjpg.github.io/mynameisjpg/",
+    ],
+    "knowsAbout": [
+        "Artificial Intelligence",
+        "Visual Semiotics",
+        "Cognitive Psychophysics",
+        "Latent Space Topologies",
+        "Machine Learning",
+        "Joint Embedding Predictive Architecture",
+        "Design Systems",
+        "Epistemology",
+    ],
+}
+
+def resolve_meta_description(excerpt, subtitle):
+    """Selects an optimal social description >= 100 chars and <= 300 chars."""
+    combined = f"{subtitle} {excerpt}" if subtitle and excerpt and subtitle != excerpt else ""
+    for candidate in [excerpt, subtitle, combined]:
+        if candidate and len(candidate) >= 100:
+            desc = candidate
+            break
+    else:
+        desc = (
+            excerpt
+            or subtitle
+            or "Untitled.jpg — Dispatches on AI perception, cognitive psychophysics, high-dimensional latent space, and media archaeology."
+        )
+
+    if len(desc) > 300:
+        desc = desc[:297].rsplit(" ", 1)[0] + "..."
+    return desc.replace('"', "&quot;").replace("\n", " ").strip()
+
 def generate_post_html_files(posts):
     """
     Generates standalone post HTML pages under /posts/[slug].html.
@@ -66,50 +106,28 @@ def generate_post_html_files(posts):
             continue
 
         # Strip date prefix (e.g., "2026-09-24-lecun-..." -> "lecun-...")
-        clean_slug = re.sub(r'^\d{4}-\d{2}-\d{2}-', '', raw_slug)
-
-        title = (post.get("title") or "Untitled Dispatch").replace('"', '&quot;')
+        clean_slug = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", raw_slug)
+        title = (post.get("title") or "Untitled Dispatch").replace('"', "&quot;")
         
-        # Ensure description is at least 100 characters (LinkedIn requirement)
-        # and capped under 300 characters for optimal card rendering.
-        excerpt = (post.get("excerpt") or "").strip()
-        subtitle = (post.get("subtitle") or "").strip()
-        
-        candidates = []
-        if excerpt and len(excerpt) >= 100:
-            candidates.append(excerpt)
-        if subtitle and len(subtitle) >= 100:
-            candidates.append(subtitle)
-        if subtitle and excerpt and subtitle != excerpt:
-            combined = f"{subtitle} {excerpt}"
-            if len(combined) >= 100:
-                candidates.append(combined)
-        if excerpt:
-            candidates.append(excerpt)
-        if subtitle:
-            candidates.append(subtitle)
-        candidates.append("Untitled.jpg — Dispatches on AI perception, cognitive psychophysics, high-dimensional latent space, and media archaeology.")
-        
-        description = candidates[0]
-        for c in candidates:
-            if len(c) >= 100:
-                description = c
-                break
-        
-        if len(description) > 300:
-            description = description[:297].rsplit(' ', 1)[0] + '...'
-        description = description.replace('"', '&quot;').replace('\n', ' ').strip()
+        description = resolve_meta_description(
+            (post.get("excerpt") or "").strip(),
+            (post.get("subtitle") or "").strip(),
+        )
 
         post_url = f"{SITE_ORIGIN}/posts/{clean_slug}.html"
         
         # ISO 8601 publish date (YYYY-MM-DD)
         raw_post_date = str(post.get("date", ""))
-        iso_date_match = re.search(r'(\d{4})[-.](\d{2})[-.](\d{2})', raw_post_date)
-        iso_published_time = f"{iso_date_match.group(1)}-{iso_date_match.group(2)}-{iso_date_match.group(3)}" if iso_date_match else raw_post_date
+        iso_date_match = re.search(r"(\d{4})[-.](\d{2})[-.](\d{2})", raw_post_date)
+        iso_published_time = (
+            f"{iso_date_match.group(1)}-{iso_date_match.group(2)}-{iso_date_match.group(3)}"
+            if iso_date_match
+            else raw_post_date
+        )
 
         # Resolve absolute image URL and real dimensions
         raw_image = post.get("image") or ""
-        if raw_image.startswith("http://") or raw_image.startswith("https://"):
+        if raw_image.startswith(("http://", "https://")):
             og_image = raw_image
         elif raw_image:
             clean_img = raw_image.lstrip("./").lstrip("/")
@@ -120,29 +138,8 @@ def generate_post_html_files(posts):
         img_w, img_h = get_image_dimensions(raw_image)
 
         raw_alt = post.get("image_alt") or post.get("subtitle") or title
-        image_alt = raw_alt.replace('"', '&quot;').replace('\n', ' ').strip()
+        image_alt = raw_alt.replace('"', "&quot;").replace("\n", " ").strip()
 
-        author_schema = {
-            "@type": "Person",
-            "name": "Juan Pablo Giusepponi",
-            "jobTitle": "Sr. Designer, Head of Communication & Frontier AI Specialist",
-            "url": "https://mynameisjpg.github.io/mynameisjpg/about.html",
-            "image": "https://mynameisjpg.github.io/mynameisjpg/assets/images/self-jpg1.jpg",
-            "sameAs": [
-                "https://github.com/mynameisjpg",
-                "https://mynameisjpg.github.io/mynameisjpg/"
-            ],
-            "knowsAbout": [
-                "Artificial Intelligence",
-                "Visual Semiotics",
-                "Cognitive Psychophysics",
-                "Latent Space Topologies",
-                "Machine Learning",
-                "Joint Embedding Predictive Architecture",
-                "Design Systems",
-                "Epistemology"
-            ]
-        }
 
         schema_dict = {
             "@context": "https://schema.org",
@@ -156,7 +153,7 @@ def generate_post_html_files(posts):
                 "@type": "WebPage",
                 "@id": post_url
             },
-            "author": author_schema,
+            "author": AUTHOR_SCHEMA,
             "publisher": {
                 "@type": "Organization",
                 "name": "Untitled.jpg",
@@ -372,13 +369,13 @@ def generate_post_html_files(posts):
   <script>
     window.INITIAL_POST_SLUG = "{clean_slug}";
   </script>
-  <script src="pillars.js"></script>
-  <script src="posts.js"></script>
-  <script src="js/components/subscribe-modal.js"></script>
-  <script src="js/components/card-matrix.js"></script>
-  <script src="js/components/reader-pane.js"></script>
-  <script src="js/components/navigation-controls.js"></script>
-  <script src="app.js"></script>
+  <script defer src="pillars.js"></script>
+  <script defer src="posts.js"></script>
+  <script defer src="js/components/subscribe-modal.js"></script>
+  <script defer src="js/components/card-matrix.js"></script>
+  <script defer src="js/components/reader-pane.js"></script>
+  <script defer src="js/components/navigation-controls.js"></script>
+  <script defer src="app.js"></script>
 </body>
 </html>
 """

@@ -1,75 +1,56 @@
+# ==============================================================================
+# UNTITLED.JPG — ROBOTS.TXT
+# Web: https://mynameisjpg.github.io/mynameisjpg/
+# LLMs Reference: https://mynameisjpg.github.io/mynameisjpg/llms.txt
+# ==============================================================================
 
-Allow: /js/
+# Search Engine Crawlers (Standard Web Indexing)
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: DuckDuckBot
+User-agent: Slurp
+User-agent: Baiduspider
+User-agent: YandexBot
+Allow: /
 Allow: /css/
+Allow: /js/
 Allow: /assets/
-
+Allow: /posts/
 Disallow: /*?*sort=
 Disallow: /*?*filter=
 Disallow: /*?*preview=
-
-Disallow: /post-creator.html
-Disallow: /dist/
-Disallow: /build/
 Disallow: /*.json$
 
-# Ensure rendering assets are crawled
-Allow: /js/
-Allow: /css/
-Allow: /assets/
-
-# AI Search & Retrieval (GEO)
-
+# AI Search & Retrieval (GEO Citation Bots)
+# Permitted to index content so dispatches can be cited in answers
 User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-# Training Data Scrapers
-
-User-agent: CCBot
-Disallow: /
-
-# Allow standard search engines for result indexing
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-# Allow AI search citation bots (allows your site to appear in ChatGPT/Claude answers)
-User-agent: OAI-SearchBot
-Allow: /
-
 User-agent: Claude-SearchBot
-Allow: /
-
-# Block AI training crawlers and scrapers
-User-agent: GPTBot
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-User-agent: ClaudeBot
-Disallow: /
-
 User-agent: PerplexityBot
-Disallow: /
+Allow: /
+Allow: /posts/
+Allow: /llms.txt
 
+# AI Training Harvesters & Bulk Training Scrapers (Blocked)
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
 User-agent: CCBot
-Disallow: /
-
 User-agent: Bytespider
+User-agent: diffbot
 Disallow: /
 
-# Default fallback for all other general web crawlers
+# General Default Fallback
 User-agent: *
 Allow: /
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+Allow: /posts/
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+Disallow: /*?*preview=
+Disallow: /*.json$
 
-
+# XML Sitemap
 Sitemap: https://mynameisjpg.github.io/mynameisjpg/sitemap.xml
-Sitemap: https://mynameisjpg.github.io/mynameisjpg/sitemap-posts.xml
-Sitemap: https://mynameisjpg.github.io/mynameisjpg/sitemap-images.xml
-
-

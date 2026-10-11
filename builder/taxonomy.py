@@ -5,7 +5,15 @@ Handles foundations, canonical pillars, subtopics, and pillars.js UMD bundle gen
 
 import json
 import shutil
-from .config import PILLARS_JSON, PILLARS_JS, ROOT_DIR, BASE_DIR
+import sys
+from pathlib import Path
+
+try:
+    from .config import PILLARS_JSON, PILLARS_JS, ROOT_DIR, BASE_DIR
+except (ImportError, ValueError):
+    # Support direct execution via `python builder/taxonomy.py`
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from config import PILLARS_JSON, PILLARS_JS, ROOT_DIR, BASE_DIR
 
 def load_taxonomy_data():
     """Loads canonical taxonomy (foundations, pillars, subtopics) from pillars.json."""
@@ -249,3 +257,8 @@ def match_canonical_subtopic(raw_subtopic, pillars):
             if st_id in q or q in st_id or st_title in q or q in st_title:
                 return st
     return None
+
+if __name__ == "__main__":
+    pillars, foundations = load_taxonomy_data()
+    sync_pillars_js(pillars, foundations)
+    print("  [OK] Taxonomy synced from pillars.json to pillars.js successfully.")

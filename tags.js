@@ -81,7 +81,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
       },
@@ -101,7 +101,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
       },
@@ -138,7 +138,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       },
@@ -158,7 +158,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       },
@@ -247,7 +247,7 @@
     ],
     "foundations": [],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
       "Language & LLMs"
@@ -1447,7 +1447,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
       },
@@ -1501,7 +1501,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
       },
@@ -1538,7 +1538,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       },
@@ -1558,7 +1558,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       },
@@ -1668,7 +1668,7 @@
     ],
     "foundations": [],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "Critical Theory",
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -1789,7 +1789,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
       },
@@ -1865,7 +1865,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
       },
@@ -1997,7 +1997,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       },
@@ -2017,7 +2017,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       }
@@ -2145,7 +2145,7 @@
     ],
     "foundations": [],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
       "Philosophy of the Image",
@@ -2586,7 +2586,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
       },
@@ -2606,7 +2606,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
       },
@@ -2643,7 +2643,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       },
@@ -2663,7 +2663,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       },
@@ -2752,7 +2752,7 @@
     ],
     "foundations": [],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
       "Language & LLMs"
@@ -2876,7 +2876,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
       },
@@ -2946,7 +2946,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
       },
@@ -3015,7 +3015,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       },
@@ -3035,7 +3035,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       },
@@ -3173,7 +3173,7 @@
     ],
     "foundations": [],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "Critical Theory",
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -3290,7 +3290,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
       },
@@ -3344,7 +3344,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
       },
@@ -3381,7 +3381,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       },
@@ -3401,7 +3401,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       },
@@ -3511,7 +3511,7 @@
     ],
     "foundations": [],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "Critical Theory",
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -3884,7 +3884,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
       },
@@ -3944,7 +3944,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
       },
@@ -4044,7 +4044,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       },
@@ -4064,7 +4064,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       }
@@ -4164,7 +4164,7 @@
     ],
     "foundations": [],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
       "Philosophy of the Image"
@@ -4265,7 +4265,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
       },
@@ -4325,7 +4325,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
       },
@@ -4425,7 +4425,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       },
@@ -4445,7 +4445,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       }
@@ -4545,7 +4545,7 @@
     ],
     "foundations": [],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
       "Philosophy of the Image"
@@ -4586,7 +4586,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
       },
@@ -4606,7 +4606,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
       },
@@ -4626,7 +4626,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       },
@@ -4646,7 +4646,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       }
@@ -4694,7 +4694,7 @@
     "pillars": [],
     "subtopics": [],
     "order": 1,
-    "description": "Investigating how computational models interpret and generate visual worlds, how machine vision reshapes visual culture, and how synthetic media alters human representation and societal consensus.",
+    "description": "How AI is perceived and how machine vision reshapes visual culture, and how synthetic media alters human representation and societal consensus.",
     "connected_tags": []
   },
   {
@@ -5624,7 +5624,7 @@
     "connected_tags": []
   },
   {
-    "id": "subtopic-computer-vision-vs-human-perception",
+    "id": "subtopic-computer-human-vision",
     "name": "COMPUTER VISION VS. HUMAN PERCEPTION",
     "label": "COMPUTER VISION VS. HUMAN PERCEPTION",
     "type": "subtopic",
@@ -5646,7 +5646,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
       },
@@ -5666,7 +5666,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
       }
@@ -5698,13 +5698,13 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [],
     "connected_tags": []
   },
   {
-    "id": "subtopic-human-vs-machine-intelligence",
+    "id": "subtopic-human-machine-intelligence",
     "name": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
     "label": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
     "type": "subtopic",
@@ -5775,7 +5775,7 @@
     "connected_tags": []
   },
   {
-    "id": "subtopic-llm-architectures-mechanics",
+    "id": "subtopic-llm-architectures",
     "name": "LLM ARCHITECTURES AND MECHANICS",
     "label": "LLM ARCHITECTURES AND MECHANICS",
     "type": "subtopic",
@@ -5846,7 +5846,7 @@
     "connected_tags": []
   },
   {
-    "id": "subtopic-modes-seeing-visual-semiotics",
+    "id": "subtopic-visual-semiotics",
     "name": "MODES OF SEEING AND VISUAL SEMIOTICS",
     "label": "MODES OF SEEING AND VISUAL SEMIOTICS",
     "type": "subtopic",
@@ -5926,7 +5926,7 @@
     "connected_tags": []
   },
   {
-    "id": "subtopic-ai-safety-alignment-eval",
+    "id": "subtopic-ai-safety-risks",
     "name": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
     "label": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
     "type": "subtopic",
@@ -5973,7 +5973,7 @@
     "connected_tags": []
   },
   {
-    "id": "subtopic-authenticity-knowledge-data-ecology",
+    "id": "subtopic-authenticity-knowledge",
     "name": "AUTHENTICITY, KNOWLEDGE SYSTEMS & DATA ECOLOGY",
     "label": "AUTHENTICITY, KNOWLEDGE SYSTEMS & DATA ECOLOGY",
     "type": "subtopic",
@@ -6112,7 +6112,7 @@
     "connected_tags": []
   },
   {
-    "id": "subtopic-interface-politics-product-psychology",
+    "id": "subtopic-interface-politics",
     "name": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
     "label": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
     "type": "subtopic",
@@ -6212,7 +6212,7 @@
     "connected_tags": []
   },
   {
-    "id": "subtopic-synthetic-identity-normative-machines",
+    "id": "subtopic-synthetic-identity",
     "name": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
     "label": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
     "type": "subtopic",
@@ -6234,7 +6234,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       }
@@ -6259,13 +6259,13 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [],
     "connected_tags": []
   },
   {
-    "id": "subtopic-political-economy-synthetic-media",
+    "id": "subtopic-political-synth-media",
     "name": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
     "label": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
     "type": "subtopic",
@@ -6287,7 +6287,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
@@ -6312,7 +6312,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [],
     "connected_tags": []
@@ -6391,7 +6391,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       }
@@ -6439,7 +6439,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "AI PERCEPTION & REPRESENTATION",
       "PHILOSOPHY & CRITICAL THEORY"
     ],
     "subtopics": [
@@ -6514,7 +6514,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
       },
@@ -6578,7 +6578,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "AI PERCEPTION & REPRESENTATION",
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
       "VISUAL PERCEPTION & PSYCHOPHYSICS"
     ],
@@ -6758,7 +6758,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       }
@@ -6799,7 +6799,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "AI PERCEPTION & REPRESENTATION",
       "PHILOSOPHY & CRITICAL THEORY"
     ],
     "subtopics": [
@@ -6990,7 +6990,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
       }
@@ -7029,7 +7029,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "AI PERCEPTION & REPRESENTATION",
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
     ],
     "subtopics": [
@@ -7218,7 +7218,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
       }
@@ -7257,7 +7257,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "AI PERCEPTION & REPRESENTATION",
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
     ],
     "subtopics": [
@@ -7271,124 +7271,6 @@
       "graphify",
       "graph",
       "antigravity"
-    ]
-  },
-  {
-    "id": "visual-semiotics",
-    "name": "visual-semiotics",
-    "label": "#visual-semiotics",
-    "type": "tag",
-    "count": 3,
-    "posts": [
-      {
-        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
-      },
-      {
-        "id": "2026-10-10-images-are-dead",
-        "slug": "images-are-dead",
-        "title": "Images are Dead. Brands Should Know.",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/images-are-dead.html"
-      },
-      {
-        "id": "2026-10-02-dots-bot-muse-cute-mascots",
-        "slug": "dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "date": "2026.10.02",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/dots-bot-muse-cute-mascots.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "format": "ESSAY",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Images are Dead. Brands Should Know.",
-        "slug": "images-are-dead",
-        "format": "ESSAY",
-        "url": "posts/images-are-dead.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "slug": "dots-bot-muse-cute-mascots",
-        "format": "ESSAY",
-        "url": "posts/dots-bot-muse-cute-mascots.html",
-        "date": "2026.10.02"
-      }
-    ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-      "EPISTEMOLOGY OF REPRESENTATION",
-      "MODES OF SEEING AND VISUAL SEMIOTICS"
-    ],
-    "connected_tags": [
-      "harun-farocki",
-      "vilem-flusser",
-      "operational-images",
-      "computer-vision",
-      "attention",
-      "politics"
     ]
   },
   {
@@ -7474,11 +7356,11 @@
     ],
     "connected_tags": [
       "visual-culture",
-      "visual-semiotics",
       "susan-sontag",
       "identity-politics",
       "status-economy",
-      "photography"
+      "photography",
+      "coreification"
     ]
   },
   {
@@ -8394,7 +8276,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       },
@@ -8443,7 +8325,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "AI PERCEPTION & REPRESENTATION",
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
     ],
     "subtopics": [
@@ -8994,7 +8876,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       }
@@ -9028,7 +8910,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION",
+      "AI PERCEPTION & REPRESENTATION",
       "PHILOSOPHY & CRITICAL THEORY"
     ],
     "subtopics": [
@@ -9508,7 +9390,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
@@ -9533,7 +9415,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
@@ -9846,7 +9728,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       }
@@ -9871,7 +9753,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
@@ -9908,7 +9790,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
       }
@@ -9933,7 +9815,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "COMPUTER VISION VS. HUMAN PERCEPTION"
@@ -9970,7 +9852,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
       }
@@ -9995,7 +9877,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "COMPUTER VISION VS. HUMAN PERCEPTION"
@@ -10204,7 +10086,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
@@ -10229,7 +10111,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
@@ -10266,7 +10148,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
       }
@@ -10291,7 +10173,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "COMPUTER VISION VS. HUMAN PERCEPTION"
@@ -11335,11 +11217,11 @@
     ],
     "connected_tags": [
       "visual-culture",
-      "visual-semiotics",
       "susan-sontag",
       "identity-politics",
       "status-economy",
-      "photography"
+      "photography",
+      "aesthetics"
     ]
   },
   {
@@ -11669,7 +11551,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
       }
@@ -11694,7 +11576,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "COMPUTER VISION VS. HUMAN PERCEPTION"
@@ -12123,7 +12005,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
@@ -12148,7 +12030,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
@@ -12273,11 +12155,11 @@
     ],
     "connected_tags": [
       "visual-culture",
-      "visual-semiotics",
       "susan-sontag",
       "identity-politics",
       "status-economy",
-      "photography"
+      "photography",
+      "coreification"
     ]
   },
   {
@@ -12500,60 +12382,6 @@
       "ai-evaluations",
       "saccadic-suppression",
       "ai-video"
-    ]
-  },
-  {
-    "id": "gestalt",
-    "name": "gestalt",
-    "label": "#gestalt",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
-      "Vision"
-    ],
-    "pillars": [
-      "VISUAL PERCEPTION & PSYCHOPHYSICS"
-    ],
-    "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION"
-    ],
-    "connected_tags": [
-      "toolkit",
-      "free",
-      "download",
-      "psychophysics",
-      "skill",
-      "image-analysis"
     ]
   },
   {
@@ -13324,11 +13152,11 @@
     ],
     "connected_tags": [
       "visual-culture",
-      "visual-semiotics",
       "susan-sontag",
       "identity-politics",
       "status-economy",
-      "photography"
+      "photography",
+      "coreification"
     ]
   },
   {
@@ -13386,11 +13214,11 @@
     ],
     "connected_tags": [
       "visual-culture",
-      "visual-semiotics",
       "susan-sontag",
       "status-economy",
       "photography",
-      "coreification"
+      "coreification",
+      "aesthetics"
     ]
   },
   {
@@ -13416,7 +13244,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
@@ -13441,7 +13269,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
@@ -13532,7 +13360,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
@@ -13557,7 +13385,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
@@ -13594,7 +13422,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       }
@@ -13619,7 +13447,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
@@ -13712,7 +13540,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
       }
@@ -13737,7 +13565,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "COMPUTER VISION VS. HUMAN PERCEPTION"
@@ -13811,68 +13639,6 @@
       "tamagotchi-effect",
       "dots",
       "frontier-ai"
-    ]
-  },
-  {
-    "id": "interface-politics",
-    "name": "interface-politics",
-    "label": "#interface-politics",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-02-dots-bot-muse-cute-mascots",
-        "slug": "dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "date": "2026.10.02",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/dots-bot-muse-cute-mascots.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "slug": "dots-bot-muse-cute-mascots",
-        "format": "ESSAY",
-        "url": "posts/dots-bot-muse-cute-mascots.html",
-        "date": "2026.10.02"
-      }
-    ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS"
-    ],
-    "connected_tags": [
-      "ai-mascots",
-      "dots",
-      "muse",
-      "grok-bot",
-      "openai",
-      "grok"
     ]
   },
   {
@@ -14072,7 +13838,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       }
@@ -14097,7 +13863,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
@@ -14300,7 +14066,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
       }
@@ -14325,7 +14091,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "COMPUTER VISION VS. HUMAN PERCEPTION"
@@ -14480,7 +14246,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
       }
@@ -14505,7 +14271,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "COMPUTER VISION VS. HUMAN PERCEPTION"
@@ -14893,7 +14659,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       }
@@ -14918,7 +14684,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
@@ -14987,11 +14753,11 @@
     ],
     "connected_tags": [
       "visual-culture",
-      "visual-semiotics",
       "susan-sontag",
       "identity-politics",
       "status-economy",
-      "coreification"
+      "coreification",
+      "aesthetics"
     ]
   },
   {
@@ -15478,7 +15244,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       }
@@ -15503,7 +15269,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
@@ -15540,7 +15306,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/relate-anything-github-repo.html"
       }
@@ -15565,7 +15331,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "COMPUTER VISION VS. HUMAN PERCEPTION"
@@ -16109,7 +15875,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
         "url": "posts/turing-queer-ai.html"
       }
@@ -16134,7 +15900,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
@@ -16321,11 +16087,11 @@
     ],
     "connected_tags": [
       "visual-culture",
-      "visual-semiotics",
       "susan-sontag",
       "identity-politics",
       "photography",
-      "coreification"
+      "coreification",
+      "aesthetics"
     ]
   },
   {
@@ -16439,11 +16205,11 @@
     ],
     "connected_tags": [
       "visual-culture",
-      "visual-semiotics",
       "susan-sontag",
       "identity-politics",
       "status-economy",
-      "photography"
+      "photography",
+      "coreification"
     ]
   },
   {
@@ -16469,7 +16235,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
       }
@@ -16494,7 +16260,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "COMPUTER VISION VS. HUMAN PERCEPTION"
@@ -16625,11 +16391,11 @@
     ],
     "connected_tags": [
       "visual-culture",
-      "visual-semiotics",
       "identity-politics",
       "status-economy",
       "photography",
-      "coreification"
+      "coreification",
+      "aesthetics"
     ]
   },
   {
@@ -16711,7 +16477,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
@@ -16736,7 +16502,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
@@ -17339,7 +17105,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
         "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
@@ -17364,7 +17130,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
@@ -17432,12 +17198,12 @@
       "EPISTEMOLOGY OF REPRESENTATION"
     ],
     "connected_tags": [
-      "visual-semiotics",
       "susan-sontag",
       "identity-politics",
       "status-economy",
       "photography",
-      "coreification"
+      "coreification",
+      "aesthetics"
     ]
   },
   {
@@ -17692,7 +17458,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
       }
@@ -17717,7 +17483,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "COMPUTER VISION VS. HUMAN PERCEPTION"
@@ -17754,7 +17520,7 @@
           "graphics",
           "tools"
         ],
-        "pillar": "AI PERCEPTION, CULTURE & REPRESENTATION",
+        "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
       }
@@ -17779,7 +17545,7 @@
       "Vision"
     ],
     "pillars": [
-      "AI PERCEPTION, CULTURE & REPRESENTATION"
+      "AI PERCEPTION & REPRESENTATION"
     ],
     "subtopics": [
       "COMPUTER VISION VS. HUMAN PERCEPTION"

@@ -19,7 +19,7 @@
 
 `Untitled.jpg` (`@mynameisjpg`) is an out-of-distribution digital notebook and editorial publication investigating contemporary visual culture, synthetic media, and cognitive mechanics. Grounded in post-ironic digital surrealism, the platform explores the psychophysics of vision, latent space aesthetics, the biopolitics of vector embeddings, and the epistemology of synthetic representation.
 
-Rather than relying on templated blog layouts, `Untitled.jpg` pairs high-density monospace archival metadata with classical literary serif longform reading, wrapped in halftone and dithered procedural visuals.
+Rather than relying on templated blog layouts, `Untitled.jpg` pairs high-density monospace archival metadata with classical literary serif longform reading, wrapped in halftone textures and GPU-accelerated spatial interfaces.
 
 ---
 
@@ -32,7 +32,7 @@ UNTITLED.JPG CONTENT PILLARS
 ├── 01. Visual Perception & Psychology of Seeing
 │   ├── Psychophysics of human vision & perceptual mechanics (Gestalt)
 │   ├── Foveal vs. peripheral visual bandwidth & sensory limits
-│   └── Optical paradoxes, visual illusions, & cognitive biases
+│   └── Optical paradoxes, visual illusions, & saccadic blindness
 │
 ├── 02. AI Perception, Culture & Representation
 │   ├── Generative media, synthetic imagery & visual culture
@@ -46,14 +46,14 @@ UNTITLED.JPG CONTENT PILLARS
 │
 └── 04. Philosophy of the Image, Tech & Visual Culture
     ├── Modes of seeing, visual semiotics, & photographic truth
-    ├── Epistemology of synthetic representation & media ecology
+    ├── Epistemology of synthetic representation & operational images
     └── Aesthetics as ideology, interface politics, & digital memory
 ```
 
 ### Content Formats
 
-- **`[ESSAY]`** _(~1,500 – 3,000 words)_: Deep-dive investigations exploring complex intersections of technology, perception, and philosophy.
-- **`[NOTE]`** _(~300 – 1,000 words)_: Concise observations, field reflections, and rapid theoretical provocations.
+- **`[ESSAY]`** _(~1,500 - 3,000 words)_: Deep-dive investigations exploring complex intersections of technology, perception, and philosophy.
+- **`[NOTE]`** _(~300 - 1,000 words)_: Concise observations, field reflections, and rapid theoretical provocations.
 - **`[BOOKMARK]`**: Aggregated external references, papers, and media with author annotations.
 - **`[RESOURCE]`**: Curated toolkits, open datasets, and technical references.
 
@@ -68,22 +68,30 @@ Designed to evoke tactile digital surrealism, `Untitled.jpg` rejects generic Saa
   - `Platypi`: High-contrast literary serif for comfortable longform reading.
 - **Color Palette**:
   - **Midnight Slate** (`#121212` / `#161616`): Deep neutral background and surface reader pane.
-  - **Coral Crimson Red** (`#E84A5F`): Signature primary interactive accent and radial card glow.
+  - **Coral Crimson Red** (`#E84A5F`): Signature primary interactive accent.
   - **Archival Off-White** (`#F5F5F5` / `#D4D4D4`): Crisp headline contrast and soft body copy.
 - **Layout Grid**:
   - **48px Vertical Rail**: Fixed ultra-thin left sidebar containing vertical nav routes (`vertical-rl`).
-  - **50/50 Dual Container**: Floating asymmetric card matrix (left) paired with an immersive 1:1 essay reader (right).
+  - **50/50 Dual Container**: Floating asymmetric card matrix (left) paired with an immersive 1:1 sliding essay reader (right).
 - **Author-Defined Theme Modes**: Posts configure their visual mood (`theme: dark` or `theme: light`) via frontmatter metadata.
 
 ---
 
 ## 🛠️ Stack & Engineering
 
-The site operates as a zero-dependency, ultra-fast static site hydrated by client-side scripts and a Python Markdown compiler:
+The site operates as a zero-dependency, ultra-fast static site hydrated by client-side modular components and a Python Markdown compiler:
 
-- **Frontend**: Standard HTML5, Vanilla CSS3 (custom CSS variables & grid layout), and Vanilla JavaScript ES6+.
+- **Frontend**: Standard HTML5, Vanilla CSS3 (custom CSS variables & component sheets), and Vanilla JavaScript ES6+.
+- **Modular Architecture**:
+  - `app.js`: Central State Hub, in-memory dispatch store & lifecycle orchestrator.
+  - `js/components/card-matrix.js`: Asymmetric grid renderer, image fallback synthesis & infinite scroll pagination.
+  - `js/components/reader-pane.js`: 1:1 drawer slide, typography scaler, card scroll anchoring & deferred KaTeX/Mermaid rendering.
+  - `js/components/navigation-controls.js`: Dropdowns, debounced search, URL history synchronization & hotkeys.
+  - `js/components/sidebar-rail.js`: Web Component for vertical navigation and brand status.
+  - `js/components/subscribe-modal.js`: Native HTML `<dialog>` subscription pipeline.
 - **Publishing Engine**: Jekyll-compatible Markdown posts hosted via **GitHub Pages**.
-- **Content Compiler (`sync_posts.py`)**: Custom Python build tool that parses `_posts/*.md`, extracts YAML frontmatter, calculates reading metrics, extracts image headers for zero-layout-shift sizing, and hydrates `posts.json` / `posts.js` and `tags.json` / `tags.js`.
+- **Content Compiler (`sync_posts.py`)**: Custom Python build tool that parses `_posts/*.md`, extracts YAML frontmatter, calculates reading metrics, generates `posts.json` / `posts.js`, taxonomy files `tags.json` / `tags.js`, standalone post HTML files, and updates `sitemap.xml`.
+- **AI Agent Discovery**: Comprehensive [`llms.txt`](llms.txt) protocol specifying canonical entity definitions, pillar descriptions, and direct citations.
 
 ---
 
@@ -91,18 +99,27 @@ The site operates as a zero-dependency, ultra-fast static site hydrated by clien
 
 ```
 mynameisjpg/
-├── _posts/                 # Raw Markdown dispatches (Essays, Notes, Bookmarks, Resources)
-├── assets/                 # Imagery, procedural SVGs, fonts, and media
-├── css/ & index.css        # Vanilla CSS design tokens & grid rules
-├── js/ & app.js            # Client-side routing, filtering, and reader hydration
-├── posts/                  # Compiled standalone post HTML pages (generated)
-├── sync_posts.py           # Core Python post compiler & metadata watcher
-├── PRODUCT.md              # Product specifications & architectural contract
-├── DESIGN.md               # Visual design tokens & UI guidelines
-├── index.html              # Asymmetrical 2-column main application entry point
-├── archive.html            # Database view for searchable post archives
-├── gallery.html            # Visual image & procedural artwork catalog
-└── network.html            # Interactive graph view of content topics & relationships
+├── _posts/                     # Raw Markdown dispatches (Essays, Notes, Bookmarks, Resources)
+├── assets/                     # Imagery, procedural SVGs, fonts, and media
+├── css/
+│   ├── base.css                # CSS reset and fundamental variables
+│   ├── index.css               # Central stylesheet bundle
+│   └── components/             # Modular CSS stylesheets (split-layout, card-matrix, reader-pane, etc.)
+├── js/
+│   ├── app.js                  # Central application state orchestrator
+│   └── components/             # Modular UI components (card-matrix, reader-pane, navigation, etc.)
+├── posts/                      # Compiled standalone post HTML pages (generated)
+├── sync_posts.py               # Core Python post compiler & metadata generator
+├── PRODUCT.md                  # Product specifications & architectural contract
+├── DESIGN.md                   # Visual design tokens & UI guidelines
+├── llms.txt                    # Frontier AI & LLM web discovery file
+├── robots.txt                  # Search engine and AI crawler access rules
+├── sitemap.xml                 # XML sitemap index
+├── index.html                  # Asymmetrical 2-column main application entry point
+├── about.html                  # Curated editorial dossier & author profile
+├── archive.html                # Database view for searchable post archives
+├── gallery.html                # 3D spatial cover gallery & visual vault
+└── network.html                # Interactive 3D WebGL graph view of topics & taxonomy
 ```
 
 ---

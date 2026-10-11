@@ -6,21 +6,24 @@ Author: Juan Pablo Giusepponi (Sr. Designer, Head of Communication & Frontier AI
 Canonical URL: https://mynameisjpg.github.io/mynameisjpg/index.html
 Sitemap: https://mynameisjpg.github.io/mynameisjpg/sitemap.xml
 Language: en-US
-Topic Entities: Machine Learning, Cognitive Science, Artificial Intelligence, Joint Embedding Predictive Architecture (JEPA), Media Archaeology, AI Agents, Philosophy, Critical Theory, Design Systems.
+Topic Entities: Machine Learning, Cognitive Science, Artificial Intelligence, Joint Embedding Predictive Architecture (JEPA), Media Archaeology, AI Agents, Philosophy, Critical Theory, Design Systems, Operational Images, Code Review Graphs.
 
 ---
 
 ## Thematic Content Pillars
 
-1. **Visual Perception & Cognitive Psychophysics**: Investigating how human cognitive architectures, neural pathways, and aesthetic models process synthetic media and multi-modal latent representations.
+1. **Visual Perception & Cognitive Psychophysics**: Investigating how human cognitive architectures, neural pathways, and aesthetic models process synthetic media, saccadic suppression, and multi-modal latent representations.
 2. **Frontier AI, World Models & Machine Vision**: Technical deconstructions of high-dimensional vector spaces, non-generative JEPA architectures (Yann LeCun), multi-modal LLMs, agentic workflows, and vision-language evaluation benchmarks.
-3. **Media Archaeology, Epistemology & Latent Topologies**: Theoretical frameworks spanning Paul B. Preciado, Michel Foucault, Donna Haraway, and Jorge Luis Borges applied to synthetic bodies, algorithmic biopolitics, and semantic embedding topologies.
+3. **Media Archaeology, Epistemology & Latent Topologies**: Theoretical frameworks spanning Harun Farocki, Vilém Flusser, Paul B. Preciado, Michel Foucault, Donna Haraway, and Jorge Luis Borges applied to synthetic bodies, operational images, and algorithmic biopolitics.
 4. **Art Direction, Cultural Shanzhai & Visual Systems**: Deconstruction of digital originality, iterative reproduction, design heuristics, cognitive friction, and independent digital publishing.
 
 ---
 
 ## Core Long-Form Essays & Deep Dives
 
+- [Farocki, Flusser & Operational Images: When Seeing Is No Longer for Humans](https://mynameisjpg.github.io/mynameisjpg/posts/operational-images-farocki-flusser-machine-vision.html): Media archaeology of non-human optics, Harun Farocki's operational images, Vilém Flusser's apparatus theory, and machine vision.
+- [The Poverty of Synthetic Ground Truth](https://mynameisjpg.github.io/mynameisjpg/posts/poverty-of-synthetic-ground-truth.html): Epistemic collapse, model collapse, and data entropy when generative models train on recursive synthetic outputs.
+- [Images Are Dead, Long Live Images](https://mynameisjpg.github.io/mynameisjpg/posts/images-are-dead.html): The post-photographic condition, prompt-driven generation, and the transition from indexical photography to statistical inference.
 - [The Pharmacopornographic Episteme & AI Latent Spaces](https://mynameisjpg.github.io/mynameisjpg/posts/telebody-latent-space-pharmacopornographic-ai.html): Synthetic bodies, biopolitical control, and generative neural desire through Preciado's pharmacopornographic lens.
 - [Preciado, Foucault & The Somatopolitical Matrix](https://mynameisjpg.github.io/mynameisjpg/posts/preciado-pharmacopornographic-episteme-foucault.html): Critical genealogy of body technologies, surveillance capitalism, and generative image models.
 - [Why AI Agents Look Like Tamagotchis](https://mynameisjpg.github.io/mynameisjpg/posts/why-ai-agents-look-like-tamagotchis.html): Visual anthropomorphism, emotional interface design, skeuomorphism, and synthetic agency in modern agent UX.
@@ -37,6 +40,7 @@ Topic Entities: Machine Learning, Cognitive Science, Artificial Intelligence, Jo
 
 ## Technical Toolkits & Code Repositories
 
+- [Save 70x Tokens on Agentic Code Reviews with Knowledge Graphs](https://mynameisjpg.github.io/mynameisjpg/posts/save-70x-tokens-code-review-graph.html): Architectural blueprint and benchmarks for AST-backed code review graphs reducing LLM token consumption in pairing sessions.
 - [OpenResearch: Your AI Lab Partner](https://mynameisjpg.github.io/mynameisjpg/posts/openresearch-your-ai-lab-partner-github-repo.html): Local-first autonomous research agent framework for hypothesis generation, paper analysis, and parallel code experimentation.
 - [Relate Anything Model (RAM) Toolkit](https://mynameisjpg.github.io/mynameisjpg/posts/relate-anything-github-repo.html): Vision toolkit for arbitrary visual relationship detection and structured spatial grounding in multi-modal systems.
 - [Perceptual Vision Evaluation Toolkit](https://mynameisjpg.github.io/mynameisjpg/posts/perceptual-vision-eval-toolkit.html): Rubric-based framework for benchmarking synthetic image coherence, texture artifacts, and semantic drift.
@@ -45,6 +49,8 @@ Topic Entities: Machine Learning, Cognitive Science, Artificial Intelligence, Jo
 
 ## Curated Field Notes & Design Analysis
 
+- [Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background](https://mynameisjpg.github.io/mynameisjpg/posts/saccadic-blindness-ai-video-temporal-inconsistency.html): Psychophysics of saccadic suppression, perceptual blindspots, and temporal artifacts in generative video playback.
+- [A Real AI Failure Story: It Deleted a Production Database in 9 Seconds](https://mynameisjpg.github.io/mynameisjpg/posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html): Post-mortem analysis of autonomous agent failure modes, safety guardrails, and destructive bash execution pitfalls.
 - [5 Psychology Effects Used in Modern App Design](https://mynameisjpg.github.io/mynameisjpg/posts/5-psychology-effects-used-in-app-design.html): Cognitive biases, Gestalt laws, Fitts's Law, and UX heuristics in contemporary mobile and desktop apps.
 - [Marc Van Elburg: Surreal-Delirious Expressionism](https://mynameisjpg.github.io/mynameisjpg/posts/marc-van-elburg.html): Analysis of dynamic animated pursuit-and-evasion systems and expressionist mechanics.
 - [Dots Bot Muse: Cute Mascots & Conversational UI](https://mynameisjpg.github.io/mynameisjpg/posts/dots-bot-muse-cute-mascots.html): Mascot psychology, gamification, and micro-interactions in digital companionship products.

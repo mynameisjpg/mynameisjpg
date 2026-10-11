@@ -119,24 +119,24 @@
       "number": "01",
       "code": "1",
       "slug": "ai-perception",
-      "title": "AI Perception, Culture & Representation",
+      "title": "AI perception & representation",
       "short_title": "AI Perception",
       "foundations": ["ai", "vision", "tech", "art", "data", "analysis", "graphics", "tools"],
-      "description": "Investigating how computational models interpret and generate visual worlds, how machine vision reshapes visual culture, and how synthetic media alters human representation and societal consensus.",
+      "description": "How AI is perceived and how machine vision reshapes visual culture, and how synthetic media alters human representation and societal consensus.",
       "subtopics": [
         {
           "id": "synthetic-statistical-images",
           "code": "1.1",
-          "title": "Synthetic and statistical images (\"the mean image\")",
+          "title": "Synthetic and statistical images",
           "slug": "synthetic-statistical-images",
           "description": "Statistical aggregation and average representations in synthetic media generation."
         },
         {
-          "id": "latent-spaces-ai-archives",
+          "id": "ai-archives",
           "code": "1.2",
-          "title": "Latent spaces and AI archives",
-          "slug": "latent-spaces-ai-archives",
-          "description": "High-dimensional vector topologies and institutional memory in machine learning weights."
+          "title": "The AI archives",
+          "slug": "ai-archives",
+          "description": "The history and archeology of machine learning and AI."
         },
         {
           "id": "generative-tech-prompt-engineering",
@@ -146,17 +146,17 @@
           "description": "Linguistic conditioning of diffusion networks and generative media tools."
         },
         {
-          "id": "computer-vision-vs-human-perception",
+          "id": "computer-human-vision",
           "code": "1.4",
           "title": "Computer vision vs. human perception",
-          "slug": "computer-vision-vs-human-perception",
+          "slug": "computer-human-vision",
           "description": "Contrast between tensor activations, gradient heatmaps, and embodied human sight."
         },
         {
-          "id": "political-economy-synthetic-media",
+          "id": "political-synth-media",
           "code": "1.5",
           "title": "The political economy of synthetic media and digital labor",
-          "slug": "political-economy-synthetic-media",
+          "slug": "political-synth-media",
           "description": "Data exploitation, clickworker infrastructure, and value extraction in model training."
         },
         {
@@ -167,10 +167,10 @@
           "description": "Structural replication of historical prejudices within automated classification pipelines."
         },
         {
-          "id": "synthetic-identity-normative-machines",
+          "id": "synthetic-identity",
           "code": "1.7",
           "title": "Synthetic Identity & Normative Machines",
-          "slug": "synthetic-identity-normative-machines",
+          "slug": "synthetic-identity",
           "description": "Algorithmic homogenization and surveillance of non-normative subjectivity."
         }
       ]
@@ -193,10 +193,10 @@
           "description": "Retinal physiology, saccadic motion, receptive fields, and foveal constraints."
         },
         {
-          "id": "visual-illusions-optical-paradoxes",
+          "id": "visual-illusions",
           "code": "2.2",
           "title": "Visual illusions and optical paradoxes",
-          "slug": "visual-illusions-optical-paradoxes",
+          "slug": "visual-illusions",
           "description": "Perceptual breakdowns revealing the brain's predictive rendering engines."
         },
         {
@@ -207,24 +207,24 @@
           "description": "Top-down perceptual assumptions, confirmation heuristic loops, and change blindness."
         },
         {
-          "id": "perceptual-mechanics-gestalt",
+          "id": "gestalt",
           "code": "2.4",
           "title": "Perceptual mechanics and Gestalt",
-          "slug": "perceptual-mechanics-gestalt",
+          "slug": "gestalt",
           "description": "Principles of closure, continuity, figure-ground segregation, and pattern completion."
         },
         {
-          "id": "multisensory-crossmodal-perception",
+          "id": "multisensory-perception",
           "code": "2.5",
           "title": "Multi-sensory integration and cross-modal perception",
-          "slug": "multisensory-crossmodal-perception",
+          "slug": "multisensory-perception",
           "description": "Synesthetic coupling, audio-visual synchrony, and tactile-visual binding."
         },
         {
-          "id": "attention-trained-perception",
+          "id": "attention-perception",
           "code": "2.6",
           "title": "Attention and trained perception",
-          "slug": "attention-trained-perception",
+          "slug": "attention-perception",
           "description": "Visual expertise, foveal scanning efficiency, and attentional bottlenecks."
         }
       ]
@@ -240,31 +240,31 @@
       "description": "Exploring the boundaries of machine cognition and symbolic reasoning—analyzing how language models process meaning, how agentic systems operate, and where artificial intelligence diverges from human thought.",
       "subtopics": [
         {
-          "id": "llm-architectures-mechanics",
+          "id": "llm-architectures",
           "code": "3.1",
           "title": "LLM architectures and mechanics",
-          "slug": "llm-architectures-mechanics",
+          "slug": "llm-architectures",
           "description": "Transformers, self-attention matrices, tokenization schemes, and autoregression."
         },
         {
-          "id": "human-vs-machine-intelligence",
+          "id": "human-machine-intelligence",
           "code": "3.2",
           "title": "Human vs. machine intelligence and benchmarking",
-          "slug": "human-vs-machine-intelligence",
+          "slug": "human-machine-intelligence",
           "description": "Sensory bandwidth paradox, world models, JEPA, and cognitive benchmarks."
         },
         {
-          "id": "language-meaning-symbolic-grounding",
+          "id": "symbolic-grounding",
           "code": "3.3",
           "title": "Language, meaning and symbolic grounding",
-          "slug": "language-meaning-symbolic-grounding",
+          "slug": "symbolic-grounding",
           "description": "The Chinese Room, semiotic symbol grounding, and statistical mimicry."
         },
         {
-          "id": "agentic-systems-human-agency",
+          "id": "systems-human-agency",
           "code": "3.4",
           "title": "Agentic systems and human agency",
-          "slug": "agentic-systems-human-agency",
+          "slug": "systems-human-agency",
           "description": "Autonomous agents, reinforcement learning from human feedback, and decision autonomy."
         },
         {
@@ -275,10 +275,10 @@
           "description": "End-to-end audio neural models, latency psychophysics, and vocal prosody."
         },
         {
-          "id": "ai-safety-alignment-eval",
+          "id": "ai-safety-risks",
           "code": "3.6",
           "title": "AI safety, alignment and extreme risk evaluation",
-          "slug": "ai-safety-alignment-eval",
+          "slug": "ai-safety-risks",
           "description": "Forensic failure audits, database deletion incidents, and mechanistic interpretability."
         }
       ]
@@ -294,17 +294,17 @@
       "description": "Analyzing the epistemology of seeing in the digital era—questioning how photographs, simulations, and algorithmic interfaces mediate power, cultural memory, and our understanding of truth.",
       "subtopics": [
         {
-          "id": "modes-seeing-visual-semiotics",
+          "id": "visual-semiotics",
           "code": "4.1",
           "title": "Modes of seeing and visual semiotics",
-          "slug": "modes-seeing-visual-semiotics",
+          "slug": "visual-semiotics",
           "description": "Groupe µ, plastic and iconic signs, Flusser's apparatus, and Farocki's operational images."
         },
         {
-          "id": "photography-truth-simulation",
+          "id": "photography-truth",
           "code": "4.2",
           "title": "Photography, truth and simulation",
-          "slug": "photography-truth-simulation",
+          "slug": "photography-truth",
           "description": "Baudrillard's simulacra, the death of optical reference, and generative camera sensors."
         },
         {
@@ -322,24 +322,24 @@
           "description": "Haraway's cyborg interfaces, gendered silicon aesthetics, and cute mascot packaging."
         },
         {
-          "id": "media-ecology-psychological-projection",
+          "id": "media-ecology",
           "code": "4.5",
           "title": "Media ecology and psychological projection",
-          "slug": "media-ecology-psychological-projection",
+          "slug": "media-ecology",
           "description": "Postman, McLuhan, and the cognitive habits instilled by algorithmic feed formats."
         },
         {
-          "id": "archival-impulse-digital-memory",
+          "id": "archival-impulse",
           "code": "4.6",
           "title": "The archival impulse and digital memory systems",
-          "slug": "archival-impulse-digital-memory",
+          "slug": "archival-impulse",
           "description": "Derrida's Archive Fever, digital permanence, and the erosion of cultural amnesia."
         },
         {
-          "id": "interface-politics-product-psychology",
+          "id": "interface-politics",
           "code": "4.7",
           "title": "Interface politics & product psychology",
-          "slug": "interface-politics-product-psychology",
+          "slug": "interface-politics",
           "description": "Tamagotchi effect, kindchenschema, and deceptive user interface mechanics."
         }
       ]
@@ -355,38 +355,38 @@
       "description": "Engaging foundational philosophical frameworks to deconstruct contemporary technology—tracing the intersections of power, language, embodiment, and ideology in technical systems.",
       "subtopics": [
         {
-          "id": "epistemic-paradigms-foucault",
+          "id": "epistemic-paradigms",
           "code": "5.1",
-          "title": "Epistemic Paradigms & Foucault",
-          "slug": "epistemic-paradigms-foucault",
-          "description": "Foucault's epistemes, archaeology of knowledge, and modern vector spaces."
+          "title": "Epistemic Paradigms & Archeology of Knowledge",
+          "slug": "epistemic-paradigms",
+          "description": "Epistemes, archaeology of knowledge, and modern fields of meaning."
         },
         {
           "id": "critical-theory-technology",
           "code": "5.2",
           "title": "Critical Theory of Technology",
           "slug": "critical-theory-technology",
-          "description": "Frankfurt School, Feenberg, and technical rationality deconstruction."
+          "description": "Deconstructing technical rationality and instrumental logic."
         },
         {
-          "id": "biopolitics-pharmacopornography",
+          "id": "biopolitics-heteroregime",
           "code": "5.3",
-          "title": "Biopolitics & Pharmacopornography",
-          "slug": "biopolitics-pharmacopornography",
-          "description": "Preciado's pharmacopornographic episteme and somatic governance."
+          "title": "Biopolitics & heteroregime",
+          "slug": "biopolitics-heteroregime",
+          "description": "Pharmacopornographic regime and somatic governance."
         },
         {
-          "id": "somatopolitics-latent-space",
+          "id": "somatopolitics-identity",
           "code": "5.4",
-          "title": "Somatopolitics & Latent Space",
-          "slug": "somatopolitics-latent-space",
+          "title": "Somatopolitics & Bodily Identities",
+          "slug": "somatopolitics-identity",
           "description": "The bodily dimension of vector spaces, synthetic genetics, and digital flesh."
         },
         {
-          "id": "authenticity-knowledge-data-ecology",
+          "id": "authenticity-knowledge",
           "code": "5.5",
           "title": "Authenticity, Knowledge Systems & Data Ecology",
-          "slug": "authenticity-knowledge-data-ecology",
+          "slug": "authenticity-knowledge",
           "description": "Scientific semiotics, graphical integrity, empirical validation, and multimodal benchmark ecology."
         }
       ]
