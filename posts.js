@@ -33,7 +33,7 @@
     "shareable": true,
     "allow_embed": true,
     "gallery": true,
-    "status": "draft",
+    "status": "published",
     "date": "2026.09.26",
     "author": "Juan P. Giusepponi",
     "read_time": "CURATED PLAYLIST WIP",

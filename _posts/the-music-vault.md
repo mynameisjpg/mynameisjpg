@@ -3,7 +3,7 @@
 title: "THE MUSIC VAULT"
 date: "2026-09-26 12:00:00 -0300"
 author: "Juan P. Giusepponi"
-status: "draft"
+status: "published"
 format: "bookmark"
 topic:
   pillar: "Art worth sharing"
