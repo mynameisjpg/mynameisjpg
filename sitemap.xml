@@ -26,6 +26,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mynameisjpg.github.io/mynameisjpg/posts/the-music-vault.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mynameisjpg.github.io/mynameisjpg/posts/marina-herlop-dja-dja.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://mynameisjpg.github.io/mynameisjpg/posts/saccadic-blindness-ai-video-temporal-inconsistency.html</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>

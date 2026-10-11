@@ -1,7 +1,7 @@
 ---
 # UNTITLED.JPG DISPATCH METADATA
 title: "Images are Dead. Brands Should Know."
-subtitle: "When visual content is infinite and free, polished ads stop working. What matters now is real community."
+subtitle: "When visual content is infinite and &quot;free&quot;, polished ads stop working. What matters now is real community."
 excerpt: "When anyone can produce infinite pictures for free, slick visuals lose their power to impress. What builds lasting brand value is genuine community credibility."
 date: "2026-10-10 13:18:06 -0300"
 last_modified_at: "2026-10-10 13:18:06 -0300"

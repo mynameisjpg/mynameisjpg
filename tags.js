@@ -5350,6 +5350,57 @@
     "connected_tags": []
   },
   {
+    "id": "pillar-art-worth-sharing",
+    "name": "ART WORTH SHARING",
+    "label": "ART WORTH SHARING",
+    "type": "pillar",
+    "count": 2,
+    "posts": [
+      {
+        "id": "the-music-vault",
+        "slug": "the-music-vault",
+        "title": "THE MUSIC VAULT",
+        "date": "2026.09.26",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-music-vault.html"
+      },
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "OTHERWORLDLY MUSIC",
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "THE MUSIC VAULT",
+        "slug": "the-music-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-music-vault.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "foundations": [],
+    "pillars": [],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
     "id": "pillar-philosophy-critical-theory",
     "name": "Critical Theory",
     "label": "Critical Theory",
@@ -6075,6 +6126,41 @@
     "connected_tags": []
   },
   {
+    "id": "subtopic-art-vaults",
+    "name": "ART VAULTS",
+    "label": "ART VAULTS",
+    "type": "subtopic",
+    "count": 1,
+    "posts": [
+      {
+        "id": "the-music-vault",
+        "slug": "the-music-vault",
+        "title": "THE MUSIC VAULT",
+        "date": "2026.09.26",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-music-vault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "THE MUSIC VAULT",
+        "slug": "the-music-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-music-vault.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "foundations": [],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
     "id": "subtopic-biopolitics-pharmacopornography",
     "name": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
     "label": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
@@ -6215,6 +6301,41 @@
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
+    "id": "subtopic-otherworldly-music",
+    "name": "OTHERWORLDLY MUSIC",
+    "label": "OTHERWORLDLY MUSIC",
+    "type": "subtopic",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "OTHERWORLDLY MUSIC",
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "foundations": [],
+    "pillars": [
+      "ART WORTH SHARING"
     ],
     "subtopics": [],
     "connected_tags": []
@@ -6565,6 +6686,116 @@
     ]
   },
   {
+    "id": "aesthetics",
+    "name": "aesthetics",
+    "label": "#aesthetics",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "the-music-vault",
+        "slug": "the-music-vault",
+        "title": "THE MUSIC VAULT",
+        "date": "2026.09.26",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-music-vault.html"
+      },
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "philosophy",
+          "semiotics",
+          "design",
+          "art",
+          "branding",
+          "graphics",
+          "vision",
+          "psychology"
+        ],
+        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      },
+      {
+        "id": "2026-10-09-ai-images-groupe-mu",
+        "slug": "ai-images-groupe-mu",
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "date": "2026.10.09",
+        "format": "ESSAY",
+        "foundations": [
+          "philosophy",
+          "semiotics",
+          "design",
+          "art",
+          "branding",
+          "graphics",
+          "vision",
+          "psychology"
+        ],
+        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
+        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
+        "url": "posts/ai-images-groupe-mu.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "THE MUSIC VAULT",
+        "slug": "the-music-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-music-vault.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "slug": "ai-images-groupe-mu",
+        "format": "ESSAY",
+        "url": "posts/ai-images-groupe-mu.html",
+        "date": "2026.10.09"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Branding",
+      "Design",
+      "Graphics",
+      "Philosophy",
+      "Psychology",
+      "Semiotics",
+      "Vision"
+    ],
+    "pillars": [
+      "ART WORTH SHARING",
+      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "ART VAULTS",
+      "EPISTEMOLOGY OF REPRESENTATION",
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
+    ],
+    "connected_tags": [
+      "art-of-the-day",
+      "music",
+      "musicians",
+      "playlist",
+      "spotify",
+      "sound"
+    ]
+  },
+  {
     "id": "ai-agents",
     "name": "ai-agents",
     "label": "#ai-agents",
@@ -6667,6 +6898,107 @@
       "video",
       "fail",
       "stories"
+    ]
+  },
+  {
+    "id": "art-of-the-day",
+    "name": "art-of-the-day",
+    "label": "#art-of-the-day",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "the-music-vault",
+        "slug": "the-music-vault",
+        "title": "THE MUSIC VAULT",
+        "date": "2026.09.26",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-music-vault.html"
+      },
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "OTHERWORLDLY MUSIC",
+        "url": "posts/marina-herlop-dja-dja.html"
+      },
+      {
+        "id": "2026-10-06-marc-van-elburg",
+        "slug": "marc-van-elburg",
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "date": "2026.10.06",
+        "format": "BOOKMARK",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/marc-van-elburg.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "THE MUSIC VAULT",
+        "slug": "the-music-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-music-vault.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "slug": "marc-van-elburg",
+        "format": "BOOKMARK",
+        "url": "posts/marc-van-elburg.html",
+        "date": "2026.10.06"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Art",
+      "Data",
+      "Graphics",
+      "Tech",
+      "Tools",
+      "Vision"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION",
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "ART VAULTS",
+      "COMPUTER VISION VS. HUMAN PERCEPTION",
+      "OTHERWORLDLY MUSIC"
+    ],
+    "connected_tags": [
+      "music",
+      "musicians",
+      "playlist",
+      "spotify",
+      "sound",
+      "aesthetics"
     ]
   },
   {
@@ -7354,96 +7686,6 @@
       "graphify",
       "graph",
       "antigravity"
-    ]
-  },
-  {
-    "id": "aesthetics",
-    "name": "aesthetics",
-    "label": "#aesthetics",
-    "type": "tag",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-10-10-images-are-dead",
-        "slug": "images-are-dead",
-        "title": "Images are Dead. Brands Should Know.",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/images-are-dead.html"
-      },
-      {
-        "id": "2026-10-09-ai-images-groupe-mu",
-        "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "date": "2026.10.09",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/ai-images-groupe-mu.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Images are Dead. Brands Should Know.",
-        "slug": "images-are-dead",
-        "format": "ESSAY",
-        "url": "posts/images-are-dead.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "slug": "ai-images-groupe-mu",
-        "format": "ESSAY",
-        "url": "posts/ai-images-groupe-mu.html",
-        "date": "2026.10.09"
-      }
-    ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
-    "pillars": [
-      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
-    ],
-    "subtopics": [
-      "EPISTEMOLOGY OF REPRESENTATION",
-      "MODES OF SEEING AND VISUAL SEMIOTICS"
-    ],
-    "connected_tags": [
-      "visual-culture",
-      "susan-sontag",
-      "identity-politics",
-      "status-economy",
-      "photography",
-      "coreification"
     ]
   },
   {
@@ -8511,6 +8753,69 @@
       "embeddings",
       "episteme",
       "rag"
+    ]
+  },
+  {
+    "id": "music",
+    "name": "music",
+    "label": "#music",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "the-music-vault",
+        "slug": "the-music-vault",
+        "title": "THE MUSIC VAULT",
+        "date": "2026.09.26",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-music-vault.html"
+      },
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "OTHERWORLDLY MUSIC",
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "THE MUSIC VAULT",
+        "slug": "the-music-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-music-vault.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "foundations": [],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "ART VAULTS",
+      "OTHERWORLDLY MUSIC"
+    ],
+    "connected_tags": [
+      "art-of-the-day",
+      "musicians",
+      "playlist",
+      "spotify",
+      "sound",
+      "aesthetics"
     ]
   },
   {
@@ -10299,65 +10604,47 @@
     ]
   },
   {
-    "id": "art-of-the-day",
-    "name": "art-of-the-day",
-    "label": "#art-of-the-day",
+    "id": "artists",
+    "name": "artists",
+    "label": "#artists",
     "type": "tag",
     "count": 1,
     "posts": [
       {
-        "id": "2026-10-06-marc-van-elburg",
-        "slug": "marc-van-elburg",
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "date": "2026.10.06",
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
         "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/marc-van-elburg.html"
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "OTHERWORLDLY MUSIC",
+        "url": "posts/marina-herlop-dja-dja.html"
       }
     ],
     "links": [
       {
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "slug": "marc-van-elburg",
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
         "format": "BOOKMARK",
-        "url": "posts/marc-van-elburg.html",
-        "date": "2026.10.06"
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
       }
     ],
-    "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
-      "AI PERCEPTION & REPRESENTATION"
+      "ART WORTH SHARING"
     ],
     "subtopics": [
-      "COMPUTER VISION VS. HUMAN PERCEPTION"
+      "OTHERWORLDLY MUSIC"
     ],
     "connected_tags": [
-      "animation",
-      "surrealism",
-      "youtube",
-      "markvanelburg",
-      "youtube-shorts",
-      "instagram-reels"
+      "art-of-the-day",
+      "music",
+      "barcelona",
+      "sounds-from-the-future",
+      "music-album",
+      "recommendation"
     ]
   },
   {
@@ -10480,6 +10767,50 @@
       "shanzhai",
       "deconstruction",
       "reflections"
+    ]
+  },
+  {
+    "id": "barcelona",
+    "name": "barcelona",
+    "label": "#barcelona",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "OTHERWORLDLY MUSIC",
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "foundations": [],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "OTHERWORLDLY MUSIC"
+    ],
+    "connected_tags": [
+      "art-of-the-day",
+      "music",
+      "sounds-from-the-future",
+      "artists",
+      "music-album",
+      "recommendation"
     ]
   },
   {
@@ -14494,6 +14825,50 @@
     ]
   },
   {
+    "id": "link",
+    "name": "link",
+    "label": "#link",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "OTHERWORLDLY MUSIC",
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "foundations": [],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "OTHERWORLDLY MUSIC"
+    ],
+    "connected_tags": [
+      "art-of-the-day",
+      "music",
+      "barcelona",
+      "sounds-from-the-future",
+      "artists",
+      "music-album"
+    ]
+  },
+  {
     "id": "lists",
     "name": "lists",
     "label": "#lists",
@@ -15026,6 +15401,94 @@
     ]
   },
   {
+    "id": "music-album",
+    "name": "music-album",
+    "label": "#music-album",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "OTHERWORLDLY MUSIC",
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "foundations": [],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "OTHERWORLDLY MUSIC"
+    ],
+    "connected_tags": [
+      "art-of-the-day",
+      "music",
+      "barcelona",
+      "sounds-from-the-future",
+      "artists",
+      "recommendation"
+    ]
+  },
+  {
+    "id": "musicians",
+    "name": "musicians",
+    "label": "#musicians",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "the-music-vault",
+        "slug": "the-music-vault",
+        "title": "THE MUSIC VAULT",
+        "date": "2026.09.26",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-music-vault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "THE MUSIC VAULT",
+        "slug": "the-music-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-music-vault.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "foundations": [],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "ART VAULTS"
+    ],
+    "connected_tags": [
+      "art-of-the-day",
+      "music",
+      "playlist",
+      "spotify",
+      "sound",
+      "aesthetics"
+    ]
+  },
+  {
     "id": "networks",
     "name": "networks",
     "label": "#networks",
@@ -15503,6 +15966,50 @@
     ]
   },
   {
+    "id": "playlist",
+    "name": "playlist",
+    "label": "#playlist",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "the-music-vault",
+        "slug": "the-music-vault",
+        "title": "THE MUSIC VAULT",
+        "date": "2026.09.26",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-music-vault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "THE MUSIC VAULT",
+        "slug": "the-music-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-music-vault.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "foundations": [],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "ART VAULTS"
+    ],
+    "connected_tags": [
+      "art-of-the-day",
+      "music",
+      "musicians",
+      "spotify",
+      "sound",
+      "aesthetics"
+    ]
+  },
+  {
     "id": "post-fordism",
     "name": "post-fordism",
     "label": "#post-fordism",
@@ -15906,6 +16413,50 @@
       "sociomorphic-ai",
       "pasquinelli",
       "epistemology"
+    ]
+  },
+  {
+    "id": "recommendation",
+    "name": "recommendation",
+    "label": "#recommendation",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "OTHERWORLDLY MUSIC",
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "foundations": [],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "OTHERWORLDLY MUSIC"
+    ],
+    "connected_tags": [
+      "art-of-the-day",
+      "music",
+      "barcelona",
+      "sounds-from-the-future",
+      "artists",
+      "music-album"
     ]
   },
   {
@@ -16433,6 +16984,50 @@
     ]
   },
   {
+    "id": "share",
+    "name": "share",
+    "label": "#share",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "OTHERWORLDLY MUSIC",
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "foundations": [],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "OTHERWORLDLY MUSIC"
+    ],
+    "connected_tags": [
+      "art-of-the-day",
+      "music",
+      "barcelona",
+      "sounds-from-the-future",
+      "artists",
+      "music-album"
+    ]
+  },
+  {
     "id": "skill",
     "name": "skill",
     "label": "#skill",
@@ -16664,6 +17259,138 @@
       "capitalism",
       "biopolitics",
       "pharmacopornography"
+    ]
+  },
+  {
+    "id": "sound",
+    "name": "sound",
+    "label": "#sound",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "the-music-vault",
+        "slug": "the-music-vault",
+        "title": "THE MUSIC VAULT",
+        "date": "2026.09.26",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-music-vault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "THE MUSIC VAULT",
+        "slug": "the-music-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-music-vault.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "foundations": [],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "ART VAULTS"
+    ],
+    "connected_tags": [
+      "art-of-the-day",
+      "music",
+      "musicians",
+      "playlist",
+      "spotify",
+      "aesthetics"
+    ]
+  },
+  {
+    "id": "sounds-from-the-future",
+    "name": "sounds-from-the-future",
+    "label": "#sounds-from-the-future",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "OTHERWORLDLY MUSIC",
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "foundations": [],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "OTHERWORLDLY MUSIC"
+    ],
+    "connected_tags": [
+      "art-of-the-day",
+      "music",
+      "barcelona",
+      "artists",
+      "music-album",
+      "recommendation"
+    ]
+  },
+  {
+    "id": "spotify",
+    "name": "spotify",
+    "label": "#spotify",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "the-music-vault",
+        "slug": "the-music-vault",
+        "title": "THE MUSIC VAULT",
+        "date": "2026.09.26",
+        "format": "BOOKMARK",
+        "foundations": [],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-music-vault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "THE MUSIC VAULT",
+        "slug": "the-music-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-music-vault.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "foundations": [],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "ART VAULTS"
+    ],
+    "connected_tags": [
+      "art-of-the-day",
+      "music",
+      "musicians",
+      "playlist",
+      "sound",
+      "aesthetics"
     ]
   },
   {
