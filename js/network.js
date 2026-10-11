@@ -129,7 +129,7 @@ function setNodeFilterUIState(isFiltered, filterText = "") {
     if (isFiltered) {
       label.textContent = `FILTERED BY NODE: ${filterText.toUpperCase()}`;
     } else {
-      label.textContent = "EXPLORE 3D TAG NODES & CONCEPTUAL VECTORS";
+      label.textContent = "EXPLORE 3D TAXONOMY: FOUNDATIONS → PILLARS → SUBTOPICS → TAGS";
     }
   });
 }
@@ -508,8 +508,8 @@ function initThreeJSNodeMap() {
   threeScene = new THREE.Scene();
   threeScene.fog = new THREE.FogExp2(0x050507, 0.00085);
 
-  threeCamera = new THREE.PerspectiveCamera(45, w / h, 1, 2400);
-  threeCamera.position.set(0, 30, 480);
+  threeCamera = new THREE.PerspectiveCamera(45, w / h, 1, 3200);
+  threeCamera.position.set(0, 35, 620);
 
   threeRenderer = new THREE.WebGLRenderer({
     canvas: canvas,
@@ -533,7 +533,7 @@ function initThreeJSNodeMap() {
     threeControls.rotateSpeed = 0.75;
     threeControls.zoomSpeed = 0.95;
     threeControls.minDistance = 90;
-    threeControls.maxDistance = 850;
+    threeControls.maxDistance = 1500;
     threeControls.autoRotate = true;
     threeControls.autoRotateSpeed = 0.28;
   }
@@ -624,7 +624,7 @@ function getGlitterTextures(colorHexStr, tier = "tag") {
   ctxD.fillRect(0, 0, size, size);
 
   // Micro-granular noise and multi-spectral glitter flecks
-  const fleckCount = tier === "root" ? 7500 : (tier === "pillar" ? 6000 : (tier === "subtopic" ? 4800 : 3600));
+  const fleckCount = tier === "root" ? 7500 : (tier === "foundation" ? 6500 : (tier === "pillar" ? 5600 : (tier === "subtopic" ? 4400 : 3600)));
 
   for (let i = 0; i < fleckCount; i++) {
     const x = Math.random() * size;
@@ -688,9 +688,9 @@ function createGlitterSphereNodeMesh(radius, colorHex, tier = "tag", emissiveInt
     color: colorHex,
     map: diffTex,
     bumpMap: bumpTex,
-    bumpScale: tier === "root" || tier === "pillar" ? 0.16 : (tier === "subtopic" ? 0.13 : 0.10),
+    bumpScale: tier === "root" || tier === "pillar" || tier === "foundation" ? 0.16 : (tier === "subtopic" ? 0.13 : 0.10),
     roughness: 0.36,
-    metalness: 0.76, // High metallic shimmer for holiday ornament / glitter bauble look
+    metalness: tier === "foundation" ? 0.82 : 0.76,
     emissive: colorHex,
     emissiveIntensity: emissiveIntensity,
     roughnessMap: bumpTex
@@ -699,7 +699,45 @@ function createGlitterSphereNodeMesh(radius, colorHex, tier = "tag", emissiveInt
   return new THREE.Mesh(geo, mat);
 }
 
+const CANONICAL_FOUNDATIONS = [
+  { id: "ai", name: "AI", slug: "ai", order: 1, pillars: ["ai-perception", "language-llms"] },
+  { id: "design", name: "Design", slug: "design", order: 2, pillars: ["philosophy-image"] },
+  { id: "philosophy", name: "Philosophy", slug: "philosophy", order: 3, pillars: ["philosophy-image", "philosophy-critical-theory"] },
+  { id: "perception", name: "Perception", slug: "perception", order: 4, pillars: ["visual-perception"] },
+  { id: "psychology", name: "Psychology", slug: "psychology", order: 5, pillars: ["visual-perception", "philosophy-image"] },
+  { id: "tech", name: "Tech", slug: "tech", order: 6, pillars: ["ai-perception", "language-llms", "philosophy-critical-theory"] },
+  { id: "vision", name: "Vision", slug: "vision", order: 7, pillars: ["ai-perception", "visual-perception", "philosophy-image"] },
+  { id: "semiotics", name: "Semiotics", slug: "semiotics", order: 8, pillars: ["philosophy-image", "philosophy-critical-theory"] },
+  { id: "tools", name: "Tools", slug: "tools", order: 9, pillars: ["ai-perception", "language-llms"] },
+  { id: "analysis", name: "Analysis", slug: "analysis", order: 10, pillars: ["ai-perception", "visual-perception", "language-llms", "philosophy-critical-theory"] },
+  { id: "data", name: "Data", slug: "data", order: 11, pillars: ["ai-perception", "language-llms"] },
+  { id: "branding", name: "Branding", slug: "branding", order: 12, pillars: ["philosophy-image"] },
+  { id: "graphics", name: "Graphics", slug: "graphics", order: 13, pillars: ["ai-perception", "visual-perception", "philosophy-image"] },
+  { id: "art", name: "Art", slug: "art", order: 14, pillars: ["ai-perception", "philosophy-image"] }
+];
+
+function getCanonicalFoundations() {
+  if (typeof window !== "undefined" && window.DYNAMIC_FOUNDATIONS && Array.isArray(window.DYNAMIC_FOUNDATIONS) && window.DYNAMIC_FOUNDATIONS.length > 0) {
+    return window.DYNAMIC_FOUNDATIONS;
+  }
+  return CANONICAL_FOUNDATIONS;
+}
+
+function getCanonicalPillars() {
+  if (typeof window !== "undefined" && window.DYNAMIC_PILLARS && Array.isArray(window.DYNAMIC_PILLARS) && window.DYNAMIC_PILLARS.length > 0) {
+    return window.DYNAMIC_PILLARS;
+  }
+  return [
+    { id: "ai-perception", title: "AI, Perception & Visual Culture", slug: "ai-perception", foundations: ["ai", "vision", "tech", "art", "data", "analysis", "graphics", "tools"] },
+    { id: "visual-perception", title: "Visual Perception & Psychophysics", slug: "visual-perception", foundations: ["perception", "vision", "psychology", "analysis"] },
+    { id: "language-llms", title: "Language, LLMs & Artificial Intelligence", slug: "language-llms", foundations: ["ai", "tech", "tools", "analysis", "data"] },
+    { id: "philosophy-image", title: "Philosophy of the Image & Media Archeology", slug: "philosophy-image", foundations: ["design", "philosophy", "psychology", "vision", "semiotics", "analysis", "branding", "graphics", "art"] },
+    { id: "philosophy-critical-theory", title: "Philosophy, Critical Theory & Technological Infrastructure", slug: "philosophy-critical-theory", foundations: ["philosophy", "tech", "semiotics", "analysis"] }
+  ];
+}
+
 function build3DNodeMapGraph() {
+  if (!threeNodesGroup || !threeLinesGroup) return;
   while (threeNodesGroup.children.length > 0) threeNodesGroup.remove(threeNodesGroup.children[0]);
   while (threeLinesGroup.children.length > 0) threeLinesGroup.remove(threeLinesGroup.children[0]);
   threeNodes = [];
@@ -707,7 +745,16 @@ function build3DNodeMapGraph() {
 
   if (!NETWORK_POSTS || NETWORK_POSTS.length === 0) return;
 
-  // 1. ROOT NODE (Center)
+  const GOLDEN_RATIO = (1 + Math.sqrt(5)) / 2;
+  const GOLDEN_ANGLE = 2 * Math.PI * (1 - 1 / GOLDEN_RATIO);
+
+  // Orbital tier radii
+  const R_FOUNDATION = 100; // Level 1 (first level after center)
+  const R_PILLAR = 205;     // Level 2 (second level)
+  const R_SUBTOPIC = 310;   // Level 3 (third level)
+  const R_TAG_BASE = 410;   // Level 4 (outer tag cloud)
+
+  // 1. ROOT NODE (Level 0 - Center)
   const rootData = {
     id: "root",
     label: "UNTITLED.JPG",
@@ -716,43 +763,127 @@ function build3DNodeMapGraph() {
     postsCount: NETWORK_POSTS.length
   };
 
-  const rootMesh = createGlitterSphereNodeMesh(21, 0xE84A5F, "root", 0.35);
+  const rootMesh = createGlitterSphereNodeMesh(22, 0xE84A5F, "root", 0.35);
   rootMesh.position.set(0, 0, 0);
   threeNodesGroup.add(rootMesh);
 
   const rootSprite = create3DTextSprite("UNTITLED.JPG", "#FFFFFF", 28);
-  rootSprite.position.set(0, -28, 0);
+  rootSprite.position.set(0, -29, 0);
   rootMesh.add(rootSprite);
 
   const rootNodeItem = { mesh: rootMesh, labelSprite: rootSprite, data: rootData, neighbors: new Set() };
   threeNodes.push(rootNodeItem);
 
-  // 2. EXTRACT PILLARS & SUBTOPICS
-  const pillarMap = {}; // pillarName -> { posts, subtopics: { subtopicName -> posts } }
-  NETWORK_POSTS.forEach(p => {
-    const pil = p.pillar || "GENERAL PILLAR";
-    const sub = p.subtopic || "CORE THEORIES";
-    if (!pillarMap[pil]) {
-      pillarMap[pil] = { name: pil, posts: [], subtopics: {} };
-    }
-    pillarMap[pil].posts.push(p);
+  // 2. FOUNDATIONS (Level 1 - First level of nodes after the center)
+  const foundationList = getCanonicalFoundations();
+  const foundationNodeMap = {};
+  const totalFoundations = foundationList.length;
 
-    if (!pillarMap[pil].subtopics[sub]) {
-      pillarMap[pil].subtopics[sub] = [];
+  foundationList.forEach((fObj, fIdx) => {
+    const fId = fObj.id || fObj.slug;
+    const fName = (fObj.name || fId).toUpperCase();
+
+    // Match all posts referencing this foundation
+    const postsInFoundation = NETWORK_POSTS.filter(p => {
+      if (!p.foundations || !Array.isArray(p.foundations)) return false;
+      return p.foundations.some(f => {
+        const clean = String(f).toLowerCase().trim();
+        return clean === fId.toLowerCase() || clean === (fObj.slug || "").toLowerCase() || clean === (fObj.name || "").toLowerCase();
+      });
+    });
+
+    // Fibonacci sphere distribution for uniform coverage around center
+    const y = 1 - (fIdx / Math.max(1, totalFoundations - 1)) * 2;
+    const radiusAtY = Math.sqrt(Math.max(0, 1 - y * y));
+    const theta = GOLDEN_ANGLE * fIdx;
+    const fDir = new THREE.Vector3(
+      Math.cos(theta) * radiusAtY,
+      y,
+      Math.sin(theta) * radiusAtY
+    ).normalize();
+    const fPos = fDir.clone().multiplyScalar(R_FOUNDATION);
+
+    const fRadius = Math.min(15, 11 + Math.min(4, postsInFoundation.length * 0.4));
+
+    const fData = {
+      id: `found_${fId}`,
+      foundationId: fId,
+      slug: fObj.slug || fId,
+      label: fObj.name || fId,
+      type: "foundation",
+      color: "#4E95FF",
+      postsCount: postsInFoundation.length,
+      postSlugs: postsInFoundation.map(p => p.slug)
+    };
+
+    const fMesh = createGlitterSphereNodeMesh(fRadius, 0x4E95FF, "foundation", 0.28);
+    fMesh.position.copy(fPos);
+    threeNodesGroup.add(fMesh);
+
+    const fSprite = create3DTextSprite(fName, "#79B8FF", 16);
+    fSprite.position.set(0, -(fRadius + 8), 0);
+    fMesh.add(fSprite);
+
+    const fNodeItem = { mesh: fMesh, labelSprite: fSprite, data: fData, neighbors: new Set() };
+    threeNodes.push(fNodeItem);
+
+    // Register in map for lookup by id, slug, or name
+    foundationNodeMap[fId.toLowerCase()] = fNodeItem;
+    if (fObj.slug) foundationNodeMap[fObj.slug.toLowerCase()] = fNodeItem;
+    if (fObj.name) foundationNodeMap[fObj.name.toLowerCase()] = fNodeItem;
+
+    // Connect Level 1 (Foundation) directly to Level 0 (Center Root)
+    rootNodeItem.neighbors.add(fNodeItem);
+    fNodeItem.neighbors.add(rootNodeItem);
+    create3DConnectionLine(rootNodeItem, fNodeItem, 0x1E3A6E, 0x4E95FF, 0.24);
+  });
+
+  // 3. PILLARS (Level 2 - Second level of nodes, grounded on foundations)
+  const canonicalPillars = getCanonicalPillars();
+  const pillarMap = {}; // upperName -> pillarObj
+  canonicalPillars.forEach(cp => {
+    const key = (cp.title || cp.slug).toUpperCase();
+    pillarMap[key] = {
+      name: cp.title.toUpperCase(),
+      pillarId: cp.id || cp.slug,
+      foundations: cp.foundations || [],
+      posts: [],
+      subtopics: {}
+    };
+  });
+
+  NETWORK_POSTS.forEach(p => {
+    const pil = (p.pillar || "GENERAL PILLAR").toUpperCase();
+    const sub = (p.subtopic || "CORE THEORIES").toUpperCase();
+    let pilObj = pillarMap[pil];
+    if (!pilObj) {
+      const foundCp = canonicalPillars.find(cp => (cp.id === p.pillar_id) || (cp.slug === p.pillar_id) || cp.title.toUpperCase() === pil);
+      if (foundCp) pilObj = pillarMap[foundCp.title.toUpperCase()];
     }
-    pillarMap[pil].subtopics[sub].push(p);
+    if (!pilObj) {
+      pilObj = {
+        name: pil,
+        pillarId: p.pillar_id || pil.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
+        foundations: p.foundations || [],
+        posts: [],
+        subtopics: {}
+      };
+      pillarMap[pil] = pilObj;
+    }
+
+    pilObj.posts.push(p);
+
+    if (!pilObj.subtopics[sub]) {
+      pilObj.subtopics[sub] = { name: sub, subtopicId: p.subtopic_id || "", posts: [] };
+    }
+    pilObj.subtopics[sub].posts.push(p);
   });
 
   const pillarList = Object.values(pillarMap);
-  const pillarCount = pillarList.length;
   const pillarNodeMap = {};
   const subtopicNodeMap = {};
 
-  // Spacious orbital radii
-  const R_PILLAR = 125;
-  const R_SUBTOPIC = 210;
-
-  // Spherically distributed pillar positions (Tetrahedral / Polyhedral spacing)
+  // Polyhedral basis directions for clean radial separation
   const pillarBasisDirs = [
     new THREE.Vector3( 0.85,  0.52,  0.0),
     new THREE.Vector3(-0.85,  0.52,  0.0),
@@ -764,14 +895,31 @@ function build3DNodeMapGraph() {
 
   pillarList.forEach((pilObj, pIdx) => {
     const pilName = pilObj.name;
-    const dir = (pillarBasisDirs[pIdx % pillarBasisDirs.length] || new THREE.Vector3(Math.cos(pIdx), Math.sin(pIdx), 0)).clone().normalize();
-    const pilPos = dir.clone().multiplyScalar(R_PILLAR);
-
     const postsInPillar = pilObj.posts;
-    const pillarRadius = Math.min(20, 15 + Math.min(5, postsInPillar.length * 1.2));
+
+    // Identify supporting foundation nodes
+    const supportingFNodes = (pilObj.foundations || [])
+      .map(fId => foundationNodeMap[String(fId).toLowerCase()])
+      .filter(Boolean);
+
+    // Direction vector: organic blend of supporting foundations and polyhedral basis
+    const basisDir = (pillarBasisDirs[pIdx % pillarBasisDirs.length] || new THREE.Vector3(Math.cos(pIdx), Math.sin(pIdx), 0)).clone().normalize();
+    let pilDir = basisDir;
+    if (supportingFNodes.length > 0) {
+      const avgFoundDir = new THREE.Vector3(0, 0, 0);
+      supportingFNodes.forEach(fn => avgFoundDir.add(fn.mesh.position));
+      if (avgFoundDir.lengthSq() > 0.001) {
+        avgFoundDir.normalize();
+        pilDir = avgFoundDir.clone().lerp(basisDir, 0.45).normalize();
+      }
+    }
+
+    const pilPos = pilDir.clone().multiplyScalar(R_PILLAR);
+    const pillarRadius = Math.min(22, 16 + Math.min(6, postsInPillar.length * 0.9));
 
     const pillarData = {
       id: `pillar_${pIdx}`,
+      pillarId: pilObj.pillarId,
       label: pilName,
       type: "pillar",
       color: "#FF4D64",
@@ -779,48 +927,59 @@ function build3DNodeMapGraph() {
       postSlugs: postsInPillar.map(p => p.slug)
     };
 
-    const pillarMesh = createGlitterSphereNodeMesh(pillarRadius, 0xFF4D64, "pillar", 0.28);
+    const pillarMesh = createGlitterSphereNodeMesh(pillarRadius, 0xFF4D64, "pillar", 0.30);
     pillarMesh.position.copy(pilPos);
     threeNodesGroup.add(pillarMesh);
 
-    const pillarSprite = create3DTextSprite(pilName.toUpperCase(), "#FFA0AD", 22);
+    const pillarSprite = create3DTextSprite(pilName, "#FFA0AD", 22);
     pillarSprite.position.set(0, -(pillarRadius + 9), 0);
     pillarMesh.add(pillarSprite);
 
     const pillarNodeItem = { mesh: pillarMesh, labelSprite: pillarSprite, data: pillarData, neighbors: new Set() };
     threeNodes.push(pillarNodeItem);
     pillarNodeMap[pilName] = pillarNodeItem;
+    if (pilObj.pillarId) pillarNodeMap[pilObj.pillarId.toLowerCase()] = pillarNodeItem;
 
-    rootNodeItem.neighbors.add(pillarNodeItem);
-    pillarNodeItem.neighbors.add(rootNodeItem);
-    create3DConnectionLine(rootNodeItem, pillarNodeItem, 0x8A2A38, 0xFF3B56, 0.22);
+    // Connect Level 2 (Pillar) to its supporting Level 1 (Foundations)
+    if (supportingFNodes.length > 0) {
+      supportingFNodes.forEach(fNode => {
+        fNode.neighbors.add(pillarNodeItem);
+        pillarNodeItem.neighbors.add(fNode);
+        create3DConnectionLine(fNode, pillarNodeItem, 0x2A3E62, 0x79B8FF, 0.20);
+      });
+    } else {
+      rootNodeItem.neighbors.add(pillarNodeItem);
+      pillarNodeItem.neighbors.add(rootNodeItem);
+      create3DConnectionLine(rootNodeItem, pillarNodeItem, 0x8A2A38, 0xFF3B56, 0.20);
+    }
 
-    // 3. SUB-TOPICS BRANCHING OUTWARD FROM PILLAR
-    const subtopicNames = Object.keys(pilObj.subtopics);
-    const subCount = subtopicNames.length;
+    // 4. SUBTOPICS (Level 3 - Third level of nodes, branching outward from parent pillar)
+    const subtopicEntries = Object.values(pilObj.subtopics);
+    const subCount = subtopicEntries.length;
 
-    // Build orthogonal basis vectors for the cone fan
-    const upRef = Math.abs(dir.y) < 0.9 ? new THREE.Vector3(0, 1, 0) : new THREE.Vector3(1, 0, 0);
-    const rightVec = new THREE.Vector3().crossVectors(dir, upRef).normalize();
-    const upVec = new THREE.Vector3().crossVectors(rightVec, dir).normalize();
+    // Construct orthogonal fan plane
+    const upRef = Math.abs(pilDir.y) < 0.9 ? new THREE.Vector3(0, 1, 0) : new THREE.Vector3(1, 0, 0);
+    const rightVec = new THREE.Vector3().crossVectors(pilDir, upRef).normalize();
+    const upVec = new THREE.Vector3().crossVectors(rightVec, pilDir).normalize();
 
-    subtopicNames.forEach((subName, sIdx) => {
-      const postsInSub = pilObj.subtopics[subName];
+    subtopicEntries.forEach((subObj, sIdx) => {
+      const subName = subObj.name;
+      const postsInSub = subObj.posts;
       const coneAngle = subCount === 1 ? 0 : 0.38;
       const fanAngle = subCount === 1 ? 0 : ((sIdx / (subCount - 1)) - 0.5) * Math.PI * 1.1;
 
-      const subDir = dir.clone()
+      const subDir = pilDir.clone()
         .addScaledVector(rightVec, Math.cos(fanAngle) * coneAngle)
         .addScaledVector(upVec, Math.sin(fanAngle) * coneAngle)
         .normalize();
 
       const subDist = R_SUBTOPIC + (sIdx % 2) * 18;
       const subPos = subDir.clone().multiplyScalar(subDist);
-
       const subRadius = Math.min(15, 11 + Math.min(4, postsInSub.length * 0.9));
 
       const subData = {
         id: `sub_${pIdx}_${sIdx}`,
+        subtopicId: subObj.subtopicId || "",
         label: subName,
         type: "subtopic",
         pillar: pilName,
@@ -833,21 +992,23 @@ function build3DNodeMapGraph() {
       subMesh.position.copy(subPos);
       threeNodesGroup.add(subMesh);
 
-      const subSprite = create3DTextSprite(subName.toUpperCase(), "#FFD5DC", 16);
+      const subSprite = create3DTextSprite(subName, "#FFD5DC", 16);
       subSprite.position.set(0, -(subRadius + 8), 0);
       subMesh.add(subSprite);
 
       const subNodeItem = { mesh: subMesh, labelSprite: subSprite, data: subData, neighbors: new Set() };
       threeNodes.push(subNodeItem);
       subtopicNodeMap[`${pilName}:::${subName}`] = subNodeItem;
+      if (subObj.subtopicId) subtopicNodeMap[subObj.subtopicId.toLowerCase()] = subNodeItem;
 
+      // Connect Level 3 (Subtopic) to Level 2 (Pillar)
       pillarNodeItem.neighbors.add(subNodeItem);
       subNodeItem.neighbors.add(pillarNodeItem);
       create3DConnectionLine(pillarNodeItem, subNodeItem, 0x652838, 0xFF6585, 0.14);
     });
   });
 
-  // 4. TAGS GATHERING & POSITIONING
+  // 5. TAGS (Level 4 - Outer tag sphere)
   const uniqueTagMap = {};
   NETWORK_POSTS.forEach(p => {
     if (p.tags && Array.isArray(p.tags)) {
@@ -865,8 +1026,8 @@ function build3DNodeMapGraph() {
         }
         uniqueTagMap[clean].count++;
         uniqueTagMap[clean].posts.push(p);
-        if (p.pillar) uniqueTagMap[clean].pillars.add(p.pillar);
-        if (p.pillar && p.subtopic) uniqueTagMap[clean].subtopics.add(`${p.pillar}:::${p.subtopic}`);
+        if (p.pillar) uniqueTagMap[clean].pillars.add(p.pillar.toUpperCase());
+        if (p.pillar && p.subtopic) uniqueTagMap[clean].subtopics.add(`${p.pillar.toUpperCase()}:::${p.subtopic.toUpperCase()}`);
       });
     }
   });
@@ -874,8 +1035,6 @@ function build3DNodeMapGraph() {
   const tagList = Object.values(uniqueTagMap);
   const tagNodeMap = {};
   const totalTags = tagList.length;
-  const GOLDEN_RATIO = (1 + Math.sqrt(5)) / 2;
-  const GOLDEN_ANGLE = 2 * Math.PI * (1 - 1 / GOLDEN_RATIO);
 
   tagList.forEach((tagObj, idx) => {
     const y = 1 - (idx / Math.max(1, totalTags - 1)) * 2;
@@ -903,11 +1062,8 @@ function build3DNodeMapGraph() {
       fibVec.lerp(avgPilDir, 0.35).normalize();
     }
 
-    // Outer orbital range with comfortable breathing room
-    const tagDist = 295 + (idx % 6) * 12;
+    const tagDist = R_TAG_BASE + (idx % 6) * 14;
     const finalPos = fibVec.multiplyScalar(tagDist);
-
-    // Tag size reflects frequency: smaller than subtopics (11+) but distinct across tag usage
     const tagRadius = Math.min(9.5, 5.2 + Math.min(4.3, Math.pow(tagObj.count, 0.75) * 1.5));
 
     const tagData = {
@@ -934,7 +1090,7 @@ function build3DNodeMapGraph() {
     threeNodes.push(tagNodeItem);
     tagNodeMap[tagObj.name] = tagNodeItem;
 
-    // Connect Tag to Subtopics (or Pillars if no subtopic) with very subtle default opacity
+    // Connect Level 4 (Tag) to Level 3 (Subtopics) or Level 2 (Pillars)
     if (connectedSubNodes.length > 0) {
       connectedSubNodes.forEach(sNode => {
         tagNodeItem.neighbors.add(sNode);
@@ -950,7 +1106,7 @@ function build3DNodeMapGraph() {
     }
   });
 
-  // 5. INTER-TAG CO-OCCURRENCE LINES (Refined: Chain consecutive related tags to avoid dense mesh)
+  // 6. INTER-TAG CO-OCCURRENCE LINES
   const coOccurrenceCounts = {};
   NETWORK_POSTS.forEach(p => {
     if (p.tags && Array.isArray(p.tags) && p.tags.length > 1) {
@@ -1126,14 +1282,37 @@ function getPostsForNode(nodeData) {
     return NETWORK_POSTS;
   }
 
+  if (nodeData.type === "foundation") {
+    const fId = (nodeData.foundationId || nodeData.id || "").replace(/^found_/, "").toLowerCase().trim();
+    const fSlug = (nodeData.slug || "").toLowerCase().trim();
+    const fName = (nodeData.label || "").toLowerCase().trim();
+    return NETWORK_POSTS.filter(p => {
+      if (!p.foundations || !Array.isArray(p.foundations)) return false;
+      return p.foundations.some(f => {
+        const clean = String(f).toLowerCase().trim();
+        return clean === fId || clean === fSlug || clean === fName;
+      });
+    });
+  }
+
   if (nodeData.type === "pillar") {
     const pName = (nodeData.label || "").toLowerCase().trim();
-    return NETWORK_POSTS.filter(p => (p.pillar || "").toLowerCase().trim() === pName);
+    const pId = (nodeData.pillarId || "").toLowerCase().trim();
+    return NETWORK_POSTS.filter(p => {
+      const pilName = (p.pillar || "").toLowerCase().trim();
+      const pilId = (p.pillar_id || "").toLowerCase().trim();
+      return pilName === pName || (pId && pilId === pId);
+    });
   }
 
   if (nodeData.type === "subtopic") {
     const sName = (nodeData.label || "").toLowerCase().trim();
-    return NETWORK_POSTS.filter(p => (p.subtopic || "").toLowerCase().trim() === sName);
+    const sId = (nodeData.subtopicId || "").toLowerCase().trim();
+    return NETWORK_POSTS.filter(p => {
+      const subName = (p.subtopic || "").toLowerCase().trim();
+      const subId = (p.subtopic_id || "").toLowerCase().trim();
+      return subName === sName || (sId && subId === sId);
+    });
   }
 
   // Tag node
@@ -1192,7 +1371,7 @@ function openTagsTableForNode(nodeData) {
   let query = "";
   if (nodeData.type === "root") {
     query = "";
-  } else if (nodeData.type === "pillar" || nodeData.type === "subtopic") {
+  } else if (nodeData.type === "foundation" || nodeData.type === "pillar" || nodeData.type === "subtopic") {
     query = (nodeData.label || "").trim();
   } else {
     query = (nodeData.rawTag || nodeData.label || "").replace(/^#/, "").trim();
@@ -1223,6 +1402,9 @@ function updateActivePill(nodeData) {
   if (nodeData.type === "root") {
     pillText = `[ CORE : UNTITLED.JPG ]`;
     queryName = "Untitled.jpg Taxonomy";
+  } else if (nodeData.type === "foundation") {
+    pillText = `[ FOUNDATION : ${nodeData.label.toUpperCase()} ]`;
+    queryName = nodeData.label;
   } else if (nodeData.type === "pillar") {
     pillText = `[ PILLAR : ${nodeData.label.toUpperCase()} ]`;
     queryName = nodeData.label;
@@ -1325,7 +1507,7 @@ function updateThreeSceneFocus() {
       } else {
         const s = isHoveredInSelected ? 1.15 : 0.88;
         n.mesh.scale.set(s, s, s);
-        if (n.mesh.material) n.mesh.material.emissiveIntensity = n.data && n.data.type === "root" ? 0.35 : (n.data && n.data.type === "pillar" ? 0.28 : 0.20);
+        if (n.mesh.material) n.mesh.material.emissiveIntensity = n.data && n.data.type === "root" ? 0.35 : (n.data && (n.data.type === "pillar" || n.data.type === "foundation") ? 0.28 : (n.data && n.data.type === "subtopic" ? 0.22 : 0.18));
         if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = isHoveredInSelected ? 0.85 : 0.65;
       }
     } else if (targetHoverItem) {
@@ -1342,12 +1524,12 @@ function updateThreeSceneFocus() {
         if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = 0.92;
       } else {
         n.mesh.scale.set(1.0, 1.0, 1.0);
-        if (n.mesh.material) n.mesh.material.emissiveIntensity = n.data && n.data.type === "root" ? 0.35 : (n.data && n.data.type === "pillar" ? 0.28 : 0.20);
+        if (n.mesh.material) n.mesh.material.emissiveIntensity = n.data && n.data.type === "root" ? 0.35 : (n.data && (n.data.type === "pillar" || n.data.type === "foundation") ? 0.28 : (n.data && n.data.type === "subtopic" ? 0.22 : 0.18));
         if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = 0.75;
       }
     } else {
       n.mesh.scale.set(1.0, 1.0, 1.0);
-      if (n.mesh.material) n.mesh.material.emissiveIntensity = n.data && n.data.type === "root" ? 0.35 : (n.data && n.data.type === "pillar" ? 0.28 : 0.20);
+      if (n.mesh.material) n.mesh.material.emissiveIntensity = n.data && n.data.type === "root" ? 0.35 : (n.data && (n.data.type === "pillar" || n.data.type === "foundation") ? 0.28 : (n.data && n.data.type === "subtopic" ? 0.22 : 0.18));
       if (n.labelSprite && n.labelSprite.material) n.labelSprite.material.opacity = 1.0;
     }
   });
@@ -1423,7 +1605,7 @@ function onThreeMouseClick() {
   } else {
     // Select clicked node
     activeNodeFilter = clickedData;
-    if (clickedData.type === "pillar" || clickedData.type === "subtopic") {
+    if (clickedData.type === "foundation" || clickedData.type === "pillar" || clickedData.type === "subtopic") {
       activeTagFilter = clickedData.label;
     } else if (clickedData.type === "tag") {
       activeTagFilter = clickedData.rawTag;
@@ -1490,6 +1672,7 @@ function buildNodeMapData() {
   nodes = [];
   connections = [];
 
+  // 1. ROOT NODE (Level 0 - Center)
   const rootNode = {
     id: "root",
     label: "UNTITLED.JPG",
@@ -1504,37 +1687,128 @@ function buildNodeMapData() {
   };
   nodes.push(rootNode);
 
+  // 2. FOUNDATIONS (Level 1 - First level of nodes after center)
+  const foundationList = getCanonicalFoundations();
+  const foundationNodeMap = {};
+  const totalFoundations = foundationList.length;
+  const fDistance = Math.min(w, h) * 0.16;
+
+  foundationList.forEach((fObj, fIdx) => {
+    const fId = fObj.id || fObj.slug;
+    const fAngle = (fIdx / Math.max(1, totalFoundations)) * Math.PI * 2;
+    const fx = cx + Math.cos(fAngle) * fDistance;
+    const fy = cy + Math.sin(fAngle) * fDistance;
+
+    const postsInFoundation = NETWORK_POSTS.filter(p => {
+      if (!p.foundations || !Array.isArray(p.foundations)) return false;
+      return p.foundations.some(f => {
+        const clean = String(f).toLowerCase().trim();
+        return clean === fId.toLowerCase() || clean === (fObj.slug || "").toLowerCase() || clean === (fObj.name || "").toLowerCase();
+      });
+    });
+
+    const fRadius = Math.min(13, 10 + postsInFoundation.length * 0.3);
+
+    const fNode = {
+      id: `found_${fId}`,
+      foundationId: fId,
+      slug: fObj.slug || fId,
+      label: (fObj.name || fId).toUpperCase(),
+      type: "foundation",
+      x: fx,
+      y: fy,
+      angle: fAngle,
+      vx: (Math.random() - 0.5) * 0.2,
+      vy: (Math.random() - 0.5) * 0.2,
+      radius: fRadius,
+      color: "#4E95FF",
+      postsCount: postsInFoundation.length
+    };
+    nodes.push(fNode);
+    foundationNodeMap[fId.toLowerCase()] = fNode;
+    if (fObj.slug) foundationNodeMap[fObj.slug.toLowerCase()] = fNode;
+    if (fObj.name) foundationNodeMap[fObj.name.toLowerCase()] = fNode;
+
+    // Connect Level 1 (Foundation) to Level 0 (Root)
+    connections.push({ from: rootNode, to: fNode, color: "rgba(78, 149, 255, 0.7)", weight: 1.8 });
+  });
+
+  // 3. PILLARS (Level 2 - Second level of nodes, grounded on foundations)
+  const canonicalPillars = getCanonicalPillars();
   const pillarMap = {};
+  canonicalPillars.forEach(cp => {
+    const key = (cp.title || cp.slug).toUpperCase();
+    pillarMap[key] = {
+      name: cp.title.toUpperCase(),
+      pillarId: cp.id || cp.slug,
+      foundations: cp.foundations || [],
+      posts: [],
+      subtopics: {}
+    };
+  });
+
   NETWORK_POSTS.forEach(p => {
-    const pil = p.pillar || "GENERAL PILLAR";
-    const sub = p.subtopic || "CORE THEORIES";
-    if (!pillarMap[pil]) pillarMap[pil] = { name: pil, posts: [], subtopics: {} };
-    pillarMap[pil].posts.push(p);
-    if (!pillarMap[pil].subtopics[sub]) pillarMap[pil].subtopics[sub] = [];
-    pillarMap[pil].subtopics[sub].push(p);
+    const pil = (p.pillar || "GENERAL PILLAR").toUpperCase();
+    const sub = (p.subtopic || "CORE THEORIES").toUpperCase();
+    let pilObj = pillarMap[pil];
+    if (!pilObj) {
+      const foundCp = canonicalPillars.find(cp => (cp.id === p.pillar_id) || (cp.slug === p.pillar_id) || cp.title.toUpperCase() === pil);
+      if (foundCp) pilObj = pillarMap[foundCp.title.toUpperCase()];
+    }
+    if (!pilObj) {
+      pilObj = {
+        name: pil,
+        pillarId: p.pillar_id || pil.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
+        foundations: p.foundations || [],
+        posts: [],
+        subtopics: {}
+      };
+      pillarMap[pil] = pilObj;
+    }
+    pilObj.posts.push(p);
+
+    if (!pilObj.subtopics[sub]) pilObj.subtopics[sub] = { name: sub, subtopicId: p.subtopic_id || "", posts: [] };
+    pilObj.subtopics[sub].posts.push(p);
   });
 
   const pillarList = Object.values(pillarMap);
   const pillarNodeMap = {};
   const subtopicNodeMap = {};
   const pillarCount = pillarList.length;
+  const pDistance = Math.min(w, h) * 0.32;
 
   pillarList.forEach((pilObj, pIdx) => {
     const pilName = pilObj.name;
-    const pAngle = (pIdx / Math.max(1, pillarCount)) * Math.PI * 2;
-    const pDistance = Math.min(w, h) * 0.28;
+    const postsInPillar = pilObj.posts;
+
+    // Supporting foundations
+    const supportingFNodes = (pilObj.foundations || [])
+      .map(fId => foundationNodeMap[String(fId).toLowerCase()])
+      .filter(Boolean);
+
+    // Calculate angle towards supporting foundations or evenly spaced circle
+    let pAngle = (pIdx / Math.max(1, pillarCount)) * Math.PI * 2;
+    if (supportingFNodes.length > 0) {
+      let avgAngleX = 0, avgAngleY = 0;
+      supportingFNodes.forEach(fn => {
+        avgAngleX += Math.cos(fn.angle);
+        avgAngleY += Math.sin(fn.angle);
+      });
+      pAngle = Math.atan2(avgAngleY, avgAngleX);
+    }
+
     const px = cx + Math.cos(pAngle) * pDistance;
     const py = cy + Math.sin(pAngle) * pDistance;
-
-    const postsInPillar = pilObj.posts;
     const pillarRadius = Math.min(18, 14 + postsInPillar.length * 0.8);
 
     const pillarNode = {
       id: `pillar_${pIdx}`,
+      pillarId: pilObj.pillarId,
       label: pilName,
       type: "pillar",
       x: px,
       y: py,
+      angle: pAngle,
       vx: (Math.random() - 0.5) * 0.25,
       vy: (Math.random() - 0.5) * 0.25,
       radius: pillarRadius,
@@ -1543,26 +1817,40 @@ function buildNodeMapData() {
     };
     nodes.push(pillarNode);
     pillarNodeMap[pilName] = pillarNode;
-    connections.push({ from: rootNode, to: pillarNode, color: "rgba(232, 74, 95, 0.7)", weight: 2 });
+    if (pilObj.pillarId) pillarNodeMap[pilObj.pillarId.toLowerCase()] = pillarNode;
 
-    const subNames = Object.keys(pilObj.subtopics);
-    const subCount = subNames.length;
-    subNames.forEach((subName, sIdx) => {
-      const sAngle = pAngle + (subCount === 1 ? 0 : ((sIdx / (subCount - 1)) - 0.5) * 0.9);
-      const sDistance = Math.min(w, h) * 0.44;
+    // Connect Level 2 (Pillar) to supporting Level 1 (Foundations)
+    if (supportingFNodes.length > 0) {
+      supportingFNodes.forEach(fNode => {
+        connections.push({ from: fNode, to: pillarNode, color: "rgba(121, 184, 255, 0.6)", weight: 1.6 });
+      });
+    } else {
+      connections.push({ from: rootNode, to: pillarNode, color: "rgba(232, 74, 95, 0.7)", weight: 2 });
+    }
+
+    // 4. SUBTOPICS (Level 3 - Third level of nodes, branching from parent pillar)
+    const subEntries = Object.values(pilObj.subtopics);
+    const subCount = subEntries.length;
+    const sDistance = Math.min(w, h) * 0.48;
+
+    subEntries.forEach((subObj, sIdx) => {
+      const subName = subObj.name;
+      const sAngle = pAngle + (subCount === 1 ? 0 : ((sIdx / (subCount - 1)) - 0.5) * 0.85);
       const sx = cx + Math.cos(sAngle) * sDistance;
       const sy = cy + Math.sin(sAngle) * sDistance;
 
-      const postsInSub = pilObj.subtopics[subName];
+      const postsInSub = subObj.posts;
       const subRadius = Math.min(13, 9.5 + postsInSub.length * 0.7);
 
       const subNode = {
         id: `sub_${pIdx}_${sIdx}`,
+        subtopicId: subObj.subtopicId || "",
         label: subName,
         type: "subtopic",
         pillar: pilName,
         x: sx,
         y: sy,
+        angle: sAngle,
         vx: (Math.random() - 0.5) * 0.25,
         vy: (Math.random() - 0.5) * 0.25,
         radius: subRadius,
@@ -1571,10 +1859,14 @@ function buildNodeMapData() {
       };
       nodes.push(subNode);
       subtopicNodeMap[`${pilName}:::${subName}`] = subNode;
-      connections.push({ from: pillarNode, to: subNode, color: "rgba(255, 160, 176, 0.6)", weight: 1.5 });
+      if (subObj.subtopicId) subtopicNodeMap[subObj.subtopicId.toLowerCase()] = subNode;
+
+      // Connect Level 3 (Subtopic) to Level 2 (Pillar)
+      connections.push({ from: pillarNode, to: subNode, color: "rgba(255, 160, 176, 0.6)", weight: 1.4 });
     });
   });
 
+  // 5. TAGS (Level 4 - Outer tag layer)
   const uniqueTagMap = {};
   NETWORK_POSTS.forEach(p => {
     if (p.tags && Array.isArray(p.tags)) {
@@ -1585,8 +1877,8 @@ function buildNodeMapData() {
           uniqueTagMap[clean] = { name: clean, pillars: new Set(), subtopics: new Set(), count: 0 };
         }
         uniqueTagMap[clean].count++;
-        if (p.pillar) uniqueTagMap[clean].pillars.add(p.pillar);
-        if (p.pillar && p.subtopic) uniqueTagMap[clean].subtopics.add(`${p.pillar}:::${p.subtopic}`);
+        if (p.pillar) uniqueTagMap[clean].pillars.add(p.pillar.toUpperCase());
+        if (p.pillar && p.subtopic) uniqueTagMap[clean].subtopics.add(`${p.pillar.toUpperCase()}:::${p.subtopic.toUpperCase()}`);
       });
     }
   });
@@ -1596,7 +1888,7 @@ function buildNodeMapData() {
 
   tagList.forEach((tagObj, idx) => {
     const angle = (idx / Math.max(1, tagList.length)) * Math.PI * 2;
-    const distance = Math.min(w, h) * 0.60 + (idx % 4) * 12;
+    const distance = Math.min(w, h) * 0.64 + (idx % 4) * 10;
     const tx = cx + Math.cos(angle) * distance;
     const ty = cy + Math.sin(angle) * distance;
 
@@ -1689,7 +1981,7 @@ function drawNodeGraph() {
     if (isHovered || isActive || isConnected) {
       ctx.beginPath();
       ctx.arc(node.x, node.y, r + 8, 0, Math.PI * 2);
-      ctx.fillStyle = node.type === "tag" ? "rgba(226, 232, 240, 0.22)" : "rgba(232, 74, 95, 0.35)";
+      ctx.fillStyle = node.type === "foundation" ? "rgba(78, 149, 255, 0.35)" : (node.type === "tag" ? "rgba(226, 232, 240, 0.22)" : "rgba(232, 74, 95, 0.35)");
       ctx.fill();
     }
 
@@ -1750,7 +2042,7 @@ function handleCanvasClick(e) {
     renderSelectedNodePostsStrip(null);
   } else {
     activeNodeFilter = hoveredNode;
-    if (hoveredNode.type === "pillar" || hoveredNode.type === "subtopic") {
+    if (hoveredNode.type === "foundation" || hoveredNode.type === "pillar" || hoveredNode.type === "subtopic") {
       activeTagFilter = hoveredNode.label;
     } else if (hoveredNode.type === "tag") {
       activeTagFilter = hoveredNode.rawTag;

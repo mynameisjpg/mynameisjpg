@@ -6,7 +6,7 @@ excerpt: "When visual supply becomes infinite and individual objects lose their 
 date: "2026-10-10 13:18:06 -0300"
 last_modified_at: "2026-10-10 13:18:06 -0300"
 author: "Juan P. Giusepponi"
-status: "draft"
+status: "published"
 format: "essay"
 topic:
   pillar: "Philosophy of the Image & Visual Culture"
@@ -37,6 +37,9 @@ allow_embed: true
 image:
   path: "assets/images/brands-are-dead.jpg"
   alt: "Glitch art featuring the Rolling Stones lips and tongue logo in coral red, surrounded by fragmented icons of a shopping cart, retro TV, and bottle against a gritty black backdrop."
+gallery-images:
+  - path: "assets/images/brand-is-dead.jpg"
+    alt: "This digital illustration depicts a stylized scene of online shopping, featuring a shopping cart, silhouetted figures, and abstract geometric patterns in red and black tones. The composition blends urban imagery with fragmented shapes to convey the fast-paced and fragmented nature of e-commerce."
 links:
   - title: "On Photography (Susan Sontag, 1977)"
     url: "https://en.wikipedia.org/wiki/On_Photography"

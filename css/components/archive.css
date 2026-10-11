@@ -109,18 +109,16 @@
   display: flex;
   gap: 0.75rem;
   align-items: center;
+  justify-content: space-between;
   min-height: 30px;
   height: 30px;
   width: 100%;
 }
 
-.nodemap-controls-row {
-  justify-content: flex-end;
-}
-
 .timeline-search-box {
   position: relative;
   flex: 1;
+  max-width: 320px;
   display: flex;
   align-items: center;
   background-color: var(--neutral-bg, #121212);
@@ -1136,7 +1134,16 @@
 /* ==============================================================================
    TAXONOMY & TAGS DIRECTORY TABLE VIEW
    ============================================================================== */
+.view-toggle-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
 .btn-archive-view-toggle {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.1));
   color: var(--text-muted, #888888);

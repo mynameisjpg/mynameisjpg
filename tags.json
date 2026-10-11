@@ -4556,397 +4556,6 @@
     "connected_tags": []
   },
   {
-    "id": "pillar-ai-perception",
-    "name": "AI Perception",
-    "label": "AI Perception",
-    "type": "pillar",
-    "count": 4,
-    "posts": [
-      {
-        "id": "2026-10-06-marc-van-elburg",
-        "slug": "marc-van-elburg",
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "date": "2026.10.06",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/marc-van-elburg.html"
-      },
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
-      },
-      {
-        "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "date": "2026.09.26",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
-      },
-      {
-        "id": "2026-09-25-turing-queer-ai",
-        "slug": "turing-queer-ai",
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "date": "2026.09.25",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "posts/turing-queer-ai.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "slug": "marc-van-elburg",
-        "format": "BOOKMARK",
-        "url": "posts/marc-van-elburg.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      },
-      {
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "format": "BOOKMARK",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "turing-queer-ai",
-        "format": "ESSAY",
-        "url": "posts/turing-queer-ai.html",
-        "date": "2026.09.25"
-      }
-    ],
-    "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
-    ],
-    "pillars": [],
-    "subtopics": [],
-    "order": 1,
-    "description": "How AI is perceived and how machine vision reshapes visual culture, and how synthetic media alters human representation and societal consensus.",
-    "connected_tags": []
-  },
-  {
-    "id": "pillar-visual-perception",
-    "name": "Visual Perception",
-    "label": "Visual Perception",
-    "type": "pillar",
-    "count": 4,
-    "posts": [
-      {
-        "id": "2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency",
-        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
-        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.10",
-        "format": "NOTE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
-      },
-      {
-        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
-        "slug": "5-psychology-effects-used-in-app-design",
-        "title": "5 Psychology Effects Used in App Design",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "COGNITIVE AND VISUAL BIASES",
-        "url": "posts/5-psychology-effects-used-in-app-design.html"
-      },
-      {
-        "id": "2026-09-29-visual-bandwidth-bottleneck",
-        "slug": "visual-bandwidth-bottleneck",
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "date": "2026.09.29",
-        "format": "NOTE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/visual-bandwidth-bottleneck.html"
-      },
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
-        "format": "NOTE",
-        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "5 Psychology Effects Used in App Design",
-        "slug": "5-psychology-effects-used-in-app-design",
-        "format": "NOTE",
-        "url": "posts/5-psychology-effects-used-in-app-design.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "slug": "visual-bandwidth-bottleneck",
-        "format": "NOTE",
-        "url": "posts/visual-bandwidth-bottleneck.html",
-        "date": "2026.09.29"
-      },
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
-      "Vision"
-    ],
-    "pillars": [],
-    "subtopics": [],
-    "order": 2,
-    "description": "Examining how the human visual system constructs reality from sensory signals—exploring the physiological mechanics of sight, optical paradoxes, Gestalt organization, and cognitive biases.",
-    "connected_tags": []
-  },
-  {
-    "id": "pillar-language-llms",
-    "name": "Language & LLMs",
-    "label": "Language & LLMs",
-    "type": "pillar",
-    "count": 5,
-    "posts": [
-      {
-        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
-        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
-        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
-        "date": "2026.10.10",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
-        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
-      },
-      {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
-      },
-      {
-        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "date": "2026.10.06",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
-      },
-      {
-        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "date": "2026.09.26",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/harvard-s-computer-science-career-for-free.html"
-      },
-      {
-        "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "lecun-world-models-jepa",
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "date": "2026.09.24",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/lecun-world-models-jepa.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
-        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
-        "format": "BOOKMARK",
-        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "format": "RESOURCE",
-        "url": "posts/harvard-s-computer-science-career-for-free.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "lecun-world-models-jepa",
-        "format": "ESSAY",
-        "url": "posts/lecun-world-models-jepa.html",
-        "date": "2026.09.24"
-      }
-    ],
-    "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
-    ],
-    "pillars": [],
-    "subtopics": [],
-    "order": 3,
-    "description": "Exploring the boundaries of machine cognition and symbolic reasoning—analyzing how language models process meaning, how agentic systems operate, and where artificial intelligence diverges from human thought.",
-    "connected_tags": []
-  },
-  {
     "id": "pillar-philosophy-image",
     "name": "Philosophy of the Image",
     "label": "Philosophy of the Image",
@@ -5211,8 +4820,399 @@
     ],
     "pillars": [],
     "subtopics": [],
-    "order": 4,
-    "description": "Analyzing the epistemology of seeing in the digital era—questioning how photographs, simulations, and algorithmic interfaces mediate power, cultural memory, and our understanding of truth.",
+    "order": 99,
+    "description": "Analyzing the epistemology of seeing in the digital era -questioning how photographs, simulations, and algorithmic interfaces mediate power, cultural memory, and our understanding of truth.",
+    "connected_tags": []
+  },
+  {
+    "id": "pillar-language-llms",
+    "name": "Language & LLMs",
+    "label": "Language & LLMs",
+    "type": "pillar",
+    "count": 5,
+    "posts": [
+      {
+        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "date": "2026.10.10",
+        "format": "BOOKMARK",
+        "foundations": [
+          "ai",
+          "tech",
+          "tools",
+          "analysis",
+          "data"
+        ],
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
+      },
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "foundations": [
+          "ai",
+          "tech",
+          "tools",
+          "analysis",
+          "data"
+        ],
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      },
+      {
+        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "date": "2026.10.06",
+        "format": "RESOURCE",
+        "foundations": [
+          "ai",
+          "tech",
+          "tools",
+          "analysis",
+          "data"
+        ],
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
+      },
+      {
+        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "date": "2026.09.26",
+        "format": "RESOURCE",
+        "foundations": [
+          "ai",
+          "tech",
+          "tools",
+          "analysis",
+          "data"
+        ],
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
+      },
+      {
+        "id": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "date": "2026.09.24",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "tech",
+          "tools",
+          "analysis",
+          "data"
+        ],
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+        "url": "posts/lecun-world-models-jepa.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
+        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
+        "format": "BOOKMARK",
+        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
+        "date": "2026.10.06"
+      },
+      {
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "format": "RESOURCE",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "slug": "lecun-world-models-jepa",
+        "format": "ESSAY",
+        "url": "posts/lecun-world-models-jepa.html",
+        "date": "2026.09.24"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Data",
+      "Tech",
+      "Tools"
+    ],
+    "pillars": [],
+    "subtopics": [],
+    "order": 99,
+    "description": "Exploring the boundaries of machine cognition and symbolic reasoning -analyzing how language models process meaning, how agentic systems operate, and where artificial intelligence diverges from human thought.",
+    "connected_tags": []
+  },
+  {
+    "id": "pillar-ai-perception",
+    "name": "AI Perception",
+    "label": "AI Perception",
+    "type": "pillar",
+    "count": 4,
+    "posts": [
+      {
+        "id": "2026-10-06-marc-van-elburg",
+        "slug": "marc-van-elburg",
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "date": "2026.10.06",
+        "format": "BOOKMARK",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/marc-van-elburg.html"
+      },
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      },
+      {
+        "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
+        "title": "Excavating AI (the unEthics of Machine Learning Training)",
+        "date": "2026.09.26",
+        "format": "BOOKMARK",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
+      },
+      {
+        "id": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "date": "2026.09.25",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
+        "url": "posts/turing-queer-ai.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "slug": "marc-van-elburg",
+        "format": "BOOKMARK",
+        "url": "posts/marc-van-elburg.html",
+        "date": "2026.10.06"
+      },
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      },
+      {
+        "title": "Excavating AI (the unEthics of Machine Learning Training)",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
+        "format": "BOOKMARK",
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
+        "date": "2026.09.26"
+      },
+      {
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "slug": "turing-queer-ai",
+        "format": "ESSAY",
+        "url": "posts/turing-queer-ai.html",
+        "date": "2026.09.25"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Art",
+      "Data",
+      "Graphics",
+      "Tech",
+      "Tools",
+      "Vision"
+    ],
+    "pillars": [],
+    "subtopics": [],
+    "order": 99,
+    "description": "How AI is perceived and how machine vision reshapes visual culture, and how synthetic media alters human representation and societal consensus.",
+    "connected_tags": []
+  },
+  {
+    "id": "pillar-visual-perception",
+    "name": "Visual Perception",
+    "label": "Visual Perception",
+    "type": "pillar",
+    "count": 4,
+    "posts": [
+      {
+        "id": "2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "date": "2026.10.10",
+        "format": "NOTE",
+        "foundations": [
+          "perception",
+          "vision",
+          "psychology",
+          "analysis"
+        ],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
+      },
+      {
+        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "title": "5 Psychology Effects Used in App Design",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "foundations": [
+          "perception",
+          "vision",
+          "psychology",
+          "analysis"
+        ],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "COGNITIVE AND VISUAL BIASES",
+        "url": "posts/5-psychology-effects-used-in-app-design.html"
+      },
+      {
+        "id": "2026-09-29-visual-bandwidth-bottleneck",
+        "slug": "visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "date": "2026.09.29",
+        "format": "NOTE",
+        "foundations": [
+          "perception",
+          "vision",
+          "psychology",
+          "analysis"
+        ],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/visual-bandwidth-bottleneck.html"
+      },
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "foundations": [
+          "perception",
+          "vision",
+          "psychology",
+          "analysis"
+        ],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
+        "format": "NOTE",
+        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
+        "date": "2026.10.10"
+      },
+      {
+        "title": "5 Psychology Effects Used in App Design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "format": "NOTE",
+        "url": "posts/5-psychology-effects-used-in-app-design.html",
+        "date": "2026.10.02"
+      },
+      {
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "slug": "visual-bandwidth-bottleneck",
+        "format": "NOTE",
+        "url": "posts/visual-bandwidth-bottleneck.html",
+        "date": "2026.09.29"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "foundations": [
+      "Analysis",
+      "Perception",
+      "Psychology",
+      "Vision"
+    ],
+    "pillars": [],
+    "subtopics": [],
+    "order": 99,
+    "description": "Examining how the human visual system constructs reality from sensory signals -exploring the physiological mechanics of sight, optical paradoxes, Gestalt organization, and cognitive biases.",
     "connected_tags": []
   },
   {
@@ -5306,8 +5306,8 @@
     ],
     "pillars": [],
     "subtopics": [],
-    "order": 5,
-    "description": "Engaging foundational philosophical frameworks to deconstruct contemporary technology—tracing the intersections of power, language, embodiment, and ideology in technical systems.",
+    "order": 99,
+    "description": "Engaging foundational philosophical frameworks to deconstruct contemporary technology -tracing the intersections of power, language, embodiment, and ideology in technical systems.",
     "connected_tags": []
   },
   {

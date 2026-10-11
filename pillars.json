@@ -46,7 +46,11 @@
       "slug": "tech",
       "order": 6,
       "description": "Technological infrastructures, software frameworks, code architectures, and digital systems.",
-      "pillars": ["ai-perception", "language-llms", "philosophy-critical-theory"]
+      "pillars": [
+        "ai-perception",
+        "language-llms",
+        "philosophy-critical-theory"
+      ]
     },
     {
       "id": "vision",
@@ -78,7 +82,12 @@
       "slug": "analysis",
       "order": 10,
       "description": "Forensic deconstruction, empirical evaluation, benchmark metrics, and theoretical examination.",
-      "pillars": ["ai-perception", "visual-perception", "language-llms", "philosophy-critical-theory"]
+      "pillars": [
+        "ai-perception",
+        "visual-perception",
+        "language-llms",
+        "philosophy-critical-theory"
+      ]
     },
     {
       "id": "data",
@@ -86,7 +95,11 @@
       "slug": "data",
       "order": 11,
       "description": "Training datasets, high-dimensional vector spaces, empirical evidence, and data ecology.",
-      "pillars": ["ai-perception", "language-llms", "philosophy-critical-theory"]
+      "pillars": [
+        "ai-perception",
+        "language-llms",
+        "philosophy-critical-theory"
+      ]
     },
     {
       "id": "branding",
@@ -116,12 +129,20 @@
   "pillars": [
     {
       "id": "ai-perception",
-      "number": "01",
       "code": "1",
       "slug": "ai-perception",
       "title": "AI perception & representation",
       "short_title": "AI Perception",
-      "foundations": ["ai", "vision", "tech", "art", "data", "analysis", "graphics", "tools"],
+      "foundations": [
+        "ai",
+        "vision",
+        "tech",
+        "art",
+        "data",
+        "analysis",
+        "graphics",
+        "tools"
+      ],
       "description": "How AI is perceived and how machine vision reshapes visual culture, and how synthetic media alters human representation and societal consensus.",
       "subtopics": [
         {
@@ -177,13 +198,12 @@
     },
     {
       "id": "visual-perception",
-      "number": "02",
       "code": "2",
       "slug": "visual-perception",
       "title": "Visual Perception & Psychophysics",
       "short_title": "Visual Perception",
       "foundations": ["perception", "vision", "psychology", "analysis"],
-      "description": "Examining how the human visual system constructs reality from sensory signals—exploring the physiological mechanics of sight, optical paradoxes, Gestalt organization, and cognitive biases.",
+      "description": "Examining how the human visual system constructs reality from sensory signals -exploring the physiological mechanics of sight, optical paradoxes, Gestalt organization, and cognitive biases.",
       "subtopics": [
         {
           "id": "anatomy-psychophysics-vision",
@@ -231,13 +251,12 @@
     },
     {
       "id": "language-llms",
-      "number": "03",
       "code": "3",
       "slug": "language-llms",
       "title": "Language, LLMs & Artificial Intelligence",
       "short_title": "Language & LLMs",
       "foundations": ["ai", "tech", "tools", "analysis", "data"],
-      "description": "Exploring the boundaries of machine cognition and symbolic reasoning—analyzing how language models process meaning, how agentic systems operate, and where artificial intelligence diverges from human thought.",
+      "description": "Exploring the boundaries of machine cognition and symbolic reasoning -analyzing how language models process meaning, how agentic systems operate, and where artificial intelligence diverges from human thought.",
       "subtopics": [
         {
           "id": "llm-architectures",
@@ -285,13 +304,21 @@
     },
     {
       "id": "philosophy-image",
-      "number": "04",
       "code": "4",
       "slug": "philosophy-image",
       "title": "Philosophy of the Image & Visual Culture",
       "short_title": "Philosophy of the Image",
-      "foundations": ["philosophy", "semiotics", "design", "art", "branding", "graphics", "vision", "psychology"],
-      "description": "Analyzing the epistemology of seeing in the digital era—questioning how photographs, simulations, and algorithmic interfaces mediate power, cultural memory, and our understanding of truth.",
+      "foundations": [
+        "philosophy",
+        "semiotics",
+        "design",
+        "art",
+        "branding",
+        "graphics",
+        "vision",
+        "psychology"
+      ],
+      "description": "Analyzing the epistemology of seeing in the digital era -questioning how photographs, simulations, and algorithmic interfaces mediate power, cultural memory, and our understanding of truth.",
       "subtopics": [
         {
           "id": "visual-semiotics",
@@ -346,13 +373,12 @@
     },
     {
       "id": "philosophy-critical-theory",
-      "number": "05",
       "code": "5",
       "slug": "philosophy-critical-theory",
       "title": "Philosophy & Critical Theory",
       "short_title": "Critical Theory",
       "foundations": ["philosophy", "tech", "analysis", "data", "semiotics"],
-      "description": "Engaging foundational philosophical frameworks to deconstruct contemporary technology—tracing the intersections of power, language, embodiment, and ideology in technical systems.",
+      "description": "Engaging foundational philosophical frameworks to deconstruct contemporary technology -tracing the intersections of power, language, embodiment, and ideology in technical systems.",
       "subtopics": [
         {
           "id": "epistemic-paradigms",

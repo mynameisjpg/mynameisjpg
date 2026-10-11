@@ -38,201 +38,187 @@ from builder.tags import compile_tags_database
 from builder.html_page import generate_post_html_files
 from builder.sitemap import generate_sitemap
 
-def compile_posts():
-    """Reads all Markdown files in _posts/ and outputs posts.json & posts.js."""
-    if not POSTS_DIR.exists():
-        print(f"Error: Directory {POSTS_DIR} not found.")
-        return False
-        
-    canonical_pillars, canonical_foundations = load_taxonomy_data()
-    if canonical_pillars or canonical_foundations:
-        sync_pillars_js(canonical_pillars, canonical_foundations)
+def _to_bool(val, default=True):
+    if val is None:
+        return default
+    if isinstance(val, bool):
+        return val
+    return str(val).strip().lower() != "false"
 
-    posts = []
-    # Sort files chronologically descending
-    for file_path in sorted(POSTS_DIR.glob("*.md"), reverse=True):
-        if file_path.name.startswith("TEMPLATE") or file_path.name.startswith("."):
+
+def _resolve_taxonomy(meta, canonical_pillars):
+    topic = meta.get("topic", {})
+    raw_pillar = topic.get("pillar", "") if isinstance(topic, dict) else meta.get("pillar", "")
+    raw_subtopic = topic.get("subtopic", "") if isinstance(topic, dict) else meta.get("subtopic", "")
+
+    matched_pil = match_canonical_pillar(raw_pillar, canonical_pillars)
+    pillar = matched_pil["title"] if matched_pil else raw_pillar
+    pillar_id = matched_pil["id"] if matched_pil else (slugify(raw_pillar) if raw_pillar else "")
+
+    matched_sub = match_canonical_subtopic(raw_subtopic, canonical_pillars)
+    subtopic = matched_sub["title"] if matched_sub else raw_subtopic
+    subtopic_id = matched_sub["id"] if matched_sub else (slugify(raw_subtopic) if raw_subtopic else "")
+
+    return {
+        "pillar": pillar,
+        "pillar_id": pillar_id,
+        "subtopic": subtopic,
+        "subtopic_id": subtopic_id,
+        "matched_pil": matched_pil,
+    }
+
+
+def _resolve_foundations(meta, matched_pil):
+    inherited = matched_pil.get("foundations", []) if matched_pil else []
+    raw = meta.get("foundations") or meta.get("foundation") or []
+    if isinstance(raw, str):
+        raw = [f.strip().lower() for f in raw.split(",") if f.strip()]
+    elif isinstance(raw, list):
+        raw = [str(f).strip().lower() for f in raw if f]
+    else:
+        raw = []
+
+    seen = set()
+    foundations = []
+    for item in inherited + raw:
+        s = slugify(item)
+        if s and s not in seen:
+            seen.add(s)
+            foundations.append(s)
+    return foundations
+
+
+def _resolve_images(meta):
+    img_data = meta.get("image")
+    if isinstance(img_data, dict):
+        image = img_data.get("path", "")
+        img_alt = img_data.get("alt", "")
+    elif isinstance(img_data, str):
+        image = img_data
+        img_alt = meta.get("image_alt") or meta.get("alt", "")
+    else:
+        image = meta.get("cover_image", "")
+        img_alt = meta.get("image_alt") or meta.get("alt", "")
+
+    thumbnail = generate_thumbnail(image) if image else ""
+
+    gallery_imgs = []
+    for g in meta.get("gallery_images") or []:
+        g_path = (g.get("path") or g.get("image") or "") if isinstance(g, dict) else str(g)
+        g_path = g_path.strip()
+        if not g_path:
             continue
-            
-        try:
-            with open(file_path, "r", encoding="utf-8", errors="replace") as f:
-                content = f.read()
-                
-            meta, body = parse_yaml_frontmatter(content)
-            
-            # Extract attributes
-            slug = file_path.stem
-            sys_id = meta.get("sys_id") or f"SYS_{slug.upper()}"
-            
-            # Topic hierarchy & canonical taxonomy resolution
-            topic = meta.get("topic", {})
-            raw_pillar = topic.get("pillar", "") if isinstance(topic, dict) else meta.get("pillar", "")
-            raw_subtopic = topic.get("subtopic", "") if isinstance(topic, dict) else meta.get("subtopic", "")
+        g_alt = g.get("alt", "").strip() if isinstance(g, dict) else ""
+        g_title = g.get("title", "").strip() if isinstance(g, dict) else ""
+        gallery_imgs.append({
+            "path": g_path,
+            "image": g_path,
+            "thumbnail": generate_thumbnail(g_path),
+            "alt": g_alt,
+            "title": g_title,
+        })
 
-            matched_pil = match_canonical_pillar(raw_pillar, canonical_pillars)
-            pillar = matched_pil["title"] if matched_pil else raw_pillar
-            pillar_id = matched_pil["id"] if matched_pil else (slugify(raw_pillar) if raw_pillar else "")
+    return {
+        "image": image,
+        "image_alt": img_alt,
+        "thumbnail": thumbnail,
+        "aspect_ratio": meta.get("aspect_ratio") or "h-tall-1",
+        "gallery_images": gallery_imgs,
+    }
 
-            matched_sub = match_canonical_subtopic(raw_subtopic, canonical_pillars)
-            subtopic = matched_sub["title"] if matched_sub else raw_subtopic
-            subtopic_id = matched_sub["id"] if matched_sub else (slugify(raw_subtopic) if raw_subtopic else "")
 
-            # Foundations resolution (inherited from matched pillar + explicit post frontmatter)
-            inherited_foundations = matched_pil.get("foundations", []) if matched_pil else []
-            raw_meta_foundations = meta.get("foundations") or meta.get("foundation") or []
-            if isinstance(raw_meta_foundations, str):
-                raw_meta_foundations = [f.strip().lower() for f in raw_meta_foundations.split(",") if f.strip()]
-            elif isinstance(raw_meta_foundations, list):
-                raw_meta_foundations = [str(f).strip().lower() for f in raw_meta_foundations if f]
-            else:
-                raw_meta_foundations = []
+def _resolve_links_and_backlinks(meta):
+    links = [
+        {
+            "title": l.get("title", ""),
+            "url": l.get("url", "#"),
+            "type": (l.get("type") or "LINK").upper(),
+            "desc": l.get("description") or l.get("desc") or "",
+        }
+        for l in (meta.get("links") or [])
+        if isinstance(l, dict)
+    ]
+    backlinks = [
+        {
+            "slug": b.get("slug", "#"),
+            "title": b.get("title", ""),
+            "note": b.get("note", ""),
+        }
+        for b in (meta.get("backlinks") or [])
+        if isinstance(b, dict)
+    ]
+    return links, backlinks
 
-            combined_foundations = []
-            seen_f = set()
-            for f_item in inherited_foundations + raw_meta_foundations:
-                f_slug = slugify(f_item)
-                if f_slug and f_slug not in seen_f:
-                    seen_f.add(f_slug)
-                    combined_foundations.append(f_slug)
-            
-            # Format-specific metadata
-            category = meta.get("category", "")
-            media = meta.get("media", "")
-            source = meta.get("source") or meta.get("via", "")
-            target_url = meta.get("resource_url") or meta.get("bookmark_url") or meta.get("url") or meta.get("link") or ""
-            
-            # Date formatting
-            raw_date = str(meta.get("date", ""))
-            date_match = re.match(r"^(\d{4})[-.](\d{2})[-.](\d{2})", raw_date)
-            formatted_date = f"{date_match.group(1)}.{date_match.group(2)}.{date_match.group(3)}" if date_match else raw_date
-            
-            # Image & Aspect Ratio Defaults
-            img_data = meta.get("image")
-            img_alt = ""
-            if isinstance(img_data, dict):
-                image = img_data.get("path", "")
-                img_alt = img_data.get("alt", "")
-            elif isinstance(img_data, str):
-                image = img_data
-                img_alt = meta.get("image_alt") or meta.get("alt", "")
-            else:
-                image = meta.get("cover_image", "")
-                img_alt = meta.get("image_alt") or meta.get("alt", "")
-                
-            aspect_ratio = meta.get("aspect_ratio") or "h-tall-1"
-            
-            # Generate or reuse optimized downscaled thumbnail
-            thumbnail = generate_thumbnail(image) if image else ""
 
-            # Gallery Images (additional artworks to populate 3D spatial gallery)
-            raw_gallery_imgs = meta.get("gallery_images") or []
-            normalized_gallery_images = []
-            if isinstance(raw_gallery_imgs, list):
-                for g_item in raw_gallery_imgs:
-                    g_path = ""
-                    g_alt = ""
-                    g_title = ""
-                    if isinstance(g_item, dict):
-                        g_path = str(g_item.get("path") or g_item.get("image") or "").strip()
-                        g_alt = str(g_item.get("alt") or "").strip()
-                        g_title = str(g_item.get("title") or "").strip()
-                    elif isinstance(g_item, str):
-                        g_path = g_item.strip()
-                    if g_path:
-                        g_thumb = generate_thumbnail(g_path)
-                        normalized_gallery_images.append({
-                            "path": g_path,
-                            "image": g_path,
-                            "thumbnail": g_thumb,
-                            "alt": g_alt,
-                            "title": g_title
-                        })
-            
-            # Convert body to clean rich HTML
-            html_content = clean_and_convert_markdown(body)
-            
-            # Normalize links and backlinks
-            links = meta.get("links") or []
-            normalized_links = []
-            for l in links:
-                if isinstance(l, dict):
-                    normalized_links.append({
-                        "title": l.get("title", ""),
-                        "url": l.get("url", "#"),
-                        "type": (l.get("type") or "LINK").upper(),
-                        "desc": l.get("description") or l.get("desc") or ""
-                    })
-                    
-            backlinks = meta.get("backlinks") or []
-            normalized_backlinks = []
-            for b in backlinks:
-                if isinstance(b, dict):
-                    normalized_backlinks.append({
-                        "slug": b.get("slug", "#"),
-                        "title": b.get("title", ""),
-                        "note": b.get("note", "")
-                    })
-            
-            is_featured = bool(meta.get("featured", False)) or str(meta.get("featured", "")).lower() == "true"
-            shareable = meta.get("shareable", True)
-            if isinstance(shareable, str):
-                shareable = shareable.lower() != "false"
-            allow_embed = meta.get("allow_embed", True)
-            if isinstance(allow_embed, str):
-                allow_embed = allow_embed.lower() != "false"
-            gallery = meta.get("gallery", meta.get("in_gallery", True))
-            if isinstance(gallery, str):
-                gallery = gallery.lower() != "false"
+def _format_date(raw_date):
+    raw_str = str(raw_date or "")
+    match = re.match(r"^(\d{4})[-.](\d{2})[-.](\d{2})", raw_str)
+    return f"{match.group(1)}.{match.group(2)}.{match.group(3)}" if match else raw_str
 
-            post_obj = {
-                "id": slug,
-                "slug": slug,
-                "sys_id": sys_id,
-                "title": meta.get("title", slug),
-                "subtitle": meta.get("subtitle", ""),
-                "excerpt": meta.get("excerpt", ""),
-                "format": (meta.get("format") or "ESSAY").upper(),
-                "category": category.upper() if category else "",
-                "media": media.upper() if media else "",
-                "source": source,
-                "url": target_url,
-                "pillar": pillar.upper() if pillar else "",
-                "pillar_id": pillar_id,
-                "foundations": combined_foundations,
-                "subtopic": subtopic.upper() if subtopic else "",
-                "subtopic_id": subtopic_id,
-                "theme": meta.get("theme", "dark"),
-                "featured": is_featured,
-                "shareable": shareable,
-                "allow_embed": allow_embed,
-                "gallery": gallery,
-                "status": meta.get("status", "published"),
-                "date": formatted_date,
-                "author": meta.get("author", "Juan P. Giusepponi"),
-                "read_time": (meta.get("reading_time") or meta.get("read_time") or "8 MIN READ").upper(),
-                "via": source,
-                "image": image,
-                "thumbnail": thumbnail,
-                "image_alt": img_alt,
-                "aspect_ratio": aspect_ratio,
-                "gallery_images": normalized_gallery_images,
-                "links": normalized_links,
-                "backlinks": normalized_backlinks,
-                "tags": meta.get("tags", []),
-                "entities": meta.get("entities"),
-                "content": html_content
-            }
-            posts.append(post_obj)
-            print(f"  [OK] Processed: {file_path.name} -> {sys_id}")
-            
-        except Exception as e:
-            print(f"  [ERROR] Parsing {file_path.name}: {e}")
-            
-    # Write to posts.json
+
+def _parse_single_post(file_path: Path, canonical_pillars):
+    with open(file_path, "r", encoding="utf-8", errors="replace") as f:
+        content = f.read()
+
+    meta, body = parse_yaml_frontmatter(content)
+    slug = file_path.stem
+    sys_id = meta.get("sys_id") or f"SYS_{slug.upper()}"
+
+    tax = _resolve_taxonomy(meta, canonical_pillars)
+    foundations = _resolve_foundations(meta, tax["matched_pil"])
+    img = _resolve_images(meta)
+    links, backlinks = _resolve_links_and_backlinks(meta)
+
+    category = meta.get("category", "")
+    media = meta.get("media", "")
+    source = meta.get("source") or meta.get("via", "")
+    target_url = meta.get("resource_url") or meta.get("bookmark_url") or meta.get("url") or meta.get("link") or ""
+    is_featured = bool(meta.get("featured", False)) or str(meta.get("featured", "")).lower() == "true"
+
+    return {
+        "id": slug,
+        "slug": slug,
+        "sys_id": sys_id,
+        "title": meta.get("title", slug),
+        "subtitle": meta.get("subtitle", ""),
+        "excerpt": meta.get("excerpt", ""),
+        "format": (meta.get("format") or "ESSAY").upper(),
+        "category": category.upper() if category else "",
+        "media": media.upper() if media else "",
+        "source": source,
+        "url": target_url,
+        "pillar": tax["pillar"].upper() if tax["pillar"] else "",
+        "pillar_id": tax["pillar_id"],
+        "foundations": foundations,
+        "subtopic": tax["subtopic"].upper() if tax["subtopic"] else "",
+        "subtopic_id": tax["subtopic_id"],
+        "theme": meta.get("theme", "dark"),
+        "featured": is_featured,
+        "shareable": _to_bool(meta.get("shareable")),
+        "allow_embed": _to_bool(meta.get("allow_embed")),
+        "gallery": _to_bool(meta.get("gallery", meta.get("in_gallery"))),
+        "status": meta.get("status", "published"),
+        "date": _format_date(meta.get("date")),
+        "author": meta.get("author", "Juan P. Giusepponi"),
+        "read_time": (meta.get("reading_time") or meta.get("read_time") or "8 MIN READ").upper(),
+        "via": source,
+        "image": img["image"],
+        "thumbnail": img["thumbnail"],
+        "image_alt": img["image_alt"],
+        "aspect_ratio": img["aspect_ratio"],
+        "gallery_images": img["gallery_images"],
+        "links": links,
+        "backlinks": backlinks,
+        "tags": meta.get("tags", []),
+        "entities": meta.get("entities"),
+        "content": clean_and_convert_markdown(body),
+    }
+
+
+def _write_outputs(posts):
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(posts, f, indent=2, ensure_ascii=False)
 
-    # Write to posts.js (for zero-CORS direct file:/// and browser/Node execution)
     js_content = (
         "/** Auto-generated from _posts/*.md by sync_posts.py */\n"
         "(function (root, factory) {\n"
@@ -247,20 +233,38 @@ def compile_posts():
     )
     with open(OUTPUT_JS, "w", encoding="utf-8") as f:
         f.write(js_content)
-        
-    # Compile tags & taxonomy database (tags.json / tags.js)
-    compile_tags_database(posts)
 
-    # Generate individual post HTML files for social media link previews and direct loading
-    generate_post_html_files(posts)
-
-    # Generate sitemap
-    generate_sitemap(posts)
-
-    # Also sync copies to repository root if separate
     if ROOT_DIR != BASE_DIR:
         shutil.copy2(OUTPUT_JSON, ROOT_DIR / "posts.json")
         shutil.copy2(OUTPUT_JS, ROOT_DIR / "posts.js")
+
+
+def compile_posts():
+    """Reads all Markdown files in _posts/ and outputs posts.json & posts.js."""
+    if not POSTS_DIR.exists():
+        print(f"Error: Directory {POSTS_DIR} not found.")
+        return False
+
+    canonical_pillars, canonical_foundations = load_taxonomy_data()
+    if canonical_pillars or canonical_foundations:
+        sync_pillars_js(canonical_pillars, canonical_foundations)
+
+    posts = []
+    for file_path in sorted(POSTS_DIR.glob("*.md"), reverse=True):
+        if file_path.name.startswith("TEMPLATE") or file_path.name.startswith("."):
+            continue
+
+        try:
+            post = _parse_single_post(file_path, canonical_pillars)
+            posts.append(post)
+            print(f"  [OK] Processed: {file_path.name} -> {post['sys_id']}")
+        except Exception as e:
+            print(f"  [ERROR] Parsing {file_path.name}: {e}")
+
+    _write_outputs(posts)
+    compile_tags_database(posts)
+    generate_post_html_files(posts)
+    generate_sitemap(posts)
 
     print(f"\n[SUCCESS] Compiled {len(posts)} full posts into {OUTPUT_JSON.name} & {OUTPUT_JS.name}\n")
     return True

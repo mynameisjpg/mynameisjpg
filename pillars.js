@@ -182,7 +182,6 @@
   "pillars": [
     {
       "id": "ai-perception",
-      "number": "01",
       "code": "1",
       "slug": "ai-perception",
       "title": "AI perception & representation",
@@ -252,7 +251,6 @@
     },
     {
       "id": "visual-perception",
-      "number": "02",
       "code": "2",
       "slug": "visual-perception",
       "title": "Visual Perception & Psychophysics",
@@ -263,7 +261,7 @@
         "psychology",
         "analysis"
       ],
-      "description": "Examining how the human visual system constructs reality from sensory signals—exploring the physiological mechanics of sight, optical paradoxes, Gestalt organization, and cognitive biases.",
+      "description": "Examining how the human visual system constructs reality from sensory signals -exploring the physiological mechanics of sight, optical paradoxes, Gestalt organization, and cognitive biases.",
       "subtopics": [
         {
           "id": "anatomy-psychophysics-vision",
@@ -311,7 +309,6 @@
     },
     {
       "id": "language-llms",
-      "number": "03",
       "code": "3",
       "slug": "language-llms",
       "title": "Language, LLMs & Artificial Intelligence",
@@ -323,7 +320,7 @@
         "analysis",
         "data"
       ],
-      "description": "Exploring the boundaries of machine cognition and symbolic reasoning—analyzing how language models process meaning, how agentic systems operate, and where artificial intelligence diverges from human thought.",
+      "description": "Exploring the boundaries of machine cognition and symbolic reasoning -analyzing how language models process meaning, how agentic systems operate, and where artificial intelligence diverges from human thought.",
       "subtopics": [
         {
           "id": "llm-architectures",
@@ -371,7 +368,6 @@
     },
     {
       "id": "philosophy-image",
-      "number": "04",
       "code": "4",
       "slug": "philosophy-image",
       "title": "Philosophy of the Image & Visual Culture",
@@ -386,7 +382,7 @@
         "vision",
         "psychology"
       ],
-      "description": "Analyzing the epistemology of seeing in the digital era—questioning how photographs, simulations, and algorithmic interfaces mediate power, cultural memory, and our understanding of truth.",
+      "description": "Analyzing the epistemology of seeing in the digital era -questioning how photographs, simulations, and algorithmic interfaces mediate power, cultural memory, and our understanding of truth.",
       "subtopics": [
         {
           "id": "visual-semiotics",
@@ -441,7 +437,6 @@
     },
     {
       "id": "philosophy-critical-theory",
-      "number": "05",
       "code": "5",
       "slug": "philosophy-critical-theory",
       "title": "Philosophy & Critical Theory",
@@ -453,7 +448,7 @@
         "data",
         "semiotics"
       ],
-      "description": "Engaging foundational philosophical frameworks to deconstruct contemporary technology—tracing the intersections of power, language, embodiment, and ideology in technical systems.",
+      "description": "Engaging foundational philosophical frameworks to deconstruct contemporary technology -tracing the intersections of power, language, embodiment, and ideology in technical systems.",
       "subtopics": [
         {
           "id": "epistemic-paradigms",

@@ -236,7 +236,7 @@ def match_canonical_pillar(raw_pillar, pillars):
         p_slug = p["slug"].lower().replace("-", " ")
         p_short = p.get("short_title", "").lower()
         p_title = p.get("title", "").lower()
-        if p_id == q or p_slug == q or p_short == q or p["code"] == q or p["number"] == q:
+        if p_id == q or p_slug == q or p_short == q or p.get("code") == q or p.get("number") == q:
             return p
         if p_id in q or q in p_id or p_short in q or q in p_short or p_title in q or q in p_title:
             return p
@@ -252,7 +252,7 @@ def match_canonical_subtopic(raw_subtopic, pillars):
             st_id = st["id"].lower().replace("-", " ")
             st_slug = st["slug"].lower().replace("-", " ")
             st_title = st.get("title", "").lower()
-            if st_id == q or st_slug == q or st["code"] == q:
+            if st_id == q or st_slug == q or st.get("code") == q:
                 return st
             if st_id in q or q in st_id or st_title in q or q in st_title:
                 return st
