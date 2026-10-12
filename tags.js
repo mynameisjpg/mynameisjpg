@@ -7223,10 +7223,10 @@
     "connected_tags": [
       "art-of-the-day",
       "vault",
-      "visual-arts",
       "music",
       "sound",
-      "painting"
+      "painting",
+      "visual-arts"
     ]
   },
   {
@@ -7401,9 +7401,9 @@
       "aesthetics",
       "vault",
       "music",
-      "visual-arts",
       "sound",
-      "painting"
+      "painting",
+      "visual-arts"
     ]
   },
   {
@@ -7657,10 +7657,10 @@
     "connected_tags": [
       "art-of-the-day",
       "aesthetics",
-      "visual-arts",
       "music",
       "sound",
-      "painting"
+      "painting",
+      "visual-arts"
     ]
   },
   {
@@ -8663,102 +8663,6 @@
     ]
   },
   {
-    "id": "visual-arts",
-    "name": "visual-arts",
-    "label": "#visual-arts",
-    "type": "tag",
-    "count": 3,
-    "posts": [
-      {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
-      },
-      {
-        "id": "the-4d-vault",
-        "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-4d-vault.html"
-      },
-      {
-        "id": "the-3d-vault",
-        "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-3d-vault.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
-        "date": "2026.10.14"
-      },
-      {
-        "title": "[ 4D_VAULT ] - All time-based ART",
-        "slug": "the-4d-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-4d-vault.html",
-        "date": "2026.10.14"
-      },
-      {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
-        "slug": "the-3d-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-3d-vault.html",
-        "date": "2026.10.14"
-      }
-    ],
-    "foundations": [
-      "Art",
-      "Design",
-      "Perception"
-    ],
-    "pillars": [
-      "ART WORTH SHARING"
-    ],
-    "subtopics": [
-      "ART VAULTS"
-    ],
-    "connected_tags": [
-      "art-of-the-day",
-      "aesthetics",
-      "vault",
-      "painting",
-      "product",
-      "editorial"
-    ]
-  },
-  {
     "id": "ai-mascots",
     "name": "ai-mascots",
     "label": "#ai-mascots",
@@ -9362,11 +9266,11 @@
     ],
     "connected_tags": [
       "painting",
-      "visual-arts",
       "art-of-the-day",
       "product",
       "aesthetics",
-      "vault"
+      "vault",
+      "2d"
     ]
   },
   {
@@ -10219,12 +10123,12 @@
       "ART VAULTS"
     ],
     "connected_tags": [
-      "visual-arts",
       "art-of-the-day",
       "product",
       "editorial",
       "aesthetics",
-      "vault"
+      "vault",
+      "2d"
     ]
   },
   {
@@ -10545,11 +10449,11 @@
     ],
     "connected_tags": [
       "painting",
-      "visual-arts",
       "art-of-the-day",
       "editorial",
       "aesthetics",
-      "vault"
+      "vault",
+      "2d"
     ]
   },
   {
@@ -11241,6 +11145,80 @@
     ]
   },
   {
+    "id": "visual-arts",
+    "name": "visual-arts",
+    "label": "#visual-arts",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "the-design-vault",
+        "slug": "the-design-vault",
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-design-vault.html"
+      },
+      {
+        "id": "the-4d-vault",
+        "slug": "the-4d-vault",
+        "title": "[ 4D_VAULT ] - All time-based ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-4d-vault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "slug": "the-design-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-design-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 4D_VAULT ] - All time-based ART",
+        "slug": "the-4d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-4d-vault.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "ART VAULTS"
+    ],
+    "connected_tags": [
+      "art-of-the-day",
+      "aesthetics",
+      "vault",
+      "2d",
+      "illustration",
+      "painting"
+    ]
+  },
+  {
     "id": "2d",
     "name": "2d",
     "label": "#2d",
@@ -11342,6 +11320,58 @@
       "object",
       "product",
       "experience"
+    ]
+  },
+  {
+    "id": "3d-artist",
+    "name": "3d-artist",
+    "label": "#3d-artist",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "the-3d-vault",
+        "slug": "the-3d-vault",
+        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-3d-vault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "slug": "the-3d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "ART VAULTS"
+    ],
+    "connected_tags": [
+      "3d",
+      "architecture",
+      "print",
+      "sculpture",
+      "object",
+      "product"
     ]
   },
   {
@@ -13008,6 +13038,58 @@
       "informatics",
       "networks",
       "llm"
+    ]
+  },
+  {
+    "id": "cgi",
+    "name": "cgi",
+    "label": "#cgi",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "the-3d-vault",
+        "slug": "the-3d-vault",
+        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-3d-vault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "slug": "the-3d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "ART VAULTS"
+    ],
+    "connected_tags": [
+      "3d",
+      "architecture",
+      "print",
+      "sculpture",
+      "object",
+      "product"
     ]
   },
   {
@@ -18284,6 +18366,58 @@
     ]
   },
   {
+    "id": "packaging",
+    "name": "packaging",
+    "label": "#packaging",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "the-3d-vault",
+        "slug": "the-3d-vault",
+        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-3d-vault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "slug": "the-3d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "ART VAULTS"
+    ],
+    "connected_tags": [
+      "3d",
+      "architecture",
+      "print",
+      "sculpture",
+      "object",
+      "product"
+    ]
+  },
+  {
     "id": "pasquinelli",
     "name": "pasquinelli",
     "label": "#pasquinelli",
@@ -19302,6 +19436,58 @@
       "data-labeling",
       "models",
       "annotation"
+    ]
+  },
+  {
+    "id": "render",
+    "name": "render",
+    "label": "#render",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "the-3d-vault",
+        "slug": "the-3d-vault",
+        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-3d-vault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "slug": "the-3d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "ART VAULTS"
+    ],
+    "connected_tags": [
+      "3d",
+      "architecture",
+      "print",
+      "sculpture",
+      "object",
+      "product"
     ]
   },
   {
@@ -20902,6 +21088,58 @@
       "visual-arts",
       "art-of-the-day",
       "designers"
+    ]
+  },
+  {
+    "id": "textile",
+    "name": "textile",
+    "label": "#textile",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "the-3d-vault",
+        "slug": "the-3d-vault",
+        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-3d-vault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "slug": "the-3d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "ART VAULTS"
+    ],
+    "connected_tags": [
+      "3d",
+      "architecture",
+      "print",
+      "sculpture",
+      "object",
+      "product"
     ]
   },
   {

@@ -22175,4 +22175,210 @@
         "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
         "slug": "lecun-world-models-jepa",
         "format": "ESSAY",
- 
+        "url": "posts/lecun-world-models-jepa.html",
+        "date": "2026.09.24"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Data",
+      "Tech",
+      "Tools"
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
+    ],
+    "connected_tags": [
+      "yann-lecun",
+      "jepa",
+      "physics",
+      "intelligence",
+      "llms",
+      "sensory-bandwidth"
+    ]
+  },
+  {
+    "id": "yann-lecun",
+    "name": "yann-lecun",
+    "label": "#yann-lecun",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-09-24-lecun-world-models-jepa",
+        "slug": "lecun-world-models-jepa",
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "date": "2026.09.24",
+        "format": "ESSAY",
+        "foundations": [
+          "ai",
+          "tech",
+          "tools",
+          "analysis",
+          "data"
+        ],
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+        "url": "posts/lecun-world-models-jepa.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
+        "slug": "lecun-world-models-jepa",
+        "format": "ESSAY",
+        "url": "posts/lecun-world-models-jepa.html",
+        "date": "2026.09.24"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Data",
+      "Tech",
+      "Tools"
+    ],
+    "pillars": [
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
+    ],
+    "subtopics": [
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
+    ],
+    "connected_tags": [
+      "jepa",
+      "physics",
+      "intelligence",
+      "world-models",
+      "llms",
+      "sensory-bandwidth"
+    ]
+  },
+  {
+    "id": "youtube",
+    "name": "youtube",
+    "label": "#youtube",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-06-marc-van-elburg",
+        "slug": "marc-van-elburg",
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "date": "2026.10.06",
+        "format": "BOOKMARK",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/marc-van-elburg.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "slug": "marc-van-elburg",
+        "format": "BOOKMARK",
+        "url": "posts/marc-van-elburg.html",
+        "date": "2026.10.06"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Art",
+      "Data",
+      "Graphics",
+      "Tech",
+      "Tools",
+      "Vision"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "animation",
+      "surrealism",
+      "markvanelburg",
+      "youtube-shorts",
+      "instagram-reels",
+      "art-of-the-day"
+    ]
+  },
+  {
+    "id": "youtube-shorts",
+    "name": "youtube-shorts",
+    "label": "#youtube-shorts",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-06-marc-van-elburg",
+        "slug": "marc-van-elburg",
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "date": "2026.10.06",
+        "format": "BOOKMARK",
+        "foundations": [
+          "ai",
+          "vision",
+          "tech",
+          "art",
+          "data",
+          "analysis",
+          "graphics",
+          "tools"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/marc-van-elburg.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "slug": "marc-van-elburg",
+        "format": "BOOKMARK",
+        "url": "posts/marc-van-elburg.html",
+        "date": "2026.10.06"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Analysis",
+      "Art",
+      "Data",
+      "Graphics",
+      "Tech",
+      "Tools",
+      "Vision"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION"
+    ],
+    "connected_tags": [
+      "animation",
+      "surrealism",
+      "youtube",
+      "markvanelburg",
+      "instagram-reels",
+      "art-of-the-day"
+    ]
+  }
+]
