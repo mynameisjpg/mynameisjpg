@@ -315,21 +315,6 @@
         "url": "posts/the-music-vault.html"
       },
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
-      },
-      {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
         "title": "[ 4D_VAULT ] - All time-based ART",
@@ -358,6 +343,21 @@
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-3d-vault.html"
+      },
+      {
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-2d-vault.html"
       },
       {
         "id": "2026-10-11-marina-herlop-dja-dja",
@@ -564,13 +564,6 @@
         "date": "2026.10.11"
       },
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
-        "date": "2026.10.14"
-      },
-      {
         "title": "[ 4D_VAULT ] - All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
@@ -582,6 +575,13 @@
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "slug": "the-2d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       },
       {
@@ -1016,21 +1016,6 @@
         "url": "posts/the-music-vault.html"
       },
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
-      },
-      {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
         "title": "[ 4D_VAULT ] - All time-based ART",
@@ -1059,6 +1044,21 @@
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-3d-vault.html"
+      },
+      {
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-2d-vault.html"
       },
       {
         "id": "2026-10-11-marina-herlop-dja-dja",
@@ -1149,13 +1149,6 @@
         "date": "2026.10.11"
       },
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
-        "date": "2026.10.14"
-      },
-      {
         "title": "[ 4D_VAULT ] - All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
@@ -1167,6 +1160,13 @@
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "slug": "the-2d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       },
       {
@@ -4502,21 +4502,6 @@
         "url": "posts/the-music-vault.html"
       },
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
-      },
-      {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
         "title": "[ 4D_VAULT ] - All time-based ART",
@@ -4545,6 +4530,21 @@
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-3d-vault.html"
+      },
+      {
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-2d-vault.html"
       },
       {
         "id": "2026-10-11-marina-herlop-dja-dja",
@@ -4851,13 +4851,6 @@
         "date": "2026.10.11"
       },
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
-        "date": "2026.10.14"
-      },
-      {
         "title": "[ 4D_VAULT ] - All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
@@ -4869,6 +4862,13 @@
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "slug": "the-2d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       },
       {
@@ -5455,21 +5455,6 @@
         "url": "posts/the-music-vault.html"
       },
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
-      },
-      {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
         "title": "[ 4D_VAULT ] - All time-based ART",
@@ -5500,6 +5485,21 @@
         "url": "posts/the-3d-vault.html"
       },
       {
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-2d-vault.html"
+      },
+      {
         "id": "2026-10-11-marina-herlop-dja-dja",
         "slug": "marina-herlop-dja-dja",
         "title": "Marina Herlop's Dja Dja",
@@ -5524,13 +5524,6 @@
         "date": "2026.10.11"
       },
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
-        "date": "2026.10.14"
-      },
-      {
         "title": "[ 4D_VAULT ] - All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
@@ -5542,6 +5535,13 @@
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "slug": "the-2d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       },
       {
@@ -5914,21 +5914,6 @@
         "url": "posts/the-music-vault.html"
       },
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
-      },
-      {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
         "title": "[ 4D_VAULT ] - All time-based ART",
@@ -5957,6 +5942,21 @@
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-3d-vault.html"
+      },
+      {
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
@@ -5966,13 +5966,6 @@
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
         "date": "2026.10.11"
-      },
-      {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
-        "date": "2026.10.14"
       },
       {
         "title": "[ 4D_VAULT ] - All time-based ART",
@@ -5986,6 +5979,13 @@
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "slug": "the-2d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -7071,21 +7071,6 @@
         "url": "posts/the-music-vault.html"
       },
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
-      },
-      {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
         "title": "[ 4D_VAULT ] - All time-based ART",
@@ -7114,6 +7099,21 @@
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-3d-vault.html"
+      },
+      {
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-2d-vault.html"
       },
       {
         "id": "2026-10-10-images-are-dead",
@@ -7165,13 +7165,6 @@
         "date": "2026.10.11"
       },
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
-        "date": "2026.10.14"
-      },
-      {
         "title": "[ 4D_VAULT ] - All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
@@ -7183,6 +7176,13 @@
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "slug": "the-2d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       },
       {
@@ -7225,8 +7225,8 @@
       "vault",
       "music",
       "sound",
-      "painting",
-      "visual-arts"
+      "visual-arts",
+      "product"
     ]
   },
   {
@@ -7250,21 +7250,6 @@
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-music-vault.html"
-      },
-      {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
       },
       {
         "id": "the-4d-vault",
@@ -7295,6 +7280,21 @@
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-3d-vault.html"
+      },
+      {
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-2d-vault.html"
       },
       {
         "id": "2026-10-11-marina-herlop-dja-dja",
@@ -7341,13 +7341,6 @@
         "date": "2026.10.11"
       },
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
-        "date": "2026.10.14"
-      },
-      {
         "title": "[ 4D_VAULT ] - All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
@@ -7359,6 +7352,13 @@
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "slug": "the-2d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       },
       {
@@ -7402,7 +7402,7 @@
       "vault",
       "music",
       "sound",
-      "painting",
+      "animation",
       "visual-arts"
     ]
   },
@@ -7568,21 +7568,6 @@
         "url": "posts/the-music-vault.html"
       },
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
-      },
-      {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
         "title": "[ 4D_VAULT ] - All time-based ART",
@@ -7611,6 +7596,21 @@
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-3d-vault.html"
+      },
+      {
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
@@ -7620,13 +7620,6 @@
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
         "date": "2026.10.11"
-      },
-      {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
-        "date": "2026.10.14"
       },
       {
         "title": "[ 4D_VAULT ] - All time-based ART",
@@ -7640,6 +7633,13 @@
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "slug": "the-2d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -7659,8 +7659,8 @@
       "aesthetics",
       "music",
       "sound",
-      "painting",
-      "visual-arts"
+      "visual-arts",
+      "product"
     ]
   },
   {
@@ -9207,21 +9207,6 @@
     "count": 2,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
-      },
-      {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
         "title": "[ 3D_VAULT ] - All tridimensional ART",
@@ -9235,21 +9220,36 @@
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-3d-vault.html"
+      },
+      {
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
-      {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
-        "date": "2026.10.14"
-      },
       {
         "title": "[ 3D_VAULT ] - All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "slug": "the-2d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -9265,12 +9265,12 @@
       "ART VAULTS"
     ],
     "connected_tags": [
+      "product",
       "painting",
       "art-of-the-day",
-      "product",
       "aesthetics",
       "vault",
-      "2d"
+      "3d"
     ]
   },
   {
@@ -9722,8 +9722,8 @@
     "count": 2,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
         "title": "[ 2D_VAULT ] - All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
@@ -9734,7 +9734,7 @@
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
+        "url": "posts/the-2d-vault.html"
       },
       {
         "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
@@ -9760,9 +9760,9 @@
     "links": [
       {
         "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
+        "slug": "the-2d-vault",
         "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       },
       {
@@ -10065,21 +10065,6 @@
     "count": 2,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
-      },
-      {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
         "title": "[ 3D_VAULT ] - All tridimensional ART",
@@ -10093,21 +10078,36 @@
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-3d-vault.html"
+      },
+      {
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
-      {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
-        "date": "2026.10.14"
-      },
       {
         "title": "[ 3D_VAULT ] - All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "slug": "the-2d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -10123,12 +10123,12 @@
       "ART VAULTS"
     ],
     "connected_tags": [
-      "art-of-the-day",
       "product",
       "editorial",
+      "art-of-the-day",
       "aesthetics",
       "vault",
-      "2d"
+      "3d"
     ]
   },
   {
@@ -10390,21 +10390,6 @@
     "count": 2,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
-      },
-      {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
         "title": "[ 3D_VAULT ] - All tridimensional ART",
@@ -10418,21 +10403,36 @@
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-3d-vault.html"
+      },
+      {
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
-      {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
-        "date": "2026.10.14"
-      },
       {
         "title": "[ 3D_VAULT ] - All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "slug": "the-2d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -10448,12 +10448,12 @@
       "ART VAULTS"
     ],
     "connected_tags": [
+      "editorial",
       "painting",
       "art-of-the-day",
-      "editorial",
       "aesthetics",
       "vault",
-      "2d"
+      "3d"
     ]
   },
   {
@@ -11152,21 +11152,6 @@
     "count": 2,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
-      },
-      {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
         "title": "[ 4D_VAULT ] - All time-based ART",
@@ -11180,21 +11165,36 @@
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-4d-vault.html"
+      },
+      {
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception",
+          "design"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
-      {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
-        "date": "2026.10.14"
-      },
       {
         "title": "[ 4D_VAULT ] - All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "slug": "the-2d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -11213,9 +11213,9 @@
       "art-of-the-day",
       "aesthetics",
       "vault",
-      "2d",
-      "illustration",
-      "painting"
+      "4d",
+      "film",
+      "video"
     ]
   },
   {
@@ -11226,8 +11226,8 @@
     "count": 1,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
         "title": "[ 2D_VAULT ] - All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
@@ -11238,15 +11238,15 @@
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
       {
         "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
+        "slug": "the-2d-vault",
         "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -14504,8 +14504,8 @@
     "count": 1,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
         "title": "[ 2D_VAULT ] - All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
@@ -14516,15 +14516,15 @@
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
       {
         "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
+        "slug": "the-2d-vault",
         "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -14556,8 +14556,8 @@
     "count": 1,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
         "title": "[ 2D_VAULT ] - All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
@@ -14568,15 +14568,15 @@
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
       {
         "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
+        "slug": "the-2d-vault",
         "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -14662,8 +14662,8 @@
     "count": 1,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
         "title": "[ 2D_VAULT ] - All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
@@ -14674,15 +14674,15 @@
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
       {
         "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
+        "slug": "the-2d-vault",
         "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -15608,8 +15608,8 @@
     "count": 1,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
         "title": "[ 2D_VAULT ] - All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
@@ -15620,15 +15620,15 @@
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
       {
         "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
+        "slug": "the-2d-vault",
         "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -16335,8 +16335,8 @@
     "count": 1,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
         "title": "[ 2D_VAULT ] - All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
@@ -16347,15 +16347,15 @@
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
       {
         "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
+        "slug": "the-2d-vault",
         "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -17355,8 +17355,8 @@
     "count": 1,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
         "title": "[ 2D_VAULT ] - All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
@@ -17367,15 +17367,15 @@
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
       {
         "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
+        "slug": "the-2d-vault",
         "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -18770,8 +18770,8 @@
     "count": 1,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
         "title": "[ 2D_VAULT ] - All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
@@ -18782,15 +18782,15 @@
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
       {
         "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
+        "slug": "the-2d-vault",
         "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -18934,8 +18934,8 @@
     "count": 1,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
         "title": "[ 2D_VAULT ] - All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
@@ -18946,15 +18946,15 @@
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
       {
         "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
+        "slug": "the-2d-vault",
         "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -21046,8 +21046,8 @@
     "count": 1,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
         "title": "[ 2D_VAULT ] - All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
@@ -21058,15 +21058,15 @@
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
       {
         "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
+        "slug": "the-2d-vault",
         "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -21256,8 +21256,8 @@
     "count": 1,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
         "title": "[ 2D_VAULT ] - All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
@@ -21268,15 +21268,15 @@
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
       {
         "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
+        "slug": "the-2d-vault",
         "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -21414,8 +21414,8 @@
     "count": 1,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
         "title": "[ 2D_VAULT ] - All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
@@ -21426,15 +21426,15 @@
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
       {
         "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
+        "slug": "the-2d-vault",
         "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -21816,8 +21816,8 @@
     "count": 1,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
         "title": "[ 2D_VAULT ] - All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
@@ -21828,15 +21828,15 @@
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
       {
         "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
+        "slug": "the-2d-vault",
         "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],
@@ -21930,8 +21930,8 @@
     "count": 1,
     "posts": [
       {
-        "id": "the-design-vault",
-        "slug": "the-design-vault",
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
         "title": "[ 2D_VAULT ] - All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
@@ -21942,15 +21942,15 @@
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
-        "url": "posts/the-design-vault.html"
+        "url": "posts/the-2d-vault.html"
       }
     ],
     "links": [
       {
         "title": "[ 2D_VAULT ] - All bidimensional ART",
-        "slug": "the-design-vault",
+        "slug": "the-2d-vault",
         "format": "BOOKMARK",
-        "url": "posts/the-design-vault.html",
+        "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
       }
     ],

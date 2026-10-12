@@ -3,7 +3,7 @@
 title: "[ 4D_VAULT ] - All time-based ART"
 date: "2026-10-14 03:00:00 -0300"
 author: "Juan P. Giusepponi"
-status: "published"
+status: "draft"
 format: "bookmark"
 topic:
   pillar: "Art worth sharing"
