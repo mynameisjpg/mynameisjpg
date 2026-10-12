@@ -1,6 +1,6 @@
 ---
 # UNTITLED.JPG DISPATCH METADATA
-title: "[ 2D_VAULT ] - All bidimensional ART"
+title: "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART"
 date: "2026-10-14 03:00:00 -0300"
 author: "Juan P. Giusepponi"
 status: "draft"

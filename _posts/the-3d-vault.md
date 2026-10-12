@@ -1,6 +1,6 @@
 ---
 # UNTITLED.JPG DISPATCH METADATA
-title: "[ 3D_VAULT ] - All tridimensional ART"
+title: "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART"
 date: "2026-10-14 03:00:00 -0300"
 author: "Juan P. Giusepponi"
 status: "draft"

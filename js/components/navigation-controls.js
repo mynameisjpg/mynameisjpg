@@ -51,7 +51,7 @@
     const btn = document.getElementById("dispatch-log-btn");
     if (!panel) return;
     const isHidden = panel.style.display === "none" || !panel.style.display;
-    closeAllTopDropdowns("dispatch-log-dropdown");
+    closeAllControlDropdowns("dispatch-log-dropdown");
     if (isHidden) {
       panel.style.display = "flex";
       if (btn) btn.classList.add("active");
@@ -67,7 +67,7 @@
     const btn = document.getElementById("top-navbar-search-btn");
     if (!panel) return;
     const isHidden = panel.style.display === "none" || !panel.style.display;
-    closeAllTopDropdowns("top-search-dropdown");
+    closeAllControlDropdowns("top-search-dropdown");
     if (isHidden) {
       panel.style.display = "block";
       if (btn) btn.classList.add("active");
@@ -87,7 +87,7 @@
     const btn = document.getElementById("top-navbar-filter-btn");
     if (!panel) return;
     const isHidden = panel.style.display === "none" || !panel.style.display;
-    closeAllTopDropdowns("top-filter-dropdown");
+    closeAllControlDropdowns("top-filter-dropdown");
     if (isHidden) {
       panel.style.display = "flex";
       if (btn) btn.classList.add("active");
@@ -103,7 +103,7 @@
     const btn = document.getElementById("top-navbar-sort-btn");
     if (!panel) return;
     const isHidden = panel.style.display === "none" || !panel.style.display;
-    closeAllTopDropdowns("top-sort-dropdown");
+    closeAllControlDropdowns("top-sort-dropdown");
     if (isHidden) {
       panel.style.display = "flex";
       if (btn) btn.classList.add("active");
@@ -111,6 +111,40 @@
     } else {
       panel.style.display = "none";
       if (btn) btn.classList.remove("active");
+    }
+  }
+
+  function toggleFilterPillDropdown() {
+    const dropdown = document.getElementById("filter-dropdown");
+    const btn = document.getElementById("filter-pill-btn");
+    if (!dropdown || !btn) return;
+    const isOpen = dropdown.classList.contains("open");
+    closeAllControlDropdowns("filter-dropdown");
+    if (!isOpen) {
+      dropdown.classList.add("open");
+      btn.classList.add("active");
+      btn.setAttribute("aria-expanded", "true");
+    } else {
+      dropdown.classList.remove("open");
+      btn.classList.remove("active");
+      btn.setAttribute("aria-expanded", "false");
+    }
+  }
+
+  function toggleSortPillDropdown() {
+    const dropdown = document.getElementById("sort-dropdown");
+    const btn = document.getElementById("sort-pill-btn");
+    if (!dropdown || !btn) return;
+    const isOpen = dropdown.classList.contains("open");
+    closeAllControlDropdowns("sort-dropdown");
+    if (!isOpen) {
+      dropdown.classList.add("open");
+      btn.classList.add("active");
+      btn.setAttribute("aria-expanded", "true");
+    } else {
+      dropdown.classList.remove("open");
+      btn.classList.remove("active");
+      btn.setAttribute("aria-expanded", "false");
     }
   }
 
@@ -141,8 +175,28 @@
     });
   }
 
-  function closeAllControlDropdowns() {
-    closeAllTopDropdowns();
+  function closeAllPillDropdowns(exceptId = null) {
+    const pillDropdowns = [
+      { id: "filter-dropdown", btnId: "filter-pill-btn" },
+      { id: "sort-dropdown", btnId: "sort-pill-btn" },
+    ];
+
+    pillDropdowns.forEach(({ id, btnId }) => {
+      if (id !== exceptId) {
+        const dropdown = document.getElementById(id);
+        const btn = document.getElementById(btnId);
+        if (dropdown) dropdown.classList.remove("open");
+        if (btn) {
+          btn.classList.remove("active");
+          btn.setAttribute("aria-expanded", "false");
+        }
+      }
+    });
+  }
+
+  function closeAllControlDropdowns(exceptId = null) {
+    closeAllTopDropdowns(exceptId);
+    closeAllPillDropdowns(exceptId);
   }
 
   function handleTopInlineSearch(val) {
@@ -195,6 +249,10 @@
     const app = getAppState();
     if (app && "activeFilter" in app) app.activeFilter = clean;
     if (typeof window !== "undefined") window.activeFilter = clean;
+    if (clean === "all") {
+      if (app && "activePillar" in app) app.activePillar = "all";
+      if (typeof window !== "undefined") window.activePillar = "all";
+    }
 
     if (window.syncFilterUIState) window.syncFilterUIState();
     if (updateHistory && window.updateBrowserUrl) window.updateBrowserUrl();
@@ -295,7 +353,40 @@
       });
     }
 
-    // Dropdown Options
+    // Matrix Pill Dropdown Toggles
+    const filterPillBtn = document.getElementById("filter-pill-btn");
+    if (filterPillBtn) {
+      filterPillBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleFilterPillDropdown();
+      });
+      filterPillBtn.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowDown" || e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleFilterPillDropdown();
+          const firstOpt = document.querySelector("#filter-dropdown .dropdown-opt");
+          if (firstOpt) setTimeout(() => firstOpt.focus(), 50);
+        }
+      });
+    }
+
+    const sortPillBtn = document.getElementById("sort-pill-btn");
+    if (sortPillBtn) {
+      sortPillBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleSortPillDropdown();
+      });
+      sortPillBtn.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowDown" || e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleSortPillDropdown();
+          const firstOpt = document.querySelector("#sort-dropdown .dropdown-opt");
+          if (firstOpt) setTimeout(() => firstOpt.focus(), 50);
+        }
+      });
+    }
+
+    // Dropdown Options Selection
     document
       .querySelectorAll(
         "#dispatch-log-dropdown .dropdown-option, #top-filter-dropdown .dropdown-option",
@@ -308,7 +399,23 @@
             .toLowerCase()
             .replace(/s$/, "");
           applyCategoryFilter(filter, true);
-          closeAllTopDropdowns();
+          closeAllControlDropdowns();
+        });
+      });
+
+    document
+      .querySelectorAll("#filter-dropdown .dropdown-opt")
+      .forEach((opt) => {
+        opt.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const filter = (opt.getAttribute("data-filter") || "all")
+            .toLowerCase()
+            .replace(/s$/, "");
+          applyCategoryFilter(filter, true);
+          closeAllControlDropdowns();
+          const filterBtn = document.getElementById("filter-pill-btn");
+          if (filterBtn) filterBtn.focus();
         });
       });
 
@@ -322,13 +429,63 @@
             opt.getAttribute("data-sort") || "newest"
           ).toLowerCase();
           updateSortSelection(sortKey, opt.textContent.trim(), true);
-          closeAllTopDropdowns();
+          closeAllControlDropdowns();
+        });
+      });
+
+    document
+      .querySelectorAll("#sort-dropdown .dropdown-opt")
+      .forEach((opt) => {
+        opt.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const sortKey = (
+            opt.getAttribute("data-sort") || "recent"
+          ).toLowerCase();
+          updateSortSelection(sortKey, opt.textContent.trim(), true);
+          closeAllControlDropdowns();
+          const sortBtn = document.getElementById("sort-pill-btn");
+          if (sortBtn) sortBtn.focus();
+        });
+      });
+
+    // Keyboard Navigation within Pill Dropdowns
+    document
+      .querySelectorAll(".custom-select-dropdown")
+      .forEach((dropdown) => {
+        dropdown.addEventListener("keydown", (e) => {
+          const options = Array.from(dropdown.querySelectorAll(".dropdown-opt"));
+          const currentIndex = options.indexOf(document.activeElement);
+          if (e.key === "ArrowDown") {
+            e.preventDefault();
+            const nextIndex = currentIndex < options.length - 1 ? currentIndex + 1 : 0;
+            options[nextIndex]?.focus();
+          } else if (e.key === "ArrowUp") {
+            e.preventDefault();
+            const prevIndex = currentIndex > 0 ? currentIndex - 1 : options.length - 1;
+            options[prevIndex]?.focus();
+          } else if (e.key === "Escape") {
+            e.preventDefault();
+            closeAllControlDropdowns();
+            const wrapper = dropdown.closest(".custom-select-wrapper");
+            const btn = wrapper?.querySelector(".btn-matrix-pill");
+            if (btn) btn.focus();
+          }
         });
       });
 
     // Close on outside click
-    document.addEventListener("click", () => {
-      closeAllControlDropdowns();
+    document.addEventListener("click", (e) => {
+      if (
+        !e.target.closest(".custom-select-wrapper") &&
+        !e.target.closest(".top-dropdown-panel") &&
+        !e.target.closest("#dispatch-log-btn") &&
+        !e.target.closest("#top-navbar-search-btn") &&
+        !e.target.closest("#top-navbar-filter-btn") &&
+        !e.target.closest("#top-navbar-sort-btn")
+      ) {
+        closeAllControlDropdowns();
+      }
     });
 
     // Subscribe trigger
@@ -405,6 +562,17 @@
         activeTag === "select"
       )
         return;
+
+      if (e.key === "Escape") {
+        closeAllControlDropdowns();
+        return;
+      }
+
+      // If a dropdown menu is open, don't trigger global post navigation
+      const hasOpenDropdown =
+        document.querySelector(".custom-select-dropdown.open") ||
+        document.querySelector(".top-dropdown-panel[style*='display: flex'], .top-dropdown-panel[style*='display: block']");
+      if (hasOpenDropdown) return;
 
       if (e.key === "j" || e.key === "ArrowDown") {
         const appState = getAppState();
@@ -529,8 +697,8 @@
     if (sortValLabel) {
       const sortLabels = {
         recent: "MOST RECENT",
-        oldest: "OLDEST FIRST",
-        title: "ALPHABETICAL",
+        oldest: "OLDEST",
+        title: "TITLE A-Z",
         readtime: "READING TIME",
       };
       sortValLabel.textContent = sortLabels[activeSort] || "MOST RECENT";
@@ -670,7 +838,10 @@
     toggleTopSearchDropdown,
     toggleTopFilterDropdown,
     toggleTopSortDropdown,
+    toggleFilterPillDropdown,
+    toggleSortPillDropdown,
     closeAllTopDropdowns,
+    closeAllPillDropdowns,
     closeAllControlDropdowns,
     handleTopInlineSearch,
     applyCategoryFilter,
@@ -687,6 +858,9 @@
 
   if (typeof window !== "undefined") {
     window.NavigationControls = NavigationControls;
+    window.toggleFilterPillDropdown = toggleFilterPillDropdown;
+    window.toggleSortPillDropdown = toggleSortPillDropdown;
+    window.closeAllPillDropdowns = closeAllPillDropdowns;
     window.applyCategoryFilter = applyCategoryFilter;
     window.applyPillarFilter = applyPillarFilter;
     window.updateSortSelection = updateSortSelection;

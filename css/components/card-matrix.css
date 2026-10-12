@@ -121,7 +121,9 @@
 }
 
 .grid-card.card-featured .card-caption {
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
+  font-family: var(--font-mono);
+  line-height: 1.6;
 }
 
 .grid-card.card-featured:hover {
@@ -209,9 +211,9 @@
   margin-top: 0.75rem;
   margin-bottom: 0.25rem;
   font-family: var(--font-serif);
-  font-size: var(--text-md);
+  font-size: var(--text-lg);
   font-weight: 600;
-  line-height: 1.55;
+  line-height: 1.7;
   color: var(--text-bright);
   transition: color var(--transition-fast);
   padding: 0 0.15rem 0.15rem 0.15rem;
