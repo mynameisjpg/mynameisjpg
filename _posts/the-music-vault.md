@@ -1,6 +1,6 @@
 ---
 # UNTITLED.JPG DISPATCH METADATA
-title: "THE MUSIC VAULT"
+title: "[ MUSIC_VAULT ]"
 date: "2026-10-11 03:00:00 -0300"
 author: "Juan P. Giusepponi"
 status: "published"
@@ -19,7 +19,7 @@ tags:
   - "perception"
   - "aesthetics"
   - "vault"
-reading_time: "Curated Playlist WIP"
+reading_time: "Curated Playlist WIP + Index of all #Music related Dispatches."
 theme: "dark"
 featured: false
 shareable: true
