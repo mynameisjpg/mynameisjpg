@@ -142,23 +142,48 @@ function applyTagFilterDirectly(tag) {
   let matchedData = null;
 
   if (typeof threeNodes !== "undefined" && threeNodes && threeNodes.length > 0) {
-    const match = threeNodes.find(n => {
-      const d = n.data;
-      if (!d) return false;
-      const l = (d.label || "").toLowerCase().replace(/^#/, "");
-      const raw = (d.rawTag || "").toLowerCase().replace(/^#/, "");
-      return l === tagLower || raw === tagLower;
-    });
+    const isExplicitTag = activeTagFilter.startsWith("#");
+    let match = null;
+    if (isExplicitTag) {
+      match = threeNodes.find(n => {
+        const d = n.data;
+        if (!d || d.type !== "tag") return false;
+        const l = (d.label || "").toLowerCase().replace(/^#/, "");
+        const raw = (d.rawTag || "").toLowerCase().replace(/^#/, "");
+        return l === tagLower || raw === tagLower;
+      });
+    }
+    if (!match) {
+      match = threeNodes.find(n => {
+        const d = n.data;
+        if (!d) return false;
+        const l = (d.label || "").toLowerCase().replace(/^#/, "");
+        const raw = (d.rawTag || "").toLowerCase().replace(/^#/, "");
+        return l === tagLower || raw === tagLower;
+      });
+    }
     if (match) {
       activeNodeFilter = match.data;
       matchedData = match.data;
     }
   } else if (typeof nodes !== "undefined" && nodes && nodes.length > 0) {
-    const match = nodes.find(n => {
-      const l = (n.label || "").toLowerCase().replace(/^#/, "");
-      const raw = (n.rawTag || "").toLowerCase().replace(/^#/, "");
-      return l === tagLower || raw === tagLower;
-    });
+    const isExplicitTag = activeTagFilter.startsWith("#");
+    let match = null;
+    if (isExplicitTag) {
+      match = nodes.find(n => {
+        if (!n || n.type !== "tag") return false;
+        const l = (n.label || "").toLowerCase().replace(/^#/, "");
+        const raw = (n.rawTag || "").toLowerCase().replace(/^#/, "");
+        return l === tagLower || raw === tagLower;
+      });
+    }
+    if (!match) {
+      match = nodes.find(n => {
+        const l = (n.label || "").toLowerCase().replace(/^#/, "");
+        const raw = (n.rawTag || "").toLowerCase().replace(/^#/, "");
+        return l === tagLower || raw === tagLower;
+      });
+    }
     if (match) {
       activeNodeFilter = match;
       matchedData = match;
@@ -783,13 +808,17 @@ function build3DNodeMapGraph() {
     const fId = fObj.id || fObj.slug;
     const fName = (fObj.name || fId).toUpperCase();
 
-    // Match all posts referencing this foundation
+    // Match all posts referencing this foundation (via explicit foundation or matching tag)
     const postsInFoundation = NETWORK_POSTS.filter(p => {
-      if (!p.foundations || !Array.isArray(p.foundations)) return false;
-      return p.foundations.some(f => {
+      const matchFound = p.foundations && Array.isArray(p.foundations) && p.foundations.some(f => {
         const clean = String(f).toLowerCase().trim();
         return clean === fId.toLowerCase() || clean === (fObj.slug || "").toLowerCase() || clean === (fObj.name || "").toLowerCase();
       });
+      const matchTag = p.tags && Array.isArray(p.tags) && p.tags.some(t => {
+        const clean = String(t).toLowerCase().trim().replace(/^#/, "");
+        return clean === fId.toLowerCase() || clean === (fObj.slug || "").toLowerCase() || clean === (fObj.name || "").toLowerCase();
+      });
+      return matchFound || matchTag;
     });
 
     // Fibonacci sphere distribution for uniform coverage around center
@@ -1009,12 +1038,13 @@ function build3DNodeMapGraph() {
   });
 
   // 5. TAGS (Level 4 - Outer tag sphere)
+  const canonicalFoundIds = new Set(getCanonicalFoundations().map(f => (f.id || f.slug || "").toLowerCase()));
   const uniqueTagMap = {};
   NETWORK_POSTS.forEach(p => {
     if (p.tags && Array.isArray(p.tags)) {
       p.tags.forEach(t => {
         const clean = String(t).trim().toLowerCase().replace(/^#/, "");
-        if (!clean) return;
+        if (!clean || canonicalFoundIds.has(clean)) return;
         if (!uniqueTagMap[clean]) {
           uniqueTagMap[clean] = {
             name: clean,
@@ -1287,11 +1317,15 @@ function getPostsForNode(nodeData) {
     const fSlug = (nodeData.slug || "").toLowerCase().trim();
     const fName = (nodeData.label || "").toLowerCase().trim();
     return NETWORK_POSTS.filter(p => {
-      if (!p.foundations || !Array.isArray(p.foundations)) return false;
-      return p.foundations.some(f => {
+      const matchFound = p.foundations && Array.isArray(p.foundations) && p.foundations.some(f => {
         const clean = String(f).toLowerCase().trim();
         return clean === fId || clean === fSlug || clean === fName;
       });
+      const matchTag = p.tags && Array.isArray(p.tags) && p.tags.some(t => {
+        const clean = String(t).toLowerCase().trim().replace(/^#/, "");
+        return clean === fId || clean === fSlug || clean === fName;
+      });
+      return matchFound || matchTag;
     });
   }
 
@@ -1700,11 +1734,15 @@ function buildNodeMapData() {
     const fy = cy + Math.sin(fAngle) * fDistance;
 
     const postsInFoundation = NETWORK_POSTS.filter(p => {
-      if (!p.foundations || !Array.isArray(p.foundations)) return false;
-      return p.foundations.some(f => {
+      const matchFound = p.foundations && Array.isArray(p.foundations) && p.foundations.some(f => {
         const clean = String(f).toLowerCase().trim();
         return clean === fId.toLowerCase() || clean === (fObj.slug || "").toLowerCase() || clean === (fObj.name || "").toLowerCase();
       });
+      const matchTag = p.tags && Array.isArray(p.tags) && p.tags.some(t => {
+        const clean = String(t).toLowerCase().trim().replace(/^#/, "");
+        return clean === fId.toLowerCase() || clean === (fObj.slug || "").toLowerCase() || clean === (fObj.name || "").toLowerCase();
+      });
+      return matchFound || matchTag;
     });
 
     const fRadius = Math.min(13, 10 + postsInFoundation.length * 0.3);
@@ -1867,12 +1905,13 @@ function buildNodeMapData() {
   });
 
   // 5. TAGS (Level 4 - Outer tag layer)
+  const canonicalFoundIds = new Set(getCanonicalFoundations().map(f => (f.id || f.slug || "").toLowerCase()));
   const uniqueTagMap = {};
   NETWORK_POSTS.forEach(p => {
     if (p.tags && Array.isArray(p.tags)) {
       p.tags.forEach(t => {
         const clean = String(t).trim().toLowerCase().replace(/^#/, "");
-        if (!clean) return;
+        if (!clean || canonicalFoundIds.has(clean)) return;
         if (!uniqueTagMap[clean]) {
           uniqueTagMap[clean] = { name: clean, pillars: new Set(), subtopics: new Set(), count: 0 };
         }

@@ -19,7 +19,6 @@ tags:
   - "ai"
   - "models"
   - "annotation"
-  - ""
 theme: "dark"
 featured: false
 reading_time: "Code Toolkit"

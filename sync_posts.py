@@ -68,8 +68,7 @@ def _resolve_taxonomy(meta, canonical_pillars):
     }
 
 
-def _resolve_foundations(meta, matched_pil):
-    inherited = matched_pil.get("foundations", []) if matched_pil else []
+def _resolve_foundations(meta, canonical_foundations=None):
     raw = meta.get("foundations") or meta.get("foundation") or []
     if isinstance(raw, str):
         raw = [f.strip().lower() for f in raw.split(",") if f.strip()]
@@ -78,13 +77,44 @@ def _resolve_foundations(meta, matched_pil):
     else:
         raw = []
 
+    post_tags = meta.get("tags") or []
+    if isinstance(post_tags, str):
+        post_tags = [t.strip().lower() for t in post_tags.split(",") if t.strip()]
+    elif isinstance(post_tags, list):
+        post_tags = [str(t).strip().lower().lstrip("#") for t in post_tags if t]
+    else:
+        post_tags = []
+
+    canonical_f_slugs = set()
+    if canonical_foundations:
+        for cf in canonical_foundations:
+            canonical_f_slugs.add(cf.get("id", "").lower())
+            canonical_f_slugs.add(cf.get("slug", "").lower())
+            canonical_f_slugs.add(slugify(cf.get("name", "")).lower())
+    else:
+        canonical_f_slugs = {
+            "ai", "design", "philosophy", "perception", "psychology", "tech",
+            "vision", "semiotics", "tools", "analysis", "data", "branding",
+            "graphics", "art"
+        }
+
     seen = set()
     foundations = []
-    for item in inherited + raw:
+
+    # 1. Explicit foundations in frontmatter
+    for item in raw:
         s = slugify(item)
         if s and s not in seen:
             seen.add(s)
             foundations.append(s)
+
+    # 2. Match post's explicit tags to canonical foundation IDs
+    for tag in post_tags:
+        s = slugify(tag)
+        if s in canonical_f_slugs and s not in seen:
+            seen.add(s)
+            foundations.append(s)
+
     return foundations
 
 
@@ -156,7 +186,7 @@ def _format_date(raw_date):
     return f"{match.group(1)}.{match.group(2)}.{match.group(3)}" if match else raw_str
 
 
-def _parse_single_post(file_path: Path, canonical_pillars):
+def _parse_single_post(file_path: Path, canonical_pillars, canonical_foundations=None):
     with open(file_path, "r", encoding="utf-8", errors="replace") as f:
         content = f.read()
 
@@ -165,7 +195,7 @@ def _parse_single_post(file_path: Path, canonical_pillars):
     sys_id = meta.get("sys_id") or f"SYS_{slug.upper()}"
 
     tax = _resolve_taxonomy(meta, canonical_pillars)
-    foundations = _resolve_foundations(meta, tax["matched_pil"])
+    foundations = _resolve_foundations(meta, canonical_foundations)
     img = _resolve_images(meta)
     links, backlinks = _resolve_links_and_backlinks(meta)
 
@@ -209,7 +239,11 @@ def _parse_single_post(file_path: Path, canonical_pillars):
         "gallery_images": img["gallery_images"],
         "links": links,
         "backlinks": backlinks,
-        "tags": meta.get("tags", []),
+        "tags": [
+            str(t).strip().lstrip("#")
+            for t in (meta.get("tags") if isinstance(meta.get("tags"), list) else ([t.strip() for t in str(meta.get("tags") or "").split(",") if t.strip()]))
+            if str(t).strip().lstrip("#")
+        ],
         "entities": meta.get("entities"),
         "content": clean_and_convert_markdown(body),
     }
@@ -255,7 +289,7 @@ def compile_posts():
             continue
 
         try:
-            post = _parse_single_post(file_path, canonical_pillars)
+            post = _parse_single_post(file_path, canonical_pillars, canonical_foundations)
             posts.append(post)
             print(f"  [OK] Processed: {file_path.name} -> {post['sys_id']}")
         except Exception as e:

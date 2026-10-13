@@ -890,15 +890,17 @@ function renderTimelineList() {
 
     // 2. Tag / Pillar Node Filter
     if (activeTagFilter) {
-      const tagLower = activeTagFilter.toLowerCase();
+      const tagLower = activeTagFilter.toLowerCase().replace(/^#/, "");
       const pillar = (post.pillar || "").toLowerCase();
       const subtopic = (post.subtopic || "").toLowerCase();
-      const tags = (post.tags || []).map((t) => t.toLowerCase());
+      const tags = (post.tags || []).map((t) => t.toLowerCase().replace(/^#/, ""));
+      const foundations = (post.foundations || []).map((f) => f.toLowerCase().replace(/^#/, ""));
 
       const matchesPillar = pillar === tagLower;
       const matchesSubtopic = subtopic === tagLower;
       const matchesTag = tags.includes(tagLower);
-      if (!matchesPillar && !matchesSubtopic && !matchesTag) return false;
+      const matchesFoundation = foundations.includes(tagLower);
+      if (!matchesPillar && !matchesSubtopic && !matchesTag && !matchesFoundation) return false;
     }
 
     // 3. Search query

@@ -628,9 +628,6 @@ var TaxonomyLookup = {
       var fName = targetFoundation.name.toLowerCase();
       if (postFoundations.includes(fId) || postFoundations.includes(fSlug) || postFoundations.includes(fName)) return true;
       if (tags.includes(fId) || tags.includes(fSlug)) return true;
-      if (targetFoundation.pillars && targetFoundation.pillars.some(function(pilId) {
-        return postPillarId === pilId.toLowerCase();
-      })) return true;
     }
 
     // 2. Check if query matches a canonical pillar

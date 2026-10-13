@@ -11,7 +11,7 @@
     "id": "the-music-vault",
     "slug": "the-music-vault",
     "sys_id": "SYS_VAULT_MUS",
-    "title": "[ MUSIC_VAULT ]",
+    "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
     "subtitle": "",
     "excerpt": "",
     "format": "BOOKMARK",
@@ -23,8 +23,7 @@
     "pillar_id": "art-worth-sharing",
     "foundations": [
       "art",
-      "perception",
-      "design"
+      "perception"
     ],
     "subtopic": "ART VAULTS",
     "subtopic_id": "art-vaults",
@@ -70,7 +69,7 @@
     "id": "the-4d-vault",
     "slug": "the-4d-vault",
     "sys_id": "SYS_VAULT_4D",
-    "title": "[ 4D_VAULT ] - All time-based ART",
+    "title": "[ 4D_VAULT  ] ◪  All time-based ART",
     "subtitle": "",
     "excerpt": "",
     "format": "BOOKMARK",
@@ -82,8 +81,7 @@
     "pillar_id": "art-worth-sharing",
     "foundations": [
       "art",
-      "perception",
-      "design"
+      "perception"
     ],
     "subtopic": "ART VAULTS",
     "subtopic_id": "art-vaults",
@@ -140,7 +138,7 @@
     "id": "the-3d-vault",
     "slug": "the-3d-vault",
     "sys_id": "SYS_VAULT_3D",
-    "title": "[ 3D_VAULT ] - All tridimensional ART",
+    "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
     "subtitle": "",
     "excerpt": "",
     "format": "BOOKMARK",
@@ -152,8 +150,7 @@
     "pillar_id": "art-worth-sharing",
     "foundations": [
       "art",
-      "perception",
-      "design"
+      "perception"
     ],
     "subtopic": "ART VAULTS",
     "subtopic_id": "art-vaults",
@@ -214,7 +211,7 @@
     "id": "the-2d-vault",
     "slug": "the-2d-vault",
     "sys_id": "SYS_VAULT_2D",
-    "title": "[ 2D_VAULT ] - All bidimensional ART",
+    "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
     "subtitle": "",
     "excerpt": "",
     "format": "BOOKMARK",
@@ -225,9 +222,10 @@
     "pillar": "ART WORTH SHARING",
     "pillar_id": "art-worth-sharing",
     "foundations": [
+      "design",
       "art",
-      "perception",
-      "design"
+      "branding",
+      "perception"
     ],
     "subtopic": "ART VAULTS",
     "subtopic_id": "art-vaults",
@@ -300,9 +298,7 @@
     "pillar": "ART WORTH SHARING",
     "pillar_id": "art-worth-sharing",
     "foundations": [
-      "art",
-      "perception",
-      "design"
+      "art"
     ],
     "subtopic": "OTHERWORLDLY MUSIC",
     "subtopic_id": "otherworldly-music",
@@ -359,10 +355,7 @@
     "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
     "pillar_id": "visual-perception",
     "foundations": [
-      "perception",
-      "vision",
-      "psychology",
-      "analysis"
+      "vision"
     ],
     "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
     "subtopic_id": "anatomy-psychophysics-vision",
@@ -444,11 +437,7 @@
     "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
     "pillar_id": "language-llms",
     "foundations": [
-      "ai",
-      "tech",
-      "tools",
-      "analysis",
-      "data"
+      "ai"
     ],
     "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
     "subtopic_id": "ai-safety-risks",
@@ -512,14 +501,7 @@
     "pillar": "AI PERCEPTION & REPRESENTATION",
     "pillar_id": "ai-perception",
     "foundations": [
-      "ai",
-      "vision",
-      "tech",
-      "art",
-      "data",
-      "analysis",
-      "graphics",
-      "tools"
+      "data"
     ],
     "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
     "subtopic_id": "synthetic-statistical-images",
@@ -598,14 +580,7 @@
     "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
     "pillar_id": "philosophy-image",
     "foundations": [
-      "philosophy",
-      "semiotics",
-      "design",
-      "art",
-      "branding",
-      "graphics",
-      "vision",
-      "psychology"
+      "vision"
     ],
     "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
     "subtopic_id": "visual-semiotics",
@@ -695,14 +670,9 @@
     "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
     "pillar_id": "philosophy-image",
     "foundations": [
-      "philosophy",
-      "semiotics",
-      "design",
-      "art",
       "branding",
-      "graphics",
-      "vision",
-      "psychology"
+      "design",
+      "philosophy"
     ],
     "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
     "subtopic_id": "epistemology-representation",
@@ -781,11 +751,7 @@
     "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
     "pillar_id": "language-llms",
     "foundations": [
-      "ai",
-      "tech",
-      "tools",
-      "analysis",
-      "data"
+      "ai"
     ],
     "subtopic": "LLM ARCHITECTURES AND MECHANICS",
     "subtopic_id": "llm-architectures",
@@ -849,14 +815,9 @@
     "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
     "pillar_id": "philosophy-image",
     "foundations": [
-      "philosophy",
       "semiotics",
-      "design",
-      "art",
-      "branding",
-      "graphics",
       "vision",
-      "psychology"
+      "design"
     ],
     "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
     "subtopic_id": "visual-semiotics",
@@ -933,9 +894,6 @@
     "pillar_id": "language-llms",
     "foundations": [
       "ai",
-      "tech",
-      "tools",
-      "analysis",
       "data"
     ],
     "subtopic": "LLM ARCHITECTURES AND MECHANICS",
@@ -995,13 +953,7 @@
     "pillar_id": "ai-perception",
     "foundations": [
       "ai",
-      "vision",
-      "tech",
-      "art",
-      "data",
-      "analysis",
-      "graphics",
-      "tools"
+      "art"
     ],
     "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
     "subtopic_id": "computer-human-vision",
@@ -1064,11 +1016,7 @@
     "pillar": "PHILOSOPHY & CRITICAL THEORY",
     "pillar_id": "philosophy-critical-theory",
     "foundations": [
-      "philosophy",
-      "tech",
-      "analysis",
-      "data",
-      "semiotics"
+      "philosophy"
     ],
     "subtopic": "SOMATOPOLITICS & LATENT SPACE",
     "subtopic_id": "somatopolitics-latent-space",
@@ -1314,11 +1262,7 @@
     "pillar": "PHILOSOPHY & CRITICAL THEORY",
     "pillar_id": "philosophy-critical-theory",
     "foundations": [
-      "philosophy",
-      "tech",
-      "analysis",
-      "data",
-      "semiotics"
+      "philosophy"
     ],
     "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
     "subtopic_id": "biopolitics-pharmacopornography",
@@ -1402,14 +1346,7 @@
     "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
     "pillar_id": "philosophy-image",
     "foundations": [
-      "philosophy",
-      "semiotics",
-      "design",
-      "art",
-      "branding",
-      "graphics",
-      "vision",
-      "psychology"
+      "ai"
     ],
     "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
     "subtopic_id": "interface-politics",
@@ -1465,16 +1402,7 @@
     "url": "",
     "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
     "pillar_id": "philosophy-image",
-    "foundations": [
-      "philosophy",
-      "semiotics",
-      "design",
-      "art",
-      "branding",
-      "graphics",
-      "vision",
-      "psychology"
-    ],
+    "foundations": [],
     "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
     "subtopic_id": "aesthetics-ideology-interface",
     "theme": "dark",
@@ -1555,10 +1483,7 @@
     "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
     "pillar_id": "visual-perception",
     "foundations": [
-      "perception",
-      "vision",
-      "psychology",
-      "analysis"
+      "psychology"
     ],
     "subtopic": "COGNITIVE AND VISUAL BIASES",
     "subtopic_id": "cognitive-visual-biases",
@@ -1621,14 +1546,7 @@
     "pillar": "AI PERCEPTION & REPRESENTATION",
     "pillar_id": "ai-perception",
     "foundations": [
-      "ai",
-      "vision",
-      "tech",
-      "art",
-      "data",
-      "analysis",
-      "graphics",
-      "tools"
+      "ai"
     ],
     "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
     "subtopic_id": "computer-human-vision",
@@ -1676,8 +1594,7 @@
       "data-labeling",
       "ai",
       "models",
-      "annotation",
-      ""
+      "annotation"
     ],
     "entities": null,
     "content": "<h2 class=\"post-section-kicker essay-section-kicker\">01. Overview & Capability</h2>\n\n<p class=\"post-paragraph essay-paragraph\">Give <strong>RelateAnything</strong> an image, object regions, and the relations you want to look for. It returns scored <code>(subject, relation, object)</code> triplets, such as <code>person → riding → horse</code>.</p>\n\n<img src=\"assets/images/relateanything.gif\" alt=\"video with data labeling tags\" width=\"100%\"/>\n\n<h3 class=\"post-subheading essay-subheading\">Try it with zero install:</h3>\n\n<ol class=\"post-list essay-list\"><li>Go to https://maelic.github.io/RelateAnythingProject/demo/</li><li>Upload a photo or video, or use your webcam ></li><li>It runs entirely in your browser, nothing gets sent to a server</li></ol>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">02. Do you want to run it in python (locally) instead?</h2>\n\n<p class=\"post-paragraph essay-paragraph\">Use Python 3.12+. Install a CUDA-enabled PyTorch build for NVIDIA GPU inference, or use device=\"cpu\" in the example below.</p>\n\n<pre><code class=\"language-text\">git clone https://github.com/Maelic/RelateAnything.git\ncd RelateAnything\npip install -e \".[hub]\"</code></pre>\n\n<p class=\"post-paragraph essay-paragraph\">Run this from the repository root. The sample photo is included; the two example boxes identify the person and the horse.</p>\n\n<pre><code class=\"language-text\">import numpy as np\nfrom PIL import Image\nfrom relsgg import RelateAnything\n\nmodel = RelateAnything.from_pretrained(\"maelic/relsgg-vits16plus\", device=\"cuda\")\nimage = Image.open(\"assets/reel/images/horse.jpg\").convert(\"RGB\")\nboxes = np.array([[470, 130, 650, 630], [90, 310, 1010, 875]], dtype=np.float32)\n\n# Boxes are [x1, y1, x2, y2] in original-image pixels.\n# Labels are optional and only make the printed triplets easier to read.\nfor triplet in model.predict(image, boxes, box_labels=[\"person\", \"horse\"], topk=5):\n    print(triplet)\n\n# Change what relations to look for, without retraining.\nmodel.set_vocabulary([\"riding\", \"carrying a rider\", \"beside\", \"in front of\"])\ngraphs = model.predict(image, boxes, box_labels=[\"person\", \"horse\"], decompose=True)\nprint(graphs[\"spatial\"])\nprint(graphs[\"semantic\"])</code></pre>\n\n<p class=\"post-paragraph essay-paragraph\">Released checkpoints include the backbone configuration and text encoder; no gated DINOv3 login is needed for inference. Replace the sample image and boxes with your own inputs; the API also supports masks and a larger built-in relation vocabulary.</p>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h3 class=\"post-subheading essay-subheading\">03. API Reference</h3>\n\n<p class=\"post-paragraph essay-paragraph\"><a href=\"https://github.com/Maelic/RelateAnything/blob/main/docs/quickstart.md\" target=\"_blank\" rel=\"noopener noreferrer\">API guide: inputs, vocabularies, masks, and scores</a> — <a href=\"https://github.com/Maelic/RelateAnything/blob/main/docs/installation.md\" target=\"_blank\" rel=\"noopener noreferrer\">Installation and offline use</a></p>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">04. Research Paper</h2>\n\n<p class=\"post-paragraph essay-paragraph\"><strong>Title:</strong> Relate Anything: Real-Time Open-Vocabulary Relation Prediction From Any Inputs <br><strong>Subjects:</strong> Computer Vision and Pattern Recognition (cs.CV) <br>• <a href=\"assets/docs/2609.12552v1.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">arXiv:2609.12552</a> [cs.CV] <br>• <a href=\"https://doi.org/10.48550/arXiv.2609.12552\" target=\"_blank\" rel=\"noopener noreferrer\">https://doi.org/10.48550/arXiv.2609.12552</a></p>"
@@ -1697,10 +1614,7 @@
     "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
     "pillar_id": "visual-perception",
     "foundations": [
-      "perception",
-      "vision",
-      "psychology",
-      "analysis"
+      "vision"
     ],
     "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
     "subtopic_id": "anatomy-psychophysics-vision",
@@ -1766,14 +1680,7 @@
     "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
     "pillar_id": "philosophy-image",
     "foundations": [
-      "philosophy",
-      "semiotics",
-      "design",
-      "art",
-      "branding",
-      "graphics",
-      "vision",
-      "psychology"
+      "philosophy"
     ],
     "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
     "subtopic_id": "epistemology-representation",
@@ -1826,12 +1733,7 @@
     "url": "https://github.com/mynameisjpg/perceptual-vision-eval",
     "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
     "pillar_id": "visual-perception",
-    "foundations": [
-      "perception",
-      "vision",
-      "psychology",
-      "analysis"
-    ],
+    "foundations": [],
     "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
     "subtopic_id": "anatomy-psychophysics-vision",
     "theme": "light",
@@ -1904,16 +1806,7 @@
     "url": "https://monoskop.org/images/4/4c/Haraway_Donna_1985_A_Manifesto_for_Cyborgs_Science_Technology_and_Socialist_Feminism_in_the_1980s.pdf",
     "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
     "pillar_id": "philosophy-image",
-    "foundations": [
-      "philosophy",
-      "semiotics",
-      "design",
-      "art",
-      "branding",
-      "graphics",
-      "vision",
-      "psychology"
-    ],
+    "foundations": [],
     "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
     "subtopic_id": "aesthetics-ideology-interface",
     "theme": "dark",
@@ -1979,11 +1872,7 @@
     "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
     "pillar_id": "language-llms",
     "foundations": [
-      "ai",
-      "tech",
-      "tools",
-      "analysis",
-      "data"
+      "ai"
     ],
     "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
     "subtopic_id": "human-machine-intelligence",
@@ -2034,16 +1923,7 @@
     "url": "",
     "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
     "pillar_id": "philosophy-image",
-    "foundations": [
-      "philosophy",
-      "semiotics",
-      "design",
-      "art",
-      "branding",
-      "graphics",
-      "vision",
-      "psychology"
-    ],
+    "foundations": [],
     "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
     "subtopic_id": "epistemology-representation",
     "theme": "light",
@@ -2120,16 +2000,7 @@
     "url": "",
     "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
     "pillar_id": "philosophy-image",
-    "foundations": [
-      "philosophy",
-      "semiotics",
-      "design",
-      "art",
-      "branding",
-      "graphics",
-      "vision",
-      "psychology"
-    ],
+    "foundations": [],
     "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
     "subtopic_id": "epistemology-representation",
     "theme": "light",
@@ -2215,14 +2086,7 @@
     "pillar": "AI PERCEPTION & REPRESENTATION",
     "pillar_id": "ai-perception",
     "foundations": [
-      "ai",
-      "vision",
-      "tech",
-      "art",
-      "data",
-      "analysis",
-      "graphics",
-      "tools"
+      "philosophy"
     ],
     "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
     "subtopic_id": "political-synth-media",
@@ -2277,14 +2141,7 @@
     "pillar": "AI PERCEPTION & REPRESENTATION",
     "pillar_id": "ai-perception",
     "foundations": [
-      "ai",
-      "vision",
-      "tech",
-      "art",
-      "data",
-      "analysis",
-      "graphics",
-      "tools"
+      "ai"
     ],
     "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
     "subtopic_id": "synthetic-identity",
@@ -2366,11 +2223,7 @@
     "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
     "pillar_id": "language-llms",
     "foundations": [
-      "ai",
-      "tech",
-      "tools",
-      "analysis",
-      "data"
+      "ai"
     ],
     "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
     "subtopic_id": "human-machine-intelligence",

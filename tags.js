@@ -12,7 +12,7 @@
     "name": "AI",
     "label": "AI",
     "type": "foundation",
-    "count": 10,
+    "count": 9,
     "posts": [
       {
         "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
@@ -21,35 +21,11 @@
         "date": "2026.10.10",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
         "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
-      },
-      {
-        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
-        "slug": "poverty-of-synthetic-ground-truth",
-        "title": "The Poverty of Synthetic Ground Truth",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
-        "url": "posts/poverty-of-synthetic-ground-truth.html"
       },
       {
         "id": "2026-10-09-save-70x-tokens-code-review-graph",
@@ -58,11 +34,7 @@
         "date": "2026.10.09",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "LLM ARCHITECTURES AND MECHANICS",
@@ -76,9 +48,6 @@
         "format": "RESOURCE",
         "foundations": [
           "ai",
-          "tech",
-          "tools",
-          "analysis",
           "data"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -93,17 +62,24 @@
         "format": "BOOKMARK",
         "foundations": [
           "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "art"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
+      },
+      {
+        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "foundations": [
+          "ai"
+        ],
+        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
+        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
       },
       {
         "id": "2026-09-30-relate-anything-github-repo",
@@ -112,14 +88,7 @@
         "date": "2026.09.30",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -132,35 +101,11 @@
         "date": "2026.09.26",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
         "url": "posts/harvard-s-computer-science-career-for-free.html"
-      },
-      {
-        "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "date": "2026.09.26",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       },
       {
         "id": "2026-09-25-turing-queer-ai",
@@ -169,14 +114,7 @@
         "date": "2026.09.25",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
@@ -189,11 +127,7 @@
         "date": "2026.09.24",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -206,13 +140,6 @@
         "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
         "format": "BOOKMARK",
         "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "The Poverty of Synthetic Ground Truth",
-        "slug": "poverty-of-synthetic-ground-truth",
-        "format": "ESSAY",
-        "url": "posts/poverty-of-synthetic-ground-truth.html",
         "date": "2026.10.10"
       },
       {
@@ -237,6 +164,13 @@
         "date": "2026.10.06"
       },
       {
+        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
+        "slug": "why-ai-agents-look-like-tamagotchis",
+        "format": "NOTE",
+        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
+        "date": "2026.10.02"
+      },
+      {
         "title": "Relate Anything [github repo]",
         "slug": "relate-anything-github-repo",
         "format": "RESOURCE",
@@ -248,13 +182,6 @@
         "slug": "harvard-s-computer-science-career-for-free",
         "format": "RESOURCE",
         "url": "posts/harvard-s-computer-science-career-for-free.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "format": "BOOKMARK",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
         "date": "2026.09.26"
       },
       {
@@ -277,16 +204,16 @@
       "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-      "Language & LLMs"
+      "Language & LLMs",
+      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
     "subtopics": [
       "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
       "COMPUTER VISION VS. HUMAN PERCEPTION",
       "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
       "LLM ARCHITECTURES AND MECHANICS",
-      "SYNTHETIC AND STATISTICAL IMAGES",
-      "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-      "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
+      "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
     ],
     "order": 1,
     "description": "Artificial intelligence, machine learning models, neural architectures, and synthetic cognition.",
@@ -297,102 +224,23 @@
     "name": "Design",
     "label": "Design",
     "type": "foundation",
-    "count": 14,
+    "count": 3,
     "posts": [
-      {
-        "id": "the-music-vault",
-        "slug": "the-music-vault",
-        "title": "[ MUSIC_VAULT ]",
-        "date": "2026.10.11",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-music-vault.html"
-      },
-      {
-        "id": "the-4d-vault",
-        "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-4d-vault.html"
-      },
-      {
-        "id": "the-3d-vault",
-        "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-3d-vault.html"
-      },
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-2d-vault.html"
-      },
-      {
-        "id": "2026-10-11-marina-herlop-dja-dja",
-        "slug": "marina-herlop-dja-dja",
-        "title": "Marina Herlop's Dja Dja",
-        "date": "2026.10.11",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "OTHERWORLDLY MUSIC",
-        "url": "posts/marina-herlop-dja-dja.html"
-      },
-      {
-        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
       },
       {
         "id": "2026-10-10-images-are-dead",
@@ -401,14 +249,9 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
           "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "design",
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -421,182 +264,22 @@
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
           "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
           "vision",
-          "psychology"
+          "design"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
         "url": "posts/ai-images-groupe-mu.html"
-      },
-      {
-        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
-      },
-      {
-        "id": "2026-10-02-dots-bot-muse-cute-mascots",
-        "slug": "dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "date": "2026.10.02",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/dots-bot-muse-cute-mascots.html"
-      },
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "shanzhai-deconstructing-original",
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/shanzhai-deconstructing-original.html"
-      },
-      {
-        "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "date": "2026.09.28",
-        "format": "BOOKMARK",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-meaning",
-        "slug": "foucault-borges-meaning",
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-meaning.html"
       }
     ],
     "links": [
       {
-        "title": "[ MUSIC_VAULT ]",
-        "slug": "the-music-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-music-vault.html",
-        "date": "2026.10.11"
-      },
-      {
-        "title": "[ 4D_VAULT ] - All time-based ART",
-        "slug": "the-4d-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-4d-vault.html",
-        "date": "2026.10.14"
-      },
-      {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
-        "slug": "the-3d-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-3d-vault.html",
-        "date": "2026.10.14"
-      },
-      {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
-      },
-      {
-        "title": "Marina Herlop's Dja Dja",
-        "slug": "marina-herlop-dja-dja",
-        "format": "BOOKMARK",
-        "url": "posts/marina-herlop-dja-dja.html",
-        "date": "2026.10.11"
-      },
-      {
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "format": "ESSAY",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
-        "date": "2026.10.10"
       },
       {
         "title": "Images are Dead. Brands Should Know.",
@@ -611,48 +294,6 @@
         "format": "ESSAY",
         "url": "posts/ai-images-groupe-mu.html",
         "date": "2026.10.09"
-      },
-      {
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "format": "NOTE",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "slug": "dots-bot-muse-cute-mascots",
-        "format": "ESSAY",
-        "url": "posts/dots-bot-muse-cute-mascots.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "shanzhai-deconstructing-original",
-        "format": "NOTE",
-        "url": "posts/shanzhai-deconstructing-original.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "format": "BOOKMARK",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "slug": "foucault-borges-meaning",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-meaning.html",
-        "date": "2026.09.26"
       }
     ],
     "foundations": [],
@@ -662,12 +303,9 @@
       "Philosophy of the Image"
     ],
     "subtopics": [
-      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
       "ART VAULTS",
       "EPISTEMOLOGY OF REPRESENTATION",
-      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-      "MODES OF SEEING AND VISUAL SEMIOTICS",
-      "OTHERWORLDLY MUSIC"
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
     ],
     "order": 2,
     "description": "Interface design, visual architecture, usability heuristics, product systems, and aesthetic mechanics.",
@@ -678,28 +316,8 @@
     "name": "Philosophy",
     "label": "Philosophy",
     "type": "foundation",
-    "count": 11,
+    "count": 5,
     "posts": [
-      {
-        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
-      },
       {
         "id": "2026-10-10-images-are-dead",
         "slug": "images-are-dead",
@@ -707,38 +325,13 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
           "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "design",
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/images-are-dead.html"
-      },
-      {
-        "id": "2026-10-09-ai-images-groupe-mu",
-        "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "date": "2026.10.09",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/ai-images-groupe-mu.html"
       },
       {
         "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
@@ -747,11 +340,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "SOMATOPOLITICS & LATENT SPACE",
@@ -764,55 +353,11 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
         "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
-      },
-      {
-        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
-      },
-      {
-        "id": "2026-10-02-dots-bot-muse-cute-mascots",
-        "slug": "dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "date": "2026.10.02",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/dots-bot-muse-cute-mascots.html"
       },
       {
         "id": "2026-09-28-shanzhai-deconstructing-original",
@@ -821,101 +366,33 @@
         "date": "2026.09.28",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/shanzhai-deconstructing-original.html"
       },
       {
-        "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "date": "2026.09.28",
+        "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
+        "title": "Excavating AI (the unEthics of Machine Learning Training)",
+        "date": "2026.09.26",
         "format": "BOOKMARK",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "philosophy"
         ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-meaning",
-        "slug": "foucault-borges-meaning",
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-meaning.html"
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
       }
     ],
     "links": [
-      {
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "format": "ESSAY",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
-        "date": "2026.10.10"
-      },
       {
         "title": "Images are Dead. Brands Should Know.",
         "slug": "images-are-dead",
         "format": "ESSAY",
         "url": "posts/images-are-dead.html",
         "date": "2026.10.10"
-      },
-      {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "slug": "ai-images-groupe-mu",
-        "format": "ESSAY",
-        "url": "posts/ai-images-groupe-mu.html",
-        "date": "2026.10.09"
       },
       {
         "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
@@ -932,20 +409,6 @@
         "date": "2026.10.03"
       },
       {
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "format": "NOTE",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "slug": "dots-bot-muse-cute-mascots",
-        "format": "ESSAY",
-        "url": "posts/dots-bot-muse-cute-mascots.html",
-        "date": "2026.10.02"
-      },
-      {
         "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
         "slug": "shanzhai-deconstructing-original",
         "format": "NOTE",
@@ -953,41 +416,26 @@
         "date": "2026.09.28"
       },
       {
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
+        "title": "Excavating AI (the unEthics of Machine Learning Training)",
+        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
         "format": "BOOKMARK",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "slug": "foucault-borges-meaning",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-meaning.html",
+        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
         "date": "2026.09.26"
       }
     ],
     "foundations": [],
     "pillars": [
+      "AI PERCEPTION & REPRESENTATION",
       "Critical Theory",
       "PHILOSOPHY & CRITICAL THEORY",
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
       "Philosophy of the Image"
     ],
     "subtopics": [
-      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
       "BIOPOLITICS & PHARMACOPORNOGRAPHY",
       "EPISTEMOLOGY OF REPRESENTATION",
-      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-      "MODES OF SEEING AND VISUAL SEMIOTICS",
-      "SOMATOPOLITICS & LATENT SPACE"
+      "SOMATOPOLITICS & LATENT SPACE",
+      "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
     ],
     "order": 3,
     "description": "Epistemology, critical theory, ontology, biopolitics, and conceptual frameworks interrogating tech.",
@@ -998,18 +446,17 @@
     "name": "Perception",
     "label": "Perception",
     "type": "foundation",
-    "count": 9,
+    "count": 4,
     "posts": [
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -1018,13 +465,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -1033,13 +479,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -1048,174 +493,57 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-2d-vault.html"
-      },
-      {
-        "id": "2026-10-11-marina-herlop-dja-dja",
-        "slug": "marina-herlop-dja-dja",
-        "title": "Marina Herlop's Dja Dja",
-        "date": "2026.10.11",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception",
-          "design"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "OTHERWORLDLY MUSIC",
-        "url": "posts/marina-herlop-dja-dja.html"
-      },
-      {
-        "id": "2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency",
-        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
-        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.10",
-        "format": "NOTE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
-      },
-      {
-        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
-        "slug": "5-psychology-effects-used-in-app-design",
-        "title": "5 Psychology Effects Used in App Design",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "COGNITIVE AND VISUAL BIASES",
-        "url": "posts/5-psychology-effects-used-in-app-design.html"
-      },
-      {
-        "id": "2026-09-29-visual-bandwidth-bottleneck",
-        "slug": "visual-bandwidth-bottleneck",
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "date": "2026.09.29",
-        "format": "NOTE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/visual-bandwidth-bottleneck.html"
-      },
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
       }
     ],
     "links": [
       {
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
         "date": "2026.10.11"
       },
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
-      },
-      {
-        "title": "Marina Herlop's Dja Dja",
-        "slug": "marina-herlop-dja-dja",
-        "format": "BOOKMARK",
-        "url": "posts/marina-herlop-dja-dja.html",
-        "date": "2026.10.11"
-      },
-      {
-        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
-        "format": "NOTE",
-        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "5 Psychology Effects Used in App Design",
-        "slug": "5-psychology-effects-used-in-app-design",
-        "format": "NOTE",
-        "url": "posts/5-psychology-effects-used-in-app-design.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "slug": "visual-bandwidth-bottleneck",
-        "format": "NOTE",
-        "url": "posts/visual-bandwidth-bottleneck.html",
-        "date": "2026.09.29"
-      },
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
       }
     ],
     "foundations": [],
     "pillars": [
       "ART WORTH SHARING",
-      "VISUAL PERCEPTION & PSYCHOPHYSICS",
       "Visual Perception"
     ],
     "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION",
-      "ART VAULTS",
-      "COGNITIVE AND VISUAL BIASES",
-      "OTHERWORLDLY MUSIC"
+      "ART VAULTS"
     ],
     "order": 4,
     "description": "Biological sensory mechanics, psychophysics, predictive processing, and synthetic machine sight.",
@@ -1226,124 +554,8 @@
     "name": "Psychology",
     "label": "Psychology",
     "type": "foundation",
-    "count": 13,
+    "count": 1,
     "posts": [
-      {
-        "id": "2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency",
-        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
-        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.10",
-        "format": "NOTE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
-      },
-      {
-        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
-      },
-      {
-        "id": "2026-10-10-images-are-dead",
-        "slug": "images-are-dead",
-        "title": "Images are Dead. Brands Should Know.",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/images-are-dead.html"
-      },
-      {
-        "id": "2026-10-09-ai-images-groupe-mu",
-        "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "date": "2026.10.09",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/ai-images-groupe-mu.html"
-      },
-      {
-        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
-      },
-      {
-        "id": "2026-10-02-dots-bot-muse-cute-mascots",
-        "slug": "dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "date": "2026.10.02",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/dots-bot-muse-cute-mascots.html"
-      },
       {
         "id": "2026-10-02-5-psychology-effects-used-in-app-design",
         "slug": "5-psychology-effects-used-in-app-design",
@@ -1351,235 +563,30 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "psychology"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "COGNITIVE AND VISUAL BIASES",
         "url": "posts/5-psychology-effects-used-in-app-design.html"
-      },
-      {
-        "id": "2026-09-29-visual-bandwidth-bottleneck",
-        "slug": "visual-bandwidth-bottleneck",
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "date": "2026.09.29",
-        "format": "NOTE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/visual-bandwidth-bottleneck.html"
-      },
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "shanzhai-deconstructing-original",
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/shanzhai-deconstructing-original.html"
-      },
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      },
-      {
-        "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "date": "2026.09.28",
-        "format": "BOOKMARK",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-meaning",
-        "slug": "foucault-borges-meaning",
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-meaning.html"
       }
     ],
     "links": [
-      {
-        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
-        "format": "NOTE",
-        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "format": "ESSAY",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Images are Dead. Brands Should Know.",
-        "slug": "images-are-dead",
-        "format": "ESSAY",
-        "url": "posts/images-are-dead.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "slug": "ai-images-groupe-mu",
-        "format": "ESSAY",
-        "url": "posts/ai-images-groupe-mu.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "format": "NOTE",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "slug": "dots-bot-muse-cute-mascots",
-        "format": "ESSAY",
-        "url": "posts/dots-bot-muse-cute-mascots.html",
-        "date": "2026.10.02"
-      },
       {
         "title": "5 Psychology Effects Used in App Design",
         "slug": "5-psychology-effects-used-in-app-design",
         "format": "NOTE",
         "url": "posts/5-psychology-effects-used-in-app-design.html",
         "date": "2026.10.02"
-      },
-      {
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "slug": "visual-bandwidth-bottleneck",
-        "format": "NOTE",
-        "url": "posts/visual-bandwidth-bottleneck.html",
-        "date": "2026.09.29"
-      },
-      {
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "shanzhai-deconstructing-original",
-        "format": "NOTE",
-        "url": "posts/shanzhai-deconstructing-original.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "format": "BOOKMARK",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "slug": "foucault-borges-meaning",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-meaning.html",
-        "date": "2026.09.26"
       }
     ],
     "foundations": [],
     "pillars": [
-      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
       "Philosophy of the Image",
       "VISUAL PERCEPTION & PSYCHOPHYSICS",
       "Visual Perception"
     ],
     "subtopics": [
-      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-      "ANATOMY AND PSYCHOPHYSICS OF VISION",
-      "COGNITIVE AND VISUAL BIASES",
-      "EPISTEMOLOGY OF REPRESENTATION",
-      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-      "MODES OF SEEING AND VISUAL SEMIOTICS"
+      "COGNITIVE AND VISUAL BIASES"
     ],
     "order": 5,
     "description": "Cognitive biases, Gestalt pattern completion, attentional bottlenecks, and behavioral product hooks.",
@@ -1590,334 +597,16 @@
     "name": "Tech",
     "label": "Tech",
     "type": "foundation",
-    "count": 12,
-    "posts": [
-      {
-        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
-        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
-        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
-        "date": "2026.10.10",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
-        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
-      },
-      {
-        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
-        "slug": "poverty-of-synthetic-ground-truth",
-        "title": "The Poverty of Synthetic Ground Truth",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
-        "url": "posts/poverty-of-synthetic-ground-truth.html"
-      },
-      {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
-      },
-      {
-        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "date": "2026.10.06",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
-      },
-      {
-        "id": "2026-10-06-marc-van-elburg",
-        "slug": "marc-van-elburg",
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "date": "2026.10.06",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/marc-van-elburg.html"
-      },
-      {
-        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
-        ],
-        "pillar": "PHILOSOPHY & CRITICAL THEORY",
-        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
-      },
-      {
-        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
-        ],
-        "pillar": "PHILOSOPHY & CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
-      },
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
-      },
-      {
-        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "date": "2026.09.26",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/harvard-s-computer-science-career-for-free.html"
-      },
-      {
-        "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "date": "2026.09.26",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
-      },
-      {
-        "id": "2026-09-25-turing-queer-ai",
-        "slug": "turing-queer-ai",
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "date": "2026.09.25",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "posts/turing-queer-ai.html"
-      },
-      {
-        "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "lecun-world-models-jepa",
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "date": "2026.09.24",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/lecun-world-models-jepa.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
-        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
-        "format": "BOOKMARK",
-        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "The Poverty of Synthetic Ground Truth",
-        "slug": "poverty-of-synthetic-ground-truth",
-        "format": "ESSAY",
-        "url": "posts/poverty-of-synthetic-ground-truth.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "slug": "marc-van-elburg",
-        "format": "BOOKMARK",
-        "url": "posts/marc-van-elburg.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "format": "ESSAY",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "format": "ESSAY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      },
-      {
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "format": "RESOURCE",
-        "url": "posts/harvard-s-computer-science-career-for-free.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "format": "BOOKMARK",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "turing-queer-ai",
-        "format": "ESSAY",
-        "url": "posts/turing-queer-ai.html",
-        "date": "2026.09.25"
-      },
-      {
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "lecun-world-models-jepa",
-        "format": "ESSAY",
-        "url": "posts/lecun-world-models-jepa.html",
-        "date": "2026.09.24"
-      }
-    ],
+    "count": 0,
+    "posts": [],
+    "links": [],
     "foundations": [],
     "pillars": [
-      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "Critical Theory",
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-      "Language & LLMs",
-      "PHILOSOPHY & CRITICAL THEORY"
+      "Language & LLMs"
     ],
-    "subtopics": [
-      "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
-      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-      "COMPUTER VISION VS. HUMAN PERCEPTION",
-      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-      "LLM ARCHITECTURES AND MECHANICS",
-      "SOMATOPOLITICS & LATENT SPACE",
-      "SYNTHETIC AND STATISTICAL IMAGES",
-      "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-      "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
-    ],
+    "subtopics": [],
     "order": 6,
     "description": "Technological infrastructures, software frameworks, code architectures, and digital systems.",
     "connected_tags": []
@@ -1927,7 +616,7 @@
     "name": "Vision",
     "label": "Vision",
     "type": "foundation",
-    "count": 18,
+    "count": 4,
     "posts": [
       {
         "id": "2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency",
@@ -1936,34 +625,11 @@
         "date": "2026.10.10",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
         "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
-      },
-      {
-        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
-        "slug": "poverty-of-synthetic-ground-truth",
-        "title": "The Poverty of Synthetic Ground Truth",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
-        "url": "posts/poverty-of-synthetic-ground-truth.html"
       },
       {
         "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
@@ -1972,38 +638,11 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "vision"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
         "url": "posts/operational-images-farocki-flusser-machine-vision.html"
-      },
-      {
-        "id": "2026-10-10-images-are-dead",
-        "slug": "images-are-dead",
-        "title": "Images are Dead. Brands Should Know.",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/images-are-dead.html"
       },
       {
         "id": "2026-10-09-ai-images-groupe-mu",
@@ -2012,114 +651,13 @@
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
           "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
           "vision",
-          "psychology"
+          "design"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
         "url": "posts/ai-images-groupe-mu.html"
-      },
-      {
-        "id": "2026-10-06-marc-van-elburg",
-        "slug": "marc-van-elburg",
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "date": "2026.10.06",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/marc-van-elburg.html"
-      },
-      {
-        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
-      },
-      {
-        "id": "2026-10-02-dots-bot-muse-cute-mascots",
-        "slug": "dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "date": "2026.10.02",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/dots-bot-muse-cute-mascots.html"
-      },
-      {
-        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
-        "slug": "5-psychology-effects-used-in-app-design",
-        "title": "5 Psychology Effects Used in App Design",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "COGNITIVE AND VISUAL BIASES",
-        "url": "posts/5-psychology-effects-used-in-app-design.html"
-      },
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
       },
       {
         "id": "2026-09-29-visual-bandwidth-bottleneck",
@@ -2128,150 +666,11 @@
         "date": "2026.09.29",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
         "url": "posts/visual-bandwidth-bottleneck.html"
-      },
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "shanzhai-deconstructing-original",
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/shanzhai-deconstructing-original.html"
-      },
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      },
-      {
-        "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "date": "2026.09.28",
-        "format": "BOOKMARK",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-meaning",
-        "slug": "foucault-borges-meaning",
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-meaning.html"
-      },
-      {
-        "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "date": "2026.09.26",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
-      },
-      {
-        "id": "2026-09-25-turing-queer-ai",
-        "slug": "turing-queer-ai",
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "date": "2026.09.25",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "posts/turing-queer-ai.html"
       }
     ],
     "links": [
@@ -2283,24 +682,10 @@
         "date": "2026.10.10"
       },
       {
-        "title": "The Poverty of Synthetic Ground Truth",
-        "slug": "poverty-of-synthetic-ground-truth",
-        "format": "ESSAY",
-        "url": "posts/poverty-of-synthetic-ground-truth.html",
-        "date": "2026.10.10"
-      },
-      {
         "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
         "slug": "operational-images-farocki-flusser-machine-vision",
         "format": "ESSAY",
         "url": "posts/operational-images-farocki-flusser-machine-vision.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Images are Dead. Brands Should Know.",
-        "slug": "images-are-dead",
-        "format": "ESSAY",
-        "url": "posts/images-are-dead.html",
         "date": "2026.10.10"
       },
       {
@@ -2311,100 +696,15 @@
         "date": "2026.10.09"
       },
       {
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "slug": "marc-van-elburg",
-        "format": "BOOKMARK",
-        "url": "posts/marc-van-elburg.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "format": "NOTE",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "slug": "dots-bot-muse-cute-mascots",
-        "format": "ESSAY",
-        "url": "posts/dots-bot-muse-cute-mascots.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "5 Psychology Effects Used in App Design",
-        "slug": "5-psychology-effects-used-in-app-design",
-        "format": "NOTE",
-        "url": "posts/5-psychology-effects-used-in-app-design.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      },
-      {
         "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
         "slug": "visual-bandwidth-bottleneck",
         "format": "NOTE",
         "url": "posts/visual-bandwidth-bottleneck.html",
         "date": "2026.09.29"
-      },
-      {
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "shanzhai-deconstructing-original",
-        "format": "NOTE",
-        "url": "posts/shanzhai-deconstructing-original.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "format": "BOOKMARK",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "slug": "foucault-borges-meaning",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-meaning.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "format": "BOOKMARK",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "turing-queer-ai",
-        "format": "ESSAY",
-        "url": "posts/turing-queer-ai.html",
-        "date": "2026.09.25"
       }
     ],
     "foundations": [],
     "pillars": [
-      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
       "Philosophy of the Image",
@@ -2412,16 +712,8 @@
       "Visual Perception"
     ],
     "subtopics": [
-      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
       "ANATOMY AND PSYCHOPHYSICS OF VISION",
-      "COGNITIVE AND VISUAL BIASES",
-      "COMPUTER VISION VS. HUMAN PERCEPTION",
-      "EPISTEMOLOGY OF REPRESENTATION",
-      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-      "MODES OF SEEING AND VISUAL SEMIOTICS",
-      "SYNTHETIC AND STATISTICAL IMAGES",
-      "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-      "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
     ],
     "order": 7,
     "description": "Human ocular mechanics, computer vision, foveal resolution, optical illusions, and visual rendering.",
@@ -2432,48 +724,8 @@
     "name": "Semiotics",
     "label": "Semiotics",
     "type": "foundation",
-    "count": 11,
+    "count": 1,
     "posts": [
-      {
-        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
-      },
-      {
-        "id": "2026-10-10-images-are-dead",
-        "slug": "images-are-dead",
-        "title": "Images are Dead. Brands Should Know.",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/images-are-dead.html"
-      },
       {
         "id": "2026-10-09-ai-images-groupe-mu",
         "slug": "ai-images-groupe-mu",
@@ -2481,267 +733,32 @@
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
           "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
           "vision",
-          "psychology"
+          "design"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
         "url": "posts/ai-images-groupe-mu.html"
-      },
-      {
-        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
-        ],
-        "pillar": "PHILOSOPHY & CRITICAL THEORY",
-        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
-      },
-      {
-        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
-        ],
-        "pillar": "PHILOSOPHY & CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
-      },
-      {
-        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
-      },
-      {
-        "id": "2026-10-02-dots-bot-muse-cute-mascots",
-        "slug": "dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "date": "2026.10.02",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/dots-bot-muse-cute-mascots.html"
-      },
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "shanzhai-deconstructing-original",
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/shanzhai-deconstructing-original.html"
-      },
-      {
-        "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "date": "2026.09.28",
-        "format": "BOOKMARK",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-meaning",
-        "slug": "foucault-borges-meaning",
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-meaning.html"
       }
     ],
     "links": [
-      {
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "format": "ESSAY",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Images are Dead. Brands Should Know.",
-        "slug": "images-are-dead",
-        "format": "ESSAY",
-        "url": "posts/images-are-dead.html",
-        "date": "2026.10.10"
-      },
       {
         "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
         "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
         "url": "posts/ai-images-groupe-mu.html",
         "date": "2026.10.09"
-      },
-      {
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "format": "ESSAY",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "format": "ESSAY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "format": "NOTE",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "slug": "dots-bot-muse-cute-mascots",
-        "format": "ESSAY",
-        "url": "posts/dots-bot-muse-cute-mascots.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "shanzhai-deconstructing-original",
-        "format": "NOTE",
-        "url": "posts/shanzhai-deconstructing-original.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "format": "BOOKMARK",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "slug": "foucault-borges-meaning",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-meaning.html",
-        "date": "2026.09.26"
       }
     ],
     "foundations": [],
     "pillars": [
       "Critical Theory",
-      "PHILOSOPHY & CRITICAL THEORY",
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
       "Philosophy of the Image"
     ],
     "subtopics": [
-      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-      "EPISTEMOLOGY OF REPRESENTATION",
-      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-      "MODES OF SEEING AND VISUAL SEMIOTICS",
-      "SOMATOPOLITICS & LATENT SPACE"
+      "MODES OF SEEING AND VISUAL SEMIOTICS"
     ],
     "order": 8,
     "description": "Signs, symbols, iconicity, plastic signs (Groupe µ), linguistic tokenization, and visual rhetoric.",
@@ -2752,282 +769,15 @@
     "name": "Tools",
     "label": "Tools",
     "type": "foundation",
-    "count": 10,
-    "posts": [
-      {
-        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
-        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
-        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
-        "date": "2026.10.10",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
-        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
-      },
-      {
-        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
-        "slug": "poverty-of-synthetic-ground-truth",
-        "title": "The Poverty of Synthetic Ground Truth",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
-        "url": "posts/poverty-of-synthetic-ground-truth.html"
-      },
-      {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
-      },
-      {
-        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "date": "2026.10.06",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
-      },
-      {
-        "id": "2026-10-06-marc-van-elburg",
-        "slug": "marc-van-elburg",
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "date": "2026.10.06",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/marc-van-elburg.html"
-      },
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
-      },
-      {
-        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "date": "2026.09.26",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/harvard-s-computer-science-career-for-free.html"
-      },
-      {
-        "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "date": "2026.09.26",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
-      },
-      {
-        "id": "2026-09-25-turing-queer-ai",
-        "slug": "turing-queer-ai",
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "date": "2026.09.25",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "posts/turing-queer-ai.html"
-      },
-      {
-        "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "lecun-world-models-jepa",
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "date": "2026.09.24",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/lecun-world-models-jepa.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
-        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
-        "format": "BOOKMARK",
-        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "The Poverty of Synthetic Ground Truth",
-        "slug": "poverty-of-synthetic-ground-truth",
-        "format": "ESSAY",
-        "url": "posts/poverty-of-synthetic-ground-truth.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "slug": "marc-van-elburg",
-        "format": "BOOKMARK",
-        "url": "posts/marc-van-elburg.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      },
-      {
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "format": "RESOURCE",
-        "url": "posts/harvard-s-computer-science-career-for-free.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "format": "BOOKMARK",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "turing-queer-ai",
-        "format": "ESSAY",
-        "url": "posts/turing-queer-ai.html",
-        "date": "2026.09.25"
-      },
-      {
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "lecun-world-models-jepa",
-        "format": "ESSAY",
-        "url": "posts/lecun-world-models-jepa.html",
-        "date": "2026.09.24"
-      }
-    ],
+    "count": 0,
+    "posts": [],
+    "links": [],
     "foundations": [],
     "pillars": [
-      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
       "Language & LLMs"
     ],
-    "subtopics": [
-      "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
-      "COMPUTER VISION VS. HUMAN PERCEPTION",
-      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-      "LLM ARCHITECTURES AND MECHANICS",
-      "SYNTHETIC AND STATISTICAL IMAGES",
-      "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-      "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
-    ],
+    "subtopics": [],
     "order": 9,
     "description": "Developer utilities, benchmarking toolkits, evaluation frameworks, and pragmatic workflow instrumentation.",
     "connected_tags": []
@@ -3037,430 +787,17 @@
     "name": "Analysis",
     "label": "Analysis",
     "type": "foundation",
-    "count": 16,
-    "posts": [
-      {
-        "id": "2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency",
-        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
-        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "date": "2026.10.10",
-        "format": "NOTE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html"
-      },
-      {
-        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
-        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
-        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
-        "date": "2026.10.10",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
-        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
-      },
-      {
-        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
-        "slug": "poverty-of-synthetic-ground-truth",
-        "title": "The Poverty of Synthetic Ground Truth",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
-        "url": "posts/poverty-of-synthetic-ground-truth.html"
-      },
-      {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
-      },
-      {
-        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "date": "2026.10.06",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
-      },
-      {
-        "id": "2026-10-06-marc-van-elburg",
-        "slug": "marc-van-elburg",
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "date": "2026.10.06",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/marc-van-elburg.html"
-      },
-      {
-        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
-        ],
-        "pillar": "PHILOSOPHY & CRITICAL THEORY",
-        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
-      },
-      {
-        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
-        ],
-        "pillar": "PHILOSOPHY & CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
-      },
-      {
-        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
-        "slug": "5-psychology-effects-used-in-app-design",
-        "title": "5 Psychology Effects Used in App Design",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "COGNITIVE AND VISUAL BIASES",
-        "url": "posts/5-psychology-effects-used-in-app-design.html"
-      },
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
-      },
-      {
-        "id": "2026-09-29-visual-bandwidth-bottleneck",
-        "slug": "visual-bandwidth-bottleneck",
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "date": "2026.09.29",
-        "format": "NOTE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/visual-bandwidth-bottleneck.html"
-      },
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      },
-      {
-        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "date": "2026.09.26",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/harvard-s-computer-science-career-for-free.html"
-      },
-      {
-        "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "date": "2026.09.26",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
-      },
-      {
-        "id": "2026-09-25-turing-queer-ai",
-        "slug": "turing-queer-ai",
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "date": "2026.09.25",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "posts/turing-queer-ai.html"
-      },
-      {
-        "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "lecun-world-models-jepa",
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "date": "2026.09.24",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/lecun-world-models-jepa.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
-        "format": "NOTE",
-        "url": "posts/saccadic-blindness-ai-video-temporal-inconsistency.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
-        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
-        "format": "BOOKMARK",
-        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "The Poverty of Synthetic Ground Truth",
-        "slug": "poverty-of-synthetic-ground-truth",
-        "format": "ESSAY",
-        "url": "posts/poverty-of-synthetic-ground-truth.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "slug": "marc-van-elburg",
-        "format": "BOOKMARK",
-        "url": "posts/marc-van-elburg.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "format": "ESSAY",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "format": "ESSAY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "5 Psychology Effects Used in App Design",
-        "slug": "5-psychology-effects-used-in-app-design",
-        "format": "NOTE",
-        "url": "posts/5-psychology-effects-used-in-app-design.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      },
-      {
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "slug": "visual-bandwidth-bottleneck",
-        "format": "NOTE",
-        "url": "posts/visual-bandwidth-bottleneck.html",
-        "date": "2026.09.29"
-      },
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "format": "RESOURCE",
-        "url": "posts/harvard-s-computer-science-career-for-free.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "format": "BOOKMARK",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "turing-queer-ai",
-        "format": "ESSAY",
-        "url": "posts/turing-queer-ai.html",
-        "date": "2026.09.25"
-      },
-      {
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "lecun-world-models-jepa",
-        "format": "ESSAY",
-        "url": "posts/lecun-world-models-jepa.html",
-        "date": "2026.09.24"
-      }
-    ],
+    "count": 0,
+    "posts": [],
+    "links": [],
     "foundations": [],
     "pillars": [
-      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
       "Critical Theory",
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
       "Language & LLMs",
-      "PHILOSOPHY & CRITICAL THEORY",
-      "VISUAL PERCEPTION & PSYCHOPHYSICS",
       "Visual Perception"
     ],
-    "subtopics": [
-      "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
-      "ANATOMY AND PSYCHOPHYSICS OF VISION",
-      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-      "COGNITIVE AND VISUAL BIASES",
-      "COMPUTER VISION VS. HUMAN PERCEPTION",
-      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-      "LLM ARCHITECTURES AND MECHANICS",
-      "SOMATOPOLITICS & LATENT SPACE",
-      "SYNTHETIC AND STATISTICAL IMAGES",
-      "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-      "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
-    ],
+    "subtopics": [],
     "order": 10,
     "description": "Forensic deconstruction, empirical evaluation, benchmark metrics, and theoretical examination.",
     "connected_tags": []
@@ -3470,25 +807,8 @@
     "name": "Data",
     "label": "Data",
     "type": "foundation",
-    "count": 12,
+    "count": 2,
     "posts": [
-      {
-        "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
-        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
-        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
-        "date": "2026.10.10",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
-        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html"
-      },
       {
         "id": "2026-10-10-poverty-of-synthetic-ground-truth",
         "slug": "poverty-of-synthetic-ground-truth",
@@ -3496,35 +816,11 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "data"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
         "url": "posts/poverty-of-synthetic-ground-truth.html"
-      },
-      {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
       },
       {
         "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
@@ -3534,172 +830,14 @@
         "format": "RESOURCE",
         "foundations": [
           "ai",
-          "tech",
-          "tools",
-          "analysis",
           "data"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "LLM ARCHITECTURES AND MECHANICS",
         "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
-      },
-      {
-        "id": "2026-10-06-marc-van-elburg",
-        "slug": "marc-van-elburg",
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "date": "2026.10.06",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/marc-van-elburg.html"
-      },
-      {
-        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
-        ],
-        "pillar": "PHILOSOPHY & CRITICAL THEORY",
-        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
-      },
-      {
-        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
-        ],
-        "pillar": "PHILOSOPHY & CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
-      },
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
-      },
-      {
-        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "date": "2026.09.26",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/harvard-s-computer-science-career-for-free.html"
-      },
-      {
-        "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "date": "2026.09.26",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
-      },
-      {
-        "id": "2026-09-25-turing-queer-ai",
-        "slug": "turing-queer-ai",
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "date": "2026.09.25",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "posts/turing-queer-ai.html"
-      },
-      {
-        "id": "2026-09-24-lecun-world-models-jepa",
-        "slug": "lecun-world-models-jepa",
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "date": "2026.09.24",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/lecun-world-models-jepa.html"
       }
     ],
     "links": [
-      {
-        "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
-        "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
-        "format": "BOOKMARK",
-        "url": "posts/real-ai-failure-story-deleted-a-production-database-in-9-seconds.html",
-        "date": "2026.10.10"
-      },
       {
         "title": "The Poverty of Synthetic Ground Truth",
         "slug": "poverty-of-synthetic-ground-truth",
@@ -3708,74 +846,11 @@
         "date": "2026.10.10"
       },
       {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
-      },
-      {
         "title": "OpenResearch: Your AI Lab Partner [github repo]",
         "slug": "openresearch-your-ai-lab-partner-github-repo",
         "format": "RESOURCE",
         "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
         "date": "2026.10.06"
-      },
-      {
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "slug": "marc-van-elburg",
-        "format": "BOOKMARK",
-        "url": "posts/marc-van-elburg.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "format": "ESSAY",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "format": "ESSAY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      },
-      {
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "format": "RESOURCE",
-        "url": "posts/harvard-s-computer-science-career-for-free.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "format": "BOOKMARK",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "turing-queer-ai",
-        "format": "ESSAY",
-        "url": "posts/turing-queer-ai.html",
-        "date": "2026.09.25"
-      },
-      {
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models, JEPA, and the Sensory Bandwidth Paradox",
-        "slug": "lecun-world-models-jepa",
-        "format": "ESSAY",
-        "url": "posts/lecun-world-models-jepa.html",
-        "date": "2026.09.24"
       }
     ],
     "foundations": [],
@@ -3784,19 +859,11 @@
       "AI Perception",
       "Critical Theory",
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-      "Language & LLMs",
-      "PHILOSOPHY & CRITICAL THEORY"
+      "Language & LLMs"
     ],
     "subtopics": [
-      "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
-      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-      "COMPUTER VISION VS. HUMAN PERCEPTION",
-      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
       "LLM ARCHITECTURES AND MECHANICS",
-      "SOMATOPOLITICS & LATENT SPACE",
-      "SYNTHETIC AND STATISTICAL IMAGES",
-      "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-      "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
+      "SYNTHETIC AND STATISTICAL IMAGES"
     ],
     "order": 11,
     "description": "Training datasets, high-dimensional vector spaces, empirical evidence, and data ecology.",
@@ -3807,27 +874,23 @@
     "name": "Branding",
     "label": "Branding",
     "type": "foundation",
-    "count": 9,
+    "count": 2,
     "posts": [
       {
-        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "date": "2026.10.10",
-        "format": "ESSAY",
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
         "foundations": [
-          "philosophy",
-          "semiotics",
           "design",
           "art",
           "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "perception"
         ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-2d-vault.html"
       },
       {
         "id": "2026-10-10-images-are-dead",
@@ -3836,167 +899,22 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
           "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "design",
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/images-are-dead.html"
-      },
-      {
-        "id": "2026-10-09-ai-images-groupe-mu",
-        "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "date": "2026.10.09",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/ai-images-groupe-mu.html"
-      },
-      {
-        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
-      },
-      {
-        "id": "2026-10-02-dots-bot-muse-cute-mascots",
-        "slug": "dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "date": "2026.10.02",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/dots-bot-muse-cute-mascots.html"
-      },
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "shanzhai-deconstructing-original",
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/shanzhai-deconstructing-original.html"
-      },
-      {
-        "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "date": "2026.09.28",
-        "format": "BOOKMARK",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-meaning",
-        "slug": "foucault-borges-meaning",
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-meaning.html"
       }
     ],
     "links": [
       {
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "format": "ESSAY",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
-        "date": "2026.10.10"
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
+        "slug": "the-2d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-2d-vault.html",
+        "date": "2026.10.14"
       },
       {
         "title": "Images are Dead. Brands Should Know.",
@@ -4004,67 +922,17 @@
         "format": "ESSAY",
         "url": "posts/images-are-dead.html",
         "date": "2026.10.10"
-      },
-      {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "slug": "ai-images-groupe-mu",
-        "format": "ESSAY",
-        "url": "posts/ai-images-groupe-mu.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "format": "NOTE",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "slug": "dots-bot-muse-cute-mascots",
-        "format": "ESSAY",
-        "url": "posts/dots-bot-muse-cute-mascots.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "shanzhai-deconstructing-original",
-        "format": "NOTE",
-        "url": "posts/shanzhai-deconstructing-original.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "format": "BOOKMARK",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "slug": "foucault-borges-meaning",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-meaning.html",
-        "date": "2026.09.26"
       }
     ],
     "foundations": [],
     "pillars": [
+      "ART WORTH SHARING",
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
       "Philosophy of the Image"
     ],
     "subtopics": [
-      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-      "EPISTEMOLOGY OF REPRESENTATION",
-      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-      "MODES OF SEEING AND VISUAL SEMIOTICS"
+      "ART VAULTS",
+      "EPISTEMOLOGY OF REPRESENTATION"
     ],
     "order": 12,
     "description": "Brand identity systems, corporate mascot psychology, cute AI interfaces, and visual positioning.",
@@ -4075,406 +943,15 @@
     "name": "Graphics",
     "label": "Graphics",
     "type": "foundation",
-    "count": 14,
-    "posts": [
-      {
-        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
-        "slug": "poverty-of-synthetic-ground-truth",
-        "title": "The Poverty of Synthetic Ground Truth",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
-        "url": "posts/poverty-of-synthetic-ground-truth.html"
-      },
-      {
-        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
-      },
-      {
-        "id": "2026-10-10-images-are-dead",
-        "slug": "images-are-dead",
-        "title": "Images are Dead. Brands Should Know.",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/images-are-dead.html"
-      },
-      {
-        "id": "2026-10-09-ai-images-groupe-mu",
-        "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "date": "2026.10.09",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/ai-images-groupe-mu.html"
-      },
-      {
-        "id": "2026-10-06-marc-van-elburg",
-        "slug": "marc-van-elburg",
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "date": "2026.10.06",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/marc-van-elburg.html"
-      },
-      {
-        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
-      },
-      {
-        "id": "2026-10-02-dots-bot-muse-cute-mascots",
-        "slug": "dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "date": "2026.10.02",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/dots-bot-muse-cute-mascots.html"
-      },
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
-      },
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "shanzhai-deconstructing-original",
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/shanzhai-deconstructing-original.html"
-      },
-      {
-        "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "date": "2026.09.28",
-        "format": "BOOKMARK",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-meaning",
-        "slug": "foucault-borges-meaning",
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-meaning.html"
-      },
-      {
-        "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "date": "2026.09.26",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
-      },
-      {
-        "id": "2026-09-25-turing-queer-ai",
-        "slug": "turing-queer-ai",
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "date": "2026.09.25",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "posts/turing-queer-ai.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "The Poverty of Synthetic Ground Truth",
-        "slug": "poverty-of-synthetic-ground-truth",
-        "format": "ESSAY",
-        "url": "posts/poverty-of-synthetic-ground-truth.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "format": "ESSAY",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Images are Dead. Brands Should Know.",
-        "slug": "images-are-dead",
-        "format": "ESSAY",
-        "url": "posts/images-are-dead.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "slug": "ai-images-groupe-mu",
-        "format": "ESSAY",
-        "url": "posts/ai-images-groupe-mu.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "slug": "marc-van-elburg",
-        "format": "BOOKMARK",
-        "url": "posts/marc-van-elburg.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "format": "NOTE",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "slug": "dots-bot-muse-cute-mascots",
-        "format": "ESSAY",
-        "url": "posts/dots-bot-muse-cute-mascots.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      },
-      {
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "shanzhai-deconstructing-original",
-        "format": "NOTE",
-        "url": "posts/shanzhai-deconstructing-original.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "format": "BOOKMARK",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "slug": "foucault-borges-meaning",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-meaning.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "format": "BOOKMARK",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "turing-queer-ai",
-        "format": "ESSAY",
-        "url": "posts/turing-queer-ai.html",
-        "date": "2026.09.25"
-      }
-    ],
+    "count": 0,
+    "posts": [],
+    "links": [],
     "foundations": [],
     "pillars": [
-      "AI PERCEPTION & REPRESENTATION",
       "AI Perception",
-      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
       "Philosophy of the Image"
     ],
-    "subtopics": [
-      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-      "COMPUTER VISION VS. HUMAN PERCEPTION",
-      "EPISTEMOLOGY OF REPRESENTATION",
-      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-      "MODES OF SEEING AND VISUAL SEMIOTICS",
-      "SYNTHETIC AND STATISTICAL IMAGES",
-      "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-      "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
-    ],
+    "subtopics": [],
     "order": 13,
     "description": "Scientific figures, diagrams, data visualization, digital raster and vector representation.",
     "connected_tags": []
@@ -4484,18 +961,17 @@
     "name": "Art",
     "label": "Art",
     "type": "foundation",
-    "count": 19,
+    "count": 6,
     "posts": [
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -4504,13 +980,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -4519,13 +994,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -4534,13 +1008,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -4553,93 +1028,11 @@
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
-          "art",
-          "perception",
-          "design"
+          "art"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
         "url": "posts/marina-herlop-dja-dja.html"
-      },
-      {
-        "id": "2026-10-10-poverty-of-synthetic-ground-truth",
-        "slug": "poverty-of-synthetic-ground-truth",
-        "title": "The Poverty of Synthetic Ground Truth",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
-        "url": "posts/poverty-of-synthetic-ground-truth.html"
-      },
-      {
-        "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html"
-      },
-      {
-        "id": "2026-10-10-images-are-dead",
-        "slug": "images-are-dead",
-        "title": "Images are Dead. Brands Should Know.",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/images-are-dead.html"
-      },
-      {
-        "id": "2026-10-09-ai-images-groupe-mu",
-        "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "date": "2026.10.09",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
-        "url": "posts/ai-images-groupe-mu.html"
       },
       {
         "id": "2026-10-06-marc-van-elburg",
@@ -4649,223 +1042,37 @@
         "format": "BOOKMARK",
         "foundations": [
           "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "art"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
         "url": "posts/marc-van-elburg.html"
-      },
-      {
-        "id": "2026-10-02-why-ai-agents-look-like-tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html"
-      },
-      {
-        "id": "2026-10-02-dots-bot-muse-cute-mascots",
-        "slug": "dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "date": "2026.10.02",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/dots-bot-muse-cute-mascots.html"
-      },
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
-      },
-      {
-        "id": "2026-09-28-shanzhai-deconstructing-original",
-        "slug": "shanzhai-deconstructing-original",
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "date": "2026.09.28",
-        "format": "NOTE",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/shanzhai-deconstructing-original.html"
-      },
-      {
-        "id": "2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "date": "2026.09.28",
-        "format": "BOOKMARK",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-vector-space",
-        "slug": "foucault-borges-vector-space",
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-vector-space.html"
-      },
-      {
-        "id": "2026-09-26-foucault-borges-meaning",
-        "slug": "foucault-borges-meaning",
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "date": "2026.09.26",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/foucault-borges-meaning.html"
-      },
-      {
-        "id": "2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "date": "2026.09.26",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html"
-      },
-      {
-        "id": "2026-09-25-turing-queer-ai",
-        "slug": "turing-queer-ai",
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "date": "2026.09.25",
-        "format": "ESSAY",
-        "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "posts/turing-queer-ai.html"
       }
     ],
     "links": [
       {
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
         "date": "2026.10.11"
       },
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -4879,102 +1086,11 @@
         "date": "2026.10.11"
       },
       {
-        "title": "The Poverty of Synthetic Ground Truth",
-        "slug": "poverty-of-synthetic-ground-truth",
-        "format": "ESSAY",
-        "url": "posts/poverty-of-synthetic-ground-truth.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "slug": "operational-images-farocki-flusser-machine-vision",
-        "format": "ESSAY",
-        "url": "posts/operational-images-farocki-flusser-machine-vision.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Images are Dead. Brands Should Know.",
-        "slug": "images-are-dead",
-        "format": "ESSAY",
-        "url": "posts/images-are-dead.html",
-        "date": "2026.10.10"
-      },
-      {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "slug": "ai-images-groupe-mu",
-        "format": "ESSAY",
-        "url": "posts/ai-images-groupe-mu.html",
-        "date": "2026.10.09"
-      },
-      {
         "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
         "slug": "marc-van-elburg",
         "format": "BOOKMARK",
         "url": "posts/marc-van-elburg.html",
         "date": "2026.10.06"
-      },
-      {
-        "title": "Why AI Labs Replaced Killer Robots with Blushing Tamagotchis",
-        "slug": "why-ai-agents-look-like-tamagotchis",
-        "format": "NOTE",
-        "url": "posts/why-ai-agents-look-like-tamagotchis.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "slug": "dots-bot-muse-cute-mascots",
-        "format": "ESSAY",
-        "url": "posts/dots-bot-muse-cute-mascots.html",
-        "date": "2026.10.02"
-      },
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      },
-      {
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "slug": "shanzhai-deconstructing-original",
-        "format": "NOTE",
-        "url": "posts/shanzhai-deconstructing-original.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "slug": "haraway-cyborg-manifesto-neural-borderlands",
-        "format": "BOOKMARK",
-        "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
-        "slug": "foucault-borges-vector-space",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-vector-space.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "slug": "foucault-borges-meaning",
-        "format": "ESSAY",
-        "url": "posts/foucault-borges-meaning.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "slug": "excavating-ai-the-unethics-of-machine-learning-training",
-        "format": "BOOKMARK",
-        "url": "posts/excavating-ai-the-unethics-of-machine-learning-training.html",
-        "date": "2026.09.26"
-      },
-      {
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "turing-queer-ai",
-        "format": "ESSAY",
-        "url": "posts/turing-queer-ai.html",
-        "date": "2026.09.25"
       }
     ],
     "foundations": [],
@@ -4983,20 +1099,12 @@
       "AI Perception",
       "ART WORTH SHARING",
       "Art Sharing",
-      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
       "Philosophy of the Image"
     ],
     "subtopics": [
-      "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
       "ART VAULTS",
       "COMPUTER VISION VS. HUMAN PERCEPTION",
-      "EPISTEMOLOGY OF REPRESENTATION",
-      "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
-      "MODES OF SEEING AND VISUAL SEMIOTICS",
-      "OTHERWORLDLY MUSIC",
-      "SYNTHETIC AND STATISTICAL IMAGES",
-      "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-      "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR"
+      "OTHERWORLDLY MUSIC"
     ],
     "order": 14,
     "description": "Digital aesthetics, post-ironic visual culture, generative image creation, and media archaeology.",
@@ -5016,14 +1124,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "vision"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -5036,14 +1137,9 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
           "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "design",
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -5056,14 +1152,9 @@
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
           "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
           "vision",
-          "psychology"
+          "design"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -5076,14 +1167,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "ai"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
@@ -5095,16 +1179,7 @@
         "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
         "date": "2026.10.02",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/dots-bot-muse-cute-mascots.html"
@@ -5116,14 +1191,7 @@
         "date": "2026.09.28",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -5135,16 +1203,7 @@
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
@@ -5155,16 +1214,7 @@
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-vector-space.html"
@@ -5175,16 +1225,7 @@
         "title": "Foucault, Borges, and the Invisible Grids of AI",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-meaning.html"
@@ -5256,6 +1297,7 @@
       }
     ],
     "foundations": [
+      "AI",
       "Art",
       "Branding",
       "Design",
@@ -5285,14 +1327,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "data"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
@@ -5306,13 +1341,7 @@
         "format": "BOOKMARK",
         "foundations": [
           "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "art"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -5325,14 +1354,7 @@
         "date": "2026.09.30",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -5345,14 +1367,7 @@
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "philosophy"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
@@ -5365,14 +1380,7 @@
         "date": "2026.09.25",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
@@ -5422,6 +1430,7 @@
       "Art",
       "Data",
       "Graphics",
+      "Philosophy",
       "Tech",
       "Tools",
       "Vision"
@@ -5442,13 +1451,12 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -5457,13 +1465,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -5472,13 +1479,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -5487,13 +1493,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -5506,9 +1513,7 @@
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
-          "art",
-          "perception",
-          "design"
+          "art"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
@@ -5517,28 +1522,28 @@
     ],
     "links": [
       {
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
         "date": "2026.10.11"
       },
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -5554,6 +1559,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -5577,11 +1583,7 @@
         "date": "2026.10.10",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
@@ -5594,11 +1596,7 @@
         "date": "2026.10.09",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "LLM ARCHITECTURES AND MECHANICS",
@@ -5612,9 +1610,6 @@
         "format": "RESOURCE",
         "foundations": [
           "ai",
-          "tech",
-          "tools",
-          "analysis",
           "data"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -5628,11 +1623,7 @@
         "date": "2026.09.26",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -5645,11 +1636,7 @@
         "date": "2026.09.24",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -5720,10 +1707,7 @@
         "date": "2026.10.10",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -5736,10 +1720,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "psychology"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "COGNITIVE AND VISUAL BIASES",
@@ -5752,10 +1733,7 @@
         "date": "2026.09.29",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -5767,12 +1745,7 @@
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
+        "foundations": [],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
         "url": "posts/perceptual-vision-eval-toolkit.html"
@@ -5834,11 +1807,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "SOMATOPOLITICS & LATENT SPACE",
@@ -5851,11 +1820,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
@@ -5901,13 +1866,12 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -5916,13 +1880,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -5931,13 +1894,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -5946,13 +1908,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -5961,28 +1924,28 @@
     ],
     "links": [
       {
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
         "date": "2026.10.11"
       },
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -5991,6 +1954,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -6014,14 +1978,9 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
           "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "design",
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -6034,14 +1993,7 @@
         "date": "2026.09.28",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -6053,16 +2005,7 @@
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-vector-space.html"
@@ -6073,16 +2016,7 @@
         "title": "Foucault, Borges, and the Invisible Grids of AI",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-meaning.html"
@@ -6119,14 +2053,9 @@
       }
     ],
     "foundations": [
-      "Art",
       "Branding",
       "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -6148,10 +2077,7 @@
         "date": "2026.10.10",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -6164,10 +2090,7 @@
         "date": "2026.09.29",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -6179,12 +2102,7 @@
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
+        "foundations": [],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
         "url": "posts/perceptual-vision-eval-toolkit.html"
@@ -6214,9 +2132,6 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
       "Vision"
     ],
     "pillars": [
@@ -6238,16 +2153,7 @@
         "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
         "date": "2026.10.02",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/dots-bot-muse-cute-mascots.html"
@@ -6258,16 +2164,7 @@
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
@@ -6289,16 +2186,7 @@
         "date": "2026.09.28"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -6320,13 +2208,7 @@
         "format": "BOOKMARK",
         "foundations": [
           "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "art"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -6339,14 +2221,7 @@
         "date": "2026.09.30",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -6371,13 +2246,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Art"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -6399,11 +2268,7 @@
         "date": "2026.09.26",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -6416,11 +2281,7 @@
         "date": "2026.09.24",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -6444,11 +2305,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -6470,11 +2327,7 @@
         "date": "2026.10.09",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "LLM ARCHITECTURES AND MECHANICS",
@@ -6488,9 +2341,6 @@
         "format": "RESOURCE",
         "foundations": [
           "ai",
-          "tech",
-          "tools",
-          "analysis",
           "data"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -6516,10 +2366,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "Data"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -6541,14 +2388,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "vision"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -6561,14 +2401,9 @@
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
           "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
           "vision",
-          "psychology"
+          "design"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -6592,12 +2427,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
       "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
       "Semiotics",
       "Vision"
     ],
@@ -6621,11 +2451,7 @@
         "date": "2026.10.10",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
@@ -6642,11 +2468,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -6668,11 +2490,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
@@ -6689,11 +2507,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Data",
-      "Philosophy",
-      "Semiotics",
-      "Tech"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY & CRITICAL THEORY"
@@ -6715,10 +2529,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "psychology"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "COGNITIVE AND VISUAL BIASES",
@@ -6735,10 +2546,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
-      "Vision"
+      "Psychology"
     ],
     "pillars": [
       "VISUAL PERCEPTION & PSYCHOPHYSICS"
@@ -6760,14 +2568,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "ai"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
@@ -6784,14 +2585,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -6813,9 +2607,7 @@
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
-          "art",
-          "perception",
-          "design"
+          "art"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
@@ -6832,9 +2624,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Design",
-      "Perception"
+      "Art"
     ],
     "pillars": [
       "ART WORTH SHARING"
@@ -6856,11 +2646,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "SOMATOPOLITICS & LATENT SPACE",
@@ -6877,11 +2663,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Data",
-      "Philosophy",
-      "Semiotics",
-      "Tech"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY & CRITICAL THEORY"
@@ -6903,14 +2685,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "data"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
@@ -6927,14 +2702,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Data"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -6956,14 +2724,7 @@
         "date": "2026.09.25",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
@@ -6980,14 +2741,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -7009,14 +2763,7 @@
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "philosophy"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
@@ -7033,14 +2780,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -7058,13 +2798,12 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -7073,13 +2812,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -7088,13 +2826,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -7103,13 +2840,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -7122,14 +2860,9 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
           "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "design",
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -7142,14 +2875,9 @@
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
           "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
           "vision",
-          "psychology"
+          "design"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -7158,28 +2886,28 @@
     ],
     "links": [
       {
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
         "date": "2026.10.11"
       },
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -7204,10 +2932,8 @@
       "Art",
       "Branding",
       "Design",
-      "Graphics",
       "Perception",
       "Philosophy",
-      "Psychology",
       "Semiotics",
       "Vision"
     ],
@@ -7239,13 +2965,12 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -7254,13 +2979,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -7269,13 +2993,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -7284,13 +3007,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -7303,9 +3027,7 @@
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
-          "art",
-          "perception",
-          "design"
+          "art"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
@@ -7319,13 +3041,7 @@
         "format": "BOOKMARK",
         "foundations": [
           "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "art"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -7334,28 +3050,28 @@
     ],
     "links": [
       {
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
         "date": "2026.10.11"
       },
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -7378,15 +3094,10 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
       "Art",
-      "Data",
+      "Branding",
       "Design",
-      "Graphics",
-      "Perception",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Perception"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION",
@@ -7420,11 +3131,7 @@
         "date": "2026.10.09",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "LLM ARCHITECTURES AND MECHANICS",
@@ -7438,9 +3145,6 @@
         "format": "RESOURCE",
         "foundations": [
           "ai",
-          "tech",
-          "tools",
-          "analysis",
           "data"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -7454,14 +3158,7 @@
         "date": "2026.09.30",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -7473,12 +3170,7 @@
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
+        "foundations": [],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
         "url": "posts/perceptual-vision-eval-toolkit.html"
@@ -7516,15 +3208,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Perception",
-      "Psychology",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Data"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION",
@@ -7555,13 +3239,12 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -7570,13 +3253,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -7585,13 +3267,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -7600,13 +3281,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -7615,28 +3297,28 @@
     ],
     "links": [
       {
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
         "date": "2026.10.11"
       },
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -7645,6 +3327,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -7677,11 +3360,7 @@
         "date": "2026.10.10",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
@@ -7694,11 +3373,7 @@
         "date": "2026.10.09",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "LLM ARCHITECTURES AND MECHANICS",
@@ -7712,9 +3387,6 @@
         "format": "RESOURCE",
         "foundations": [
           "ai",
-          "tech",
-          "tools",
-          "analysis",
           "data"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -7747,10 +3419,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "Data"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -7782,11 +3451,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "SOMATOPOLITICS & LATENT SPACE",
@@ -7799,11 +3464,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
@@ -7816,14 +3477,7 @@
         "date": "2026.09.25",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
@@ -7855,15 +3509,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Philosophy",
-      "Semiotics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION",
@@ -7897,11 +3543,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "SOMATOPOLITICS & LATENT SPACE",
@@ -7914,11 +3556,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
@@ -7931,14 +3569,7 @@
         "date": "2026.09.25",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
@@ -7970,15 +3601,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Philosophy",
-      "Semiotics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION",
@@ -8012,10 +3635,7 @@
         "date": "2026.10.10",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -8028,14 +3648,9 @@
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
           "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
           "vision",
-          "psychology"
+          "design"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -8048,11 +3663,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "SOMATOPOLITICS & LATENT SPACE",
@@ -8083,17 +3694,9 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Art",
-      "Branding",
-      "Data",
       "Design",
-      "Graphics",
-      "Perception",
       "Philosophy",
-      "Psychology",
       "Semiotics",
-      "Tech",
       "Vision"
     ],
     "pillars": [
@@ -8129,11 +3732,7 @@
         "date": "2026.10.09",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "LLM ARCHITECTURES AND MECHANICS",
@@ -8147,9 +3746,6 @@
         "format": "RESOURCE",
         "foundations": [
           "ai",
-          "tech",
-          "tools",
-          "analysis",
           "data"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -8163,14 +3759,7 @@
         "date": "2026.09.30",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -8202,13 +3791,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Data"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION",
@@ -8237,13 +3820,12 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -8252,13 +3834,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -8271,9 +3852,7 @@
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
-          "art",
-          "perception",
-          "design"
+          "art"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
@@ -8282,14 +3861,14 @@
     ],
     "links": [
       {
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
         "date": "2026.10.11"
       },
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
@@ -8305,7 +3884,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -8338,14 +3916,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "vision"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -8358,11 +3929,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "SOMATOPOLITICS & LATENT SPACE",
@@ -8375,11 +3942,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
@@ -8410,16 +3973,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Art",
-      "Branding",
-      "Data",
-      "Design",
-      "Graphics",
       "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Tech",
       "Vision"
     ],
     "pillars": [
@@ -8454,11 +4008,7 @@
         "date": "2026.10.09",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "LLM ARCHITECTURES AND MECHANICS",
@@ -8472,9 +4022,6 @@
         "format": "RESOURCE",
         "foundations": [
           "ai",
-          "tech",
-          "tools",
-          "analysis",
           "data"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -8488,14 +4035,7 @@
         "date": "2026.09.30",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -8527,13 +4067,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Data"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION",
@@ -8562,13 +4096,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -8581,10 +4114,7 @@
         "date": "2026.10.10",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -8597,11 +4127,7 @@
         "date": "2026.10.10",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
@@ -8610,7 +4136,7 @@
     ],
     "links": [
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
@@ -8633,14 +4159,8 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
       "Art",
-      "Data",
-      "Design",
       "Perception",
-      "Psychology",
-      "Tech",
-      "Tools",
       "Vision"
     ],
     "pillars": [
@@ -8676,14 +4196,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "ai"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
@@ -8695,16 +4208,7 @@
         "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
         "date": "2026.10.02",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/dots-bot-muse-cute-mascots.html"
@@ -8727,14 +4231,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -8762,13 +4259,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -8782,13 +4278,7 @@
         "format": "BOOKMARK",
         "foundations": [
           "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "art"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -8797,7 +4287,7 @@
     ],
     "links": [
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
@@ -8813,15 +4303,8 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
       "Art",
-      "Data",
-      "Design",
-      "Graphics",
-      "Perception",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Perception"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION",
@@ -8853,16 +4336,7 @@
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-vector-space.html"
@@ -8873,16 +4347,7 @@
         "title": "Foucault, Borges, and the Invisible Grids of AI",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-meaning.html"
@@ -8904,16 +4369,7 @@
         "date": "2026.09.26"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -8943,11 +4399,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "SOMATOPOLITICS & LATENT SPACE",
@@ -8960,14 +4412,7 @@
         "date": "2026.09.28",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -8991,17 +4436,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Art",
-      "Branding",
-      "Data",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Tech",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY & CRITICAL THEORY",
@@ -9034,14 +4469,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "vision"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -9053,12 +4481,7 @@
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
+        "foundations": [],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
         "url": "posts/perceptual-vision-eval-toolkit.html"
@@ -9081,15 +4504,6 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Perception",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
       "Vision"
     ],
     "pillars": [
@@ -9123,14 +4537,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "ai"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
@@ -9142,16 +4549,7 @@
         "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
         "date": "2026.10.02",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/dots-bot-muse-cute-mascots.html"
@@ -9174,14 +4572,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -9209,13 +4600,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -9224,13 +4614,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -9239,14 +4630,14 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -9255,6 +4646,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -9286,16 +4678,7 @@
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-vector-space.html"
@@ -9306,16 +4689,7 @@
         "title": "Foucault, Borges, and the Invisible Grids of AI",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-meaning.html"
@@ -9337,16 +4711,7 @@
         "date": "2026.09.26"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -9375,16 +4740,7 @@
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-vector-space.html"
@@ -9395,16 +4751,7 @@
         "title": "Foucault, Borges, and the Invisible Grids of AI",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-meaning.html"
@@ -9426,16 +4773,7 @@
         "date": "2026.09.26"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -9464,16 +4802,7 @@
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-vector-space.html"
@@ -9484,16 +4813,7 @@
         "title": "Foucault, Borges, and the Invisible Grids of AI",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-meaning.html"
@@ -9515,16 +4835,7 @@
         "date": "2026.09.26"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -9553,12 +4864,7 @@
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
+        "foundations": [],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
         "url": "posts/perceptual-vision-eval-toolkit.html"
@@ -9570,11 +4876,7 @@
         "date": "2026.09.26",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -9598,14 +4900,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Perception",
-      "Psychology",
-      "Tech",
-      "Tools",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -9638,14 +4933,9 @@
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
           "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
           "vision",
-          "psychology"
+          "design"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -9657,16 +4947,7 @@
         "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
         "date": "2026.10.02",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/dots-bot-muse-cute-mascots.html"
@@ -9689,12 +4970,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
       "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
       "Semiotics",
       "Vision"
     ],
@@ -9724,13 +5000,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -9743,14 +5020,7 @@
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "philosophy"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
@@ -9759,7 +5029,7 @@
     ],
     "links": [
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -9774,16 +5044,11 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
       "Art",
-      "Data",
+      "Branding",
       "Design",
-      "Graphics",
       "Perception",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION",
@@ -9816,14 +5081,7 @@
         "date": "2026.09.25",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
@@ -9836,11 +5094,7 @@
         "date": "2026.09.24",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -9864,14 +5118,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION",
@@ -9903,16 +5150,7 @@
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-vector-space.html"
@@ -9923,16 +5161,7 @@
         "title": "Foucault, Borges, and the Invisible Grids of AI",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-meaning.html"
@@ -9954,16 +5183,7 @@
         "date": "2026.09.26"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -9993,10 +5213,7 @@
         "date": "2026.10.10",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -10009,10 +5226,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "psychology"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "COGNITIVE AND VISUAL BIASES",
@@ -10036,8 +5250,6 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
       "Psychology",
       "Vision"
     ],
@@ -10067,13 +5279,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -10082,13 +5293,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -10097,14 +5309,14 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -10113,6 +5325,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -10145,11 +5358,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "SOMATOPOLITICS & LATENT SPACE",
@@ -10162,11 +5371,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
@@ -10190,11 +5395,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Data",
-      "Philosophy",
-      "Semiotics",
-      "Tech"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY & CRITICAL THEORY"
@@ -10226,11 +5427,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "SOMATOPOLITICS & LATENT SPACE",
@@ -10243,11 +5440,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
@@ -10271,11 +5464,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Data",
-      "Philosophy",
-      "Semiotics",
-      "Tech"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY & CRITICAL THEORY"
@@ -10306,16 +5495,7 @@
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-vector-space.html"
@@ -10326,16 +5506,7 @@
         "title": "Foucault, Borges, and the Invisible Grids of AI",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-meaning.html"
@@ -10357,16 +5528,7 @@
         "date": "2026.09.26"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -10392,13 +5554,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -10407,13 +5568,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -10422,14 +5584,14 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -10438,6 +5600,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -10470,10 +5633,7 @@
         "date": "2026.09.29",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -10485,12 +5645,7 @@
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
+        "foundations": [],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
         "url": "posts/perceptual-vision-eval-toolkit.html"
@@ -10513,9 +5668,6 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
       "Vision"
     ],
     "pillars": [
@@ -10547,11 +5699,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
@@ -10564,14 +5712,7 @@
         "date": "2026.09.25",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
@@ -10596,15 +5737,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Philosophy",
-      "Semiotics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION",
@@ -10636,16 +5769,7 @@
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-vector-space.html"
@@ -10656,16 +5780,7 @@
         "title": "Foucault, Borges, and the Invisible Grids of AI",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-meaning.html"
@@ -10687,16 +5802,7 @@
         "date": "2026.09.26"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -10726,10 +5832,7 @@
         "date": "2026.10.10",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -10742,14 +5845,7 @@
         "date": "2026.09.28",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -10773,15 +5869,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Perception",
       "Philosophy",
-      "Psychology",
-      "Semiotics",
       "Vision"
     ],
     "pillars": [
@@ -10811,13 +5899,12 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -10826,13 +5913,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -10841,14 +5927,14 @@
     ],
     "links": [
       {
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
         "date": "2026.10.11"
       },
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
@@ -10857,7 +5943,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -10889,14 +5974,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "ai"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
@@ -10908,16 +5986,7 @@
         "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
         "date": "2026.10.02",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/dots-bot-muse-cute-mascots.html"
@@ -10940,14 +6009,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -10978,16 +6040,7 @@
         "title": "Foucault, Borges, and the Episteme of High-Dimensional Embeddings",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-vector-space.html"
@@ -10998,16 +6051,7 @@
         "title": "Foucault, Borges, and the Invisible Grids of AI",
         "date": "2026.09.26",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
         "url": "posts/foucault-borges-meaning.html"
@@ -11029,16 +6073,7 @@
         "date": "2026.09.26"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -11068,14 +6103,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "data"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
@@ -11088,14 +6116,7 @@
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "philosophy"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
@@ -11119,14 +6140,8 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
       "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -11154,13 +6169,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -11169,13 +6183,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -11184,14 +6199,14 @@
     ],
     "links": [
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
         "date": "2026.10.14"
       },
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -11200,6 +6215,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -11228,13 +6244,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -11243,7 +6260,7 @@
     ],
     "links": [
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -11252,6 +6269,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -11280,13 +6298,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -11295,7 +6312,7 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
@@ -11304,7 +6321,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -11332,13 +6348,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -11347,7 +6362,7 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
@@ -11356,7 +6371,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -11384,13 +6398,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -11399,7 +6412,7 @@
     ],
     "links": [
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
@@ -11408,7 +6421,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -11440,14 +6452,7 @@
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "philosophy"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
@@ -11464,14 +6469,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -11502,10 +6500,7 @@
         "date": "2026.10.10",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -11522,9 +6517,6 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
       "Vision"
     ],
     "pillars": [
@@ -11556,11 +6548,7 @@
         "date": "2026.10.10",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
@@ -11577,11 +6565,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -11613,9 +6597,6 @@
         "format": "RESOURCE",
         "foundations": [
           "ai",
-          "tech",
-          "tools",
-          "analysis",
           "data"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -11634,10 +6615,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "Data"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -11668,11 +6646,7 @@
         "date": "2026.10.10",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
@@ -11689,11 +6663,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -11724,10 +6694,7 @@
         "date": "2026.10.10",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -11744,9 +6711,6 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
       "Vision"
     ],
     "pillars": [
@@ -11778,14 +6742,7 @@
         "date": "2026.09.25",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
@@ -11802,14 +6759,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -11840,14 +6790,7 @@
         "date": "2026.09.30",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -11864,14 +6807,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -11902,11 +6838,7 @@
         "date": "2026.10.09",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "LLM ARCHITECTURES AND MECHANICS",
@@ -11923,11 +6855,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -11958,10 +6886,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "psychology"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "COGNITIVE AND VISUAL BIASES",
@@ -11978,10 +6903,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
-      "Vision"
+      "Psychology"
     ],
     "pillars": [
       "VISUAL PERCEPTION & PSYCHOPHYSICS"
@@ -12012,14 +6934,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "vision"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -12036,13 +6951,6 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
       "Vision"
     ],
     "pillars": [
@@ -12074,14 +6982,7 @@
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "philosophy"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
@@ -12098,14 +6999,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -12132,13 +7026,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -12147,7 +7040,7 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
@@ -12156,7 +7049,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -12188,9 +7080,7 @@
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
-          "art",
-          "perception",
-          "design"
+          "art"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
@@ -12207,9 +7097,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Design",
-      "Perception"
+      "Art"
     ],
     "pillars": [
       "ART WORTH SHARING"
@@ -12240,14 +7128,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "vision"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -12264,13 +7145,6 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
       "Vision"
     ],
     "pillars": [
@@ -12298,13 +7172,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -12313,7 +7186,7 @@
     ],
     "links": [
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
@@ -12322,7 +7195,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -12354,14 +7226,7 @@
         "date": "2026.09.28",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -12378,14 +7243,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -12414,9 +7272,7 @@
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
-          "art",
-          "perception",
-          "design"
+          "art"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
@@ -12433,9 +7289,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Design",
-      "Perception"
+      "Art"
     ],
     "pillars": [
       "ART WORTH SHARING"
@@ -12465,16 +7319,7 @@
         "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
         "date": "2026.10.02",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/dots-bot-muse-cute-mascots.html"
@@ -12489,16 +7334,7 @@
         "date": "2026.10.02"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -12528,14 +7364,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "ai"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
@@ -12552,14 +7381,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -12590,14 +7412,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "data"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
@@ -12614,14 +7429,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Data"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -12652,14 +7460,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "data"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
@@ -12676,14 +7477,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Data"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -12714,11 +7508,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "SOMATOPOLITICS & LATENT SPACE",
@@ -12735,11 +7525,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Data",
-      "Philosophy",
-      "Semiotics",
-      "Tech"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY & CRITICAL THEORY"
@@ -12769,16 +7555,7 @@
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
@@ -12793,16 +7570,7 @@
         "date": "2026.09.28"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -12831,12 +7599,7 @@
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
+        "foundations": [],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
         "url": "posts/perceptual-vision-eval-toolkit.html"
@@ -12851,12 +7614,7 @@
         "date": "2026.09.28"
       }
     ],
-    "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "VISUAL PERCEPTION & PSYCHOPHYSICS"
     ],
@@ -12886,11 +7644,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
@@ -12907,11 +7661,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Data",
-      "Philosophy",
-      "Semiotics",
-      "Tech"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY & CRITICAL THEORY"
@@ -12942,11 +7692,7 @@
         "date": "2026.09.26",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -12963,11 +7709,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -12998,11 +7740,7 @@
         "date": "2026.09.26",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -13019,11 +7757,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -13050,13 +7784,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -13065,7 +7798,7 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
@@ -13074,7 +7807,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -13105,16 +7837,7 @@
         "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
         "date": "2026.10.02",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/dots-bot-muse-cute-mascots.html"
@@ -13129,16 +7852,7 @@
         "date": "2026.10.02"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -13168,14 +7882,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "data"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
@@ -13192,14 +7899,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Data"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -13230,14 +7930,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "data"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
@@ -13254,14 +7947,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Data"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -13288,13 +7974,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -13303,7 +7988,7 @@
     ],
     "links": [
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
@@ -13312,7 +7997,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -13344,11 +8028,7 @@
         "date": "2026.10.10",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
@@ -13365,11 +8045,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -13400,10 +8076,7 @@
         "date": "2026.09.29",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -13420,9 +8093,6 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
       "Vision"
     ],
     "pillars": [
@@ -13452,11 +8122,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "SOMATOPOLITICS & LATENT SPACE",
@@ -13473,11 +8139,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Data",
-      "Philosophy",
-      "Semiotics",
-      "Tech"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY & CRITICAL THEORY"
@@ -13507,12 +8169,7 @@
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
+        "foundations": [],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
         "url": "posts/perceptual-vision-eval-toolkit.html"
@@ -13527,12 +8184,7 @@
         "date": "2026.09.28"
       }
     ],
-    "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "VISUAL PERCEPTION & PSYCHOPHYSICS"
     ],
@@ -13562,11 +8214,7 @@
         "date": "2026.09.26",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -13583,11 +8231,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -13618,14 +8262,9 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
           "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "design",
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -13642,14 +8281,9 @@
       }
     ],
     "foundations": [
-      "Art",
       "Branding",
       "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -13680,11 +8314,7 @@
         "date": "2026.09.26",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -13701,11 +8331,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -13732,13 +8358,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -13747,7 +8372,7 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
@@ -13756,7 +8381,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -13787,16 +8411,7 @@
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
@@ -13811,16 +8426,7 @@
         "date": "2026.09.28"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -13849,16 +8455,7 @@
         "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
         "date": "2026.10.02",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/dots-bot-muse-cute-mascots.html"
@@ -13873,16 +8470,7 @@
         "date": "2026.10.02"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -13911,16 +8499,7 @@
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
@@ -13935,16 +8514,7 @@
         "date": "2026.09.28"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -13973,16 +8543,7 @@
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
@@ -13997,16 +8558,7 @@
         "date": "2026.09.28"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -14036,14 +8588,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "data"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
@@ -14060,14 +8605,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Data"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -14098,14 +8636,7 @@
         "date": "2026.09.30",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -14122,14 +8653,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -14160,14 +8684,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "data"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
@@ -14184,14 +8701,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Data"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -14222,14 +8732,7 @@
         "date": "2026.09.28",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -14246,14 +8749,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -14282,14 +8778,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "data"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
@@ -14306,14 +8795,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Data"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -14345,9 +8827,6 @@
         "format": "RESOURCE",
         "foundations": [
           "ai",
-          "tech",
-          "tools",
-          "analysis",
           "data"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -14366,10 +8845,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "Data"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -14400,11 +8876,7 @@
         "date": "2026.09.26",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -14421,11 +8893,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -14456,10 +8924,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "psychology"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "COGNITIVE AND VISUAL BIASES",
@@ -14476,10 +8941,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
-      "Vision"
+      "Psychology"
     ],
     "pillars": [
       "VISUAL PERCEPTION & PSYCHOPHYSICS"
@@ -14506,13 +8968,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -14521,7 +8984,7 @@
     ],
     "links": [
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -14530,6 +8993,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -14558,13 +9022,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -14573,7 +9038,7 @@
     ],
     "links": [
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -14582,6 +9047,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -14613,12 +9079,7 @@
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
+        "foundations": [],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
         "url": "posts/perceptual-vision-eval-toolkit.html"
@@ -14633,12 +9094,7 @@
         "date": "2026.09.28"
       }
     ],
-    "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "VISUAL PERCEPTION & PSYCHOPHYSICS"
     ],
@@ -14664,13 +9120,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -14679,7 +9136,7 @@
     ],
     "links": [
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -14688,6 +9145,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -14720,11 +9178,7 @@
         "date": "2026.09.26",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -14741,11 +9195,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -14776,11 +9226,7 @@
         "date": "2026.09.24",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -14797,11 +9243,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -14832,14 +9274,7 @@
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "philosophy"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
@@ -14856,14 +9291,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -14890,13 +9318,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -14905,7 +9332,7 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
@@ -14914,7 +9341,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -14946,11 +9372,7 @@
         "date": "2026.10.10",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
@@ -14967,11 +9389,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -15002,14 +9420,9 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
           "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "design",
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -15026,14 +9439,9 @@
       }
     ],
     "foundations": [
-      "Art",
       "Branding",
       "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -15060,13 +9468,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -15075,7 +9482,7 @@
     ],
     "links": [
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
@@ -15084,7 +9491,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -15116,10 +9522,7 @@
         "date": "2026.09.29",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -15136,9 +9539,6 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
       "Vision"
     ],
     "pillars": [
@@ -15168,10 +9568,7 @@
         "date": "2026.10.10",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -15188,9 +9585,6 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
       "Vision"
     ],
     "pillars": [
@@ -15222,14 +9616,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "ai"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
@@ -15246,14 +9633,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -15280,13 +9660,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -15295,7 +9674,7 @@
     ],
     "links": [
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
@@ -15304,7 +9683,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -15336,10 +9714,7 @@
         "date": "2026.10.10",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -15356,9 +9731,6 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
       "Vision"
     ],
     "pillars": [
@@ -15390,11 +9762,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "SOMATOPOLITICS & LATENT SPACE",
@@ -15411,11 +9779,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Data",
-      "Philosophy",
-      "Semiotics",
-      "Tech"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY & CRITICAL THEORY"
@@ -15446,11 +9810,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
@@ -15467,11 +9827,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Data",
-      "Philosophy",
-      "Semiotics",
-      "Tech"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY & CRITICAL THEORY"
@@ -15502,11 +9858,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
@@ -15523,11 +9875,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Data",
-      "Philosophy",
-      "Semiotics",
-      "Tech"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY & CRITICAL THEORY"
@@ -15558,11 +9906,7 @@
         "date": "2026.10.09",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "LLM ARCHITECTURES AND MECHANICS",
@@ -15579,11 +9923,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -15610,13 +9950,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -15625,7 +9966,7 @@
     ],
     "links": [
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -15634,6 +9975,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -15666,11 +10008,7 @@
         "date": "2026.10.09",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "LLM ARCHITECTURES AND MECHANICS",
@@ -15687,11 +10025,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -15722,14 +10056,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "data"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
@@ -15746,14 +10073,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Data"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -15783,16 +10103,7 @@
         "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
         "date": "2026.10.02",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/dots-bot-muse-cute-mascots.html"
@@ -15807,16 +10118,7 @@
         "date": "2026.10.02"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -15845,16 +10147,7 @@
         "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
         "date": "2026.10.02",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/dots-bot-muse-cute-mascots.html"
@@ -15869,16 +10162,7 @@
         "date": "2026.10.02"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -15907,16 +10191,7 @@
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
@@ -15931,16 +10206,7 @@
         "date": "2026.09.28"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -15970,14 +10236,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "vision"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -15994,13 +10253,6 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
       "Vision"
     ],
     "pillars": [
@@ -16031,16 +10283,7 @@
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
@@ -16055,16 +10298,7 @@
         "date": "2026.09.28"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -16094,14 +10328,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "vision"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -16118,13 +10345,6 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
       "Vision"
     ],
     "pillars": [
@@ -16156,14 +10376,9 @@
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
           "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
           "vision",
-          "psychology"
+          "design"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -16180,12 +10395,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
       "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
       "Semiotics",
       "Vision"
     ],
@@ -16217,14 +10427,9 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
           "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "design",
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -16241,14 +10446,9 @@
       }
     ],
     "foundations": [
-      "Art",
       "Branding",
       "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -16279,14 +10479,9 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
           "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "design",
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -16303,14 +10498,9 @@
       }
     ],
     "foundations": [
-      "Art",
       "Branding",
       "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -16337,13 +10527,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -16352,7 +10543,7 @@
     ],
     "links": [
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -16361,6 +10552,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -16392,12 +10584,7 @@
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
+        "foundations": [],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
         "url": "posts/perceptual-vision-eval-toolkit.html"
@@ -16412,12 +10599,7 @@
         "date": "2026.09.28"
       }
     ],
-    "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "VISUAL PERCEPTION & PSYCHOPHYSICS"
     ],
@@ -16447,14 +10629,7 @@
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "philosophy"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
@@ -16471,14 +10646,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -16509,14 +10677,7 @@
         "date": "2026.09.25",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
@@ -16533,14 +10694,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -16567,13 +10721,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -16582,7 +10735,7 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
@@ -16591,7 +10744,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -16623,11 +10775,7 @@
         "date": "2026.09.26",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -16644,11 +10792,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -16680,13 +10824,7 @@
         "format": "BOOKMARK",
         "foundations": [
           "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "art"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -16704,13 +10842,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Art"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -16737,13 +10869,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -16752,7 +10883,7 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
@@ -16761,7 +10892,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -16789,13 +10919,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -16804,7 +10933,7 @@
     ],
     "links": [
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
@@ -16813,7 +10942,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -16845,14 +10973,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "ai"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
@@ -16869,14 +10990,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -16907,11 +11021,7 @@
         "date": "2026.09.24",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -16928,11 +11038,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -16962,16 +11068,7 @@
         "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
         "date": "2026.10.02",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/dots-bot-muse-cute-mascots.html"
@@ -16986,16 +11083,7 @@
         "date": "2026.10.02"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -17025,11 +11113,7 @@
         "date": "2026.10.09",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "LLM ARCHITECTURES AND MECHANICS",
@@ -17046,11 +11130,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -17081,14 +11161,7 @@
         "date": "2026.09.25",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
@@ -17105,14 +11178,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -17143,9 +11209,7 @@
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
-          "art",
-          "perception",
-          "design"
+          "art"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
@@ -17162,9 +11226,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Design",
-      "Perception"
+      "Art"
     ],
     "pillars": [
       "ART WORTH SHARING"
@@ -17195,10 +11257,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "psychology"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "COGNITIVE AND VISUAL BIASES",
@@ -17215,10 +11274,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
-      "Vision"
+      "Psychology"
     ],
     "pillars": [
       "VISUAL PERCEPTION & PSYCHOPHYSICS"
@@ -17249,11 +11305,7 @@
         "date": "2026.09.26",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -17270,11 +11322,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -17305,11 +11353,7 @@
         "date": "2026.09.24",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -17326,11 +11370,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -17357,13 +11397,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -17372,7 +11413,7 @@
     ],
     "links": [
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -17381,6 +11422,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -17414,13 +11456,7 @@
         "format": "BOOKMARK",
         "foundations": [
           "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "art"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -17438,13 +11474,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Art"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -17474,16 +11504,7 @@
         "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
         "date": "2026.10.02",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/dots-bot-muse-cute-mascots.html"
@@ -17498,16 +11519,7 @@
         "date": "2026.10.02"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -17537,11 +11549,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
@@ -17558,11 +11566,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Data",
-      "Philosophy",
-      "Semiotics",
-      "Tech"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY & CRITICAL THEORY"
@@ -17589,13 +11593,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -17604,7 +11607,7 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
@@ -17613,7 +11616,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -17645,14 +11647,7 @@
         "date": "2026.09.30",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -17669,14 +11664,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -17703,13 +11691,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -17718,7 +11705,7 @@
     ],
     "links": [
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
@@ -17727,7 +11714,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -17755,13 +11741,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -17770,7 +11755,7 @@
     ],
     "links": [
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
@@ -17779,7 +11764,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -17807,13 +11791,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -17822,7 +11805,7 @@
     ],
     "links": [
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
@@ -17831,7 +11814,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -17863,14 +11845,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "data"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
@@ -17887,14 +11862,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Data"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -17924,16 +11892,7 @@
         "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
         "date": "2026.10.02",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/dots-bot-muse-cute-mascots.html"
@@ -17948,16 +11907,7 @@
         "date": "2026.10.02"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -17987,9 +11937,7 @@
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
-          "art",
-          "perception",
-          "design"
+          "art"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
@@ -18006,9 +11954,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Design",
-      "Perception"
+      "Art"
     ],
     "pillars": [
       "ART WORTH SHARING"
@@ -18035,13 +11981,12 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -18050,7 +11995,7 @@
     ],
     "links": [
       {
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
@@ -18059,7 +12004,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -18091,11 +12035,7 @@
         "date": "2026.09.26",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -18112,11 +12052,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -18143,13 +12079,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -18158,7 +12093,7 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
@@ -18167,7 +12102,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -18198,16 +12132,7 @@
         "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
         "date": "2026.10.02",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/dots-bot-muse-cute-mascots.html"
@@ -18222,16 +12147,7 @@
         "date": "2026.10.02"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -18261,14 +12177,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "vision"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -18285,13 +12194,6 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
       "Vision"
     ],
     "pillars": [
@@ -18323,11 +12225,7 @@
         "date": "2026.10.10",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
@@ -18344,11 +12242,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -18375,13 +12269,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -18390,7 +12283,7 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
@@ -18399,7 +12292,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -18431,14 +12323,7 @@
         "date": "2026.09.25",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
@@ -18455,14 +12340,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -18489,13 +12367,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -18504,7 +12381,7 @@
     ],
     "links": [
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
@@ -18513,7 +12390,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -18545,14 +12421,9 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
           "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "design",
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -18569,14 +12440,9 @@
       }
     ],
     "foundations": [
-      "Art",
       "Branding",
       "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -18607,11 +12473,7 @@
         "date": "2026.09.24",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -18628,11 +12490,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -18663,14 +12521,9 @@
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
           "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
           "vision",
-          "psychology"
+          "design"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -18687,12 +12540,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
       "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
       "Semiotics",
       "Vision"
     ],
@@ -18720,13 +12568,12 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -18735,7 +12582,7 @@
     ],
     "links": [
       {
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
@@ -18744,7 +12591,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -18772,13 +12618,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -18787,7 +12634,7 @@
     ],
     "links": [
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -18796,6 +12643,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -18828,11 +12676,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
@@ -18849,11 +12693,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Data",
-      "Philosophy",
-      "Semiotics",
-      "Tech"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY & CRITICAL THEORY"
@@ -18884,11 +12724,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "SOMATOPOLITICS & LATENT SPACE",
@@ -18905,11 +12741,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Data",
-      "Philosophy",
-      "Semiotics",
-      "Tech"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY & CRITICAL THEORY"
@@ -18936,13 +12768,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -18951,7 +12784,7 @@
     ],
     "links": [
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -18960,6 +12793,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -18991,16 +12825,7 @@
         "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
         "date": "2026.09.28",
         "format": "BOOKMARK",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/haraway-cyborg-manifesto-neural-borderlands.html"
@@ -19015,16 +12840,7 @@
         "date": "2026.09.28"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -19054,10 +12870,7 @@
         "date": "2026.09.29",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -19074,9 +12887,6 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
       "Vision"
     ],
     "pillars": [
@@ -19102,13 +12912,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -19117,7 +12926,7 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
@@ -19126,7 +12935,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -19158,14 +12966,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "ai"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
@@ -19182,14 +12983,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -19220,11 +13014,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "SOMATOPOLITICS & LATENT SPACE",
@@ -19241,11 +13031,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Data",
-      "Philosophy",
-      "Semiotics",
-      "Tech"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY & CRITICAL THEORY"
@@ -19276,14 +13062,7 @@
         "date": "2026.09.25",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
@@ -19300,14 +13079,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -19338,9 +13110,7 @@
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
-          "art",
-          "perception",
-          "design"
+          "art"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
@@ -19357,9 +13127,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Design",
-      "Perception"
+      "Art"
     ],
     "pillars": [
       "ART WORTH SHARING"
@@ -19390,14 +13158,7 @@
         "date": "2026.09.30",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -19414,14 +13175,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -19448,13 +13202,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -19463,7 +13216,7 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
@@ -19472,7 +13225,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -19505,9 +13257,6 @@
         "format": "RESOURCE",
         "foundations": [
           "ai",
-          "tech",
-          "tools",
-          "analysis",
           "data"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -19526,10 +13275,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "Data"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -19560,11 +13306,7 @@
         "date": "2026.10.10",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
@@ -19581,11 +13323,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -19616,10 +13354,7 @@
         "date": "2026.10.10",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -19636,9 +13371,6 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
       "Vision"
     ],
     "pillars": [
@@ -19670,14 +13402,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "vision"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -19694,13 +13419,6 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
       "Vision"
     ],
     "pillars": [
@@ -19733,9 +13451,6 @@
         "format": "RESOURCE",
         "foundations": [
           "ai",
-          "tech",
-          "tools",
-          "analysis",
           "data"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
@@ -19754,10 +13469,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "Data"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -19788,14 +13500,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "data"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
@@ -19812,14 +13517,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Data"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -19846,13 +13544,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -19861,7 +13558,7 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
@@ -19870,7 +13567,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -19902,11 +13598,7 @@
         "date": "2026.09.24",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -19923,11 +13615,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -19958,14 +13646,7 @@
         "date": "2026.09.28",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -19982,14 +13663,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -20018,9 +13692,7 @@
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
-          "art",
-          "perception",
-          "design"
+          "art"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
@@ -20037,9 +13709,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Design",
-      "Perception"
+      "Art"
     ],
     "pillars": [
       "ART WORTH SHARING"
@@ -20066,13 +13736,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -20081,7 +13750,7 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
@@ -20090,7 +13759,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -20121,12 +13789,7 @@
         "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
         "date": "2026.09.28",
         "format": "RESOURCE",
-        "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
-        ],
+        "foundations": [],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
         "url": "posts/perceptual-vision-eval-toolkit.html"
@@ -20141,12 +13804,7 @@
         "date": "2026.09.28"
       }
     ],
-    "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "VISUAL PERCEPTION & PSYCHOPHYSICS"
     ],
@@ -20176,14 +13834,7 @@
         "date": "2026.09.25",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "ai"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
@@ -20200,14 +13851,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -20237,16 +13881,7 @@
         "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
         "date": "2026.10.02",
         "format": "ESSAY",
-        "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
-        ],
+        "foundations": [],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "AESTHETICS AS IDEOLOGY AND INTERFACE POLITICS",
         "url": "posts/dots-bot-muse-cute-mascots.html"
@@ -20261,16 +13896,7 @@
         "date": "2026.10.02"
       }
     ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
-    ],
+    "foundations": [],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
     ],
@@ -20300,11 +13926,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
@@ -20321,11 +13943,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Data",
-      "Philosophy",
-      "Semiotics",
-      "Tech"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY & CRITICAL THEORY"
@@ -20356,9 +13974,7 @@
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
-          "art",
-          "perception",
-          "design"
+          "art"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "OTHERWORLDLY MUSIC",
@@ -20375,9 +13991,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Design",
-      "Perception"
+      "Art"
     ],
     "pillars": [
       "ART WORTH SHARING"
@@ -20404,13 +14018,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -20419,7 +14032,7 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
@@ -20428,7 +14041,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -20456,13 +14068,12 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -20471,7 +14082,7 @@
     ],
     "links": [
       {
-        "title": "[ MUSIC_VAULT ]",
+        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
@@ -20480,7 +14091,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -20512,14 +14122,9 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
           "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "design",
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -20536,14 +14141,9 @@
       }
     ],
     "foundations": [
-      "Art",
       "Branding",
       "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -20574,11 +14174,7 @@
         "date": "2026.10.10",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
@@ -20595,11 +14191,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -20630,14 +14222,9 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
           "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "design",
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -20654,14 +14241,9 @@
       }
     ],
     "foundations": [
-      "Art",
       "Branding",
       "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -20693,13 +14275,7 @@
         "format": "BOOKMARK",
         "foundations": [
           "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "art"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -20717,13 +14293,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Art"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -20754,14 +14324,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "vision"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -20778,13 +14341,6 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
       "Vision"
     ],
     "pillars": [
@@ -20816,14 +14372,9 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
           "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "design",
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -20840,14 +14391,9 @@
       }
     ],
     "foundations": [
-      "Art",
       "Branding",
       "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -20878,11 +14424,7 @@
         "date": "2026.09.24",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -20899,11 +14441,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -20934,14 +14472,7 @@
         "date": "2026.09.26",
         "format": "BOOKMARK",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "philosophy"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "THE POLITICAL ECONOMY OF SYNTHETIC MEDIA AND DIGITAL LABOR",
@@ -20958,14 +14489,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -20996,11 +14520,7 @@
         "date": "2026.10.03",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "tech",
-          "analysis",
-          "data",
-          "semiotics"
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY & CRITICAL THEORY",
         "subtopic": "SOMATOPOLITICS & LATENT SPACE",
@@ -21017,11 +14537,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Data",
-      "Philosophy",
-      "Semiotics",
-      "Tech"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY & CRITICAL THEORY"
@@ -21048,13 +14564,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -21063,7 +14580,7 @@
     ],
     "links": [
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -21072,6 +14589,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -21100,13 +14618,12 @@
       {
         "id": "the-3d-vault",
         "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -21115,7 +14632,7 @@
     ],
     "links": [
       {
-        "title": "[ 3D_VAULT ] - All tridimensional ART",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
         "slug": "the-3d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-3d-vault.html",
@@ -21124,7 +14641,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -21152,13 +14668,12 @@
       {
         "id": "the-4d-vault",
         "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
           "art",
-          "perception",
-          "design"
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -21167,7 +14682,7 @@
     ],
     "links": [
       {
-        "title": "[ 4D_VAULT ] - All time-based ART",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
         "slug": "the-4d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-4d-vault.html",
@@ -21176,7 +14691,6 @@
     ],
     "foundations": [
       "Art",
-      "Design",
       "Perception"
     ],
     "pillars": [
@@ -21208,10 +14722,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "psychology"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "COGNITIVE AND VISUAL BIASES",
@@ -21228,10 +14739,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
-      "Vision"
+      "Psychology"
     ],
     "pillars": [
       "VISUAL PERCEPTION & PSYCHOPHYSICS"
@@ -21258,13 +14766,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -21273,7 +14782,7 @@
     ],
     "links": [
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -21282,6 +14791,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -21314,10 +14824,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "psychology"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "COGNITIVE AND VISUAL BIASES",
@@ -21334,10 +14841,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
-      "Vision"
+      "Psychology"
     ],
     "pillars": [
       "VISUAL PERCEPTION & PSYCHOPHYSICS"
@@ -21368,10 +14872,7 @@
         "date": "2026.09.29",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "vision"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
@@ -21388,9 +14889,6 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
       "Vision"
     ],
     "pillars": [
@@ -21416,13 +14914,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -21431,7 +14930,7 @@
     ],
     "links": [
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -21440,6 +14939,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -21472,10 +14972,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "psychology"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "COGNITIVE AND VISUAL BIASES",
@@ -21492,10 +14989,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
-      "Vision"
+      "Psychology"
     ],
     "pillars": [
       "VISUAL PERCEPTION & PSYCHOPHYSICS"
@@ -21526,10 +15020,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "perception",
-          "vision",
-          "psychology",
-          "analysis"
+          "psychology"
         ],
         "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
         "subtopic": "COGNITIVE AND VISUAL BIASES",
@@ -21546,10 +15037,7 @@
       }
     ],
     "foundations": [
-      "Analysis",
-      "Perception",
-      "Psychology",
-      "Vision"
+      "Psychology"
     ],
     "pillars": [
       "VISUAL PERCEPTION & PSYCHOPHYSICS"
@@ -21580,14 +15068,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "ai"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
@@ -21604,14 +15085,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -21642,11 +15116,7 @@
         "date": "2026.09.24",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -21663,11 +15133,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -21698,14 +15164,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "vision"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -21722,13 +15181,6 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
       "Vision"
     ],
     "pillars": [
@@ -21760,14 +15212,7 @@
         "date": "2026.10.02",
         "format": "NOTE",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "ai"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
@@ -21784,14 +15229,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "AI"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -21818,13 +15256,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -21833,7 +15272,7 @@
     ],
     "links": [
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -21842,6 +15281,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -21874,14 +15314,9 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
-          "semiotics",
-          "design",
-          "art",
           "branding",
-          "graphics",
-          "vision",
-          "psychology"
+          "design",
+          "philosophy"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
@@ -21898,14 +15333,9 @@
       }
     ],
     "foundations": [
-      "Art",
       "Branding",
       "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
-      "Semiotics",
-      "Vision"
+      "Philosophy"
     ],
     "pillars": [
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
@@ -21932,13 +15362,14 @@
       {
         "id": "the-2d-vault",
         "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "date": "2026.10.14",
         "format": "BOOKMARK",
         "foundations": [
+          "design",
           "art",
-          "perception",
-          "design"
+          "branding",
+          "perception"
         ],
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
@@ -21947,7 +15378,7 @@
     ],
     "links": [
       {
-        "title": "[ 2D_VAULT ] - All bidimensional ART",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
         "slug": "the-2d-vault",
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
@@ -21956,6 +15387,7 @@
     ],
     "foundations": [
       "Art",
+      "Branding",
       "Design",
       "Perception"
     ],
@@ -21988,14 +15420,9 @@
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
-          "philosophy",
           "semiotics",
-          "design",
-          "art",
-          "branding",
-          "graphics",
           "vision",
-          "psychology"
+          "design"
         ],
         "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
         "subtopic": "MODES OF SEEING AND VISUAL SEMIOTICS",
@@ -22012,12 +15439,7 @@
       }
     ],
     "foundations": [
-      "Art",
-      "Branding",
       "Design",
-      "Graphics",
-      "Philosophy",
-      "Psychology",
       "Semiotics",
       "Vision"
     ],
@@ -22049,14 +15471,7 @@
         "date": "2026.10.10",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "data"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "SYNTHETIC AND STATISTICAL IMAGES",
@@ -22073,14 +15488,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Data"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -22111,11 +15519,7 @@
         "date": "2026.10.09",
         "format": "RESOURCE",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "LLM ARCHITECTURES AND MECHANICS",
@@ -22132,11 +15536,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -22167,11 +15567,7 @@
         "date": "2026.09.24",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -22188,11 +15584,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -22223,11 +15615,7 @@
         "date": "2026.09.24",
         "format": "ESSAY",
         "foundations": [
-          "ai",
-          "tech",
-          "tools",
-          "analysis",
-          "data"
+          "ai"
         ],
         "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
         "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
@@ -22244,11 +15632,7 @@
       }
     ],
     "foundations": [
-      "AI",
-      "Analysis",
-      "Data",
-      "Tech",
-      "Tools"
+      "AI"
     ],
     "pillars": [
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
@@ -22280,13 +15664,7 @@
         "format": "BOOKMARK",
         "foundations": [
           "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "art"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -22304,13 +15682,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Art"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
@@ -22342,13 +15714,7 @@
         "format": "BOOKMARK",
         "foundations": [
           "ai",
-          "vision",
-          "tech",
-          "art",
-          "data",
-          "analysis",
-          "graphics",
-          "tools"
+          "art"
         ],
         "pillar": "AI PERCEPTION & REPRESENTATION",
         "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
@@ -22366,13 +15732,7 @@
     ],
     "foundations": [
       "AI",
-      "Analysis",
-      "Art",
-      "Data",
-      "Graphics",
-      "Tech",
-      "Tools",
-      "Vision"
+      "Art"
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
