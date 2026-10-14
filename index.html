@@ -118,61 +118,489 @@
   <main class="split-layout" data-component="split-shell">
     <h1 class="sr-only">Untitled.jpg - Overthinking perception, meaning, systems and design</h1>
 
-    <!-- COMPONENT 3: ASYMMETRIC GRID MATRIX (50% Column)
-         File: css/components/card-matrix.css -->
-    <section class="grid-column" data-component="dispatch-matrix" aria-label="Dispatch Grid Matrix">
-      <!-- UNIFIED MATRIX HEADER (LEGEND & CONTROLS ALIGNED) -->
-      <div class="matrix-header-group">
-        <!-- LEFT COLUMN: SYS_LOG & FILTER/SORT PILLS -->
-        <div class="header-col-left">
-          <span class="header-legend">SYS_LOG // ASYMMETRIC_DISPATCH_MATRIX</span>
-          <div class="controls-row-left">
-            <!-- FORMAT FILTER PILL DROPDOWN -->
-            <div class="custom-select-wrapper flex-pill">
-              <button type="button" class="btn-matrix-pill" id="filter-pill-btn" aria-haspopup="true" aria-expanded="false" title="Filter by format">
-                <span class="pill-label">FILTER:</span>
-                <span class="pill-value" id="current-filter-val">ALL POSTS</span>
-                <span class="pill-arrow">▼</span>
-              </button>
-              <div class="custom-select-dropdown" id="filter-dropdown" role="menu">
-                <button type="button" class="dropdown-opt active" data-filter="all" role="menuitem">ALL POSTS</button>
-                <button type="button" class="dropdown-opt" data-filter="essay" role="menuitem">ESSAYS</button>
-                <button type="button" class="dropdown-opt" data-filter="note" role="menuitem">NOTES</button>
-                <button type="button" class="dropdown-opt" data-filter="bookmark" role="menuitem">BOOKMARKS</button>
-                <button type="button" class="dropdown-opt" data-filter="resource" role="menuitem">RESOURCES</button>
-              </div>
-            </div>
+    <!-- COMPONENT 3: EDITORIAL HOMEPAGE (Full-Width Hero & 3-Panel Stream Grid)
+         File: css/components/editorial-homepage.css -->
+    <section class="grid-column editorial-column" data-component="dispatch-editorial" aria-label="Editorial Dispatches & Streams">
+      <div class="editorial-shell">
 
-            <!-- SORT ORDER PILL DROPDOWN -->
-            <div class="custom-select-wrapper flex-pill">
-              <button type="button" class="btn-matrix-pill" id="sort-pill-btn" aria-haspopup="true" aria-expanded="false" title="Sort dispatches">
-                <span class="pill-label">SORT:</span>
-                <span class="pill-value" id="current-sort-val">MOST RECENT</span>
-                <span class="pill-arrow">▼</span>
+        <!-- FULL-WIDTH LEAD HERO SECTION -->
+        <section class="editorial-hero-banner" aria-label="Featured Lead Dispatch">
+          <div class="hero-text-col">
+            <div class="hero-kicker-tag">[ LEAD DISPATCH // ISSUE 42 ]</div>
+            <h2 class="hero-headline">
+              <a href="#2026-10-03-telebody-latent-space-pharmacopornographic-ai" data-post-id="2026-10-03-telebody-latent-space-pharmacopornographic-ai">
+                The Telebody in Pharmacopornographic Space
+              </a>
+            </h2>
+            <p class="hero-deck">
+              How generative video architectures reconstitute Preciado's somatopolitical regime—transforming ocular desire into real-time synthetic feedback loops.
+            </p>
+            <blockquote class="hero-pullquote">
+              <p>"The screen is no longer a window; it is a metabolic interface."</p>
+            </blockquote>
+            <div class="hero-cta-group">
+              <button type="button" class="hero-read-dispatch-btn" data-post-id="2026-10-03-telebody-latent-space-pharmacopornographic-ai">
+                READ DISPATCH ↗
               </button>
-              <div class="custom-select-dropdown" id="sort-dropdown" role="menu">
-                <button type="button" class="dropdown-opt active" data-sort="recent" role="menuitem">MOST RECENT</button>
-                <button type="button" class="dropdown-opt" data-sort="oldest" role="menuitem">OLDEST</button>
-                <button type="button" class="dropdown-opt" data-sort="readtime" role="menuitem">READING TIME</button>
-                <button type="button" class="dropdown-opt" data-sort="title" role="menuitem">TITLE A-Z</button>
-              </div>
+              <button type="button" class="hero-audio-dispatch-btn" data-post-id="2026-10-03-telebody-latent-space-pharmacopornographic-ai" aria-label="Listen to Audio Dispatch">
+                AUDIO DISPATCH (24:12) <span class="hero-audio-play-icon">▶</span>
+              </button>
+            </div>
+            <div class="hero-meta-row">
+              <span>JUAN PABLO GIUSEPPONI</span>
+              <span class="hero-meta-dot">•</span>
+              <span>18 MIN READ</span>
             </div>
           </div>
-        </div>
 
-        <!-- RIGHT COLUMN: MODE STATUS & SEARCH INPUT -->
-        <div class="header-col-right">
-          <span class="header-legend filter-status" id="active-filter-label">[MODE: ALL_DISPATCHES]</span>
-          <div class="matrix-search-box">
-            <svg viewBox="0 0 24 24" class="search-icon-svg"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" id="matrix-search-input" placeholder="SEARCH DISPATCHES..." aria-label="Search dispatches" autocomplete="off" />
-            <button type="button" id="clear-search-btn" style="display: none;" title="Clear search">✕</button>
+          <div class="hero-media-col" data-post-id="2026-10-03-telebody-latent-space-pharmacopornographic-ai" role="button" tabindex="0" title="Read The Telebody in Pharmacopornographic Space">
+            <span class="hero-art-tier-badge">POLITICAL_ECOLOGY // TIER 1</span>
+            <img src="assets/images/pharmacobody.jpg" alt="The Telebody in Pharmacopornographic Space Artwork" onerror="this.src='assets/images/telebodies.jpg'" />
           </div>
-        </div>
+        </section>
+
+        <!-- THREE-PANEL EDITORIAL ARCHITECTURE -->
+        <section class="editorial-panels-grid" aria-label="Editorial Streams">
+          
+          <!-- PANEL 1: ESSAYS & NOTES DISPATCH LOG (TIMELINE FEED) -->
+          <div class="editorial-panel-card panel-essays-notes">
+            <div class="panel-header-strip">
+              <div class="panel-header-title">
+                <svg class="panel-header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+                <span>ESSAYS &amp; NOTES DISPATCH LOG</span>
+              </div>
+              <a href="archive.html" class="panel-header-action" title="View all dispatches in archive">VIEW ALL 22 [/]</a>
+            </div>
+
+            <!-- Timeline Stream Axis -->
+            <div class="timeline-stream-container">
+              <div class="timeline-track-line" aria-hidden="true"></div>
+
+              <!-- Item 1: Operational Images -->
+              <article class="timeline-stream-item">
+                <div class="timeline-node-group">
+                  <div class="timeline-date-block">
+                    <span class="date-day-month">10 OCT</span>
+                    <span class="date-year">2026</span>
+                  </div>
+                  <div class="timeline-glowing-dot" aria-hidden="true"></div>
+                </div>
+                <div class="timeline-entry-box">
+                  <div class="entry-thumb-box">
+                    <img src="assets/images/operational-images.jpg" alt="Operational Images" loading="lazy" />
+                  </div>
+                  <div class="entry-body-box">
+                    <div class="entry-tags-row">
+                      <span class="format-badge-red">[ESSAY]</span>
+                      <span class="tag-mid-dot">·</span>
+                      <span class="foundation-tag-red">VISION</span>
+                      <span class="tag-mid-dot">·</span>
+                      <span class="tags-meta-grey">#MACHINE-VISION #SEMIOTICS</span>
+                    </div>
+                    <h3 class="entry-headline">
+                      <a href="#2026-10-10-operational-images-farocki-flusser-machine-vision" data-post-id="2026-10-10-operational-images-farocki-flusser-machine-vision">
+                        Operational Images: Why Neural Networks Don't Actually Look at Pictures
+                      </a>
+                    </h3>
+                    <p class="entry-excerpt">
+                      Human beings look at pictures to interpret meaning, memory, and emotion. Neural networks process operational images: visual inputs that exist purely to execute actions.
+                    </p>
+                    <div class="entry-action-footer">
+                      <button type="button" class="btn-read-dispatch" data-post-id="2026-10-10-operational-images-farocki-flusser-machine-vision">
+                        READ DISPATCH ↗
+                      </button>
+                      <span class="entry-read-meta">// 10 MIN READ // BY: Juan P. Giusepponi</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 2: Images are Dead -->
+              <article class="timeline-stream-item">
+                <div class="timeline-node-group">
+                  <div class="timeline-date-block">
+                    <span class="date-day-month">10 OCT</span>
+                    <span class="date-year">2026</span>
+                  </div>
+                  <div class="timeline-glowing-dot" aria-hidden="true"></div>
+                </div>
+                <div class="timeline-entry-box">
+                  <div class="entry-thumb-box">
+                    <img src="assets/images/brands-are-dead.jpg" alt="Images are Dead" loading="lazy" />
+                  </div>
+                  <div class="entry-body-box">
+                    <div class="entry-tags-row">
+                      <span class="format-badge-red">[ESSAY]</span>
+                      <span class="tag-mid-dot">·</span>
+                      <span class="foundation-tag-red">BRANDING</span>
+                      <span class="tag-mid-dot">·</span>
+                      <span class="tags-meta-grey">#VISUAL-CULTURE #AESTHETICS</span>
+                    </div>
+                    <h3 class="entry-headline">
+                      <a href="#2026-10-10-images-are-dead" data-post-id="2026-10-10-images-are-dead">
+                        Images are Dead. Brands Should Know.
+                      </a>
+                    </h3>
+                    <p class="entry-excerpt">
+                      When anyone can produce infinite pictures for free, slick visuals lose their power to impress. What builds lasting brand value is genuine community credibility.
+                    </p>
+                    <div class="entry-action-footer">
+                      <button type="button" class="btn-read-dispatch" data-post-id="2026-10-10-images-are-dead">
+                        READ DISPATCH ↗
+                      </button>
+                      <span class="entry-read-meta">// 3 MIN READ // BY: Juan P. Giusepponi</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 3: The Poverty of Synthetic Ground Truth -->
+              <article class="timeline-stream-item">
+                <div class="timeline-node-group">
+                  <div class="timeline-date-block">
+                    <span class="date-day-month">10 OCT</span>
+                    <span class="date-year">2026</span>
+                  </div>
+                  <div class="timeline-glowing-dot" aria-hidden="true"></div>
+                </div>
+                <div class="timeline-entry-box">
+                  <div class="entry-thumb-box">
+                    <img src="assets/images/charts-graphs.gif" alt="The Poverty of Synthetic Ground Truth" loading="lazy" />
+                  </div>
+                  <div class="entry-body-box">
+                    <div class="entry-tags-row">
+                      <span class="format-badge-red">[ESSAY]</span>
+                      <span class="tag-mid-dot">·</span>
+                      <span class="foundation-tag-red">DATA</span>
+                      <span class="tag-mid-dot">·</span>
+                      <span class="tags-meta-grey">#CHARXIV #VISION-MODELS</span>
+                    </div>
+                    <h3 class="entry-headline">
+                      <a href="#2026-10-10-poverty-of-synthetic-ground-truth" data-post-id="2026-10-10-poverty-of-synthetic-ground-truth">
+                        The Poverty of Synthetic Ground Truth
+                      </a>
+                    </h3>
+                    <p class="entry-excerpt">
+                      Auto-phagic model collapse under synthetic training data distributions and the erosion of perceptual anchor points in generative systems.
+                    </p>
+                    <div class="entry-action-footer">
+                      <button type="button" class="btn-read-dispatch" data-post-id="2026-10-10-poverty-of-synthetic-ground-truth">
+                        READ DISPATCH ↗
+                      </button>
+                      <span class="entry-read-meta">// 12 MIN READ // BY: Juan P. Giusepponi</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 4: Saccadic Blindness (Note) -->
+              <article class="timeline-stream-item">
+                <div class="timeline-node-group">
+                  <div class="timeline-date-block">
+                    <span class="date-day-month">10 OCT</span>
+                    <span class="date-year">2026</span>
+                  </div>
+                  <div class="timeline-glowing-dot" aria-hidden="true"></div>
+                </div>
+                <div class="timeline-entry-box">
+                  <div class="entry-thumb-box">
+                    <img src="assets/images/ai-video-blindness.gif" alt="Saccadic Blindness" loading="lazy" />
+                  </div>
+                  <div class="entry-body-box">
+                    <div class="entry-tags-row">
+                      <span class="format-badge-cyan">[NOTE]</span>
+                      <span class="tag-mid-dot">·</span>
+                      <span class="foundation-tag-red">VISION</span>
+                      <span class="tag-mid-dot">·</span>
+                      <span class="tags-meta-grey">#FOVEATED-VISION #AI-VIDEO</span>
+                    </div>
+                    <h3 class="entry-headline">
+                      <a href="#2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency" data-post-id="2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency">
+                        Saccadic Blindness: Why You Don't Notice AI Video Melts
+                      </a>
+                    </h3>
+                    <p class="entry-excerpt">
+                      How human visual processing suppresses motion artifacts during rapid eye movements, letting generative diffusion models hide hallucinated pixels in plain sight.
+                    </p>
+                    <div class="entry-action-footer">
+                      <button type="button" class="btn-read-dispatch" data-post-id="2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency">
+                        READ DISPATCH ↗
+                      </button>
+                      <span class="entry-read-meta">// 6 MIN READ // BY: Juan P. Giusepponi</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- PANEL 2: BOOKMARKS (CURATED VAULT) -->
+          <div class="editorial-panel-card panel-bookmarks">
+            <div class="panel-header-strip">
+              <div class="panel-header-title">
+                <svg class="panel-header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span>BOOKMARKS</span>
+              </div>
+              <a href="archive.html?filter=bookmark" class="panel-header-action" title="View all bookmarks">ALL (6) [/]</a>
+            </div>
+
+            <div class="stacked-cards-list">
+              
+              <!-- Bookmark 1: Marina Herlop -->
+              <article class="stacked-card-item">
+                <div class="stacked-thumb-box">
+                  <img src="assets/images/marina-herlop.jpg" alt="Marina Herlop's Dja Dja" loading="lazy" />
+                </div>
+                <div class="stacked-body-box">
+                  <div class="entry-tags-row">
+                    <span class="foundation-tag-red">ART</span>
+                    <span class="tag-mid-dot">·</span>
+                    <span class="tags-meta-grey">#MUSIC #SOUNDS</span>
+                  </div>
+                  <h3 class="stacked-headline">
+                    <a href="#2026-10-11-marina-herlop-dja-dja" data-post-id="2026-10-11-marina-herlop-dja-dja">
+                      Marina Herlop's Dja Dja
+                    </a>
+                  </h3>
+                  <p class="stacked-excerpt">
+                    First piece of music of many more to come. A sublime sonic journey in avant-garde polyphony.
+                  </p>
+                  <div class="entry-action-footer">
+                    <button type="button" class="btn-read-dispatch" data-post-id="2026-10-11-marina-herlop-dja-dja">
+                      READ DISPATCH ↗
+                    </button>
+                    <span class="entry-read-meta">// CURATED LISTENING</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Bookmark 2: Naomi Klein -->
+              <article class="stacked-card-item">
+                <div class="stacked-thumb-box">
+                  <img src="assets/images/naomi-klein.jpg" alt="Naomi Klein: End Times Fascism" loading="lazy" />
+                </div>
+                <div class="stacked-body-box">
+                  <div class="entry-tags-row">
+                    <span class="foundation-tag-red">PHILOSOPHY</span>
+                    <span class="tag-mid-dot">·</span>
+                    <span class="tags-meta-grey">#POLITICS #CLIMATE</span>
+                  </div>
+                  <h3 class="stacked-headline">
+                    <a href="#2026-10-14-naomi-klein-end-times-fascism-doomscroll" data-post-id="2026-10-14-naomi-klein-end-times-fascism-doomscroll">
+                      Naomi Klein: End Times Fascism | Doomscroll
+                    </a>
+                  </h3>
+                  <p class="stacked-excerpt">
+                    Critical conversation examining algorithmic despair, disaster capitalism, and digital dread.
+                  </p>
+                  <div class="entry-action-footer">
+                    <button type="button" class="btn-read-dispatch" data-post-id="2026-10-14-naomi-klein-end-times-fascism-doomscroll">
+                      READ DISPATCH ↗
+                    </button>
+                    <span class="entry-read-meta">// ESSENTIAL DIALOGUE</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Bookmark 3: Real AI Failure Story -->
+              <article class="stacked-card-item">
+                <div class="stacked-thumb-box">
+                  <img src="assets/images/ai-fail-opus.jpg" alt="Real AI Failure Story" loading="lazy" />
+                </div>
+                <div class="stacked-body-box">
+                  <div class="entry-tags-row">
+                    <span class="foundation-tag-red">AI</span>
+                    <span class="tag-mid-dot">·</span>
+                    <span class="tags-meta-grey">#AI-AGENTS #SAFETY</span>
+                  </div>
+                  <h3 class="stacked-headline">
+                    <a href="#2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds" data-post-id="2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds">
+                      Real AI Failure Story: Deleted a Database in 9 Seconds!
+                    </a>
+                  </h3>
+                  <p class="stacked-excerpt">
+                    A stark post-mortem on unconstrained autonomous agentic tool loops in production environments.
+                  </p>
+                  <div class="entry-action-footer">
+                    <button type="button" class="btn-read-dispatch" data-post-id="2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds">
+                      READ DISPATCH ↗
+                    </button>
+                    <span class="entry-read-meta">// POST-MORTEM</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Bookmark 4: Marc van Elburg -->
+              <article class="stacked-card-item">
+                <div class="stacked-thumb-box">
+                  <img src="assets/images/marc-van-elburg.gif" alt="Marc van Elburg" loading="lazy" />
+                </div>
+                <div class="stacked-body-box">
+                  <div class="entry-tags-row">
+                    <span class="foundation-tag-red">ART</span>
+                    <span class="tag-mid-dot">·</span>
+                    <span class="tags-meta-grey">#SURREALISM #EXPRESSIONISM</span>
+                  </div>
+                  <h3 class="stacked-headline">
+                    <a href="#2026-10-06-marc-van-elburg" data-post-id="2026-10-06-marc-van-elburg">
+                      @marc.van.elburg's Surreal-Delirious Expressionism
+                    </a>
+                  </h3>
+                  <p class="stacked-excerpt">
+                    Hyper-saturated dreamscapes capturing digital vertigo and painterly cognitive distortion.
+                  </p>
+                  <div class="entry-action-footer">
+                    <button type="button" class="btn-read-dispatch" data-post-id="2026-10-06-marc-van-elburg">
+                      READ DISPATCH ↗
+                    </button>
+                    <span class="entry-read-meta">// ARTIST SPOTLIGHT</span>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- PANEL 3: RESOURCES (TOOLS & ASSETS) -->
+          <div class="editorial-panel-card panel-resources">
+            <div class="panel-header-strip">
+              <div class="panel-header-title">
+                <svg class="panel-header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                </svg>
+                <span>RESOURCES</span>
+              </div>
+              <a href="archive.html?filter=resource" class="panel-header-action" title="View all resources">ALL (4) [/]</a>
+            </div>
+
+            <div class="stacked-cards-list">
+              
+              <!-- Resource 1: Untitled Wallpapers -->
+              <article class="stacked-card-item">
+                <div class="stacked-thumb-box">
+                  <img src="assets/images/wallpaper-gallery.gif" alt="Untitled Wallpapers for your Mobile?" loading="lazy" />
+                </div>
+                <div class="stacked-body-box">
+                  <div class="entry-tags-row">
+                    <span class="foundation-tag-red">DESIGN</span>
+                    <span class="tag-mid-dot">·</span>
+                    <span class="tags-meta-grey">#WALLPAPERS #FREE</span>
+                  </div>
+                  <h3 class="stacked-headline">
+                    <a href="#2026-10-14-want-untitled-wallpapers-for-your-mobile" data-post-id="2026-10-14-want-untitled-wallpapers-for-your-mobile">
+                      Untitled Wallpapers for your Mobile?
+                    </a>
+                  </h3>
+                  <p class="stacked-excerpt">
+                    Original high-resolution wallpapers tailored for smartphones with OLED &amp; cybernetic palettes.
+                  </p>
+                  <div class="entry-action-footer">
+                    <button type="button" class="btn-download-resource" data-post-id="2026-10-14-want-untitled-wallpapers-for-your-mobile">
+                      DOWNLOAD ↗
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Resource 2: Code Review Graph -->
+              <article class="stacked-card-item">
+                <div class="stacked-thumb-box">
+                  <img src="assets/images/knowledge-graphs.jpg" alt="Save 70x tokens code review graph" loading="lazy" />
+                </div>
+                <div class="stacked-body-box">
+                  <div class="entry-tags-row">
+                    <span class="foundation-tag-red">TECH</span>
+                    <span class="tag-mid-dot">·</span>
+                    <span class="tags-meta-grey">#DEV-TOOLS #OPTIMIZATION</span>
+                  </div>
+                  <h3 class="stacked-headline">
+                    <a href="#2026-10-09-save-70x-tokens-code-review-graph" data-post-id="2026-10-09-save-70x-tokens-code-review-graph">
+                      Use up to 70x less tokens [code-review-graph]
+                    </a>
+                  </h3>
+                  <p class="stacked-excerpt">
+                    Graph-based code analysis script reducing LLM token burn during pull request reviews.
+                  </p>
+                  <div class="entry-action-footer">
+                    <button type="button" class="btn-download-resource" data-post-id="2026-10-09-save-70x-tokens-code-review-graph">
+                      VIEW TOOL ↗
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Resource 3: OpenResearch AI Lab Partner -->
+              <article class="stacked-card-item">
+                <div class="stacked-thumb-box">
+                  <img src="assets/images/ailook1.png" alt="OpenResearch AI Lab Partner" loading="lazy" />
+                </div>
+                <div class="stacked-body-box">
+                  <div class="entry-tags-row">
+                    <span class="foundation-tag-red">AI</span>
+                    <span class="tag-mid-dot">·</span>
+                    <span class="tags-meta-grey">#GITHUB-REPO #AGENTS</span>
+                  </div>
+                  <h3 class="stacked-headline">
+                    <a href="#2026-10-06-openresearch-your-ai-lab-partner-github-repo" data-post-id="2026-10-06-openresearch-your-ai-lab-partner-github-repo">
+                      OpenResearch: Your AI Lab Partner [github repo]
+                    </a>
+                  </h3>
+                  <p class="stacked-excerpt">
+                    Autonomous agent framework for scientific hypothesis generation and synthesis.
+                  </p>
+                  <div class="entry-action-footer">
+                    <button type="button" class="btn-download-resource" data-post-id="2026-10-06-openresearch-your-ai-lab-partner-github-repo">
+                      GITHUB REPO ↗
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Resource 4: Perceptual Vision Eval Toolkit -->
+              <article class="stacked-card-item">
+                <div class="stacked-thumb-box">
+                  <img src="assets/images/perception_eval.jpg" alt="Perceptual Vision Eval Toolkit" loading="lazy" />
+                </div>
+                <div class="stacked-body-box">
+                  <div class="entry-tags-row">
+                    <span class="foundation-tag-red">PERCEPTION</span>
+                    <span class="tag-mid-dot">·</span>
+                    <span class="tags-meta-grey">#PSYCHOPHYSICS #EVAL</span>
+                  </div>
+                  <h3 class="stacked-headline">
+                    <a href="#2026-09-28-perceptual-vision-eval-toolkit" data-post-id="2026-09-28-perceptual-vision-eval-toolkit">
+                      Perceptual Vision Eval Toolkit
+                    </a>
+                  </h3>
+                  <p class="stacked-excerpt">
+                    Open-source psychophysical diagnostics evaluating Gestalt continuity and luminance contrast.
+                  </p>
+                  <div class="entry-action-footer">
+                    <button type="button" class="btn-download-resource" data-post-id="2026-09-28-perceptual-vision-eval-toolkit">
+                      VIEW TOOLKIT ↗
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+        </section>
+
       </div>
 
-      <!-- Asymmetric 3x3 Card Grid Matrix (Dynamically Populated by app.js) -->
-      <div class="card-grid-matrix" id="card-matrix"></div>
+      <!-- Silent Hidden Card Matrix anchor for API parity -->
+      <div id="card-matrix" style="display:none;" aria-hidden="true"></div>
     </section>
 
     <!-- COMPONENT 4: ESSAY READER PANE & 3-TIER METADATA (50% Column)
@@ -234,6 +662,7 @@
   <script defer src="js/components/card-matrix.js"></script>
   <script defer src="js/components/reader-pane.js"></script>
   <script defer src="js/components/navigation-controls.js"></script>
+  <script defer src="js/components/editorial-homepage.js"></script>
   <!-- Client-Side Application Script & Core Orchestrator -->
   <script defer src="app.js"></script>
 </body>
