@@ -212,7 +212,7 @@
   font-family: var(--font-serif);
   font-size: var(--text-lg);
   font-weight: 600;
-  line-height: 1.7;
+  line-height: 1.5;
   color: var(--text-bright);
   transition: color var(--transition-fast);
   padding: 0 0.15rem 0.15rem 0.15rem;
