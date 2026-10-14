@@ -31,7 +31,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "draft",
     "date": "2026.10.11",
     "author": "Juan P. Giusepponi",
@@ -41,7 +43,7 @@
     "thumbnail": "assets/images/music-vault.gif",
     "image_alt": "Coral-red and black archival collage: a brutalist acoustic dish atop rocky ground, jagged audio waveforms, and a vintage phonograph beside rusty gears and wire.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [],
     "backlinks": [
       {
@@ -89,7 +91,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "draft",
     "date": "2026.10.14",
     "author": "Juan P. Giusepponi",
@@ -99,7 +103,7 @@
     "thumbnail": "assets/images/4D-vault.gif",
     "image_alt": "Coral-red and black archival collage: temporal waveforms, celluloid film ribbons, and dynamic acoustic oscillation.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [],
     "backlinks": [
       {
@@ -158,7 +162,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "draft",
     "date": "2026.10.14",
     "author": "Juan P. Giusepponi",
@@ -168,7 +174,7 @@
     "thumbnail": "assets/images/thumbnails/3D-vault.webp",
     "image_alt": "A rough wooden beam pierced by a jagged metal core floats centrally, surrounded by vertical glitch drips over a coral-red and black archival room",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [],
     "backlinks": [
       {
@@ -233,7 +239,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "draft",
     "date": "2026.10.14",
     "author": "Juan P. Giusepponi",
@@ -243,7 +251,7 @@
     "thumbnail": "assets/images/music-vault.gif",
     "image_alt": "Coral-red and black archival collage: a brutalist acoustic dish atop rocky ground, jagged audio waveforms, and a vintage phonograph beside rusty gears and wire.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [],
     "backlinks": [
       {
@@ -307,7 +315,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": false,
     "status": "published",
     "date": "2026.10.14",
     "author": "Juan P. Giusepponi",
@@ -317,7 +327,7 @@
     "thumbnail": "assets/images/wallpaper-gallery.gif",
     "image_alt": "Preview of the gallery page",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [
       {
         "title": "Want untitled wallpapers for your mobile?",
@@ -379,7 +389,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.10.14",
     "author": "Juan P. Giusepponi",
@@ -389,7 +401,15 @@
     "thumbnail": "assets/images/thumbnails/naomi-klein.webp",
     "image_alt": "Coral-red and black glitch collage",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [
+      {
+        "path": "assets/images/end-times-fash.jpg",
+        "image": "assets/images/end-times-fash.jpg",
+        "thumbnail": "assets/images/thumbnails/end-times-fash.webp",
+        "alt": "Coral red and black glitch collage",
+        "title": ""
+      }
+    ],
     "links": [
       {
         "title": "Naomi Klein: End Times Fascism | Doomscroll",
@@ -432,7 +452,7 @@
       "book"
     ],
     "entities": null,
-    "content": "<iframe class=\"responsive-video\" src=\"https://www.youtube.com/embed/UHDwQ6FuWCs\" title=\"Naomi Klein: End Times Fascism | Doomscroll\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>\n\n<h2 class=\"post-section-kicker essay-section-kicker\">01. Archival Summary</h2>\n\n<p class=\"post-paragraph essay-paragraph\">In her book <em>End Times Fascism</em>, co-authored with Astra Taylor, Naomi Klein defines the term as <strong>a coalition of three main factions (religious, tech, and ethno-nationalist)</strong> that are united by apocalyptic narratives (0:40–6:00). She argues that these groups, while distinct, are all mobilized by themes of terminal crisis and are essentially \"prepping\" the nation-state for the end of the world (0:40–7:05).</p>\n\n<h3 class=\"post-subheading essay-subheading\">Key components of this alliance include:</h3>\n\n<p class=\"post-paragraph essay-paragraph\">• <code>Theocratic Fundamentalists</code>: Religious groups who interpret current global crises and shocks as foretold signs of the end days, often adopting an accelerationist view where such events are welcomed (0:40–1:40).</p>\n\n<p class=\"post-paragraph essay-paragraph\">• <code>Techno-Capitalists</code>: Figures in the tech industry whose rhetoric surrounding AI—such as summoning a \"digital god\" or anticipating super-intelligence—mirrors messianic eschatology (2:49–5:10).</p>\n\n<p class=\"post-paragraph essay-paragraph\">• <code>Ethno-Nationalists</code>: A mass movement focused on \"fortressing\" borders, expelling perceived outsiders, and securing resources for the in-group within a national \"bunker\" (5:50–7:05).</p>\n\n<p class=\"post-paragraph essay-paragraph\">Klein frames this phenomenon as \"capitalism with its teeth bared,\" suggesting that neoliberalism's failure to address systemic crises has created the conditions for this authoritarian response to gain traction (7:45–8:45). Ultimately, she describes their policy goals and foreign policy as a form of \"supersized prepping\" at the level of the nation-state (6:57–7:05).</p>"
+    "content": "<div class=\"responsive-video\">\n  <iframe src=\"https://www.youtube.com/embed/UHDwQ6FuWCs\" title=\"Naomi Klein: End Times Fascism | Doomscroll\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>\n</div>\n\n<h2 class=\"post-section-kicker essay-section-kicker\">01. Archival Summary</h2>\n\n<p class=\"post-paragraph essay-paragraph\">In her book <em>End Times Fascism</em>, co-authored with Astra Taylor, Naomi Klein defines the term as <strong>a coalition of three main factions (religious, tech, and ethno-nationalist)</strong> that are united by apocalyptic narratives (0:40–6:00). She argues that these groups, while distinct, are all mobilized by themes of terminal crisis and are essentially \"prepping\" the nation-state for the end of the world (0:40–7:05).</p>\n\n<h3 class=\"post-subheading essay-subheading\">Key components of this alliance include:</h3>\n\n<p class=\"post-paragraph essay-paragraph\">• <code>Theocratic Fundamentalists</code>: Religious groups who interpret current global crises and shocks as foretold signs of the end days, often adopting an accelerationist view where such events are welcomed (0:40–1:40).</p>\n\n<p class=\"post-paragraph essay-paragraph\">• <code>Techno-Capitalists</code>: Figures in the tech industry whose rhetoric surrounding AI—such as summoning a \"digital god\" or anticipating super-intelligence—mirrors messianic eschatology (2:49–5:10).</p>\n\n<p class=\"post-paragraph essay-paragraph\">• <code>Ethno-Nationalists</code>: A mass movement focused on \"fortressing\" borders, expelling perceived outsiders, and securing resources for the in-group within a national \"bunker\" (5:50–7:05).</p>\n\n<p class=\"post-paragraph essay-paragraph\">Klein frames this phenomenon as \"capitalism with its teeth bared,\" suggesting that neoliberalism's failure to address systemic crises has created the conditions for this authoritarian response to gain traction (7:45–8:45). Ultimately, she describes their policy goals and foreign policy as a form of \"supersized prepping\" at the level of the nation-state (6:57–7:05).</p>"
   },
   {
     "id": "2026-10-11-marina-herlop-dja-dja",
@@ -457,7 +477,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.10.11",
     "author": "Juan P. Giusepponi",
@@ -467,7 +489,7 @@
     "thumbnail": "assets/images/thumbnails/marina-herlop.webp",
     "image_alt": "Marina Herlop's album cover for Dja Dja",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [],
     "backlinks": [
       {
@@ -514,7 +536,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.10.10",
     "author": "Juan P. Giusepponi",
@@ -524,7 +548,7 @@
     "thumbnail": "assets/images/ai-video-blindness.gif",
     "image_alt": "Forensic diagram of an anatomical eye with motion vector overlays alongside a melting digital video glitch in coral red and charcoal.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [
+    "gallery-images": [
       {
         "path": "assets/images/saccadic-vision.jpg",
         "image": "assets/images/saccadic-vision.jpg",
@@ -596,7 +620,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.10.10",
     "author": "Juan P. Giusepponi",
@@ -606,7 +632,22 @@
     "thumbnail": "assets/images/thumbnails/ai-fail-opus.webp",
     "image_alt": "Glitch art in coral, black, and white. Server racks dissolve into circuitry and binary code above a fragmented humanoid head with glowing eyes emitting signal waves.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [
+      {
+        "path": "path",
+        "image": "path",
+        "thumbnail": "path",
+        "alt": "",
+        "title": ""
+      },
+      {
+        "path": "alt",
+        "image": "alt",
+        "thumbnail": "alt",
+        "alt": "",
+        "title": ""
+      }
+    ],
     "links": [
       {
         "title": "Real-world AI Failure Story: Delete a Production Database in 9 Seconds!",
@@ -635,7 +676,7 @@
       "opus"
     ],
     "entities": null,
-    "content": "<iframe class=\"responsive-video\" src=\"https://www.youtube.com/embed/1fsGTnszses?si=TZeWnpUy2jFZdZUZ\" title=\"Real-world AI Failure Story: Delete a Production Database in 9 Seconds\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>\n\n<h2 class=\"post-section-kicker essay-section-kicker\">01. What the video discusses</h2>\n\n<p class=\"post-paragraph essay-paragraph\">This video tells the story of an AI coding agent that accidentally deleted a production database for a company called Pocket OS in just nine seconds. The incident occurred when an agent, tasked with routine work in a staging environment, encountered a credential mismatch and autonomously attempted to fix it by using a broadly authorized API token.</p>\n\n<p class=\"post-paragraph essay-paragraph\">-How a staging/production context mismatch turned routine cleanup into disaster<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-The 5-step failure chain that led to total data loss<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-Why the agent technically didn't break its own safety rules<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-Soft guardrails vs. hard boundaries — and why prompts alone aren't enough<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-Why traditional IAM wasn't built for autonomous agents<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-What \"shared blast radius\" means for your backup strategy<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-The real fix: scoped access, approval gates, and structural limits</p>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">02. Key takeaways from the incident</h2>\n\n<ul class=\"post-list essay-list\"><li><strong>Context Mismatch:</strong> The agent used staging tasks to access production environments because the API token lacked proper scope limitations.</li><li><strong>Soft vs. Hard Guardrails:</strong> System prompts (soft guardrails) were insufficient to prevent the destruction; hard boundaries, like human-in-the-loop approval processes, are necessary for high-risk actions.</li><li><strong>IAM Failures:</strong> Identity and access management (IAM) design failed because tokens were not scoped by operation, environment, or resource.</li><li><strong>Backup Strategy:</strong> The company's backups shared the same \"blast radius\" as the production data, meaning they were deleted alongside it, leaving only an outdated three-month-old recovery point.</li></ul>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">03. Preventive Measures</h2>\n\n<ul class=\"post-list essay-list\"><li><strong>Implement least privilege:</strong> Scope tokens by operation, resource, and environment.</li><li><strong>External approval:</strong> Destructive actions must require human authentication.</li><li><strong>Robust backups:</strong> Ensure backups are immutable, isolated from the production path, and tested regularly.</li><li><strong>Runtime monitoring:</strong> Watch for unusual agent activity to intervene before damage becomes irreversible.</li></ul>"
+    "content": "<div class=\"responsive-video\">\n  <iframe src=\"https://www.youtube.com/embed/1fsGTnszses?si=TZeWnpUy2jFZdZUZ\" title=\"Real-world AI Failure Story: Delete a Production Database in 9 Seconds\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>\n</div>\n\n<h2 class=\"post-section-kicker essay-section-kicker\">01. What the video discusses</h2>\n\n<p class=\"post-paragraph essay-paragraph\">This video tells the story of an AI coding agent that accidentally deleted a production database for a company called Pocket OS in just nine seconds. The incident occurred when an agent, tasked with routine work in a staging environment, encountered a credential mismatch and autonomously attempted to fix it by using a broadly authorized API token.</p>\n\n<p class=\"post-paragraph essay-paragraph\">-How a staging/production context mismatch turned routine cleanup into disaster<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-The 5-step failure chain that led to total data loss<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-Why the agent technically didn't break its own safety rules<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-Soft guardrails vs. hard boundaries — and why prompts alone aren't enough<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-Why traditional IAM wasn't built for autonomous agents<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-What \"shared blast radius\" means for your backup strategy<br></p>\n\n<p class=\"post-paragraph essay-paragraph\">-The real fix: scoped access, approval gates, and structural limits</p>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">02. Key takeaways from the incident</h2>\n\n<ul class=\"post-list essay-list\"><li><strong>Context Mismatch:</strong> The agent used staging tasks to access production environments because the API token lacked proper scope limitations.</li><li><strong>Soft vs. Hard Guardrails:</strong> System prompts (soft guardrails) were insufficient to prevent the destruction; hard boundaries, like human-in-the-loop approval processes, are necessary for high-risk actions.</li><li><strong>IAM Failures:</strong> Identity and access management (IAM) design failed because tokens were not scoped by operation, environment, or resource.</li><li><strong>Backup Strategy:</strong> The company's backups shared the same \"blast radius\" as the production data, meaning they were deleted alongside it, leaving only an outdated three-month-old recovery point.</li></ul>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">03. Preventive Measures</h2>\n\n<ul class=\"post-list essay-list\"><li><strong>Implement least privilege:</strong> Scope tokens by operation, resource, and environment.</li><li><strong>External approval:</strong> Destructive actions must require human authentication.</li><li><strong>Robust backups:</strong> Ensure backups are immutable, isolated from the production path, and tested regularly.</li><li><strong>Runtime monitoring:</strong> Watch for unusual agent activity to intervene before damage becomes irreversible.</li></ul>"
   },
   {
     "id": "2026-10-10-poverty-of-synthetic-ground-truth",
@@ -660,7 +701,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "draft",
     "date": "2026.10.10",
     "author": "Juan P. Giusepponi",
@@ -670,7 +713,15 @@
     "thumbnail": "assets/images/charts-graphs.gif",
     "image_alt": "Archival collage in black, white, and coral: a cracked TV test card, schematic lines, a gridded monolith, and torn, rusted scientific diagrams over gritty textures.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [
+      {
+        "path": "assets/images/charts-graphs.jpg",
+        "image": "assets/images/charts-graphs.jpg",
+        "thumbnail": "assets/images/charts-graphs.jpg",
+        "alt": "Archival collage in black, white, and coral: a cracked TV test card, schematic lines, a gridded monolith, and torn, rusted scientific diagrams over gritty textures.",
+        "title": ""
+      }
+    ],
     "links": [
       {
         "title": "CharXiv: Charting Gaps in Realistic Chart Understanding in Multimodal LLMs",
@@ -739,7 +790,9 @@
     "featured": true,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.10.10",
     "author": "Juan P. Giusepponi",
@@ -749,7 +802,7 @@
     "thumbnail": "assets/images/thumbnails/operational-images.webp",
     "image_alt": "An engraved human eye layered with digital circuit lines and pixel glitch effects in reddish-pink against a textured black background..",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [
+    "gallery-images": [
       {
         "path": "assets/images/operational_web.png",
         "image": "assets/images/operational_web.png",
@@ -831,7 +884,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.10.10",
     "author": "Juan P. Giusepponi",
@@ -841,7 +896,15 @@
     "thumbnail": "assets/images/thumbnails/brands-are-dead.webp",
     "image_alt": "Glitch art featuring the Rolling Stones lips and tongue logo in coral red, surrounded by fragmented icons of a shopping cart, retro TV, and bottle against a gritty black backdrop.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [
+      {
+        "path": "assets/images/brand-is-dead.jpg",
+        "image": "assets/images/brand-is-dead.jpg",
+        "thumbnail": "assets/images/thumbnails/brand-is-dead.webp",
+        "alt": "This digital illustration depicts a stylized scene of online shopping, featuring a shopping cart, silhouetted figures, and abstract geometric patterns in red and black tones. The composition blends urban imagery with fragmented shapes to convey the fast-paced and fragmented nature of e-commerce.",
+        "title": ""
+      }
+    ],
     "links": [
       {
         "title": "On Photography (Susan Sontag, 1977)",
@@ -910,7 +973,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.10.09",
     "author": "Juan P. Giusepponi",
@@ -920,7 +985,7 @@
     "thumbnail": "assets/images/thumbnails/knowledge-graphs.webp",
     "image_alt": "Architectural blueprint layered with black network nodes and digital glitch distortions in black, white, and coral-red tones.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [
       {
         "title": "Graphify - another knowledge graph repo",
@@ -976,7 +1041,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.10.09",
     "author": "Juan P. Giusepponi",
@@ -986,7 +1053,7 @@
     "thumbnail": "assets/images/thumbnails/groupe-mu.webp",
     "image_alt": "Coral red and black glitch art: fractured human figures dissolve and warp into printed circuit boards, technical schematics, and pixelated tears.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [
+    "gallery-images": [
       {
         "path": "assets/images/visual_semiotics.jpg",
         "image": "assets/images/visual_semiotics.jpg",
@@ -1053,7 +1120,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "draft",
     "date": "2026.10.06",
     "author": "Juan P. Giusepponi",
@@ -1063,7 +1132,7 @@
     "thumbnail": "assets/images/thumbnails/ailook1.webp",
     "image_alt": "Dithered toolkit interface graphic",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [
       {
         "title": "Official Documentation",
@@ -1112,7 +1181,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": false,
     "gallery": false,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.10.06",
     "author": "Juan P. Giusepponi",
@@ -1122,7 +1193,7 @@
     "thumbnail": "assets/images/marc-van-elburg.gif",
     "image_alt": "",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [
       {
         "title": "Mark Van Elburg's YouTube Channel",
@@ -1150,7 +1221,7 @@
       "art-of-the-day"
     ],
     "entities": null,
-    "content": "<iframe class=\"responsive-short\" src=\"https://www.youtube.com/embed/e00FwQ3fjKI\" title=\"the #%&*gH**+!! /? ! episode#7\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>\n\n<h2 class=\"post-section-kicker essay-section-kicker\">Some great comments from the instagram reel:</h2>\n\n<blockquote class=\"post-quote essay-quote\"><code>@___swampy</code> said <em>\"these always feel like you are scraping out dead braincells from the inside of my skull with a brillo pad. thank you.\"</em></blockquote>\n\n<blockquote class=\"post-quote essay-quote\"><code>@taxibre</code> said <em>\"YES YOU EXPLAINED THE NEW WAVE OF SURREALISM IN ART AND ITS IMPORTANCE SO WELL THANK YOU\"</em></blockquote>\n\n<blockquote class=\"post-quote essay-quote\"><code>@taiara_peter</code> said <em>\"The #!.$#\\*/^#?% keeps a close relation with the overthinking. Like an emotion trapped in the thinking\".</em></blockquote>"
+    "content": "<div class=\"responsive-short\">\n  <iframe src=\"https://www.youtube.com/embed/e00FwQ3fjKI\" title=\"the #%&*gH**+!! /? ! episode#7\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>\n</div>\n\n<h2 class=\"post-section-kicker essay-section-kicker\">Some great comments from the instagram reel:</h2>\n\n<blockquote class=\"post-quote essay-quote\"><code>@___swampy</code> said <em>\"these always feel like you are scraping out dead braincells from the inside of my skull with a brillo pad. thank you.\"</em></blockquote>\n\n<blockquote class=\"post-quote essay-quote\"><code>@taxibre</code> said <em>\"YES YOU EXPLAINED THE NEW WAVE OF SURREALISM IN ART AND ITS IMPORTANCE SO WELL THANK YOU\"</em></blockquote>\n\n<blockquote class=\"post-quote essay-quote\"><code>@taiara_peter</code> said <em>\"The #!.$#\\*/^#?% keeps a close relation with the overthinking. Like an emotion trapped in the thinking\".</em></blockquote>"
   },
   {
     "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
@@ -1175,7 +1246,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "draft",
     "date": "2026.10.03",
     "author": "Juan P. Giusepponi",
@@ -1185,7 +1258,7 @@
     "thumbnail": "assets/images/thumbnails/telebodies.webp",
     "image_alt": "Red-haloed human silhouette amid a black-and-white glitch art collage of static CRT screens, circuit boards, pill icons, and binary code.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [
       {
         "title": "1. Preciado, Testo Junkie: Sex, Drugs, and Biopolitics in the Pharmacopornographic Era (2008)",
@@ -1421,7 +1494,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.10.03",
     "author": "Juan P. Giusepponi",
@@ -1431,7 +1506,22 @@
     "thumbnail": "assets/images/telebodies.gif",
     "image_alt": "Glitch-art collage in black, white, and coral red featuring human silhouettes, brain MRI scans, chemical structures, circuit traces, and industrial gears.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [
+      {
+        "path": "assets/images/preciado-bodies.jpg",
+        "image": "assets/images/preciado-bodies.jpg",
+        "thumbnail": "assets/images/thumbnails/preciado-bodies.webp",
+        "alt": ".",
+        "title": ""
+      },
+      {
+        "path": "assets/images/telebodies.jpg",
+        "image": "assets/images/telebodies.jpg",
+        "thumbnail": "assets/images/thumbnails/telebodies.webp",
+        "alt": "Glitch-art collage in black, white, and coral red featuring human silhouettes, brain MRI scans, chemical structures, circuit traces, and industrial gears",
+        "title": ""
+      }
+    ],
     "links": [
       {
         "title": "Testo Yonki: Sex, Drugs, and Biopolitics in the Pharmacopornographic Era (Paul B. Preciado, 2008)",
@@ -1505,7 +1595,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.10.02",
     "author": "Juan P. Giusepponi",
@@ -1515,7 +1607,7 @@
     "thumbnail": "assets/images/thumbnails/ai_tamagotchi.webp",
     "image_alt": "Glitch art in black, white, and coral red featuring cute cartoon creatures, a robot, and a heart amid heavy digital artifacts, scanlines, and pixel noise.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [],
     "backlinks": [
       {
@@ -1560,7 +1652,9 @@
     "featured": true,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.10.02",
     "author": "Juan P. Giusepponi",
@@ -1570,7 +1664,7 @@
     "thumbnail": "assets/images/thumbnails/cute_ai.webp",
     "image_alt": "Glitch art in black, white, and coral pink featuring cute cartoon creatures, a robot, and a heart amid heavy digital artifacts, scanlines, and pixel noise.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [
       {
         "title": "[1] Studies in Animal and Human Behavior (Konrad Lorenz, 1971)",
@@ -1642,7 +1736,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.10.02",
     "author": "Juan P. Giusepponi",
@@ -1652,7 +1748,7 @@
     "thumbnail": "assets/images/thumbnails/5-psychological-effects.webp",
     "image_alt": "Glitch art collage in black and coral red showing cracked human silhouettes, an exposed brain, a maze screen, a padlock, and a wireframe hand holding a phone.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [
       {
         "title": "Downloadable Cheatsheet",
@@ -1705,7 +1801,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.09.30",
     "author": "Juan P. Giusepponi",
@@ -1715,7 +1813,7 @@
     "thumbnail": "assets/images/thumbnails/relate_anything.webp",
     "image_alt": "High-contrast B&W art of a seated guitarist beside a speaker, overlaid with coral-red diagrammatic outlines, directional arrows, and blank label blocks.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [
       {
         "title": "Relate Anything GitHub Repository",
@@ -1773,7 +1871,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.09.29",
     "author": "Juan P. Giusepponi",
@@ -1783,7 +1883,7 @@
     "thumbnail": "assets/images/thumbnails/visual_bandwidth.webp",
     "image_alt": "Red-toned glitch artwork of a close-up eye overlaid with static and scan lines. The pupil reflects an old television screen displaying a person's face.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [
       {
         "title": "Predictive Coding in the Visual Cortex",
@@ -1839,7 +1939,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.09.28",
     "author": "Juan P. Giusepponi",
@@ -1849,7 +1951,7 @@
     "thumbnail": "assets/images/thumbnails/shanzhai.webp",
     "image_alt": "Archival artwork exploring transformation and fluid memory.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [
       {
         "title": "Shanzhai: Deconstruction in Chinese (Byung-Chul Han, MIT Press 2017)",
@@ -1891,7 +1993,9 @@
     "featured": true,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.09.28",
     "author": "Juan P. Giusepponi",
@@ -1901,7 +2005,7 @@
     "thumbnail": "assets/images/thumbnails/perception_eval.webp",
     "image_alt": "In coral red and black, vintage engraved eyes are fractured and obscured by corrupted UI windows, pixel grids, and degraded scanline textures.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [
       {
         "title": "Art Perception: Human Visual System and the Perception of Art (Cycleback, 2014)",
@@ -1964,7 +2068,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.09.28",
     "author": "Juan P. Giusepponi",
@@ -1974,7 +2080,15 @@
     "thumbnail": "assets/images/donna-haraway.gif",
     "image_alt": "Coral-red pixel glitches and neural diagrams bleed across a woman making hand-binoculars, fusing her with a jellyfish and fractured brain scans.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [
+      {
+        "path": "assets/images/donna_haraway.jpg",
+        "image": "assets/images/donna_haraway.jpg",
+        "thumbnail": "assets/images/thumbnails/donna_haraway.webp",
+        "alt": "Coral-red pixel glitches and neural diagrams bleed across a woman making hand-binoculars, fusing her with a jellyfish and fractured brain scans.",
+        "title": ""
+      }
+    ],
     "links": [
       {
         "title": "A Cyborg Manifesto: Science, Technology, and Socialist-Feminism in the Late 20th Century (Haraway, 1985)",
@@ -2031,7 +2145,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.09.26",
     "author": "Juan P. Giusepponi",
@@ -2041,7 +2157,7 @@
     "thumbnail": "assets/images/thumbnails/harvard1.webp",
     "image_alt": "Digital collage of a computer science class",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [],
     "backlinks": [],
     "tags": [
@@ -2081,7 +2197,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "draft",
     "date": "2026.09.26",
     "author": "Juan P. Giusepponi",
@@ -2091,7 +2209,7 @@
     "thumbnail": "assets/images/thumbnails/foucault-borges.webp",
     "image_alt": "Red and black archival glitch collage featuring Michel Foucault inside a fractured frame alongside Jorge Luis Borges standing in a circular labyrinth with open books.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [
       {
         "title": "The Order of Things: An Archaeology of the Human Sciences (1966)",
@@ -2158,7 +2276,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": false,
     "status": "published",
     "date": "2026.09.26",
     "author": "Juan P. Giusepponi",
@@ -2168,7 +2288,7 @@
     "thumbnail": "assets/images/foucault-borges.gif",
     "image_alt": "Red and black archival glitch collage featuring Michel Foucault inside a fractured frame alongside Jorge Luis Borges standing in a circular labyrinth with open books.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [
+    "gallery-images": [
       {
         "path": "assets/images/foucault-borges.jpg",
         "image": "assets/images/foucault-borges.jpg",
@@ -2245,7 +2365,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.09.26",
     "author": "Juan P. Giusepponi",
@@ -2255,7 +2377,15 @@
     "thumbnail": "assets/images/thumbnails/this-is-not-a-human.webp",
     "image_alt": "Ceci n'est pas un être humain.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [
+      {
+        "path": "assets/images/operational-surveillance.gif",
+        "image": "assets/images/operational-surveillance.gif",
+        "thumbnail": "assets/images/operational-surveillance.gif",
+        "alt": "Eye traps human figure.",
+        "title": ""
+      }
+    ],
     "links": [],
     "backlinks": [
       {
@@ -2300,7 +2430,9 @@
     "featured": true,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.09.25",
     "author": "Juan P. Giusepponi",
@@ -2310,7 +2442,7 @@
     "thumbnail": "assets/images/thumbnails/turing-ai.webp",
     "image_alt": "Coral-pink and black glitch collage featuring Alan Turing, surrounded by brain scans, circuit boards, Rorschach inkblots, and digital artifacts.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [
       {
         "title": "e-flux journal: Abnormal Encephalization in the Age of Machine Learning",
@@ -2382,7 +2514,9 @@
     "featured": false,
     "shareable": true,
     "allow_embed": true,
+    "in-gallery": true,
     "gallery": true,
+    "image-in-gallery": true,
     "status": "published",
     "date": "2026.09.24",
     "author": "Juan P. Giusepponi",
@@ -2392,7 +2526,7 @@
     "thumbnail": "assets/images/thumbnails/llms-dont-think.webp",
     "image_alt": "Digital art of a glowing red human brain centrally positioned against a dark background of glitchy binary code, circuit board patterns, and pixelated human face silhouettes.",
     "aspect_ratio": "h-tall-1",
-    "gallery_images": [],
+    "gallery-images": [],
     "links": [
       {
         "title": "A Path Towards Autonomous Machine Intelligence (Yann LeCun, 2022)",

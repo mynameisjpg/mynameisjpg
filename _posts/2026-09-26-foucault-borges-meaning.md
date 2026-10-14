@@ -65,8 +65,9 @@ canonical_url: ""
 image:
   path: "assets/images/foucault-borges.gif"
   alt: "Red and black archival glitch collage featuring Michel Foucault inside a fractured frame alongside Jorge Luis Borges standing in a circular labyrinth with open books."
+  in-gallery: false
 
-gallery_images:
+gallery-images:
   - path: "assets/images/foucault-borges.jpg"
     alt: "Red and black archival glitch collage featuring Michel Foucault inside a fractured frame alongside Jorge Luis Borges standing in a circular labyrinth with open books"
 ---

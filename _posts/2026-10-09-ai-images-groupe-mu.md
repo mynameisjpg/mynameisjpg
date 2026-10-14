@@ -56,7 +56,7 @@ image:
   path: "assets/images/groupe-mu.png"
   alt: "Coral red and black glitch art: fractured human figures dissolve and warp into printed circuit boards, technical schematics, and pixelated tears."
 
-gallery_images:
+gallery-images:
   - path: "assets/images/visual_semiotics.jpg"
     alt: "Glitch art depiction of a pixelated abstract tree"
 ---

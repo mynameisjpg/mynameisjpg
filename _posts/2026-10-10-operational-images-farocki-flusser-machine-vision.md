@@ -65,7 +65,7 @@ image:
   path: "assets/images/operational-images.jpg"
   alt: "An engraved human eye layered with digital circuit lines and pixel glitch effects in reddish-pink against a textured black background.."
 
-gallery_images:
+gallery-images:
   - path: "assets/images/operational_web.png"
     alt: "Abstract glitch design"
 ---

@@ -866,24 +866,100 @@
 }
 
 /* Responsive Video & Shorts Embeds */
-.responsive-short {
-  width: 60%;
-  max-height: 0.75vph;
-  aspect-ratio: 9 / 16;
+.responsive-video,
+.responsive-video-wrap,
+.video-embed-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 1280px;
+  aspect-ratio: 16 / 9;
+  margin: 1.75rem 0 2rem 0;
+  border-radius: var(--radius-md, 8px);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.1));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* When .responsive-video is applied directly to an iframe or video */
+iframe.responsive-video,
+video.responsive-video {
+  display: block;
+  width: 100%;
+  max-width: 1280px;
+  aspect-ratio: 16 / 9;
   height: auto;
-  align-self: center;
+  margin: 1.75rem 0 2rem 0;
   border-radius: var(--radius-md, 8px);
   border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.1));
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
-.responsive-video {
+/* When used as a container wrapper around an iframe or video */
+.responsive-video > iframe,
+.responsive-video > video,
+.responsive-video-wrap > iframe,
+.responsive-video-wrap > video,
+.video-embed-container > iframe,
+.video-embed-container > video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 1280px;
-  aspect-ratio: 16 / 9;
-  height: auto;
+  height: 100%;
+  border: none;
+  border-radius: inherit;
+}
+
+.responsive-short {
+  position: relative;
+  display: block;
+  width: 60%;
+  max-height: 0.75vph;
+  aspect-ratio: 9 / 16;
+  margin: 1.75rem auto 2rem auto;
   border-radius: var(--radius-md, 8px);
+  overflow: hidden;
   border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.1));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+iframe.responsive-short,
+video.responsive-short {
+  position: static;
+  display: block;
+  width: 60%;
+  max-height: 0.75vph;
+  aspect-ratio: 9 / 16;
+  height: auto;
+  margin: 1.75rem auto 2rem auto;
+}
+
+.responsive-short > iframe,
+.responsive-short > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: inherit;
+}
+
+.responsive-short-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 1.75rem auto 2rem auto;
+}
+
+.responsive-short-wrap > iframe {
+  width: 60%;
+  max-height: 0.75vph;
+  aspect-ratio: 9 / 16;
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.1));
+  border-radius: var(--radius-md, 8px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 

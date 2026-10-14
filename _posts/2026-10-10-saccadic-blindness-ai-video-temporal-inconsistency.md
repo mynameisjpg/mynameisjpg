@@ -60,7 +60,7 @@ image:
   path: "assets/images/ai-video-blindness.gif"
   alt: "Forensic diagram of an anatomical eye with motion vector overlays alongside a melting digital video glitch in coral red and charcoal."
 
-gallery_images:
+gallery-images:
   - path: "assets/images/saccadic-vision.jpg"
     alt: "Saccadic vision diagram"
 ---

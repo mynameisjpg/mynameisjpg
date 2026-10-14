@@ -310,7 +310,24 @@ def clean_and_convert_markdown(md_text):
                         if "-->" in lines[i]:
                             break
                         i += 1
-                html_blocks.append("\n".join(comment_lines))
+            elif stripped.startswith("<iframe"):
+                iframe_lines = [line]
+                if not stripped.endswith("</iframe>"):
+                    i += 1
+                    while i < len(lines):
+                        iframe_lines.append(lines[i])
+                        if "</iframe>" in lines[i]:
+                            break
+                        i += 1
+                raw_iframe = "\n".join(iframe_lines).strip()
+                if "responsive-video" in raw_iframe:
+                    clean_iframe = re.sub(r'\s*class="[^"]*responsive-video[^"]*"', '', raw_iframe)
+                    html_blocks.append(f'<div class="responsive-video">\n  {clean_iframe}\n</div>')
+                elif "responsive-short" in raw_iframe:
+                    clean_iframe = re.sub(r'\s*class="[^"]*responsive-short[^"]*"', '', raw_iframe)
+                    html_blocks.append(f'<div class="responsive-short">\n  {clean_iframe}\n</div>')
+                else:
+                    html_blocks.append(raw_iframe)
                 i += 1
                 continue
             else:

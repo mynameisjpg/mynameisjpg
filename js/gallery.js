@@ -21,11 +21,21 @@ document.addEventListener("DOMContentLoaded", () => {
       const isPublished =
         !post.status || post.status.toLowerCase() === "published";
       const isGalleryAllowed =
-        post.gallery !== false && post.in_gallery !== false;
+        post["in-gallery"] !== false &&
+        post.in_gallery !== false &&
+        post.gallery !== false;
       if (!isPublished || !isGalleryAllowed) return;
 
-      // 1. Primary Cover Artwork (if valid)
+      // 1. Primary Cover Artwork (if valid and allowed in gallery)
+      const isCoverAllowed =
+        post["image-in-gallery"] !== false &&
+        post.image_in_gallery !== false &&
+        post["in-gallery-cover"] !== false &&
+        post.in_gallery_cover !== false &&
+        post.gallery_cover !== false;
+
       if (
+        isCoverAllowed &&
         post.image &&
         typeof post.image === "string" &&
         post.image.trim() !== ""
@@ -47,9 +57,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
 
-      // 2. Additional Gallery Images from YAML (gallery_images)
-      if (Array.isArray(post.gallery_images)) {
-        post.gallery_images.forEach((gImg, idx) => {
+      // 2. Additional Gallery Images from YAML (gallery-images)
+      const galleryPlates = post["gallery-images"] || post.gallery_images;
+      if (Array.isArray(galleryPlates)) {
+        galleryPlates.forEach((gImg, idx) => {
+          const isPlateAllowed =
+            typeof gImg === "object"
+              ? gImg["in-gallery"] !== false &&
+                gImg.in_gallery !== false &&
+                gImg.gallery !== false
+              : true;
+          if (!isPlateAllowed) return;
+
           const imgPath =
             typeof gImg === "string" ? gImg : gImg?.path || gImg?.image;
           if (

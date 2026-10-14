@@ -64,7 +64,6 @@ def _resolve_taxonomy(meta, canonical_pillars):
         "pillar_id": pillar_id,
         "subtopic": subtopic,
         "subtopic_id": subtopic_id,
-        "matched_pil": matched_pil,
     }
 
 
@@ -120,9 +119,17 @@ def _resolve_foundations(meta, canonical_foundations=None):
 
 def _resolve_images(meta):
     img_data = meta.get("image")
+    image_in_gallery = True
+
     if isinstance(img_data, dict):
         image = img_data.get("path", "")
         img_alt = img_data.get("alt", "")
+        if "in-gallery" in img_data:
+            image_in_gallery = _to_bool(img_data.get("in-gallery"))
+        elif "in_gallery" in img_data:
+            image_in_gallery = _to_bool(img_data.get("in_gallery"))
+        elif "gallery" in img_data:
+            image_in_gallery = _to_bool(img_data.get("gallery"))
     elif isinstance(img_data, str):
         image = img_data
         img_alt = meta.get("image_alt") or meta.get("alt", "")
@@ -130,13 +137,34 @@ def _resolve_images(meta):
         image = meta.get("cover_image", "")
         img_alt = meta.get("image_alt") or meta.get("alt", "")
 
+    # Top-level overrides for cover image in gallery
+    if "in-gallery-cover" in meta:
+        image_in_gallery = _to_bool(meta.get("in-gallery-cover"))
+    elif "in_gallery_cover" in meta:
+        image_in_gallery = _to_bool(meta.get("in_gallery_cover"))
+    elif "cover_in_gallery" in meta:
+        image_in_gallery = _to_bool(meta.get("cover_in_gallery"))
+    elif "gallery_cover" in meta:
+        image_in_gallery = _to_bool(meta.get("gallery_cover"))
+
     thumbnail = generate_thumbnail(image) if image else ""
 
     gallery_imgs = []
-    for g in meta.get("gallery_images") or []:
+    raw_gallery = meta.get("gallery-images") or []
+    for g in raw_gallery:
         g_path = (g.get("path") or g.get("image") or "") if isinstance(g, dict) else str(g)
         g_path = g_path.strip()
         if not g_path:
+            continue
+        g_in_gallery = True
+        if isinstance(g, dict):
+            if "in-gallery" in g:
+                g_in_gallery = _to_bool(g.get("in-gallery"))
+            elif "in_gallery" in g:
+                g_in_gallery = _to_bool(g.get("in_gallery"))
+            elif "gallery" in g:
+                g_in_gallery = _to_bool(g.get("gallery"))
+        if not g_in_gallery:
             continue
         g_alt = g.get("alt", "").strip() if isinstance(g, dict) else ""
         g_title = g.get("title", "").strip() if isinstance(g, dict) else ""
@@ -153,7 +181,8 @@ def _resolve_images(meta):
         "image_alt": img_alt,
         "thumbnail": thumbnail,
         "aspect_ratio": meta.get("aspect_ratio") or "h-tall-1",
-        "gallery_images": gallery_imgs,
+        "image_in_gallery": image_in_gallery,
+        "gallery-images": gallery_imgs,
     }
 
 
@@ -226,7 +255,9 @@ def _parse_single_post(file_path: Path, canonical_pillars, canonical_foundations
         "featured": is_featured,
         "shareable": _to_bool(meta.get("shareable")),
         "allow_embed": _to_bool(meta.get("allow_embed")),
-        "gallery": _to_bool(meta.get("gallery", meta.get("in_gallery"))),
+        "in-gallery": _to_bool(meta.get("in-gallery") if "in-gallery" in meta else (meta.get("in_gallery") if "in_gallery" in meta else meta.get("gallery"))),
+        "gallery": _to_bool(meta.get("in-gallery") if "in-gallery" in meta else (meta.get("in_gallery") if "in_gallery" in meta else meta.get("gallery"))),
+        "image-in-gallery": img["image_in_gallery"],
         "status": meta.get("status", "published"),
         "date": _format_date(meta.get("date")),
         "author": meta.get("author", "Juan P. Giusepponi"),
@@ -236,7 +267,7 @@ def _parse_single_post(file_path: Path, canonical_pillars, canonical_foundations
         "thumbnail": img["thumbnail"],
         "image_alt": img["image_alt"],
         "aspect_ratio": img["aspect_ratio"],
-        "gallery_images": img["gallery_images"],
+        "gallery-images": img["gallery-images"],
         "links": links,
         "backlinks": backlinks,
         "tags": [
@@ -307,17 +338,29 @@ def watch_posts():
     """Watches _posts/ folder and auto-recompiles on change."""
     print(f"[WATCHER ACTIVE] Monitoring {POSTS_DIR} for changes... (Press Ctrl+C to stop)")
     compile_posts()
-    last_mtimes = {}
+    last_mtimes = {f: f.stat().st_mtime for f in POSTS_DIR.glob("*.md")}
+    if PILLARS_JSON.exists():
+        last_mtimes[PILLARS_JSON] = PILLARS_JSON.stat().st_mtime
     
     try:
         while True:
             changed = False
-            for file_path in POSTS_DIR.glob("*.md"):
+            current_files = set(POSTS_DIR.glob("*.md"))
+            
+            # Check for new or modified markdown files
+            for file_path in current_files:
                 mtime = file_path.stat().st_mtime
                 if file_path not in last_mtimes or last_mtimes[file_path] != mtime:
                     last_mtimes[file_path] = mtime
                     changed = True
 
+            # Check for deleted markdown files
+            deleted_files = [f for f in last_mtimes if f != PILLARS_JSON and f not in current_files]
+            for file_path in deleted_files:
+                del last_mtimes[file_path]
+                changed = True
+
+            # Check pillars.json
             if PILLARS_JSON.exists():
                 p_mtime = PILLARS_JSON.stat().st_mtime
                 if PILLARS_JSON not in last_mtimes or last_mtimes[PILLARS_JSON] != p_mtime:
@@ -336,4 +379,6 @@ if __name__ == "__main__":
     if "--watch" in sys.argv or "-w" in sys.argv:
         watch_posts()
     else:
-        compile_posts()
+        success = compile_posts()
+        if not success:
+            sys.exit(1)

@@ -37,6 +37,7 @@ allow_embed: true
 image:
   path: "assets/images/wallpaper-gallery.gif"
   alt: "Preview of the gallery page"
+  in-gallery: false
 links:
   - title: "Want untitled wallpapers for your mobile?"
     url: "https://mynameisjpg.github.io/mynameisjpg/gallery.html"
