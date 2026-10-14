@@ -359,6 +359,93 @@
     "content": "<p class=\"post-paragraph essay-paragraph\">The <a href=\"https://mynameisjpg.github.io/mynameisjpg/gallery.html\">art gallery</a> shows all designs and artworks produced by Untitled.jpg, with free download links available.</p>\n\n<br>\n\n<a href=\"https://mynameisjpg.github.io/mynameisjpg/gallery.html\"><img src=\"assets/images/gallery-ss.png\" width=\"100%\"/></a>"
   },
   {
+    "id": "2026-10-14-the-rotating-snakes-illusion",
+    "slug": "2026-10-14-the-rotating-snakes-illusion",
+    "sys_id": "SYS_202610_BOO",
+    "title": "The “Rotating Snakes” Illusion",
+    "subtitle": "Look away, and watch them come alive.",
+    "excerpt": "Demonstration of Akiyoshi Kitaoka's optical illusion, ‘Rotating Snake’",
+    "format": "BOOKMARK",
+    "category": "",
+    "media": "WEBSITE",
+    "source": "Michael Bach's Optical Illusion Archive",
+    "url": "https://michaelbach.de/ot/mot-snakes/",
+    "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+    "pillar_id": "visual-perception",
+    "foundations": [
+      "vision",
+      "perception",
+      "design",
+      "psychology"
+    ],
+    "subtopic": "VISUAL ILLUSIONS AND OPTICAL PARADOXES",
+    "subtopic_id": "visual-illusions",
+    "theme": "light",
+    "featured": false,
+    "shareable": true,
+    "allow_embed": true,
+    "in-gallery": true,
+    "gallery": true,
+    "image-in-gallery": true,
+    "status": "published",
+    "date": "2026.10.14",
+    "author": "Juan P. Giusepponi",
+    "read_time": "2 MIN",
+    "via": "Michael Bach's Optical Illusion Archive",
+    "image": "assets/images/rotating-snakes.png",
+    "thumbnail": "assets/images/thumbnails/rotating-snakes.webp",
+    "image_alt": "Rotating Snakes Illusion",
+    "aspect_ratio": "h-tall-1",
+    "gallery-images": [],
+    "links": [
+      {
+        "title": "The “Rotating Snakes” Illusion",
+        "url": "https://michaelbach.de/ot/mot-snakes/",
+        "type": "WEBSITE",
+        "desc": ""
+      },
+      {
+        "title": "Perception Journal Issue #11",
+        "url": "https://journals.sagepub.com/doi/epub/10.1177/2041669520958025",
+        "type": "PAPER",
+        "desc": "Bach M & Atala-Gérard L (2020) The Rotating Snakes Illusion is a straightforward consequence of non-linearity in arrays of standard motion detectors, i-Perception 11(5), 1–9 [→PDF]"
+      },
+      {
+        "title": "Richard L. Gregory and Priscilla F. Heard",
+        "url": "https://www.richardgregory.org/papers/visual_dissoc/visual-dissociations_p1.htm",
+        "type": "ARTICLE",
+        "desc": "Visual dissociations of movement, position, and stereo depth: Some phenomenal phenomena"
+      }
+    ],
+    "backlinks": [
+      {
+        "slug": "#2026-09-29-visual-bandwidth-bottleneck",
+        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
+        "note": "The retina captures 10^7 bits per second, but consciousness processes barely 25. Here is how your visual system fakes a continuous reality."
+      },
+      {
+        "slug": "#2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency",
+        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
+        "note": "Your eyes go blind several times a second. Generative video quietly relies on that flaw."
+      }
+    ],
+    "tags": [
+      "vision",
+      "illusion",
+      "visual-illusions",
+      "optical-illusions",
+      "motion",
+      "time",
+      "movement",
+      "perception",
+      "design",
+      "psychology",
+      "design-psychology"
+    ],
+    "entities": null,
+    "content": "<h2 class=\"post-section-kicker essay-section-kicker\">01. The Illusion At Work</h2>\n\n<img src=\"assets/images/rotating-snakes.png\" alt=\"Media illustration\" width=\"80%\"/>\n\n<h2 class=\"post-section-kicker essay-section-kicker\">02. Background</h2>\n\n<p class=\"post-paragraph essay-paragraph\">The image above is modified just a little from the original “Rotating Snakes” by Akiyoshi Kitaoka. It demonstrates strong (and beautiful) rotation of the “wheels”, occurring in relation to eye movements. On steady fixation, the effect vanishes.</p>\n\n<h2 class=\"post-section-kicker essay-section-kicker\">03. Comment</h2>\n\n<p class=\"post-paragraph essay-paragraph\">As Kitaoka & Ashida (2003) describe,<strong> asymmetric luminance steps</strong> are required. Gregory & Heard (1983) were the first to describe that asymmetric luminance steps cause illusory movement. The picture on the right shows the sequence: …–light(yellow)–white–dark(blue)–black–… The sequence can be manipulated <a href=\"https://michaelbach.de/ot/mot-snakesLum/index.html\" target=\"_blank\" rel=\"noopener noreferrer\">in this variant</a>.</p>\n\n<p class=\"post-paragraph essay-paragraph\">We recently (2020) calculated a simple model showing that this illusion is a trivial consequence when you couple motion detectors into arrays with a little non-linearity. The latter, combined with the asymmetric(!) luminance sequence in the Snakes, prevents full cancellation of the local motion signals when saccading over the image. This model also predicts our unexpected finding from 2017 that with certain luminance relations the wheels can turn in the opposite direction (<a href=\"https://doi.org/10.1177/2041669517691779\" target=\"_blank\" rel=\"noopener noreferrer\">Atala-Gérard & Bach</a>).</p>"
+  },
+  {
     "id": "2026-10-14-naomi-klein-end-times-fascism-doomscroll",
     "slug": "2026-10-14-naomi-klein-end-times-fascism-doomscroll",
     "sys_id": "SYS_202610_BOO",

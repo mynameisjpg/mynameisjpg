@@ -224,7 +224,7 @@
     "name": "Design",
     "label": "Design",
     "type": "foundation",
-    "count": 4,
+    "count": 5,
     "posts": [
       {
         "id": "the-2d-vault",
@@ -255,6 +255,22 @@
         "pillar": "ART WORTH SHARING",
         "subtopic": "GRAPHIC DESIGN",
         "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      },
+      {
+        "id": "2026-10-14-the-rotating-snakes-illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "title": "The “Rotating Snakes” Illusion",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "vision",
+          "perception",
+          "design",
+          "psychology"
+        ],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "VISUAL ILLUSIONS AND OPTICAL PARADOXES",
+        "url": "posts/the-rotating-snakes-illusion.html"
       },
       {
         "id": "2026-10-10-images-are-dead",
@@ -303,6 +319,13 @@
         "date": "2026.10.14"
       },
       {
+        "title": "The “Rotating Snakes” Illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "format": "BOOKMARK",
+        "url": "posts/the-rotating-snakes-illusion.html",
+        "date": "2026.10.14"
+      },
+      {
         "title": "Images are Dead. Brands Should Know.",
         "slug": "images-are-dead",
         "format": "ESSAY",
@@ -321,13 +344,15 @@
     "pillars": [
       "ART WORTH SHARING",
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-      "Philosophy of the Image"
+      "Philosophy of the Image",
+      "VISUAL PERCEPTION & PSYCHOPHYSICS"
     ],
     "subtopics": [
       "ART VAULTS",
       "EPISTEMOLOGY OF REPRESENTATION",
       "GRAPHIC DESIGN",
-      "MODES OF SEEING AND VISUAL SEMIOTICS"
+      "MODES OF SEEING AND VISUAL SEMIOTICS",
+      "VISUAL ILLUSIONS AND OPTICAL PARADOXES"
     ],
     "order": 2,
     "description": "Interface design, visual architecture, usability heuristics, product systems, and aesthetic mechanics.",
@@ -489,7 +514,7 @@
     "name": "Perception",
     "label": "Perception",
     "type": "foundation",
-    "count": 4,
+    "count": 5,
     "posts": [
       {
         "id": "the-music-vault",
@@ -548,6 +573,22 @@
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-2d-vault.html"
+      },
+      {
+        "id": "2026-10-14-the-rotating-snakes-illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "title": "The “Rotating Snakes” Illusion",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "vision",
+          "perception",
+          "design",
+          "psychology"
+        ],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "VISUAL ILLUSIONS AND OPTICAL PARADOXES",
+        "url": "posts/the-rotating-snakes-illusion.html"
       }
     ],
     "links": [
@@ -578,15 +619,24 @@
         "format": "BOOKMARK",
         "url": "posts/the-2d-vault.html",
         "date": "2026.10.14"
+      },
+      {
+        "title": "The “Rotating Snakes” Illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "format": "BOOKMARK",
+        "url": "posts/the-rotating-snakes-illusion.html",
+        "date": "2026.10.14"
       }
     ],
     "foundations": [],
     "pillars": [
       "ART WORTH SHARING",
+      "VISUAL PERCEPTION & PSYCHOPHYSICS",
       "Visual Perception"
     ],
     "subtopics": [
-      "ART VAULTS"
+      "ART VAULTS",
+      "VISUAL ILLUSIONS AND OPTICAL PARADOXES"
     ],
     "order": 4,
     "description": "Biological sensory mechanics, psychophysics, predictive processing, and synthetic machine sight.",
@@ -597,8 +647,24 @@
     "name": "Psychology",
     "label": "Psychology",
     "type": "foundation",
-    "count": 1,
+    "count": 2,
     "posts": [
+      {
+        "id": "2026-10-14-the-rotating-snakes-illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "title": "The “Rotating Snakes” Illusion",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "vision",
+          "perception",
+          "design",
+          "psychology"
+        ],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "VISUAL ILLUSIONS AND OPTICAL PARADOXES",
+        "url": "posts/the-rotating-snakes-illusion.html"
+      },
       {
         "id": "2026-10-02-5-psychology-effects-used-in-app-design",
         "slug": "5-psychology-effects-used-in-app-design",
@@ -615,6 +681,13 @@
     ],
     "links": [
       {
+        "title": "The “Rotating Snakes” Illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "format": "BOOKMARK",
+        "url": "posts/the-rotating-snakes-illusion.html",
+        "date": "2026.10.14"
+      },
+      {
         "title": "5 Psychology Effects Used in App Design",
         "slug": "5-psychology-effects-used-in-app-design",
         "format": "NOTE",
@@ -629,7 +702,8 @@
       "Visual Perception"
     ],
     "subtopics": [
-      "COGNITIVE AND VISUAL BIASES"
+      "COGNITIVE AND VISUAL BIASES",
+      "VISUAL ILLUSIONS AND OPTICAL PARADOXES"
     ],
     "order": 5,
     "description": "Cognitive biases, Gestalt pattern completion, attentional bottlenecks, and behavioral product hooks.",
@@ -659,8 +733,24 @@
     "name": "Vision",
     "label": "Vision",
     "type": "foundation",
-    "count": 4,
+    "count": 5,
     "posts": [
+      {
+        "id": "2026-10-14-the-rotating-snakes-illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "title": "The “Rotating Snakes” Illusion",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "vision",
+          "perception",
+          "design",
+          "psychology"
+        ],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "VISUAL ILLUSIONS AND OPTICAL PARADOXES",
+        "url": "posts/the-rotating-snakes-illusion.html"
+      },
       {
         "id": "2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
@@ -718,6 +808,13 @@
     ],
     "links": [
       {
+        "title": "The “Rotating Snakes” Illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "format": "BOOKMARK",
+        "url": "posts/the-rotating-snakes-illusion.html",
+        "date": "2026.10.14"
+      },
+      {
         "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "format": "NOTE",
@@ -756,7 +853,8 @@
     ],
     "subtopics": [
       "ANATOMY AND PSYCHOPHYSICS OF VISION",
-      "MODES OF SEEING AND VISUAL SEMIOTICS"
+      "MODES OF SEEING AND VISUAL SEMIOTICS",
+      "VISUAL ILLUSIONS AND OPTICAL PARADOXES"
     ],
     "order": 7,
     "description": "Human ocular mechanics, computer vision, foveal resolution, optical illusions, and visual rendering.",
@@ -1784,8 +1882,24 @@
     "name": "Visual Perception",
     "label": "Visual Perception",
     "type": "pillar",
-    "count": 4,
+    "count": 5,
     "posts": [
+      {
+        "id": "2026-10-14-the-rotating-snakes-illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "title": "The “Rotating Snakes” Illusion",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "vision",
+          "perception",
+          "design",
+          "psychology"
+        ],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "VISUAL ILLUSIONS AND OPTICAL PARADOXES",
+        "url": "posts/the-rotating-snakes-illusion.html"
+      },
       {
         "id": "2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
@@ -1839,6 +1953,13 @@
     ],
     "links": [
       {
+        "title": "The “Rotating Snakes” Illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "format": "BOOKMARK",
+        "url": "posts/the-rotating-snakes-illusion.html",
+        "date": "2026.10.14"
+      },
+      {
         "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
         "slug": "saccadic-blindness-ai-video-temporal-inconsistency",
         "format": "NOTE",
@@ -1869,6 +1990,7 @@
     ],
     "foundations": [
       "Analysis",
+      "Design",
       "Perception",
       "Psychology",
       "Vision"
@@ -2970,6 +3092,51 @@
     ],
     "pillars": [
       "AI PERCEPTION & REPRESENTATION"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
+    "id": "subtopic-visual-illusions",
+    "name": "VISUAL ILLUSIONS AND OPTICAL PARADOXES",
+    "label": "VISUAL ILLUSIONS AND OPTICAL PARADOXES",
+    "type": "subtopic",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-14-the-rotating-snakes-illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "title": "The “Rotating Snakes” Illusion",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "vision",
+          "perception",
+          "design",
+          "psychology"
+        ],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "VISUAL ILLUSIONS AND OPTICAL PARADOXES",
+        "url": "posts/the-rotating-snakes-illusion.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The “Rotating Snakes” Illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "format": "BOOKMARK",
+        "url": "posts/the-rotating-snakes-illusion.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Design",
+      "Perception",
+      "Psychology",
+      "Vision"
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOPHYSICS"
     ],
     "subtopics": [],
     "connected_tags": []
@@ -5177,6 +5344,81 @@
     ]
   },
   {
+    "id": "design-psychology",
+    "name": "design-psychology",
+    "label": "#design-psychology",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-14-the-rotating-snakes-illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "title": "The “Rotating Snakes” Illusion",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "vision",
+          "perception",
+          "design",
+          "psychology"
+        ],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "VISUAL ILLUSIONS AND OPTICAL PARADOXES",
+        "url": "posts/the-rotating-snakes-illusion.html"
+      },
+      {
+        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "title": "5 Psychology Effects Used in App Design",
+        "date": "2026.10.02",
+        "format": "NOTE",
+        "foundations": [
+          "psychology"
+        ],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "COGNITIVE AND VISUAL BIASES",
+        "url": "posts/5-psychology-effects-used-in-app-design.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The “Rotating Snakes” Illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "format": "BOOKMARK",
+        "url": "posts/the-rotating-snakes-illusion.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "5 Psychology Effects Used in App Design",
+        "slug": "5-psychology-effects-used-in-app-design",
+        "format": "NOTE",
+        "url": "posts/5-psychology-effects-used-in-app-design.html",
+        "date": "2026.10.02"
+      }
+    ],
+    "foundations": [
+      "Design",
+      "Perception",
+      "Psychology",
+      "Vision"
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOPHYSICS"
+    ],
+    "subtopics": [
+      "COGNITIVE AND VISUAL BIASES",
+      "VISUAL ILLUSIONS AND OPTICAL PARADOXES"
+    ],
+    "connected_tags": [
+      "illusion",
+      "optical-illusions",
+      "motion",
+      "time",
+      "movement",
+      "observations"
+    ]
+  },
+  {
     "id": "dots",
     "name": "dots",
     "label": "#dots",
@@ -5852,6 +6094,84 @@
       "embeddings",
       "episteme",
       "rag"
+    ]
+  },
+  {
+    "id": "motion",
+    "name": "motion",
+    "label": "#motion",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "the-4d-vault",
+        "slug": "the-4d-vault",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-4d-vault.html"
+      },
+      {
+        "id": "2026-10-14-the-rotating-snakes-illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "title": "The “Rotating Snakes” Illusion",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "vision",
+          "perception",
+          "design",
+          "psychology"
+        ],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "VISUAL ILLUSIONS AND OPTICAL PARADOXES",
+        "url": "posts/the-rotating-snakes-illusion.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
+        "slug": "the-4d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-4d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "The “Rotating Snakes” Illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "format": "BOOKMARK",
+        "url": "posts/the-rotating-snakes-illusion.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design",
+      "Perception",
+      "Psychology",
+      "Vision"
+    ],
+    "pillars": [
+      "ART WORTH SHARING",
+      "VISUAL PERCEPTION & PSYCHOPHYSICS"
+    ],
+    "subtopics": [
+      "ART VAULTS",
+      "VISUAL ILLUSIONS AND OPTICAL PARADOXES"
+    ],
+    "connected_tags": [
+      "4d",
+      "film",
+      "video",
+      "animation",
+      "performance",
+      "music"
     ]
   },
   {
@@ -9645,54 +9965,6 @@
     ]
   },
   {
-    "id": "design-psychology",
-    "name": "design-psychology",
-    "label": "#design-psychology",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-02-5-psychology-effects-used-in-app-design",
-        "slug": "5-psychology-effects-used-in-app-design",
-        "title": "5 Psychology Effects Used in App Design",
-        "date": "2026.10.02",
-        "format": "NOTE",
-        "foundations": [
-          "psychology"
-        ],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "COGNITIVE AND VISUAL BIASES",
-        "url": "posts/5-psychology-effects-used-in-app-design.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "5 Psychology Effects Used in App Design",
-        "slug": "5-psychology-effects-used-in-app-design",
-        "format": "NOTE",
-        "url": "posts/5-psychology-effects-used-in-app-design.html",
-        "date": "2026.10.02"
-      }
-    ],
-    "foundations": [
-      "Psychology"
-    ],
-    "pillars": [
-      "VISUAL PERCEPTION & PSYCHOPHYSICS"
-    ],
-    "subtopics": [
-      "COGNITIVE AND VISUAL BIASES"
-    ],
-    "connected_tags": [
-      "observations",
-      "app-design",
-      "ui",
-      "ux",
-      "lists",
-      "tips"
-    ]
-  },
-  {
     "id": "designers",
     "name": "designers",
     "label": "#designers",
@@ -11502,6 +11774,59 @@
     ]
   },
   {
+    "id": "illusion",
+    "name": "illusion",
+    "label": "#illusion",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-14-the-rotating-snakes-illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "title": "The “Rotating Snakes” Illusion",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "vision",
+          "perception",
+          "design",
+          "psychology"
+        ],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "VISUAL ILLUSIONS AND OPTICAL PARADOXES",
+        "url": "posts/the-rotating-snakes-illusion.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The “Rotating Snakes” Illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "format": "BOOKMARK",
+        "url": "posts/the-rotating-snakes-illusion.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Design",
+      "Perception",
+      "Psychology",
+      "Vision"
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOPHYSICS"
+    ],
+    "subtopics": [
+      "VISUAL ILLUSIONS AND OPTICAL PARADOXES"
+    ],
+    "connected_tags": [
+      "optical-illusions",
+      "motion",
+      "time",
+      "movement",
+      "design-psychology"
+    ]
+  },
+  {
     "id": "illustration",
     "name": "illustration",
     "label": "#illustration",
@@ -12764,56 +13089,6 @@
     ]
   },
   {
-    "id": "motion",
-    "name": "motion",
-    "label": "#motion",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "the-4d-vault",
-        "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-4d-vault.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
-        "slug": "the-4d-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-4d-vault.html",
-        "date": "2026.10.14"
-      }
-    ],
-    "foundations": [
-      "Art",
-      "Perception"
-    ],
-    "pillars": [
-      "ART WORTH SHARING"
-    ],
-    "subtopics": [
-      "ART VAULTS"
-    ],
-    "connected_tags": [
-      "4d",
-      "film",
-      "video",
-      "animation",
-      "performance",
-      "music"
-    ]
-  },
-  {
     "id": "motion-graphics",
     "name": "motion-graphics",
     "label": "#motion-graphics",
@@ -12861,6 +13136,59 @@
       "animation",
       "performance",
       "music"
+    ]
+  },
+  {
+    "id": "movement",
+    "name": "movement",
+    "label": "#movement",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-14-the-rotating-snakes-illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "title": "The “Rotating Snakes” Illusion",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "vision",
+          "perception",
+          "design",
+          "psychology"
+        ],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "VISUAL ILLUSIONS AND OPTICAL PARADOXES",
+        "url": "posts/the-rotating-snakes-illusion.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The “Rotating Snakes” Illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "format": "BOOKMARK",
+        "url": "posts/the-rotating-snakes-illusion.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Design",
+      "Perception",
+      "Psychology",
+      "Vision"
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOPHYSICS"
+    ],
+    "subtopics": [
+      "VISUAL ILLUSIONS AND OPTICAL PARADOXES"
+    ],
+    "connected_tags": [
+      "illusion",
+      "optical-illusions",
+      "motion",
+      "time",
+      "design-psychology"
     ]
   },
   {
@@ -13339,6 +13667,59 @@
       "attention",
       "politics",
       "human-vision"
+    ]
+  },
+  {
+    "id": "optical-illusions",
+    "name": "optical-illusions",
+    "label": "#optical-illusions",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-14-the-rotating-snakes-illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "title": "The “Rotating Snakes” Illusion",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "vision",
+          "perception",
+          "design",
+          "psychology"
+        ],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "VISUAL ILLUSIONS AND OPTICAL PARADOXES",
+        "url": "posts/the-rotating-snakes-illusion.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The “Rotating Snakes” Illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "format": "BOOKMARK",
+        "url": "posts/the-rotating-snakes-illusion.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Design",
+      "Perception",
+      "Psychology",
+      "Vision"
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOPHYSICS"
+    ],
+    "subtopics": [
+      "VISUAL ILLUSIONS AND OPTICAL PARADOXES"
+    ],
+    "connected_tags": [
+      "illusion",
+      "motion",
+      "time",
+      "movement",
+      "design-psychology"
     ]
   },
   {
@@ -15934,6 +16315,59 @@
       "sculpture",
       "object",
       "product"
+    ]
+  },
+  {
+    "id": "time",
+    "name": "time",
+    "label": "#time",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-14-the-rotating-snakes-illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "title": "The “Rotating Snakes” Illusion",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "vision",
+          "perception",
+          "design",
+          "psychology"
+        ],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "VISUAL ILLUSIONS AND OPTICAL PARADOXES",
+        "url": "posts/the-rotating-snakes-illusion.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "The “Rotating Snakes” Illusion",
+        "slug": "the-rotating-snakes-illusion",
+        "format": "BOOKMARK",
+        "url": "posts/the-rotating-snakes-illusion.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Design",
+      "Perception",
+      "Psychology",
+      "Vision"
+    ],
+    "pillars": [
+      "VISUAL PERCEPTION & PSYCHOPHYSICS"
+    ],
+    "subtopics": [
+      "VISUAL ILLUSIONS AND OPTICAL PARADOXES"
+    ],
+    "connected_tags": [
+      "illusion",
+      "optical-illusions",
+      "motion",
+      "movement",
+      "design-psychology"
     ]
   },
   {
