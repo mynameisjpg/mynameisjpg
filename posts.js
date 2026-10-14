@@ -284,6 +284,79 @@
     "content": "<div text-align=\"center\">\n\n<h3 class=\"post-subheading essay-subheading\">⏯️ You'll see all my recommended #2D Art dispatches below as an image carousel and in the Connected_Dispatches footer ↓↓↓</div><br></h3>\n\n<div style=\"display: flex; justify-content: center;\">\n\n</div>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">Recommended_Dispatches</h2>\n\n<h3 class=\"post-subheading essay-subheading\">1. <strong>Artist</strong> | <a href=\"postslug.html\" target=\"_blank\" rel=\"noopener noreferrer\">Post Title</a></h3>"
   },
   {
+    "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+    "slug": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+    "sys_id": "SYS_202610_RES",
+    "title": "Untitled Wallpapers for your Mobile?",
+    "subtitle": "Check the gallery of cover #Art I've created to illustrate the dispatches in Untitled.jpg.",
+    "excerpt": "The art gallery has download links for all designs and artworks produced by Untitled.jpg - for free.",
+    "format": "RESOURCE",
+    "category": "DOWNLOAD",
+    "media": "",
+    "source": "",
+    "url": "https://mynameisjpg.github.io/mynameisjpg/gallery.html",
+    "pillar": "ART WORTH SHARING",
+    "pillar_id": "art-worth-sharing",
+    "foundations": [
+      "design",
+      "art"
+    ],
+    "subtopic": "GRAPHIC DESIGN",
+    "subtopic_id": "graphic-design",
+    "theme": "dark",
+    "featured": false,
+    "shareable": true,
+    "allow_embed": true,
+    "gallery": true,
+    "status": "published",
+    "date": "2026.10.14",
+    "author": "Juan P. Giusepponi",
+    "read_time": "FREE DOWNLOADS IN GALLERY",
+    "via": "",
+    "image": "assets/images/wallpaper-gallery.gif",
+    "thumbnail": "assets/images/wallpaper-gallery.gif",
+    "image_alt": "Preview of the gallery page",
+    "aspect_ratio": "h-tall-1",
+    "gallery_images": [],
+    "links": [
+      {
+        "title": "Want untitled wallpapers for your mobile?",
+        "url": "https://mynameisjpg.github.io/mynameisjpg/gallery.html",
+        "type": "WEBSITE",
+        "desc": "The art gallery shows all designs and artworks produced by Untitled.jpg, with free download links available."
+      }
+    ],
+    "backlinks": [
+      {
+        "slug": "#the-2d-vault",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
+        "note": ""
+      }
+    ],
+    "tags": [
+      "web-graphics",
+      "dithering",
+      "canvas-api",
+      "download",
+      "free",
+      "wallpaper",
+      "design",
+      "graphic-design",
+      "black-and-red",
+      "mobile-wallpapers",
+      "art",
+      "sharing",
+      "black",
+      "red",
+      "glitch-art",
+      "aesthetics",
+      "visual-arts",
+      "collage"
+    ],
+    "entities": null,
+    "content": "<p class=\"post-paragraph essay-paragraph\">The <a href=\"https://mynameisjpg.github.io/mynameisjpg/gallery.html\">art gallery</a> shows all designs and artworks produced by Untitled.jpg, with free download links available.</p>\n\n<br>\n\n<a href=\"https://mynameisjpg.github.io/mynameisjpg/gallery.html\"><img src=\"assets/images/gallery-ss.png\" width=\"100%\"/></a>"
+  },
+  {
     "id": "2026-10-11-marina-herlop-dja-dja",
     "slug": "2026-10-11-marina-herlop-dja-dja",
     "sys_id": "SYS_202610_BOO",

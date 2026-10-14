@@ -224,7 +224,7 @@
     "name": "Design",
     "label": "Design",
     "type": "foundation",
-    "count": 3,
+    "count": 4,
     "posts": [
       {
         "id": "the-2d-vault",
@@ -241,6 +241,20 @@
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-2d-vault.html"
+      },
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
       },
       {
         "id": "2026-10-10-images-are-dead",
@@ -282,6 +296,13 @@
         "date": "2026.10.14"
       },
       {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      },
+      {
         "title": "Images are Dead. Brands Should Know.",
         "slug": "images-are-dead",
         "format": "ESSAY",
@@ -305,6 +326,7 @@
     "subtopics": [
       "ART VAULTS",
       "EPISTEMOLOGY OF REPRESENTATION",
+      "GRAPHIC DESIGN",
       "MODES OF SEEING AND VISUAL SEMIOTICS"
     ],
     "order": 2,
@@ -961,7 +983,7 @@
     "name": "Art",
     "label": "Art",
     "type": "foundation",
-    "count": 6,
+    "count": 7,
     "posts": [
       {
         "id": "the-music-vault",
@@ -1022,6 +1044,20 @@
         "url": "posts/the-2d-vault.html"
       },
       {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      },
+      {
         "id": "2026-10-11-marina-herlop-dja-dja",
         "slug": "marina-herlop-dja-dja",
         "title": "Marina Herlop's Dja Dja",
@@ -1079,6 +1115,13 @@
         "date": "2026.10.14"
       },
       {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      },
+      {
         "title": "Marina Herlop's Dja Dja",
         "slug": "marina-herlop-dja-dja",
         "format": "BOOKMARK",
@@ -1104,6 +1147,7 @@
     "subtopics": [
       "ART VAULTS",
       "COMPUTER VISION VS. HUMAN PERCEPTION",
+      "GRAPHIC DESIGN",
       "OTHERWORLDLY MUSIC"
     ],
     "order": 14,
@@ -1314,6 +1358,155 @@
     "connected_tags": []
   },
   {
+    "id": "pillar-art-worth-sharing",
+    "name": "Art Sharing",
+    "label": "Art Sharing",
+    "type": "pillar",
+    "count": 6,
+    "posts": [
+      {
+        "id": "the-music-vault",
+        "slug": "the-music-vault",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-music-vault.html"
+      },
+      {
+        "id": "the-4d-vault",
+        "slug": "the-4d-vault",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-4d-vault.html"
+      },
+      {
+        "id": "the-3d-vault",
+        "slug": "the-3d-vault",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-3d-vault.html"
+      },
+      {
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "design",
+          "art",
+          "branding",
+          "perception"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-2d-vault.html"
+      },
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      },
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "OTHERWORLDLY MUSIC",
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "slug": "the-music-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-music-vault.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
+        "slug": "the-4d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-4d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
+        "slug": "the-3d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
+        "slug": "the-2d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-2d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Branding",
+      "Design",
+      "Perception"
+    ],
+    "pillars": [],
+    "subtopics": [],
+    "order": 99,
+    "description": "Curated artistic creations, expansive soundscapes, avant-garde audiovisual experiences, and aesthetic artifacts.",
+    "connected_tags": []
+  },
+  {
     "id": "pillar-ai-perception",
     "name": "AI Perception",
     "label": "AI Perception",
@@ -1439,134 +1632,6 @@
     "subtopics": [],
     "order": 99,
     "description": "How AI is perceived and how machine vision reshapes visual culture, and how synthetic media alters human representation and societal consensus.",
-    "connected_tags": []
-  },
-  {
-    "id": "pillar-art-worth-sharing",
-    "name": "Art Sharing",
-    "label": "Art Sharing",
-    "type": "pillar",
-    "count": 5,
-    "posts": [
-      {
-        "id": "the-music-vault",
-        "slug": "the-music-vault",
-        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
-        "date": "2026.10.11",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-music-vault.html"
-      },
-      {
-        "id": "the-4d-vault",
-        "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-4d-vault.html"
-      },
-      {
-        "id": "the-3d-vault",
-        "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-3d-vault.html"
-      },
-      {
-        "id": "the-2d-vault",
-        "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "design",
-          "art",
-          "branding",
-          "perception"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-2d-vault.html"
-      },
-      {
-        "id": "2026-10-11-marina-herlop-dja-dja",
-        "slug": "marina-herlop-dja-dja",
-        "title": "Marina Herlop's Dja Dja",
-        "date": "2026.10.11",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "OTHERWORLDLY MUSIC",
-        "url": "posts/marina-herlop-dja-dja.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
-        "slug": "the-music-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-music-vault.html",
-        "date": "2026.10.11"
-      },
-      {
-        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
-        "slug": "the-4d-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-4d-vault.html",
-        "date": "2026.10.14"
-      },
-      {
-        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
-        "slug": "the-3d-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-3d-vault.html",
-        "date": "2026.10.14"
-      },
-      {
-        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
-        "slug": "the-2d-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-2d-vault.html",
-        "date": "2026.10.14"
-      },
-      {
-        "title": "Marina Herlop's Dja Dja",
-        "slug": "marina-herlop-dja-dja",
-        "format": "BOOKMARK",
-        "url": "posts/marina-herlop-dja-dja.html",
-        "date": "2026.10.11"
-      }
-    ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Perception"
-    ],
-    "pillars": [],
-    "subtopics": [],
-    "order": 99,
-    "description": "Curated artistic creations, expansive soundscapes, avant-garde audiovisual experiences, and aesthetic artifacts.",
     "connected_tags": []
   },
   {
@@ -2555,6 +2620,47 @@
     "connected_tags": []
   },
   {
+    "id": "subtopic-graphic-design",
+    "name": "GRAPHIC DESIGN",
+    "label": "GRAPHIC DESIGN",
+    "type": "subtopic",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
     "id": "subtopic-interface-politics",
     "name": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
     "label": "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
@@ -2793,7 +2899,7 @@
     "name": "aesthetics",
     "label": "#aesthetics",
     "type": "tag",
-    "count": 6,
+    "count": 7,
     "posts": [
       {
         "id": "the-music-vault",
@@ -2852,6 +2958,20 @@
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-2d-vault.html"
+      },
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
       },
       {
         "id": "2026-10-10-images-are-dead",
@@ -2914,6 +3034,13 @@
         "date": "2026.10.14"
       },
       {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      },
+      {
         "title": "Images are Dead. Brands Should Know.",
         "slug": "images-are-dead",
         "format": "ESSAY",
@@ -2944,14 +3071,15 @@
     "subtopics": [
       "ART VAULTS",
       "EPISTEMOLOGY OF REPRESENTATION",
+      "GRAPHIC DESIGN",
       "MODES OF SEEING AND VISUAL SEMIOTICS"
     ],
     "connected_tags": [
       "art-of-the-day",
       "vault",
+      "visual-arts",
       "music",
       "sound",
-      "visual-arts",
       "product"
     ]
   },
@@ -3622,6 +3750,99 @@
     ]
   },
   {
+    "id": "free",
+    "name": "free",
+    "label": "#free",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      },
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "foundations": [],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      },
+      {
+        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "date": "2026.09.26",
+        "format": "RESOURCE",
+        "foundations": [
+          "ai"
+        ],
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      },
+      {
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "format": "RESOURCE",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Art",
+      "Design"
+    ],
+    "pillars": [
+      "ART WORTH SHARING",
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+      "VISUAL PERCEPTION & PSYCHOPHYSICS"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "GRAPHIC DESIGN",
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
+    ],
+    "connected_tags": [
+      "canvas-api",
+      "download",
+      "web-graphics",
+      "dithering",
+      "wallpaper",
+      "graphic-design"
+    ]
+  },
+  {
     "id": "generative-ai",
     "name": "generative-ai",
     "label": "#generative-ai",
@@ -4183,6 +4404,103 @@
     ]
   },
   {
+    "id": "visual-arts",
+    "name": "visual-arts",
+    "label": "#visual-arts",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "the-4d-vault",
+        "slug": "the-4d-vault",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-4d-vault.html"
+      },
+      {
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "design",
+          "art",
+          "branding",
+          "perception"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-2d-vault.html"
+      },
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
+        "slug": "the-4d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-4d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
+        "slug": "the-2d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-2d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Branding",
+      "Design",
+      "Perception"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "ART VAULTS",
+      "GRAPHIC DESIGN"
+    ],
+    "connected_tags": [
+      "aesthetics",
+      "art-of-the-day",
+      "vault",
+      "4d",
+      "film",
+      "video"
+    ]
+  },
+  {
     "id": "ai-mascots",
     "name": "ai-mascots",
     "label": "#ai-mascots",
@@ -4456,6 +4774,76 @@
     ]
   },
   {
+    "id": "canvas-api",
+    "name": "canvas-api",
+    "label": "#canvas-api",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      },
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "foundations": [],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design"
+    ],
+    "pillars": [
+      "ART WORTH SHARING",
+      "VISUAL PERCEPTION & PSYCHOPHYSICS"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "GRAPHIC DESIGN"
+    ],
+    "connected_tags": [
+      "download",
+      "free",
+      "web-graphics",
+      "dithering",
+      "wallpaper",
+      "graphic-design"
+    ]
+  },
+  {
     "id": "computer-vision",
     "name": "computer-vision",
     "label": "#computer-vision",
@@ -4588,6 +4976,76 @@
       "ux-psychology",
       "frontier-ai",
       "viral-loops"
+    ]
+  },
+  {
+    "id": "download",
+    "name": "download",
+    "label": "#download",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      },
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "foundations": [],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design"
+    ],
+    "pillars": [
+      "ART WORTH SHARING",
+      "VISUAL PERCEPTION & PSYCHOPHYSICS"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "GRAPHIC DESIGN"
+    ],
+    "connected_tags": [
+      "canvas-api",
+      "free",
+      "web-graphics",
+      "dithering",
+      "wallpaper",
+      "graphic-design"
     ]
   },
   {
@@ -4849,74 +5307,6 @@
       "episteme",
       "rag",
       "latent-space"
-    ]
-  },
-  {
-    "id": "free",
-    "name": "free",
-    "label": "#free",
-    "type": "tag",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "foundations": [],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      },
-      {
-        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "date": "2026.09.26",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/harvard-s-computer-science-career-for-free.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "format": "RESOURCE",
-        "url": "posts/harvard-s-computer-science-career-for-free.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "foundations": [
-      "AI"
-    ],
-    "pillars": [
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-      "VISUAL PERCEPTION & PSYCHOPHYSICS"
-    ],
-    "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION",
-      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
-    ],
-    "connected_tags": [
-      "toolkit",
-      "download",
-      "psychophysics",
-      "skill",
-      "image-analysis",
-      "canvas-api"
     ]
   },
   {
@@ -6157,81 +6547,6 @@
       "charts",
       "data-visualization",
       "graphs"
-    ]
-  },
-  {
-    "id": "visual-arts",
-    "name": "visual-arts",
-    "label": "#visual-arts",
-    "type": "tag",
-    "count": 2,
-    "posts": [
-      {
-        "id": "the-4d-vault",
-        "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-4d-vault.html"
-      },
-      {
-        "id": "the-2d-vault",
-        "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "design",
-          "art",
-          "branding",
-          "perception"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-2d-vault.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
-        "slug": "the-4d-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-4d-vault.html",
-        "date": "2026.10.14"
-      },
-      {
-        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
-        "slug": "the-2d-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-2d-vault.html",
-        "date": "2026.10.14"
-      }
-    ],
-    "foundations": [
-      "Art",
-      "Branding",
-      "Design",
-      "Perception"
-    ],
-    "pillars": [
-      "ART WORTH SHARING"
-    ],
-    "subtopics": [
-      "ART VAULTS"
-    ],
-    "connected_tags": [
-      "art-of-the-day",
-      "aesthetics",
-      "vault",
-      "4d",
-      "film",
-      "video"
     ]
   },
   {
@@ -7543,6 +7858,106 @@
     ]
   },
   {
+    "id": "black",
+    "name": "black",
+    "label": "#black",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "GRAPHIC DESIGN"
+    ],
+    "connected_tags": [
+      "web-graphics",
+      "dithering",
+      "canvas-api",
+      "download",
+      "free",
+      "wallpaper"
+    ]
+  },
+  {
+    "id": "black-and-red",
+    "name": "black-and-red",
+    "label": "#black-and-red",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "GRAPHIC DESIGN"
+    ],
+    "connected_tags": [
+      "web-graphics",
+      "dithering",
+      "canvas-api",
+      "download",
+      "free",
+      "wallpaper"
+    ]
+  },
+  {
     "id": "borderlands",
     "name": "borderlands",
     "label": "#borderlands",
@@ -7584,50 +7999,6 @@
       "cyborg-feminism",
       "curated-read",
       "human-ai-pairing"
-    ]
-  },
-  {
-    "id": "canvas-api",
-    "name": "canvas-api",
-    "label": "#canvas-api",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "foundations": [],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "foundations": [],
-    "pillars": [
-      "VISUAL PERCEPTION & PSYCHOPHYSICS"
-    ],
-    "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION"
-    ],
-    "connected_tags": [
-      "toolkit",
-      "free",
-      "download",
-      "psychophysics",
-      "skill",
-      "image-analysis"
     ]
   },
   {
@@ -8154,6 +8525,56 @@
       "byung-chul-han",
       "pharmacopornography",
       "biopolitics"
+    ]
+  },
+  {
+    "id": "collage",
+    "name": "collage",
+    "label": "#collage",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "GRAPHIC DESIGN"
+    ],
+    "connected_tags": [
+      "web-graphics",
+      "dithering",
+      "canvas-api",
+      "download",
+      "free",
+      "wallpaper"
     ]
   },
   {
@@ -9067,47 +9488,53 @@
     ]
   },
   {
-    "id": "download",
-    "name": "download",
-    "label": "#download",
+    "id": "dithering",
+    "name": "dithering",
+    "label": "#dithering",
     "type": "tag",
     "count": 1,
     "posts": [
       {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
         "format": "RESOURCE",
-        "foundations": [],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
       }
     ],
     "links": [
       {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
         "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
       }
     ],
-    "foundations": [],
+    "foundations": [
+      "Art",
+      "Design"
+    ],
     "pillars": [
-      "VISUAL PERCEPTION & PSYCHOPHYSICS"
+      "ART WORTH SHARING"
     ],
     "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION"
+      "GRAPHIC DESIGN"
     ],
     "connected_tags": [
-      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "download",
       "free",
-      "psychophysics",
-      "skill",
-      "image-analysis",
-      "canvas-api"
+      "wallpaper",
+      "graphic-design"
     ]
   },
   {
@@ -9749,6 +10176,56 @@
     ]
   },
   {
+    "id": "glitch-art",
+    "name": "glitch-art",
+    "label": "#glitch-art",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "GRAPHIC DESIGN"
+    ],
+    "connected_tags": [
+      "web-graphics",
+      "dithering",
+      "canvas-api",
+      "download",
+      "free",
+      "wallpaper"
+    ]
+  },
+  {
     "id": "glitch-feminism",
     "name": "glitch-feminism",
     "label": "#glitch-feminism",
@@ -9992,6 +10469,56 @@
       "visual-arts",
       "art-of-the-day",
       "designers"
+    ]
+  },
+  {
+    "id": "graphic-design",
+    "name": "graphic-design",
+    "label": "#graphic-design",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "GRAPHIC DESIGN"
+    ],
+    "connected_tags": [
+      "web-graphics",
+      "dithering",
+      "canvas-api",
+      "download",
+      "free",
+      "wallpaper"
     ]
   },
   {
@@ -11634,6 +12161,56 @@
     ]
   },
   {
+    "id": "mobile-wallpapers",
+    "name": "mobile-wallpapers",
+    "label": "#mobile-wallpapers",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "GRAPHIC DESIGN"
+    ],
+    "connected_tags": [
+      "web-graphics",
+      "dithering",
+      "canvas-api",
+      "download",
+      "free",
+      "wallpaper"
+    ]
+  },
+  {
     "id": "models",
     "name": "models",
     "label": "#models",
@@ -13145,6 +13722,56 @@
     ]
   },
   {
+    "id": "red",
+    "name": "red",
+    "label": "#red",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "GRAPHIC DESIGN"
+    ],
+    "connected_tags": [
+      "web-graphics",
+      "dithering",
+      "canvas-api",
+      "download",
+      "free",
+      "wallpaper"
+    ]
+  },
+  {
     "id": "relational",
     "name": "relational",
     "label": "#relational",
@@ -13724,6 +14351,56 @@
       "sounds-from-the-future",
       "artists",
       "music-album"
+    ]
+  },
+  {
+    "id": "sharing",
+    "name": "sharing",
+    "label": "#sharing",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "GRAPHIC DESIGN"
+    ],
+    "connected_tags": [
+      "web-graphics",
+      "dithering",
+      "canvas-api",
+      "download",
+      "free",
+      "wallpaper"
     ]
   },
   {
@@ -15551,6 +16228,106 @@
       "antigravity",
       "ai-agents",
       "repo"
+    ]
+  },
+  {
+    "id": "wallpaper",
+    "name": "wallpaper",
+    "label": "#wallpaper",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "GRAPHIC DESIGN"
+    ],
+    "connected_tags": [
+      "web-graphics",
+      "dithering",
+      "canvas-api",
+      "download",
+      "free",
+      "graphic-design"
+    ]
+  },
+  {
+    "id": "web-graphics",
+    "name": "web-graphics",
+    "label": "#web-graphics",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "Art",
+      "Design"
+    ],
+    "pillars": [
+      "ART WORTH SHARING"
+    ],
+    "subtopics": [
+      "GRAPHIC DESIGN"
+    ],
+    "connected_tags": [
+      "dithering",
+      "canvas-api",
+      "download",
+      "free",
+      "wallpaper",
+      "graphic-design"
     ]
   },
   {
