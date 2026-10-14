@@ -390,8 +390,31 @@
     "image_alt": "Coral-red and black glitch collage",
     "aspect_ratio": "h-tall-1",
     "gallery_images": [],
-    "links": [],
-    "backlinks": [],
+    "links": [
+      {
+        "title": "Naomi Klein: End Times Fascism | Doomscroll",
+        "url": "https://www.youtube.com/watch?v=UHDwQ6FuWCs",
+        "type": "BOOK",
+        "desc": "Naomi Klein, an author, activist and professor of Climate Justice at the University of British Columbia."
+      }
+    ],
+    "backlinks": [
+      {
+        "slug": "#2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
+        "title": "Excavating AI (the unEthics of Machine Learning Training)",
+        "note": "A lesson in what happens when people are categorized like objects."
+      },
+      {
+        "slug": "#2026-10-02-dots-bot-muse-cute-mascots",
+        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
+        "note": "How OpenAI's Dots, Grok Bot, and Meta's Muse Charm use visual semiotics to disarm our defenses against autonomous surveillance."
+      },
+      {
+        "slug": "#2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "note": "Cognitive capitalism and post-Fordism missed the body. Synthetic hormones, algorithmic desire, and molecular governmentality redefined modern power."
+      }
+    ],
     "tags": [
       "video",
       "climatechange",
@@ -409,7 +432,7 @@
       "book"
     ],
     "entities": null,
-    "content": "<div class=\"responsive-video\">\n\n<iframe src=\"https://www.youtube.com/embed/UHDwQ6FuWCs\" title=\"Naomi Klein: End Times Fascism | Doomscroll\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>\n\n</div>\n\n<h2 class=\"post-section-kicker essay-section-kicker\">01. Archival Summary</h2>\n\n<p class=\"post-paragraph essay-paragraph\">In her book <em>End Times Fascism</em>, co-authored with Astra Taylor, Naomi Klein defines the term as <strong>a coalition of three main factions (religious, tech, and ethno-nationalist)</strong> that are united by apocalyptic narratives (0:40–6:00). She argues that these groups, while distinct, are all mobilized by themes of terminal crisis and are essentially \"prepping\" the nation-state for the end of the world (0:40–7:05).</p>\n\n<h3 class=\"post-subheading essay-subheading\">Key components of this alliance include:</h3>\n\n<p class=\"post-paragraph essay-paragraph\">• <code>Theocratic Fundamentalists</code>: Religious groups who interpret current global crises and shocks as foretold signs of the end days, often adopting an accelerationist view where such events are welcomed (0:40–1:40).</p>\n\n<p class=\"post-paragraph essay-paragraph\">• <code>Techno-Capitalists</code>: Figures in the tech industry whose rhetoric surrounding AI—such as summoning a \"digital god\" or anticipating super-intelligence—mirrors messianic eschatology (2:49–5:10).</p>\n\n<p class=\"post-paragraph essay-paragraph\">• <code>Ethno-Nationalists</code>: A mass movement focused on \"fortressing\" borders, expelling perceived outsiders, and securing resources for the in-group within a national \"bunker\" (5:50–7:05).</p>\n\n<p class=\"post-paragraph essay-paragraph\">Klein frames this phenomenon as \"capitalism with its teeth bared,\" suggesting that neoliberalism's failure to address systemic crises has created the conditions for this authoritarian response to gain traction (7:45–8:45). Ultimately, she describes their policy goals and foreign policy as a form of \"supersized prepping\" at the level of the nation-state (6:57–7:05).</p>"
+    "content": "<iframe class=\"responsive-video\" src=\"https://www.youtube.com/embed/UHDwQ6FuWCs\" title=\"Naomi Klein: End Times Fascism | Doomscroll\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>\n\n<h2 class=\"post-section-kicker essay-section-kicker\">01. Archival Summary</h2>\n\n<p class=\"post-paragraph essay-paragraph\">In her book <em>End Times Fascism</em>, co-authored with Astra Taylor, Naomi Klein defines the term as <strong>a coalition of three main factions (religious, tech, and ethno-nationalist)</strong> that are united by apocalyptic narratives (0:40–6:00). She argues that these groups, while distinct, are all mobilized by themes of terminal crisis and are essentially \"prepping\" the nation-state for the end of the world (0:40–7:05).</p>\n\n<h3 class=\"post-subheading essay-subheading\">Key components of this alliance include:</h3>\n\n<p class=\"post-paragraph essay-paragraph\">• <code>Theocratic Fundamentalists</code>: Religious groups who interpret current global crises and shocks as foretold signs of the end days, often adopting an accelerationist view where such events are welcomed (0:40–1:40).</p>\n\n<p class=\"post-paragraph essay-paragraph\">• <code>Techno-Capitalists</code>: Figures in the tech industry whose rhetoric surrounding AI—such as summoning a \"digital god\" or anticipating super-intelligence—mirrors messianic eschatology (2:49–5:10).</p>\n\n<p class=\"post-paragraph essay-paragraph\">• <code>Ethno-Nationalists</code>: A mass movement focused on \"fortressing\" borders, expelling perceived outsiders, and securing resources for the in-group within a national \"bunker\" (5:50–7:05).</p>\n\n<p class=\"post-paragraph essay-paragraph\">Klein frames this phenomenon as \"capitalism with its teeth bared,\" suggesting that neoliberalism's failure to address systemic crises has created the conditions for this authoritarian response to gain traction (7:45–8:45). Ultimately, she describes their policy goals and foreign policy as a form of \"supersized prepping\" at the level of the nation-state (6:57–7:05).</p>"
   },
   {
     "id": "2026-10-11-marina-herlop-dja-dja",

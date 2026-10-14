@@ -61,9 +61,7 @@ sys_id: "SYS_202610_BOO"
 ---
 
 <!-- Responsive 16:9 Video Embed -->
-<div class="responsive-video">
-  <iframe src="https://www.youtube.com/embed/UHDwQ6FuWCs" title="Naomi Klein: End Times Fascism | Doomscroll" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+ <iframe class="responsive-video" src="https://www.youtube.com/embed/UHDwQ6FuWCs" title="Naomi Klein: End Times Fascism | Doomscroll" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## 01. Archival Summary
 
