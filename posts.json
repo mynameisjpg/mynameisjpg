@@ -386,7 +386,7 @@
     "allow_embed": true,
     "in-gallery": true,
     "gallery": true,
-    "image-in-gallery": true,
+    "image-in-gallery": false,
     "status": "published",
     "date": "2026.10.14",
     "author": "Juan P. Giusepponi",

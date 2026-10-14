@@ -25,7 +25,7 @@ theme: "dark"
 featured: false
 shareable: true
 allow_embed: true
-gallery: false
+in-gallery: false
 image:
   path: "assets/images/marc-van-elburg.gif"
   alt: ""

@@ -30,6 +30,7 @@ allow_embed: true
 image:
   path: "assets/images/rotating-snakes.png"
   alt: "Rotating Snakes Illusion"
+  in-gallery: false
 links:
   - title: "The “Rotating Snakes” Illusion"
     url: "https://michaelbach.de/ot/mot-snakes/"
