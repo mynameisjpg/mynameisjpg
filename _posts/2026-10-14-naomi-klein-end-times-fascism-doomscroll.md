@@ -35,7 +35,7 @@ image:
   alt: "Coral-red and black glitch collage"
 gallery-images:
   - path: "assets/images/end-times-fash.jpg"
-  alt: "Coral red and black glitch collage"
+    alt: "Coral red and black glitch collage"
 links:
   - title: "Naomi Klein: End Times Fascism | Doomscroll"
     url: "https://www.youtube.com/watch?v=UHDwQ6FuWCs"
