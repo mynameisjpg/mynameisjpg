@@ -151,6 +151,8 @@ def _resolve_images(meta):
 
     gallery_imgs = []
     raw_gallery = meta.get("gallery-images") or []
+    if isinstance(raw_gallery, (dict, str)):
+        raw_gallery = [raw_gallery]
     for g in raw_gallery:
         g_path = (g.get("path") or g.get("image") or "") if isinstance(g, dict) else str(g)
         g_path = g_path.strip()

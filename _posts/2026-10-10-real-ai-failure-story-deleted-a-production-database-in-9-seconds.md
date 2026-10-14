@@ -30,8 +30,8 @@ image:
   path: "assets/images/ai-fail-opus.jpg"
   alt: "Glitch art in coral, black, and white. Server racks dissolve into circuitry and binary code above a fragmented humanoid head with glowing eyes emitting signal waves."
 gallery-images:
-  path: "assets/images/ai-fail-claude.jpg"
-  alt: "Glitch art in coral, black, and white. Server racks dissolve into circuitry and binary code above a fragmented humanoid head with glowing eyes emitting signal waves."
+  - path: "assets/images/ai-fail-claude.jpg"
+    alt: "Glitch art in coral, black, and white. Server racks dissolve into circuitry and binary code above a fragmented humanoid head with glowing eyes emitting signal waves."
 links:
   - title: "Real-world AI Failure Story: Delete a Production Database in 9 Seconds!"
     url: "https://www.youtube.com/watch?v=1fsGTnszses"

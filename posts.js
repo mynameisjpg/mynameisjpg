@@ -634,17 +634,10 @@
     "aspect_ratio": "h-tall-1",
     "gallery-images": [
       {
-        "path": "path",
-        "image": "path",
-        "thumbnail": "path",
-        "alt": "",
-        "title": ""
-      },
-      {
-        "path": "alt",
-        "image": "alt",
-        "thumbnail": "alt",
-        "alt": "",
+        "path": "assets/images/ai-fail-claude.jpg",
+        "image": "assets/images/ai-fail-claude.jpg",
+        "thumbnail": "assets/images/thumbnails/ai-fail-claude.webp",
+        "alt": "Glitch art in coral, black, and white. Server racks dissolve into circuitry and binary code above a fragmented humanoid head with glowing eyes emitting signal waves.",
         "title": ""
       }
     ],

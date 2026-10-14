@@ -83,11 +83,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const customTitle =
               typeof gImg === "object" && gImg.title && gImg.title.trim() !== ""
                 ? gImg.title
-                : `${post.title} — Plate 0${idx + 1}`;
+                : post.title;
             const customAlt =
               typeof gImg === "object" && gImg.alt && gImg.alt.trim() !== ""
                 ? gImg.alt
-                : customTitle;
+                : (post.image_alt || post.title || "");
 
             artworks.push({
               id: `${post.slug || post.id}-plate-${idx + 1}`,
