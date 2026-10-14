@@ -346,18 +346,26 @@
     }
   }
 
+  let isLoadingMore = false;
+
   /**
    * Load More Dispatches Batch Handler
    */
   function loadMoreDispatches() {
+    if (isLoadingMore) return;
     const allPosts = getFilteredPosts();
     const visibleCount = getMatrixVisibleCount();
     const batchSize = getBatchSize();
 
     if (visibleCount < allPosts.length) {
-      const nextCount = Math.min(visibleCount + batchSize, allPosts.length);
-      setMatrixVisibleCount(nextCount);
-      renderCardMatrix(false);
+      isLoadingMore = true;
+      try {
+        const nextCount = Math.min(visibleCount + batchSize, allPosts.length);
+        setMatrixVisibleCount(nextCount);
+        renderCardMatrix(false);
+      } finally {
+        isLoadingMore = false;
+      }
     }
   }
 
@@ -464,6 +472,7 @@
     }
 
     if (resetPagination) {
+      isLoadingMore = false;
       setMatrixVisibleCount(batchSize);
       const visiblePosts = allPosts.slice(0, batchSize);
       container.innerHTML = visiblePosts
@@ -472,16 +481,29 @@
       updateMatrixSentinel(visiblePosts.length, allPosts.length);
     } else {
       // Incremental DOM update: Append only new slice of cards
+      const existingCards = container.querySelectorAll(".grid-card");
+      const previousCount = existingCards.length;
       const visibleCount = getMatrixVisibleCount();
-      const previousCount = visibleCount - batchSize;
-      const newPosts = allPosts.slice(previousCount, visibleCount);
-      if (newPosts.length > 0) {
-        const newCardsHtml = newPosts
-          .map((post, i) => renderSingleCardHtml(post, previousCount + i))
-          .join("");
-        container.insertAdjacentHTML("beforeend", newCardsHtml);
+
+      if (previousCount < visibleCount) {
+        const existingIds = new Set(
+          Array.from(existingCards).map((el) => el.getAttribute("data-id"))
+        );
+        const newPosts = allPosts
+          .slice(previousCount, visibleCount)
+          .filter((post) => {
+            const key = post.slug || post.id || post.sys_id;
+            return !existingIds.has(key);
+          });
+
+        if (newPosts.length > 0) {
+          const newCardsHtml = newPosts
+            .map((post, i) => renderSingleCardHtml(post, previousCount + i))
+            .join("");
+          container.insertAdjacentHTML("beforeend", newCardsHtml);
+        }
       }
-      updateMatrixSentinel(visibleCount, allPosts.length);
+      updateMatrixSentinel(container.querySelectorAll(".grid-card").length, allPosts.length);
     }
   }
 

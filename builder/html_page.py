@@ -107,6 +107,8 @@ def generate_post_html_files(posts):
     SITE_ORIGIN = "https://mynameisjpg.github.io/mynameisjpg"
     DEFAULT_OG_IMAGE = f"{SITE_ORIGIN}/assets/images/favicon.svg"
 
+    valid_html_filenames = set()
+
     for post in posts:
         raw_slug = post.get("slug") or post.get("id") or post.get("sys_id")
         if not raw_slug:
@@ -114,6 +116,7 @@ def generate_post_html_files(posts):
 
         # Strip date prefix (e.g., "2026-09-24-lecun-..." -> "lecun-...")
         clean_slug = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", raw_slug)
+        valid_html_filenames.add(f"{clean_slug}.html")
         title = (post.get("title") or "Untitled Dispatch").replace('"', "&quot;")
         
         description = resolve_meta_description(
@@ -389,6 +392,18 @@ def generate_post_html_files(posts):
         target_file = POSTS_HTML_DIR / f"{clean_slug}.html"
         with open(target_file, "w", encoding="utf-8") as f:
             f.write(post_html_content)
+
+    # Clean up stale/orphaned post HTML files that no longer correspond to an active markdown post
+    stale_files = [f for f in POSTS_HTML_DIR.glob("*.html") if f.name not in valid_html_filenames]
+    for stale_file in stale_files:
+        try:
+            stale_file.unlink()
+            print(f"  [CLEANUP] Deleted stale post HTML: {stale_file.name}")
+        except Exception as e:
+            print(f"  [WARNING] Could not delete {stale_file.name}: {e}")
+
+    if stale_files:
+        print(f"  [OK] Cleaned up {len(stale_files)} stale HTML file(s) in {POSTS_HTML_DIR.name}/")
 
     print(f"  [OK] Generated {len(posts)} post HTML files in {POSTS_HTML_DIR.name}/")
 
