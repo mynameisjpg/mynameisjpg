@@ -377,36 +377,13 @@
     "author": "Juan P. Giusepponi",
     "read_time": "52 MIN",
     "via": "YouTube",
-    "image": "assets/images/end-times-fash.jpg",
-    "thumbnail": "assets/images/thumbnails/end-times-fash.webp",
+    "image": "assets/images/naomi-klein.jpg",
+    "thumbnail": "assets/images/thumbnails/naomi-klein.webp",
     "image_alt": "Coral-red and black glitch collage",
     "aspect_ratio": "h-tall-1",
     "gallery_images": [],
-    "links": [
-      {
-        "title": "Naomi Klein: End Times Fascism | Doomscroll",
-        "url": "https://www.youtube.com/watch?v=UHDwQ6FuWCs",
-        "type": "BOOK",
-        "desc": "Naomi Klein, an author, activist and professor of Climate Justice at the University of British Columbia."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "note": "A lesson in what happens when people are categorized like objects."
-      },
-      {
-        "slug": "#2026-10-02-dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "note": "How OpenAI's Dots, Grok Bot, and Meta's Muse Charm use visual semiotics to disarm our defenses against autonomous surveillance."
-      },
-      {
-        "slug": "#2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "note": "Cognitive capitalism and post-Fordism missed the body. Synthetic hormones, algorithmic desire, and molecular governmentality redefined modern power."
-      }
-    ],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "video",
       "climatechange",

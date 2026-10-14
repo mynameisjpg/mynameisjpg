@@ -31,8 +31,11 @@ featured: false
 shareable: true
 allow_embed: true
 image:
-  path: "assets/images/end-times-fash.jpg"
+  path: "assets/images/naomi-klein.jpg"
   alt: "Coral-red and black glitch collage"
+gallery-images:
+  - path: "assets/images/end-times-fash.jpg"
+  alt: "Coral red and black glitch collage"
 links:
   - title: "Naomi Klein: End Times Fascism | Doomscroll"
     url: "https://www.youtube.com/watch?v=UHDwQ6FuWCs"
