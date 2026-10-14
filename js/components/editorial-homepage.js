@@ -13,6 +13,7 @@
   const INITIAL_BATCH_SIZE = 6;
   const LOAD_MORE_BATCH_SIZE = 6;
   let currentVisibleCount = INITIAL_BATCH_SIZE;
+  let activeTimelineTag = null;
 
   function getAppState() {
     return window.UntitledApp || {};
@@ -37,7 +38,18 @@
     return posts
       .filter((p) => {
         const fmt = (p.format || "ESSAY").toUpperCase().trim();
-        return fmt === "ESSAY" || fmt === "NOTE" || fmt === "DISPATCH";
+        const isEssayOrNote = fmt === "ESSAY" || fmt === "NOTE" || fmt === "DISPATCH";
+        if (!isEssayOrNote) return false;
+
+        if (activeTimelineTag) {
+          const tagTarget = activeTimelineTag.toLowerCase();
+          const matchesFoundation = Array.isArray(p.foundations) && p.foundations.some((f) => String(f).toLowerCase() === tagTarget);
+          const matchesTags = Array.isArray(p.tags) && p.tags.some((t) => String(t).toLowerCase() === tagTarget);
+          const matchesPillar = String(p.pillar || "").toLowerCase().includes(tagTarget);
+          return matchesFoundation || matchesTags || matchesPillar;
+        }
+
+        return true;
       })
       .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
   }
@@ -118,7 +130,7 @@
             </h3>
             ${post.excerpt ? `<p class="entry-excerpt">${escapeHtml(post.excerpt)}</p>` : ''}
             <div class="entry-byline-row">
-              <span class="entry-author-meta">// BY: ${escapeHtml(author)}</span>
+              <span class="entry-author-meta">BY: ${escapeHtml(author)}</span>
             </div>
           </div>
         </div>
@@ -202,6 +214,44 @@
         e.preventDefault();
         const postId = audioBtn.getAttribute("data-post-id") || "2026-10-03-telebody-latent-space-pharmacopornographic-ai";
         openPostInReader(postId);
+        return;
+      }
+
+      // Related Posts Button (Filter timeline by foundation tag)
+      const relatedBtn = e.target.closest(".hero-related-posts-btn");
+      if (relatedBtn) {
+        e.preventDefault();
+        const tag = relatedBtn.getAttribute("data-filter-tag") || "philosophy";
+        activeTimelineTag = tag;
+        currentVisibleCount = INITIAL_BATCH_SIZE;
+        renderTimelinePosts(currentVisibleCount);
+
+        // Update timeline title strip to show active filter with clear option
+        const titleSpan = document.querySelector(".panel-essays-notes .panel-header-title span");
+        if (titleSpan) {
+          titleSpan.innerHTML = `ESSAYS &amp; NOTES <span style="color:#ffffff; font-size:0.6rem; margin-left:6px;">[#${tag.toUpperCase()}]</span>`;
+        }
+
+        const actionLink = document.querySelector(".panel-essays-notes .panel-header-action");
+        if (actionLink) {
+          actionLink.textContent = "CLEAR FILTER [×]";
+          actionLink.href = "#";
+          actionLink.onclick = (evt) => {
+            evt.preventDefault();
+            activeTimelineTag = null;
+            if (titleSpan) titleSpan.innerHTML = "ESSAYS &amp; NOTES DISPATCH LOG";
+            actionLink.textContent = "VIEW ALL 22 [/]";
+            actionLink.href = "archive.html";
+            actionLink.onclick = null;
+            renderTimelinePosts(INITIAL_BATCH_SIZE);
+          };
+        }
+
+        // Smooth scroll to timeline panel
+        const timelinePanel = document.querySelector(".panel-essays-notes");
+        if (timelinePanel) {
+          timelinePanel.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
         return;
       }
 

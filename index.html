@@ -136,6 +136,110 @@
       aria-label="Editorial Dispatches & Streams">
       <div class="editorial-shell">
 
+        <!-- TOP UTILITY PANELS (90px HEIGHT: 1-col Nodemap, 2-col Art Gallery, 1-col Beacon) -->
+        <section class="top-utility-strip" aria-label="Top Utility Overview">
+          <!-- Left: 1 Column - 3D Nodemap View -->
+          <div class="top-widget-panel widget-nodemap">
+            <div class="widget-header">
+              <div class="widget-title">
+                <svg class="widget-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="18" cy="5" r="3"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+                <span>3D TAXONOMY NETWORK</span>
+              </div>
+              <a href="network.html" class="widget-action" title="Launch 3D Taxonomy Network">LAUNCH [↗]</a>
+            </div>
+            <a href="network.html" class="widget-nodemap-canvas-wrap" title="Explore 3D Taxonomy Network">
+              <svg class="nodemap-radar-svg" viewBox="0 0 240 50" preserveAspectRatio="xMidYMid meet">
+                <!-- Concentric radar circles -->
+                <circle cx="120" cy="25" r="10" stroke="rgba(255,255,255,0.08)" fill="none" />
+                <circle cx="120" cy="25" r="22" stroke="rgba(255,255,255,0.06)" fill="none" />
+                <circle cx="120" cy="25" r="36" stroke="rgba(255,255,255,0.04)" fill="none" />
+                <!-- Sweep line -->
+                <line x1="120" y1="25" x2="150" y2="5" stroke="rgba(232, 74, 95, 0.45)" stroke-width="1.5" />
+                <!-- Connecting constellation lines -->
+                <line x1="30" y1="20" x2="48" y2="18" stroke="rgba(232, 74, 95, 0.25)" stroke-width="1" />
+                <line x1="30" y1="20" x2="32" y2="38" stroke="rgba(232, 74, 95, 0.2)" stroke-width="1" />
+                <line x1="48" y1="18" x2="82" y2="28" stroke="rgba(232, 74, 95, 0.2)" stroke-width="1" />
+                <line x1="82" y1="28" x2="106" y2="22" stroke="rgba(232, 74, 95, 0.25)" stroke-width="1" />
+                <line x1="106" y1="22" x2="132" y2="34" stroke="rgba(232, 74, 95, 0.3)" stroke-width="1" />
+                <line x1="132" y1="34" x2="186" y2="28" stroke="rgba(232, 74, 95, 0.2)" stroke-width="1" />
+                <line x1="186" y1="28" x2="198" y2="18" stroke="rgba(232, 74, 95, 0.25)" stroke-width="1" />
+                <line x1="186" y1="28" x2="196" y2="35" stroke="rgba(232, 74, 95, 0.25)" stroke-width="1" />
+                <!-- Nodes -->
+                <circle cx="30" cy="20" r="4.5" fill="#f0f0f0" />
+                <circle cx="48" cy="18" r="4" fill="#f0f0f0" />
+                <circle cx="33" cy="39" r="2.5" fill="#58a6ff" />
+                <circle cx="70" cy="40" r="3" fill="#e84a5f" />
+                <circle cx="76" cy="27" r="2.5" fill="#58a6ff" />
+                <circle cx="86" cy="12" r="2" fill="#f0f0f0" />
+                <circle cx="106" cy="22" r="2.5" fill="#58a6ff" />
+                <circle cx="110" cy="33" r="2.5" fill="#58a6ff" />
+                <circle cx="132" cy="13" r="2.5" fill="#58a6ff" />
+                <circle cx="128" cy="34" r="4" fill="#e84a5f" />
+                <circle cx="152" cy="42" r="2" fill="#f0f0f0" />
+                <circle cx="178" cy="30" r="4" fill="#e84a5f" />
+                <circle cx="188" cy="34" r="3.5" fill="#58a6ff" />
+                <circle cx="198" cy="18" r="3" fill="#58a6ff" />
+                <circle cx="218" cy="45" r="3" fill="#f0f0f0" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Middle: 2 Columns - Art Gallery (Spatial Cover Vault) -->
+          <div class="top-widget-panel widget-gallery">
+            <div class="widget-header">
+              <div class="widget-title">
+                <svg class="widget-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+                <span>ART GALLERY VAULT</span>
+              </div>
+              <a href="gallery.html" class="widget-action" title="Enter Spatial Cover Vault">ENTER [↗]</a>
+            </div>
+            <div class="widget-gallery-triptych">
+              <a href="gallery.html" class="gallery-thumb-chip" title="3D Art Vault">
+                <img src="assets/images/3D-vault.jpg" alt="3D Art Vault" loading="lazy" />
+                <span class="gallery-chip-badge">3D</span>
+              </a>
+              <a href="gallery.html" class="gallery-thumb-chip" title="4D Time-Based Art Vault">
+                <img src="assets/images/4D-vault.gif" alt="4D Time-Based Art Vault" loading="lazy" />
+                <span class="gallery-chip-badge">4D</span>
+              </a>
+              <a href="gallery.html" class="gallery-thumb-chip" title="Audio Art Vault">
+                <img src="assets/images/music-vault.gif" alt="Audio Art Vault" loading="lazy" />
+                <span class="gallery-chip-badge">MUSIC</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: 1 Column - Dispatch Beacon (Newsletter) -->
+          <div class="top-widget-panel widget-beacon">
+            <div class="widget-header">
+              <div class="widget-title">
+                <svg class="widget-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>DISPATCH BEACON</span>
+              </div>
+              <span class="widget-freq-meta">IN YOUR INBOX</span>
+            </div>
+            <form class="widget-beacon-form"
+              onsubmit="event.preventDefault(); if (window.UntitledApp && window.UntitledApp.openSubscribeModal) { window.UntitledApp.openSubscribeModal(); } else { const m = document.getElementById('subscribe-modal'); if (m) m.showModal(); }">
+              <input type="email" class="widget-beacon-input" placeholder="endpoint@domain.xyz"
+                aria-label="Subscribe endpoint" required spellcheck="false" />
+              <button type="submit" class="btn-beacon-sub">SUB</button>
+            </form>
+          </div>
+        </section>
+
         <!-- FULL-WIDTH LEAD HERO SECTION -->
         <section class="editorial-hero-banner" aria-label="Featured Lead Dispatch">
           <div class="hero-text-col">
@@ -159,10 +263,9 @@
                 data-post-id="2026-10-03-telebody-latent-space-pharmacopornographic-ai">
                 READ DISPATCH ↗
               </button>
-              <button type="button" class="hero-audio-dispatch-btn"
-                data-post-id="2026-10-03-telebody-latent-space-pharmacopornographic-ai"
-                aria-label="Listen to Audio Dispatch">
-                AUDIO DISPATCH (24:12) <span class="hero-audio-play-icon">▶</span>
+              <button type="button" class="hero-related-posts-btn" data-filter-tag="philosophy"
+                title="Filter timeline by #philosophy related posts">
+                RELATED POSTS <span class="hero-related-tag">[#PHILOSOPHY]</span> ↘
               </button>
             </div>
             <div class="hero-meta-row">
@@ -194,7 +297,7 @@
                   <line x1="16" y1="13" x2="8" y2="13"></line>
                   <line x1="16" y1="17" x2="8" y2="17"></line>
                 </svg>
-                <span>ESSAYS &amp; NOTES DISPATCH LOG</span>
+                <span>ESSAYS &amp; NOTES LOG</span>
               </div>
               <a href="archive.html" class="panel-header-action" title="View all dispatches in archive">VIEW ALL 22
                 [/]</a>
@@ -247,7 +350,7 @@
                       operational images: visual inputs that exist purely to execute actions.
                     </p>
                     <div class="entry-byline-row">
-                      <span class="entry-author-meta">// BY: Juan P. Giusepponi</span>
+                      <span class="entry-author-meta">BY: Juan P. Giusepponi</span>
                     </div>
                   </div>
                 </div>
@@ -294,7 +397,7 @@
                       What builds lasting brand value is genuine community credibility.
                     </p>
                     <div class="entry-byline-row">
-                      <span class="entry-author-meta">// BY: Juan P. Giusepponi</span>
+                      <span class="entry-author-meta">BY: Juan P. Giusepponi</span>
                     </div>
                   </div>
                 </div>
@@ -344,7 +447,7 @@
                       perceptual anchor points in generative systems.
                     </p>
                     <div class="entry-byline-row">
-                      <span class="entry-author-meta">// BY: Juan P. Giusepponi</span>
+                      <span class="entry-author-meta">BY: Juan P. Giusepponi</span>
                     </div>
                   </div>
                 </div>
@@ -393,7 +496,7 @@
                       generative diffusion models hide hallucinated pixels in plain sight.
                     </p>
                     <div class="entry-byline-row">
-                      <span class="entry-author-meta">// BY: Juan P. Giusepponi</span>
+                      <span class="entry-author-meta">BY: Juan P. Giusepponi</span>
                     </div>
                   </div>
                 </div>
