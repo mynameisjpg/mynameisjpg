@@ -31,7 +31,7 @@
       <div class="modal-box">
         <div class="modal-header-tag">[ DISPATCH_SUBSCRIPTION // FREQUENCY: FORTNIGHTLY ]</div>
         <h2 id="modal-heading" class="modal-title">Subscribe to Untitled.jpg</h2>
-        <p class="modal-description">Deep-dive essays and technical dispatches on AI perception, cognitive psychophysics, high-dimensional latent space, and media archaeology.</p>
+        <p class="modal-description">You may get an email from time to time, with thoughts on whatever, useful resources and links, and interesting recommendations.</p>
         
         <form class="modal-form" id="subscribe-form" method="dialog">
           <div class="modal-input-group">
@@ -73,7 +73,7 @@
         <div class="modal-header-tag">[ TRANSMISSION_RECEIVED // STATUS: CONFIRMED ]</div>
         <h2 id="modal-heading" class="modal-title">Subscription Confirmed</h2>
         <p class="modal-description" style="margin-bottom: 1.2rem;">
-          Thank you for subscribing to <strong>Untitled.jpg</strong> dispatches. Technical essays on AI perception, cognitive psychophysics, and latent space geometry will be transmitted to your endpoint.
+          Thank you for subscribing to <strong>Untitled.jpg</strong> dispatches. Essays and notes on AI, perception, psychology, design, philosophy will be transmitted to your endpoint.
         </p>
         
         <div class="modal-confirmation-card">
