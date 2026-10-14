@@ -23,7 +23,7 @@ tags:
   - "share"
 reading_time: "Curated Listening"
 theme: "dark"
-featured: true
+featured: false
 shareable: true
 allow_embed: true
 image:
