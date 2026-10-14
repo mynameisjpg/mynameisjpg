@@ -30,7 +30,7 @@ tags:
   - "computer-vision"
 
 theme: "light"
-featured: true
+featured: false
 sys_id: "SYS_260928_PRVTL"
 reading_time: "Code Toolkit"
 

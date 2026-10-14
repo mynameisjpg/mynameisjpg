@@ -164,6 +164,7 @@
 
 .card-art-box {
   width: 100%;
+  aspect-ratio: 1 / 1.215;
   background-color: #161616;
   position: relative;
   overflow: hidden;
@@ -189,9 +190,9 @@
   filter: grayscale(0%) contrast(100%);
 }
 
-/* Asymmetric Aspect Ratios */
+/* Card Aspect Ratios (h-tall-1 calibrated to match 2-col 16:9 featured card height) */
 .h-tall-1 {
-  aspect-ratio: 1 / 1.28;
+  aspect-ratio: 1 / 1.215;
 }
 .h-tall-2 {
   aspect-ratio: 1 / 1.42;

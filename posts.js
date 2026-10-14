@@ -1983,7 +1983,7 @@
     "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
     "subtopic_id": "anatomy-psychophysics-vision",
     "theme": "light",
-    "featured": true,
+    "featured": false,
     "shareable": true,
     "allow_embed": true,
     "in-gallery": true,
