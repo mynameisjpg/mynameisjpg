@@ -451,7 +451,7 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
@@ -509,7 +509,7 @@
     ],
     "links": [
       {
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
@@ -966,7 +966,7 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
@@ -1051,7 +1051,7 @@
     ],
     "links": [
       {
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
@@ -1451,7 +1451,7 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
@@ -1522,7 +1522,7 @@
     ],
     "links": [
       {
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
@@ -1866,7 +1866,7 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
@@ -1924,7 +1924,7 @@
     ],
     "links": [
       {
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
@@ -2798,7 +2798,7 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
@@ -2886,7 +2886,7 @@
     ],
     "links": [
       {
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
@@ -2965,7 +2965,7 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
@@ -3050,7 +3050,7 @@
     ],
     "links": [
       {
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
@@ -3239,7 +3239,7 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
@@ -3297,7 +3297,7 @@
     ],
     "links": [
       {
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
@@ -3820,7 +3820,7 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
@@ -3861,7 +3861,7 @@
     ],
     "links": [
       {
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
@@ -5899,7 +5899,7 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
@@ -5927,7 +5927,7 @@
     ],
     "links": [
       {
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
@@ -11981,7 +11981,7 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
@@ -11995,7 +11995,7 @@
     ],
     "links": [
       {
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
@@ -12568,7 +12568,7 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
@@ -12582,7 +12582,7 @@
     ],
     "links": [
       {
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",
@@ -14068,7 +14068,7 @@
       {
         "id": "the-music-vault",
         "slug": "the-music-vault",
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "date": "2026.10.11",
         "format": "BOOKMARK",
         "foundations": [
@@ -14082,7 +14082,7 @@
     ],
     "links": [
       {
-        "title": "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
         "slug": "the-music-vault",
         "format": "BOOKMARK",
         "url": "posts/the-music-vault.html",

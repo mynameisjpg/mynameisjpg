@@ -1,9 +1,9 @@
 ---
 # UNTITLED.JPG DISPATCH METADATA
-title: "[ ⊳Untitled.mp3 ◪ MUSIC_VAULT ]"
+title: "[ Untitled.mp3 ◪ MUSIC_VAULT ]"
 date: "2026-10-11 03:00:00 -0300"
 author: "Juan P. Giusepponi"
-status: "published"
+status: "draft"
 format: "bookmark"
 topic:
   pillar: "Art worth sharing"

@@ -122,8 +122,7 @@
 
 .grid-card.card-featured .card-caption {
   font-size: var(--text-xl);
-  font-family: var(--font-mono);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .grid-card.card-featured:hover {
