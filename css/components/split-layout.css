@@ -132,7 +132,8 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  width: 100%; /* Matches exact width of SYS_LOG legend above it */
+  width: 100%;
+  /* Matches exact width of SYS_LOG legend above it */
 }
 
 .flex-pill {
@@ -142,7 +143,8 @@
 
 .btn-matrix-pill {
   width: 100%;
-  height: 28px; /* Height matching search box */
+  height: 28px;
+  /* Height matching search box */
   box-sizing: border-box;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border-subtle);
@@ -222,6 +224,7 @@
     opacity: 0;
     transform: translateY(-4px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -330,7 +333,8 @@
 /* Edge-Stuck Vertical 3-Chevron Reader Panel Close Tab (Frosted Coral Glass) */
 .btn-close-reader-edge {
   position: absolute;
-  top: 136px; /* Aligned with top edge of post title */
+  top: 136px;
+  /* Aligned with top edge of post title */
   left: -36px;
   transform: none;
   width: 36px;
@@ -348,7 +352,8 @@
   justify-content: center;
   gap: 8px;
   cursor: pointer;
-  z-index: 1; /* Sits underneath reader panel so panel casts shadow on tab */
+  z-index: 1;
+  /* Sits underneath reader panel so panel casts shadow on tab */
   box-shadow: -4px 0 16px rgba(0, 0, 0, 0.35);
   padding: 0;
   transition:
@@ -436,7 +441,8 @@
 }
 
 /* Responsive Stacking & Sliding Viewport (< 980px Width or Short Height <= 700px) */
-@media (max-width: 980px), (max-height: 700px) {
+@media (max-width: 980px),
+(max-height: 700px) {
   .split-layout {
     display: block !important;
     width: 100vw !important;
@@ -462,6 +468,21 @@
     overflow-y: auto !important;
     box-sizing: border-box !important;
     padding: 1.5rem 1.25rem 4rem 1.25rem;
+  }
+
+  /* Fixed background plane: remove 48px desktop sidebar offset when nav shifts to top */
+  .grid-column::before {
+    left: 0 !important;
+    top: 0 !important;
+  }
+
+  /* Matrix Grid: 3 columns when width is < 980px */
+  .card-grid-matrix,
+  .split-layout .card-grid-matrix,
+  .split-layout.reader-open .card-grid-matrix {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.3rem 1rem !important;
+    max-width: 100% !important;
   }
 
   .post-column,
@@ -531,5 +552,15 @@
 
   .btn-close-reader-edge {
     display: none !important;
+  }
+}
+
+/* Smallest Media Breakpoint (<= 600px): Change Matrix Grid to 2 Columns */
+@media (max-width: 600px) {
+  .card-grid-matrix,
+  .split-layout .card-grid-matrix,
+  .split-layout.reader-open .card-grid-matrix {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem 0.65rem !important;
   }
 }

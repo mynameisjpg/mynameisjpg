@@ -350,10 +350,20 @@
   text-transform: uppercase;
 }
 
+@media (max-width: 980px) {
+  .card-grid-matrix,
+  .split-layout.reader-open .card-grid-matrix {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.3rem 1rem;
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 600px) {
-  .card-grid-matrix {
+  .card-grid-matrix,
+  .split-layout.reader-open .card-grid-matrix {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.2rem;
+    gap: 1rem 0.65rem;
   }
 }
 
