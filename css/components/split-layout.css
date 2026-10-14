@@ -45,7 +45,7 @@
 }
 
 .post-column {
-  width: 50%;
+  width: 65%;
   position: fixed;
   top: 0;
   right: 0;
@@ -63,12 +63,13 @@
     transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
     opacity 0.25s ease,
     visibility 0.35s;
-  box-shadow: -12px 0 35px rgba(0, 0, 0, 0.6);
+  box-shadow: -16px 0 45px rgba(0, 0, 0, 0.75), 0 0 30px rgba(232, 74, 95, 0.12);
   border-left: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.1));
 }
 
 .split-layout.reader-open .grid-column {
-  width: 50%;
+  width: 35%;
+  padding: 1.5rem 1.4rem 3.5rem 1.4rem;
 }
 
 .split-layout.reader-open .post-column {

@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Untitled.jpg - Overthinking perception, meaning, systems and design</title>
-  <meta name="description" content="Essays, field notes, curated bookmarks, and practical resources on AI perception, cognitive psychophysics, latent spaces, and media ecology.">
+  <meta name="description"
+    content="Essays, field notes, curated bookmarks, and practical resources on AI perception, cognitive psychophysics, latent spaces, and media ecology.">
   <link rel="canonical" href="https://mynameisjpg.github.io/mynameisjpg/index.html">
 
   <!-- Open Graph / LinkedIn / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Untitled.jpg">
   <meta property="og:title" content="Untitled.jpg - Overthinking perception, meaning, systems and design">
-  <meta property="og:description" content="Essays, field notes, curated bookmarks, and practical resources on AI perception, cognitive psychophysics, latent spaces, and media ecology.">
+  <meta property="og:description"
+    content="Essays, field notes, curated bookmarks, and practical resources on AI perception, cognitive psychophysics, latent spaces, and media ecology.">
   <meta property="og:url" content="https://mynameisjpg.github.io/mynameisjpg/index.html">
   <meta property="og:image" content="https://mynameisjpg.github.io/mynameisjpg/assets/images/favicon.svg">
 
   <!-- Twitter / X Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Untitled.jpg - Overthinking perception, meaning, systems and design">
-  <meta name="twitter:description" content="Essays, field notes, curated bookmarks, and practical resources on AI perception, cognitive psychophysics, latent spaces, and media ecology.">
+  <meta name="twitter:description"
+    content="Essays, field notes, curated bookmarks, and practical resources on AI perception, cognitive psychophysics, latent spaces, and media ecology.">
   <meta name="twitter:image" content="https://mynameisjpg.github.io/mynameisjpg/assets/images/favicon.svg">
-  
+
   <!-- Schema.org JSON-LD (WebSite & Publisher) -->
   <script type="application/ld+json">
   {
@@ -41,11 +45,16 @@
   <!-- Typography: Azeret Mono (UI), Platypi (Prose), JetBrains Mono (ASCII Diagrams & Code) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Platypi:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Platypi:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet">
+
   <!-- Math Rendering (KaTeX), Markdown (Marked.js), & Diagrams (Mermaid.js) - Non-blocking & Deferred -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"></noscript>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  </noscript>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -65,7 +74,7 @@
 
   <!-- Modular Design System Stylesheet (Imports Tokens & Components) -->
   <link rel="stylesheet" href="index.css?v=6">
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="shortcut icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -73,6 +82,7 @@
   <!-- Autonomous Web Components (Deferred) -->
   <script defer src="js/components/sidebar-rail.js"></script>
 </head>
+
 <body>
 
   <!-- ====================================================================
@@ -82,7 +92,8 @@
   <sidebar-rail active-page="home" has-search></sidebar-rail>
 
   <!-- Interactive Dropdown Overlays attached to Top Navbar -->
-  <div id="dispatch-log-dropdown" class="top-dropdown-panel menu-dropdown-panel dispatch-log-panel" style="display:none;">
+  <div id="dispatch-log-dropdown" class="top-dropdown-panel menu-dropdown-panel dispatch-log-panel"
+    style="display:none;">
     <div class="dropdown-header">[ DISPATCH LOG ]</div>
     <button type="button" class="dropdown-option active" data-filter="all">SHOW ALL DISPATCHES</button>
     <button type="button" class="dropdown-option" data-filter="essay">_ESSAYS</button>
@@ -92,7 +103,8 @@
   </div>
 
   <div id="top-search-dropdown" class="top-dropdown-panel search-dropdown-panel" style="display:none;">
-    <input type="text" id="top-search-input" name="search" placeholder="SEARCH DISPATCHES..." aria-label="Search dispatches" autocomplete="off" spellcheck="false" />
+    <input type="text" id="top-search-input" name="search" placeholder="SEARCH DISPATCHES..."
+      aria-label="Search dispatches" autocomplete="off" spellcheck="false" />
   </div>
 
   <div id="top-filter-dropdown" class="top-dropdown-panel menu-dropdown-panel filter-panel" style="display:none;">
@@ -120,48 +132,58 @@
 
     <!-- COMPONENT 3: EDITORIAL HOMEPAGE (Full-Width Hero & 3-Panel Stream Grid)
          File: css/components/editorial-homepage.css -->
-    <section class="grid-column editorial-column" data-component="dispatch-editorial" aria-label="Editorial Dispatches & Streams">
+    <section class="grid-column editorial-column" data-component="dispatch-editorial"
+      aria-label="Editorial Dispatches & Streams">
       <div class="editorial-shell">
 
         <!-- FULL-WIDTH LEAD HERO SECTION -->
         <section class="editorial-hero-banner" aria-label="Featured Lead Dispatch">
           <div class="hero-text-col">
-            <div class="hero-kicker-tag">[ LEAD DISPATCH // ISSUE 42 ]</div>
+            <div class="hero-kicker-tag">[ LEAD DISPATCH // For_Heavy_N3rds ]</div>
             <h2 class="hero-headline">
-              <a href="#2026-10-03-telebody-latent-space-pharmacopornographic-ai" data-post-id="2026-10-03-telebody-latent-space-pharmacopornographic-ai">
+              <a href="#2026-10-03-telebody-latent-space-pharmacopornographic-ai"
+                data-post-id="2026-10-03-telebody-latent-space-pharmacopornographic-ai">
                 The Telebody in Pharmacopornographic Space
               </a>
             </h2>
             <p class="hero-deck">
-              How generative video architectures reconstitute Preciado's somatopolitical regime—transforming ocular desire into real-time synthetic feedback loops.
+              Updating Paul B. Preciado's pharmacopornographic politics for generative AI, Bernard Stiegler's cognitive
+              proletarianization, and Byung-Chul Han's psychopolitics. How the telebody resists automated reality
+              through dysphoria, glitch, and neganthropic worldmaking.
             </p>
             <blockquote class="hero-pullquote">
               <p>"The screen is no longer a window; it is a metabolic interface."</p>
             </blockquote>
             <div class="hero-cta-group">
-              <button type="button" class="hero-read-dispatch-btn" data-post-id="2026-10-03-telebody-latent-space-pharmacopornographic-ai">
+              <button type="button" class="hero-read-dispatch-btn"
+                data-post-id="2026-10-03-telebody-latent-space-pharmacopornographic-ai">
                 READ DISPATCH ↗
               </button>
-              <button type="button" class="hero-audio-dispatch-btn" data-post-id="2026-10-03-telebody-latent-space-pharmacopornographic-ai" aria-label="Listen to Audio Dispatch">
+              <button type="button" class="hero-audio-dispatch-btn"
+                data-post-id="2026-10-03-telebody-latent-space-pharmacopornographic-ai"
+                aria-label="Listen to Audio Dispatch">
                 AUDIO DISPATCH (24:12) <span class="hero-audio-play-icon">▶</span>
               </button>
             </div>
             <div class="hero-meta-row">
               <span>JUAN PABLO GIUSEPPONI</span>
               <span class="hero-meta-dot">•</span>
-              <span>18 MIN READ</span>
+              <span>25 MIN READ</span>
             </div>
           </div>
 
-          <div class="hero-media-col" data-post-id="2026-10-03-telebody-latent-space-pharmacopornographic-ai" role="button" tabindex="0" title="Read The Telebody in Pharmacopornographic Space">
+          <a href="#2026-10-03-telebody-latent-space-pharmacopornographic-ai" class="hero-media-col"
+            data-post-id="2026-10-03-telebody-latent-space-pharmacopornographic-ai"
+            title="Read The Telebody in Pharmacopornographic Space">
             <span class="hero-art-tier-badge">POLITICAL_ECOLOGY // TIER 1</span>
-            <img src="assets/images/pharmacobody.jpg" alt="The Telebody in Pharmacopornographic Space Artwork" onerror="this.src='assets/images/telebodies.jpg'" />
-          </div>
+            <img src="assets/images/pharmacobody.jpg" alt="The Telebody in Pharmacopornographic Space Artwork"
+              onerror="this.src='assets/images/telebodies.jpg'" />
+          </a>
         </section>
 
         <!-- THREE-PANEL EDITORIAL ARCHITECTURE -->
         <section class="editorial-panels-grid" aria-label="Editorial Streams">
-          
+
           <!-- PANEL 1: ESSAYS & NOTES DISPATCH LOG (TIMELINE FEED) -->
           <div class="editorial-panel-card panel-essays-notes">
             <div class="panel-header-strip">
@@ -174,7 +196,8 @@
                 </svg>
                 <span>ESSAYS &amp; NOTES DISPATCH LOG</span>
               </div>
-              <a href="archive.html" class="panel-header-action" title="View all dispatches in archive">VIEW ALL 22 [/]</a>
+              <a href="archive.html" class="panel-header-action" title="View all dispatches in archive">VIEW ALL 22
+                [/]</a>
             </div>
 
             <!-- Timeline Stream Axis -->
@@ -191,8 +214,19 @@
                   <div class="timeline-glowing-dot" aria-hidden="true"></div>
                 </div>
                 <div class="timeline-entry-box">
-                  <div class="entry-thumb-box">
-                    <img src="assets/images/operational-images.jpg" alt="Operational Images" loading="lazy" />
+                  <div class="entry-thumb-col">
+                    <a href="#2026-10-10-operational-images-farocki-flusser-machine-vision" class="entry-thumb-box"
+                      data-post-id="2026-10-10-operational-images-farocki-flusser-machine-vision"
+                      title="Read Operational Images">
+                      <img src="assets/images/operational-images.jpg" alt="Operational Images" loading="lazy" />
+                    </a>
+                    <div class="thumb-actions-stack">
+                      <button type="button" class="btn-read-dispatch btn-thumb-action"
+                        data-post-id="2026-10-10-operational-images-farocki-flusser-machine-vision">
+                        READ ↗
+                      </button>
+                      <span class="thumb-meta-read">// 10 MIN READ</span>
+                    </div>
                   </div>
                   <div class="entry-body-box">
                     <div class="entry-tags-row">
@@ -203,18 +237,17 @@
                       <span class="tags-meta-grey">#MACHINE-VISION #SEMIOTICS</span>
                     </div>
                     <h3 class="entry-headline">
-                      <a href="#2026-10-10-operational-images-farocki-flusser-machine-vision" data-post-id="2026-10-10-operational-images-farocki-flusser-machine-vision">
+                      <a href="#2026-10-10-operational-images-farocki-flusser-machine-vision"
+                        data-post-id="2026-10-10-operational-images-farocki-flusser-machine-vision">
                         Operational Images: Why Neural Networks Don't Actually Look at Pictures
                       </a>
                     </h3>
                     <p class="entry-excerpt">
-                      Human beings look at pictures to interpret meaning, memory, and emotion. Neural networks process operational images: visual inputs that exist purely to execute actions.
+                      Human beings look at pictures to interpret meaning, memory, and emotion. Neural networks process
+                      operational images: visual inputs that exist purely to execute actions.
                     </p>
-                    <div class="entry-action-footer">
-                      <button type="button" class="btn-read-dispatch" data-post-id="2026-10-10-operational-images-farocki-flusser-machine-vision">
-                        READ DISPATCH ↗
-                      </button>
-                      <span class="entry-read-meta">// 10 MIN READ // BY: Juan P. Giusepponi</span>
+                    <div class="entry-byline-row">
+                      <span class="entry-author-meta">// BY: Juan P. Giusepponi</span>
                     </div>
                   </div>
                 </div>
@@ -230,8 +263,18 @@
                   <div class="timeline-glowing-dot" aria-hidden="true"></div>
                 </div>
                 <div class="timeline-entry-box">
-                  <div class="entry-thumb-box">
-                    <img src="assets/images/brands-are-dead.jpg" alt="Images are Dead" loading="lazy" />
+                  <div class="entry-thumb-col">
+                    <a href="#2026-10-10-images-are-dead" class="entry-thumb-box"
+                      data-post-id="2026-10-10-images-are-dead" title="Read Images are Dead">
+                      <img src="assets/images/brands-are-dead.jpg" alt="Images are Dead" loading="lazy" />
+                    </a>
+                    <div class="thumb-actions-stack">
+                      <button type="button" class="btn-read-dispatch btn-thumb-action"
+                        data-post-id="2026-10-10-images-are-dead">
+                        READ ↗
+                      </button>
+                      <span class="thumb-meta-read">// 3 MIN READ</span>
+                    </div>
                   </div>
                   <div class="entry-body-box">
                     <div class="entry-tags-row">
@@ -247,13 +290,11 @@
                       </a>
                     </h3>
                     <p class="entry-excerpt">
-                      When anyone can produce infinite pictures for free, slick visuals lose their power to impress. What builds lasting brand value is genuine community credibility.
+                      When anyone can produce infinite pictures for free, slick visuals lose their power to impress.
+                      What builds lasting brand value is genuine community credibility.
                     </p>
-                    <div class="entry-action-footer">
-                      <button type="button" class="btn-read-dispatch" data-post-id="2026-10-10-images-are-dead">
-                        READ DISPATCH ↗
-                      </button>
-                      <span class="entry-read-meta">// 3 MIN READ // BY: Juan P. Giusepponi</span>
+                    <div class="entry-byline-row">
+                      <span class="entry-author-meta">// BY: Juan P. Giusepponi</span>
                     </div>
                   </div>
                 </div>
@@ -269,8 +310,20 @@
                   <div class="timeline-glowing-dot" aria-hidden="true"></div>
                 </div>
                 <div class="timeline-entry-box">
-                  <div class="entry-thumb-box">
-                    <img src="assets/images/charts-graphs.gif" alt="The Poverty of Synthetic Ground Truth" loading="lazy" />
+                  <div class="entry-thumb-col">
+                    <a href="#2026-10-10-poverty-of-synthetic-ground-truth" class="entry-thumb-box"
+                      data-post-id="2026-10-10-poverty-of-synthetic-ground-truth"
+                      title="Read The Poverty of Synthetic Ground Truth">
+                      <img src="assets/images/charts-graphs.gif" alt="The Poverty of Synthetic Ground Truth"
+                        loading="lazy" />
+                    </a>
+                    <div class="thumb-actions-stack">
+                      <button type="button" class="btn-read-dispatch btn-thumb-action"
+                        data-post-id="2026-10-10-poverty-of-synthetic-ground-truth">
+                        READ ↗
+                      </button>
+                      <span class="thumb-meta-read">// 12 MIN READ</span>
+                    </div>
                   </div>
                   <div class="entry-body-box">
                     <div class="entry-tags-row">
@@ -281,18 +334,17 @@
                       <span class="tags-meta-grey">#CHARXIV #VISION-MODELS</span>
                     </div>
                     <h3 class="entry-headline">
-                      <a href="#2026-10-10-poverty-of-synthetic-ground-truth" data-post-id="2026-10-10-poverty-of-synthetic-ground-truth">
+                      <a href="#2026-10-10-poverty-of-synthetic-ground-truth"
+                        data-post-id="2026-10-10-poverty-of-synthetic-ground-truth">
                         The Poverty of Synthetic Ground Truth
                       </a>
                     </h3>
                     <p class="entry-excerpt">
-                      Auto-phagic model collapse under synthetic training data distributions and the erosion of perceptual anchor points in generative systems.
+                      Auto-phagic model collapse under synthetic training data distributions and the erosion of
+                      perceptual anchor points in generative systems.
                     </p>
-                    <div class="entry-action-footer">
-                      <button type="button" class="btn-read-dispatch" data-post-id="2026-10-10-poverty-of-synthetic-ground-truth">
-                        READ DISPATCH ↗
-                      </button>
-                      <span class="entry-read-meta">// 12 MIN READ // BY: Juan P. Giusepponi</span>
+                    <div class="entry-byline-row">
+                      <span class="entry-author-meta">// BY: Juan P. Giusepponi</span>
                     </div>
                   </div>
                 </div>
@@ -308,8 +360,19 @@
                   <div class="timeline-glowing-dot" aria-hidden="true"></div>
                 </div>
                 <div class="timeline-entry-box">
-                  <div class="entry-thumb-box">
-                    <img src="assets/images/ai-video-blindness.gif" alt="Saccadic Blindness" loading="lazy" />
+                  <div class="entry-thumb-col">
+                    <a href="#2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency" class="entry-thumb-box"
+                      data-post-id="2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency"
+                      title="Read Saccadic Blindness">
+                      <img src="assets/images/ai-video-blindness.gif" alt="Saccadic Blindness" loading="lazy" />
+                    </a>
+                    <div class="thumb-actions-stack">
+                      <button type="button" class="btn-read-dispatch btn-thumb-action"
+                        data-post-id="2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency">
+                        READ ↗
+                      </button>
+                      <span class="thumb-meta-read">// 6 MIN READ</span>
+                    </div>
                   </div>
                   <div class="entry-body-box">
                     <div class="entry-tags-row">
@@ -320,23 +383,29 @@
                       <span class="tags-meta-grey">#FOVEATED-VISION #AI-VIDEO</span>
                     </div>
                     <h3 class="entry-headline">
-                      <a href="#2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency" data-post-id="2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency">
+                      <a href="#2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency"
+                        data-post-id="2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency">
                         Saccadic Blindness: Why You Don't Notice AI Video Melts
                       </a>
                     </h3>
                     <p class="entry-excerpt">
-                      How human visual processing suppresses motion artifacts during rapid eye movements, letting generative diffusion models hide hallucinated pixels in plain sight.
+                      How human visual processing suppresses motion artifacts during rapid eye movements, letting
+                      generative diffusion models hide hallucinated pixels in plain sight.
                     </p>
-                    <div class="entry-action-footer">
-                      <button type="button" class="btn-read-dispatch" data-post-id="2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency">
-                        READ DISPATCH ↗
-                      </button>
-                      <span class="entry-read-meta">// 6 MIN READ // BY: Juan P. Giusepponi</span>
+                    <div class="entry-byline-row">
+                      <span class="entry-author-meta">// BY: Juan P. Giusepponi</span>
                     </div>
                   </div>
                 </div>
               </article>
 
+            </div>
+
+            <!-- Load More Essays / Notes Button -->
+            <div class="timeline-load-more-wrap">
+              <button type="button" class="btn-load-more-timeline" id="btn-load-more-timeline">
+                <span class="load-more-arrow">⇊</span> LOAD MORE ESSAYS / NOTES <span class="load-more-arrow">⇊</span>
+              </button>
             </div>
           </div>
 
@@ -349,72 +418,76 @@
                 </svg>
                 <span>BOOKMARKS</span>
               </div>
-              <a href="archive.html?filter=bookmark" class="panel-header-action" title="View all bookmarks">ALL (6) [/]</a>
+              <a href="archive.html?filter=bookmark" class="panel-header-action" title="View all bookmarks">ALL (6)
+                [/]</a>
             </div>
 
-            <div class="stacked-cards-list">
-              
+            <div class="stacked-rows-list">
+
               <!-- Bookmark 1: Marina Herlop -->
-              <article class="stacked-card-item">
-                <div class="stacked-thumb-box">
+              <article class="stacked-row-item">
+                <a href="#2026-10-11-marina-herlop-dja-dja" class="row-thumb-banner"
+                  data-post-id="2026-10-11-marina-herlop-dja-dja" title="Read Marina Herlop's Dja Dja">
                   <img src="assets/images/marina-herlop.jpg" alt="Marina Herlop's Dja Dja" loading="lazy" />
-                </div>
+                </a>
                 <div class="stacked-body-box">
                   <div class="entry-tags-row">
                     <span class="foundation-tag-red">ART</span>
                     <span class="tag-mid-dot">·</span>
-                    <span class="tags-meta-grey">#MUSIC #SOUNDS</span>
+                    <span class="tags-meta-grey">#MUSIC</span>
                   </div>
                   <h3 class="stacked-headline">
                     <a href="#2026-10-11-marina-herlop-dja-dja" data-post-id="2026-10-11-marina-herlop-dja-dja">
                       Marina Herlop's Dja Dja
                     </a>
                   </h3>
-                  <p class="stacked-excerpt">
-                    First piece of music of many more to come. A sublime sonic journey in avant-garde polyphony.
-                  </p>
-                  <div class="entry-action-footer">
-                    <button type="button" class="btn-read-dispatch" data-post-id="2026-10-11-marina-herlop-dja-dja">
-                      READ DISPATCH ↗
+                  <div class="stacked-action-footer">
+                    <button type="button" class="btn-read-dispatch btn-row-action"
+                      data-post-id="2026-10-11-marina-herlop-dja-dja">
+                      LISTEN ↗
                     </button>
-                    <span class="entry-read-meta">// CURATED LISTENING</span>
+                    <span class="row-meta-badge">// SPOTIFY ALBUM</span>
                   </div>
                 </div>
               </article>
 
               <!-- Bookmark 2: Naomi Klein -->
-              <article class="stacked-card-item">
-                <div class="stacked-thumb-box">
+              <article class="stacked-row-item">
+                <a href="#2026-10-14-naomi-klein-end-times-fascism-doomscroll" class="row-thumb-banner"
+                  data-post-id="2026-10-14-naomi-klein-end-times-fascism-doomscroll"
+                  title="Read Naomi Klein: End Times Fascism">
                   <img src="assets/images/naomi-klein.jpg" alt="Naomi Klein: End Times Fascism" loading="lazy" />
-                </div>
+                </a>
                 <div class="stacked-body-box">
                   <div class="entry-tags-row">
                     <span class="foundation-tag-red">PHILOSOPHY</span>
                     <span class="tag-mid-dot">·</span>
-                    <span class="tags-meta-grey">#POLITICS #CLIMATE</span>
+                    <span class="tags-meta-grey">#POLITICS</span>
                   </div>
                   <h3 class="stacked-headline">
-                    <a href="#2026-10-14-naomi-klein-end-times-fascism-doomscroll" data-post-id="2026-10-14-naomi-klein-end-times-fascism-doomscroll">
+                    <a href="#2026-10-14-naomi-klein-end-times-fascism-doomscroll"
+                      data-post-id="2026-10-14-naomi-klein-end-times-fascism-doomscroll">
                       Naomi Klein: End Times Fascism | Doomscroll
                     </a>
                   </h3>
-                  <p class="stacked-excerpt">
-                    Critical conversation examining algorithmic despair, disaster capitalism, and digital dread.
-                  </p>
-                  <div class="entry-action-footer">
-                    <button type="button" class="btn-read-dispatch" data-post-id="2026-10-14-naomi-klein-end-times-fascism-doomscroll">
-                      READ DISPATCH ↗
+                  <div class="stacked-action-footer">
+                    <button type="button" class="btn-read-dispatch btn-row-action"
+                      data-post-id="2026-10-14-naomi-klein-end-times-fascism-doomscroll">
+                      WATCH INTERVIEW ↗
                     </button>
-                    <span class="entry-read-meta">// ESSENTIAL DIALOGUE</span>
+                    <span class="row-meta-badge">// DIALOGUE</span>
                   </div>
                 </div>
               </article>
 
               <!-- Bookmark 3: Real AI Failure Story -->
-              <article class="stacked-card-item">
-                <div class="stacked-thumb-box">
+              <article class="stacked-row-item">
+                <a href="#2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds"
+                  class="row-thumb-banner"
+                  data-post-id="2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds"
+                  title="Read Real AI Failure Story">
                   <img src="assets/images/ai-fail-opus.jpg" alt="Real AI Failure Story" loading="lazy" />
-                </div>
+                </a>
                 <div class="stacked-body-box">
                   <div class="entry-tags-row">
                     <span class="foundation-tag-red">AI</span>
@@ -422,46 +495,44 @@
                     <span class="tags-meta-grey">#AI-AGENTS #SAFETY</span>
                   </div>
                   <h3 class="stacked-headline">
-                    <a href="#2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds" data-post-id="2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds">
+                    <a href="#2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds"
+                      data-post-id="2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds">
                       Real AI Failure Story: Deleted a Database in 9 Seconds!
                     </a>
                   </h3>
-                  <p class="stacked-excerpt">
-                    A stark post-mortem on unconstrained autonomous agentic tool loops in production environments.
-                  </p>
-                  <div class="entry-action-footer">
-                    <button type="button" class="btn-read-dispatch" data-post-id="2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds">
-                      READ DISPATCH ↗
+                  <div class="stacked-action-footer">
+                    <button type="button" class="btn-read-dispatch btn-row-action"
+                      data-post-id="2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds">
+                      READ STORY ↗
                     </button>
-                    <span class="entry-read-meta">// POST-MORTEM</span>
+                    <span class="row-meta-badge">// STORIES</span>
                   </div>
                 </div>
               </article>
 
               <!-- Bookmark 4: Marc van Elburg -->
-              <article class="stacked-card-item">
-                <div class="stacked-thumb-box">
+              <article class="stacked-row-item">
+                <a href="#2026-10-06-marc-van-elburg" class="row-thumb-banner" data-post-id="2026-10-06-marc-van-elburg"
+                  title="Read @marc.van.elburg">
                   <img src="assets/images/marc-van-elburg.gif" alt="Marc van Elburg" loading="lazy" />
-                </div>
+                </a>
                 <div class="stacked-body-box">
                   <div class="entry-tags-row">
                     <span class="foundation-tag-red">ART</span>
                     <span class="tag-mid-dot">·</span>
-                    <span class="tags-meta-grey">#SURREALISM #EXPRESSIONISM</span>
+                    <span class="tags-meta-grey">#SURREALISM #SHORT-FILM</span>
                   </div>
                   <h3 class="stacked-headline">
                     <a href="#2026-10-06-marc-van-elburg" data-post-id="2026-10-06-marc-van-elburg">
                       @marc.van.elburg's Surreal-Delirious Expressionism
                     </a>
                   </h3>
-                  <p class="stacked-excerpt">
-                    Hyper-saturated dreamscapes capturing digital vertigo and painterly cognitive distortion.
-                  </p>
-                  <div class="entry-action-footer">
-                    <button type="button" class="btn-read-dispatch" data-post-id="2026-10-06-marc-van-elburg">
-                      READ DISPATCH ↗
+                  <div class="stacked-action-footer">
+                    <button type="button" class="btn-read-dispatch btn-row-action"
+                      data-post-id="2026-10-06-marc-van-elburg">
+                      WATCH ANIMATION ↗
                     </button>
-                    <span class="entry-read-meta">// ARTIST SPOTLIGHT</span>
+                    <span class="row-meta-badge">// SPOTLIGHT</span>
                   </div>
                 </div>
               </article>
@@ -479,115 +550,125 @@
                 </svg>
                 <span>RESOURCES</span>
               </div>
-              <a href="archive.html?filter=resource" class="panel-header-action" title="View all resources">ALL (4) [/]</a>
+              <a href="archive.html?filter=resource" class="panel-header-action" title="View all resources">ALL (4)
+                [/]</a>
             </div>
 
-            <div class="stacked-cards-list">
-              
+            <div class="stacked-rows-list">
+
               <!-- Resource 1: Untitled Wallpapers -->
-              <article class="stacked-card-item">
-                <div class="stacked-thumb-box">
-                  <img src="assets/images/wallpaper-gallery.gif" alt="Untitled Wallpapers for your Mobile?" loading="lazy" />
-                </div>
+              <article class="stacked-row-item">
+                <a href="#2026-10-14-want-untitled-wallpapers-for-your-mobile" class="row-thumb-banner"
+                  data-post-id="2026-10-14-want-untitled-wallpapers-for-your-mobile"
+                  title="Download Untitled Wallpapers">
+                  <img src="assets/images/wallpaper-gallery.gif" alt="Untitled Wallpapers for your Mobile?"
+                    loading="lazy" />
+                </a>
                 <div class="stacked-body-box">
                   <div class="entry-tags-row">
-                    <span class="foundation-tag-red">DESIGN</span>
+                    <span class="foundation-tag-red foundation-tag-rose">DESIGN</span>
                     <span class="tag-mid-dot">·</span>
                     <span class="tags-meta-grey">#WALLPAPERS #FREE</span>
                   </div>
                   <h3 class="stacked-headline">
-                    <a href="#2026-10-14-want-untitled-wallpapers-for-your-mobile" data-post-id="2026-10-14-want-untitled-wallpapers-for-your-mobile">
+                    <a href="#2026-10-14-want-untitled-wallpapers-for-your-mobile"
+                      data-post-id="2026-10-14-want-untitled-wallpapers-for-your-mobile">
                       Untitled Wallpapers for your Mobile?
                     </a>
                   </h3>
-                  <p class="stacked-excerpt">
-                    Original high-resolution wallpapers tailored for smartphones with OLED &amp; cybernetic palettes.
-                  </p>
-                  <div class="entry-action-footer">
-                    <button type="button" class="btn-download-resource" data-post-id="2026-10-14-want-untitled-wallpapers-for-your-mobile">
+                  <div class="stacked-action-footer">
+                    <button type="button" class="btn-download-resource btn-row-action"
+                      data-post-id="2026-10-14-want-untitled-wallpapers-for-your-mobile">
                       DOWNLOAD ↗
                     </button>
+                    <span class="row-meta-badge">// WALLPAPERS</span>
                   </div>
                 </div>
               </article>
 
               <!-- Resource 2: Code Review Graph -->
-              <article class="stacked-card-item">
-                <div class="stacked-thumb-box">
-                  <img src="assets/images/knowledge-graphs.jpg" alt="Save 70x tokens code review graph" loading="lazy" />
-                </div>
+              <article class="stacked-row-item">
+                <a href="#2026-10-09-save-70x-tokens-code-review-graph" class="row-thumb-banner"
+                  data-post-id="2026-10-09-save-70x-tokens-code-review-graph" title="View Tool: Code Review Graph">
+                  <img src="assets/images/knowledge-graphs.jpg" alt="Save 70x tokens code review graph"
+                    loading="lazy" />
+                </a>
                 <div class="stacked-body-box">
                   <div class="entry-tags-row">
-                    <span class="foundation-tag-red">TECH</span>
+                    <span class="foundation-tag-red foundation-tag-rose">TECH</span>
                     <span class="tag-mid-dot">·</span>
                     <span class="tags-meta-grey">#DEV-TOOLS #OPTIMIZATION</span>
                   </div>
                   <h3 class="stacked-headline">
-                    <a href="#2026-10-09-save-70x-tokens-code-review-graph" data-post-id="2026-10-09-save-70x-tokens-code-review-graph">
+                    <a href="#2026-10-09-save-70x-tokens-code-review-graph"
+                      data-post-id="2026-10-09-save-70x-tokens-code-review-graph">
                       Use up to 70x less tokens [code-review-graph]
                     </a>
                   </h3>
-                  <p class="stacked-excerpt">
-                    Graph-based code analysis script reducing LLM token burn during pull request reviews.
-                  </p>
-                  <div class="entry-action-footer">
-                    <button type="button" class="btn-download-resource" data-post-id="2026-10-09-save-70x-tokens-code-review-graph">
+                  <div class="stacked-action-footer">
+                    <button type="button" class="btn-download-resource btn-row-action"
+                      data-post-id="2026-10-09-save-70x-tokens-code-review-graph">
                       VIEW TOOL ↗
                     </button>
+                    <span class="row-meta-badge">// SCRIPT</span>
                   </div>
                 </div>
               </article>
 
               <!-- Resource 3: OpenResearch AI Lab Partner -->
-              <article class="stacked-card-item">
-                <div class="stacked-thumb-box">
+              <article class="stacked-row-item">
+                <a href="#2026-10-06-openresearch-your-ai-lab-partner-github-repo" class="row-thumb-banner"
+                  data-post-id="2026-10-06-openresearch-your-ai-lab-partner-github-repo"
+                  title="View Repo: OpenResearch">
                   <img src="assets/images/ailook1.png" alt="OpenResearch AI Lab Partner" loading="lazy" />
-                </div>
+                </a>
                 <div class="stacked-body-box">
                   <div class="entry-tags-row">
-                    <span class="foundation-tag-red">AI</span>
+                    <span class="foundation-tag-red foundation-tag-rose">AI</span>
                     <span class="tag-mid-dot">·</span>
                     <span class="tags-meta-grey">#GITHUB-REPO #AGENTS</span>
                   </div>
                   <h3 class="stacked-headline">
-                    <a href="#2026-10-06-openresearch-your-ai-lab-partner-github-repo" data-post-id="2026-10-06-openresearch-your-ai-lab-partner-github-repo">
+                    <a href="#2026-10-06-openresearch-your-ai-lab-partner-github-repo"
+                      data-post-id="2026-10-06-openresearch-your-ai-lab-partner-github-repo">
                       OpenResearch: Your AI Lab Partner [github repo]
                     </a>
                   </h3>
-                  <p class="stacked-excerpt">
-                    Autonomous agent framework for scientific hypothesis generation and synthesis.
-                  </p>
-                  <div class="entry-action-footer">
-                    <button type="button" class="btn-download-resource" data-post-id="2026-10-06-openresearch-your-ai-lab-partner-github-repo">
-                      GITHUB REPO ↗
+                  <div class="stacked-action-footer">
+                    <button type="button" class="btn-download-resource btn-row-action"
+                      data-post-id="2026-10-06-openresearch-your-ai-lab-partner-github-repo">
+                      GITHUB ↗
                     </button>
+                    <span class="row-meta-badge">// REPO</span>
                   </div>
                 </div>
               </article>
 
               <!-- Resource 4: Perceptual Vision Eval Toolkit -->
-              <article class="stacked-card-item">
-                <div class="stacked-thumb-box">
+              <article class="stacked-row-item">
+                <a href="#2026-09-28-perceptual-vision-eval-toolkit" class="row-thumb-banner"
+                  data-post-id="2026-09-28-perceptual-vision-eval-toolkit"
+                  title="View Tool: Perceptual Vision Eval Toolkit">
                   <img src="assets/images/perception_eval.jpg" alt="Perceptual Vision Eval Toolkit" loading="lazy" />
-                </div>
+                </a>
                 <div class="stacked-body-box">
                   <div class="entry-tags-row">
-                    <span class="foundation-tag-red">PERCEPTION</span>
+                    <span class="foundation-tag-red foundation-tag-rose">PERCEPTION</span>
                     <span class="tag-mid-dot">·</span>
                     <span class="tags-meta-grey">#PSYCHOPHYSICS #EVAL</span>
                   </div>
                   <h3 class="stacked-headline">
-                    <a href="#2026-09-28-perceptual-vision-eval-toolkit" data-post-id="2026-09-28-perceptual-vision-eval-toolkit">
+                    <a href="#2026-09-28-perceptual-vision-eval-toolkit"
+                      data-post-id="2026-09-28-perceptual-vision-eval-toolkit">
                       Perceptual Vision Eval Toolkit
                     </a>
                   </h3>
-                  <p class="stacked-excerpt">
-                    Open-source psychophysical diagnostics evaluating Gestalt continuity and luminance contrast.
-                  </p>
-                  <div class="entry-action-footer">
-                    <button type="button" class="btn-download-resource" data-post-id="2026-09-28-perceptual-vision-eval-toolkit">
-                      VIEW TOOLKIT ↗
+                  <div class="stacked-action-footer">
+                    <button type="button" class="btn-download-resource btn-row-action"
+                      data-post-id="2026-09-28-perceptual-vision-eval-toolkit">
+                      VIEW TOOL ↗
                     </button>
+                    <span class="row-meta-badge">// EVAL</span>
                   </div>
                 </div>
               </article>
@@ -605,7 +686,8 @@
 
     <!-- COMPONENT 4: ESSAY READER PANE & 3-TIER METADATA (50% Column)
          Files: css/components/reader-pane.css, css/components/metadata-tiers.css -->
-    <article class="post-column essay-column" id="essay-reading-pane" data-component="reader-pane" aria-label="Post Reader View">
+    <article class="post-column essay-column" id="essay-reading-pane" data-component="reader-pane"
+      aria-label="Post Reader View">
       <!-- Return to Grid Feed Button (Mobile / Narrow Screens) -->
       <button type="button" class="btn-return-grid" aria-label="Return to Grid Feed">
         <span class="return-arrow">&lt;&lt;</span>
@@ -622,7 +704,8 @@
        ==================================================================== -->
   <div class="floating-nav-buttons" data-component="floating-controls">
     <button type="button" class="btn-nav-action" id="btn-scroll-top" title="Scroll Reader to Top">↑ TOP</button>
-    <button type="button" class="btn-nav-action" id="btn-scroll-bottom" title="Scroll Reader to Bottom">↓ BOTTOM</button>
+    <button type="button" class="btn-nav-action" id="btn-scroll-bottom" title="Scroll Reader to Bottom">↓
+      BOTTOM</button>
   </div>
 
   <!-- ====================================================================
@@ -633,16 +716,19 @@
     <div class="modal-box">
       <div class="modal-header-tag">[ DISPATCH_SUBSCRIPTION // FREQUENCY: FORTNIGHTLY ]</div>
       <h2 id="modal-heading" class="modal-title">Subscribe to Untitled.jpg</h2>
-      <p class="modal-description">Deep-dive essays and technical dispatches on AI perception, cognitive psychophysics, high-dimensional latent space, and media archaeology.</p>
-      
+      <p class="modal-description">Deep-dive essays and technical dispatches on AI perception, cognitive psychophysics,
+        high-dimensional latent space, and media archaeology.</p>
+
       <form class="modal-form" id="subscribe-form" method="dialog">
         <div class="modal-input-group">
           <label for="subscriber-name" class="modal-input-label">IDENTITY (NAME):</label>
-          <input type="text" id="subscriber-name" name="name" class="modal-input" placeholder="Your Name / Alias" autocomplete="name">
+          <input type="text" id="subscriber-name" name="name" class="modal-input" placeholder="Your Name / Alias"
+            autocomplete="name">
         </div>
         <div class="modal-input-group">
           <label for="subscriber-email" class="modal-input-label">TRANSMISSION_ENDPOINT (EMAIL):</label>
-          <input type="email" id="subscriber-email" name="email" class="modal-input" placeholder="reader@domain.xyz" required autocomplete="email" spellcheck="false">
+          <input type="email" id="subscriber-email" name="email" class="modal-input" placeholder="reader@domain.xyz"
+            required autocomplete="email" spellcheck="false">
         </div>
         <div class="modal-actions">
           <button type="button" class="btn-modal-cancel">CANCEL</button>
@@ -666,4 +752,5 @@
   <!-- Client-Side Application Script & Core Orchestrator -->
   <script defer src="app.js"></script>
 </body>
+
 </html>
