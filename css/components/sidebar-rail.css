@@ -78,143 +78,6 @@
   opacity: 0.9;
 }
 
-.logo-full {
-  display: inline-block;
-}
-
-.logo-short {
-  display: none;
-}
-
-/* Vertical Nav Links (Desktop Tall Screen) */
-.nav-stacked-vertical {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  align-items: center;
-  margin: auto 0;
-  width: 100%;
-}
-
-.nav-link-item {
-  font-family: var(--font-mono, "Azeret Mono", monospace);
-  font-size: 0.62rem;
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  color: var(--text-muted, #888888);
-  text-decoration: none;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  transition: all var(--transition-fast, 0.15s ease);
-  white-space: nowrap;
-  cursor: pointer;
-  width: 100%;
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: 0;
-}
-
-.nav-link-item:hover,
-.nav-link-item.active {
-  color: var(--accent-coral, #e84a5f);
-}
-
-/* Collapsed Dispatch Log Single Dropdown Button (Hidden on Desktop) */
-.dispatch-log-dropdown-btn {
-  display: none;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: var(--rounded-sm, 2px);
-  color: var(--accent-coral, #e84a5f);
-  font-family: var(--font-mono, "Azeret Mono", monospace);
-  font-size: 0.65rem;
-  font-weight: 600;
-  padding: 0.35rem 0.65rem;
-  cursor: pointer;
-  letter-spacing: 0.06em;
-  transition: all 0.15s ease;
-  white-space: nowrap;
-}
-
-.dispatch-log-dropdown-btn:hover,
-.dispatch-log-dropdown-btn.active {
-  background: var(--accent-coral, #e84a5f);
-  color: #121212;
-  border-color: var(--accent-coral, #e84a5f);
-}
-
-/* Inline Top Search Box (Hidden on Desktop Rail) */
-.top-inline-search-box {
-  display: none;
-  align-items: center;
-  background-color: var(--neutral-bg, #121212);
-  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.15));
-  border-radius: var(--rounded-sm, 2px);
-  padding: 0 0.65rem;
-  gap: 0.45rem;
-  flex: 1 1 auto;
-  max-width: 260px;
-  min-width: 140px;
-  height: 32px;
-  box-sizing: border-box;
-  transition:
-    border-color 0.2s ease,
-    background-color 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.top-inline-search-box:focus-within {
-  border-color: var(--accent-coral, #e84a5f) !important;
-  background-color: var(--neutral-surface, #161616);
-  box-shadow: 0 0 0 1px rgba(232, 74, 95, 0.4);
-}
-
-.top-inline-search-box .search-icon-svg {
-  width: 14px;
-  height: 14px;
-  fill: none;
-  stroke: var(--accent-coral, #e84a5f);
-  stroke-width: 2;
-  flex-shrink: 0;
-}
-
-.top-inline-search-box input {
-  background: transparent;
-  border: none;
-  outline: none;
-  color: var(--text-body, #d4d4d4);
-  font-family: var(--font-mono, "Azeret Mono", monospace);
-  font-size: 0.68rem;
-  letter-spacing: 0.05em;
-  width: 100%;
-  padding: 0;
-}
-
-.top-inline-search-box input::placeholder {
-  color: var(--text-muted, #888888);
-  opacity: 1;
-}
-
-.top-navbar-legend-badge {
-  display: none;
-  font-family: var(--font-mono, "Azeret Mono", monospace);
-  font-size: 0.6rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  color: var(--accent-coral, #e84a5f);
-  background: rgba(232, 74, 95, 0.08);
-  border: 1px solid rgba(232, 74, 95, 0.25);
-  padding: 0.35rem 0.65rem;
-  border-radius: var(--rounded-sm, 2px);
-  white-space: nowrap;
-  align-items: center;
-  text-transform: uppercase;
-  margin-right: 0.5rem;
-  pointer-events: none;
-}
 
 /* Bottom Pinned Icons */
 .sidebar-bottom-icons {
@@ -266,7 +129,6 @@
    SIDEBAR RAIL TOOLTIPS (Light Grey Background, Dark High-Contrast Text)
    ============================================================================== */
 .brand-logo-v,
-.nav-link-item,
 .sidebar-bottom-icons a {
   position: relative;
 }
@@ -304,9 +166,8 @@
   stroke-linejoin: round;
 }
 
-/* 1. Rotated Parent Items (Logo & Format Links): Open to Visual RIGHT */
-.brand-logo-v .rail-tooltip,
-.nav-link-item .rail-tooltip {
+/* 1. Rotated Parent Item (Logo): Open to Visual RIGHT */
+.brand-logo-v .rail-tooltip {
   left: -14px;
   right: auto;
   top: 50%;
@@ -318,15 +179,13 @@
     visibility 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.brand-logo-v:hover .rail-tooltip,
-.nav-link-item:hover .rail-tooltip {
+.brand-logo-v:hover .rail-tooltip {
   opacity: 1;
   visibility: visible;
   transform: rotate(180deg) translateY(50%) scale(1) translateX(0);
 }
 
-.brand-logo-v .rail-tooltip::before,
-.nav-link-item .rail-tooltip::before {
+.brand-logo-v .rail-tooltip::before {
   content: "";
   position: absolute;
   left: -6px;
@@ -424,16 +283,15 @@
 }
 
 @keyframes subscribeSlowColorLoop {
-
   0%,
   100% {
     stroke: var(--text-muted, #888888);
-    filter: none;
+    opacity: 0.85;
   }
 
   50% {
     stroke: var(--accent-coral, #e84a5f);
-    filter: drop-shadow(0 0 8px rgba(232, 74, 95, 0.5));
+    opacity: 1;
   }
 }
 
@@ -569,10 +427,6 @@
   box-sizing: border-box;
 }
 
-.dispatch-log-panel {
-  left: 1rem;
-  width: 210px;
-}
 
 .search-dropdown-panel {
   width: calc(100vw - 2rem);
@@ -698,19 +552,6 @@
   .sidebar-rail {
     padding: 0.85rem 0;
   }
-
-  .brand-logo-v {
-    font-size: 0.58rem;
-  }
-
-  .nav-stacked-vertical {
-    gap: 1.15rem;
-  }
-
-  .nav-link-item {
-    font-size: 0.58rem;
-    padding: 2px 0;
-  }
 }
 
 /* ==============================================================================
@@ -776,24 +617,6 @@
     height: 22px;
   }
 
-  /* Hide text format links; use _DISPATCH_LOG dropdown button instead */
-  .nav-stacked-vertical {
-    display: none !important;
-  }
-
-  .dispatch-log-dropdown-btn {
-    display: inline-flex !important;
-  }
-
-  /* Right Side: Hide inline search box & legend badge, use Search Icon button + Dropdown */
-  .top-inline-search-box {
-    display: none !important;
-  }
-
-  .top-navbar-legend-badge {
-    display: none !important;
-  }
-
   .top-nav-controls-group {
     display: flex !important;
     flex-direction: row !important;
@@ -845,15 +668,11 @@
     height: 18px !important;
   }
 
-  /* Remove Filter Button from Top Navbar */
-  #top-navbar-filter-btn {
-    display: none !important;
-  }
-
   /* Offset Main Layout for 48px Top Navbar */
-  .archive-split-shell,
   .archive-timeline-shell,
-  .network-full-shell {
+  .network-full-shell,
+  .about-shell,
+  .gallery-spatial-viewport {
     margin-left: 0 !important;
     width: 100vw !important;
     max-width: 100vw !important;

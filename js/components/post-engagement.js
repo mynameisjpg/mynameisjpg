@@ -82,6 +82,40 @@
     } catch (e) {}
   }
 
+  function getStoredReactionCounts(slug) {
+    try {
+      const raw = localStorage.getItem(`untitled_reaction_counts_${slug}`);
+      return raw ? JSON.parse(raw) : {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function saveStoredReactionCount(slug, reactionType, count) {
+    try {
+      const counts = getStoredReactionCounts(slug);
+      counts[reactionType] = Number(count) || 0;
+      localStorage.setItem(`untitled_reaction_counts_${slug}`, JSON.stringify(counts));
+    } catch (e) {}
+  }
+
+  function getStoredComments(slug) {
+    try {
+      const raw = localStorage.getItem(`untitled_comments_${slug}`);
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function saveStoredComment(slug, comment) {
+    try {
+      const comments = getStoredComments(slug);
+      comments.push(comment);
+      localStorage.setItem(`untitled_comments_${slug}`, JSON.stringify(comments));
+    } catch (e) {}
+  }
+
   /**
    * Smoothly scroll reader pane to comments section
    */
@@ -112,12 +146,13 @@
   }
 
   /**
-   * Fetch and display reactions from Supabase
+   * Fetch and display reactions from localStorage & Supabase
    */
   async function loadReactions(slug) {
     const stored = getStoredReactions(slug);
+    const storedCounts = getStoredReactionCounts(slug);
 
-    // Mark buttons that the user already clicked
+    // 1. Immediately restore state and cached numbers from localStorage
     REACTION_TYPES.forEach((type) => {
       const btn = document.querySelector(`.btn-reaction[data-reaction="${type}"]`);
       if (btn) {
@@ -126,15 +161,29 @@
         } else {
           btn.classList.remove("active-reacted");
         }
+
+        const countEl = btn.querySelector(".reaction-count");
+        if (countEl) {
+          if (typeof storedCounts[type] === "number") {
+            countEl.textContent = storedCounts[type];
+          } else if (stored[type]) {
+            countEl.textContent = "1";
+            saveStoredReactionCount(slug, type, 1);
+          }
+        }
       }
     });
 
+    // 2. Fetch live data from Supabase if table permissions allow
     try {
       const res = await fetch(
         `${SUPABASE_URL}/rest/v1/post_reactions?post_slug=eq.${encodeURIComponent(slug)}&select=*`,
         { headers: API_HEADERS }
       );
-      if (!res.ok) return;
+      if (!res.ok) {
+        // Table SELECT permission may be restricted; local numbers remain safely preserved
+        return;
+      }
       const data = await res.json();
       if (!Array.isArray(data)) return;
 
@@ -142,7 +191,10 @@
         const btn = document.querySelector(`.btn-reaction[data-reaction="${item.reaction_type}"]`);
         if (btn) {
           const countEl = btn.querySelector(".reaction-count");
-          if (countEl) countEl.textContent = item.count;
+          if (countEl) {
+            countEl.textContent = item.count;
+            saveStoredReactionCount(slug, item.reaction_type, item.count);
+          }
         }
       });
     } catch (err) {
@@ -291,7 +343,9 @@
     // Optimistic UI update
     saveStoredReaction(slug, reaction);
     btn.classList.add("active-reacted");
-    if (countEl) countEl.textContent = currentCount + 1;
+    const optimisticCount = currentCount + 1;
+    if (countEl) countEl.textContent = optimisticCount;
+    saveStoredReactionCount(slug, reaction, optimisticCount);
 
     // Subtle celebration animation
     btn.style.transform = "scale(1.25)";
@@ -308,6 +362,7 @@
         const newCount = await res.json();
         if (typeof newCount === "number" && countEl) {
           countEl.textContent = newCount;
+          saveStoredReactionCount(slug, reaction, newCount);
         }
       }
     } catch (err) {
@@ -316,13 +371,36 @@
   }
 
   /**
-   * Fetch and render comments from Supabase
+   * Fetch and render comments from Supabase & localStorage
    */
   async function loadComments(slug) {
     const container = document.getElementById("comments-stream-container");
     const countLabel = document.getElementById("meta-comment-count-label");
 
     if (!container) return;
+
+    const localComments = getStoredComments(slug);
+
+    // 1. Immediately render local comments if available
+    if (localComments.length > 0) {
+      if (countLabel) {
+        countLabel.textContent =
+          localComments.length === 1 ? "(1 Comment)" : `(${localComments.length} Comments)`;
+      }
+      container.innerHTML = localComments
+        .map(
+          (c) => `
+        <article class="comment-item" id="comment-${c.id || Date.now()}">
+          <header class="comment-item-header">
+            <span class="comment-author-name">@${escapeHtml(c.author_alias)}</span>
+            <time class="comment-timestamp" datetime="${c.created_at}">${formatDate(c.created_at)}</time>
+          </header>
+          <div class="comment-body-text">${escapeHtml(c.content)}</div>
+        </article>
+      `
+        )
+        .join("");
+    }
 
     try {
       // Query comments (first try public_comments view, fallback to post_comments)
@@ -339,27 +417,39 @@
       }
 
       if (!res.ok) {
-        container.innerHTML = `<div class="comments-empty-state">[ DISPATCH TRANSMISSIONS READY // BE THE FIRST TO COMMENT ]</div>`;
-        if (countLabel) countLabel.textContent = "(0) Comment first!";
+        if (localComments.length === 0) {
+          container.innerHTML = `<div class="comments-empty-state">[ DISPATCH TRANSMISSIONS READY // BE THE FIRST TO COMMENT ]</div>`;
+          if (countLabel) countLabel.textContent = "(0) Comment first!";
+        }
         return;
       }
 
       const comments = await res.json();
 
       if (!Array.isArray(comments) || comments.length === 0) {
-        container.innerHTML = `<div class="comments-empty-state">[ NO TRANSMISSIONS LOGGED YET // BE THE FIRST TO COMMENT ]</div>`;
-        if (countLabel) countLabel.textContent = "(0) Comment first!";
+        if (localComments.length === 0) {
+          container.innerHTML = `<div class="comments-empty-state">[ NO TRANSMISSIONS LOGGED YET // BE THE FIRST TO COMMENT ]</div>`;
+          if (countLabel) countLabel.textContent = "(0) Comment first!";
+        }
         return;
       }
+
+      // Merge server comments with local comments
+      const allComments = [...comments];
+      localComments.forEach((lc) => {
+        if (!allComments.some((sc) => sc.content === lc.content && sc.author_alias === lc.author_alias)) {
+          allComments.push(lc);
+        }
+      });
 
       // Update CTA label
       if (countLabel) {
         countLabel.textContent =
-          comments.length === 1 ? "(1 Comment)" : `(${comments.length} Comments)`;
+          allComments.length === 1 ? "(1 Comment)" : `(${allComments.length} Comments)`;
       }
 
       // Render comment cards
-      container.innerHTML = comments
+      container.innerHTML = allComments
         .map(
           (c) => `
         <article class="comment-item" id="comment-${c.id}">
@@ -374,8 +464,10 @@
         .join("");
     } catch (err) {
       console.warn("[Engagement] Error loading comments:", err);
-      container.innerHTML = `<div class="comments-empty-state">[ COMMENTS LOG READY // BE THE FIRST TO COMMENT ]</div>`;
-      if (countLabel) countLabel.textContent = "(0) Comment first!";
+      if (localComments.length === 0) {
+        container.innerHTML = `<div class="comments-empty-state">[ COMMENTS LOG READY // BE THE FIRST TO COMMENT ]</div>`;
+        if (countLabel) countLabel.textContent = "(0) Comment first!";
+      }
     }
   }
 
@@ -450,7 +542,9 @@
       }
 
       const inserted = await res.json();
-      const newComment = Array.isArray(inserted) ? inserted[0] : inserted;
+      const newComment = Array.isArray(inserted) ? inserted[0] : (inserted || payload);
+      newComment.created_at = newComment.created_at || new Date().toISOString();
+      saveStoredComment(slug, newComment);
 
       showAlert("Transmission confirmed and logged in dispatch stream.", "success");
       form.reset();

@@ -192,21 +192,7 @@ class SidebarRail extends HTMLElement {
   }
 
   highlightActiveFilter() {
-    const activeFilterAttr = (this.getAttribute("active-filter") || "")
-      .toLowerCase()
-      .replace(/s$/, "");
-    const filterItems = this.querySelectorAll(".nav-link-item");
-
-    filterItems.forEach((item) => {
-      const f = (item.getAttribute("data-filter") || "")
-        .toLowerCase()
-        .replace(/s$/, "");
-      if (f && f === activeFilterAttr && activeFilterAttr !== "all") {
-        item.classList.add("active");
-      } else {
-        item.classList.remove("active");
-      }
-    });
+    // Navigation rail now uses format-agnostic icon navigation
   }
 
   bindEvents() {
@@ -222,32 +208,6 @@ class SidebarRail extends HTMLElement {
         }
       }
     };
-
-    // Intercept format filters on home page for instant in-memory filtering without full page reloads
-    const filterLinks = this.querySelectorAll(".nav-link-item");
-    filterLinks.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        const isGridPage = Boolean(
-          document.getElementById("card-matrix") ||
-          (typeof window.applyCategoryFilter === "function" &&
-            document.querySelector("[data-component='dispatch-matrix']")),
-        );
-        if (isGridPage && typeof window.applyCategoryFilter === "function") {
-          e.preventDefault();
-          const filter = (link.getAttribute("data-filter") || "all")
-            .toLowerCase()
-            .replace(/s$/, "");
-          const currentActive = (this.getAttribute("active-filter") || "all")
-            .toLowerCase()
-            .replace(/s$/, "");
-          if (currentActive === filter && filter !== "all") {
-            window.applyCategoryFilter("all", true);
-          } else {
-            window.applyCategoryFilter(filter, true);
-          }
-        }
-      });
-    });
 
     const logoBtn = this.querySelector("#brand-logo-btn");
     if (logoBtn) {

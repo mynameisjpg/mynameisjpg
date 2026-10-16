@@ -225,11 +225,6 @@ function applyTagFilterDirectly(tag) {
       canvasWrapper.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   }, 150);
-
-  const archiveShell = document.querySelector(".archive-split-shell");
-  if (archiveShell && window.innerWidth <= 980) {
-    archiveShell.classList.add("nodemap-active");
-  }
 }
 
 async function fetchArchivePostsJson() {

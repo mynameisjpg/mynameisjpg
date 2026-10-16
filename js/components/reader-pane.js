@@ -571,7 +571,8 @@
       initEngagement();
     } else {
       const engScript = document.createElement("script");
-      engScript.src = "js/components/post-engagement.js";
+      const isSubDir = window.location.pathname.includes("/posts/") || window.location.pathname.includes("\\posts\\");
+      engScript.src = (isSubDir ? "../" : "") + "js/components/post-engagement.js";
       engScript.defer = true;
       engScript.onload = initEngagement;
       document.body.appendChild(engScript);

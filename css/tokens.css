@@ -15,6 +15,11 @@
   --accent-coral-border: rgba(232, 74, 95, 0.25);
   --accent-rose: #ff8484; /* Dusky Rose secondary accent */
 
+  /* Token Aliases for Component & Theme Consistency */
+  --primary: var(--accent-coral);
+  --neutral-bg: var(--bg-deep);
+  --neutral-surface: var(--bg-panel);
+
   /* Text & Foreground Tokens */
   --text-bright: #f5f5f5; /* Crisp bright neutral off-white */
   --text-body: #d2d2d2; /* Soft neutral reading tone */
