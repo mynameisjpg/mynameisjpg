@@ -17,7 +17,25 @@
     "Content-Type": "application/json",
   };
 
-  const REACTION_TYPES = ["heart", "laugh", "insight", "mindblown", "anger", "dislike"];
+  const REACTION_TYPES = ["like", "love", "insightful", "mindblown", "dislike"];
+
+  const LOTTIE_PATHS = {
+    love: "assets/images/reactions/love/lottie.json",
+    like: "assets/images/reactions/like/lottie.json",
+    insightful: "assets/images/reactions/insightful/lottie.json",
+    mindblown: "assets/images/reactions/mindblown/lottie.json",
+    dislike: "assets/images/reactions/dislike/lottie.json",
+  };
+
+  const WEBP_FALLBACKS = {
+    love: "assets/images/reactions/love/512.webp",
+    like: "assets/images/reactions/like/512.webp",
+    insightful: "assets/images/reactions/insightful/512.webp",
+    mindblown: "assets/images/reactions/mindblown/512.webp",
+    dislike: "assets/images/reactions/dislike/512.webp",
+  };
+
+  let reactionAnimInstances = {};
 
   let currentActiveSlug = "";
   let isSubmitting = false;
@@ -132,12 +150,131 @@
     }
   }
 
+  function loadLottieScript() {
+    if (window.lottie) return Promise.resolve(window.lottie);
+    return new Promise((resolve) => {
+      const existing = document.querySelector('script[src*="lottie"]');
+      if (existing) {
+        existing.addEventListener("load", () => resolve(window.lottie));
+        return;
+      }
+      const s = document.createElement("script");
+      s.src = "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js";
+      s.defer = true;
+      s.onload = () => resolve(window.lottie);
+      s.onerror = () => resolve(null);
+      document.head.appendChild(s);
+    });
+  }
+
+  function getBasePath() {
+    const baseEl = document.querySelector("base");
+    if (baseEl && baseEl.getAttribute("href")) {
+      const href = baseEl.getAttribute("href");
+      if (href === "../" || href === "/" || href.endsWith("/")) {
+        return "";
+      }
+    }
+    const path = window.location.pathname || "";
+    if (path.includes("/posts/") || path.includes("\\posts\\")) {
+      return "../";
+    }
+    return "./";
+  }
+
+  function fallbackToWebp(container, type, basePath) {
+    if (!container) return;
+    const path = (basePath || getBasePath()) + WEBP_FALLBACKS[type];
+    container.innerHTML = `<img src="${path}" class="reaction-webp-img" alt="${type}" width="38" height="38" />`;
+  }
+
+  async function setupLottieReactions() {
+    const basePath = getBasePath();
+
+    // Immediately render WebP fallbacks so icons are visible without delay
+    REACTION_TYPES.forEach((type) => {
+      const btn = document.querySelector(`.btn-reaction[data-reaction="${type}"]`);
+      if (!btn) return;
+      const wrap = btn.querySelector(".reaction-icon-wrap");
+      if (!wrap) return;
+
+      if (!wrap.querySelector(".reaction-webp-img") && !wrap.querySelector(".reaction-lottie-container")) {
+        fallbackToWebp(wrap, type, basePath);
+      }
+    });
+
+    // On local file:// protocol, XMLHttpRequest for JSON is blocked by browser CORS policy.
+    // Keep the animated WebP images for seamless local browsing without errors.
+    if (window.location.protocol === "file:") {
+      return;
+    }
+
+    await loadLottieScript();
+
+    REACTION_TYPES.forEach((type) => {
+      const btn = document.querySelector(`.btn-reaction[data-reaction="${type}"]`);
+      if (!btn) return;
+      const wrap = btn.querySelector(".reaction-icon-wrap");
+      if (!wrap) return;
+
+      if (reactionAnimInstances[type] && typeof reactionAnimInstances[type].destroy === "function") {
+        try {
+          reactionAnimInstances[type].destroy();
+        } catch (e) {}
+      }
+
+      if (window.lottie) {
+        try {
+          const animContainer = document.createElement("div");
+          animContainer.className = "reaction-lottie-container";
+
+          const anim = window.lottie.loadAnimation({
+            container: animContainer,
+            renderer: "svg",
+            loop: false,
+            autoplay: false,
+            path: basePath + LOTTIE_PATHS[type],
+          });
+
+          anim.addEventListener("DOMLoaded", () => {
+            anim.goToAndStop(0, true);
+            wrap.innerHTML = "";
+            wrap.appendChild(animContainer);
+          });
+
+          anim.addEventListener("data_failed", () => {
+            console.warn("[Engagement] Lottie data failed for", type);
+            fallbackToWebp(wrap, type, basePath);
+          });
+
+          anim.addEventListener("error", () => {
+            console.warn("[Engagement] Lottie error for", type);
+            fallbackToWebp(wrap, type, basePath);
+          });
+
+          reactionAnimInstances[type] = anim;
+        } catch (e) {
+          console.warn("[Engagement] Lottie load error for", type, e);
+          fallbackToWebp(wrap, type, basePath);
+        }
+      } else {
+        fallbackToWebp(wrap, type, basePath);
+      }
+    });
+  }
+
   /**
    * Handle Reaction Click
    */
   async function handleReactionClick(btn, slug) {
     const reaction = btn.getAttribute("data-reaction");
     if (!reaction || !slug) return;
+
+    // Trigger lottie animation playback
+    const anim = reactionAnimInstances[reaction];
+    if (anim) {
+      anim.goToAndPlay(0, true);
+    }
 
     const stored = getStoredReactions(slug);
     const countEl = btn.querySelector(".reaction-count");
@@ -406,7 +543,8 @@
       commentForm.onsubmit = (e) => handleCommentSubmit(e, slug);
     }
 
-    // Load remote data
+    // Load remote data and initialize animated reactions
+    setupLottieReactions();
     loadReactions(slug);
     loadComments(slug);
   }

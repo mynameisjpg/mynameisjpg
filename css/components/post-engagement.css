@@ -48,9 +48,17 @@
 }
 
 @keyframes messagePop {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.28) rotate(-8deg); }
-  100% { transform: scale(1) rotate(0deg); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.28) rotate(-8deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
 }
 
 .theme-light .meta-comment-cta {
@@ -65,263 +73,147 @@
   color: #111111;
 }
 
-/* --- 2. Post Footer Reaction Bar (36-40px Tall Section at Top of Footer) --- */
+/* --- 2. Post Footer Reaction Bar --- */
 .post-reaction-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.75rem 1rem;
-  min-height: 38px;
-  padding: 0.5rem 0.75rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.1));
-  border-radius: var(--radius-sm, 4px);
+  gap: 1.5rem;
+  padding: 1.75rem 0.5rem;
+  margin: 0;
+  background: transparent;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
   box-sizing: border-box;
 }
 
 .theme-light .post-reaction-bar {
-  background: rgba(0, 0, 0, 0.03);
-  border-color: rgba(0, 0, 0, 0.1);
+  background: transparent;
+  border-top-color: rgba(0, 0, 0, 0.1);
+  border-bottom-color: rgba(0, 0, 0, 0.1);
 }
 
 .reaction-prompt {
   font-family: var(--font-mono, "Azeret Mono", monospace);
-  font-size: 0.68rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.09em;
-  color: var(--text-muted, #8e8e8e);
+  letter-spacing: 0.08em;
+  color: var(--text-muted, #a1a1aa);
   text-transform: uppercase;
   user-select: none;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
 }
 
 .reaction-buttons-group {
   display: flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 2.2rem;
   flex-wrap: wrap;
 }
 
 .btn-reaction {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.25rem 0.6rem;
-  height: 28px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 999px;
-  color: var(--text-bright, #f5f5f5);
-  font-family: var(--font-mono, "Azeret Mono", monospace);
-  font-size: 0.68rem;
-  font-weight: 600;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.25rem;
+  height: auto;
+  min-width: 44px;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   cursor: pointer;
   user-select: none;
-  transition: all var(--transition-fast, 0.15s ease);
+  transition: transform var(--transition-fast, 0.15s ease);
+  outline: none;
   line-height: 1;
 }
 
 .btn-reaction:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-1px) scale(1.04);
+  background: transparent !important;
+  border: none !important;
+  transform: translateY(-2px);
 }
 
 .btn-reaction:active {
-  transform: translateY(0) scale(0.98);
+  transform: translateY(0) scale(0.96);
 }
 
 .btn-reaction.active-reacted {
-  background: rgba(232, 74, 95, 0.15);
-  border-color: var(--accent-coral, #e84a5f);
-  color: #ffffff;
-  box-shadow: 0 0 12px rgba(232, 74, 95, 0.25);
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* Base Animated Icon Wrapper */
 .reaction-icon-wrap {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 15px;
-  height: 15px;
+  width: 38px;
+  height: 38px;
   flex-shrink: 0;
+  position: relative;
+  overflow: visible;
 }
 
-.anim-icon {
-  width: 15px;
-  height: 15px;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
+.reaction-lottie-container,
+.reaction-webp-img {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(100%) contrast(1.15) brightness(0.95);
+  transition: filter 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.reaction-lottie-container svg {
+  width: 100% !important;
+  height: 100% !important;
   display: block;
-  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), stroke 0.2s ease, fill 0.2s ease;
+  overflow: visible;
 }
 
-/* 1. Heart (Like / Appreciate) */
-@keyframes heartBeat {
-  0% { transform: scale(1); }
-  25% { transform: scale(1.26); }
-  50% { transform: scale(1.05); }
-  75% { transform: scale(1.32); }
-  100% { transform: scale(1); }
+.reaction-webp-img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
 }
 
-.btn-reaction[data-reaction="heart"]:hover .anim-heart {
-  animation: heartBeat 0.7s ease infinite;
-  color: var(--accent-coral, #e84a5f);
+/* Hover: subtle scale and contrast increase, keeping black and white until clicked */
+.btn-reaction:hover .reaction-lottie-container,
+.btn-reaction:hover .reaction-webp-img {
+  filter: grayscale(100%) contrast(1.25) brightness(1.1);
+  transform: scale(1.12);
 }
 
-.btn-reaction[data-reaction="heart"].active-reacted {
-  background: rgba(232, 74, 95, 0.15);
-  border-color: var(--accent-coral, #e84a5f);
-  color: #ffffff;
-  box-shadow: 0 0 12px rgba(232, 74, 95, 0.25);
-}
-
-.btn-reaction[data-reaction="heart"].active-reacted .anim-heart {
-  fill: var(--accent-coral, #e84a5f);
-  stroke: var(--accent-coral, #e84a5f);
-  color: var(--accent-coral, #e84a5f);
-}
-
-/* 2. Laugh */
-@keyframes laughWobble {
-  0% { transform: rotate(0deg) scale(1); }
-  20% { transform: rotate(-14deg) scale(1.15); }
-  40% { transform: rotate(12deg) scale(1.2); }
-  60% { transform: rotate(-8deg) scale(1.12); }
-  80% { transform: rotate(6deg) scale(1.08); }
-  100% { transform: rotate(0deg) scale(1); }
-}
-
-.btn-reaction[data-reaction="laugh"]:hover .anim-laugh {
-  animation: laughWobble 0.6s ease infinite;
-  color: #ffd166;
-}
-
-.btn-reaction[data-reaction="laugh"].active-reacted {
-  background: rgba(255, 209, 102, 0.15);
-  border-color: #ffd166;
-  color: #ffffff;
-  box-shadow: 0 0 12px rgba(255, 209, 102, 0.25);
-}
-
-.btn-reaction[data-reaction="laugh"].active-reacted .anim-laugh {
-  color: #ffd166;
-  stroke: #ffd166;
-}
-
-/* 3. Insight (Lightbulb) */
-@keyframes bulbGlow {
-  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 transparent); }
-  50% { transform: scale(1.22) translateY(-1px); filter: drop-shadow(0 0 7px rgba(255, 214, 0, 0.8)); }
-}
-
-.btn-reaction[data-reaction="insight"]:hover .anim-insight {
-  animation: bulbGlow 0.75s ease infinite;
-  color: #ffd600;
-}
-
-.btn-reaction[data-reaction="insight"].active-reacted {
-  background: rgba(255, 214, 0, 0.15);
-  border-color: #ffd600;
-  color: #ffffff;
-  box-shadow: 0 0 12px rgba(255, 214, 0, 0.25);
-}
-
-.btn-reaction[data-reaction="insight"].active-reacted .anim-insight {
-  color: #ffd600;
-  stroke: #ffd600;
-  fill: rgba(255, 214, 0, 0.35);
-}
-
-/* 4. Mind-blown (Sparkles / Burst) */
-@keyframes sparkleBurst {
-  0% { transform: rotate(0deg) scale(1); }
-  50% { transform: rotate(90deg) scale(1.3); filter: drop-shadow(0 0 8px rgba(192, 132, 252, 0.8)); }
-  100% { transform: rotate(180deg) scale(1); }
-}
-
-.btn-reaction[data-reaction="mindblown"]:hover .anim-mindblown {
-  animation: sparkleBurst 0.85s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  color: #c084fc;
-}
-
-.btn-reaction[data-reaction="mindblown"].active-reacted {
-  background: rgba(192, 132, 252, 0.15);
-  border-color: #c084fc;
-  color: #ffffff;
-  box-shadow: 0 0 12px rgba(192, 132, 252, 0.25);
-}
-
-.btn-reaction[data-reaction="mindblown"].active-reacted .anim-mindblown {
-  color: #c084fc;
-  stroke: #c084fc;
-  fill: rgba(192, 132, 252, 0.35);
-}
-
-/* 5. Fire / Intense */
-@keyframes flameFlicker {
-  0% { transform: scale(1) skewX(0deg); }
-  25% { transform: scale(1.18, 1.25) skewX(-4deg); }
-  50% { transform: scale(1.1, 1.15) skewX(4deg); }
-  75% { transform: scale(1.24, 1.28) skewX(-3deg); }
-  100% { transform: scale(1) skewX(0deg); }
-}
-
-.btn-reaction[data-reaction="anger"]:hover .anim-fire {
-  animation: flameFlicker 0.65s ease infinite;
-  color: #ff6b4a;
-}
-
-.btn-reaction[data-reaction="anger"].active-reacted {
-  background: rgba(255, 107, 74, 0.15);
-  border-color: #ff6b4a;
-  color: #ffffff;
-  box-shadow: 0 0 12px rgba(255, 107, 74, 0.25);
-}
-
-.btn-reaction[data-reaction="anger"].active-reacted .anim-fire {
-  color: #ff6b4a;
-  stroke: #ff6b4a;
-  fill: rgba(255, 107, 74, 0.4);
-}
-
-/* 6. Dislike / Skeptical */
-@keyframes thumbsDip {
-  0% { transform: translateY(0) rotate(0deg); }
-  40% { transform: translateY(3px) rotate(-14deg); }
-  70% { transform: translateY(-1px) rotate(4deg); }
-  100% { transform: translateY(0) rotate(0deg); }
-}
-
-.btn-reaction[data-reaction="dislike"]:hover .anim-dislike {
-  animation: thumbsDip 0.5s ease;
-  color: #94a3b8;
-}
-
-.btn-reaction[data-reaction="dislike"].active-reacted {
-  background: rgba(148, 163, 184, 0.15);
-  border-color: #94a3b8;
-  color: #ffffff;
-  box-shadow: 0 0 12px rgba(148, 163, 184, 0.2);
-}
-
-.btn-reaction[data-reaction="dislike"].active-reacted .anim-dislike {
-  color: #cbd5e1;
-  stroke: #cbd5e1;
+/* Clicked / Reacted State: gains vibrant full color and scales up */
+.btn-reaction.active-reacted .reaction-lottie-container,
+.btn-reaction.active-reacted .reaction-webp-img {
+  filter: grayscale(0%) contrast(1) brightness(1);
+  transform: scale(1.18);
 }
 
 .btn-reaction .reaction-count {
-  font-size: 0.64rem;
-  color: var(--text-muted, #8e8e8e);
+  font-family: var(--font-mono, "Azeret Mono", monospace);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted, #a1a1aa);
   min-width: 1ch;
+  text-align: center;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+.btn-reaction:hover .reaction-count {
+  color: var(--text-bright, #f4f4f5);
 }
 
 .btn-reaction.active-reacted .reaction-count {
@@ -330,20 +222,20 @@
 }
 
 .theme-light .btn-reaction {
-  background: rgba(0, 0, 0, 0.04);
-  border-color: rgba(0, 0, 0, 0.12);
-  color: #1b2427;
+  background: transparent !important;
+  border: none !important;
 }
 
-.theme-light .btn-reaction:hover {
-  background: rgba(0, 0, 0, 0.08);
-  border-color: rgba(0, 0, 0, 0.25);
+.theme-light .btn-reaction .reaction-count {
+  color: #71717a;
 }
 
-.theme-light .btn-reaction.active-reacted {
-  background: rgba(232, 74, 95, 0.12);
-  border-color: #c73649;
-  color: #c73649;
+.theme-light .btn-reaction:hover .reaction-count {
+  color: #18181b;
+}
+
+.theme-light .btn-reaction.active-reacted .reaction-count {
+  color: #09090b;
 }
 
 /* --- 3. Comment Section (At the End of Reader Pane) --- */

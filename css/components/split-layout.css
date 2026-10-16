@@ -25,6 +25,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  container-type: inline-size;
+  container-name: gridcol;
+  will-change: width;
 }
 
 /* Hardware-accelerated fixed background plane (eliminates CPU repaint thrashing on scroll & resize) */
@@ -92,11 +95,10 @@
   width: 100%;
   position: relative;
   z-index: 60;
-  transition: max-width 0.35s ease;
 }
 
 .split-layout.reader-open .matrix-header-group {
-  max-width: 100%;
+  max-width: 1100px;
 }
 
 .header-col-left {

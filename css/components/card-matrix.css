@@ -15,10 +15,28 @@
   padding-bottom: 4rem;
 }
 
+/* Reader Open State: keep max-width strictly bounded to 1100px to avoid enlargement blowup */
 .split-layout.reader-open .card-grid-matrix {
-  max-width: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem 1rem;
+  max-width: 1100px;
+}
+
+/* Fluid responsive grid based on actual container width:
+   Only switches to 3 columns once the column width is actually 980px or less,
+   completely preventing the sudden card blowup glitch during drawer transitions */
+@container gridcol (max-width: 980px) {
+  .card-grid-matrix,
+  .split-layout.reader-open .card-grid-matrix {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.3rem 0.95rem;
+  }
+}
+
+@container gridcol (max-width: 620px) {
+  .card-grid-matrix,
+  .split-layout.reader-open .card-grid-matrix {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 0.75rem;
+  }
 }
 
 .grid-card {

@@ -145,20 +145,15 @@
   }
 
   /**
-   * Smoothly anchor a card in the viewport center during width transitions
+   * Smoothly anchor a card in the viewport center without animation thrashing
    */
   function scrollCardIntoViewWithTransition(cardEl) {
     if (!cardEl) return;
-    const doScroll = () => {
-      try {
-        cardEl.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
-      } catch (e) {
-        cardEl.scrollIntoView();
-      }
-    };
-    doScroll();
-    setTimeout(doScroll, 180);
-    setTimeout(doScroll, 360);
+    try {
+      cardEl.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+    } catch (e) {
+      cardEl.scrollIntoView();
+    }
   }
 
   /**
@@ -192,12 +187,12 @@
       }
     });
 
-    renderPost(postId);
-
     const splitLayout = document.querySelector(".split-layout");
     if (splitLayout) {
       splitLayout.classList.add("reader-open");
     }
+
+    renderPost(postId);
 
     if (targetCard) {
       scrollCardIntoViewWithTransition(targetCard);
@@ -277,6 +272,12 @@
     }
 
     const currentFontSize = getSavedReaderFontSize();
+    const baseEl = document.querySelector("base");
+    const reactionBasePath = (baseEl && baseEl.getAttribute("href"))
+      ? ""
+      : (window.location.pathname.includes("/posts/") || window.location.pathname.includes("\\posts\\"))
+      ? "../"
+      : "./";
 
     // Construct 3-Tier DOM Template
     pane.innerHTML = `
@@ -386,40 +387,24 @@
             <section class="post-reaction-bar" aria-label="Article Reactions">
               <span class="reaction-prompt">SHOW YOUR REACTION:</span>
               <div class="reaction-buttons-group">
-                <button type="button" class="btn-reaction" data-reaction="heart" title="Appreciate / Love">
-                  <span class="reaction-icon-wrap">
-                    <svg viewBox="0 0 24 24" class="anim-icon anim-heart" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
-                  </span>
+                <button type="button" class="btn-reaction" data-reaction="like" title="Like / Thumbs Up">
+                  <span class="reaction-icon-wrap" data-reaction="like"><img src="${reactionBasePath}assets/images/reactions/like/512.webp" class="reaction-webp-img" alt="like" width="38" height="38" /></span>
                   <span class="reaction-count">0</span>
                 </button>
-                <button type="button" class="btn-reaction" data-reaction="laugh" title="Laugh">
-                  <span class="reaction-icon-wrap">
-                    <svg viewBox="0 0 24 24" class="anim-icon anim-laugh" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M18 13a6 6 0 0 1-12 0"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-                  </span>
+                <button type="button" class="btn-reaction" data-reaction="love" title="Love / Sparkling Heart">
+                  <span class="reaction-icon-wrap" data-reaction="love"><img src="${reactionBasePath}assets/images/reactions/love/512.webp" class="reaction-webp-img" alt="love" width="38" height="38" /></span>
                   <span class="reaction-count">0</span>
                 </button>
-                <button type="button" class="btn-reaction" data-reaction="insight" title="Insightful / Lightbulb">
-                  <span class="reaction-icon-wrap">
-                    <svg viewBox="0 0 24 24" class="anim-icon anim-insight" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
-                  </span>
+                <button type="button" class="btn-reaction" data-reaction="insightful" title="Insightful / Lightbulb">
+                  <span class="reaction-icon-wrap" data-reaction="insightful"><img src="${reactionBasePath}assets/images/reactions/insightful/512.webp" class="reaction-webp-img" alt="insightful" width="38" height="38" /></span>
                   <span class="reaction-count">0</span>
                 </button>
-                <button type="button" class="btn-reaction" data-reaction="mindblown" title="Mind Blown">
-                  <span class="reaction-icon-wrap">
-                    <svg viewBox="0 0 24 24" class="anim-icon anim-mindblown" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path><path d="M5 3v4"></path><path d="M19 17v4"></path><path d="M3 5h4"></path><path d="M17 19h4"></path></svg>
-                  </span>
+                <button type="button" class="btn-reaction" data-reaction="mindblown" title="Mind Blown / Exploding Head">
+                  <span class="reaction-icon-wrap" data-reaction="mindblown"><img src="${reactionBasePath}assets/images/reactions/mindblown/512.webp" class="reaction-webp-img" alt="mindblown" width="38" height="38" /></span>
                   <span class="reaction-count">0</span>
                 </button>
-                <button type="button" class="btn-reaction" data-reaction="anger" title="Fired Up / Intense">
-                  <span class="reaction-icon-wrap">
-                    <svg viewBox="0 0 24 24" class="anim-icon anim-fire" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
-                  </span>
-                  <span class="reaction-count">0</span>
-                </button>
-                <button type="button" class="btn-reaction" data-reaction="dislike" title="Skeptical / Disagree">
-                  <span class="reaction-icon-wrap">
-                    <svg viewBox="0 0 24 24" class="anim-icon anim-dislike" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 14V2"></path><path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22h-1.5a1.5 1.5 0 0 1-1.5-1.5v-2.38Z"></path></svg>
-                  </span>
+                <button type="button" class="btn-reaction" data-reaction="dislike" title="Dislike / Thumbs Down">
+                  <span class="reaction-icon-wrap" data-reaction="dislike"><img src="${reactionBasePath}assets/images/reactions/dislike/512.webp" class="reaction-webp-img" alt="dislike" width="38" height="38" /></span>
                   <span class="reaction-count">0</span>
                 </button>
               </div>
@@ -486,7 +471,7 @@
                 ? `
               <section class="footer-block footer-share">
                 <div class="share-actions-bar">
-                  <span class="share-caption">SHARE DISPATCH:</span>
+                  <span class="share-caption">// SHARE DISPATCH:</span>
                   
                   <!-- Copy URL Button -->
                   <button type="button" class="btn-share" onclick="copyPostUrl('${postId}')" title="Copy Link to Clipboard">
@@ -505,12 +490,6 @@
                   `
                       : ""
                   }
-
-                  <!-- X / Twitter -->
-                  <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title + " — Untitled.jpg")}&url=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on X / Twitter">
-                    <svg viewBox="0 0 24 24"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
-                    <span>X ↗</span>
-                  </a>
 
                   <!-- LinkedIn -->
                   <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}" target="_blank" rel="noopener noreferrer" class="btn-share" title="Share on LinkedIn">
@@ -537,7 +516,7 @@
 
             <!-- DISPATCH COMMENTS SECTION -->
             <section id="dispatch-comments-section" class="footer-block footer-comments" aria-label="Dispatch Comments and Replies">
-              <h3 class="footer-block-title">// DISPATCH_REPLIES &amp; FIELD_OBSERVATIONS</h3>
+              <h3 class="footer-block-title">// DISPATCH_REPLIES &amp; COMMENTS</h3>
               
               <!-- Comment Submission Form -->
               <form id="comment-submission-form" class="comment-form-shell">
@@ -561,7 +540,7 @@
 
                 <div class="comment-form-actions">
                   <span class="comment-disclaimer">No account required. Keep it civil &amp; insightful.</span>
-                  <button type="submit" class="btn-submit-comment">TRANSMIT REPLY ↗</button>
+                  <button type="submit" class="btn-submit-comment">POST COMMENT ↗</button>
                 </div>
               </form>
 

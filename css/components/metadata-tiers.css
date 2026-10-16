@@ -378,7 +378,7 @@
   font-size: 0.7rem;
   font-weight: var(--weight-medium);
   letter-spacing: 0.08em;
-  color: var(--text-bright); /* Crisp White in dark mode */
+  color: var(--accent-coral);
   display: inline-flex;
   align-items: center;
 }
