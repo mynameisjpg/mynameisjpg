@@ -175,29 +175,26 @@
   }
 
   /**
-   * Dynamically Fetch posts.json (Live HTTP Server / Production Build)
+   * Dynamically Ingest Posts (In-memory DYNAMIC_POSTS first, fallback to posts.json on HTTP)
    */
   async function loadDynamicPosts() {
-    const isSubdir =
-      typeof window !== "undefined" &&
-      window.location.pathname.includes("/posts/");
-    const jsonPath = isSubdir
-      ? "../posts.json?t=" + Date.now()
-      : "posts.json?t=" + Date.now();
-
-    try {
-      const res = await fetch(jsonPath);
-      if (res.ok) {
-        const data = await res.json();
-        if (Array.isArray(data) && data.length > 0) {
-          ingestPostList(data);
-          console.log(
-            `[UNTITLED.JPG] Loaded ${data.length} dispatches live from posts.json`,
-          );
+    // If posts are already populated via posts.js, skip network request entirely
+    if (typeof window !== "undefined" && window.DYNAMIC_POSTS && Array.isArray(window.DYNAMIC_POSTS) && window.DYNAMIC_POSTS.length > 0) {
+      ingestPostList(window.DYNAMIC_POSTS);
+    } else if (Object.keys(POSTS_DATABASE).length === 0 && typeof window !== "undefined" && window.location.protocol !== "file:") {
+      const isSubdir = window.location.pathname.includes("/posts/");
+      const jsonPath = isSubdir ? "../posts.json" : "posts.json";
+      try {
+        const res = await fetch(jsonPath);
+        if (res.ok) {
+          const data = await res.json();
+          if (Array.isArray(data) && data.length > 0) {
+            ingestPostList(data);
+          }
         }
+      } catch (err) {
+        console.log("[UNTITLED.JPG] Running with direct script posts feed.");
       }
-    } catch (err) {
-      console.log("[UNTITLED.JPG] Running with direct script posts feed.");
     }
 
     // Parse URL search parameters (?filter=essay, ?pillar=visual-perception, etc.)
@@ -262,37 +259,19 @@
       window.SubscribeModal.initAnimation();
     }
 
-    // Reset page on brand logo or home icon click
-    const brandLogo = document.querySelector(".brand-logo-v");
-    if (brandLogo) {
-      brandLogo.addEventListener("click", (e) => {
-        e.preventDefault();
-        resetPage();
-      });
-    }
-
-    const homeBtn = document.getElementById("sidebar-home-btn");
-    if (homeBtn) {
-      homeBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        resetPage();
-      });
-    }
-
-    // Static Format Filter Fallback Links
-    const staticNavLinks = document.querySelectorAll(
-      "nav:not(sidebar-rail nav) .nav-link-item",
-    );
-    staticNavLinks.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const filter = (link.getAttribute("data-filter") || "all")
-          .toLowerCase()
-          .replace(/s$/, "");
-        if (window.applyCategoryFilter) {
-          window.applyCategoryFilter(filter, true);
+    // Reset page on brand logo or home icon click (event delegation)
+    document.addEventListener("click", (e) => {
+      const homeTrigger = e.target.closest("#brand-logo-btn, #sidebar-home-btn");
+      if (homeTrigger) {
+        const isGridPage =
+          !window.location.pathname.includes("/posts/") &&
+          (window.location.pathname.endsWith("index.html") ||
+            window.location.pathname.endsWith("/"));
+        if (isGridPage) {
+          e.preventDefault();
+          resetPage();
         }
-      });
+      }
     });
 
     // Attach Infinite Scroll Listeners
@@ -312,25 +291,6 @@
 
     // Load dynamic posts & render UI
     loadDynamicPosts();
-  }
-
-  // DOMContentLoaded Listener
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initApp);
-  } else {
-    initApp();
-  }
-
-  // Global Browser Hash Listener for Deep-Linking
-  if (typeof window !== "undefined") {
-    window.addEventListener("hashchange", () => {
-      const hash = window.location.hash.replace("#", "");
-      if (hash && POSTS_DATABASE[hash]) {
-        selectAndRenderPost(hash, false);
-      } else if (!hash) {
-        closeReaderPane();
-      }
-    });
   }
 
   // Unified State & Component Interface
@@ -401,5 +361,24 @@
     window.matchesPillar = matchesPillar;
     window.loadDynamicPosts = loadDynamicPosts;
     window.resetPage = resetPage;
+  }
+
+  // DOMContentLoaded Listener & App Boot
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initApp);
+  } else {
+    initApp();
+  }
+
+  // Global Browser Hash Listener for Deep-Linking
+  if (typeof window !== "undefined") {
+    window.addEventListener("hashchange", () => {
+      const hash = window.location.hash.replace("#", "");
+      if (hash && POSTS_DATABASE[hash]) {
+        selectAndRenderPost(hash, false);
+      } else if (!hash) {
+        closeReaderPane();
+      }
+    });
   }
 })();

@@ -26,15 +26,19 @@ document.addEventListener("DOMContentLoaded", () => {
 let ARCHIVE_TAGS_DATA = [];
 
 function initArchiveApp() {
-  if (typeof window !== "undefined" && window.DYNAMIC_POSTS) {
+  if (typeof window !== "undefined" && window.DYNAMIC_POSTS && Array.isArray(window.DYNAMIC_POSTS) && window.DYNAMIC_POSTS.length > 0) {
     ingestArchivePosts(window.DYNAMIC_POSTS);
   }
-  if (typeof window !== "undefined" && window.DYNAMIC_TAGS) {
+  if (typeof window !== "undefined" && window.DYNAMIC_TAGS && Array.isArray(window.DYNAMIC_TAGS) && window.DYNAMIC_TAGS.length > 0) {
     ARCHIVE_TAGS_DATA = window.DYNAMIC_TAGS;
   }
 
-  fetchArchivePostsJson();
-  fetchArchiveTagsJson();
+  if (ARCHIVE_POSTS.length === 0 && typeof window !== "undefined" && window.location.protocol !== "file:") {
+    fetchArchivePostsJson();
+  }
+  if ((!ARCHIVE_TAGS_DATA || ARCHIVE_TAGS_DATA.length === 0) && typeof window !== "undefined" && window.location.protocol !== "file:") {
+    fetchArchiveTagsJson();
+  }
   initArchiveListeners();
   initNodeMapCanvas();
   initSubscribeAnimation();
@@ -230,7 +234,7 @@ function applyTagFilterDirectly(tag) {
 
 async function fetchArchivePostsJson() {
   try {
-    const res = await fetch("posts.json?t=" + Date.now());
+    const res = await fetch("posts.json");
     if (res.ok) {
       const data = await res.json();
       ingestArchivePosts(data);
@@ -242,7 +246,7 @@ async function fetchArchivePostsJson() {
 
 async function fetchArchiveTagsJson() {
   try {
-    const res = await fetch("tags.json?t=" + Date.now());
+    const res = await fetch("tags.json");
     if (res.ok) {
       const data = await res.json();
       if (Array.isArray(data)) {

@@ -251,15 +251,6 @@ def generate_post_html_files(posts):
   <!-- Sidebar Rail Component -->
   <sidebar-rail active-page="home" has-search></sidebar-rail>
 
-  <!-- Interactive Dropdown Overlays -->
-  <div id="dispatch-log-dropdown" class="top-dropdown-panel menu-dropdown-panel dispatch-log-panel" style="display:none;">
-    <div class="dropdown-header">[ DISPATCH LOG ]</div>
-    <button type="button" class="dropdown-option active" data-filter="all">SHOW ALL DISPATCHES</button>
-    <button type="button" class="dropdown-option" data-filter="essay">_ESSAYS</button>
-    <button type="button" class="dropdown-option" data-filter="note">_NOTES</button>
-    <button type="button" class="dropdown-option" data-filter="bookmark">_BOOKMARKS</button>
-    <button type="button" class="dropdown-option" data-filter="resource">_RESOURCES</button>
-  </div>
 
   <div id="top-search-dropdown" class="top-dropdown-panel search-dropdown-panel" style="display:none;">
     <input type="text" id="top-search-input" name="search" placeholder="SEARCH DISPATCHES..." aria-label="Search dispatches" autocomplete="off" spellcheck="false" />

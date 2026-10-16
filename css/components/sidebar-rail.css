@@ -381,34 +381,41 @@
     transform: scale(1) rotate(0deg);
     stroke: var(--text-muted, #888888);
   }
+
   15% {
     transform: scale(1.28) rotate(-22deg);
     stroke: var(--accent-coral, #e84a5f);
     filter: drop-shadow(0 0 6px rgba(232, 74, 95, 0.85));
   }
+
   30% {
     transform: scale(1.28) rotate(22deg);
     stroke: var(--accent-coral, #e84a5f);
     filter: drop-shadow(0 0 6px rgba(232, 74, 95, 0.85));
   }
+
   45% {
     transform: scale(1.28) rotate(-18deg);
     stroke: var(--accent-coral, #e84a5f);
     filter: drop-shadow(0 0 6px rgba(232, 74, 95, 0.85));
   }
+
   60% {
     transform: scale(1.28) rotate(18deg);
     stroke: var(--accent-coral, #e84a5f);
     filter: drop-shadow(0 0 6px rgba(232, 74, 95, 0.85));
   }
+
   75% {
     transform: scale(1.28) rotate(-10deg);
     stroke: var(--accent-coral, #e84a5f);
   }
+
   85% {
     transform: scale(1.1) rotate(8deg);
     stroke: var(--accent-coral, #e84a5f);
   }
+
   100% {
     transform: scale(1) rotate(0deg);
     stroke: var(--text-muted, #888888);
@@ -417,11 +424,13 @@
 }
 
 @keyframes subscribeSlowColorLoop {
+
   0%,
   100% {
     stroke: var(--text-muted, #888888);
     filter: none;
   }
+
   50% {
     stroke: var(--accent-coral, #e84a5f);
     filter: drop-shadow(0 0 8px rgba(232, 74, 95, 0.5));
@@ -439,6 +448,7 @@
 
 /* Auto-Reveal & Smooth Scaling Glow for Subscribe Tooltip (Appears at 6s for ~3s) */
 @keyframes subscribeTooltipAutoReveal {
+
   0%,
   62% {
     opacity: 0;
@@ -446,6 +456,7 @@
     transform: translateY(-50%) scale(0.65) translateX(-12px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75);
   }
+
   /* 6.0s - 6.5s: Smooth scaling entrance with soft subtle red glow */
   63% {
     opacity: 0;
@@ -455,6 +466,7 @@
       0 8px 24px rgba(0, 0, 0, 0.75),
       0 0 8px rgba(232, 74, 95, 0.2);
   }
+
   68.4% {
     opacity: 1;
     visibility: visible;
@@ -463,6 +475,7 @@
       0 8px 24px rgba(0, 0, 0, 0.75),
       0 0 12px rgba(232, 74, 95, 0.35);
   }
+
   89.5% {
     opacity: 1;
     visibility: visible;
@@ -471,6 +484,7 @@
       0 8px 24px rgba(0, 0, 0, 0.75),
       0 0 16px rgba(232, 74, 95, 0.45);
   }
+
   /* 9.0s - 9.5s: Smooth scaling & fading exit back into the navbar */
   94.7% {
     opacity: 1;
@@ -480,6 +494,7 @@
       0 8px 24px rgba(0, 0, 0, 0.75),
       0 0 10px rgba(232, 74, 95, 0.3);
   }
+
   100% {
     opacity: 0;
     visibility: hidden;
@@ -490,8 +505,7 @@
 
 #sidebar-subscribe-btn .rail-tooltip {
   transform-origin: left center;
-  animation: subscribeTooltipAutoReveal 9.5s cubic-bezier(0.16, 1, 0.3, 1) 1
-    forwards;
+  animation: subscribeTooltipAutoReveal 9.5s cubic-bezier(0.16, 1, 0.3, 1) 1 forwards;
 }
 
 #sidebar-subscribe-btn:hover .rail-tooltip {
@@ -684,12 +698,15 @@
   .sidebar-rail {
     padding: 0.85rem 0;
   }
+
   .brand-logo-v {
     font-size: 0.58rem;
   }
+
   .nav-stacked-vertical {
     gap: 1.15rem;
   }
+
   .nav-link-item {
     font-size: 0.58rem;
     padding: 2px 0;
@@ -700,7 +717,8 @@
    TIER 2 BREAKPOINT: SHORT HEIGHT (<= 700px) OR WIDTH (<= 980px)
    Smoothly transforms sidebar into a sleek Top Navbar
    ============================================================================== */
-@media (max-height: 700px), (max-width: 980px) {
+@media (max-height: 700px),
+(max-width: 980px) {
   .rail-tooltip {
     display: none !important;
   }
@@ -754,8 +772,8 @@
 
   .brand-logo-svg {
     transform: none;
-    width: 105px;
-    height: 21px;
+    width: 110px;
+    height: 22px;
   }
 
   /* Hide text format links; use _DISPATCH_LOG dropdown button instead */
@@ -872,6 +890,7 @@
    Condenses all top icon buttons and search into a single Hamburger Menu on the right
    ============================================================================== */
 @media (max-width: 590px) {
+
   .top-nav-controls-group,
   .sidebar-bottom-icons {
     display: none !important;
@@ -900,4 +919,3 @@
     gap: 0.65rem !important;
   }
 }
-

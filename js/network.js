@@ -34,15 +34,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function initNetworkApp() {
-  if (typeof window !== "undefined" && window.DYNAMIC_POSTS) {
+  if (typeof window !== "undefined" && window.DYNAMIC_POSTS && Array.isArray(window.DYNAMIC_POSTS) && window.DYNAMIC_POSTS.length > 0) {
     ingestNetworkPosts(window.DYNAMIC_POSTS);
   }
-  if (typeof window !== "undefined" && window.DYNAMIC_TAGS) {
+  if (typeof window !== "undefined" && window.DYNAMIC_TAGS && Array.isArray(window.DYNAMIC_TAGS) && window.DYNAMIC_TAGS.length > 0) {
     NETWORK_TAGS_DATA = window.DYNAMIC_TAGS;
   }
 
-  fetchNetworkPostsJson();
-  fetchNetworkTagsJson();
+  if (NETWORK_POSTS.length === 0 && typeof window !== "undefined" && window.location.protocol !== "file:") {
+    fetchNetworkPostsJson();
+  }
+  if ((!NETWORK_TAGS_DATA || NETWORK_TAGS_DATA.length === 0) && typeof window !== "undefined" && window.location.protocol !== "file:") {
+    fetchNetworkTagsJson();
+  }
   initNetworkListeners();
   initNodeMapCanvas();
   initSubscribeAnimation();
@@ -208,7 +212,7 @@ function applyTagFilterDirectly(tag) {
 
 async function fetchNetworkPostsJson() {
   try {
-    const res = await fetch("posts.json?t=" + Date.now());
+    const res = await fetch("posts.json");
     if (res.ok) {
       const data = await res.json();
       ingestNetworkPosts(data);
@@ -220,7 +224,7 @@ async function fetchNetworkPostsJson() {
 
 async function fetchNetworkTagsJson() {
   try {
-    const res = await fetch("tags.json?t=" + Date.now());
+    const res = await fetch("tags.json");
     if (res.ok) {
       const data = await res.json();
       if (Array.isArray(data)) {
