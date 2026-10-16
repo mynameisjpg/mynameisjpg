@@ -293,15 +293,6 @@ def generate_post_html_files(posts):
             </button>
           </div>
         </div>
-
-        <div class="header-col-right">
-          <span class="header-legend filter-status" id="active-filter-label">[MODE: ALL_DISPATCHES]</span>
-          <div class="matrix-search-box">
-            <svg viewBox="0 0 24 24" class="search-icon-svg"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" id="matrix-search-input" placeholder="SEARCH DISPATCHES..." aria-label="Search dispatches" autocomplete="off" />
-            <button type="button" id="clear-search-btn" style="display: none;" title="Clear search">✕</button>
-          </div>
-        </div>
       </div>
 
       <div class="card-grid-matrix" id="card-matrix"></div>

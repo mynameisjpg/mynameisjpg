@@ -1,27 +1,20 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Untitled Wallpapers for your Mobile? — Untitled.jpg</title>
-  <meta name="description"
-    content="The art gallery has download links for all designs and artworks produced by Untitled.jpg - for free.">
-  <link rel="canonical"
-    href="https://mynameisjpg.github.io/mynameisjpg/posts/want-untitled-wallpapers-for-your-mobile.html">
+  <meta name="description" content="The art gallery has download links for all designs and artworks produced by Untitled.jpg - for free.">
+  <link rel="canonical" href="https://mynameisjpg.github.io/mynameisjpg/posts/want-untitled-wallpapers-for-your-mobile.html">
 
   <!-- Open Graph / LinkedIn / Facebook / WhatsApp -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Untitled.jpg">
   <meta property="og:title" content="Untitled Wallpapers for your Mobile?">
-  <meta property="og:description"
-    content="The art gallery has download links for all designs and artworks produced by Untitled.jpg - for free.">
-  <meta property="og:url"
-    content="https://mynameisjpg.github.io/mynameisjpg/posts/want-untitled-wallpapers-for-your-mobile.html">
-  <meta name="image" property="og:image"
-    content="https://mynameisjpg.github.io/mynameisjpg/assets/images/wallpaper-gallery.gif">
-  <meta property="og:image:secure_url"
-    content="https://mynameisjpg.github.io/mynameisjpg/assets/images/wallpaper-gallery.gif">
+  <meta property="og:description" content="The art gallery has download links for all designs and artworks produced by Untitled.jpg - for free.">
+  <meta property="og:url" content="https://mynameisjpg.github.io/mynameisjpg/posts/want-untitled-wallpapers-for-your-mobile.html">
+  <meta name="image" property="og:image" content="https://mynameisjpg.github.io/mynameisjpg/assets/images/wallpaper-gallery.gif">
+  <meta property="og:image:secure_url" content="https://mynameisjpg.github.io/mynameisjpg/assets/images/wallpaper-gallery.gif">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Preview of the gallery page">
@@ -108,16 +101,11 @@
   <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&family=Platypi:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
-    rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&family=Platypi:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
   <!-- Math Rendering (KaTeX), Markdown (Marked.js), & Diagrams (Mermaid.js) -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-  </noscript>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"></noscript>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -125,24 +113,22 @@
 
   <!-- Design System Stylesheets -->
   <link rel="stylesheet" href="index.css?v=5">
-
+  
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="shortcut icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="apple-touch-icon" href="assets/images/favicon.svg">
-
+  
   <!-- Autonomous Web Components (Deferred) -->
   <script defer src="js/components/sidebar-rail.js"></script>
 </head>
-
 <body>
 
   <!-- Sidebar Rail Component -->
   <sidebar-rail active-page="home" has-search></sidebar-rail>
 
   <!-- Interactive Dropdown Overlays -->
-  <div id="dispatch-log-dropdown" class="top-dropdown-panel menu-dropdown-panel dispatch-log-panel"
-    style="display:none;">
+  <div id="dispatch-log-dropdown" class="top-dropdown-panel menu-dropdown-panel dispatch-log-panel" style="display:none;">
     <div class="dropdown-header">[ DISPATCH LOG ]</div>
     <button type="button" class="dropdown-option active" data-filter="all">SHOW ALL DISPATCHES</button>
     <button type="button" class="dropdown-option" data-filter="essay">_ESSAYS</button>
@@ -152,12 +138,7 @@
   </div>
 
   <div id="top-search-dropdown" class="top-dropdown-panel search-dropdown-panel" style="display:none;">
-    <input type="text" id="top-search-input" name="search" placeholder="SEARCH DISPATCHES..."
-      aria-label="Search dispatches" autocomplete="off" spellcheck="false" />
-  </div>
-    <button type="button" class="dropdown-option active" data-sort="newest">NEWEST FIRST &#8595;</button>
-    <button type="button" class="dropdown-option" data-sort="oldest">OLDEST FIRST &#8593;</button>
-    <button type="button" class="dropdown-option" data-sort="title">ALPHABETICAL (A-Z)</button>
+    <input type="text" id="top-search-input" name="search" placeholder="SEARCH DISPATCHES..." aria-label="Search dispatches" autocomplete="off" spellcheck="false" />
   </div>
 
   <!-- Split 50-50 Layout -->
@@ -166,7 +147,7 @@
       <div class="matrix-header-group">
         <div class="header-col-left">
           <span class="header-legend">SYS_LOG // ASYMMETRIC_DISPATCH_MATRIX</span>
-                    <div class="controls-row-left" role="toolbar" aria-label="Dispatch format filters">
+          <div class="controls-row-left" role="toolbar" aria-label="Dispatch format filters">
             <button type="button" class="matrix-filter-btn filter-btn-essay" data-filter="essay" title="Filter by Essays">
               <svg viewBox="0 0 24 24" class="filter-btn-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
               <span>ESSAYS</span>
@@ -188,27 +169,13 @@
             </button>
           </div>
         </div>
-
-        <div class="header-col-right">
-          <span class="header-legend filter-status" id="active-filter-label">[MODE: ALL_DISPATCHES]</span>
-          <div class="matrix-search-box">
-            <svg viewBox="0 0 24 24" class="search-icon-svg">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-            <input type="text" id="matrix-search-input" placeholder="SEARCH DISPATCHES..."
-              aria-label="Search dispatches" autocomplete="off" />
-            <button type="button" id="clear-search-btn" style="display: none;" title="Clear search">✕</button>
-          </div>
-        </div>
       </div>
 
       <div class="card-grid-matrix" id="card-matrix"></div>
     </section>
 
     <!-- Reading Pane -->
-    <article class="post-column essay-column" id="essay-reading-pane" data-component="reader-pane"
-      aria-label="Post Reader View">
+    <article class="post-column essay-column" id="essay-reading-pane" data-component="reader-pane" aria-label="Post Reader View">
       <button type="button" class="btn-return-grid" aria-label="Return to Grid Feed">
         <span class="return-arrow">&lt;&lt;</span>
         <span class="return-text">RETURN TO GRID FEED</span>
@@ -218,27 +185,23 @@
 
   <div class="floating-nav-buttons" data-component="floating-controls">
     <button type="button" class="btn-nav-action" id="btn-scroll-top" title="Scroll Reader to Top">↑ TOP</button>
-    <button type="button" class="btn-nav-action" id="btn-scroll-bottom" title="Scroll Reader to Bottom">↓
-      BOTTOM</button>
+    <button type="button" class="btn-nav-action" id="btn-scroll-bottom" title="Scroll Reader to Bottom">↓ BOTTOM</button>
   </div>
 
   <dialog id="subscribe-modal" class="modal-dialog" data-component="subscribe-modal" aria-labelledby="modal-heading">
     <div class="modal-box">
       <div class="modal-header-tag">[ DISPATCH_SUBSCRIPTION // FREQUENCY: FORTNIGHTLY ]</div>
       <h2 id="modal-heading" class="modal-title">Subscribe to Untitled.jpg</h2>
-      <p class="modal-description">Deep-dive essays and technical dispatches on AI perception, cognitive psychophysics,
-        high-dimensional latent space, and media archaeology.</p>
-
+      <p class="modal-description">Deep-dive essays and technical dispatches on AI perception, cognitive psychophysics, high-dimensional latent space, and media archaeology.</p>
+      
       <form class="modal-form" id="subscribe-form" method="dialog">
         <div class="modal-input-group">
           <label for="subscriber-name" class="modal-input-label">IDENTITY (NAME):</label>
-          <input type="text" id="subscriber-name" name="name" class="modal-input" placeholder="Your Name / Alias"
-            autocomplete="name">
+          <input type="text" id="subscriber-name" name="name" class="modal-input" placeholder="Your Name / Alias" autocomplete="name">
         </div>
         <div class="modal-input-group">
           <label for="subscriber-email" class="modal-input-label">TRANSMISSION_ENDPOINT (EMAIL):</label>
-          <input type="email" id="subscriber-email" name="email" class="modal-input" placeholder="reader@domain.xyz"
-            required autocomplete="email" spellcheck="false">
+          <input type="email" id="subscriber-email" name="email" class="modal-input" placeholder="reader@domain.xyz" required autocomplete="email" spellcheck="false">
         </div>
         <div class="modal-actions">
           <button type="button" class="btn-modal-cancel">CANCEL</button>
@@ -260,5 +223,4 @@
   <script defer src="js/components/navigation-controls.js"></script>
   <script defer src="app.js"></script>
 </body>
-
 </html>
