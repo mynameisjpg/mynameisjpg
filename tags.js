@@ -363,8 +363,21 @@
     "name": "Philosophy",
     "label": "Philosophy",
     "type": "foundation",
-    "count": 6,
+    "count": 7,
     "posts": [
+      {
+        "id": "2026-10-16-how-power-moved-inside-us",
+        "slug": "how-power-moved-inside-us",
+        "title": "How Control Sneaked Inside Your Pocket",
+        "date": "2026.10.16",
+        "format": "NOTE",
+        "foundations": [
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
+        "subtopic": "BIOPOLITICS AND ALGORITHMIC CONTROL",
+        "url": "posts/how-power-moved-inside-us.html"
+      },
       {
         "id": "2026-10-14-naomi-klein-end-times-fascism-doomscroll",
         "slug": "naomi-klein-end-times-fascism-doomscroll",
@@ -448,6 +461,13 @@
     ],
     "links": [
       {
+        "title": "How Control Sneaked Inside Your Pocket",
+        "slug": "how-power-moved-inside-us",
+        "format": "NOTE",
+        "url": "posts/how-power-moved-inside-us.html",
+        "date": "2026.10.16"
+      },
+      {
         "title": "Naomi Klein: End Times Fascism | Doomscroll",
         "slug": "naomi-klein-end-times-fascism-doomscroll",
         "format": "BOOKMARK",
@@ -500,6 +520,7 @@
     ],
     "subtopics": [
       "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+      "BIOPOLITICS AND ALGORITHMIC CONTROL",
       "EPISTEMOLOGY OF REPRESENTATION",
       "GEO-POLITICS",
       "SOMATOPOLITICS & LATENT SPACE",
@@ -1278,8 +1299,21 @@
     "name": "Philosophy of the Image",
     "label": "Philosophy of the Image",
     "type": "pillar",
-    "count": 9,
+    "count": 10,
     "posts": [
+      {
+        "id": "2026-10-16-how-power-moved-inside-us",
+        "slug": "how-power-moved-inside-us",
+        "title": "How Control Sneaked Inside Your Pocket",
+        "date": "2026.10.16",
+        "format": "NOTE",
+        "foundations": [
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
+        "subtopic": "BIOPOLITICS AND ALGORITHMIC CONTROL",
+        "url": "posts/how-power-moved-inside-us.html"
+      },
       {
         "id": "2026-10-10-operational-images-farocki-flusser-machine-vision",
         "slug": "operational-images-farocki-flusser-machine-vision",
@@ -1395,6 +1429,13 @@
       }
     ],
     "links": [
+      {
+        "title": "How Control Sneaked Inside Your Pocket",
+        "slug": "how-power-moved-inside-us",
+        "format": "NOTE",
+        "url": "posts/how-power-moved-inside-us.html",
+        "date": "2026.10.16"
+      },
       {
         "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
         "slug": "operational-images-farocki-flusser-machine-vision",
@@ -2744,6 +2785,45 @@
     "connected_tags": []
   },
   {
+    "id": "subtopic-biopolitics-and-algorithmic-control",
+    "name": "BIOPOLITICS AND ALGORITHMIC CONTROL",
+    "label": "BIOPOLITICS AND ALGORITHMIC CONTROL",
+    "type": "subtopic",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-16-how-power-moved-inside-us",
+        "slug": "how-power-moved-inside-us",
+        "title": "How Control Sneaked Inside Your Pocket",
+        "date": "2026.10.16",
+        "format": "NOTE",
+        "foundations": [
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
+        "subtopic": "BIOPOLITICS AND ALGORITHMIC CONTROL",
+        "url": "posts/how-power-moved-inside-us.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "How Control Sneaked Inside Your Pocket",
+        "slug": "how-power-moved-inside-us",
+        "format": "NOTE",
+        "url": "posts/how-power-moved-inside-us.html",
+        "date": "2026.10.16"
+      }
+    ],
+    "foundations": [
+      "Philosophy"
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
     "id": "subtopic-cognitive-visual-biases",
     "name": "COGNITIVE AND VISUAL BIASES",
     "label": "COGNITIVE AND VISUAL BIASES",
@@ -3493,6 +3573,120 @@
     ]
   },
   {
+    "id": "biopolitics",
+    "name": "biopolitics",
+    "label": "#biopolitics",
+    "type": "tag",
+    "count": 4,
+    "posts": [
+      {
+        "id": "2026-10-16-how-power-moved-inside-us",
+        "slug": "how-power-moved-inside-us",
+        "title": "How Control Sneaked Inside Your Pocket",
+        "date": "2026.10.16",
+        "format": "NOTE",
+        "foundations": [
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
+        "subtopic": "BIOPOLITICS AND ALGORITHMIC CONTROL",
+        "url": "posts/how-power-moved-inside-us.html"
+      },
+      {
+        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "foundations": [
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY & CRITICAL THEORY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
+      },
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "foundations": [
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY & CRITICAL THEORY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      },
+      {
+        "id": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "date": "2026.09.25",
+        "format": "ESSAY",
+        "foundations": [
+          "ai"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
+        "url": "posts/turing-queer-ai.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "How Control Sneaked Inside Your Pocket",
+        "slug": "how-power-moved-inside-us",
+        "format": "NOTE",
+        "url": "posts/how-power-moved-inside-us.html",
+        "date": "2026.10.16"
+      },
+      {
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "format": "ESSAY",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
+        "date": "2026.10.03"
+      },
+      {
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      },
+      {
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "slug": "turing-queer-ai",
+        "format": "ESSAY",
+        "url": "posts/turing-queer-ai.html",
+        "date": "2026.09.25"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Philosophy"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION",
+      "PHILOSOPHY & CRITICAL THEORY",
+      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+      "BIOPOLITICS AND ALGORITHMIC CONTROL",
+      "SOMATOPOLITICS & LATENT SPACE",
+      "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
+    ],
+    "connected_tags": [
+      "paul-b-preciado",
+      "pharmacopornography",
+      "epistemology",
+      "michel-foucault",
+      "politics",
+      "queer-theory"
+    ]
+  },
+  {
     "id": "politics",
     "name": "politics",
     "label": "#politics",
@@ -4045,98 +4239,6 @@
     ]
   },
   {
-    "id": "biopolitics",
-    "name": "biopolitics",
-    "label": "#biopolitics",
-    "type": "tag",
-    "count": 3,
-    "posts": [
-      {
-        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy"
-        ],
-        "pillar": "PHILOSOPHY & CRITICAL THEORY",
-        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
-      },
-      {
-        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy"
-        ],
-        "pillar": "PHILOSOPHY & CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
-      },
-      {
-        "id": "2026-09-25-turing-queer-ai",
-        "slug": "turing-queer-ai",
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "date": "2026.09.25",
-        "format": "ESSAY",
-        "foundations": [
-          "ai"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "SYNTHETIC IDENTITY & NORMATIVE MACHINES",
-        "url": "posts/turing-queer-ai.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "format": "ESSAY",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "format": "ESSAY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "turing-queer-ai",
-        "format": "ESSAY",
-        "url": "posts/turing-queer-ai.html",
-        "date": "2026.09.25"
-      }
-    ],
-    "foundations": [
-      "AI",
-      "Philosophy"
-    ],
-    "pillars": [
-      "AI PERCEPTION & REPRESENTATION",
-      "PHILOSOPHY & CRITICAL THEORY"
-    ],
-    "subtopics": [
-      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-      "SOMATOPOLITICS & LATENT SPACE",
-      "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
-    ],
-    "connected_tags": [
-      "epistemology",
-      "paul-b-preciado",
-      "pharmacopornography",
-      "politics",
-      "queer-theory",
-      "generative-ai"
-    ]
-  },
-  {
     "id": "epistemology",
     "name": "epistemology",
     "label": "#epistemology",
@@ -4600,6 +4702,188 @@
       "vault",
       "musicians",
       "playlist"
+    ]
+  },
+  {
+    "id": "paul-b-preciado",
+    "name": "paul-b-preciado",
+    "label": "#paul-b-preciado",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-16-how-power-moved-inside-us",
+        "slug": "how-power-moved-inside-us",
+        "title": "How Control Sneaked Inside Your Pocket",
+        "date": "2026.10.16",
+        "format": "NOTE",
+        "foundations": [
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
+        "subtopic": "BIOPOLITICS AND ALGORITHMIC CONTROL",
+        "url": "posts/how-power-moved-inside-us.html"
+      },
+      {
+        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "foundations": [
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY & CRITICAL THEORY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
+      },
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "foundations": [
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY & CRITICAL THEORY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "How Control Sneaked Inside Your Pocket",
+        "slug": "how-power-moved-inside-us",
+        "format": "NOTE",
+        "url": "posts/how-power-moved-inside-us.html",
+        "date": "2026.10.16"
+      },
+      {
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "format": "ESSAY",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
+        "date": "2026.10.03"
+      },
+      {
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      }
+    ],
+    "foundations": [
+      "Philosophy"
+    ],
+    "pillars": [
+      "PHILOSOPHY & CRITICAL THEORY",
+      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+      "BIOPOLITICS AND ALGORITHMIC CONTROL",
+      "SOMATOPOLITICS & LATENT SPACE"
+    ],
+    "connected_tags": [
+      "biopolitics",
+      "pharmacopornography",
+      "michel-foucault",
+      "politics",
+      "epistemology",
+      "genealogy-of-power"
+    ]
+  },
+  {
+    "id": "pharmacopornography",
+    "name": "pharmacopornography",
+    "label": "#pharmacopornography",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-16-how-power-moved-inside-us",
+        "slug": "how-power-moved-inside-us",
+        "title": "How Control Sneaked Inside Your Pocket",
+        "date": "2026.10.16",
+        "format": "NOTE",
+        "foundations": [
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
+        "subtopic": "BIOPOLITICS AND ALGORITHMIC CONTROL",
+        "url": "posts/how-power-moved-inside-us.html"
+      },
+      {
+        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "foundations": [
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY & CRITICAL THEORY",
+        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
+      },
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "foundations": [
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY & CRITICAL THEORY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "How Control Sneaked Inside Your Pocket",
+        "slug": "how-power-moved-inside-us",
+        "format": "NOTE",
+        "url": "posts/how-power-moved-inside-us.html",
+        "date": "2026.10.16"
+      },
+      {
+        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
+        "slug": "telebody-latent-space-pharmacopornographic-ai",
+        "format": "ESSAY",
+        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
+        "date": "2026.10.03"
+      },
+      {
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      }
+    ],
+    "foundations": [
+      "Philosophy"
+    ],
+    "pillars": [
+      "PHILOSOPHY & CRITICAL THEORY",
+      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+      "BIOPOLITICS AND ALGORITHMIC CONTROL",
+      "SOMATOPOLITICS & LATENT SPACE"
+    ],
+    "connected_tags": [
+      "paul-b-preciado",
+      "biopolitics",
+      "michel-foucault",
+      "politics",
+      "epistemology",
+      "genealogy-of-power"
     ]
   },
   {
@@ -6097,6 +6381,76 @@
     ]
   },
   {
+    "id": "michel-foucault",
+    "name": "michel-foucault",
+    "label": "#michel-foucault",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-16-how-power-moved-inside-us",
+        "slug": "how-power-moved-inside-us",
+        "title": "How Control Sneaked Inside Your Pocket",
+        "date": "2026.10.16",
+        "format": "NOTE",
+        "foundations": [
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
+        "subtopic": "BIOPOLITICS AND ALGORITHMIC CONTROL",
+        "url": "posts/how-power-moved-inside-us.html"
+      },
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "foundations": [
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY & CRITICAL THEORY",
+        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "How Control Sneaked Inside Your Pocket",
+        "slug": "how-power-moved-inside-us",
+        "format": "NOTE",
+        "url": "posts/how-power-moved-inside-us.html",
+        "date": "2026.10.16"
+      },
+      {
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      }
+    ],
+    "foundations": [
+      "Philosophy"
+    ],
+    "pillars": [
+      "PHILOSOPHY & CRITICAL THEORY",
+      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
+      "BIOPOLITICS AND ALGORITHMIC CONTROL"
+    ],
+    "connected_tags": [
+      "paul-b-preciado",
+      "biopolitics",
+      "pharmacopornography",
+      "genealogy-of-power",
+      "algorithmic-control",
+      "attention-economy"
+    ]
+  },
+  {
     "id": "motion",
     "name": "motion",
     "label": "#motion",
@@ -6317,144 +6671,6 @@
       "aesthetics",
       "vault",
       "3d"
-    ]
-  },
-  {
-    "id": "paul-b-preciado",
-    "name": "paul-b-preciado",
-    "label": "#paul-b-preciado",
-    "type": "tag",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy"
-        ],
-        "pillar": "PHILOSOPHY & CRITICAL THEORY",
-        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
-      },
-      {
-        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy"
-        ],
-        "pillar": "PHILOSOPHY & CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "format": "ESSAY",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "format": "ESSAY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
-        "date": "2026.10.03"
-      }
-    ],
-    "foundations": [
-      "Philosophy"
-    ],
-    "pillars": [
-      "PHILOSOPHY & CRITICAL THEORY"
-    ],
-    "subtopics": [
-      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-      "SOMATOPOLITICS & LATENT SPACE"
-    ],
-    "connected_tags": [
-      "pharmacopornography",
-      "biopolitics",
-      "politics",
-      "epistemology",
-      "generative-ai",
-      "bernard-stiegler"
-    ]
-  },
-  {
-    "id": "pharmacopornography",
-    "name": "pharmacopornography",
-    "label": "#pharmacopornography",
-    "type": "tag",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-10-03-telebody-latent-space-pharmacopornographic-ai",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy"
-        ],
-        "pillar": "PHILOSOPHY & CRITICAL THEORY",
-        "subtopic": "SOMATOPOLITICS & LATENT SPACE",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html"
-      },
-      {
-        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy"
-        ],
-        "pillar": "PHILOSOPHY & CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "(II) The Telebody in the Latent Space: Updating Preciado's Pharmacopornographic Politics for Generative AI and Cognitive Proletarianization",
-        "slug": "telebody-latent-space-pharmacopornographic-ai",
-        "format": "ESSAY",
-        "url": "posts/telebody-latent-space-pharmacopornographic-ai.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "format": "ESSAY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
-        "date": "2026.10.03"
-      }
-    ],
-    "foundations": [
-      "Philosophy"
-    ],
-    "pillars": [
-      "PHILOSOPHY & CRITICAL THEORY"
-    ],
-    "subtopics": [
-      "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-      "SOMATOPOLITICS & LATENT SPACE"
-    ],
-    "connected_tags": [
-      "paul-b-preciado",
-      "biopolitics",
-      "politics",
-      "epistemology",
-      "generative-ai",
-      "bernard-stiegler"
     ]
   },
   {
@@ -7581,6 +7797,54 @@
     ]
   },
   {
+    "id": "algorithmic-control",
+    "name": "algorithmic-control",
+    "label": "#algorithmic-control",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-16-how-power-moved-inside-us",
+        "slug": "how-power-moved-inside-us",
+        "title": "How Control Sneaked Inside Your Pocket",
+        "date": "2026.10.16",
+        "format": "NOTE",
+        "foundations": [
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
+        "subtopic": "BIOPOLITICS AND ALGORITHMIC CONTROL",
+        "url": "posts/how-power-moved-inside-us.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "How Control Sneaked Inside Your Pocket",
+        "slug": "how-power-moved-inside-us",
+        "format": "NOTE",
+        "url": "posts/how-power-moved-inside-us.html",
+        "date": "2026.10.16"
+      }
+    ],
+    "foundations": [
+      "Philosophy"
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "BIOPOLITICS AND ALGORITHMIC CONTROL"
+    ],
+    "connected_tags": [
+      "genealogy-of-power",
+      "michel-foucault",
+      "paul-b-preciado",
+      "biopolitics",
+      "pharmacopornography",
+      "attention-economy"
+    ]
+  },
+  {
     "id": "annotation",
     "name": "annotation",
     "label": "#annotation",
@@ -8012,6 +8276,54 @@
       "computer-vision",
       "politics",
       "human-vision"
+    ]
+  },
+  {
+    "id": "attention-economy",
+    "name": "attention-economy",
+    "label": "#attention-economy",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-16-how-power-moved-inside-us",
+        "slug": "how-power-moved-inside-us",
+        "title": "How Control Sneaked Inside Your Pocket",
+        "date": "2026.10.16",
+        "format": "NOTE",
+        "foundations": [
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
+        "subtopic": "BIOPOLITICS AND ALGORITHMIC CONTROL",
+        "url": "posts/how-power-moved-inside-us.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "How Control Sneaked Inside Your Pocket",
+        "slug": "how-power-moved-inside-us",
+        "format": "NOTE",
+        "url": "posts/how-power-moved-inside-us.html",
+        "date": "2026.10.16"
+      }
+    ],
+    "foundations": [
+      "Philosophy"
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "BIOPOLITICS AND ALGORITHMIC CONTROL"
+    ],
+    "connected_tags": [
+      "genealogy-of-power",
+      "michel-foucault",
+      "paul-b-preciado",
+      "biopolitics",
+      "pharmacopornography",
+      "algorithmic-control"
     ]
   },
   {
@@ -10759,6 +11071,54 @@
     ]
   },
   {
+    "id": "genealogy-of-power",
+    "name": "genealogy-of-power",
+    "label": "#genealogy-of-power",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-16-how-power-moved-inside-us",
+        "slug": "how-power-moved-inside-us",
+        "title": "How Control Sneaked Inside Your Pocket",
+        "date": "2026.10.16",
+        "format": "NOTE",
+        "foundations": [
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
+        "subtopic": "BIOPOLITICS AND ALGORITHMIC CONTROL",
+        "url": "posts/how-power-moved-inside-us.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "How Control Sneaked Inside Your Pocket",
+        "slug": "how-power-moved-inside-us",
+        "format": "NOTE",
+        "url": "posts/how-power-moved-inside-us.html",
+        "date": "2026.10.16"
+      }
+    ],
+    "foundations": [
+      "Philosophy"
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
+    ],
+    "subtopics": [
+      "BIOPOLITICS AND ALGORITHMIC CONTROL"
+    ],
+    "connected_tags": [
+      "michel-foucault",
+      "paul-b-preciado",
+      "biopolitics",
+      "pharmacopornography",
+      "algorithmic-control",
+      "attention-economy"
+    ]
+  },
+  {
     "id": "generative-art",
     "name": "generative-art",
     "label": "#generative-art",
@@ -12890,54 +13250,6 @@
       "grok-bot",
       "openai",
       "grok"
-    ]
-  },
-  {
-    "id": "michel-foucault",
-    "name": "michel-foucault",
-    "label": "#michel-foucault",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy"
-        ],
-        "pillar": "PHILOSOPHY & CRITICAL THEORY",
-        "subtopic": "BIOPOLITICS & PHARMACOPORNOGRAPHY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "format": "ESSAY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
-        "date": "2026.10.03"
-      }
-    ],
-    "foundations": [
-      "Philosophy"
-    ],
-    "pillars": [
-      "PHILOSOPHY & CRITICAL THEORY"
-    ],
-    "subtopics": [
-      "BIOPOLITICS & PHARMACOPORNOGRAPHY"
-    ],
-    "connected_tags": [
-      "paul-b-preciado",
-      "governance",
-      "capitalism",
-      "biopolitics",
-      "pharmacopornography",
-      "governmentality"
     ]
   },
   {

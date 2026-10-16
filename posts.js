@@ -292,6 +292,63 @@
     "content": "<div text-align=\"center\">\n\n<h3 class=\"post-subheading essay-subheading\">⏯️ You'll see all my recommended #2D Art dispatches below as an image carousel and in the Connected_Dispatches footer ↓↓↓</div><br></h3>\n\n<div style=\"display: flex; justify-content: center;\">\n\n</div>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">Recommended_Dispatches</h2>\n\n<h3 class=\"post-subheading essay-subheading\">1. <strong>Artist</strong> | <a href=\"postslug.html\" target=\"_blank\" rel=\"noopener noreferrer\">Post Title</a></h3>"
   },
   {
+    "id": "2026-10-16-how-power-moved-inside-us",
+    "slug": "2026-10-16-how-power-moved-inside-us",
+    "sys_id": "SYS_261016_POW",
+    "title": "How Control Sneaked Inside Your Pocket",
+    "subtitle": "A 300-year story about how rulers stopped using swords and started using your screen.",
+    "excerpt": "Three hundred years ago, a king controlled you with a blade. Later, factories controlled you with alarm bells. Today, power lives in your favorite app. Here is how that happened.",
+    "format": "NOTE",
+    "category": "OBSERVATIONS",
+    "media": "",
+    "source": "",
+    "url": "",
+    "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
+    "pillar_id": "philosophy-image",
+    "foundations": [
+      "philosophy"
+    ],
+    "subtopic": "BIOPOLITICS AND ALGORITHMIC CONTROL",
+    "subtopic_id": "biopolitics-and-algorithmic-control",
+    "theme": "dark",
+    "featured": false,
+    "shareable": true,
+    "allow_embed": true,
+    "in-gallery": true,
+    "gallery": true,
+    "image-in-gallery": true,
+    "status": "published",
+    "date": "2026.10.16",
+    "author": "Juan P. Giusepponi",
+    "read_time": "2 MIN READ",
+    "via": "",
+    "image": "assets/images/preciado-bodies.jpg",
+    "thumbnail": "assets/images/thumbnails/preciado-bodies.webp",
+    "image_alt": "High-contrast conceptual artwork showing human figures intersecting with digital wires, medical traces, and technical diagrams in black, white, and coral.",
+    "aspect_ratio": "h-tall-1",
+    "gallery-images": [],
+    "links": [],
+    "backlinks": [
+      {
+        "slug": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "title": "The Body in the Machine: Preciado, Foucault, and the Pharmacopornographic Episteme",
+        "note": "Deep-dive theoretical essay exploring this genealogy in full."
+      }
+    ],
+    "tags": [
+      "genealogy-of-power",
+      "michel-foucault",
+      "paul-b-preciado",
+      "biopolitics",
+      "pharmacopornography",
+      "algorithmic-control",
+      "philosophy",
+      "attention-economy"
+    ],
+    "entities": null,
+    "content": "<h2 class=\"post-section-kicker essay-section-kicker\">01. The Sword (300 Years Ago)</h2>\n\n<p class=\"post-paragraph essay-paragraph\">Imagine living in the 1600s. A king wears the crown.</p>\n\n<p class=\"post-paragraph essay-paragraph\">The deal was brutal and straightforward. Pay your taxes, or soldiers showed up with an axe.</p>\n\n<p class=\"post-paragraph essay-paragraph\">The king never cared if you liked him. He didn't care about your sleep schedule, your diet, or your bad moods. As long as you paid your gold and stayed quiet, he left your house alone. <strong>Power stood outside your door with a sword</strong>.</p>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">02. The School Bell (150 Years Ago)</h2>\n\n<p class=\"post-paragraph essay-paragraph\">Then steam engines arrived, and rulers discovered a basic economic rule: dead peasants can't spin cotton. Healthy workers make a lot more money than corpses.</p>\n\n<p class=\"post-paragraph essay-paragraph\">So society built places with big clocks. Schools taught kids how to sit still for hours. Mills trained hands to match the rhythm of machines. Prisons put guards in towers so everyone felt watched.</p>\n\n<p class=\"post-paragraph essay-paragraph\"><strong>Power still stood outside your skin, but now it owned your workday</strong>.</p>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">03. The Screen (Right Now)</h2>\n\n<p class=\"post-paragraph essay-paragraph\">Brick factories and security guards cost a fortune to run.</p>\n\n<p class=\"post-paragraph essay-paragraph\">Over the last few decades, <strong>power</strong> figured out something much cheaper. It <strong>moved into your pocket</strong>.</p>\n\n<p class=\"post-paragraph essay-paragraph\">Philosopher Paul B. Preciado pointed out that modern control doesn't need factory whistles. It works through <code>pills</code> to wake us up or calm our nerves for Monday morning, and <code>apps</code> that feed our brains quick hits of excitement.</p>\n\n<p class=\"post-paragraph essay-paragraph\">Nobody forced you to buy a phone. You saved up for it, plug it in by your pillow every night, and check it forty times before lunch.</p>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">04. The Big Picture</h2>\n\n<blockquote class=\"post-quote essay-quote\">Power started by threatening our neck. Then it disciplined our posture at a workbench. Today, it lives inside our favorite feed.</blockquote>\n\n<p class=\"post-paragraph essay-paragraph\">When you find it hard to put your phone down at night, remember: you are playing against the smartest control system humanity ever built.</p>"
+  },
+  {
     "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
     "slug": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
     "sys_id": "SYS_202610_RES",
