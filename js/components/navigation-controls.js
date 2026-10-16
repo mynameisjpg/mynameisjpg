@@ -403,6 +403,17 @@
         });
       });
 
+    // Matrix Format Filter Buttons
+    document.querySelectorAll(".matrix-filter-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const filter = (btn.getAttribute("data-filter") || "all")
+          .toLowerCase()
+          .replace(/s$/, "");
+        applyCategoryFilter(filter, true);
+      });
+    });
+
     document
       .querySelectorAll("#filter-dropdown .dropdown-opt")
       .forEach((opt) => {
@@ -652,6 +663,14 @@
         cleanFilter !== "all" ? cleanFilter : "",
       );
     }
+
+    // Highlight matrix filter buttons
+    document.querySelectorAll(".matrix-filter-btn").forEach((btn) => {
+      const f = (btn.getAttribute("data-filter") || "all")
+        .toLowerCase()
+        .replace(/s$/, "");
+      btn.classList.toggle("active", f === cleanFilter);
+    });
 
     // Highlight dropdown options
     document

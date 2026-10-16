@@ -50,28 +50,32 @@
 }
 
 .brand-logo-v {
-  font-family: var(--font-mono, "Azeret Mono", monospace);
-  font-size: 0.62rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  color: var(--text-bright, #f5f5f5);
   text-decoration: none;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
   white-space: nowrap;
-  transition:
-    color var(--transition-fast, 0.15s ease),
-    background-color var(--transition-fast, 0.15s ease);
   width: 100%;
-  min-height: 48px;
+  min-height: 120px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  padding: 0;
+  position: relative;
 }
 
-.brand-logo-v:hover {
-  color: var(--accent-coral, #e84a5f);
+.brand-logo-svg {
+  width: 110px;
+  height: 22px;
+  transform: rotate(-90deg);
+  transform-origin: center center;
+  display: block;
+  flex-shrink: 0;
+  transition: opacity var(--transition-fast, 0.15s ease), filter var(--transition-fast, 0.15s ease);
+}
+
+.brand-logo-v:hover .brand-logo-svg {
+  filter: drop-shadow(0 0 6px rgba(232, 74, 95, 0.6));
+  opacity: 0.9;
 }
 
 .logo-full {
@@ -743,17 +747,15 @@
   .brand-logo-v {
     writing-mode: horizontal-tb;
     transform: none;
-    font-size: 0.78rem;
-    font-weight: 700;
+    min-height: 48px;
+    height: 48px;
+    width: auto;
   }
 
-  .logo-full {
-    display: none;
-  }
-
-  .logo-short {
-    display: inline-block;
-    color: var(--accent-coral, #e84a5f);
+  .brand-logo-svg {
+    transform: none;
+    width: 105px;
+    height: 21px;
   }
 
   /* Hide text format links; use _DISPATCH_LOG dropdown button instead */

@@ -133,9 +133,77 @@
 .controls-row-left {
   display: flex;
   align-items: center;
+  gap: 0.45rem;
+  width: auto;
+  flex-wrap: wrap;
+}
+
+.matrix-filter-btn {
+  display: inline-flex;
+  align-items: center;
   gap: 0.4rem;
-  width: 100%;
-  /* Matches exact width of SYS_LOG legend above it */
+  height: 28px;
+  padding: 0 0.65rem;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-sm, 2px);
+  color: var(--text-muted, #888888);
+  font-family: var(--font-mono, "Azeret Mono", monospace);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast, 0.15s ease);
+}
+
+.matrix-filter-btn .filter-btn-icon {
+  width: 10px;
+  height: 10px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.2;
+  flex-shrink: 0;
+}
+
+/* Hover & Active states mapping directly to card grid pills */
+.matrix-filter-btn.filter-btn-essay:hover,
+.matrix-filter-btn.filter-btn-essay.active {
+  color: var(--accent-coral, #e84a5f);
+  background: rgba(232, 74, 95, 0.08);
+  border-color: rgba(232, 74, 95, 0.6);
+}
+
+.matrix-filter-btn.filter-btn-note:hover,
+.matrix-filter-btn.filter-btn-note.active {
+  color: #f5f5f5;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.matrix-filter-btn.filter-btn-resource:hover,
+.matrix-filter-btn.filter-btn-resource.active {
+  color: var(--text-body, #d2d2d2);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.matrix-filter-btn.filter-btn-bookmark:hover,
+.matrix-filter-btn.filter-btn-bookmark.active {
+  color: var(--accent-rose, #ff8484);
+  background: rgba(255, 132, 132, 0.08);
+  border-color: rgba(255, 132, 132, 0.6);
+}
+
+.matrix-filter-btn.filter-btn-all:hover,
+.matrix-filter-btn.filter-btn-all.active {
+  color: var(--accent-coral, #e84a5f);
+  background: rgba(232, 74, 95, 0.08);
+  border-color: var(--accent-coral, #e84a5f);
 }
 
 .flex-pill {
