@@ -369,7 +369,10 @@
             <span class="meta-readtime">${post.read_time}</span>
             ${post.source || post.via ? `<span class="meta-sep">//</span><span>SOURCE: <strong class="meta-author">${post.source || post.via}</strong></span>` : ""}
             <span class="meta-sep">//</span>
-            <span>SYS_ID: <code>${post.sys_id}</code></span>
+            <button type="button" class="meta-comment-cta" onclick="window.scrollToCommentsSection()" title="Jump to comments">
+              <svg viewBox="0 0 24 24" class="comment-cta-icon-svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <span class="comment-cta-label" id="meta-comment-count-label">(0) Comment first!</span>
+            </button>
           </div>
 
           <!-- MAIN BODY PROSE -->
@@ -379,6 +382,48 @@
 
           <!-- TIER 3: FOOTER SECTION -->
           <footer class="post-footer-section">
+            <!-- REACTION BAR (36-40px) -->
+            <section class="post-reaction-bar" aria-label="Article Reactions">
+              <span class="reaction-prompt">SHOW YOUR REACTION:</span>
+              <div class="reaction-buttons-group">
+                <button type="button" class="btn-reaction" data-reaction="heart" title="Appreciate / Love">
+                  <span class="reaction-icon-wrap">
+                    <svg viewBox="0 0 24 24" class="anim-icon anim-heart" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                  </span>
+                  <span class="reaction-count">0</span>
+                </button>
+                <button type="button" class="btn-reaction" data-reaction="laugh" title="Laugh">
+                  <span class="reaction-icon-wrap">
+                    <svg viewBox="0 0 24 24" class="anim-icon anim-laugh" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M18 13a6 6 0 0 1-12 0"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                  </span>
+                  <span class="reaction-count">0</span>
+                </button>
+                <button type="button" class="btn-reaction" data-reaction="insight" title="Insightful / Lightbulb">
+                  <span class="reaction-icon-wrap">
+                    <svg viewBox="0 0 24 24" class="anim-icon anim-insight" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
+                  </span>
+                  <span class="reaction-count">0</span>
+                </button>
+                <button type="button" class="btn-reaction" data-reaction="mindblown" title="Mind Blown">
+                  <span class="reaction-icon-wrap">
+                    <svg viewBox="0 0 24 24" class="anim-icon anim-mindblown" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path><path d="M5 3v4"></path><path d="M19 17v4"></path><path d="M3 5h4"></path><path d="M17 19h4"></path></svg>
+                  </span>
+                  <span class="reaction-count">0</span>
+                </button>
+                <button type="button" class="btn-reaction" data-reaction="anger" title="Fired Up / Intense">
+                  <span class="reaction-icon-wrap">
+                    <svg viewBox="0 0 24 24" class="anim-icon anim-fire" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+                  </span>
+                  <span class="reaction-count">0</span>
+                </button>
+                <button type="button" class="btn-reaction" data-reaction="dislike" title="Skeptical / Disagree">
+                  <span class="reaction-icon-wrap">
+                    <svg viewBox="0 0 24 24" class="anim-icon anim-dislike" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 14V2"></path><path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22h-1.5a1.5 1.5 0 0 1-1.5-1.5v-2.38Z"></path></svg>
+                  </span>
+                  <span class="reaction-count">0</span>
+                </button>
+              </div>
+            </section>
             ${
               post.links && post.links.length > 0
                 ? `
@@ -490,6 +535,42 @@
                 : ""
             }
 
+            <!-- DISPATCH COMMENTS SECTION -->
+            <section id="dispatch-comments-section" class="footer-block footer-comments" aria-label="Dispatch Comments and Replies">
+              <h3 class="footer-block-title">// DISPATCH_REPLIES &amp; FIELD_OBSERVATIONS</h3>
+              
+              <!-- Comment Submission Form -->
+              <form id="comment-submission-form" class="comment-form-shell">
+                <div class="comment-inputs-row">
+                  <div class="input-field-wrap">
+                    <label for="comment-alias">ALIAS *</label>
+                    <input type="text" id="comment-alias" name="alias" placeholder="e.g. observer_01" required maxlength="35" autocomplete="nickname" />
+                  </div>
+                  <div class="input-field-wrap">
+                    <label for="comment-email">EMAIL (OPTIONAL - KEPT PRIVATE)</label>
+                    <input type="email" id="comment-email" name="email" placeholder="you@domain.xyz" maxlength="100" autocomplete="email" />
+                  </div>
+                </div>
+
+                <!-- Anti-spam bot honeypot (hidden from humans) -->
+                <input type="text" name="hp_field" style="display:none;" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+                <div class="textarea-field-wrap">
+                  <textarea id="comment-body" name="content" placeholder="ENTER TRANSMISSION..." rows="3" required maxlength="2000"></textarea>
+                </div>
+
+                <div class="comment-form-actions">
+                  <span class="comment-disclaimer">No account required. Keep it civil &amp; insightful.</span>
+                  <button type="submit" class="btn-submit-comment">TRANSMIT REPLY ↗</button>
+                </div>
+              </form>
+
+              <!-- Stream of Approved Comments -->
+              <div class="comments-stream" id="comments-stream-container">
+                <div class="comments-loading-state">[ FETCHING DISPATCH TRANSMISSIONS... ]</div>
+              </div>
+            </section>
+
             <div class="post-signoff">
               <code>UNTITLED.JPG // BUILT IN ZEROES AND ONES WITH THE BLOOD AND SWEAT OF JUAN P. GIUSEPPONI // 2026</code>
             </div>
@@ -500,6 +581,22 @@
 
     // Initialize Typography Scaler Slider and Preferences
     initReaderTypoScaler();
+
+    // Initialize Post Engagement (Reactions & Comments via Supabase)
+    const initEngagement = () => {
+      if (window.UntitledEngagement && typeof window.UntitledEngagement.init === "function") {
+        window.UntitledEngagement.init(postId, post.slug || postId);
+      }
+    };
+    if (window.UntitledEngagement) {
+      initEngagement();
+    } else {
+      const engScript = document.createElement("script");
+      engScript.src = "js/components/post-engagement.js";
+      engScript.defer = true;
+      engScript.onload = initEngagement;
+      document.body.appendChild(engScript);
+    }
 
     // Smooth scroll reader to top on post change
     pane.scrollTo({ top: 0, behavior: "smooth" });
