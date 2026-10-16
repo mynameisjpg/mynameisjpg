@@ -290,7 +290,7 @@
       {
         "id": "2026-10-09-ai-images-groupe-mu",
         "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
@@ -333,7 +333,7 @@
         "date": "2026.10.10"
       },
       {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
         "url": "posts/ai-images-groupe-mu.html",
@@ -780,7 +780,7 @@
       {
         "id": "2026-10-09-ai-images-groupe-mu",
         "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
@@ -829,7 +829,7 @@
         "date": "2026.10.10"
       },
       {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
         "url": "posts/ai-images-groupe-mu.html",
@@ -870,7 +870,7 @@
       {
         "id": "2026-10-09-ai-images-groupe-mu",
         "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
@@ -885,7 +885,7 @@
     ],
     "links": [
       {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
         "url": "posts/ai-images-groupe-mu.html",
@@ -1311,7 +1311,7 @@
       {
         "id": "2026-10-09-ai-images-groupe-mu",
         "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
@@ -1410,7 +1410,7 @@
         "date": "2026.10.10"
       },
       {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
         "url": "posts/ai-images-groupe-mu.html",
@@ -2625,7 +2625,7 @@
       {
         "id": "2026-10-09-ai-images-groupe-mu",
         "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
@@ -2647,7 +2647,7 @@
         "date": "2026.10.10"
       },
       {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
         "url": "posts/ai-images-groupe-mu.html",
@@ -3238,7 +3238,7 @@
       {
         "id": "2026-10-09-ai-images-groupe-mu",
         "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
@@ -3295,7 +3295,7 @@
         "date": "2026.10.10"
       },
       {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
         "url": "posts/ai-images-groupe-mu.html",
@@ -4344,7 +4344,7 @@
       {
         "id": "2026-10-09-ai-images-groupe-mu",
         "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
@@ -4379,7 +4379,7 @@
         "date": "2026.10.10"
       },
       {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
         "url": "posts/ai-images-groupe-mu.html",
@@ -5826,7 +5826,7 @@
       {
         "id": "2026-10-09-ai-images-groupe-mu",
         "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
@@ -5852,7 +5852,7 @@
     ],
     "links": [
       {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
         "url": "posts/ai-images-groupe-mu.html",
@@ -11580,7 +11580,7 @@
       {
         "id": "2026-10-09-ai-images-groupe-mu",
         "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
@@ -11595,7 +11595,7 @@
     ],
     "links": [
       {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
         "url": "posts/ai-images-groupe-mu.html",
@@ -14028,7 +14028,7 @@
       {
         "id": "2026-10-09-ai-images-groupe-mu",
         "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
@@ -14043,7 +14043,7 @@
     ],
     "links": [
       {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
         "url": "posts/ai-images-groupe-mu.html",
@@ -17128,7 +17128,7 @@
       {
         "id": "2026-10-09-ai-images-groupe-mu",
         "slug": "ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "date": "2026.10.09",
         "format": "ESSAY",
         "foundations": [
@@ -17143,7 +17143,7 @@
     ],
     "links": [
       {
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
+        "title": "Groupe µ and the Visual Semiotics of AI",
         "slug": "ai-images-groupe-mu",
         "format": "ESSAY",
         "url": "posts/ai-images-groupe-mu.html",
