@@ -319,7 +319,7 @@
 
           <!-- TIER 1: ABOVE TITLE ARCHIVAL BADGES -->
           <header class="post-header-meta-top">
-            <span class="meta-chip chip-primary">[${post.format}]</span>
+            <span class="meta-chip chip-primary">${post.format}</span>
             ${post.category && post.category !== post.format && post.category !== post.pillar ? `<a href="network.html?tag=${encodeURIComponent(post.category)}" class="meta-text-link" title="Explore ${post.category} in Taxonomy Node Map">${post.category}</a>` : ""}
             ${post.media ? `<span class="meta-text-item">MEDIA: ${post.media}</span>` : ""}
             ${post.pillar ? `<a href="network.html?tag=${encodeURIComponent(post.pillar)}" class="meta-text-link" title="Explore ${post.pillar} in Taxonomy Node Map">${post.pillar}</a>` : ""}

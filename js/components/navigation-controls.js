@@ -513,6 +513,14 @@
     // Floating Nav Buttons (Top/Bottom reader scroll)
     const btnScrollTop = document.getElementById("btn-scroll-top");
     const btnScrollBottom = document.getElementById("btn-scroll-bottom");
+
+    if (btnScrollTop && !btnScrollTop.querySelector("svg")) {
+      btnScrollTop.innerHTML = `<svg viewBox="0 0 24 24" class="nav-arrow-svg" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>`;
+    }
+    if (btnScrollBottom && !btnScrollBottom.querySelector("svg")) {
+      btnScrollBottom.innerHTML = `<svg viewBox="0 0 24 24" class="nav-arrow-svg" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>`;
+    }
+
     function scrollCurrentView(toBottom = false) {
       const splitLayout = document.querySelector(".split-layout");
       const isMobile = window.innerWidth <= 980;
@@ -541,9 +549,13 @@
         }
       } else {
         const pane = document.getElementById("essay-reading-pane");
-        if (pane) {
-          pane.scrollTo({
-            top: toBottom ? pane.scrollHeight : 0,
+        const scrollTarget =
+          pane && pane.querySelector(".reader-scroll-wrapper")
+            ? pane.querySelector(".reader-scroll-wrapper")
+            : pane;
+        if (scrollTarget) {
+          scrollTarget.scrollTo({
+            top: toBottom ? scrollTarget.scrollHeight : 0,
             behavior: "smooth",
           });
         }

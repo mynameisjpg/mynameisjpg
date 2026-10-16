@@ -8,24 +8,62 @@
   right: 28px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  z-index: var(--z-floating);
+  gap: 8px;
+  z-index: var(--z-floating, 200);
 }
 
 .btn-nav-action {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
-  font-weight: 400;
-  background: var(--bg-deep);
-  color: var(--text-muted);
-  border: 1px solid var(--border-subtle);
-  padding: 6px 10px;
-  border-radius: var(--radius-sm);
+  background: var(--bg-deep, #101010);
+  color: var(--text-muted, #888888);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.12));
+  padding: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm, 3px);
   cursor: pointer;
-  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast, 0.15s ease);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
 }
 
 .btn-nav-action:hover {
-  color: var(--accent-coral);
-  border-color: var(--accent-coral);
+  color: var(--accent-coral, #e84a5f);
+  border-color: var(--accent-coral, #e84a5f);
+  background: rgba(232, 74, 95, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(232, 74, 95, 0.3);
+}
+
+.btn-nav-action:active {
+  transform: translateY(0);
+}
+
+.btn-nav-action .nav-arrow-svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2.8;
+  display: block;
+}
+
+/* Light Theme Support */
+.theme-light .btn-nav-action,
+.post-column.theme-light ~ .floating-nav-buttons .btn-nav-action,
+.essay-column.theme-light ~ .floating-nav-buttons .btn-nav-action {
+  background: var(--bg-surface, #ffffff);
+  border-color: var(--border-subtle, rgba(0, 0, 0, 0.15));
+  color: var(--text-muted, #666666);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.theme-light .btn-nav-action:hover,
+.post-column.theme-light ~ .floating-nav-buttons .btn-nav-action:hover,
+.essay-column.theme-light ~ .floating-nav-buttons .btn-nav-action:hover {
+  color: var(--accent-coral, #e84a5f);
+  border-color: var(--accent-coral, #e84a5f);
+  background: rgba(232, 74, 95, 0.08);
+  box-shadow: 0 6px 18px rgba(232, 74, 95, 0.2);
 }
