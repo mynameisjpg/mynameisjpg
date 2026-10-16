@@ -385,7 +385,7 @@
     if (localComments.length > 0) {
       if (countLabel) {
         countLabel.textContent =
-          localComments.length === 1 ? "(1 Comment)" : `(${localComments.length} Comments)`;
+          localComments.length === 1 ? "(1 COMMENT)" : `(${localComments.length} COMMENTS)`;
       }
       container.innerHTML = localComments
         .map(
@@ -419,7 +419,7 @@
       if (!res.ok) {
         if (localComments.length === 0) {
           container.innerHTML = `<div class="comments-empty-state">[ DISPATCH TRANSMISSIONS READY // BE THE FIRST TO COMMENT ]</div>`;
-          if (countLabel) countLabel.textContent = "(0) Comment first!";
+          if (countLabel) countLabel.textContent = "(0) COMMENT FIRST!";
         }
         return;
       }
@@ -429,7 +429,7 @@
       if (!Array.isArray(comments) || comments.length === 0) {
         if (localComments.length === 0) {
           container.innerHTML = `<div class="comments-empty-state">[ NO TRANSMISSIONS LOGGED YET // BE THE FIRST TO COMMENT ]</div>`;
-          if (countLabel) countLabel.textContent = "(0) Comment first!";
+          if (countLabel) countLabel.textContent = "(0) COMMENT FIRST!";
         }
         return;
       }
@@ -445,7 +445,7 @@
       // Update CTA label
       if (countLabel) {
         countLabel.textContent =
-          allComments.length === 1 ? "(1 Comment)" : `(${allComments.length} Comments)`;
+          allComments.length === 1 ? "(1 COMMENT)" : `(${allComments.length} COMMENTS)`;
       }
 
       // Render comment cards
@@ -466,7 +466,7 @@
       console.warn("[Engagement] Error loading comments:", err);
       if (localComments.length === 0) {
         container.innerHTML = `<div class="comments-empty-state">[ COMMENTS LOG READY // BE THE FIRST TO COMMENT ]</div>`;
-        if (countLabel) countLabel.textContent = "(0) Comment first!";
+        if (countLabel) countLabel.textContent = "(0) COMMENT FIRST!";
       }
     }
   }
@@ -576,7 +576,7 @@
       if (countLabel) {
         const existingItems = container ? container.querySelectorAll(".comment-item").length : 1;
         countLabel.textContent =
-          existingItems === 1 ? "(1 Comment)" : `(${existingItems} Comments)`;
+          existingItems === 1 ? "(1 COMMENT)" : `(${existingItems} COMMENTS)`;
       }
     } catch (err) {
       console.error("[Engagement] Submission error:", err);

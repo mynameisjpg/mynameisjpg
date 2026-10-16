@@ -24,3 +24,7 @@ connect.mjs
 docs/
 
 .prototyping/
+sync_posts.py
+package.json
+package-lock.json
+builder/

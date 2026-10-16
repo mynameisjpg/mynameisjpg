@@ -363,17 +363,17 @@
 
           <!-- TIER 2: BELOW TITLE META BAR -->
           <div class="post-header-meta-bottom">
+            <button type="button" class="meta-comment-cta" onclick="window.scrollToCommentsSection()" title="Jump to comments">
+              <svg viewBox="0 0 24 24" class="comment-cta-icon-svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <span class="comment-cta-label" id="meta-comment-count-label">(0) COMMENT FIRST!</span>
+            </button>
+            <span class="meta-sep">//</span>
             <span>DATE: <time>${post.date}</time></span>
             <span class="meta-sep">//</span>
             <span>BY: <strong class="meta-author">${post.author}</strong></span>
             <span class="meta-sep">//</span>
             <span class="meta-readtime">${post.read_time}</span>
-            ${post.source || post.via ? `<span class="meta-sep">//</span><span>SOURCE: <strong class="meta-author">${post.source || post.via}</strong></span>` : ""}
-            <span class="meta-sep">//</span>
-            <button type="button" class="meta-comment-cta" onclick="window.scrollToCommentsSection()" title="Jump to comments">
-              <svg viewBox="0 0 24 24" class="comment-cta-icon-svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-              <span class="comment-cta-label" id="meta-comment-count-label">(0) Comment first!</span>
-            </button>
+            ${(post.format || "").toUpperCase() !== "BOOKMARK" && (post.source || post.via) ? `<span class="meta-sep">//</span><span>SOURCE: <strong class="meta-author">${post.source || post.via}</strong></span>` : ""}
           </div>
 
           <!-- MAIN BODY PROSE -->

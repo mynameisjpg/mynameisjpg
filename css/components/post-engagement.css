@@ -17,6 +17,7 @@
   font-size: var(--text-xs, 0.72rem);
   font-weight: 500;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
   transition: all var(--transition-fast, 0.15s ease);
