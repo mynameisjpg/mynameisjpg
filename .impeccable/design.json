@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-16T07:40:00Z",
+  "title": "Design System: Untitled.jpg (JPG)",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Coral Crimson",
+        "canonical": "#E84A5F",
+        "tonalRamp": ["#360810", "#5c101c", "#8c1c2e", "#b82e44", "#e84a5f", "#f07183", "#f7a1ae", "#fce4e8"]
+      },
+      "secondary-rose": {
+        "role": "secondary",
+        "displayName": "Dusky Rose",
+        "canonical": "#FF8484",
+        "tonalRamp": ["#3d1414", "#662020", "#993333", "#cc5252", "#ff8484", "#ffa3a3", "#ffc7c7", "#fff0f0"]
+      },
+      "neutral-bg": {
+        "role": "neutral",
+        "displayName": "Deep Neutral Charcoal",
+        "canonical": "#101010",
+        "tonalRamp": ["#080808", "#101010", "#181818", "#242424", "#333333", "#4d4d4d", "#707070", "#a0a0a0"]
+      },
+      "neutral-surface": {
+        "role": "neutral",
+        "displayName": "Graphite Reader Surface",
+        "canonical": "#161616",
+        "tonalRamp": ["#0b0b0b", "#161616", "#222222", "#303030", "#454545", "#636363", "#8a8a8a", "#bcbcbc"]
+      },
+      "neutral-card": {
+        "role": "neutral",
+        "displayName": "Solid Card Container",
+        "canonical": "#202020",
+        "tonalRamp": ["#101010", "#181818", "#202020", "#2c2c2c", "#404040", "#606060", "#8c8c8c", "#c4c4c4"]
+      },
+      "text-bright": {
+        "role": "neutral",
+        "displayName": "Crisp Off-White",
+        "canonical": "#F5F5F5",
+        "tonalRamp": ["#333333", "#555555", "#777777", "#999999", "#bbbbbb", "#dddddd", "#eeeeee", "#f5f5f5"]
+      },
+      "text-body": {
+        "role": "neutral",
+        "displayName": "Soft Reading Grey",
+        "canonical": "#D2D2D2",
+        "tonalRamp": ["#292929", "#454545", "#636363", "#858585", "#aaaaaa", "#c0c0c0", "#d2d2d2", "#ececec"]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Mid-Tone Monospace Muted",
+        "canonical": "#888888",
+        "tonalRamp": ["#1c1c1c", "#333333", "#4d4d4d", "#666666", "#888888", "#aaaaaa", "#cccccc", "#eeeeee"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display Mono",
+        "purpose": "Hero and article headlines in Azeret Mono with tight letter-spacing."
+      },
+      "headline": {
+        "displayName": "Section Headline",
+        "purpose": "Section dividers, timeline years, and drawer titles."
+      },
+      "body": {
+        "displayName": "Literary Serif",
+        "purpose": "Extended reading prose in Platypi with flared terminals and high legibility."
+      },
+      "label": {
+        "displayName": "System Label",
+        "purpose": "Navigation routes, system statuses, and telemetry tags in Azeret Mono."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-rest",
+        "value": "0 4px 16px rgba(0, 0, 0, 0.5)",
+        "purpose": "Base resting state for artifact and listing cards."
+      },
+      {
+        "name": "card-hover",
+        "value": "0 10px 30px rgba(0, 0, 0, 0.8)",
+        "purpose": "Elevation lift when cursor hovers over card container."
+      },
+      {
+        "name": "coral-bloom",
+        "value": "0 0 35px rgba(232, 74, 95, 0.45)",
+        "purpose": "Ambient Coral Crimson halo emitted by active or selected cards."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-spring",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Organic spring curve for drawer reflow and card transforms."
+      },
+      {
+        "name": "ease-fast",
+        "value": "0.15s ease",
+        "purpose": "Rapid hover micro-interactions and button transitions."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "768px"
+      },
+      {
+        "name": "tablet-split",
+        "value": "980px"
+      },
+      {
+        "name": "desktop-max",
+        "value": "1360px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Matrix Filter Button",
+      "kind": "button",
+      "refersTo": "button-filter",
+      "description": "Monospace format filter button for toggling Essays, Notes, Resources, and Bookmarks.",
+      "html": "<button class=\"ds-filter-btn\"><svg class=\"ds-filter-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"></path><polyline points=\"14 2 14 8 20 8\"></polyline></svg><span>ESSAYS</span></button>",
+      "css": ".ds-filter-btn { display: inline-flex; align-items: center; gap: 6px; background: transparent; color: #888888; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1px; padding: 5px 10px; font-family: 'Azeret Mono', monospace; font-size: 10px; letter-spacing: 0.1em; cursor: pointer; text-transform: uppercase; transition: all 0.2s ease; } .ds-filter-btn:hover { color: #f5f5f5; border-color: rgba(255, 255, 255, 0.25); } .ds-filter-btn:focus-visible { outline: 1px solid #e84a5f; } .ds-filter-icon { width: 12px; height: 12px; stroke: currentColor; }"
+    },
+    {
+      "name": "Active Filter Button",
+      "kind": "button",
+      "refersTo": "button-filter-active",
+      "description": "Selected state of format filter button displaying high-contrast Coral Crimson fill.",
+      "html": "<button class=\"ds-filter-btn-active\"><svg class=\"ds-filter-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"></path><polyline points=\"14 2 14 8 20 8\"></polyline></svg><span>ESSAYS</span></button>",
+      "css": ".ds-filter-btn-active { display: inline-flex; align-items: center; gap: 6px; background: #e84a5f; color: #101010; border: 1px solid transparent; border-radius: 1px; padding: 5px 10px; font-family: 'Azeret Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; cursor: pointer; text-transform: uppercase; } .ds-filter-icon { width: 12px; height: 12px; stroke: currentColor; }"
+    },
+    {
+      "name": "Dispatch Reply CTA",
+      "kind": "button",
+      "refersTo": "comment-cta",
+      "description": "Header commentary button inviting reader feedback on dispatches.",
+      "html": "<a class=\"ds-comment-cta\" href=\"#\"><svg class=\"ds-cta-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"></path></svg><span>DISPATCH REPLIES</span></a>",
+      "css": ".ds-comment-cta { display: inline-flex; align-items: center; gap: 6px; background: rgba(232, 74, 95, 0.08); border: 1px solid rgba(232, 74, 95, 0.28); border-radius: 1px; padding: 4px 10px; color: #e84a5f; font-family: 'Azeret Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; transition: all 0.15s ease; } .ds-comment-cta:hover { background: rgba(232, 74, 95, 0.2); border-color: #e84a5f; color: #ffffff; transform: translateY(-1px); } .ds-cta-icon { width: 12px; height: 12px; stroke: currentColor; }"
+    },
+    {
+      "name": "Archival Metadata Chip",
+      "kind": "chip",
+      "refersTo": "chip-meta",
+      "description": "Granular classification chip used for taxonomy hashtags and article formats.",
+      "html": "<span class=\"ds-chip-meta\">#AIPerception</span>",
+      "css": ".ds-chip-meta { display: inline-block; background: rgba(255, 255, 255, 0.04); color: #888888; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1px; padding: 3px 8px; font-family: 'Azeret Mono', monospace; font-size: 10px; letter-spacing: 0.04em; transition: border-color 0.15s ease, color 0.15s ease; } .ds-chip-meta:hover { border-color: #e84a5f; color: #f5f5f5; }"
+    },
+    {
+      "name": "Status Pill Indicator",
+      "kind": "chip",
+      "refersTo": "status-pill",
+      "description": "Operational terminal indicator denoting system and dossier telemetry.",
+      "html": "<span class=\"ds-status-pill\">[ STATUS: OPERATIONAL ]</span>",
+      "css": ".ds-status-pill { display: inline-block; background: rgba(255, 255, 255, 0.05); color: #e84a5f; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 1px; padding: 3px 9px; font-family: 'Azeret Mono', monospace; font-size: 9.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }"
+    },
+    {
+      "name": "Floating Jump Control",
+      "kind": "button",
+      "refersTo": "floating-controls",
+      "description": "Minimalist jump button fixed at the bottom right corner of the reader pane.",
+      "html": "<button class=\"ds-floating-btn\">↑ TOP</button>",
+      "css": ".ds-floating-btn { background: rgba(22, 22, 22, 0.85); backdrop-filter: blur(12px); color: #888888; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 1px; padding: 6px 14px; font-family: 'Azeret Mono', monospace; font-size: 10px; letter-spacing: 0.1em; cursor: pointer; text-transform: uppercase; transition: all 0.2s ease; } .ds-floating-btn:hover { background: #e84a5f; color: #101010; border-color: #e84a5f; }"
+    },
+    {
+      "name": "Asymmetric Artifact Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Translucent container holding dithered artwork and monospace metadata in the dispatch matrix.",
+      "html": "<div class=\"ds-grid-card\"><div class=\"ds-card-badge\">[ESSAY]</div><div class=\"ds-card-art\"></div><div class=\"ds-card-caption\"><div class=\"ds-card-date\">2026.10.02 // 14 MIN READ</div><div class=\"ds-card-title\">Why AI Labs Replaced Killer Robots with Blushing Tamagotchis</div></div></div>",
+      "css": ".ds-grid-card { position: relative; background: rgba(12, 12, 12, 0.72); backdrop-filter: blur(14px); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 2px; padding: 10px; display: flex; flex-direction: column; cursor: pointer; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease; } .ds-grid-card:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); border-color: rgba(255, 255, 255, 0.2); } .ds-card-badge { position: absolute; top: 14px; right: 14px; background: rgba(0, 0, 0, 0.75); color: #888888; font-family: 'Azeret Mono', monospace; font-size: 9px; padding: 2px 5px; border-radius: 1px; z-index: 2; } .ds-card-art { width: 100%; aspect-ratio: 1 / 1.15; background: #161616; border-radius: 1px; margin-bottom: 8px; } .ds-card-caption { display: flex; flex-direction: column; gap: 4px; } .ds-card-date { font-family: 'Azeret Mono', monospace; font-size: 9px; color: #888888; } .ds-card-title { font-family: 'Azeret Mono', monospace; font-size: 12px; color: #f5f5f5; line-height: 1.35; font-weight: 500; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Digital Surrealist Lab Broadside",
+    "overview": "Untitled.jpg is a high-density, out-of-distribution digital notebook and editorial workspace investigating the psychophysics of vision, latent space aesthetics, and post-ironic digital surrealism. The visual language rejects boilerplate modern SaaS paradigms in favor of an authentic fusion: halftone and dithered algorithmic art, disciplined monospace architectural metadata (Azeret Mono), and classical literary serif longform reading (Platypi).",
+    "keyCharacteristics": [
+      "Tripartite Typographic Architecture: Azeret Mono (Display & UI), Platypi (Prose), JetBrains Mono (Code & Diagrams)",
+      "Asymmetric Asynchronous Composition: Non-uniform card aspect ratios and organic masonry gaps",
+      "Tonal Charcoal Stratigraphy: Pure neutral blacks (#101010) and graphite reading surfaces (#161616)",
+      "Singular Coral Crimson Accent: #E84A5F applied with surgical restraint",
+      "Zero Framework Bloat: Built on native HTML5, modular CSS tokens, and autonomous Web Components"
+    ],
+    "rules": [
+      {
+        "name": "The Coral Accent Rarity Rule",
+        "body": "Coral Crimson (#E84A5F) must never cover more than 8% of the viewport at any time. It operates as an epistemological highlighter; overusing it dilutes its surgical authority.",
+        "section": "colors"
+      },
+      {
+        "name": "The Pure Neutrality Rule",
+        "body": "All grey scales must remain strictly desaturated neutrals (#101010, #161616, #202020). Do not introduce slate-blue, cold indigo, or warm sepia undertones into base dark containers.",
+        "section": "colors"
+      },
+      {
+        "name": "The Serif Immersion Rule",
+        "body": "All continuous expository prose must be rendered in Platypi with a line-height of 1.75-1.85 and maximum measure of 72ch. Monospace fonts are prohibited for body paragraphs.",
+        "section": "typography"
+      },
+      {
+        "name": "The Weight Restraint Rule",
+        "body": "Never set Azeret Mono at weights above 600. Heavy bold monospace destroys optical density and reads as crude industrial signage rather than refined computational craft.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tonal-First Depth Rule",
+        "body": "Never place a blurred drop shadow on an element without first giving it a 1px solid hairline border (rgba(255, 255, 255, 0.08)) and an explicit surface tone. Shadows reinforce edges; they do not define them.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do maintain pure, uncolored neutral greys (#101010, #161616, #202020) for all background canvases and containers.",
+      "Do restrict Azeret Mono to weights 300, 400, and 500 to preserve mathematical elegance.",
+      "Do render all longform expository prose in Platypi with a line-height of 1.8 and maximum width of 72ch.",
+      "Do keep corner radii strictly sharp or near-square (0px to 2px).",
+      "Do treat Coral Crimson (#E84A5F) as a rare surgical accent reserved for active states, reading progress, and citation bars.",
+      "Do use authentic halftone, dither, and procedural algorithmic SVG artwork for cards.",
+      "Do preserve the fixed 48px width on the left navigation rail across all desktop surfaces.",
+      "Do construct depth through tonal luminance stratigraphy and 1px hairline borders before applying any drop shadow."
+    ],
+    "donts": [
+      "Don't use heavy bold monospace (700/900) for headers or titles—it makes the layout feel crude and noisy.",
+      "Don't introduce rounded pills (border-radius: 9999px) or bubble cards.",
+      "Don't add slate, navy, or purple color casts into neutral dark surfaces.",
+      "Don't use generic solid black bounding boxes for card hover overlays; overlay text directly on the artwork with text-shadow.",
+      "Don't use monospace fonts for longform body paragraphs.",
+      "Don't flood screens with Coral Crimson; keep accent coverage strictly below 8% of the viewport.",
+      "Don't load heavy third-party CSS or JS frameworks; all design system primitives must remain vanilla and autonomous."
+    ]
+  }
+}
