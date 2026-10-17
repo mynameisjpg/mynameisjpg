@@ -56,17 +56,17 @@
 }
 
 .meta-chip.meta-chip-foundation {
-  color: var(--accent-cyan, #4e95ff);
-  background: rgba(78, 149, 255, 0.1);
-  border: 1px solid rgba(78, 149, 255, 0.35);
+  color: var(--accent-coral);
+  background: var(--accent-coral-subtle);
+  border: 1px solid var(--accent-coral-border);
   font-weight: var(--weight-medium);
   cursor: pointer;
 }
 
 .meta-chip.meta-chip-foundation:hover {
-  background: rgba(78, 149, 255, 0.25);
+  background: var(--accent-coral);
   color: #ffffff;
-  border-color: rgba(78, 149, 255, 0.7);
+  border-color: var(--accent-coral-border);
 }
 
 .meta-chip.meta-chip-tag {
