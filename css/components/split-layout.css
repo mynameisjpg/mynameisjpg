@@ -52,9 +52,11 @@
    Permanent split view with 1-column feed on left, reader on right.
    ============================================================================== */
 @media (min-width: 1081px) {
+
   .grid-column,
   .split-layout .grid-column {
-    width: 40%;
+    width: 45%;
+    max-width: 800px;
     padding: 1.8rem var(--sidebar-width, 48px) 3.5rem var(--sidebar-width, 48px);
     transition: none;
   }
@@ -62,7 +64,7 @@
   .post-column,
   .essay-column,
   .split-layout .post-column {
-    width: 60%;
+    width: 55%;
     position: fixed;
     top: 0;
     right: 0;
@@ -85,6 +87,7 @@
    - Header filter buttons collapse to icon-only pills with compact padding
 */
 @media (min-width: 1081px) and (max-width: 1650px) {
+
   .grid-column,
   .split-layout .grid-column {
     width: 40%;
@@ -585,9 +588,10 @@
 
 /* Smallest Media Breakpoint (<= 600px): Change Matrix Grid to 2 Columns */
 @media (max-width: 600px) {
+
   .card-grid-matrix,
   .split-layout .card-grid-matrix {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 1rem 0.65rem !important;
   }
-}
+}
