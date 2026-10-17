@@ -563,9 +563,8 @@ body.gallery-page {
   }
 }
 
-/* Responsive Stacking & Offset (< 980px Width or Short Height <= 700px) */
-@media (max-width: 980px),
-(max-height: 700px) {
+/* Responsive Stacking & Offset (< 980px Width) */
+@media (max-width: 980px) {
   .gallery-spatial-viewport {
     margin-left: 0 !important;
     margin-top: 48px !important;

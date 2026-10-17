@@ -555,11 +555,10 @@
 }
 
 /* ==============================================================================
-   TIER 2 BREAKPOINT: SHORT HEIGHT (<= 700px) OR WIDTH (<= 980px)
+   TIER 2 BREAKPOINT: TABLET & MOBILE VIEWPORT (<= 980px)
    Smoothly transforms sidebar into a sleek Top Navbar
    ============================================================================== */
-@media (max-height: 700px),
-(max-width: 980px) {
+@media (max-width: 980px) {
   .rail-tooltip {
     display: none !important;
   }

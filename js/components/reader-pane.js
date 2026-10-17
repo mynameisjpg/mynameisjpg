@@ -198,7 +198,7 @@
       scrollCardIntoViewWithTransition(targetCard);
     }
 
-    if (window.innerWidth <= 980 || window.innerHeight <= 700) {
+    if (window.innerWidth <= 980) {
       showReaderPaneMobile();
     }
 

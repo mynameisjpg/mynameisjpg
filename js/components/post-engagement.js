@@ -40,6 +40,24 @@
   let currentActiveSlug = "";
   let isSubmitting = false;
 
+  function getOrCreateVisitorId() {
+    const STORAGE_KEY = "untitled_visitor_id";
+    try {
+      let vid = localStorage.getItem(STORAGE_KEY);
+      if (!vid) {
+        if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
+          vid = "usr_" + crypto.randomUUID().replace(/-/g, "");
+        } else {
+          vid = "usr_" + Date.now().toString(36) + Math.random().toString(36).substring(2, 10);
+        }
+        localStorage.setItem(STORAGE_KEY, vid);
+      }
+      return vid;
+    } catch (e) {
+      return "usr_unknown";
+    }
+  }
+
   function escapeHtml(str) {
     if (!str) return "";
     return String(str)
@@ -65,9 +83,15 @@
     }
   }
 
+  function normalizeSlug(s) {
+    if (!s) return "";
+    return String(s).replace(/^\d{4}-\d{2}-\d{2}-/, "").trim();
+  }
+
   function getStoredReactions(slug) {
     try {
-      const raw = localStorage.getItem(`untitled_reactions_${slug}`);
+      const key = normalizeSlug(slug);
+      const raw = localStorage.getItem(`untitled_reactions_${key}`);
       return raw ? JSON.parse(raw) : {};
     } catch (e) {
       return {};
@@ -76,15 +100,26 @@
 
   function saveStoredReaction(slug, reactionType) {
     try {
-      const reactions = getStoredReactions(slug);
+      const key = normalizeSlug(slug);
+      const reactions = getStoredReactions(key);
       reactions[reactionType] = true;
-      localStorage.setItem(`untitled_reactions_${slug}`, JSON.stringify(reactions));
+      localStorage.setItem(`untitled_reactions_${key}`, JSON.stringify(reactions));
+    } catch (e) {}
+  }
+
+  function removeStoredReaction(slug, reactionType) {
+    try {
+      const key = normalizeSlug(slug);
+      const reactions = getStoredReactions(key);
+      delete reactions[reactionType];
+      localStorage.setItem(`untitled_reactions_${key}`, JSON.stringify(reactions));
     } catch (e) {}
   }
 
   function getStoredReactionCounts(slug) {
     try {
-      const raw = localStorage.getItem(`untitled_reaction_counts_${slug}`);
+      const key = normalizeSlug(slug);
+      const raw = localStorage.getItem(`untitled_reaction_counts_${key}`);
       return raw ? JSON.parse(raw) : {};
     } catch (e) {
       return {};
@@ -93,15 +128,17 @@
 
   function saveStoredReactionCount(slug, reactionType, count) {
     try {
-      const counts = getStoredReactionCounts(slug);
-      counts[reactionType] = Number(count) || 0;
-      localStorage.setItem(`untitled_reaction_counts_${slug}`, JSON.stringify(counts));
+      const key = normalizeSlug(slug);
+      const counts = getStoredReactionCounts(key);
+      counts[reactionType] = Math.max(0, Number(count) || 0);
+      localStorage.setItem(`untitled_reaction_counts_${key}`, JSON.stringify(counts));
     } catch (e) {}
   }
 
   function getStoredComments(slug) {
     try {
-      const raw = localStorage.getItem(`untitled_comments_${slug}`);
+      const key = normalizeSlug(slug);
+      const raw = localStorage.getItem(`untitled_comments_${key}`);
       return raw ? JSON.parse(raw) : [];
     } catch (e) {
       return [];
@@ -110,9 +147,10 @@
 
   function saveStoredComment(slug, comment) {
     try {
-      const comments = getStoredComments(slug);
+      const key = normalizeSlug(slug);
+      const comments = getStoredComments(key);
       comments.push(comment);
-      localStorage.setItem(`untitled_comments_${slug}`, JSON.stringify(comments));
+      localStorage.setItem(`untitled_comments_${key}`, JSON.stringify(comments));
     } catch (e) {}
   }
 
@@ -176,12 +214,15 @@
 
     // 2. Fetch live data from Supabase if table permissions allow
     try {
+      const clean = normalizeSlug(slug);
+      const filter = slug !== clean
+        ? `or=(post_slug.eq.${encodeURIComponent(slug)},post_slug.eq.${encodeURIComponent(clean)})`
+        : `post_slug=eq.${encodeURIComponent(slug)}`;
       const res = await fetch(
-        `${SUPABASE_URL}/rest/v1/post_reactions?post_slug=eq.${encodeURIComponent(slug)}&select=*`,
+        `${SUPABASE_URL}/rest/v1/post_reactions?${filter}&select=*`,
         { headers: API_HEADERS }
       );
       if (!res.ok) {
-        // Table SELECT permission may be restricted; local numbers remain safely preserved
         return;
       }
       const data = await res.json();
@@ -332,11 +373,26 @@
     const countEl = btn.querySelector(".reaction-count");
     let currentCount = parseInt(countEl ? countEl.textContent : "0", 10) || 0;
 
-    // Prevent spam double-clicking if already clicked recently
+    // If already reacted, clicking again UNDOES the reaction
     if (stored[reaction]) {
-      // Visually bump
-      btn.style.transform = "scale(1.2)";
+      removeStoredReaction(slug, reaction);
+      btn.classList.remove("active-reacted");
+      const undoneCount = Math.max(0, currentCount - 1);
+      if (countEl) countEl.textContent = undoneCount;
+      saveStoredReactionCount(slug, reaction, undoneCount);
+
+      // Subtle scale-down feedback
+      btn.style.transform = "scale(0.85)";
       setTimeout(() => (btn.style.transform = ""), 150);
+
+      // Attempt decrement via RPC if exists, or ignore
+      try {
+        await fetch(`${SUPABASE_URL}/rest/v1/rpc/decrement_reaction`, {
+          method: "POST",
+          headers: API_HEADERS,
+          body: JSON.stringify({ p_post_slug: slug, p_reaction: reaction }),
+        });
+      } catch (e) {}
       return;
     }
 
@@ -403,15 +459,20 @@
     }
 
     try {
-      // Query comments (first try public_comments view, fallback to post_comments)
+      const clean = normalizeSlug(slug);
+      const filter = slug !== clean
+        ? `or=(post_slug.eq.${encodeURIComponent(slug)},post_slug.eq.${encodeURIComponent(clean)})`
+        : `post_slug=eq.${encodeURIComponent(slug)}`;
+
+      // Query comments (first try post_comments directly, fallback to public_comments)
       let res = await fetch(
-        `${SUPABASE_URL}/rest/v1/public_comments?post_slug=eq.${encodeURIComponent(slug)}&order=created_at.asc`,
+        `${SUPABASE_URL}/rest/v1/post_comments?${filter}&approved=eq.true&select=id,post_slug,author_alias,content,created_at&order=created_at.asc`,
         { headers: API_HEADERS }
       );
 
       if (!res.ok) {
         res = await fetch(
-          `${SUPABASE_URL}/rest/v1/post_comments?post_slug=eq.${encodeURIComponent(slug)}&approved=eq.true&select=id,post_slug,author_alias,content,created_at&order=created_at.asc`,
+          `${SUPABASE_URL}/rest/v1/public_comments?${filter}&order=created_at.asc`,
           { headers: API_HEADERS }
         );
       }
@@ -521,14 +582,18 @@
     }
 
     try {
+      const visitorId = getOrCreateVisitorId();
+      const currentUrl = (typeof window !== "undefined" && window.location) ? window.location.href : "";
       const payload = {
         post_slug: slug,
         author_alias: alias,
         author_email: email || null,
         content: content,
+        visitor_id: visitorId,
+        source_url: currentUrl,
       };
 
-      const res = await fetch(`${SUPABASE_URL}/rest/v1/post_comments`, {
+      let res = await fetch(`${SUPABASE_URL}/rest/v1/post_comments`, {
         method: "POST",
         headers: {
           ...API_HEADERS,
@@ -536,6 +601,47 @@
         },
         body: JSON.stringify(payload),
       });
+
+      // If Supabase rejects custom columns (source_url or visitor_id) with 400, retry progressively
+      if (!res.ok && res.status === 400) {
+        // Try with visitor_id only
+        const retry1 = await fetch(`${SUPABASE_URL}/rest/v1/post_comments`, {
+          method: "POST",
+          headers: {
+            ...API_HEADERS,
+            Prefer: "return=representation",
+          },
+          body: JSON.stringify({
+            post_slug: slug,
+            author_alias: alias,
+            author_email: email || null,
+            content: content,
+            visitor_id: visitorId,
+          }),
+        });
+
+        if (retry1.ok) {
+          res = retry1;
+        } else if (retry1.status === 400) {
+          // Final fallback: core columns only
+          const retryCore = await fetch(`${SUPABASE_URL}/rest/v1/post_comments`, {
+            method: "POST",
+            headers: {
+              ...API_HEADERS,
+              Prefer: "return=representation",
+            },
+            body: JSON.stringify({
+              post_slug: slug,
+              author_alias: alias,
+              author_email: email || null,
+              content: content,
+            }),
+          });
+          if (retryCore.ok) {
+            res = retryCore;
+          }
+        }
+      }
 
       if (!res.ok) {
         throw new Error(`Server returned HTTP ${res.status}`);

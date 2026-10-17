@@ -1009,8 +1009,7 @@
 }
 
 /* Responsive Stacking for Mobile/Tablet */
-@media (max-width: 980px),
-(max-height: 700px) {
+@media (max-width: 980px) {
   .archive-timeline-shell,
   .network-full-shell {
     margin-left: 0 !important;

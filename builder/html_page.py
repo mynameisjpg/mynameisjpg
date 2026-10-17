@@ -338,6 +338,7 @@ def generate_post_html_files(posts):
   <script defer src="posts.js"></script>
   <script defer src="js/components/subscribe-modal.js"></script>
   <script defer src="js/components/card-matrix.js"></script>
+  <script defer src="js/components/post-engagement.js"></script>
   <script defer src="js/components/reader-pane.js"></script>
   <script defer src="js/components/navigation-controls.js"></script>
   <script defer src="app.js"></script>

@@ -510,9 +510,8 @@
   border-color: var(--accent-coral, #e84a5f);
 }
 
-/* Responsive Stacking & Sliding Viewport (< 980px Width or Short Height <= 700px) */
-@media (max-width: 980px),
-(max-height: 700px) {
+/* Responsive Stacking & Sliding Viewport (< 980px Width) */
+@media (max-width: 980px) {
   .split-layout {
     display: block !important;
     width: 100vw !important;

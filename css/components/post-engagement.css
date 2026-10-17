@@ -376,11 +376,24 @@
   transition: all var(--transition-fast, 0.15s ease);
 }
 
+.theme-light .btn-submit-comment {
+  background: var(--accent-coral, #c73649);
+  border-color: #c73649;
+  color: #ffffff;
+}
+
 .btn-submit-comment:hover {
   background: var(--accent-coral, #e84a5f);
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 4px 18px rgba(232, 74, 95, 0.35);
+}
+
+.theme-light .btn-submit-comment:hover {
+  background: #a92839;
+  border-color: #a92839;
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(199, 54, 73, 0.3);
 }
 
 .btn-submit-comment:active {
