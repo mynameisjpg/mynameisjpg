@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cover Art Spatial Vault — Untitled.jpg</title>
-  <meta name="description" content="Ultra-minimalist 3D spatial gallery displaying cover art floating in space for Untitled.jpg.">
+  <meta name="description"
+    content="Ultra-minimalist 3D spatial gallery displaying cover art floating in space for Untitled.jpg.">
   <link rel="canonical" href="https://mynameisjpg.github.io/mynameisjpg/gallery.html">
 
   <!-- Open Graph / LinkedIn / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Untitled.jpg">
   <meta property="og:title" content="Cover Art Spatial Vault — Untitled.jpg">
-  <meta property="og:description" content="Ultra-minimalist 3D spatial gallery displaying cover art floating in space for Untitled.jpg.">
+  <meta property="og:description"
+    content="Ultra-minimalist 3D spatial gallery displaying cover art floating in space for Untitled.jpg.">
   <meta property="og:url" content="https://mynameisjpg.github.io/mynameisjpg/gallery.html">
   <meta property="og:image" content="https://mynameisjpg.github.io/mynameisjpg/assets/images/favicon.svg">
 
   <!-- Twitter / X Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cover Art Spatial Vault — Untitled.jpg">
-  <meta name="twitter:description" content="Ultra-minimalist 3D spatial gallery displaying cover art floating in space for Untitled.jpg.">
+  <meta name="twitter:description"
+    content="Ultra-minimalist 3D spatial gallery displaying cover art floating in space for Untitled.jpg.">
   <meta name="twitter:image" content="https://mynameisjpg.github.io/mynameisjpg/assets/images/favicon.svg">
-  
+
   <!-- Typography: Azeret Mono (UI), Platypi (Prose) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Platypi:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Platypi:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet">
+
   <!-- Three.js 3D WebGL Library (Deferred) -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
   <!-- Modular Design System Stylesheet & Page Styles -->
   <link rel="stylesheet" href="index.css?v=7">
-  <link rel="stylesheet" href="css/components/gallery.css">
-  
+  <link rel="stylesheet" href="css/components/gallery.css?v=10">
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="shortcut icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -40,6 +46,7 @@
   <script defer src="js/components/sidebar-rail.js?v=4"></script>
   <script defer src="js/components/subscribe-modal.js"></script>
 </head>
+
 <body class="gallery-page">
 
   <!-- ====================================================================
@@ -53,7 +60,7 @@
        ==================================================================== -->
   <main class="gallery-spatial-viewport">
     <h1 class="sr-only">Cover Art Spatial Vault — Untitled.jpg</h1>
-    
+
     <!-- Top-Left Subtle Spatial Control Hint -->
     <div class="minimal-spatial-hint">
       <span>&#9632; SPATIAL 3D CANVAS</span> &bull; SCROLL TO ZOOM &bull; CLICK IMAGE FOR FULL VIEW
@@ -74,7 +81,9 @@
     <div id="spatial-canvas-container"></div>
 
     <!-- Transparent Blurry Glass Play Button for Animated GIF Artworks -->
-    <button type="button" id="gallery-gif-indicator" class="gallery-gif-indicator" style="display:none;" aria-label="Animated Artwork — Click to view full animation" title="Animated Artwork — Click to view full animation">
+    <button type="button" id="gallery-gif-indicator" class="gallery-gif-indicator" style="display:none;"
+      aria-label="Animated Artwork — Click to view full animation"
+      title="Animated Artwork — Click to view full animation">
       <div class="gallery-gif-glass-orb">
         <svg class="gallery-gif-play-icon" viewBox="0 0 24 24">
           <polygon points="6,4 20,12 6,20"></polygon>
@@ -87,11 +96,6 @@
          FLOATING CORNER HUD PANEL
          ==================================================================== -->
     <aside class="floating-hud-panel" aria-label="Active Artwork Info">
-      <div class="hud-top-meta">
-        <span id="hud-counter-val" class="hud-counter">01 / 11</span>
-        <span id="hud-format-val" class="hud-format-badge">[ ESSAY ]</span>
-      </div>
-
       <div class="hud-title-wrap">
         <h2 id="hud-title-val" class="hud-post-title">Loading Artwork...</h2>
         <div id="hud-pillar-val" class="hud-post-pillar">Philosophy of the Image</div>
@@ -114,26 +118,39 @@
   <!-- ====================================================================
        FULL-HEIGHT ARTWORK VIEW MODAL WITH SHARE & DOWNLOAD
        ==================================================================== -->
-  <div id="artwork-full-modal" class="artwork-full-modal" role="dialog" aria-modal="true" aria-label="Full Height Artwork View" style="display:none;">
+  <div id="artwork-full-modal" class="artwork-full-modal" role="dialog" aria-modal="true"
+    aria-label="Full Height Artwork View" style="display:none;">
     <div class="artwork-full-container">
-      <button type="button" id="artwork-modal-close" class="artwork-modal-close-btn" title="Close Full View">CLOSE &#215;</button>
-      
       <div class="artwork-full-image-wrapper">
         <img id="artwork-full-img" src="" alt="Full Height Cover Art" />
       </div>
 
-      <!-- Small Floating Panel with Share & Download -->
-      <div class="artwork-full-toolbar">
-        <div class="artwork-full-actions">
-          <button type="button" id="artwork-share-btn" class="artwork-btn btn-share" title="Copy link to clipboard">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
-            <span id="share-btn-text">SHARE</span>
-          </button>
-          <a id="artwork-download-btn" href="#" download class="artwork-btn btn-download" title="Download high resolution artwork">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            DOWNLOAD
-          </a>
+      <!-- Bottom Actions & Close Row Aligned With Artwork Edges -->
+      <div class="artwork-full-bottom-row" id="artwork-full-bottom-row">
+        <div class="artwork-full-toolbar">
+          <div class="artwork-full-actions">
+            <button type="button" id="artwork-share-btn" class="artwork-btn btn-share" title="Copy link to clipboard">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                <polyline points="16 6 12 2 8 6" />
+                <line x1="12" y1="2" x2="12" y2="15" />
+              </svg>
+              <span id="share-btn-text">SHARE</span>
+            </button>
+            <a id="artwork-download-btn" href="#" download class="artwork-btn btn-download"
+              title="Download high resolution artwork">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              DOWNLOAD
+            </a>
+          </div>
         </div>
+
+        <button type="button" id="artwork-modal-close" class="artwork-modal-close-btn" title="Close Full View"
+          aria-label="Close Full View">X</button>
       </div>
     </div>
   </div>
@@ -145,16 +162,19 @@
     <div class="modal-box">
       <div class="modal-header-tag">[ DISPATCH_SUBSCRIPTION // FREQUENCY: FORTNIGHTLY ]</div>
       <h2 id="modal-heading" class="modal-title">Subscribe to Untitled.jpg</h2>
-      <p class="modal-description">Deep-dive essays and technical dispatches on AI perception, cognitive psychophysics, high-dimensional latent space, and media archaeology.</p>
-      
+      <p class="modal-description">Deep-dive essays and technical dispatches on AI perception, cognitive psychophysics,
+        high-dimensional latent space, and media archaeology.</p>
+
       <form class="modal-form" id="subscribe-form" method="dialog">
         <div class="modal-input-group">
           <label for="subscriber-name" class="modal-input-label">IDENTITY (NAME):</label>
-          <input type="text" id="subscriber-name" name="name" class="modal-input" placeholder="Your Name / Alias" autocomplete="name">
+          <input type="text" id="subscriber-name" name="name" class="modal-input" placeholder="Your Name / Alias"
+            autocomplete="name">
         </div>
         <div class="modal-input-group">
           <label for="subscriber-email" class="modal-input-label">TRANSMISSION_ENDPOINT (EMAIL):</label>
-          <input type="email" id="subscriber-email" name="email" class="modal-input" placeholder="reader@domain.xyz" required autocomplete="email" spellcheck="false">
+          <input type="email" id="subscriber-email" name="email" class="modal-input" placeholder="reader@domain.xyz"
+            required autocomplete="email" spellcheck="false">
         </div>
         <div class="modal-actions">
           <button type="button" class="btn-modal-cancel">CANCEL</button>
@@ -166,6 +186,7 @@
 
   <!-- JavaScript Dependencies -->
   <script defer src="posts.js?v=5"></script>
-  <script defer src="js/gallery.js?v=8"></script>
+  <script defer src="js/gallery.js?v=10"></script>
 </body>
+
 </html>

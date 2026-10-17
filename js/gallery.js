@@ -540,7 +540,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (counterEl)
       counterEl.textContent = `${String(index + 1).padStart(2, "0")} / ${String(galleryPosts.length).padStart(2, "0")}`;
     if (formatEl) formatEl.textContent = `[ ${post.format || "POST"} ]`;
-    if (titleEl) titleEl.textContent = post.artworkTitle || post.title;
+    if (titleEl) {
+      const fullTitle = post.artworkTitle || post.title;
+      titleEl.textContent = fullTitle;
+      titleEl.title = fullTitle;
+    }
     if (pillarEl)
       pillarEl.textContent = `${post.date || ""} • ${post.pillar || "AI PERCEPTION & CULTURE"}`;
     if (linkEl) {
@@ -665,6 +669,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (shareText) shareText.textContent = "SHARE";
     modal.style.display = "flex";
+
+    const syncBottomRowWidth = () => {
+      const bottomRow = document.getElementById("artwork-full-bottom-row");
+      if (img && bottomRow && img.clientWidth > 0) {
+        bottomRow.style.width = `${img.clientWidth}px`;
+      }
+    };
+
+    if (img) {
+      img.addEventListener("load", syncBottomRowWidth, { once: true });
+      if (img.complete) {
+        requestAnimationFrame(syncBottomRowWidth);
+      }
+    }
+    requestAnimationFrame(() => {
+      syncBottomRowWidth();
+      setTimeout(syncBottomRowWidth, 60);
+      setTimeout(syncBottomRowWidth, 200);
+    });
   }
 
   function closeFullViewModal() {
@@ -699,12 +722,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (modal) {
       modal.addEventListener("click", (e) => {
-        // Only close if user clicks directly on the dark overlay background (modal backdrop)
-        if (e.target === modal) {
-          closeFullViewModal();
+        // If clicking on the image, toolbar actions, or close button, do not close here
+        if (
+          e.target.closest("#artwork-full-img") ||
+          e.target.closest(".artwork-full-toolbar") ||
+          e.target.closest("#artwork-modal-close")
+        ) {
+          return;
         }
+        // Clicking anywhere outside the margins of the image closes the lightbox
+        closeFullViewModal();
       });
     }
+
+    window.addEventListener("resize", () => {
+      const img = document.getElementById("artwork-full-img");
+      const bottomRow = document.getElementById("artwork-full-bottom-row");
+      if (img && bottomRow && img.clientWidth > 0) {
+        bottomRow.style.width = `${img.clientWidth}px`;
+      }
+    });
 
     if (shareBtn) {
       shareBtn.addEventListener("click", (e) => {
