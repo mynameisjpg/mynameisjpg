@@ -51,6 +51,10 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+
+  .grid-card.card-featured {
+    grid-column: 1 !important;
+  }
 }
 
 
