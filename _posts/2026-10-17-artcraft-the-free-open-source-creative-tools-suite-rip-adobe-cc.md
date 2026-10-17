@@ -82,7 +82,8 @@ I started drawing with **characters on MS-DOS**, then moved to **Paint and pixel
 Of course, there is GIMP, DaVinci Resolve, InkScape, and dozens other [Open-Source alternatives](https://github.com/KenneyNL/Adobe-Alternatives) to every Adobe software. But for those like me who grew up with Adobe's systems, and never got used to the free alternatives, those of us who learned to ~~pirate~~ torrent software, crack and patch, in the early internet years, and learned to edit video, animate drawing, edit and retouch photography, even programming [RIP Dreamweaver], `this launch -even in its alpha, vibe-coded, unfinished state- is a huge symbolic deal`. 
 
 
-## 01. Overview & Capability
+
+## 01. What is Artcraft and what is all the hype about?
 
 Image editing, vector illustration, video, photography, PDFs, motion graphics, page layout, interface design, word processing, audio, presentations, CAD and spreadsheets: thirteen native, open-source apps from the ArtCraft team, built in Rust and free to use.
 
