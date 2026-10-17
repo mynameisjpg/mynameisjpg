@@ -54,7 +54,7 @@
   right: 0;
   bottom: 0;
   height: 100vh;
-  z-index: 100;
+  z-index: var(--z-post-column, 100);
   background-color: var(--bg-panel, #161616);
   transform: translate3d(100%, 0, 0);
   opacity: 0;
@@ -129,7 +129,7 @@
   margin-bottom: 2rem;
   width: 100%;
   position: relative;
-  z-index: 60;
+  z-index: var(--z-matrix-header, 60);
 }
 
 .split-layout.reader-open .matrix-header-group {
@@ -310,7 +310,7 @@
   position: absolute;
   top: calc(100% + 6px);
   left: 0;
-  z-index: 100;
+  z-index: var(--z-dropdown, 150);
   background: #121212;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);

@@ -92,11 +92,16 @@
   --transition-spring: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 
   /* 8. Layering & Z-Index Tokens */
+  --z-background: 0;
   --z-base: 1;
   --z-card: 2;
   --z-card-active: 10;
   --z-card-hover: 20;
+  --z-matrix-header: 60;
+  --z-post-column: 100;
+  --z-dropdown: 150;
   --z-floating: 200;
-  --z-sidebar: 100;
   --z-modal: 1000;
+  --z-sidebar: 10000;
+  --z-top-panel: 99999;
 }

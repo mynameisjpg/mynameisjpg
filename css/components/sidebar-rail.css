@@ -415,7 +415,7 @@
 .top-dropdown-panel {
   position: fixed;
   top: 48px;
-  z-index: 99999;
+  z-index: var(--z-top-panel, 99999);
   background: rgba(18, 18, 18, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
