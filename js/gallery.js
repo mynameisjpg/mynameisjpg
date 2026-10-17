@@ -725,7 +725,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // If clicking on the image, toolbar actions, or close button, do not close here
         if (
           e.target.closest("#artwork-full-img") ||
-          e.target.closest(".artwork-full-toolbar") ||
+          e.target.closest(".artwork-full-actions") ||
+          e.target.closest(".artwork-btn") ||
           e.target.closest("#artwork-modal-close")
         ) {
           return;
