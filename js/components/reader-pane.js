@@ -282,13 +282,6 @@
 
     // Construct 3-Tier DOM Template
     pane.innerHTML = `
-      <!-- Edge Close Button (Vertical 3-Chevron Drawer Tab) -->
-      <button type="button" class="btn-close-reader-edge" onclick="closeReaderPane()" title="Close reader panel (ESC)" aria-label="Close reader panel">
-        <svg class="close-chevron-svg" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg>
-        <svg class="close-chevron-svg" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg>
-        <svg class="close-chevron-svg" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg>
-      </button>
-
       <div class="reader-scroll-wrapper" tabindex="-1">
         <div class="reader-content-container">
           <!-- Return to Grid Feed Button (Mobile / Narrow Screens) -->
@@ -731,12 +724,15 @@
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      const splitLayout = document.querySelector(".split-layout");
-      if (splitLayout && splitLayout.classList.contains("reader-open")) {
-        closeReaderPane();
+      if (window.innerWidth <= 1080) {
+        const splitLayout = document.querySelector(".split-layout");
+        if (splitLayout && (splitLayout.classList.contains("reader-open") || splitLayout.classList.contains("mobile-reader-active"))) {
+          closeReaderPane();
+        }
       }
     }
   });
+
 
   // Responsive Layout Synchronization: Cleanly adapt open reader pane across breakpoints on window resize
   let resizeDebounceTimer = null;

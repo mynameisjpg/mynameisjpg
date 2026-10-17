@@ -503,47 +503,7 @@
   color: var(--accent-coral, #e84a5f);
 }
 
-.hamburger-panel {
-  width: 220px;
-  right: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
 
-.top-nav-hamburger-btn {
-  display: none;
-  background: transparent;
-  border: none;
-  color: var(--text-bright, #f5f5f5);
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
-  min-height: 48px;
-  max-width: 48px;
-  max-height: 48px;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  transition:
-    background-color var(--transition-fast, 0.15s ease),
-    color var(--transition-fast, 0.15s ease);
-}
-
-.top-nav-hamburger-btn:hover,
-.top-nav-hamburger-btn.active {
-  background: #060606;
-  color: var(--accent-coral, #e84a5f);
-}
-
-.top-nav-hamburger-btn svg {
-  width: 18px;
-  height: 18px;
-  stroke: currentColor;
-}
 
 /* ==============================================================================
    TIER 1 HEIGHT BREAKPOINT (740px down to 701px on Desktop)
@@ -705,25 +665,9 @@
 
 /* ==============================================================================
    TIER 3 BREAKPOINT: MOBILE ULTRA-COMPACT (<= 590px)
-   Condenses all top icon buttons and search into a single Hamburger Menu on the right
+   Keeps top icons intact with optimized touch gaps
    ============================================================================== */
 @media (max-width: 590px) {
-
-  .top-nav-controls-group,
-  .sidebar-bottom-icons {
-    display: none !important;
-  }
-
-  .top-nav-hamburger-btn {
-    display: flex !important;
-  }
-
-  .hamburger-panel {
-    width: 220px !important;
-    right: 8px !important;
-    left: auto !important;
-  }
-
   .search-dropdown-panel {
     left: 50% !important;
     right: auto !important;
@@ -734,6 +678,14 @@
   }
 
   .sidebar-left-group {
-    gap: 0.65rem !important;
+    gap: 0.5rem !important;
   }
-}
+
+  .top-nav-icon-btn,
+  .sidebar-bottom-icons a {
+    width: 40px !important;
+    height: 48px !important;
+    min-width: 40px !important;
+    flex: 0 0 40px !important;
+  }
+}

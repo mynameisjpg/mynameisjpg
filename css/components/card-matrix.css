@@ -15,46 +15,41 @@
   padding-bottom: 4rem;
 }
 
-/* Reader Open State: 
-   Default to 2 columns on wide desktop (> 1650px) */
-.split-layout.reader-open .card-grid-matrix {
-  max-width: 1100px;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.2rem 1rem;
-}
-
-/* Under 1650px Viewport or tight column width: 
-   Collapse grid column to a clean single-column curated feed */
-@media (max-width: 1650px) {
-  .split-layout.reader-open .card-grid-matrix {
+/* Desktop Master-Detail Grid Matrix (> 1080px):
+   Always 1 column curated index feed alongside the active reader */
+@media (min-width: 1081px) {
+  .card-grid-matrix {
+    max-width: 100%;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.25rem;
   }
 }
 
-/* Fluid responsive grid based on actual container width:
-   Handles reader-closed fluid column reflows */
-@container gridcol (max-width: 1100px) {
-  .split-layout:not(.reader-open) .card-grid-matrix {
+/* Tablet & Mobile Grid Matrix (<= 1080px):
+   Fluid multi-column grid when browsing feed */
+@media (max-width: 1080px) {
+  .card-grid-matrix {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.3rem 0.95rem;
+    gap: 1.3rem 1rem;
+    max-width: 100%;
   }
 }
 
-@container gridcol (max-width: 760px) {
-  .split-layout:not(.reader-open) .card-grid-matrix {
+@media (max-width: 600px) {
+  .card-grid-matrix {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem 0.75rem;
+    gap: 1rem 0.65rem;
   }
 }
+
 
 @container gridcol (max-width: 480px) {
-  .card-grid-matrix,
-  .split-layout.reader-open .card-grid-matrix {
+  .card-grid-matrix {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
 }
+
 
 
 
@@ -151,11 +146,28 @@
 }
 
 .grid-card.card-featured {
-  grid-column: span 2;
   border-color: rgba(232, 74, 95, 0.35);
   background-color: rgba(12, 12, 12, 0.78);
   animation: featuredGlowPulse 4.5s ease-in-out infinite;
 }
+
+/* Span 2 only in multi-column mobile feed (between 601px and 1080px) */
+@media (min-width: 601px) and (max-width: 1080px) {
+  .grid-card.card-featured {
+    grid-column: span 2;
+  }
+}
+
+/* On desktop (1-col feed) or small phones, featured card spans 1 column */
+@media (min-width: 1081px), (max-width: 600px) {
+  .grid-card.card-featured {
+    grid-column: span 1;
+  }
+}
+
+
+
+
 
 .grid-card.card-featured .card-caption {
   font-size: var(--text-xl);
@@ -389,8 +401,7 @@
 }
 
 @media (max-width: 1080px) {
-  .card-grid-matrix,
-  .split-layout:not(.reader-open) .card-grid-matrix {
+  .card-grid-matrix {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.3rem 1rem;
     max-width: 100%;
@@ -398,13 +409,11 @@
 }
 
 @media (max-width: 600px) {
-  .card-grid-matrix,
-  .split-layout:not(.reader-open) .card-grid-matrix {
+  .card-grid-matrix {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem 0.65rem;
   }
 }
-
 
 /* Infinite Scroll Sentinel & Load More Component */
 .matrix-sentinel-loader {
@@ -415,15 +424,12 @@
   justify-content: center;
   border-top: 1px dashed var(--border-subtle, rgba(255, 255, 255, 0.12));
   width: 100%;
-  max-width: 1100px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
 }
 
-.split-layout.reader-open .matrix-sentinel-loader {
-  max-width: 100%;
-}
 
 .sentinel-inner {
   display: flex;

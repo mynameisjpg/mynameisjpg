@@ -213,14 +213,25 @@
     // Render Matrix Cards
     renderCardMatrix(true);
 
-    // Auto-select deep-linked dispatch
+    // Auto-select deep-linked dispatch, or default to first post on desktop (> 1080px)
     if (targetSlug && POSTS_DATABASE[targetSlug]) {
       selectAndRenderPost(targetSlug, false);
+    } else if (window.innerWidth > 1080) {
+      const posts = getFilteredAndSortedPosts();
+      if (posts.length > 0) {
+        const firstPost = posts[0];
+        const firstPostId = firstPost.slug || firstPost.id || firstPost.sys_id;
+        selectAndRenderPost(firstPostId, false, false);
+      } else {
+        activePostId = "";
+        closeReaderPane();
+      }
     } else {
       activePostId = "";
       closeReaderPane();
     }
   }
+
 
   /**
    * Full Page Reset (Brand Logo & Home Icon)
