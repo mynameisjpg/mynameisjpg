@@ -43,8 +43,12 @@ shareable: true
 allow_embed: true
 
 image:
-  path: "assets/images/preciado-bodies.jpg"
+  path: "assets/images/power-genealogy.gif"
   alt: "High-contrast conceptual artwork showing human figures intersecting with digital wires, medical traces, and technical diagrams in black, white, and coral."
+
+gallery-images:
+ - path: "assets/images/power-3-genealogy.jpg"
+   alt: ""
 ---
 
 ## 01. The Sword (300 Years Ago)

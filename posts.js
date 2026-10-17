@@ -45,13 +45,7 @@
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
     "links": [],
-    "backlinks": [
-      {
-        "slug": "#2026-10-11-marina-herlop-dja-dja",
-        "title": "Marina Herlop's Dja Dja",
-        "note": "The most incredible sonoric experience"
-      }
-    ],
+    "backlinks": [],
     "tags": [
       "art",
       "art-of-the-day",
@@ -105,13 +99,7 @@
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
     "links": [],
-    "backlinks": [
-      {
-        "slug": null,
-        "title": null,
-        "note": null
-      }
-    ],
+    "backlinks": [],
     "tags": [
       "art",
       "4d",
@@ -176,13 +164,7 @@
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
     "links": [],
-    "backlinks": [
-      {
-        "slug": null,
-        "title": null,
-        "note": null
-      }
-    ],
+    "backlinks": [],
     "tags": [
       "art",
       "3d",
@@ -253,13 +235,7 @@
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
     "links": [],
-    "backlinks": [
-      {
-        "slug": null,
-        "title": null,
-        "note": null
-      }
-    ],
+    "backlinks": [],
     "tags": [
       "design",
       "art",
@@ -322,19 +298,13 @@
     "author": "Juan P. Giusepponi",
     "read_time": "2 MIN READ",
     "via": "",
-    "image": "assets/images/preciado-bodies.jpg",
-    "thumbnail": "assets/images/thumbnails/preciado-bodies.webp",
+    "image": "assets/images/power-genealogy.gif",
+    "thumbnail": "assets/images/power-genealogy.gif",
     "image_alt": "High-contrast conceptual artwork showing human figures intersecting with digital wires, medical traces, and technical diagrams in black, white, and coral.",
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
     "links": [],
-    "backlinks": [
-      {
-        "slug": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Body in the Machine: Preciado, Foucault, and the Pharmacopornographic Episteme",
-        "note": "Deep-dive theoretical essay exploring this genealogy in full."
-      }
-    ],
+    "backlinks": [],
     "tags": [
       "genealogy-of-power",
       "michel-foucault",
@@ -385,21 +355,8 @@
     "image_alt": "Preview of the gallery page",
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
-    "links": [
-      {
-        "title": "Want untitled wallpapers for your mobile?",
-        "url": "https://mynameisjpg.github.io/mynameisjpg/gallery.html",
-        "type": "WEBSITE",
-        "desc": "The art gallery shows all designs and artworks produced by Untitled.jpg, with free download links available."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#the-2d-vault",
-        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
-        "note": ""
-      }
-    ],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "web-graphics",
       "dithering",
@@ -462,38 +419,8 @@
     "image_alt": "Rotating Snakes Illusion",
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
-    "links": [
-      {
-        "title": "The “Rotating Snakes” Illusion",
-        "url": "https://michaelbach.de/ot/mot-snakes/",
-        "type": "WEBSITE",
-        "desc": ""
-      },
-      {
-        "title": "Perception Journal Issue #11",
-        "url": "https://journals.sagepub.com/doi/epub/10.1177/2041669520958025",
-        "type": "PAPER",
-        "desc": "Bach M & Atala-Gérard L (2020) The Rotating Snakes Illusion is a straightforward consequence of non-linearity in arrays of standard motion detectors, i-Perception 11(5), 1–9 [→PDF]"
-      },
-      {
-        "title": "Richard L. Gregory and Priscilla F. Heard",
-        "url": "https://www.richardgregory.org/papers/visual_dissoc/visual-dissociations_p1.htm",
-        "type": "ARTICLE",
-        "desc": "Visual dissociations of movement, position, and stereo depth: Some phenomenal phenomena"
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-29-visual-bandwidth-bottleneck",
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "note": "The retina captures 10^7 bits per second, but consciousness processes barely 25. Here is how your visual system fakes a continuous reality."
-      },
-      {
-        "slug": "#2026-10-10-saccadic-blindness-ai-video-temporal-inconsistency",
-        "title": "Saccadic Blindness: Why You Don't Notice AI Video Melts in the Background",
-        "note": "Your eyes go blind several times a second. Generative video quietly relies on that flaw."
-      }
-    ],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "vision",
       "illusion",
@@ -545,40 +472,9 @@
     "thumbnail": "assets/images/thumbnails/naomi-klein.webp",
     "image_alt": "Coral-red and black glitch collage",
     "aspect_ratio": "h-tall-1",
-    "gallery-images": [
-      {
-        "path": "assets/images/end-times-fash.jpg",
-        "image": "assets/images/end-times-fash.jpg",
-        "thumbnail": "assets/images/thumbnails/end-times-fash.webp",
-        "alt": "Coral red and black glitch collage",
-        "title": ""
-      }
-    ],
-    "links": [
-      {
-        "title": "Naomi Klein: End Times Fascism | Doomscroll",
-        "url": "https://www.youtube.com/watch?v=UHDwQ6FuWCs",
-        "type": "BOOK",
-        "desc": "Naomi Klein, an author, activist and professor of Climate Justice at the University of British Columbia."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-26-excavating-ai-the-unethics-of-machine-learning-training",
-        "title": "Excavating AI (the unEthics of Machine Learning Training)",
-        "note": "A lesson in what happens when people are categorized like objects."
-      },
-      {
-        "slug": "#2026-10-02-dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI: Why Tech Giants Replaced Robots with Digital Pets",
-        "note": "How OpenAI's Dots, Grok Bot, and Meta's Muse Charm use visual semiotics to disarm our defenses against autonomous surveillance."
-      },
-      {
-        "slug": "#2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "note": "Cognitive capitalism and post-Fordism missed the body. Synthetic hormones, algorithmic desire, and molecular governmentality redefined modern power."
-      }
-    ],
+    "gallery-images": [],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "video",
       "climatechange",
@@ -635,13 +531,7 @@
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
     "links": [],
-    "backlinks": [
-      {
-        "slug": "the-music-vault",
-        "title": "THE MUSIC VAULT",
-        "note": "The most beloved sonoric experiences I can share"
-      }
-    ],
+    "backlinks": [],
     "tags": [
       "art",
       "art-of-the-day",
@@ -692,40 +582,9 @@
     "thumbnail": "assets/images/ai-video-blindness.gif",
     "image_alt": "Forensic diagram of an anatomical eye with motion vector overlays alongside a melting digital video glitch in coral red and charcoal.",
     "aspect_ratio": "h-tall-1",
-    "gallery-images": [
-      {
-        "path": "assets/images/saccadic-vision.jpg",
-        "image": "assets/images/saccadic-vision.jpg",
-        "thumbnail": "assets/images/thumbnails/saccadic-vision.webp",
-        "alt": "Saccadic vision diagram",
-        "title": ""
-      }
-    ],
-    "links": [
-      {
-        "title": "Saccadic Suppression and Visual Stability (Burr & Morrone, Nature Reviews Neuroscience)",
-        "url": "https://www.nature.com/articles/nrn1430",
-        "type": "PAPER",
-        "desc": "Seminal review on how the brain suppresses visual input during rapid eye movements."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-29-visual-bandwidth-bottleneck",
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "note": "How human vision constructs scenes out of low-bandwidth retinal inputs."
-      },
-      {
-        "slug": "#2026-10-02-5-psychology-effects-used-in-app-design",
-        "title": "5 Psychology Effects Used in App Design",
-        "note": "Perceptual tricks and cognitive shortcuts engineered into user interfaces."
-      },
-      {
-        "slug": "#2026-10-10-operational-images-farocki-flusser-machine-vision",
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "note": "The boundary between human interpretation and machinic actuation."
-      }
-    ],
+    "gallery-images": [],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "reflections",
       "observations",
@@ -747,7 +606,7 @@
     "sys_id": "SYS_202610_BOO",
     "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
     "subtitle": "This isn't a hacking story. There was no malicious intent, no exploited vulnerability. Just an autonomous AI agent doing what it supposed it had to do.",
-    "excerpt": "If you're building with AI agents, automating infrastructure, or just curious how \"helpful\" AI can go catastrophically wrong — this is a case study you must see",
+    "excerpt": "If you''re building with AI agents, automating infrastructure, or just curious how \"helpful\" AI can go catastrophically wrong — this is a case study you must see",
     "format": "BOOKMARK",
     "category": "",
     "media": "VIDEO",
@@ -776,30 +635,9 @@
     "thumbnail": "assets/images/thumbnails/ai-fail-opus.webp",
     "image_alt": "Glitch art in coral, black, and white. Server racks dissolve into circuitry and binary code above a fragmented humanoid head with glowing eyes emitting signal waves.",
     "aspect_ratio": "h-tall-1",
-    "gallery-images": [
-      {
-        "path": "assets/images/ai-fail-claude.jpg",
-        "image": "assets/images/ai-fail-claude.jpg",
-        "thumbnail": "assets/images/thumbnails/ai-fail-claude.webp",
-        "alt": "Glitch art in coral, black, and white. Server racks dissolve into circuitry and binary code above a fragmented humanoid head with glowing eyes emitting signal waves.",
-        "title": ""
-      }
-    ],
-    "links": [
-      {
-        "title": "Real-world AI Failure Story: Delete a Production Database in 9 Seconds!",
-        "url": "https://www.youtube.com/watch?v=1fsGTnszses",
-        "type": "VIDEO",
-        "desc": "This isn't a hacking story. There was no malicious intent, no exploited vulnerability. Just an autonomous AI agent doing exactly what it thought it was supposed to do."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-24-lecun-world-models-jepa",
-        "title": "Why LLMs Don't Think: Yann LeCun's World Models",
-        "note": "Complementary inquiry into non-generative representation."
-      }
-    ],
+    "gallery-images": [],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "video",
       "ai",
@@ -850,42 +688,9 @@
     "thumbnail": "assets/images/charts-graphs.gif",
     "image_alt": "Archival collage in black, white, and coral: a cracked TV test card, schematic lines, a gridded monolith, and torn, rusted scientific diagrams over gritty textures.",
     "aspect_ratio": "h-tall-1",
-    "gallery-images": [
-      {
-        "path": "assets/images/charts-graphs.jpg",
-        "image": "assets/images/charts-graphs.jpg",
-        "thumbnail": "assets/images/charts-graphs.jpg",
-        "alt": "Archival collage in black, white, and coral: a cracked TV test card, schematic lines, a gridded monolith, and torn, rusted scientific diagrams over gritty textures.",
-        "title": ""
-      }
-    ],
-    "links": [
-      {
-        "title": "CharXiv: Charting Gaps in Realistic Chart Understanding in Multimodal LLMs",
-        "url": "https://arxiv.org/abs/2406.18521",
-        "type": "PAPER",
-        "desc": "Princeton and Stanford benchmark evaluating 24 vision-language models on 2,323 real scientific charts from arXiv."
-      },
-      {
-        "title": "The Visual Display of Quantitative Information",
-        "url": "https://www.edwardtufte.com/tufte/books_vdqi",
-        "type": "BOOK",
-        "desc": "Edward Tufte's foundational treatise on graphical integrity, data density, and graphical conventions."
-      },
-      {
-        "title": "Logic of Scientific Discovery",
-        "url": "https://www.routledge.com/The-Logic-of-Scientific-Discovery/Popper/p/book/9780415278447",
-        "type": "BOOK",
-        "desc": "Karl Popper's epistemological inquiry into empirical falsification and the limits of formal verification."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-25-turing-queer-ai",
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "note": "Cross-referenced inquiry into statistical optimization and the loss of peripheral divergence."
-      }
-    ],
+    "gallery-images": [],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "multimodal-ai",
       "benchmark-design",
@@ -939,46 +744,9 @@
     "thumbnail": "assets/images/thumbnails/operational-images.webp",
     "image_alt": "An engraved human eye layered with digital circuit lines and pixel glitch effects in reddish-pink against a textured black background..",
     "aspect_ratio": "h-tall-1",
-    "gallery-images": [
-      {
-        "path": "assets/images/operational_web.png",
-        "image": "assets/images/operational_web.png",
-        "thumbnail": "assets/images/thumbnails/operational_web.webp",
-        "alt": "Abstract glitch design",
-        "title": ""
-      }
-    ],
-    "links": [
-      {
-        "title": "Eye/Machine (Harun Farocki, 2001–2003)",
-        "url": "https://www.harunfarocki.de/installations/2000s/2000/eye-machine.html",
-        "type": "ARCHIVE",
-        "desc": "Foundational three-part video installation conceptualizing operational images in military guidance systems and automated factory robotics."
-      },
-      {
-        "title": "Towards a Philosophy of Photography (Vilém Flusser, 1983)",
-        "url": "https://en.wikipedia.org/wiki/Towards_a_Philosophy_of_Photography",
-        "type": "BOOK",
-        "desc": "Seminal media theory text dissecting technical images, the automated apparatus, and the human operator as functionary."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-10-09-ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "note": "Analysis of plastic vs. iconic signs in synthetic generative models."
-      },
-      {
-        "slug": "#2026-09-28-perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "note": "Automated framework measuring contrast and multi-stability in machine-parsed graphics."
-      },
-      {
-        "slug": "#2026-09-28-haraway-cyborg-manifesto-neural-borderlands",
-        "title": "Donna Haraway’s Cyborg Manifesto: Neural Borderlands and Boundary Ruptures",
-        "note": "Post-human boundary breakdowns between organic vision and machinic feedback loops."
-      }
-    ],
+    "gallery-images": [],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "harun-farocki",
       "vilem-flusser",
@@ -1033,41 +801,9 @@
     "thumbnail": "assets/images/thumbnails/brands-are-dead.webp",
     "image_alt": "Glitch art featuring the Rolling Stones lips and tongue logo in coral red, surrounded by fragmented icons of a shopping cart, retro TV, and bottle against a gritty black backdrop.",
     "aspect_ratio": "h-tall-1",
-    "gallery-images": [
-      {
-        "path": "assets/images/brand-is-dead.jpg",
-        "image": "assets/images/brand-is-dead.jpg",
-        "thumbnail": "assets/images/thumbnails/brand-is-dead.webp",
-        "alt": "This digital illustration depicts a stylized scene of online shopping, featuring a shopping cart, silhouetted figures, and abstract geometric patterns in red and black tones. The composition blends urban imagery with fragmented shapes to convey the fast-paced and fragmented nature of e-commerce.",
-        "title": ""
-      }
-    ],
-    "links": [
-      {
-        "title": "On Photography (Susan Sontag, 1977)",
-        "url": "https://en.wikipedia.org/wiki/On_Photography",
-        "type": "BOOK",
-        "desc": "Foundational essays exploring photography as an evidentiary tool and collector of miniaturized reality."
-      },
-      {
-        "title": "The Status Economy (Highsnobiety Whitepaper)",
-        "url": "https://highsnobiety.com",
-        "type": "ARTICLE",
-        "desc": "Cultural study analyzing the migration of status signals from luxury goods into everyday lifestyle surfaces."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-10-10-operational-images-farocki-flusser-machine-vision",
-        "title": "Operational Images: Why Neural Networks Don't Actually Look at Pictures",
-        "note": "From Harun Farocki and Vilém Flusser to gradient saliency: how machine vision replaced the human gaze with automated instruction."
-      },
-      {
-        "slug": "#2026-10-09-ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "note": "Analysis of plastic vs. iconic signs in synthetic generative models."
-      }
-    ],
+    "gallery-images": [],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "branding",
       "design",
@@ -1123,21 +859,8 @@
     "image_alt": "Architectural blueprint layered with black network nodes and digital glitch distortions in black, white, and coral-red tones.",
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
-    "links": [
-      {
-        "title": "Graphify - another knowledge graph repo",
-        "url": "https://github.com/Graphify-Labs/graphify",
-        "type": "REPO",
-        "desc": ""
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-26-harvard-s-computer-science-career-for-free",
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "note": "As all education should be: open, free and public"
-      }
-    ],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "toolkit",
       "ai",
@@ -1190,35 +913,9 @@
     "thumbnail": "assets/images/thumbnails/groupe-mu.webp",
     "image_alt": "Coral red and black glitch art: fractured human figures dissolve and warp into printed circuit boards, technical schematics, and pixelated tears.",
     "aspect_ratio": "h-tall-1",
-    "gallery-images": [
-      {
-        "path": "assets/images/visual_semiotics.jpg",
-        "image": "assets/images/visual_semiotics.jpg",
-        "thumbnail": "assets/images/thumbnails/visual_semiotics.webp",
-        "alt": "Glitch art depiction of a pixelated abstract tree",
-        "title": ""
-      }
-    ],
-    "links": [
-      {
-        "title": "Traité du signe visuel. Pour une rhétorique de l'image (Groupe µ, 1992)",
-        "url": "https://www.editionsduseuil.fr/ouvrage/traite-du-signe-visuel-groupe-mu/9782020129855",
-        "type": "BOOK",
-        "desc": "Foundational text establishing visual semiotics, plastic signs (form, color, texture), and the triadic model of iconic transformation."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-26-foucault-borges-meaning",
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "note": "High-dimensional embedding grids as modern epistemological matrices."
-      },
-      {
-        "slug": "#2026-09-28-shanzhai-deconstructing-original",
-        "title": "What If Nothing Is Ever Original? Thinking Through Shanzhai",
-        "note": "Deconstructive variation and fluid aesthetics in Byung-Chul Han's theory."
-      }
-    ],
+    "gallery-images": [],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "semiotics",
       "groupe-mu",
@@ -1270,14 +967,7 @@
     "image_alt": "Dithered toolkit interface graphic",
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
-    "links": [
-      {
-        "title": "Official Documentation",
-        "url": "https://github.com/alphaxiv/openresearch",
-        "type": "REPO",
-        "desc": "GitHub Repo"
-      }
-    ],
+    "links": [],
     "backlinks": [],
     "tags": [
       "toolkit",
@@ -1331,20 +1021,7 @@
     "image_alt": "",
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
-    "links": [
-      {
-        "title": "Mark Van Elburg's YouTube Channel",
-        "url": "https://www.youtube.com/@4398574291811/shorts",
-        "type": "VIDEO",
-        "desc": ""
-      },
-      {
-        "title": "Mark Van Elburg's Instagram Profile",
-        "url": "https://www.instagram.com/marc.van.elburg/",
-        "type": "ARCHIVE",
-        "desc": ""
-      }
-    ],
+    "links": [],
     "backlinks": [],
     "tags": [
       "ai",
@@ -1396,199 +1073,8 @@
     "image_alt": "Red-haloed human silhouette amid a black-and-white glitch art collage of static CRT screens, circuit boards, pill icons, and binary code.",
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
-    "links": [
-      {
-        "title": "1. Preciado, Testo Junkie: Sex, Drugs, and Biopolitics in the Pharmacopornographic Era (2008)",
-        "url": "https://www.researchgate.net/publication/312035073_Preciado_Testo_junkie_sex_drugs_and_biopolitics_in_the_pharmacopornographic_era",
-        "type": "BOOK",
-        "desc": "Foundational theoretical text articulating the shift from disciplinary biopolitics to the molecular-pornographic regime."
-      },
-      {
-        "title": "2. Pharmaco-pornographic Politics: Towards a New Gender Ecology (Paul B. Preciado)",
-        "url": "http://xenopraxis.net/readings/preciado_pharmacopornographic.pdf",
-        "type": "PAPER",
-        "desc": "Theoretical framework examining micro-prosthetic control, sexdesign, and incorporate techno-politics."
-      },
-      {
-        "title": "3. Identities: The Pharmacopornographic Era (Chapter Two Analysis)",
-        "url": "https://www.identities.teaching-documents.org/wp-content/uploads/2022/02/paul-b-preciado-testo-junkie-sex-drugs-and-biopolitics-in-the-pharmacopornographic-era-chapter-two.pdf",
-        "type": "PAPER",
-        "desc": "Examines potentia gaudendi, pleasure capital, and the extraction of somatic affects in late capitalism."
-      },
-      {
-        "title": "4. Digital Body / Mutant Body (Mimesis Journals)",
-        "url": "https://mimesisjournals.com/ojs/index.php/icon/article/download/5955/4536",
-        "type": "PAPER",
-        "desc": "Analyzes digital mutant bodies, synthetic aesthetics, and representational resistance against algorithmic control."
-      },
-      {
-        "title": "5. The Digital and the South: Questionings Vol. 2 (Revista VIRUS USP)",
-        "url": "https://revistas.usp.br/virus/article/download/229604/210449",
-        "type": "PAPER",
-        "desc": "Investigates Preciado's telebody, dysphoria mundi, onto-fictional potency, and cybernetic extractivism."
-      },
-      {
-        "title": "6. The Nanjing Lectures 2016-2019 (Bernard Stiegler, Open Access)",
-        "url": "https://library.oapen.org/bitstream/id/3d32d585-5db1-49ad-a9c5-164ded7eae17/Stiegler_2020_Nanjing-Lectures.pdf",
-        "type": "BOOK",
-        "desc": "Stiegler's foundational lecture series on exosomatization, the technological pharmakon, and the Neganthropocene."
-      },
-      {
-        "title": "7. Bernard Stiegler and the Necessity of Education as Hammer (Educ. Philos. Theory)",
-        "url": "https://www.tandfonline.com/doi/full/10.1080/00131857.2022.2096007",
-        "type": "PAPER",
-        "desc": "Examines the short-circuiting of transindividuation, tertiary retentions, and the proletarianization of the mind."
-      },
-      {
-        "title": "8. The Desire Called Neganthropology (Chien-heng Wu)",
-        "url": "https://ex-position.org/wp-content/uploads/2024/01/03.-Chien-heng-Wu.pdf",
-        "type": "PAPER",
-        "desc": "Theoretical inquiry into reversing social entropy, hyper-speed technology, and psychosocial individuation."
-      },
-      {
-        "title": "9. The Infocracy: How Digital Flows Disintegrate Public Discourse (Interference Journal)",
-        "url": "https://interferencejournal.emnuvens.com.br/revista/article/download/44/48/75",
-        "type": "PAPER",
-        "desc": "Examines Byung-Chul Han's psychopolitics, the digital panopticon of seduction, and post-truth media flows."
-      },
-      {
-        "title": "10. The Philosophy of Byung-Chul Han Applied to The Systemised Self (AIXIV)",
-        "url": "https://aixiv.science/pdf/aixiv.260926.000001v1.0.pdf",
-        "type": "PAPER",
-        "desc": "Analyzes transparency society, voluntary self-exploitation, cognitive fatigue, and algorithmic dopamine loops."
-      },
-      {
-        "title": "11. Pharmacopornographic Subjectivity in the Work of Paul B. Preciado (Cambridge Univ)",
-        "url": "https://www.repository.cam.ac.uk/bitstreams/979e4749-4c3e-4aba-abef-da10a5ba40ed/download",
-        "type": "PAPER",
-        "desc": "Doctoral dissertation on somatic subjectivation, hormonal regimes, and queer political subversion."
-      },
-      {
-        "title": "12. The Pharmacopornographic Subject: Beatriz Preciado's Testo Junkie (ResearchGate)",
-        "url": "https://www.researchgate.net/publication/322697067_The_Pharmacopornographic_Subject_Beatriz_Preciado's_Testo_Junkie_Sexe_Drogue_et_Biopolitique",
-        "type": "PAPER",
-        "desc": "Examines auto-theory, biopolitical intoxication, and the transformation of the body into a political laboratory."
-      },
-      {
-        "title": "13. Gender, Coherence, and the Ontological Politics of Generative AI (Dr. Sian Brooke)",
-        "url": "https://drsianbrooke.com/hallucinated-subjects.pdf",
-        "type": "PAPER",
-        "desc": "Groundbreaking research on how GenAI fabricates dual hallucinated subjects and enforces normative gender coherence."
-      },
-      {
-        "title": "14. Testo Junkie (Full English Translation Archive, TransReads)",
-        "url": "https://transreads.org/wp-content/uploads/2022/01/2022-01-13_61e07ee9a5e32_Preciado_Beatriz_Testo_Junkie_2013.pdf",
-        "type": "ARCHIVE",
-        "desc": "Complete archival manuscript of Preciado's Testo Junkie: Sex, Drugs, and Biopolitics in the Pharmacopornographic Era."
-      },
-      {
-        "title": "15. A New Algorithmic Identity: Soft Biopolitics and the Modulation of Control",
-        "url": "https://www.researchgate.net/publication/258192519_A_New_Algorithmic_Identity_Soft_Biopolitics_and_the_Modulation_of_Control",
-        "type": "PAPER",
-        "desc": "Investigates soft biopolitics, algorithmic classification, and biometric identity engineering."
-      },
-      {
-        "title": "16. Speculating in Latent Space: Visibility Politics and the Impasse of Representation in GenAI",
-        "url": "https://www.researchgate.net/publication/388829033_Speculating_in_Latent_Space_Visibility_Politics_and_the_Impasse_of_Representation_in_Generative_AI",
-        "type": "PAPER",
-        "desc": "Analyzes statistical latent distributions, mean images, and the limits of political representation in deep learning."
-      },
-      {
-        "title": "17. The Fertility Fix: The Boom in Facial-Matching Algorithms for Donor Selection",
-        "url": "https://www.tandfonline.com/doi/pdf/10.1080/20502877.2024.2371738",
-        "type": "PAPER",
-        "desc": "Empirical study on deep learning facial matching in assisted reproduction as algorithmic biopolitics."
-      },
-      {
-        "title": "18. Learning from the Virus (Paul B. Preciado, March 2020)",
-        "url": "https://pianolaconalbedrio.wordpress.com/2020/10/22/paul-preciado-learning-from-the-virus-march-28th-2020/",
-        "type": "ARTICLE",
-        "desc": "Preciado's foundational essay on the telebody, cyber-surveillance, and the mutation of domestic architecture during lockdowns."
-      },
-      {
-        "title": "19. Multistability and Derrida's Différance: Investigating Technical Relations",
-        "url": "https://d-nb.info/1260155773/34",
-        "type": "PAPER",
-        "desc": "Philosophical exploration of post-phenomenology, technological intentionality, and deconstructive technics."
-      },
-      {
-        "title": "20. The Neganthropocene (Bernard Stiegler, Open Humanities Press)",
-        "url": "https://openhumanitiespress.org/books/download/Stiegler_2018_The-Neganthropocene.pdf",
-        "type": "BOOK",
-        "desc": "Monograph outlining systemic pathways to overcome thermodynamic and social entropy in automated capitalism."
-      },
-      {
-        "title": "21. Anthropocene, Exosomatization and Negentropy (Maël Montévil)",
-        "url": "https://montevil.org/publications/chapters/2020-msl-anthropocene-exosomatization-negentropy/",
-        "type": "PAPER",
-        "desc": "Mathematical and biological examination of organogenesis, technology, and negentropic production."
-      },
-      {
-        "title": "22. To Tame, Empower, Transgress: Practicing Co-existence in Digital Spaces (DiVA Portal)",
-        "url": "https://www.diva-portal.org/smash/get/diva2:2102568/FULLTEXT02.pdf",
-        "type": "PAPER",
-        "desc": "Studies ontological politics, digital resistance, and everyday human-algorithmic negotiations."
-      },
-      {
-        "title": "23. The Ontological Turn in Political Anthropology (Scribd Archive)",
-        "url": "https://www.scribd.com/document/361308070/Ontological-Turn",
-        "type": "ARCHIVE",
-        "desc": "Theoretical survey of ontological politics, multiple worldmakings, and post-humanist anthropology."
-      },
-      {
-        "title": "24. The Carceral Body Multiple: Biocriminology and Intake in New York (VTechWorks)",
-        "url": "https://vtechworks.lib.vt.edu/bitstream/handle/10919/105014/Ludwig_AS_D_2020.pdf?sequence=1&isAllowed=y",
-        "type": "PAPER",
-        "desc": "Empirical investigation of algorithmic risk assessment, biometric surveillance, and carceral biopolitics."
-      },
-      {
-        "title": "25. Foucault and Digital Technologies of Power: Studying Resistance (UOC OpenAccess)",
-        "url": "https://openaccess.uoc.edu/server/api/core/bitstreams/89c5d552-009c-41d6-941f-1a39c017c210/content",
-        "type": "PAPER",
-        "desc": "Examines counter-conducts, digital resistance, and decentralized governance in algorithmic societies."
-      },
-      {
-        "title": "26. Dysphoria Mundi Project & Symposium (Ca' Foscari University)",
-        "url": "https://www.unive.it/dysphoriamundi",
-        "type": "ARTICLE",
-        "desc": "Academic repository and documentation around Preciado's Dysphoria Mundi paradigm."
-      },
-      {
-        "title": "27. Glitch Throws Shade: Cyberfeminism and Glitch Politics (Legacy Russell, e-flux)",
-        "url": "https://www.e-flux.com/criticism/349655/glitch-throws-shade",
-        "type": "ARTICLE",
-        "desc": "Foundational cyber-feminist manifesto articulating the glitch as an ontological refusal of algorithmic regularities."
-      },
-      {
-        "title": "28. Relationality: An Emergent Politics of Life Beyond the Human (Escobar et al.)",
-        "url": "https://www.scribd.com/document/819002309/Beyond-the-Modern-Arturo-Escobar-Michal-Osterweil-Kriti-Sharma-Relationality-an-Emergent-Politics-of-Life-Beyond-the-Human-Bloomsbury-2024",
-        "type": "BOOK",
-        "desc": "Articulates pluriversal politics, relational ontology, and post-capitalist worldmaking."
-      },
-      {
-        "title": "29. A Relational Turn for Sustainability Science: Relational Thinking (Taylor & Francis)",
-        "url": "https://www.tandfonline.com/doi/full/10.1080/26395916.2020.1814417",
-        "type": "PAPER",
-        "desc": "Methodological synthesis of relational ontology and systemic transformation beyond mechanistic modernity."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "title": "The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "note": "Foundational inquiry into Foucault's biopolitics, molecular governmentality, and Preciado's soma-technics."
-      },
-      {
-        "slug": "#2026-09-25-turing-queer-ai",
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "note": "Examines how statistical optimization enforces automated normative discipline and passing."
-      },
-      {
-        "slug": "#2026-09-26-foucault-borges-vector-space",
-        "title": "Foucault in the Latent Space: The 'Chinese Encyclopedia' of High Dimensions",
-        "note": "Analyzes vector representations as contemporary epistemological taxonomies."
-      }
-    ],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "paul-b-preciado",
       "generative-ai",
@@ -1643,54 +1129,9 @@
     "thumbnail": "assets/images/telebodies.gif",
     "image_alt": "Glitch-art collage in black, white, and coral red featuring human silhouettes, brain MRI scans, chemical structures, circuit traces, and industrial gears.",
     "aspect_ratio": "h-tall-1",
-    "gallery-images": [
-      {
-        "path": "assets/images/preciado-bodies.jpg",
-        "image": "assets/images/preciado-bodies.jpg",
-        "thumbnail": "assets/images/thumbnails/preciado-bodies.webp",
-        "alt": ".",
-        "title": ""
-      },
-      {
-        "path": "assets/images/telebodies.jpg",
-        "image": "assets/images/telebodies.jpg",
-        "thumbnail": "assets/images/thumbnails/telebodies.webp",
-        "alt": "Glitch-art collage in black, white, and coral red featuring human silhouettes, brain MRI scans, chemical structures, circuit traces, and industrial gears",
-        "title": ""
-      }
-    ],
-    "links": [
-      {
-        "title": "Testo Yonki: Sex, Drugs, and Biopolitics in the Pharmacopornographic Era (Paul B. Preciado, 2008)",
-        "url": "https://libroschorcha.wordpress.com/wp-content/uploads/2018/05/testo-yonqui-beatriz-preciado.pdf",
-        "type": "BOOK",
-        "desc": "Foundational theoretical text establishing the pharmacopornographic regime through auto-theory and philosophical critique."
-      },
-      {
-        "title": "The History of Sexuality, Vol. 1: An Introduction (Michel Foucault, 1976)",
-        "url": "https://monoskop.org/images/4/40/Foucault_Michel_The_History_of_Sexuality_1_An_Introduction.pdf",
-        "type": "BOOK",
-        "desc": "Introduces the concepts of biopower, anatomopolitics of the human body, and the regulation of populations."
-      },
-      {
-        "title": "Security, Territory, Population: Lectures at the Collège de France (Michel Foucault, 1977-1978)",
-        "url": "https://mirror.explodie.org/Foucault-Security-Territory-Population.pdf",
-        "type": "BOOK",
-        "desc": "Traces the genealogy of governmentality, pastorate, and modern administrative rationalities of conduct."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-25-turing-queer-ai",
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "note": "Examines how statistical optimization enforces automated normative discipline."
-      },
-      {
-        "slug": "#2026-09-26-foucault-borges-vector-space",
-        "title": "Foucault in the Latent Space: The 'Chinese Encyclopedia' of High Dimensions",
-        "note": "Analyzes vector representations as contemporary epistemological taxonomies."
-      }
-    ],
+    "gallery-images": [],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "paul-b-preciado",
       "michel-foucault",
@@ -1746,13 +1187,7 @@
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
     "links": [],
-    "backlinks": [
-      {
-        "slug": "#2026-10-02-dots-bot-muse-cute-mascots",
-        "title": "The Weaponized Cuteness of Frontier AI",
-        "note": "Longform essay version of this observation."
-      }
-    ],
+    "backlinks": [],
     "tags": [
       "ai-mascots",
       "product-design",
@@ -1802,33 +1237,8 @@
     "image_alt": "Glitch art in black, white, and coral pink featuring cute cartoon creatures, a robot, and a heart amid heavy digital artifacts, scanlines, and pixel noise.",
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
-    "links": [
-      {
-        "title": "[1] Studies in Animal and Human Behavior (Konrad Lorenz, 1971)",
-        "url": "https://en.wikipedia.org/wiki/Cuteness#Baby_schema",
-        "type": "BOOK",
-        "desc": "Foundational ethological formulation of the Kindchenschema (baby schema) and innate releasing mechanisms."
-      },
-      {
-        "title": "[3] The Media Equation: How People Treat Computers, Television, and New Media Like Real People and Places (Reeves & Nass, 1996)",
-        "url": "https://archive.org/details/mediaequationhow0000reev",
-        "type": "BOOK",
-        "desc": "Psychological experiments proving the human sensory cortex automatically applies social rules to computational interfaces."
-      },
-      {
-        "title": "[4] The Eye of the Master: A Social History of Artificial Intelligence (Matteo Pasquinelli, 2023)",
-        "url": "https://www.matteopasquinelli.com",
-        "type": "BOOK",
-        "desc": "Analysis of sociomorphic computation and the labor architectures masked by algorithmic interfaces."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-28-ai-images-groupe-mu",
-        "title": "[2] Why AI Images Look Perfect Until You Look Closer: Groupe µ and Visual Semiotics",
-        "note": "Analysis of plastic vs. iconic signifiers in synthetic image generation."
-      }
-    ],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "ai-mascots",
       "dots",
@@ -1886,21 +1296,8 @@
     "image_alt": "Glitch art collage in black and coral red showing cracked human silhouettes, an exposed brain, a maze screen, a padlock, and a wireframe hand holding a phone.",
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
-    "links": [
-      {
-        "title": "Downloadable Cheatsheet",
-        "url": "https://mynameisjpg.github.io/mynameisjpg/assets/images/5_psych_effects.jpg",
-        "type": "DOWNLOAD",
-        "desc": "One-page cheatsheet to share"
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-29-visual-bandwidth-bottleneck",
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "note": "Initial conceptual seed for this working observation."
-      }
-    ],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "observations",
       "app-design",
@@ -1951,27 +1348,8 @@
     "image_alt": "High-contrast B&W art of a seated guitarist beside a speaker, overlaid with coral-red diagrammatic outlines, directional arrows, and blank label blocks.",
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
-    "links": [
-      {
-        "title": "Relate Anything GitHub Repository",
-        "url": "https://github.com/Maelic/RelateAnything",
-        "type": "GITHUB | REPO",
-        "desc": "Live interactive sandbox and reference documentation."
-      },
-      {
-        "title": "Official Documentation / Live Demo",
-        "url": "https://maelic.github.io/RelateAnythingProject/demo/",
-        "type": "TOOL | REPO | LIVE DEMO",
-        "desc": "Live interactive sandbox and reference documentation."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-28-perceptual-vision-eval-toolkit.md",
-        "title": "Perceptual Vision Eval Toolkit",
-        "note": "Visual Eval Toolkit"
-      }
-    ],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "toolkit",
       "github",
@@ -2021,27 +1399,8 @@
     "image_alt": "Red-toned glitch artwork of a close-up eye overlaid with static and scan lines. The pupil reflects an old television screen displaying a person's face.",
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
-    "links": [
-      {
-        "title": "Predictive Coding in the Visual Cortex",
-        "url": "https://en.wikipedia.org/wiki/Predictive_coding",
-        "type": "PAPER",
-        "desc": "Theoretical framework explaining how the human sensory hierarchy compares top-down predictions against bottom-up error signals."
-      },
-      {
-        "title": "Processing of Spatial Frequencies along Visual Pathways",
-        "url": "https://www.nature.com/articles/s41598-024-57219-3y",
-        "type": "PAPER",
-        "desc": "Research exploring how subcortical pathways route low vs. high spatial frequencies to direct saccades."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-28-perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit",
-        "note": "Automated perceptual diagnostics implementing Gestalt and spatial frequency measures."
-      }
-    ],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "psychophysics",
       "fovea",
@@ -2089,14 +1448,7 @@
     "image_alt": "Archival artwork exploring transformation and fluid memory.",
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
-    "links": [
-      {
-        "title": "Shanzhai: Deconstruction in Chinese (Byung-Chul Han, MIT Press 2017)",
-        "url": "https://mitpress.mit.edu/9780262534369/shanzhai/",
-        "type": "BOOK",
-        "desc": "Philosophical reflection on copy culture, original vs. forgery, and adaptive fluid aesthetics in Far Eastern thought."
-      }
-    ],
+    "links": [],
     "backlinks": [],
     "tags": [
       "byung-chul-han",
@@ -2143,32 +1495,8 @@
     "image_alt": "In coral red and black, vintage engraved eyes are fractured and obscured by corrupted UI windows, pixel grids, and degraded scanline textures.",
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
-    "links": [
-      {
-        "title": "Art Perception: Human Visual System and the Perception of Art (Cycleback, 2014)",
-        "url": "https://cycleback.com/artperception.pdf",
-        "type": "BOOK",
-        "desc": "Comprehensive guide to visual optics, cognitive color science, lateral inhibition, and perceptual illusions in fine art."
-      },
-      {
-        "title": "Perceptual Vision Eval GitHub Repository",
-        "url": "https://github.com/mynameisjpg/perceptual-vision-eval",
-        "type": "REPO",
-        "desc": "Source code, unit test suites, and interactive HTML5 Canvas demo for automated visual perceptual evaluation."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-10-09-ai-images-groupe-mu",
-        "title": "Flawless Textures, Impossible Objects: Groupe µ and the Visual Semiotics of AI",
-        "note": "From Traité du signe visuel to latent diffusion: why generative models master surface rendering while stumbling on physical logic."
-      },
-      {
-        "slug": "#2026-09-29-visual-bandwidth-bottleneck",
-        "title": "The Visual Bandwidth Bottleneck: Your Brain Is Hallucinating This Post",
-        "note": "The retina captures 10^7 bits per second, but consciousness processes barely 25. Here is how your visual system fakes a continuous reality"
-      }
-    ],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "toolkit",
       "free",
@@ -2217,36 +1545,9 @@
     "thumbnail": "assets/images/donna-haraway.gif",
     "image_alt": "Coral-red pixel glitches and neural diagrams bleed across a woman making hand-binoculars, fusing her with a jellyfish and fractured brain scans.",
     "aspect_ratio": "h-tall-1",
-    "gallery-images": [
-      {
-        "path": "assets/images/donna_haraway.jpg",
-        "image": "assets/images/donna_haraway.jpg",
-        "thumbnail": "assets/images/thumbnails/donna_haraway.webp",
-        "alt": "Coral-red pixel glitches and neural diagrams bleed across a woman making hand-binoculars, fusing her with a jellyfish and fractured brain scans.",
-        "title": ""
-      }
-    ],
-    "links": [
-      {
-        "title": "A Cyborg Manifesto: Science, Technology, and Socialist-Feminism in the Late 20th Century (Haraway, 1985)",
-        "url": "https://monoskop.org/images/4/4c/Haraway_Donna_1985_A_Manifesto_for_Cyborgs_Science_Technology_and_Socialist_Feminism_in_the_1980s.pdf",
-        "type": "ESSAY",
-        "desc": "The complete text of Donna Haraway's groundbreaking manifesto on cybernetic organisms, anti-essentialism, and boundary breakdowns."
-      },
-      {
-        "title": "e-flux Journal Issue #75 Tentacular Thinking: Anthropocene, Capitalocene, Chthulucene",
-        "url": "https://www.e-flux.com/journal/0075/69369/tentacular-thinking-anthropocene-capitalocene-chthulucene/",
-        "type": "ARTICLE",
-        "desc": "Donna's article on issue #75 of e-flux."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-28-ai-images-groupe-mu",
-        "title": "Why AI Images Look Perfect Until You Look Closer: Groupe µ",
-        "note": "Analysis of synthetic signifiers and human perceptual integration."
-      }
-    ],
+    "gallery-images": [],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "haraway",
       "cyborg-manifesto",
@@ -2347,38 +1648,8 @@
     "image_alt": "Red and black archival glitch collage featuring Michel Foucault inside a fractured frame alongside Jorge Luis Borges standing in a circular labyrinth with open books.",
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
-    "links": [
-      {
-        "title": "The Order of Things: An Archaeology of the Human Sciences (1966)",
-        "url": "https://monoskop.org/images/8/87/Foucault_Michel_The_Order_of_Things_1994.pdf",
-        "type": "PAPER",
-        "desc": "Michel Foucault's landmark inquiry into the historical shifts between Renaissance similitude, Classical tables, and Modern historicism."
-      },
-      {
-        "title": "The Analytical Language of John Wilkins (Borges, 1942)",
-        "url": "https://www.alamut.com/subj/artifast/language/johnWilkins.html",
-        "type": "ARCHIVE",
-        "desc": "Jorge Luis Borges' famous essay introducing the 'Celestial Emporium of Benevolent Knowledge' animal classification."
-      },
-      {
-        "title": "Pinecone / Vector Index Epistemology Reference",
-        "url": "https://www.pinecone.io/learn/vector-database/",
-        "type": "TOOL",
-        "desc": "Technical overview of Approximate Nearest Neighbor (ANN) search and high-dimensional cosine partitioning."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-25-turing-queer-ai",
-        "title": "Turing & Queer AI: Synthetic Bodies, Mimicry, and Representation",
-        "note": "Examines how statistical optimization drives automated conformity."
-      },
-      {
-        "slug": "#2026-09-24-lecun-world-models-jepa",
-        "title": "JEPA & LeCun's World Models",
-        "note": "Investigates joint embeddings as non-generative abstractions of reality."
-      }
-    ],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "foucault",
       "borges",
@@ -2425,47 +1696,9 @@
     "thumbnail": "assets/images/foucault-borges.gif",
     "image_alt": "Red and black archival glitch collage featuring Michel Foucault inside a fractured frame alongside Jorge Luis Borges standing in a circular labyrinth with open books.",
     "aspect_ratio": "h-tall-1",
-    "gallery-images": [
-      {
-        "path": "assets/images/foucault-borges.jpg",
-        "image": "assets/images/foucault-borges.jpg",
-        "thumbnail": "assets/images/thumbnails/foucault-borges.webp",
-        "alt": "Red and black archival glitch collage featuring Michel Foucault inside a fractured frame alongside Jorge Luis Borges standing in a circular labyrinth with open books",
-        "title": ""
-      }
-    ],
-    "links": [
-      {
-        "title": "The Order of Things: An Archaeology of the Human Sciences (1966)",
-        "url": "https://monoskop.org/images/8/87/Foucault_Michel_The_Order_of_Things_1994.pdf",
-        "type": "PAPER",
-        "desc": "Michel Foucault's landmark inquiry into the historical shifts between Renaissance similitude, Classical tables, and Modern historicism."
-      },
-      {
-        "title": "The Analytical Language of John Wilkins (Borges, 1942)",
-        "url": "https://www.alamut.com/subj/artifast/language/johnWilkins.html",
-        "type": "ARCHIVE",
-        "desc": "Jorge Luis Borges' famous essay introducing the 'Celestial Emporium of Benevolent Knowledge' animal classification."
-      },
-      {
-        "title": "Pinecone / Vector Index Epistemology Reference",
-        "url": "https://www.pinecone.io/learn/vector-database/",
-        "type": "TOOL",
-        "desc": "Technical overview of Approximate Nearest Neighbor (ANN) search and high-dimensional cosine partitioning."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-25-turing-queer-ai",
-        "title": "Turing & Queer AI: Synthetic Bodies, Mimicry, and Representation",
-        "note": "Examines how statistical optimization drives automated conformity."
-      },
-      {
-        "slug": "#2026-09-24-lecun-world-models-jepa",
-        "title": "JEPA & LeCun's World Models",
-        "note": "Investigates joint embeddings as non-generative abstractions of reality."
-      }
-    ],
+    "gallery-images": [],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "foucault",
       "borges",
@@ -2514,23 +1747,9 @@
     "thumbnail": "assets/images/thumbnails/this-is-not-a-human.webp",
     "image_alt": "Ceci n'est pas un être humain.",
     "aspect_ratio": "h-tall-1",
-    "gallery-images": [
-      {
-        "path": "assets/images/operational-surveillance.gif",
-        "image": "assets/images/operational-surveillance.gif",
-        "thumbnail": "assets/images/operational-surveillance.gif",
-        "alt": "Eye traps human figure.",
-        "title": ""
-      }
-    ],
+    "gallery-images": [],
     "links": [],
-    "backlinks": [
-      {
-        "slug": "#2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "note": "Cognitive capitalism and post-Fordism missed the body. Synthetic hormones, algorithmic desire, and molecular governmentality redefined modern power"
-      }
-    ],
+    "backlinks": [],
     "tags": [
       "vision-models",
       "image",
@@ -2580,38 +1799,8 @@
     "image_alt": "Coral-pink and black glitch collage featuring Alan Turing, surrounded by brain scans, circuit boards, Rorschach inkblots, and digital artifacts.",
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
-    "links": [
-      {
-        "title": "e-flux journal: Abnormal Encephalization in the Age of Machine Learning",
-        "url": "https://www.e-flux.com/journal/75/67133/abnormal-encephalization-in-the-age-of-machine-learning/",
-        "type": "PAPER",
-        "desc": "Matteo Pasquinelli's foundational essay on the sociomorphic origins of machine intelligence (Issue #75)."
-      },
-      {
-        "title": "Computing Machinery and Intelligence (Mind, 1950)",
-        "url": "https://doi.org/10.1093/mind/LIX.236.433",
-        "type": "ARCHIVE",
-        "desc": "Alan Turing's original text introducing the Imitation Game via gender simulation across teleprinters."
-      },
-      {
-        "title": "Intelligent Machinery (1948 NPL Report)",
-        "url": "https://www.alanturing.net/intelligent_machinery/",
-        "type": "ARCHIVE",
-        "desc": "Turing's early formulation of 'unorganized machines' learning through interference and mistakes."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-26-foucault-borges-vector-space",
-        "title": "Foucault in the Latent Space",
-        "note": "Explores continuous metric spaces and high-dimensional panoptic discipline."
-      },
-      {
-        "slug": "#2026-09-24-lecun-world-models-jepa",
-        "title": "JEPA & LeCun's World Models",
-        "note": "Critiques generative token mimicry versus structural world representation."
-      }
-    ],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "alan-turing",
       "queer-theory",
@@ -2664,38 +1853,8 @@
     "image_alt": "Digital art of a glowing red human brain centrally positioned against a dark background of glitchy binary code, circuit board patterns, and pixelated human face silhouettes.",
     "aspect_ratio": "h-tall-1",
     "gallery-images": [],
-    "links": [
-      {
-        "title": "A Path Towards Autonomous Machine Intelligence (Yann LeCun, 2022)",
-        "url": "https://openreview.net/pdf?id=BZ5a1r-kVsf",
-        "type": "PAPER",
-        "desc": "Foundational position paper proposing the 6-module architecture for autonomous agents and non-generative JEPA world models."
-      },
-      {
-        "title": "I-JEPA: Self-Supervised Learning from Images (CVPR 2023)",
-        "url": "https://arxiv.org/abs/2301.08243",
-        "type": "PAPER",
-        "desc": "Meta AI's implementation predicting abstract representations in latent space rather than generating low-level pixels."
-      },
-      {
-        "title": "V-JEPA 2: Video Joint Embedding Predictive Architecture",
-        "url": "https://arxiv.org/abs/2506.09985",
-        "type": "PAPER",
-        "desc": "Meta's progress in learning video representations from high frame-rate data."
-      }
-    ],
-    "backlinks": [
-      {
-        "slug": "#2026-09-25-turing-queer-ai",
-        "title": "Turing & Queer AI: Synthetic Bodies, Mimicry, and Representation",
-        "note": "Examines how statistical optimization drives automated conformity."
-      },
-      {
-        "slug": "#2026-09-26-foucault-borges-meaning",
-        "title": "Foucault, Borges, and the Invisible Grids of AI",
-        "note": "How machines stopped sorting the world into folders and started mapping it in space."
-      }
-    ],
+    "links": [],
+    "backlinks": [],
     "tags": [
       "yann-lecun",
       "jepa",
