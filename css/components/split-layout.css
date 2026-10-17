@@ -71,15 +71,49 @@
 }
 
 .split-layout.reader-open .grid-column {
-  width: 44%;
+  width: 38%;
 }
 
 .split-layout.reader-open .post-column {
-  width: 56%;
+  width: 62%;
   transform: translate3d(0, 0, 0);
   opacity: 1;
   visibility: visible;
 }
+
+/* Intermediate Laptop Breakpoint (1081px - 1650px):
+   - Grid becomes a curated 1-column feed
+   - Header filter buttons collapse to icon-only pills with compact padding
+*/
+@media (max-width: 1650px) {
+  .split-layout.reader-open .grid-column {
+    width: 36%;
+    padding: 1.5rem 1.4rem 3rem 1.4rem;
+  }
+
+  .split-layout.reader-open .post-column {
+    width: 64%;
+  }
+
+  /* Collapse format filter buttons to icon-only */
+  .split-layout.reader-open .matrix-filter-btn {
+    padding: 0 0.5rem;
+    gap: 0;
+    min-width: 28px;
+    justify-content: center;
+  }
+
+  .split-layout.reader-open .matrix-filter-btn span {
+    display: none;
+  }
+
+  .split-layout.reader-open .header-legend {
+    font-size: 0.58rem;
+  }
+
+}
+
+
 
 /* ==============================================================================
    COMPONENT: UNIFIED MATRIX HEADER (LEGEND & CONTROLS ALIGNED)
@@ -512,8 +546,8 @@
   border-color: var(--accent-coral, #e84a5f);
 }
 
-/* Responsive Stacking & Sliding Viewport (< 980px Width) */
-@media (max-width: 980px) {
+/* Responsive Stacking & Sliding Viewport (< 1080px Width) */
+@media (max-width: 1080px) {
   .split-layout {
     display: block !important;
     width: 100vw !important;
@@ -547,12 +581,9 @@
     top: 0 !important;
   }
 
-  /* Matrix Grid: 3 columns when width is < 980px */
+  /* Matrix Grid: Handled fluidly by container queries in card-matrix.css */
   .card-grid-matrix,
-  .split-layout .card-grid-matrix,
-  .split-layout.reader-open .card-grid-matrix {
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 1.3rem 1rem !important;
+  .split-layout .card-grid-matrix {
     max-width: 100% !important;
   }
 
@@ -628,6 +659,7 @@
 
 /* Smallest Media Breakpoint (<= 600px): Change Matrix Grid to 2 Columns */
 @media (max-width: 600px) {
+
   .card-grid-matrix,
   .split-layout .card-grid-matrix,
   .split-layout.reader-open .card-grid-matrix {

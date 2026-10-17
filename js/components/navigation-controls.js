@@ -32,7 +32,7 @@
     if (btn.id === "dispatch-log-btn") {
       const rail = document.querySelector(".sidebar-rail");
       const railRect = rail ? rail.getBoundingClientRect() : null;
-      if (railRect && window.innerWidth > 980) {
+      if (railRect && window.innerWidth > 1080) {
         panel.style.left = `${railRect.right + 8}px`;
         panel.style.top = `${btn.getBoundingClientRect().top}px`;
         panel.style.transform = "none";
@@ -523,7 +523,7 @@
 
     function scrollCurrentView(toBottom = false) {
       const splitLayout = document.querySelector(".split-layout");
-      const isMobile = window.innerWidth <= 980;
+      const isMobile = window.innerWidth <= 1080;
       const isReaderActive =
         splitLayout && splitLayout.classList.contains("mobile-reader-active");
 

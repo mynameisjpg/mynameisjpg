@@ -27,7 +27,9 @@
   background-color: var(--bg-panel, #161616);
   border-left: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.1));
   box-shadow: -12px 0 35px rgba(0, 0, 0, 0.6);
+  outline: none;
 }
+
 
 .reader-content-container {
   max-width: 800px;
@@ -966,9 +968,10 @@ video.responsive-short {
 }
 
 /* Responsive adjustments */
-@media (max-width: 980px) {
+@media (max-width: 1080px) {
   .post-column,
   .essay-column {
     overflow-y: auto;
   }
 }
+

@@ -198,9 +198,10 @@
       scrollCardIntoViewWithTransition(targetCard);
     }
 
-    if (window.innerWidth <= 980) {
+    if (window.innerWidth <= 1080) {
       showReaderPaneMobile();
     }
+
 
     // Update URL Hash for direct deep-linking
     if (
@@ -288,7 +289,7 @@
         <svg class="close-chevron-svg" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg>
       </button>
 
-      <div class="reader-scroll-wrapper">
+      <div class="reader-scroll-wrapper" tabindex="-1">
         <div class="reader-content-container">
           <!-- Return to Grid Feed Button (Mobile / Narrow Screens) -->
           <button type="button" class="btn-return-grid" onclick="showGridFeedMobile()" aria-label="Return to Grid Feed">
@@ -578,8 +579,17 @@
       document.body.appendChild(engScript);
     }
 
-    // Smooth scroll reader to top on post change
-    pane.scrollTo({ top: 0, behavior: "smooth" });
+    // Smooth scroll reader to top and focus scroll wrapper for immediate wheel/keyboard control
+    const scrollWrapper = pane.querySelector(".reader-scroll-wrapper");
+    if (scrollWrapper) {
+      scrollWrapper.scrollTo({ top: 0, behavior: "smooth" });
+      try {
+        scrollWrapper.focus({ preventScroll: true });
+      } catch (e) {}
+    } else {
+      pane.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
 
     // Defer heavy KaTeX math parsing & Mermaid diagram rendering until after the drawer transition completes (350ms)
     const runDeferredEnhancements = () => {
@@ -727,6 +737,27 @@
       }
     }
   });
+
+  // Responsive Layout Synchronization: Cleanly adapt open reader pane across breakpoints on window resize
+  let resizeDebounceTimer = null;
+  window.addEventListener("resize", () => {
+    if (resizeDebounceTimer) clearTimeout(resizeDebounceTimer);
+    resizeDebounceTimer = setTimeout(() => {
+      const splitLayout = document.querySelector(".split-layout");
+      if (!splitLayout || !splitLayout.classList.contains("reader-open")) return;
+
+      if (window.innerWidth <= 1080) {
+        if (!splitLayout.classList.contains("mobile-reader-active")) {
+          splitLayout.classList.add("mobile-reader-active");
+        }
+      } else {
+        if (splitLayout.classList.contains("mobile-reader-active")) {
+          splitLayout.classList.remove("mobile-reader-active");
+        }
+      }
+    }, 150);
+  });
+
 
   /**
    * Dispatch Sharing Handlers

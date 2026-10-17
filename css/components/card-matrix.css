@@ -15,29 +15,48 @@
   padding-bottom: 4rem;
 }
 
-/* Reader Open State: keep max-width strictly bounded to 1100px to avoid enlargement blowup */
+/* Reader Open State: 
+   Default to 2 columns on wide desktop (> 1650px) */
 .split-layout.reader-open .card-grid-matrix {
   max-width: 1100px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem 1rem;
+}
+
+/* Under 1650px Viewport or tight column width: 
+   Collapse grid column to a clean single-column curated feed */
+@media (max-width: 1650px) {
+  .split-layout.reader-open .card-grid-matrix {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 
 /* Fluid responsive grid based on actual container width:
-   Only switches to 3 columns once the column width is actually 980px or less,
-   completely preventing the sudden card blowup glitch during drawer transitions */
-@container gridcol (max-width: 980px) {
-  .card-grid-matrix,
-  .split-layout.reader-open .card-grid-matrix {
+   Handles reader-closed fluid column reflows */
+@container gridcol (max-width: 1100px) {
+  .split-layout:not(.reader-open) .card-grid-matrix {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.3rem 0.95rem;
   }
 }
 
-@container gridcol (max-width: 620px) {
-  .card-grid-matrix,
-  .split-layout.reader-open .card-grid-matrix {
+@container gridcol (max-width: 760px) {
+  .split-layout:not(.reader-open) .card-grid-matrix {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem 0.75rem;
   }
 }
+
+@container gridcol (max-width: 480px) {
+  .card-grid-matrix,
+  .split-layout.reader-open .card-grid-matrix {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+
 
 .grid-card {
   position: relative;
@@ -369,9 +388,9 @@
   text-transform: uppercase;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1080px) {
   .card-grid-matrix,
-  .split-layout.reader-open .card-grid-matrix {
+  .split-layout:not(.reader-open) .card-grid-matrix {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.3rem 1rem;
     max-width: 100%;
@@ -380,11 +399,12 @@
 
 @media (max-width: 600px) {
   .card-grid-matrix,
-  .split-layout.reader-open .card-grid-matrix {
+  .split-layout:not(.reader-open) .card-grid-matrix {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem 0.65rem;
   }
 }
+
 
 /* Infinite Scroll Sentinel & Load More Component */
 .matrix-sentinel-loader {
