@@ -7,10 +7,8 @@ date: "2026-10-06 11:46:45 -0300"
 author: "Juan P. Giusepponi"
 status: "draft"
 format: "resource"
-topic:
-  pillar: "Language, LLMs & Artificial Intelligence"
-  subtopic: "LLM architectures and mechanics"
 tags:
+  - "language-llms"
   - "toolkit"
   - "github"
   - "repo"

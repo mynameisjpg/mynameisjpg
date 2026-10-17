@@ -11,11 +11,8 @@ status: "published"
 
 format: "essay"
 
-topic:
-  pillar: "Philosophy of the Image & Visual Culture"
-  subtopic: "Aesthetics as ideology and interface politics"
-
 tags:
+  - "philosophy-image"
   - "ai-mascots"
   - "dots"
   - "muse"

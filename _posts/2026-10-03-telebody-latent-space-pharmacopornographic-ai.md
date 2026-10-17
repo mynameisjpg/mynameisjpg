@@ -11,11 +11,8 @@ status: "draft"
 
 format: "essay"
 
-topic:
-  pillar: "Philosophy and Critical Theory"
-  subtopic: "Somatopolitics & Latent Space"
-
 tags:
+  - "philosophy-critical-theory"
   - "paul-b-preciado"
   - "generative-ai"
   - "bernard-stiegler"

@@ -7,9 +7,6 @@ date: "2026-10-14 01:52:39 -0300"
 author: "Juan P. Giusepponi"
 status: "published"
 format: "resource"
-topic:
-  pillar: "Art worth sharing"
-  subtopic: "Graphic Design"
 tags:
   - "web-graphics"
   - "dithering"

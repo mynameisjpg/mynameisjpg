@@ -11,11 +11,8 @@ status: "published"
 
 format: "essay"
 
-topic:
-  pillar: "Philosophy and Critical Theory"
-  subtopic: "Biopolitics & Pharmacopornography"
-
 tags:
+  - "philosophy-critical-theory"
   - "paul-b-preciado"
   - "michel-foucault"
   - "governance"

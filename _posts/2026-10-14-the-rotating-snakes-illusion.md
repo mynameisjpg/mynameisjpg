@@ -7,10 +7,8 @@ date: "2026-10-14 14:06:03 -0300"
 author: "Juan P. Giusepponi"
 status: "published"
 format: "bookmark"
-topic:
-  pillar: "Visual Perception & Psychology of Seeing"
-  subtopic: "Visual illusions and optical paradoxes"
 tags:
+  - "visual-perception"
   - "vision"
   - "illusion"
   - "visual-illusions"

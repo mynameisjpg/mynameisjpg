@@ -314,10 +314,41 @@
           <!-- TIER 1: ABOVE TITLE ARCHIVAL BADGES -->
           <header class="post-header-meta-top">
             <span class="meta-chip chip-primary">${post.format}</span>
-            ${post.category && post.category !== post.format && post.category !== post.pillar ? `<a href="network.html?tag=${encodeURIComponent(post.category)}" class="meta-text-link" title="Explore ${post.category} in Taxonomy Node Map">${post.category}</a>` : ""}
-            ${post.media ? `<span class="meta-text-item">MEDIA: ${post.media}</span>` : ""}
-            ${post.pillar ? `<a href="network.html?tag=${encodeURIComponent(post.pillar)}" class="meta-text-link" title="Explore ${post.pillar} in Taxonomy Node Map">${post.pillar}</a>` : ""}
-            ${post.subtopic ? `<a href="network.html?tag=${encodeURIComponent(post.subtopic)}" class="meta-text-link" title="Explore ${post.subtopic} in Taxonomy Node Map">${post.subtopic}</a>` : ""}
+            ${post.category && post.category !== post.format ? `<a href="network.html?tag=${encodeURIComponent(post.category)}" class="meta-chip meta-chip-category" title="Explore ${post.category} in Taxonomy Node Map">${post.category}</a>` : ""}
+            ${post.media ? `<span class="meta-chip meta-chip-media">MEDIA: ${post.media}</span>` : ""}
+            ${(() => {
+              const canonicalFoundations = new Set([
+                "ai", "design", "philosophy", "perception", "psychology", "tech",
+                "vision", "semiotics", "tools", "analysis", "data", "branding",
+                "graphics", "art"
+              ]);
+              const rawTags = Array.isArray(post.tags) ? post.tags : [];
+              const cleanTags = rawTags.map(t => String(t).trim().replace(/^#/, "")).filter(Boolean);
+              const foundTags = [];
+              const normalTags = [];
+              const seen = new Set();
+              
+              cleanTags.forEach(t => {
+                const lower = t.toLowerCase();
+                if (seen.has(lower)) return;
+                seen.add(lower);
+                if (canonicalFoundations.has(lower)) {
+                  foundTags.push(t);
+                } else {
+                  normalTags.push(t);
+                }
+              });
+
+              const fndHtml = foundTags.map(f => 
+                `<a href="network.html?tag=${encodeURIComponent(f)}" class="meta-chip meta-chip-foundation" title="Explore Foundation [${f.toUpperCase()}] in Taxonomy Node Map">${f.toUpperCase()}</a>`
+              ).join("");
+
+              const tagHtml = normalTags.map(t => 
+                `<a href="network.html?tag=${encodeURIComponent(t)}" class="meta-chip meta-chip-tag" title="Explore #${t} in Taxonomy Node Map">#${t}</a>`
+              ).join("");
+
+              return fndHtml + tagHtml;
+            })()}
           </header>
 
           <!-- TITLE & SUBTITLE -->

@@ -11,11 +11,8 @@ status: "published"
 
 format: "essay"
 
-topic:
-  pillar: "Philosophy of the Image & Visual Culture"
-  subtopic: "Modes of seeing and visual semiotics"
-
 tags:
+  - "philosophy-image"
   - "harun-farocki"
   - "vilem-flusser"
   - "operational-images"

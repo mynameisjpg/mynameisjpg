@@ -8,10 +8,8 @@ last_modified_at: "2026-10-10 13:18:06 -0300"
 author: "Juan P. Giusepponi"
 status: "published"
 format: "essay"
-topic:
-  pillar: "Philosophy of the Image & Visual Culture"
-  subtopic: "Epistemology of representation"
 tags:
+  - "philosophy-image"
   - "branding"
   - "design"
   - "visual-culture"

@@ -11,11 +11,8 @@ author: "Juan P. Giusepponi"
 status: "draft"
 format: "essay"
 
-topic:
-  pillar: "ai-perception"
-  subtopic: "synthetic-statistical-image"
-
 tags:
+  - "ai-perception"
   - "multimodal-ai"
   - "benchmark-design"
   - "scientific-visualization"

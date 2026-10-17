@@ -7,10 +7,8 @@ date: "2026-09-26 18:57:13 -0300"
 author: "Juan P. Giusepponi"
 status: "published"
 format: "resource"
-topic:
-  pillar: "Language, LLMs & Artificial Intelligence"
-  subtopic: "Human vs. machine intelligence and benchmarking"
 tags:
+  - "language-llms"
   - "course"
   - "career"
   - "computer sciences"

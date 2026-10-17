@@ -12,11 +12,8 @@ status: "published"
 
 format: "essay"
 
-topic:
-  pillar: "Language, LLMs & Artificial Intelligence"
-  subtopic: "Human vs. machine intelligence and benchmarking"
-
 tags:
+  - "language-llms"
   - "yann-lecun"
   - "jepa"
   - "physics"

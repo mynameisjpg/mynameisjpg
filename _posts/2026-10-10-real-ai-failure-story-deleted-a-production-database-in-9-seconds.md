@@ -7,10 +7,8 @@ date: "2026-10-10 11:57:34 -0300"
 author: "Juan P. Giusepponi"
 status: "published"
 format: "bookmark"
-topic:
-  pillar: "Language, LLMs & Artificial Intelligence"
-  subtopic: "AI safety, alignment and extreme risk evaluation"
 tags:
+  - "language-llms"
   - "video"
   - "ai"
   - "ai-agents"

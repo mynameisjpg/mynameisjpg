@@ -7,10 +7,8 @@ date: "2026-09-30 05:43:20 -0300"
 author: "Juan P. Giusepponi"
 status: "published"
 format: "resource"
-topic:
-  pillar: "AI Perception, Culture & Representation"
-  subtopic: "Computer vision vs. human perception"
 tags:
+  - "ai-perception"
   - "toolkit"
   - "github"
   - "repo"

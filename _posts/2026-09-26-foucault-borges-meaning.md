@@ -12,11 +12,8 @@ status: "published"
 
 format: "essay"
 
-topic:
-  pillar: "Philosophy of the Image & Visual Culture"
-  subtopic: "Epistemology of representation"
-
 tags:
+  - "philosophy-image"
   - "foucault"
   - "borges"
   - "vector-databases"

@@ -46,24 +46,12 @@ def _to_bool(val, default=True):
     return str(val).strip().lower() != "false"
 
 
-def _resolve_taxonomy(meta, canonical_pillars):
-    topic = meta.get("topic", {})
-    raw_pillar = topic.get("pillar", "") if isinstance(topic, dict) else meta.get("pillar", "")
-    raw_subtopic = topic.get("subtopic", "") if isinstance(topic, dict) else meta.get("subtopic", "")
-
-    matched_pil = match_canonical_pillar(raw_pillar, canonical_pillars)
-    pillar = matched_pil["title"] if matched_pil else raw_pillar
-    pillar_id = matched_pil["id"] if matched_pil else (slugify(raw_pillar) if raw_pillar else "")
-
-    matched_sub = match_canonical_subtopic(raw_subtopic, canonical_pillars)
-    subtopic = matched_sub["title"] if matched_sub else raw_subtopic
-    subtopic_id = matched_sub["id"] if matched_sub else (slugify(raw_subtopic) if raw_subtopic else "")
-
+def _resolve_taxonomy(meta, canonical_pillars=None):
     return {
-        "pillar": pillar,
-        "pillar_id": pillar_id,
-        "subtopic": subtopic,
-        "subtopic_id": subtopic_id,
+        "pillar": "",
+        "pillar_id": "",
+        "subtopic": "",
+        "subtopic_id": "",
     }
 
 

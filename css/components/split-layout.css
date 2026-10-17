@@ -54,7 +54,7 @@
 @media (min-width: 1081px) {
   .grid-column,
   .split-layout .grid-column {
-    width: 38%;
+    width: 40%;
     padding: 1.8rem var(--sidebar-width, 48px) 3.5rem var(--sidebar-width, 48px);
     transition: none;
   }
@@ -62,7 +62,7 @@
   .post-column,
   .essay-column,
   .split-layout .post-column {
-    width: 62%;
+    width: 60%;
     position: fixed;
     top: 0;
     right: 0;
@@ -81,20 +81,20 @@
 
 
 /* Intermediate Laptop Breakpoint (1081px - 1650px):
-   - Left index column gets 36% width, reader gets 64%
+   - Left index column gets 40% width, reader gets 60%
    - Header filter buttons collapse to icon-only pills with compact padding
 */
 @media (min-width: 1081px) and (max-width: 1650px) {
   .grid-column,
   .split-layout .grid-column {
-    width: 36%;
+    width: 40%;
     padding: 1.5rem var(--sidebar-width, 48px) 3rem var(--sidebar-width, 48px);
   }
 
   .post-column,
   .essay-column,
   .split-layout .post-column {
-    width: 64%;
+    width: 60%;
   }
 
   /* Collapse format filter buttons to icon-only */
@@ -559,7 +559,7 @@
     height: 100% !important;
     min-height: 100% !important;
     overflow-y: auto !important;
-    padding: 1.5rem 1.25rem 5rem 1.25rem !important;
+    padding: 1.75rem clamp(1.75rem, 5vw, 2.5rem) 5rem clamp(1.75rem, 5vw, 2.5rem) !important;
     box-sizing: border-box !important;
     display: block !important;
     visibility: visible !important;

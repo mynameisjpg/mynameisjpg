@@ -12,11 +12,8 @@ status: "published"
 format: "note"
 category: "reflection"
 
-topic:
-  pillar: "Philosophy of the Image & Visual Culture"
-  subtopic: "Epistemology of representation"
-
 tags:
+  - "philosophy-image"
   - "byung-chul-han"
   - "shanzhai"
   - "deconstruction"

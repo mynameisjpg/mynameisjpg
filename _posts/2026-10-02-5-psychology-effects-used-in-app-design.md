@@ -7,10 +7,8 @@ date: "2026-10-02 00:36:56 -0300"
 author: "Juan P. Giusepponi"
 status: "published"
 format: "note"
-topic:
-  pillar: "Visual Perception & Psychophysics"
-  subtopic: "Cognitive and Visual Biases"
 tags:
+  - "visual-perception"
   - "observations"
   - "app-design"
   - "ui"

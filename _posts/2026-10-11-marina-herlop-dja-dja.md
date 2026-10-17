@@ -7,9 +7,6 @@ date: "2026-10-11 05:39:42 -0300"
 author: "Juan P. Giusepponi"
 status: "published"
 format: "bookmark"
-topic:
-  pillar: "Art worth sharing"
-  subtopic: "Otherworldly Music"
 tags:
   - "art"
   - "art-of-the-day"

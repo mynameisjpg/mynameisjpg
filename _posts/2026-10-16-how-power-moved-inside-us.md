@@ -12,11 +12,8 @@ status: "published"
 format: "note"
 category: "observations"
 
-topic:
-  pillar: "Philosophy of the Image & Visual Culture"
-  subtopic: "Biopolitics and algorithmic control"
-
 tags:
+  - "philosophy-image"
   - "genealogy-of-power"
   - "michel-foucault"
   - "paul-b-preciado"

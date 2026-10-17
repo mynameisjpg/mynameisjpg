@@ -7,10 +7,8 @@ date: "2026-10-14 05:36:15 -0300"
 author: "Juan P. Giusepponi"
 status: "published"
 format: "bookmark"
-topic:
-  pillar: "Philosophy and Critical Theory"
-  subtopic: "Geo-Politics"
 tags:
+  - "philosophy-critical-theory"
   - "video"
   - "climatechange"
   - "interview"

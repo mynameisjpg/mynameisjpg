@@ -8,11 +8,14 @@
    ============================================================================== */
 .post-header-meta-top {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 0.5rem 0.65rem;
   margin-bottom: 1.25rem;
   min-width: 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .meta-chip {
@@ -28,6 +31,9 @@
   align-items: center;
   border: 1px solid var(--border-faint);
   white-space: nowrap;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: all var(--transition-fast);
 }
 
 .meta-chip.chip-primary {
@@ -42,12 +48,38 @@
   border-color: var(--accent-coral-border);
   cursor: pointer;
   text-decoration: none;
-  transition: all var(--transition-fast);
 }
 
 .meta-chip.meta-chip-category:hover {
   background: var(--accent-coral);
   color: #121212;
+}
+
+.meta-chip.meta-chip-foundation {
+  color: var(--accent-cyan, #4e95ff);
+  background: rgba(78, 149, 255, 0.1);
+  border: 1px solid rgba(78, 149, 255, 0.35);
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+}
+
+.meta-chip.meta-chip-foundation:hover {
+  background: rgba(78, 149, 255, 0.25);
+  color: #ffffff;
+  border-color: rgba(78, 149, 255, 0.7);
+}
+
+.meta-chip.meta-chip-tag {
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-faint);
+  cursor: pointer;
+}
+
+.meta-chip.meta-chip-tag:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-bright);
+  border-color: var(--border-subtle);
 }
 
 .meta-chip.meta-chip-media {

@@ -7,10 +7,8 @@ date: "2026-10-09 22:45:59 -0300"
 author: "Juan P. Giusepponi"
 status: "published"
 format: "resource"
-topic:
-  pillar: "Language, LLMs & Artificial Intelligence"
-  subtopic: "LLM architectures and mechanics"
 tags:
+  - "language-llms"
   - "toolkit"
   - "ai"
   - "graphify"

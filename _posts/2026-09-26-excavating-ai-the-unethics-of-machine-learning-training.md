@@ -7,10 +7,8 @@ date: "2026-09-26 11:19:08 -0300"
 author: "Juan P. Giusepponi"
 status: "published"
 format: "bookmark"
-topic:
-  pillar: "AI Perception, Culture & Representation"
-  subtopic: "The political economy of synthetic media and digital labor"
 tags:
+  - "ai-perception"
   - "vision-models"
   - "image"
   - "imagenet"

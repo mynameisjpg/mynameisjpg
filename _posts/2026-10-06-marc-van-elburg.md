@@ -7,10 +7,8 @@ date: "2026-10-06 10:15:01 -0300"
 author: "Juan P. Giusepponi"
 status: "published"
 format: "bookmark"
-topic:
-  pillar: "AI Perception, Culture & Representation"
-  subtopic: "Computer vision vs. human perception"
 tags:
+  - "ai-perception"
   - "ai"
   - "animation"
   - "surrealism"

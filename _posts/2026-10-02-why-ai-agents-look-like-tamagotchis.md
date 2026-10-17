@@ -12,11 +12,8 @@ status: "published"
 format: "note"
 category: "observations"
 
-topic:
-  pillar: "Philosophy of the Image & Visual Culture"
-  subtopic: "Interface politics & product psychology"
-
 tags:
+  - "philosophy-image"
   - "ai-mascots"
   - "product-design"
   - "ux-psychology"

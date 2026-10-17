@@ -11,11 +11,8 @@ status: "published"
 
 format: "essay"
 
-topic:
-  pillar: "AI Perception, Culture & Representation"
-  subtopic: "Synthetic Identity & Normative Machines"
-
 tags:
+  - "ai-perception"
   - "alan-turing"
   - "queer-theory"
   - "imitation-game"

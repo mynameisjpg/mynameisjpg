@@ -13,11 +13,8 @@ format: "resource"
 category: "tool/software"
 resource_url: "https://github.com/mynameisjpg/perceptual-vision-eval"
 
-topic:
-  pillar: "Visual Perception & Psychophysics"
-  subtopic: "Anatomy and psychophysics of vision"
-
 tags:
+  - "visual-perception"
   - "toolkit"
   - "free"
   - "download"

@@ -12,11 +12,8 @@ status: "published"
 format: "note"
 category: "reflections"
 
-topic:
-  pillar: "Visual Perception & Psychophysics"
-  subtopic: "Anatomy and psychophysics of vision"
-
 tags:
+  - "visual-perception"
   - "reflections"
   - "observations"
   - "generative-video"

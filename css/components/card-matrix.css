@@ -16,12 +16,15 @@
 }
 
 /* Desktop Master-Detail Grid Matrix (> 1080px):
-   Always 1 column curated index feed alongside the active reader */
+   Balanced 2-column curated index feed alongside the active reader */
 @media (min-width: 1081px) {
   .card-grid-matrix {
     max-width: 100%;
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+    margin: 0 auto;
+    padding: 0 0 4rem 0;
+    box-sizing: border-box;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 1rem;
   }
 }
 
@@ -89,7 +92,7 @@
 }
 
 .grid-card:hover {
-  transform: scale(1.03);
+  transform: translateY(-3px);
   z-index: var(--z-card-hover);
   box-shadow:
     0 12px 32px rgba(0, 0, 0, 0.65),
@@ -113,7 +116,7 @@
   box-shadow:
     0 0 32px rgba(232, 74, 95, 0.3),
     var(--shadow-selected);
-  transform: scale(1.03);
+  transform: translateY(-2px);
   z-index: var(--z-card-active);
   border-color: var(--accent-coral);
 }
@@ -151,15 +154,15 @@
   animation: featuredGlowPulse 4.5s ease-in-out infinite;
 }
 
-/* Span 2 only in multi-column mobile feed (between 601px and 1080px) */
-@media (min-width: 601px) and (max-width: 1080px) {
+/* Span 2 in multi-column layouts (desktop 2-col or tablet 3-col) */
+@media (min-width: 601px) {
   .grid-card.card-featured {
     grid-column: span 2;
   }
 }
 
-/* On desktop (1-col feed) or small phones, featured card spans 1 column */
-@media (min-width: 1081px), (max-width: 600px) {
+/* On small phones, featured card spans 1 column */
+@media (max-width: 600px) {
   .grid-card.card-featured {
     grid-column: span 1;
   }

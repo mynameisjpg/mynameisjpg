@@ -5,9 +5,6 @@ date: "2026-10-14 03:00:00 -0300"
 author: "Juan P. Giusepponi"
 status: "draft"
 format: "bookmark"
-topic:
-  pillar: "Art worth sharing"
-  subtopic: "Art Vaults"
 tags:
   - "art"
   - "4d"

@@ -729,20 +729,20 @@ function createGlitterSphereNodeMesh(radius, colorHex, tier = "tag", emissiveInt
 }
 
 const CANONICAL_FOUNDATIONS = [
-  { id: "ai", name: "AI", slug: "ai", order: 1, pillars: ["ai-perception", "language-llms"] },
-  { id: "design", name: "Design", slug: "design", order: 2, pillars: ["philosophy-image"] },
-  { id: "philosophy", name: "Philosophy", slug: "philosophy", order: 3, pillars: ["philosophy-image", "philosophy-critical-theory"] },
-  { id: "perception", name: "Perception", slug: "perception", order: 4, pillars: ["visual-perception"] },
-  { id: "psychology", name: "Psychology", slug: "psychology", order: 5, pillars: ["visual-perception", "philosophy-image"] },
-  { id: "tech", name: "Tech", slug: "tech", order: 6, pillars: ["ai-perception", "language-llms", "philosophy-critical-theory"] },
-  { id: "vision", name: "Vision", slug: "vision", order: 7, pillars: ["ai-perception", "visual-perception", "philosophy-image"] },
-  { id: "semiotics", name: "Semiotics", slug: "semiotics", order: 8, pillars: ["philosophy-image", "philosophy-critical-theory"] },
-  { id: "tools", name: "Tools", slug: "tools", order: 9, pillars: ["ai-perception", "language-llms"] },
-  { id: "analysis", name: "Analysis", slug: "analysis", order: 10, pillars: ["ai-perception", "visual-perception", "language-llms", "philosophy-critical-theory"] },
-  { id: "data", name: "Data", slug: "data", order: 11, pillars: ["ai-perception", "language-llms"] },
-  { id: "branding", name: "Branding", slug: "branding", order: 12, pillars: ["philosophy-image"] },
-  { id: "graphics", name: "Graphics", slug: "graphics", order: 13, pillars: ["ai-perception", "visual-perception", "philosophy-image"] },
-  { id: "art", name: "Art", slug: "art", order: 14, pillars: ["ai-perception", "philosophy-image"] }
+  { id: "ai", name: "AI", slug: "ai", order: 1 },
+  { id: "design", name: "Design", slug: "design", order: 2 },
+  { id: "philosophy", name: "Philosophy", slug: "philosophy", order: 3 },
+  { id: "perception", name: "Perception", slug: "perception", order: 4 },
+  { id: "psychology", name: "Psychology", slug: "psychology", order: 5 },
+  { id: "tech", name: "Tech", slug: "tech", order: 6 },
+  { id: "vision", name: "Vision", slug: "vision", order: 7 },
+  { id: "semiotics", name: "Semiotics", slug: "semiotics", order: 8 },
+  { id: "tools", name: "Tools", slug: "tools", order: 9 },
+  { id: "analysis", name: "Analysis", slug: "analysis", order: 10 },
+  { id: "data", name: "Data", slug: "data", order: 11 },
+  { id: "branding", name: "Branding", slug: "branding", order: 12 },
+  { id: "graphics", name: "Graphics", slug: "graphics", order: 13 },
+  { id: "art", name: "Art", slug: "art", order: 14 }
 ];
 
 function getCanonicalFoundations() {
