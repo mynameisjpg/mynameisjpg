@@ -49,7 +49,7 @@ featured: true
 shareable: true
 allow_embed: true
 image:
-  path: "assets/images/artcraft_adobe.gif"
+  path: "assets/images/artcraft-1.png"
   alt: ""
   in-gallery: false
 
