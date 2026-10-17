@@ -17,7 +17,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -131,7 +131,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -236,7 +236,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -308,7 +308,7 @@
         "date": "2026.10.14"
       },
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -862,7 +862,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -875,7 +875,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -1907,7 +1907,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -1963,7 +1963,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -2218,7 +2218,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -2263,7 +2263,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -2310,7 +2310,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -2357,7 +2357,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -2758,7 +2758,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -2792,7 +2792,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -4216,7 +4216,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -4236,7 +4236,7 @@
         "date": "2026.10.14"
       },
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -4811,7 +4811,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -4837,7 +4837,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -5359,7 +5359,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -5384,7 +5384,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -5571,7 +5571,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -5584,7 +5584,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -5610,7 +5610,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -5623,7 +5623,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -5872,7 +5872,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -5885,7 +5885,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -6096,7 +6096,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -6109,7 +6109,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -7432,7 +7432,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -7445,7 +7445,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -7471,7 +7471,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -7484,7 +7484,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -7910,7 +7910,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -7923,7 +7923,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -8107,7 +8107,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -8120,7 +8120,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -8183,7 +8183,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -8196,7 +8196,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -8222,7 +8222,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -8235,7 +8235,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -8523,7 +8523,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -8536,7 +8536,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -9606,7 +9606,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -9619,7 +9619,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -9754,7 +9754,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -9767,7 +9767,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -10986,7 +10986,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -10999,7 +10999,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -11249,7 +11249,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -11262,7 +11262,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -11326,7 +11326,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -11339,7 +11339,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -11365,7 +11365,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -11378,7 +11378,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -11781,7 +11781,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -11794,7 +11794,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -11895,7 +11895,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -11908,7 +11908,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -12196,7 +12196,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -12209,7 +12209,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -12753,7 +12753,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -12766,7 +12766,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -13057,7 +13057,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -13070,7 +13070,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -13210,7 +13210,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -13223,7 +13223,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
@@ -13818,7 +13818,7 @@
       {
         "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "date": "2026.10.17",
         "format": "RESOURCE",
         "foundations": [
@@ -13831,7 +13831,7 @@
     ],
     "links": [
       {
-        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "title": "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]",
         "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
         "format": "RESOURCE",
         "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",

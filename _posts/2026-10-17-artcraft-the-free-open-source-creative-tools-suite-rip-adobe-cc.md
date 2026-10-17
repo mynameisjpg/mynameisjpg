@@ -1,11 +1,11 @@
 ---
 # UNTITLED.JPG DISPATCH METADATA
-title: "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]"
+title: "Artcraft: the Free & Open-Source Creative Suite [RIP Adobe CC?]"
 subtitle: "All of the Adobe subsprison apps, re-made with AI-assistance and for free? Well, October's the month of the dead, they say. And Artcraft launched to slay."
 excerpt: "Image editing, vector illustration, video, photography, PDFs, motion graphics, page layout, interface design, word processing, audio, presentations, CAD and spreadsheets: thirteen native, open-source apps from the ArtCraft team, built in Rust and free to use."
-date: "2026-10-17 11:38:46 -0300"
+date: "2026-10-17 12:38:46 -0300"
 author: "Juan Pablo Giusepponi"
-status: "draft"
+status: "published"
 format: "resource"
 category: "tool/software"
 tags:
@@ -76,13 +76,13 @@ resource_url: "https://getartcraft.com/apps"
 sys_id: "SYS_202610_RES"
 ---
 
-## A note from a life-long Adobe ~~[cracked]~~ Software user.
+## A note from a life-long Adobe [🏴‍☠️] Software user.
 
 I started drawing with **characters on MS-DOS**, then moved to **Paint and pixel art** when I got my first Windows PC in the early 90s, before promptly moving on to the first version of **Adobe's Photoshop** as soon as I could buy the magazine that came with the CD installer *(or was it a diskette?)*. An entire life, watching a monopoly offering digital products, each time performing worse and harder to use and afford; watching how sheer industrial domination became an insufferable necessity of a profession I was practically born to grow into.
 
 Of course, there is GIMP, DaVinci Resolve, InkScape, and dozens other [Open-Source alternatives](https://github.com/KenneyNL/Adobe-Alternatives) to every Adobe software. But for those like me who grew up with Adobe's systems, and never got used to the free alternatives, those of us who learned to ~~pirate~~ torrent software, crack and patch, in the early internet years, and learned to edit video, animate drawing, edit and retouch photography, even programming [RIP Dreamweaver], `this launch -even in its alpha, vibe-coded, unfinished state- is a huge symbolic deal`. 
 
-<video controls autoplay loop muted playsinline style='height: auto; width="100%"' src="assets/images/Artcraft_JuanGiusepponi.mp4"></video>
+<video class="responsive-video" controls autoplay loop muted playsinline src="assets/images/Artcraft_JuanGiusepponi.mp4"></video>
 
 ## 01. What is Artcraft and what is all the hype about?
 
@@ -103,15 +103,14 @@ But more than enough has been said already in the cloud, so I encourage you to s
 
 ## 03. Key Specs
 
-- **Architecture / Stack:** Runs on Mac, Windows, Linux and the Browser · Apache 2.0 open source license · **Early Alpha**
+- **Architecture / Stack:** Runs on Mac, Windows, Linux and the Browser · **Early Alpha**
 - **Primary Advantage:** IT'S FREE
-- **Repository / Documentation:** [The Free & Open-Source Creative Tools Suite [RIP CC]](https://getartcraft.com/apps)
+- **Repository / Documentation:** [The Free & Open-Source Creative Tools Suite (RIP CC)](https://getartcraft.com/apps)
 
 ---
 
 ### One key development to watch:
-> Will the iron sword of Adobe's monopoly execute ArtCraft before it matures?
-Or is this the beginning of the end of the Adobe reign?
+> Will the iron sword of Adobe's monopoly execute ArtCraft before it matures? ... Or is this the beginning of the end of the Adobe reign?
 
 ---
 
