@@ -12,8 +12,22 @@
     "name": "AI",
     "label": "AI",
     "type": "foundation",
-    "count": 9,
+    "count": 10,
     "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      },
       {
         "id": "2026-10-10-real-ai-failure-story-deleted-a-production-database-in-9-seconds",
         "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
@@ -136,6 +150,13 @@
     ],
     "links": [
       {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      },
+      {
         "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
         "slug": "real-ai-failure-story-deleted-a-production-database-in-9-seconds",
         "format": "BOOKMARK",
@@ -205,7 +226,8 @@
       "AI Perception",
       "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
       "Language & LLMs",
-      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
+      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
+      "TOOLS & USEFUL ARTIFACTS"
     ],
     "subtopics": [
       "AI SAFETY, ALIGNMENT AND EXTREME RISK EVALUATION",
@@ -213,6 +235,7 @@
       "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
       "INTERFACE POLITICS & PRODUCT PSYCHOLOGY",
       "LLM ARCHITECTURES AND MECHANICS",
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
       "SYNTHETIC IDENTITY & NORMATIVE MACHINES"
     ],
     "order": 1,
@@ -224,7 +247,7 @@
     "name": "Design",
     "label": "Design",
     "type": "foundation",
-    "count": 5,
+    "count": 6,
     "posts": [
       {
         "id": "the-2d-vault",
@@ -241,6 +264,20 @@
         "pillar": "ART WORTH SHARING",
         "subtopic": "ART VAULTS",
         "url": "posts/the-2d-vault.html"
+      },
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
       },
       {
         "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
@@ -312,6 +349,13 @@
         "date": "2026.10.14"
       },
       {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      },
+      {
         "title": "Untitled Wallpapers for your Mobile?",
         "slug": "want-untitled-wallpapers-for-your-mobile",
         "format": "RESOURCE",
@@ -345,6 +389,7 @@
       "ART WORTH SHARING",
       "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
       "Philosophy of the Image",
+      "TOOLS & USEFUL ARTIFACTS",
       "VISUAL PERCEPTION & PSYCHOPHYSICS"
     ],
     "subtopics": [
@@ -352,6 +397,7 @@
       "EPISTEMOLOGY OF REPRESENTATION",
       "GRAPHIC DESIGN",
       "MODES OF SEEING AND VISUAL SEMIOTICS",
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
       "VISUAL ILLUSIONS AND OPTICAL PARADOXES"
     ],
     "order": 2,
@@ -2126,6 +2172,45 @@
     "connected_tags": []
   },
   {
+    "id": "pillar-tools-useful-artifacts",
+    "name": "TOOLS & USEFUL ARTIFACTS",
+    "label": "TOOLS & USEFUL ARTIFACTS",
+    "type": "pillar",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
     "id": "subtopic-art-vaults",
     "name": "ART VAULTS",
     "label": "ART VAULTS",
@@ -2982,6 +3067,47 @@
     "connected_tags": []
   },
   {
+    "id": "subtopic-open-source-technology-and-software",
+    "name": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+    "label": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+    "type": "subtopic",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [],
+    "connected_tags": []
+  },
+  {
     "id": "subtopic-otherworldly-music",
     "name": "OTHERWORLDLY MUSIC",
     "label": "OTHERWORLDLY MUSIC",
@@ -3573,6 +3699,142 @@
     ]
   },
   {
+    "id": "toolkit",
+    "name": "toolkit",
+    "label": "#toolkit",
+    "type": "tag",
+    "count": 5,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      },
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "foundations": [
+          "ai"
+        ],
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      },
+      {
+        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "date": "2026.10.06",
+        "format": "RESOURCE",
+        "foundations": [
+          "ai",
+          "data"
+        ],
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
+      },
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "foundations": [
+          "ai"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      },
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "foundations": [],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      },
+      {
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
+        "date": "2026.10.06"
+      },
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Data",
+      "Design"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION",
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+      "TOOLS & USEFUL ARTIFACTS",
+      "VISUAL PERCEPTION & PSYCHOPHYSICS"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "COMPUTER VISION VS. HUMAN PERCEPTION",
+      "LLM ARCHITECTURES AND MECHANICS",
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "github",
+      "repo",
+      "canvas-api",
+      "free",
+      "ai-agents",
+      "web-graphics"
+    ]
+  },
+  {
     "id": "biopolitics",
     "name": "biopolitics",
     "label": "#biopolitics",
@@ -3687,6 +3949,238 @@
     ]
   },
   {
+    "id": "free",
+    "name": "free",
+    "label": "#free",
+    "type": "tag",
+    "count": 4,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      },
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      },
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "foundations": [],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      },
+      {
+        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "date": "2026.09.26",
+        "format": "RESOURCE",
+        "foundations": [
+          "ai"
+        ],
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+        "url": "posts/harvard-s-computer-science-career-for-free.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      },
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      },
+      {
+        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
+        "slug": "harvard-s-computer-science-career-for-free",
+        "format": "RESOURCE",
+        "url": "posts/harvard-s-computer-science-career-for-free.html",
+        "date": "2026.09.26"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Art",
+      "Design"
+    ],
+    "pillars": [
+      "ART WORTH SHARING",
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+      "TOOLS & USEFUL ARTIFACTS",
+      "VISUAL PERCEPTION & PSYCHOPHYSICS"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "GRAPHIC DESIGN",
+      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "canvas-api",
+      "toolkit",
+      "web-graphics",
+      "download",
+      "software",
+      "creative"
+    ]
+  },
+  {
+    "id": "github",
+    "name": "github",
+    "label": "#github",
+    "type": "tag",
+    "count": 4,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      },
+      {
+        "id": "2026-10-09-save-70x-tokens-code-review-graph",
+        "slug": "save-70x-tokens-code-review-graph",
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "date": "2026.10.09",
+        "format": "RESOURCE",
+        "foundations": [
+          "ai"
+        ],
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/save-70x-tokens-code-review-graph.html"
+      },
+      {
+        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "date": "2026.10.06",
+        "format": "RESOURCE",
+        "foundations": [
+          "ai",
+          "data"
+        ],
+        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
+      },
+      {
+        "id": "2026-09-30-relate-anything-github-repo",
+        "slug": "relate-anything-github-repo",
+        "title": "Relate Anything [github repo]",
+        "date": "2026.09.30",
+        "format": "RESOURCE",
+        "foundations": [
+          "ai"
+        ],
+        "pillar": "AI PERCEPTION & REPRESENTATION",
+        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
+        "url": "posts/relate-anything-github-repo.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      },
+      {
+        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
+        "slug": "save-70x-tokens-code-review-graph",
+        "format": "RESOURCE",
+        "url": "posts/save-70x-tokens-code-review-graph.html",
+        "date": "2026.10.09"
+      },
+      {
+        "title": "OpenResearch: Your AI Lab Partner [github repo]",
+        "slug": "openresearch-your-ai-lab-partner-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
+        "date": "2026.10.06"
+      },
+      {
+        "title": "Relate Anything [github repo]",
+        "slug": "relate-anything-github-repo",
+        "format": "RESOURCE",
+        "url": "posts/relate-anything-github-repo.html",
+        "date": "2026.09.30"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Data",
+      "Design"
+    ],
+    "pillars": [
+      "AI PERCEPTION & REPRESENTATION",
+      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "COMPUTER VISION VS. HUMAN PERCEPTION",
+      "LLM ARCHITECTURES AND MECHANICS",
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "repo",
+      "ai-agents",
+      "web-graphics",
+      "canvas-api",
+      "software"
+    ]
+  },
+  {
     "id": "politics",
     "name": "politics",
     "label": "#politics",
@@ -3797,118 +4291,6 @@
       "epistemology",
       "video",
       "climatechange"
-    ]
-  },
-  {
-    "id": "toolkit",
-    "name": "toolkit",
-    "label": "#toolkit",
-    "type": "tag",
-    "count": 4,
-    "posts": [
-      {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
-      },
-      {
-        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "date": "2026.10.06",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
-      },
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
-      },
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "foundations": [],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      },
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "foundations": [
-      "AI",
-      "Data"
-    ],
-    "pillars": [
-      "AI PERCEPTION & REPRESENTATION",
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-      "VISUAL PERCEPTION & PSYCHOPHYSICS"
-    ],
-    "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION",
-      "COMPUTER VISION VS. HUMAN PERCEPTION",
-      "LLM ARCHITECTURES AND MECHANICS"
-    ],
-    "connected_tags": [
-      "repo",
-      "github",
-      "ai-agents",
-      "graphify",
-      "graph",
-      "antigravity"
     ]
   },
   {
@@ -4239,6 +4621,100 @@
     ]
   },
   {
+    "id": "canvas-api",
+    "name": "canvas-api",
+    "label": "#canvas-api",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      },
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      },
+      {
+        "id": "2026-09-28-perceptual-vision-eval-toolkit",
+        "slug": "perceptual-vision-eval-toolkit",
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "date": "2026.09.28",
+        "format": "RESOURCE",
+        "foundations": [],
+        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
+        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
+        "url": "posts/perceptual-vision-eval-toolkit.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      },
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
+        "slug": "perceptual-vision-eval-toolkit",
+        "format": "RESOURCE",
+        "url": "posts/perceptual-vision-eval-toolkit.html",
+        "date": "2026.09.28"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Art",
+      "Design"
+    ],
+    "pillars": [
+      "ART WORTH SHARING",
+      "TOOLS & USEFUL ARTIFACTS",
+      "VISUAL PERCEPTION & PSYCHOPHYSICS"
+    ],
+    "subtopics": [
+      "ANATOMY AND PSYCHOPHYSICS OF VISION",
+      "GRAPHIC DESIGN",
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "free",
+      "toolkit",
+      "web-graphics",
+      "download",
+      "software",
+      "creative"
+    ]
+  },
+  {
     "id": "epistemology",
     "name": "epistemology",
     "label": "#epistemology",
@@ -4328,99 +4804,6 @@
       "politics",
       "queer-theory",
       "generative-ai"
-    ]
-  },
-  {
-    "id": "free",
-    "name": "free",
-    "label": "#free",
-    "type": "tag",
-    "count": 3,
-    "posts": [
-      {
-        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
-        "slug": "want-untitled-wallpapers-for-your-mobile",
-        "title": "Untitled Wallpapers for your Mobile?",
-        "date": "2026.10.14",
-        "format": "RESOURCE",
-        "foundations": [
-          "design",
-          "art"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "GRAPHIC DESIGN",
-        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
-      },
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "foundations": [],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      },
-      {
-        "id": "2026-09-26-harvard-s-computer-science-career-for-free",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "date": "2026.09.26",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING",
-        "url": "posts/harvard-s-computer-science-career-for-free.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Untitled Wallpapers for your Mobile?",
-        "slug": "want-untitled-wallpapers-for-your-mobile",
-        "format": "RESOURCE",
-        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
-        "date": "2026.10.14"
-      },
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      },
-      {
-        "title": "Harvard's Computer Science Career for FREE? Yes, CS50 is public!",
-        "slug": "harvard-s-computer-science-career-for-free",
-        "format": "RESOURCE",
-        "url": "posts/harvard-s-computer-science-career-for-free.html",
-        "date": "2026.09.26"
-      }
-    ],
-    "foundations": [
-      "AI",
-      "Art",
-      "Design"
-    ],
-    "pillars": [
-      "ART WORTH SHARING",
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-      "VISUAL PERCEPTION & PSYCHOPHYSICS"
-    ],
-    "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION",
-      "GRAPHIC DESIGN",
-      "HUMAN VS. MACHINE INTELLIGENCE AND BENCHMARKING"
-    ],
-    "connected_tags": [
-      "canvas-api",
-      "download",
-      "web-graphics",
-      "dithering",
-      "wallpaper",
-      "graphic-design"
     ]
   },
   {
@@ -4518,98 +4901,6 @@
       "foveated-vision",
       "ai-evaluations",
       "saccadic-suppression"
-    ]
-  },
-  {
-    "id": "github",
-    "name": "github",
-    "label": "#github",
-    "type": "tag",
-    "count": 3,
-    "posts": [
-      {
-        "id": "2026-10-09-save-70x-tokens-code-review-graph",
-        "slug": "save-70x-tokens-code-review-graph",
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "date": "2026.10.09",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/save-70x-tokens-code-review-graph.html"
-      },
-      {
-        "id": "2026-10-06-openresearch-your-ai-lab-partner-github-repo",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "date": "2026.10.06",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai",
-          "data"
-        ],
-        "pillar": "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE",
-        "subtopic": "LLM ARCHITECTURES AND MECHANICS",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html"
-      },
-      {
-        "id": "2026-09-30-relate-anything-github-repo",
-        "slug": "relate-anything-github-repo",
-        "title": "Relate Anything [github repo]",
-        "date": "2026.09.30",
-        "format": "RESOURCE",
-        "foundations": [
-          "ai"
-        ],
-        "pillar": "AI PERCEPTION & REPRESENTATION",
-        "subtopic": "COMPUTER VISION VS. HUMAN PERCEPTION",
-        "url": "posts/relate-anything-github-repo.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Use up to 70x less tokens with this tool [code-review-graph]",
-        "slug": "save-70x-tokens-code-review-graph",
-        "format": "RESOURCE",
-        "url": "posts/save-70x-tokens-code-review-graph.html",
-        "date": "2026.10.09"
-      },
-      {
-        "title": "OpenResearch: Your AI Lab Partner [github repo]",
-        "slug": "openresearch-your-ai-lab-partner-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/openresearch-your-ai-lab-partner-github-repo.html",
-        "date": "2026.10.06"
-      },
-      {
-        "title": "Relate Anything [github repo]",
-        "slug": "relate-anything-github-repo",
-        "format": "RESOURCE",
-        "url": "posts/relate-anything-github-repo.html",
-        "date": "2026.09.30"
-      }
-    ],
-    "foundations": [
-      "AI",
-      "Data"
-    ],
-    "pillars": [
-      "AI PERCEPTION & REPRESENTATION",
-      "LANGUAGE, LLMS & ARTIFICIAL INTELLIGENCE"
-    ],
-    "subtopics": [
-      "COMPUTER VISION VS. HUMAN PERCEPTION",
-      "LLM ARCHITECTURES AND MECHANICS"
-    ],
-    "connected_tags": [
-      "toolkit",
-      "repo",
-      "ai-agents",
-      "graphify",
-      "graph",
-      "antigravity"
     ]
   },
   {
@@ -5490,76 +5781,6 @@
     ]
   },
   {
-    "id": "canvas-api",
-    "name": "canvas-api",
-    "label": "#canvas-api",
-    "type": "tag",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
-        "slug": "want-untitled-wallpapers-for-your-mobile",
-        "title": "Untitled Wallpapers for your Mobile?",
-        "date": "2026.10.14",
-        "format": "RESOURCE",
-        "foundations": [
-          "design",
-          "art"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "GRAPHIC DESIGN",
-        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
-      },
-      {
-        "id": "2026-09-28-perceptual-vision-eval-toolkit",
-        "slug": "perceptual-vision-eval-toolkit",
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "date": "2026.09.28",
-        "format": "RESOURCE",
-        "foundations": [],
-        "pillar": "VISUAL PERCEPTION & PSYCHOPHYSICS",
-        "subtopic": "ANATOMY AND PSYCHOPHYSICS OF VISION",
-        "url": "posts/perceptual-vision-eval-toolkit.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Untitled Wallpapers for your Mobile?",
-        "slug": "want-untitled-wallpapers-for-your-mobile",
-        "format": "RESOURCE",
-        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
-        "date": "2026.10.14"
-      },
-      {
-        "title": "Perceptual Vision Eval Toolkit: Psychophysical Metrics for Canvas/UI Analysis",
-        "slug": "perceptual-vision-eval-toolkit",
-        "format": "RESOURCE",
-        "url": "posts/perceptual-vision-eval-toolkit.html",
-        "date": "2026.09.28"
-      }
-    ],
-    "foundations": [
-      "Art",
-      "Design"
-    ],
-    "pillars": [
-      "ART WORTH SHARING",
-      "VISUAL PERCEPTION & PSYCHOPHYSICS"
-    ],
-    "subtopics": [
-      "ANATOMY AND PSYCHOPHYSICS OF VISION",
-      "GRAPHIC DESIGN"
-    ],
-    "connected_tags": [
-      "download",
-      "free",
-      "web-graphics",
-      "dithering",
-      "wallpaper",
-      "graphic-design"
-    ]
-  },
-  {
     "id": "computer-vision",
     "name": "computer-vision",
     "label": "#computer-vision",
@@ -6036,6 +6257,81 @@
       "embeddings",
       "rag",
       "latent-space"
+    ]
+  },
+  {
+    "id": "film",
+    "name": "film",
+    "label": "#film",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "the-4d-vault",
+        "slug": "the-4d-vault",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "ART VAULTS",
+        "url": "posts/the-4d-vault.html"
+      },
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
+        "slug": "the-4d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-4d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Art",
+      "Design",
+      "Perception"
+    ],
+    "pillars": [
+      "ART WORTH SHARING",
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "ART VAULTS",
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "4d",
+      "video",
+      "animation",
+      "performance",
+      "music",
+      "time-based-art"
     ]
   },
   {
@@ -6736,6 +7032,82 @@
     ]
   },
   {
+    "id": "photography",
+    "name": "photography",
+    "label": "#photography",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      },
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "branding",
+          "design",
+          "philosophy"
+        ],
+        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
+        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
+        "url": "posts/images-are-dead.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      },
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Branding",
+      "Design",
+      "Philosophy"
+    ],
+    "pillars": [
+      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "EPISTEMOLOGY OF REPRESENTATION",
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
+    ]
+  },
+  {
     "id": "product",
     "name": "product",
     "label": "#product",
@@ -7351,6 +7723,80 @@
     ]
   },
   {
+    "id": "web-graphics",
+    "name": "web-graphics",
+    "label": "#web-graphics",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      },
+      {
+        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "title": "Untitled Wallpapers for your Mobile?",
+        "date": "2026.10.14",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "art"
+        ],
+        "pillar": "ART WORTH SHARING",
+        "subtopic": "GRAPHIC DESIGN",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      },
+      {
+        "title": "Untitled Wallpapers for your Mobile?",
+        "slug": "want-untitled-wallpapers-for-your-mobile",
+        "format": "RESOURCE",
+        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
+        "date": "2026.10.14"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Art",
+      "Design"
+    ],
+    "pillars": [
+      "ART WORTH SHARING",
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "GRAPHIC DESIGN",
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "canvas-api",
+      "free",
+      "toolkit",
+      "software",
+      "creative",
+      "adobe"
+    ]
+  },
+  {
     "id": "2d",
     "name": "2d",
     "label": "#2d",
@@ -7552,6 +7998,106 @@
       "performance",
       "music",
       "time-based-art"
+    ]
+  },
+  {
+    "id": "adobe",
+    "name": "adobe",
+    "label": "#adobe",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "photoshop"
+    ]
+  },
+  {
+    "id": "after-effects",
+    "name": "after-effects",
+    "label": "#after-effects",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
     ]
   },
   {
@@ -7845,6 +8391,56 @@
     ]
   },
   {
+    "id": "alternative",
+    "name": "alternative",
+    "label": "#alternative",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
+    ]
+  },
+  {
     "id": "annotation",
     "name": "annotation",
     "label": "#annotation",
@@ -8082,6 +8678,56 @@
       "computer-vision",
       "attention",
       "politics"
+    ]
+  },
+  {
+    "id": "apps",
+    "name": "apps",
+    "label": "#apps",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
     ]
   },
   {
@@ -9765,6 +10411,106 @@
     ]
   },
   {
+    "id": "creative",
+    "name": "creative",
+    "label": "#creative",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "adobe",
+      "photoshop"
+    ]
+  },
+  {
+    "id": "creative-cloud",
+    "name": "creative-cloud",
+    "label": "#creative-cloud",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
+    ]
+  },
+  {
     "id": "curated-read",
     "name": "curated-read",
     "label": "#curated-read",
@@ -10277,6 +11023,56 @@
     ]
   },
   {
+    "id": "designcraft",
+    "name": "designcraft",
+    "label": "#designcraft",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
+    ]
+  },
+  {
     "id": "designers",
     "name": "designers",
     "label": "#designers",
@@ -10489,6 +11285,56 @@
     ]
   },
   {
+    "id": "editing",
+    "name": "editing",
+    "label": "#editing",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
+    ]
+  },
+  {
     "id": "education",
     "name": "education",
     "label": "#education",
@@ -10534,6 +11380,106 @@
       "informatics",
       "networks",
       "llm"
+    ]
+  },
+  {
+    "id": "effectcraft",
+    "name": "effectcraft",
+    "label": "#effectcraft",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
+    ]
+  },
+  {
+    "id": "effects",
+    "name": "effects",
+    "label": "#effects",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
     ]
   },
   {
@@ -10879,53 +11825,53 @@
     ]
   },
   {
-    "id": "film",
-    "name": "film",
-    "label": "#film",
+    "id": "filmcraft",
+    "name": "filmcraft",
+    "label": "#filmcraft",
     "type": "tag",
     "count": 1,
     "posts": [
       {
-        "id": "the-4d-vault",
-        "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
         "foundations": [
-          "art",
-          "perception"
+          "design",
+          "ai"
         ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "ART VAULTS",
-        "url": "posts/the-4d-vault.html"
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
       }
     ],
     "links": [
       {
-        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
-        "slug": "the-4d-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-4d-vault.html",
-        "date": "2026.10.14"
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
       }
     ],
     "foundations": [
-      "Art",
-      "Perception"
+      "AI",
+      "Design"
     ],
     "pillars": [
-      "ART WORTH SHARING"
+      "TOOLS & USEFUL ARTIFACTS"
     ],
     "subtopics": [
-      "ART VAULTS"
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
     ],
     "connected_tags": [
-      "4d",
-      "video",
-      "animation",
-      "performance",
-      "music",
-      "time-based-art"
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
     ]
   },
   {
@@ -12241,6 +13187,56 @@
     ]
   },
   {
+    "id": "illustrator",
+    "name": "illustrator",
+    "label": "#illustrator",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
+    ]
+  },
+  {
     "id": "image-analysis",
     "name": "image-analysis",
     "label": "#image-analysis",
@@ -12378,6 +13374,56 @@
       "pasquinelli",
       "epistemology",
       "biopolitics"
+    ]
+  },
+  {
+    "id": "indesign",
+    "name": "indesign",
+    "label": "#indesign",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
     ]
   },
   {
@@ -13890,6 +14936,56 @@
     ]
   },
   {
+    "id": "open-source",
+    "name": "open-source",
+    "label": "#open-source",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
+    ]
+  },
+  {
     "id": "openai",
     "name": "openai",
     "label": "#openai",
@@ -14181,6 +15277,56 @@
     ]
   },
   {
+    "id": "pdf",
+    "name": "pdf",
+    "label": "#pdf",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
+    ]
+  },
+  {
     "id": "performance",
     "name": "performance",
     "label": "#performance",
@@ -14231,55 +15377,103 @@
     ]
   },
   {
-    "id": "photography",
-    "name": "photography",
-    "label": "#photography",
+    "id": "photocraft",
+    "name": "photocraft",
+    "label": "#photocraft",
     "type": "tag",
     "count": 1,
     "posts": [
       {
-        "id": "2026-10-10-images-are-dead",
-        "slug": "images-are-dead",
-        "title": "Images are Dead. Brands Should Know.",
-        "date": "2026.10.10",
-        "format": "ESSAY",
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
         "foundations": [
-          "branding",
           "design",
-          "philosophy"
+          "ai"
         ],
-        "pillar": "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE",
-        "subtopic": "EPISTEMOLOGY OF REPRESENTATION",
-        "url": "posts/images-are-dead.html"
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
       }
     ],
     "links": [
       {
-        "title": "Images are Dead. Brands Should Know.",
-        "slug": "images-are-dead",
-        "format": "ESSAY",
-        "url": "posts/images-are-dead.html",
-        "date": "2026.10.10"
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
       }
     ],
     "foundations": [
-      "Branding",
-      "Design",
-      "Philosophy"
+      "AI",
+      "Design"
     ],
     "pillars": [
-      "PHILOSOPHY OF THE IMAGE & VISUAL CULTURE"
+      "TOOLS & USEFUL ARTIFACTS"
     ],
     "subtopics": [
-      "EPISTEMOLOGY OF REPRESENTATION"
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
     ],
     "connected_tags": [
-      "visual-culture",
-      "susan-sontag",
-      "identity-politics",
-      "status-economy",
-      "coreification",
-      "aesthetics"
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
+    ]
+  },
+  {
+    "id": "photoshop",
+    "name": "photoshop",
+    "label": "#photoshop",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
     ]
   },
   {
@@ -14774,6 +15968,56 @@
     ]
   },
   {
+    "id": "premiere",
+    "name": "premiere",
+    "label": "#premiere",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
+    ]
+  },
+  {
     "id": "print",
     "name": "print",
     "label": "#print",
@@ -14869,6 +16113,56 @@
       "dots",
       "frontier-ai",
       "viral-loops"
+    ]
+  },
+  {
+    "id": "ps",
+    "name": "ps",
+    "label": "#ps",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
     ]
   },
   {
@@ -15211,6 +16505,56 @@
       "science",
       "deep-research",
       "ai-models"
+    ]
+  },
+  {
+    "id": "resource",
+    "name": "resource",
+    "label": "#resource",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
     ]
   },
   {
@@ -15884,6 +17228,56 @@
     ]
   },
   {
+    "id": "software",
+    "name": "software",
+    "label": "#software",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "creative",
+      "adobe",
+      "photoshop"
+    ]
+  },
+  {
     "id": "somatic-capitalism",
     "name": "somatic-capitalism",
     "label": "#somatic-capitalism",
@@ -16232,6 +17626,56 @@
     ]
   },
   {
+    "id": "suite",
+    "name": "suite",
+    "label": "#suite",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
+    ]
+  },
+  {
     "id": "surrealism",
     "name": "surrealism",
     "label": "#surrealism",
@@ -16379,6 +17823,56 @@
       "photography",
       "coreification",
       "aesthetics"
+    ]
+  },
+  {
+    "id": "svg",
+    "name": "svg",
+    "label": "#svg",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
     ]
   },
   {
@@ -17127,6 +18621,56 @@
     ]
   },
   {
+    "id": "vector",
+    "name": "vector",
+    "label": "#vector",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "date": "2026.10.17",
+        "format": "RESOURCE",
+        "foundations": [
+          "design",
+          "ai"
+        ],
+        "pillar": "TOOLS & USEFUL ARTIFACTS",
+        "subtopic": "OPEN-SOURCE TECHNOLOGY AND SOFTWARE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Artcraft: the Free & Open-Source Creative Tools Suite [RIP Adobe CC]",
+        "slug": "artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
+        "format": "RESOURCE",
+        "url": "posts/artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc.html",
+        "date": "2026.10.17"
+      }
+    ],
+    "foundations": [
+      "AI",
+      "Design"
+    ],
+    "pillars": [
+      "TOOLS & USEFUL ARTIFACTS"
+    ],
+    "subtopics": [
+      "OPEN-SOURCE TECHNOLOGY AND SOFTWARE"
+    ],
+    "connected_tags": [
+      "toolkit",
+      "web-graphics",
+      "canvas-api",
+      "software",
+      "creative",
+      "adobe"
+    ]
+  },
+  {
     "id": "vicreg",
     "name": "vicreg",
     "label": "#vicreg",
@@ -17624,56 +19168,6 @@
       "canvas-api",
       "download",
       "free",
-      "graphic-design"
-    ]
-  },
-  {
-    "id": "web-graphics",
-    "name": "web-graphics",
-    "label": "#web-graphics",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
-        "slug": "want-untitled-wallpapers-for-your-mobile",
-        "title": "Untitled Wallpapers for your Mobile?",
-        "date": "2026.10.14",
-        "format": "RESOURCE",
-        "foundations": [
-          "design",
-          "art"
-        ],
-        "pillar": "ART WORTH SHARING",
-        "subtopic": "GRAPHIC DESIGN",
-        "url": "posts/want-untitled-wallpapers-for-your-mobile.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Untitled Wallpapers for your Mobile?",
-        "slug": "want-untitled-wallpapers-for-your-mobile",
-        "format": "RESOURCE",
-        "url": "posts/want-untitled-wallpapers-for-your-mobile.html",
-        "date": "2026.10.14"
-      }
-    ],
-    "foundations": [
-      "Art",
-      "Design"
-    ],
-    "pillars": [
-      "ART WORTH SHARING"
-    ],
-    "subtopics": [
-      "GRAPHIC DESIGN"
-    ],
-    "connected_tags": [
-      "dithering",
-      "canvas-api",
-      "download",
-      "free",
-      "wallpaper",
       "graphic-design"
     ]
   },
