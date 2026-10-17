@@ -597,7 +597,50 @@
         document.querySelector(".top-dropdown-panel[style*='display: flex'], .top-dropdown-panel[style*='display: block']");
       if (hasOpenDropdown) return;
 
-      if (e.key === "j" || e.key === "ArrowDown") {
+      function scrollStep(upwards = false) {
+        const splitLayout = document.querySelector(".split-layout");
+        const isReaderActive =
+          (splitLayout && splitLayout.classList.contains("reader-open")) ||
+          (splitLayout && splitLayout.classList.contains("mobile-reader-active"));
+
+        if (isReaderActive) {
+          const pane = document.getElementById("essay-reading-pane");
+          const scrollTarget =
+            pane && pane.querySelector(".reader-scroll-wrapper")
+              ? pane.querySelector(".reader-scroll-wrapper")
+              : pane;
+          if (scrollTarget) {
+            scrollTarget.scrollBy({
+              top: upwards ? -240 : 240,
+              behavior: "smooth",
+            });
+            return;
+          }
+        }
+
+        const matrixCol =
+          document.querySelector(".grid-column") ||
+          document.querySelector("[data-component='dispatch-matrix']");
+        if (matrixCol && matrixCol.scrollHeight > matrixCol.clientHeight) {
+          matrixCol.scrollBy({
+            top: upwards ? -240 : 240,
+            behavior: "smooth",
+          });
+        } else {
+          window.scrollBy({
+            top: upwards ? -240 : 240,
+            behavior: "smooth",
+          });
+        }
+      }
+
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        scrollStep(false);
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        scrollStep(true);
+      } else if (e.key === "j" || e.key === "ArrowRight") {
         const appState = getAppState();
         const posts =
           typeof appState.getFilteredAndSortedPosts === "function"
@@ -616,7 +659,7 @@
             );
           }
         }
-      } else if (e.key === "k" || e.key === "ArrowUp") {
+      } else if (e.key === "k" || e.key === "ArrowLeft") {
         const appState = getAppState();
         const posts =
           typeof appState.getFilteredAndSortedPosts === "function"
