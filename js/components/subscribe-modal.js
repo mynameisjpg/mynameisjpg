@@ -240,5 +240,22 @@
     window.closeSubscribeModal = closeSubscribeModal;
     window.initSubscribeAnimation = initSubscribeAnimation;
     window.handleSubscribeSubmit = handleSubscribeSubmit;
+
+    // Global click delegation for subscribe buttons/links
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest(
+        '#sidebar-subscribe-btn, .btn-subscribe, [data-action="subscribe"], a[aria-label="Subscribe"]'
+      );
+      if (btn) {
+        e.preventDefault();
+        openSubscribeModal();
+      }
+    });
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initSubscribeAnimation);
+    } else {
+      initSubscribeAnimation();
+    }
   }
 })();

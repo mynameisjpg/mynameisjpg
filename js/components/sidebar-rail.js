@@ -148,6 +148,22 @@ class SidebarRail extends HTMLElement {
         }
       });
     }
+
+    const subscribeBtn = this.querySelector("#sidebar-subscribe-btn");
+    if (subscribeBtn) {
+      subscribeBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (typeof window.openSubscribeModal === "function") {
+          window.openSubscribeModal();
+        } else {
+          const modal = document.getElementById("subscribe-modal");
+          if (modal && typeof modal.showModal === "function") {
+            modal.showModal();
+          }
+        }
+      });
+    }
   }
 }
 
