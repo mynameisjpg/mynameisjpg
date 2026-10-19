@@ -27,44 +27,68 @@ def parse_yaml_frontmatter(text):
     except Exception:
         pass
 
-    # Basic YAML parser fallback
+    # Basic YAML parser fallback supporting scalar lists, maps, and list of dicts
     metadata = {}
     lines = yaml_text.splitlines()
     current_key = None
+    current_list_item = None
     
+    def _parse_val(v):
+        v = v.strip()
+        if (v.startswith('"') and v.endswith('"')) or (v.startswith("'") and v.endswith("'")):
+            return v[1:-1]
+        if v.lower() == "true":
+            return True
+        if v.lower() == "false":
+            return False
+        if v == "[]":
+            return []
+        if v == "{}":
+            return {}
+        return v
+
     for line in lines:
         stripped = line.strip()
         if not stripped or stripped.startswith("#"):
             continue
         
+        list_kv_match = re.match(r"^\s*-\s+([a-zA-Z0-9_-]+):\s*(.*)$", line)
+        scalar_list_match = re.match(r"^\s*-\s+(.*)$", line)
         indented_kv = re.match(r"^\s+([a-zA-Z0-9_-]+):\s*(.*)$", line)
         top_kv = re.match(r"^([a-zA-Z0-9_-]+):\s*(.*)$", line)
         
-        if line.startswith("  - ") or line.startswith("- "):
-            item = stripped.lstrip("- ").strip('"\'')
-            if current_key:
-                if not isinstance(metadata.get(current_key), list):
-                    metadata[current_key] = []
-                metadata[current_key].append(item)
+        if list_kv_match and current_key:
+            sub_k = list_kv_match.group(1)
+            sub_v = _parse_val(list_kv_match.group(2))
+            if not isinstance(metadata.get(current_key), list):
+                metadata[current_key] = []
+            current_list_item = {sub_k: sub_v}
+            metadata[current_key].append(current_list_item)
+        elif scalar_list_match and not list_kv_match and current_key:
+            item = _parse_val(scalar_list_match.group(1))
+            if not isinstance(metadata.get(current_key), list):
+                metadata[current_key] = []
+            current_list_item = None
+            metadata[current_key].append(item)
         elif indented_kv and current_key:
-            sub_key = indented_kv.group(1)
-            sub_val = indented_kv.group(2).strip().strip('"\'')
-            if not isinstance(metadata.get(current_key), dict):
-                metadata[current_key] = {}
-            metadata[current_key][sub_key] = sub_val
+            sub_k = indented_kv.group(1)
+            sub_v = _parse_val(indented_kv.group(2))
+            if current_list_item is not None:
+                current_list_item[sub_k] = sub_v
+            else:
+                if not isinstance(metadata.get(current_key), dict):
+                    metadata[current_key] = {}
+                metadata[current_key][sub_k] = sub_v
         elif top_kv and not line.startswith(" ") and not line.startswith("\t"):
             key = top_kv.group(1)
-            val = top_kv.group(2).strip().strip('"\'')
+            val_raw = top_kv.group(2).strip()
             current_key = key
+            current_list_item = None
             
-            if val == "":
+            if val_raw == "":
                 metadata[key] = {}
-            elif val.lower() == "true":
-                metadata[key] = True
-            elif val.lower() == "false":
-                metadata[key] = False
             else:
-                metadata[key] = val
+                metadata[key] = _parse_val(val_raw)
     
     return metadata, body_text
 
