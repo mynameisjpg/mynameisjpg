@@ -1042,7 +1042,7 @@
     "name": "art",
     "label": "ART",
     "type": "foundation",
-    "count": 7,
+    "count": 9,
     "posts": [
       {
         "id": "the-music-vault",
@@ -1093,6 +1093,28 @@
           "perception"
         ],
         "url": "posts/the-2d-vault.html"
+      },
+      {
+        "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "date": "2026.10.29",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html"
+      },
+      {
+        "id": "2026-10-29-earthsignchels-daddy-died",
+        "slug": "earthsignchels-daddy-died",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/earthsignchels-daddy-died.html"
       },
       {
         "id": "2026-10-14-want-untitled-wallpapers-for-your-mobile",
@@ -1160,6 +1182,20 @@
         "date": "2026.10.14"
       },
       {
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "format": "BOOKMARK",
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html",
+        "date": "2026.10.29"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "earthsignchels-daddy-died",
+        "format": "BOOKMARK",
+        "url": "posts/earthsignchels-daddy-died.html",
+        "date": "2026.10.11"
+      },
+      {
         "title": "Untitled Wallpapers for your Mobile?",
         "slug": "want-untitled-wallpapers-for-your-mobile",
         "format": "RESOURCE",
@@ -1185,10 +1221,10 @@
     "description": "Digital aesthetics, post-ironic visual culture, generative image creation, and media archaeology.",
     "connected_tags": [
       "art-of-the-day",
+      "music",
       "aesthetics",
       "perception",
       "vault",
-      "music",
       "visual-arts"
     ]
   },
@@ -1388,6 +1424,176 @@
     ]
   },
   {
+    "id": "art-of-the-day",
+    "name": "art-of-the-day",
+    "label": "#art-of-the-day",
+    "type": "tag",
+    "count": 8,
+    "posts": [
+      {
+        "id": "the-music-vault",
+        "slug": "the-music-vault",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception"
+        ],
+        "url": "posts/the-music-vault.html"
+      },
+      {
+        "id": "the-4d-vault",
+        "slug": "the-4d-vault",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception"
+        ],
+        "url": "posts/the-4d-vault.html"
+      },
+      {
+        "id": "the-3d-vault",
+        "slug": "the-3d-vault",
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception"
+        ],
+        "url": "posts/the-3d-vault.html"
+      },
+      {
+        "id": "the-2d-vault",
+        "slug": "the-2d-vault",
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "design",
+          "art",
+          "branding",
+          "perception"
+        ],
+        "url": "posts/the-2d-vault.html"
+      },
+      {
+        "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "date": "2026.10.29",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html"
+      },
+      {
+        "id": "2026-10-29-earthsignchels-daddy-died",
+        "slug": "earthsignchels-daddy-died",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/earthsignchels-daddy-died.html"
+      },
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/marina-herlop-dja-dja.html"
+      },
+      {
+        "id": "2026-10-06-marc-van-elburg",
+        "slug": "marc-van-elburg",
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "date": "2026.10.06",
+        "format": "BOOKMARK",
+        "foundations": [
+          "ai",
+          "art"
+        ],
+        "url": "posts/marc-van-elburg.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "slug": "the-music-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-music-vault.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
+        "slug": "the-4d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-4d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
+        "slug": "the-3d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-3d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
+        "slug": "the-2d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-2d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "format": "BOOKMARK",
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html",
+        "date": "2026.10.29"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "earthsignchels-daddy-died",
+        "format": "BOOKMARK",
+        "url": "posts/earthsignchels-daddy-died.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
+        "slug": "marc-van-elburg",
+        "format": "BOOKMARK",
+        "url": "posts/marc-van-elburg.html",
+        "date": "2026.10.06"
+      }
+    ],
+    "connected_tags": [
+      "art",
+      "music",
+      "perception",
+      "aesthetics",
+      "vault",
+      "sound"
+    ]
+  },
+  {
     "id": "aesthetics",
     "name": "aesthetics",
     "label": "#aesthetics",
@@ -1541,140 +1747,6 @@
       "vault",
       "design",
       "visual-arts"
-    ]
-  },
-  {
-    "id": "art-of-the-day",
-    "name": "art-of-the-day",
-    "label": "#art-of-the-day",
-    "type": "tag",
-    "count": 6,
-    "posts": [
-      {
-        "id": "the-music-vault",
-        "slug": "the-music-vault",
-        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
-        "date": "2026.10.11",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception"
-        ],
-        "url": "posts/the-music-vault.html"
-      },
-      {
-        "id": "the-4d-vault",
-        "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception"
-        ],
-        "url": "posts/the-4d-vault.html"
-      },
-      {
-        "id": "the-3d-vault",
-        "slug": "the-3d-vault",
-        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception"
-        ],
-        "url": "posts/the-3d-vault.html"
-      },
-      {
-        "id": "the-2d-vault",
-        "slug": "the-2d-vault",
-        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "design",
-          "art",
-          "branding",
-          "perception"
-        ],
-        "url": "posts/the-2d-vault.html"
-      },
-      {
-        "id": "2026-10-11-marina-herlop-dja-dja",
-        "slug": "marina-herlop-dja-dja",
-        "title": "Marina Herlop's Dja Dja",
-        "date": "2026.10.11",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art"
-        ],
-        "url": "posts/marina-herlop-dja-dja.html"
-      },
-      {
-        "id": "2026-10-06-marc-van-elburg",
-        "slug": "marc-van-elburg",
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "date": "2026.10.06",
-        "format": "BOOKMARK",
-        "foundations": [
-          "ai",
-          "art"
-        ],
-        "url": "posts/marc-van-elburg.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
-        "slug": "the-music-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-music-vault.html",
-        "date": "2026.10.11"
-      },
-      {
-        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
-        "slug": "the-4d-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-4d-vault.html",
-        "date": "2026.10.14"
-      },
-      {
-        "title": "[ 3D_VAULT ⊳ Untitled.obj ] ◪ All tridimensional ART",
-        "slug": "the-3d-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-3d-vault.html",
-        "date": "2026.10.14"
-      },
-      {
-        "title": "[ 2D_VAULT ⊳ Untitled.jpg ] ◪ All bidimensional ART",
-        "slug": "the-2d-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-2d-vault.html",
-        "date": "2026.10.14"
-      },
-      {
-        "title": "Marina Herlop's Dja Dja",
-        "slug": "marina-herlop-dja-dja",
-        "format": "BOOKMARK",
-        "url": "posts/marina-herlop-dja-dja.html",
-        "date": "2026.10.11"
-      },
-      {
-        "title": "@marc.van.elburg's Surreal-Delirious Expressionism",
-        "slug": "marc-van-elburg",
-        "format": "BOOKMARK",
-        "url": "posts/marc-van-elburg.html",
-        "date": "2026.10.06"
-      }
-    ],
-    "connected_tags": [
-      "art",
-      "perception",
-      "aesthetics",
-      "vault",
-      "music",
-      "sound"
     ]
   },
   {
@@ -1895,6 +1967,117 @@
       "repo",
       "github",
       "video"
+    ]
+  },
+  {
+    "id": "music",
+    "name": "music",
+    "label": "#music",
+    "type": "tag",
+    "count": 5,
+    "posts": [
+      {
+        "id": "the-music-vault",
+        "slug": "the-music-vault",
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception"
+        ],
+        "url": "posts/the-music-vault.html"
+      },
+      {
+        "id": "the-4d-vault",
+        "slug": "the-4d-vault",
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
+        "date": "2026.10.14",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art",
+          "perception"
+        ],
+        "url": "posts/the-4d-vault.html"
+      },
+      {
+        "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "date": "2026.10.29",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html"
+      },
+      {
+        "id": "2026-10-29-earthsignchels-daddy-died",
+        "slug": "earthsignchels-daddy-died",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/earthsignchels-daddy-died.html"
+      },
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
+        "slug": "the-music-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-music-vault.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
+        "slug": "the-4d-vault",
+        "format": "BOOKMARK",
+        "url": "posts/the-4d-vault.html",
+        "date": "2026.10.14"
+      },
+      {
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "format": "BOOKMARK",
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html",
+        "date": "2026.10.29"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "earthsignchels-daddy-died",
+        "format": "BOOKMARK",
+        "url": "posts/earthsignchels-daddy-died.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "connected_tags": [
+      "art",
+      "art-of-the-day",
+      "sound",
+      "perception",
+      "aesthetics",
+      "vault"
     ]
   },
   {
@@ -2971,81 +3154,6 @@
     ]
   },
   {
-    "id": "music",
-    "name": "music",
-    "label": "#music",
-    "type": "tag",
-    "count": 3,
-    "posts": [
-      {
-        "id": "the-music-vault",
-        "slug": "the-music-vault",
-        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
-        "date": "2026.10.11",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception"
-        ],
-        "url": "posts/the-music-vault.html"
-      },
-      {
-        "id": "the-4d-vault",
-        "slug": "the-4d-vault",
-        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
-        "date": "2026.10.14",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art",
-          "perception"
-        ],
-        "url": "posts/the-4d-vault.html"
-      },
-      {
-        "id": "2026-10-11-marina-herlop-dja-dja",
-        "slug": "marina-herlop-dja-dja",
-        "title": "Marina Herlop's Dja Dja",
-        "date": "2026.10.11",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art"
-        ],
-        "url": "posts/marina-herlop-dja-dja.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "[ Untitled.mp3 ◪ MUSIC_VAULT ]",
-        "slug": "the-music-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-music-vault.html",
-        "date": "2026.10.11"
-      },
-      {
-        "title": "[ 4D_VAULT  ] ◪  All time-based ART",
-        "slug": "the-4d-vault",
-        "format": "BOOKMARK",
-        "url": "posts/the-4d-vault.html",
-        "date": "2026.10.14"
-      },
-      {
-        "title": "Marina Herlop's Dja Dja",
-        "slug": "marina-herlop-dja-dja",
-        "format": "BOOKMARK",
-        "url": "posts/marina-herlop-dja-dja.html",
-        "date": "2026.10.11"
-      }
-    ],
-    "connected_tags": [
-      "art",
-      "art-of-the-day",
-      "sound",
-      "perception",
-      "aesthetics",
-      "vault"
-    ]
-  },
-  {
     "id": "paul-b-preciado",
     "name": "paul-b-preciado",
     "label": "#paul-b-preciado",
@@ -3262,6 +3370,79 @@
       "pharmacopornography",
       "biopolitics",
       "epistemology"
+    ]
+  },
+  {
+    "id": "queer-theory",
+    "name": "queer-theory",
+    "label": "#queer-theory",
+    "type": "tag",
+    "count": 3,
+    "posts": [
+      {
+        "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "date": "2026.10.29",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html"
+      },
+      {
+        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "date": "2026.10.03",
+        "format": "ESSAY",
+        "foundations": [
+          "philosophy"
+        ],
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
+      },
+      {
+        "id": "2026-09-25-turing-queer-ai",
+        "slug": "turing-queer-ai",
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "date": "2026.09.25",
+        "format": "ESSAY",
+        "foundations": [
+          "ai"
+        ],
+        "url": "posts/turing-queer-ai.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "format": "BOOKMARK",
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html",
+        "date": "2026.10.29"
+      },
+      {
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "slug": "preciado-pharmacopornographic-episteme-foucault",
+        "format": "ESSAY",
+        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
+        "date": "2026.10.03"
+      },
+      {
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "slug": "turing-queer-ai",
+        "format": "ESSAY",
+        "url": "posts/turing-queer-ai.html",
+        "date": "2026.09.25"
+      }
+    ],
+    "connected_tags": [
+      "biopolitics",
+      "epistemology",
+      "music",
+      "sophie",
+      "anohni",
+      "arca"
     ]
   },
   {
@@ -3707,6 +3888,116 @@
       "film",
       "video",
       "performance"
+    ]
+  },
+  {
+    "id": "artists",
+    "name": "artists",
+    "label": "#artists",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-29-earthsignchels-daddy-died",
+        "slug": "earthsignchels-daddy-died",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/earthsignchels-daddy-died.html"
+      },
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "earthsignchels-daddy-died",
+        "format": "BOOKMARK",
+        "url": "posts/earthsignchels-daddy-died.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "connected_tags": [
+      "art",
+      "art-of-the-day",
+      "music",
+      "barcelona",
+      "sounds-from-the-future",
+      "music-album"
+    ]
+  },
+  {
+    "id": "barcelona",
+    "name": "barcelona",
+    "label": "#barcelona",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-29-earthsignchels-daddy-died",
+        "slug": "earthsignchels-daddy-died",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/earthsignchels-daddy-died.html"
+      },
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "earthsignchels-daddy-died",
+        "format": "BOOKMARK",
+        "url": "posts/earthsignchels-daddy-died.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "connected_tags": [
+      "art",
+      "art-of-the-day",
+      "music",
+      "sounds-from-the-future",
+      "artists",
+      "music-album"
     ]
   },
   {
@@ -4359,6 +4650,63 @@
     ]
   },
   {
+    "id": "identity",
+    "name": "identity",
+    "label": "#identity",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "date": "2026.10.29",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html"
+      },
+      {
+        "id": "2026-10-10-images-are-dead",
+        "slug": "images-are-dead",
+        "title": "Images are Dead. Brands Should Know.",
+        "date": "2026.10.10",
+        "format": "ESSAY",
+        "foundations": [
+          "branding",
+          "design",
+          "philosophy"
+        ],
+        "url": "posts/images-are-dead.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "format": "BOOKMARK",
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html",
+        "date": "2026.10.29"
+      },
+      {
+        "title": "Images are Dead. Brands Should Know.",
+        "slug": "images-are-dead",
+        "format": "ESSAY",
+        "url": "posts/images-are-dead.html",
+        "date": "2026.10.10"
+      }
+    ],
+    "connected_tags": [
+      "music",
+      "sophie",
+      "anohni",
+      "arca",
+      "eartheater",
+      "wendy-carlos"
+    ]
+  },
+  {
     "id": "image",
     "name": "image",
     "label": "#image",
@@ -4523,6 +4871,61 @@
     ]
   },
   {
+    "id": "link",
+    "name": "link",
+    "label": "#link",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-29-earthsignchels-daddy-died",
+        "slug": "earthsignchels-daddy-died",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/earthsignchels-daddy-died.html"
+      },
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "earthsignchels-daddy-died",
+        "format": "BOOKMARK",
+        "url": "posts/earthsignchels-daddy-died.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "connected_tags": [
+      "art",
+      "art-of-the-day",
+      "music",
+      "barcelona",
+      "sounds-from-the-future",
+      "artists"
+    ]
+  },
+  {
     "id": "michel-foucault",
     "name": "michel-foucault",
     "label": "#michel-foucault",
@@ -4634,6 +5037,61 @@
       "film",
       "video",
       "animation"
+    ]
+  },
+  {
+    "id": "music-album",
+    "name": "music-album",
+    "label": "#music-album",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-29-earthsignchels-daddy-died",
+        "slug": "earthsignchels-daddy-died",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/earthsignchels-daddy-died.html"
+      },
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "earthsignchels-daddy-died",
+        "format": "BOOKMARK",
+        "url": "posts/earthsignchels-daddy-died.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "connected_tags": [
+      "art",
+      "art-of-the-day",
+      "music",
+      "barcelona",
+      "sounds-from-the-future",
+      "artists"
     ]
   },
   {
@@ -4973,61 +5431,6 @@
     ]
   },
   {
-    "id": "queer-theory",
-    "name": "queer-theory",
-    "label": "#queer-theory",
-    "type": "tag",
-    "count": 2,
-    "posts": [
-      {
-        "id": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "date": "2026.10.03",
-        "format": "ESSAY",
-        "foundations": [
-          "philosophy"
-        ],
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html"
-      },
-      {
-        "id": "2026-09-25-turing-queer-ai",
-        "slug": "turing-queer-ai",
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "date": "2026.09.25",
-        "format": "ESSAY",
-        "foundations": [
-          "ai"
-        ],
-        "url": "posts/turing-queer-ai.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
-        "slug": "preciado-pharmacopornographic-episteme-foucault",
-        "format": "ESSAY",
-        "url": "posts/preciado-pharmacopornographic-episteme-foucault.html",
-        "date": "2026.10.03"
-      },
-      {
-        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
-        "slug": "turing-queer-ai",
-        "format": "ESSAY",
-        "url": "posts/turing-queer-ai.html",
-        "date": "2026.09.25"
-      }
-    ],
-    "connected_tags": [
-      "biopolitics",
-      "epistemology",
-      "philosophy-critical-theory",
-      "paul-b-preciado",
-      "michel-foucault",
-      "governance"
-    ]
-  },
-  {
     "id": "rag",
     "name": "rag",
     "label": "#rag",
@@ -5076,6 +5479,61 @@
       "vector-databases",
       "embeddings",
       "episteme"
+    ]
+  },
+  {
+    "id": "recommendation",
+    "name": "recommendation",
+    "label": "#recommendation",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-29-earthsignchels-daddy-died",
+        "slug": "earthsignchels-daddy-died",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/earthsignchels-daddy-died.html"
+      },
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "earthsignchels-daddy-died",
+        "format": "BOOKMARK",
+        "url": "posts/earthsignchels-daddy-died.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "connected_tags": [
+      "art",
+      "art-of-the-day",
+      "music",
+      "barcelona",
+      "sounds-from-the-future",
+      "artists"
     ]
   },
   {
@@ -5134,6 +5592,61 @@
     ]
   },
   {
+    "id": "share",
+    "name": "share",
+    "label": "#share",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-29-earthsignchels-daddy-died",
+        "slug": "earthsignchels-daddy-died",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/earthsignchels-daddy-died.html"
+      },
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "earthsignchels-daddy-died",
+        "format": "BOOKMARK",
+        "url": "posts/earthsignchels-daddy-died.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "connected_tags": [
+      "art",
+      "art-of-the-day",
+      "music",
+      "barcelona",
+      "sounds-from-the-future",
+      "artists"
+    ]
+  },
+  {
     "id": "sound",
     "name": "sound",
     "label": "#sound",
@@ -5188,6 +5701,61 @@
       "perception",
       "aesthetics",
       "vault"
+    ]
+  },
+  {
+    "id": "sounds-from-the-future",
+    "name": "sounds-from-the-future",
+    "label": "#sounds-from-the-future",
+    "type": "tag",
+    "count": 2,
+    "posts": [
+      {
+        "id": "2026-10-29-earthsignchels-daddy-died",
+        "slug": "earthsignchels-daddy-died",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/earthsignchels-daddy-died.html"
+      },
+      {
+        "id": "2026-10-11-marina-herlop-dja-dja",
+        "slug": "marina-herlop-dja-dja",
+        "title": "Marina Herlop's Dja Dja",
+        "date": "2026.10.11",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/marina-herlop-dja-dja.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "earthsignchels-daddy-died",
+        "format": "BOOKMARK",
+        "url": "posts/earthsignchels-daddy-died.html",
+        "date": "2026.10.11"
+      },
+      {
+        "title": "Marina Herlop's Dja Dja",
+        "slug": "marina-herlop-dja-dja",
+        "format": "BOOKMARK",
+        "url": "posts/marina-herlop-dja-dja.html",
+        "date": "2026.10.11"
+      }
+    ],
+    "connected_tags": [
+      "art",
+      "art-of-the-day",
+      "music",
+      "barcelona",
+      "artists",
+      "music-album"
     ]
   },
   {
@@ -5939,6 +6507,43 @@
     ]
   },
   {
+    "id": "anohni",
+    "name": "anohni",
+    "label": "#anohni",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "date": "2026.10.29",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "format": "BOOKMARK",
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html",
+        "date": "2026.10.29"
+      }
+    ],
+    "connected_tags": [
+      "music",
+      "sophie",
+      "arca",
+      "eartheater",
+      "wendy-carlos",
+      "queer"
+    ]
+  },
+  {
     "id": "antigravity",
     "name": "antigravity",
     "label": "#antigravity",
@@ -6126,6 +6731,43 @@
     ]
   },
   {
+    "id": "arca",
+    "name": "arca",
+    "label": "#arca",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "date": "2026.10.29",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "format": "BOOKMARK",
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html",
+        "date": "2026.10.29"
+      }
+    ],
+    "connected_tags": [
+      "music",
+      "sophie",
+      "anohni",
+      "eartheater",
+      "wendy-carlos",
+      "queer"
+    ]
+  },
+  {
     "id": "archeology",
     "name": "archeology",
     "label": "#archeology",
@@ -6198,43 +6840,6 @@
       "sculpture",
       "object",
       "product"
-    ]
-  },
-  {
-    "id": "artists",
-    "name": "artists",
-    "label": "#artists",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-11-marina-herlop-dja-dja",
-        "slug": "marina-herlop-dja-dja",
-        "title": "Marina Herlop's Dja Dja",
-        "date": "2026.10.11",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art"
-        ],
-        "url": "posts/marina-herlop-dja-dja.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Marina Herlop's Dja Dja",
-        "slug": "marina-herlop-dja-dja",
-        "format": "BOOKMARK",
-        "url": "posts/marina-herlop-dja-dja.html",
-        "date": "2026.10.11"
-      }
-    ],
-    "connected_tags": [
-      "art",
-      "art-of-the-day",
-      "music",
-      "barcelona",
-      "sounds-from-the-future",
-      "music-album"
     ]
   },
   {
@@ -6384,43 +6989,6 @@
       "deconstruction",
       "reflections",
       "philosophy"
-    ]
-  },
-  {
-    "id": "barcelona",
-    "name": "barcelona",
-    "label": "#barcelona",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-11-marina-herlop-dja-dja",
-        "slug": "marina-herlop-dja-dja",
-        "title": "Marina Herlop's Dja Dja",
-        "date": "2026.10.11",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art"
-        ],
-        "url": "posts/marina-herlop-dja-dja.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Marina Herlop's Dja Dja",
-        "slug": "marina-herlop-dja-dja",
-        "format": "BOOKMARK",
-        "url": "posts/marina-herlop-dja-dja.html",
-        "date": "2026.10.11"
-      }
-    ],
-    "connected_tags": [
-      "art",
-      "art-of-the-day",
-      "music",
-      "sounds-from-the-future",
-      "artists",
-      "music-album"
     ]
   },
   {
@@ -6939,6 +7507,43 @@
     ]
   },
   {
+    "id": "charli-xcx",
+    "name": "charli-xcx",
+    "label": "#charli-xcx",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "date": "2026.10.29",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "format": "BOOKMARK",
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html",
+        "date": "2026.10.29"
+      }
+    ],
+    "connected_tags": [
+      "music",
+      "sophie",
+      "anohni",
+      "arca",
+      "eartheater",
+      "wendy-carlos"
+    ]
+  },
+  {
     "id": "charts",
     "name": "charts",
     "label": "#charts",
@@ -7306,6 +7911,43 @@
       "informatics",
       "networks",
       "ai"
+    ]
+  },
+  {
+    "id": "contrapoints",
+    "name": "contrapoints",
+    "label": "#contrapoints",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "date": "2026.10.29",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "format": "BOOKMARK",
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html",
+        "date": "2026.10.29"
+      }
+    ],
+    "connected_tags": [
+      "music",
+      "sophie",
+      "anohni",
+      "arca",
+      "eartheater",
+      "wendy-carlos"
     ]
   },
   {
@@ -8098,6 +8740,43 @@
     ]
   },
   {
+    "id": "eartheater",
+    "name": "eartheater",
+    "label": "#eartheater",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "date": "2026.10.29",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "format": "BOOKMARK",
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html",
+        "date": "2026.10.29"
+      }
+    ],
+    "connected_tags": [
+      "music",
+      "sophie",
+      "anohni",
+      "arca",
+      "wendy-carlos",
+      "queer"
+    ]
+  },
+  {
     "id": "editing",
     "name": "editing",
     "label": "#editing",
@@ -8249,6 +8928,43 @@
       "canvas-api",
       "software",
       "creative"
+    ]
+  },
+  {
+    "id": "electronic-music",
+    "name": "electronic-music",
+    "label": "#electronic-music",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "date": "2026.10.29",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "format": "BOOKMARK",
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html",
+        "date": "2026.10.29"
+      }
+    ],
+    "connected_tags": [
+      "music",
+      "sophie",
+      "anohni",
+      "arca",
+      "eartheater",
+      "wendy-carlos"
     ]
   },
   {
@@ -9402,45 +10118,6 @@
     ]
   },
   {
-    "id": "identity",
-    "name": "identity",
-    "label": "#identity",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-10-images-are-dead",
-        "slug": "images-are-dead",
-        "title": "Images are Dead. Brands Should Know.",
-        "date": "2026.10.10",
-        "format": "ESSAY",
-        "foundations": [
-          "branding",
-          "design",
-          "philosophy"
-        ],
-        "url": "posts/images-are-dead.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Images are Dead. Brands Should Know.",
-        "slug": "images-are-dead",
-        "format": "ESSAY",
-        "url": "posts/images-are-dead.html",
-        "date": "2026.10.10"
-      }
-    ],
-    "connected_tags": [
-      "philosophy-image",
-      "branding",
-      "design",
-      "visual-culture",
-      "visual-semiotics",
-      "philosophy"
-    ]
-  },
-  {
     "id": "identity-politics",
     "name": "identity-politics",
     "label": "#identity-politics",
@@ -10228,43 +10905,6 @@
     ]
   },
   {
-    "id": "link",
-    "name": "link",
-    "label": "#link",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-11-marina-herlop-dja-dja",
-        "slug": "marina-herlop-dja-dja",
-        "title": "Marina Herlop's Dja Dja",
-        "date": "2026.10.11",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art"
-        ],
-        "url": "posts/marina-herlop-dja-dja.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Marina Herlop's Dja Dja",
-        "slug": "marina-herlop-dja-dja",
-        "format": "BOOKMARK",
-        "url": "posts/marina-herlop-dja-dja.html",
-        "date": "2026.10.11"
-      }
-    ],
-    "connected_tags": [
-      "art",
-      "art-of-the-day",
-      "music",
-      "barcelona",
-      "sounds-from-the-future",
-      "artists"
-    ]
-  },
-  {
     "id": "lists",
     "name": "lists",
     "label": "#lists",
@@ -10790,43 +11430,6 @@
     ]
   },
   {
-    "id": "music-album",
-    "name": "music-album",
-    "label": "#music-album",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-11-marina-herlop-dja-dja",
-        "slug": "marina-herlop-dja-dja",
-        "title": "Marina Herlop's Dja Dja",
-        "date": "2026.10.11",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art"
-        ],
-        "url": "posts/marina-herlop-dja-dja.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Marina Herlop's Dja Dja",
-        "slug": "marina-herlop-dja-dja",
-        "format": "BOOKMARK",
-        "url": "posts/marina-herlop-dja-dja.html",
-        "date": "2026.10.11"
-      }
-    ],
-    "connected_tags": [
-      "art",
-      "art-of-the-day",
-      "music",
-      "barcelona",
-      "sounds-from-the-future",
-      "artists"
-    ]
-  },
-  {
     "id": "musicians",
     "name": "musicians",
     "label": "#musicians",
@@ -11314,6 +11917,43 @@
       "video",
       "animation",
       "music"
+    ]
+  },
+  {
+    "id": "philosophy-tube",
+    "name": "philosophy-tube",
+    "label": "#philosophy-tube",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "date": "2026.10.29",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "format": "BOOKMARK",
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html",
+        "date": "2026.10.29"
+      }
+    ],
+    "connected_tags": [
+      "music",
+      "sophie",
+      "anohni",
+      "arca",
+      "eartheater",
+      "wendy-carlos"
     ]
   },
   {
@@ -11962,6 +12602,43 @@
     ]
   },
   {
+    "id": "queer",
+    "name": "queer",
+    "label": "#queer",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "date": "2026.10.29",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "format": "BOOKMARK",
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html",
+        "date": "2026.10.29"
+      }
+    ],
+    "connected_tags": [
+      "music",
+      "sophie",
+      "anohni",
+      "arca",
+      "eartheater",
+      "wendy-carlos"
+    ]
+  },
+  {
     "id": "queerness",
     "name": "queerness",
     "label": "#queerness",
@@ -11996,43 +12673,6 @@
       "imitation-game",
       "sociomorphic-ai",
       "pasquinelli"
-    ]
-  },
-  {
-    "id": "recommendation",
-    "name": "recommendation",
-    "label": "#recommendation",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-11-marina-herlop-dja-dja",
-        "slug": "marina-herlop-dja-dja",
-        "title": "Marina Herlop's Dja Dja",
-        "date": "2026.10.11",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art"
-        ],
-        "url": "posts/marina-herlop-dja-dja.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Marina Herlop's Dja Dja",
-        "slug": "marina-herlop-dja-dja",
-        "format": "BOOKMARK",
-        "url": "posts/marina-herlop-dja-dja.html",
-        "date": "2026.10.11"
-      }
-    ],
-    "connected_tags": [
-      "art",
-      "art-of-the-day",
-      "music",
-      "barcelona",
-      "sounds-from-the-future",
-      "artists"
     ]
   },
   {
@@ -12524,43 +13164,6 @@
     ]
   },
   {
-    "id": "share",
-    "name": "share",
-    "label": "#share",
-    "type": "tag",
-    "count": 1,
-    "posts": [
-      {
-        "id": "2026-10-11-marina-herlop-dja-dja",
-        "slug": "marina-herlop-dja-dja",
-        "title": "Marina Herlop's Dja Dja",
-        "date": "2026.10.11",
-        "format": "BOOKMARK",
-        "foundations": [
-          "art"
-        ],
-        "url": "posts/marina-herlop-dja-dja.html"
-      }
-    ],
-    "links": [
-      {
-        "title": "Marina Herlop's Dja Dja",
-        "slug": "marina-herlop-dja-dja",
-        "format": "BOOKMARK",
-        "url": "posts/marina-herlop-dja-dja.html",
-        "date": "2026.10.11"
-      }
-    ],
-    "connected_tags": [
-      "art",
-      "art-of-the-day",
-      "music",
-      "barcelona",
-      "sounds-from-the-future",
-      "artists"
-    ]
-  },
-  {
     "id": "sharing",
     "name": "sharing",
     "label": "#sharing",
@@ -12820,40 +13423,40 @@
     ]
   },
   {
-    "id": "sounds-from-the-future",
-    "name": "sounds-from-the-future",
-    "label": "#sounds-from-the-future",
+    "id": "sophie",
+    "name": "sophie",
+    "label": "#sophie",
     "type": "tag",
     "count": 1,
     "posts": [
       {
-        "id": "2026-10-11-marina-herlop-dja-dja",
-        "slug": "marina-herlop-dja-dja",
-        "title": "Marina Herlop's Dja Dja",
-        "date": "2026.10.11",
+        "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "date": "2026.10.29",
         "format": "BOOKMARK",
         "foundations": [
           "art"
         ],
-        "url": "posts/marina-herlop-dja-dja.html"
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html"
       }
     ],
     "links": [
       {
-        "title": "Marina Herlop's Dja Dja",
-        "slug": "marina-herlop-dja-dja",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
         "format": "BOOKMARK",
-        "url": "posts/marina-herlop-dja-dja.html",
-        "date": "2026.10.11"
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html",
+        "date": "2026.10.29"
       }
     ],
     "connected_tags": [
-      "art",
-      "art-of-the-day",
       "music",
-      "barcelona",
-      "artists",
-      "music-album"
+      "anohni",
+      "arca",
+      "eartheater",
+      "wendy-carlos",
+      "queer"
     ]
   },
   {
@@ -13277,6 +13880,43 @@
     ]
   },
   {
+    "id": "synthesis",
+    "name": "synthesis",
+    "label": "#synthesis",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "date": "2026.10.29",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "format": "BOOKMARK",
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html",
+        "date": "2026.10.29"
+      }
+    ],
+    "connected_tags": [
+      "music",
+      "sophie",
+      "anohni",
+      "arca",
+      "eartheater",
+      "wendy-carlos"
+    ]
+  },
+  {
     "id": "taxonomy",
     "name": "taxonomy",
     "label": "#taxonomy",
@@ -13541,6 +14181,43 @@
       "ui",
       "ux",
       "psychology"
+    ]
+  },
+  {
+    "id": "trans-studies",
+    "name": "trans-studies",
+    "label": "#trans-studies",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "date": "2026.10.29",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "format": "BOOKMARK",
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html",
+        "date": "2026.10.29"
+      }
+    ],
+    "connected_tags": [
+      "music",
+      "sophie",
+      "anohni",
+      "arca",
+      "eartheater",
+      "wendy-carlos"
     ]
   },
   {
@@ -14266,6 +14943,43 @@
       "download",
       "free",
       "design"
+    ]
+  },
+  {
+    "id": "wendy-carlos",
+    "name": "wendy-carlos",
+    "label": "#wendy-carlos",
+    "type": "tag",
+    "count": 1,
+    "posts": [
+      {
+        "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "date": "2026.10.29",
+        "format": "BOOKMARK",
+        "foundations": [
+          "art"
+        ],
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html"
+      }
+    ],
+    "links": [
+      {
+        "title": "Thank the dolls! Trans women's legacy on pop music",
+        "slug": "sophie-is-it-cold-in-the-water-trans-music",
+        "format": "BOOKMARK",
+        "url": "posts/sophie-is-it-cold-in-the-water-trans-music.html",
+        "date": "2026.10.29"
+      }
+    ],
+    "connected_tags": [
+      "music",
+      "sophie",
+      "anohni",
+      "arca",
+      "eartheater",
+      "queer"
     ]
   },
   {

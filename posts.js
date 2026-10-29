@@ -107,9 +107,9 @@
     "links": [],
     "backlinks": [
       {
-        "slug": null,
-        "title": null,
-        "note": null
+        "slug": "",
+        "title": "",
+        "note": ""
       }
     ],
     "tags": [
@@ -178,9 +178,9 @@
     "links": [],
     "backlinks": [
       {
-        "slug": null,
-        "title": null,
-        "note": null
+        "slug": "",
+        "title": "",
+        "note": ""
       }
     ],
     "tags": [
@@ -255,9 +255,9 @@
     "links": [],
     "backlinks": [
       {
-        "slug": null,
-        "title": null,
-        "note": null
+        "slug": "",
+        "title": "",
+        "note": ""
       }
     ],
     "tags": [
@@ -290,6 +290,160 @@
     ],
     "entities": null,
     "content": "<div text-align=\"center\">\n\n<h3 class=\"post-subheading essay-subheading\">⏯️ You'll see all my recommended #2D Art dispatches below as an image carousel and in the Connected_Dispatches footer ↓↓↓</div><br></h3>\n\n<div style=\"display: flex; justify-content: center;\">\n\n</div>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">Recommended_Dispatches</h2>\n\n<h3 class=\"post-subheading essay-subheading\">1. <strong>Artist</strong> | <a href=\"postslug.html\" target=\"_blank\" rel=\"noopener noreferrer\">Post Title</a></h3>"
+  },
+  {
+    "id": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+    "slug": "2026-10-29-sophie-is-it-cold-in-the-water-trans-music",
+    "sys_id": "SYS_2026-10-29-SOPHIE-IS-IT-COLD-IN-THE-WATER-TRANS-MUSIC",
+    "title": "Thank the dolls! Trans women's legacy on pop music",
+    "subtitle": "ANOHNI and Moses Sumney's cover of SOPHIE, the healing touch of Planningtorock, and why isolation turned trans women into the architects of modern sound.",
+    "excerpt": "From SOPHIE and Arca reshaping Charli XCX and Madonna, to Wendy Carlos and ContraPoints: a personal meditation on why my ear always follows the dolls, and what happens when a bedroom computer becomes the only safe place to build a body.",
+    "format": "BOOKMARK",
+    "category": "",
+    "media": "MUSIC",
+    "source": "SOPHIE / ANOHNI & Moses Sumney",
+    "url": "https://www.youtube.com/watch?v=KV-GjSXP0u4",
+    "pillar": "",
+    "pillar_id": "",
+    "foundations": [
+      "art"
+    ],
+    "subtopic": "",
+    "subtopic_id": "",
+    "theme": "dark",
+    "featured": false,
+    "shareable": true,
+    "allow_embed": true,
+    "in-gallery": true,
+    "gallery": true,
+    "image-in-gallery": false,
+    "status": "published",
+    "date": "2026.10.29",
+    "author": "Juan P. Giusepponi",
+    "read_time": "14 MIN READ",
+    "via": "SOPHIE / ANOHNI & Moses Sumney",
+    "image": "assets/images/sophie.gif",
+    "thumbnail": "assets/images/sophie.gif",
+    "image_alt": "",
+    "aspect_ratio": "h-tall-1",
+    "gallery-images": [],
+    "links": [
+      {
+        "title": "Jen Ives - Why Are Trans Women So Good At Electronic Music?",
+        "url": "https://www.youtube.com/watch?v=nHHrm7NMexs",
+        "type": "VIDEO",
+        "desc": "Comedian and writer Jen Ives unpacking the cultural phenomenon, isolation, and bedroom mastery connecting trans women to electronic music production."
+      },
+      {
+        "title": "ANOHNI (Antony and the Johnsons) - Cut the World",
+        "url": "https://www.youtube.com/watch?v=gX3sVq69vLY",
+        "type": "VIDEO",
+        "desc": "Live orchestral visual piece from Marina Abramović's 'The Life and Death of Marina Abramović', confronting patriarchal violence and extraction."
+      },
+      {
+        "title": "Moses Sumney & ANOHNI - Is It Cold in the Water? (TRAИƧA, 2024)",
+        "url": "https://www.youtube.com/watch?v=KV-GjSXP0u4",
+        "type": "VIDEO",
+        "desc": "Reimagined chamber-soul rendition of SOPHIE's 2018 centerpiece for the Red Hot Organization's trans compilation album TRAИƧA."
+      }
+    ],
+    "backlinks": [
+      {
+        "slug": "the-music-vault",
+        "title": "[ THE ◪ MUSIC_VAULT ]",
+        "note": "The most beloved sonoric experiences I can share"
+      },
+      {
+        "slug": "2026-09-25-turing-queer-ai",
+        "title": "AI is Queer: Turing and the Violence of the Statistical Mean",
+        "note": "On defensive camouflage, computers, and queer survival inside formal systems."
+      },
+      {
+        "slug": "2026-10-03-preciado-pharmacopornographic-episteme-foucault",
+        "title": "(I) The Pharmacopornographic Machine: Capitalism Below the Waist",
+        "note": "On molecular self-design, somatic plasticity, and the technological body."
+      }
+    ],
+    "tags": [
+      "music",
+      "sophie",
+      "anohni",
+      "arca",
+      "eartheater",
+      "wendy-carlos",
+      "queer",
+      "art",
+      "trans-studies",
+      "identity",
+      "queer-theory",
+      "electronic-music",
+      "contrapoints",
+      "philosophy-tube",
+      "synthesis",
+      "charli-xcx",
+      "art-of-the-day"
+    ],
+    "entities": null,
+    "content": "<div style=\"display: flex; justify-content: center;\"><iframe data-testid=\"embed-iframe\" style=\"border-radius:2px\" src=\"https://open.spotify.com/embed/track/3KG0YB2FmSuuCSWxlfky7s?utm_source=generator&theme=0&si=76783fcd0d234ad1\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe></div>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">01. Freezing, burning, evaporating: from SOPHIE to ANOHNI and Moses Sumney</h2>\n\n<p class=\"post-paragraph essay-paragraph\">The first time I heard SOPHIE's <em>\"Is It Cold in the Water?\"</em> on <em>OIL OF EVERY PEARL'S UN-INSIDES</em> back in 2018, it felt like standing barefoot on a sheet of metal at the edge of an ocean. Up to that point on the record, SOPHIE had been throwing hyper-compressed latex, industrial pistons, and bubblegum snares at the listener. Then the drums dropped out. What remained were towering, shimmering synthesizer swells and Cecile Believe's voice suspended in the air, asking one question four times in a row.</p>\n\n<blockquote class=\"post-quote essay-quote\"><em>\"I'm freezing / I'm burning / I've left my home / Soft ache, me / Earth shaking / I feel alone / Is it cold in the water?\"</em></blockquote>\n\n<p class=\"post-paragraph essay-paragraph\">Anyone who has ever stood at the threshold of a bodily or existential transition recognizes that physical contradiction right away. Your skin feels too thin for the room, yet flushed with heat. To step outside the body, role and name you were and keep being assigned, to keep the peace for everyone else- Anyone who left home with no guarantee that the water below would hold their weight.</p>\n\n<p class=\"post-paragraph essay-paragraph\">In SOPHIE's original arrangement, the synthesizers behave like physics engines. She built every sound on that track from raw waveforms on an Elektron Monomachine, sculpting electricity until it sounded wetter than actual water. By the final verse, the voice stops hesitating on the cliff. It jumps:</p>\n\n<div class=\"responsive-video\" style=\"display: flex; justify-content: center;\"><iframe src=\"https://www.youtube.com/watch?v=RxyT8PRSDRo\" title=\"SOPHIE - Is It Cold In The Water?\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></div>\n\n<blockquote class=\"post-quote essay-quote\"><em>\"I'm swimming, I'm breathing, evaporating / Is it cold in the water? / I'm liquid, I'm floating into the blue.\"</em></blockquote>\n\n<p class=\"post-paragraph essay-paragraph\">The fear of drowning gives way to a state change. The body stops being a solid, heavy target that society can police, and turns into mist and light.</p>\n\n<p class=\"post-paragraph essay-paragraph\">When Moses Sumney and ANOHNI recorded their cover of <em>\"Is It Cold in the Water?\"</em> for the <em>TRAИƧA</em> compilation in 2024, three years after SOPHIE died in Athens reaching for the full moon, the song's gravity shifted completely. Sumney and ANOHNI stripped away the blinding digital sheen. In its place, they built a slow, nocturnal liturgy of Rhodes piano, low brass, and trembling vocal harmony.</p>\n\n<p class=\"post-paragraph essay-paragraph\">Hearing ANOHNI's contralto wrap around Sumney's weightless falsetto broke something open in me. Sung by ANOHNI and Sumney, the song became a séance. SOPHIE had already evaporated into the blue, and the elders and kin she left behind were standing at the shoreline, calling across the water to ask her what it feels like on the other side.</p>\n\n<p class=\"post-paragraph essay-paragraph\">ANOHNI called SOPHIE's original a \"mistresspiece.\" When ANOHNI sings <em>\"I've left my home,\"</em> she carries forty years of queer grief in her throat, stretching back to the New York underground of the 1990s, to Marsha P. Johnson and Sylvia Rivera, and to the chamber mourning of her own work. Two generations of trans and non-binary vanguard music meet inside those four minutes.</p>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">02. Questioning my own ear: the dolls and the conchas</h2>\n\n<p class=\"post-paragraph essay-paragraph\">There is an old pattern in my own listening habits. Whenever I fall obsessively in love with a musician, a producer, or a sonic world, almost without exception, the artists who rewire my nervous system turn out to be either iconic <strong>dolls</strong> (trans women like <strong>SOPHIE</strong>, <strong>Arca</strong>, <strong>ANOHNI</strong>, and <strong>Wendy Carlos</strong>) or what queer slang affectionately calls <strong>fish</strong> or <strong>conchas</strong> (cis women and femme avant-gardists who perform an almost feral, hyper-embodied femininity).</p>\n\n<p class=\"post-paragraph essay-paragraph\">Why does my ear keep hunting for this specific axis? What am I actually looking for when I put on headphones at two in the morning?</p>\n\n<p class=\"post-paragraph essay-paragraph\">Part of the answer sits in how both groups relate to the materiality of the body and the voice. Most mainstream music treats the human voice as a natural, transparent window into a stable self: a guy with an acoustic guitar singing about his feelings as if his body and his social role were facts of nature. I have never trusted that transparency. It bores me, and on a deeper level, it feels dishonest about how human beings are actually put together.</p>\n\n<p class=\"post-paragraph essay-paragraph\">The mutants never take the body for granted.</p>\n\n<p class=\"post-paragraph essay-paragraph\">When I listen to <strong>Arca</strong> stretching a reggaeton dembow rhythm until it sounds like tendons snapping, or pitching her voice from a bruised baritone confession into an operatic shriek on <em>KiCk i</em>, I am hearing someone build a body in real time. Nothing is factory-default. Femininity, monstrosity, seduction, and vulnerability are treated as materials you have to forge with your own hands under high pressure.</p>\n\n<p class=\"post-paragraph essay-paragraph\">And when I return to <strong>ANOHNI</strong>'s <em>\"Cut the World\"</em>, I hear the political reason why this vocal frequency matters so much to me:</p>\n\n<div class=\"responsive-video\" style=\"display: flex; justify-content: center;\"><iframe src=\"https://www.youtube.com/watch?v=8Xvz3FqRCeo\" title=\"ANOHNI - Cut the World\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></div>\n\n<p class=\"post-paragraph essay-paragraph\">I am drawn to artists who refuse the butcher's knife of normative categories, who take the scarred, hyper-sensitized body and turn it into a cathedral.</p>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">03. The underground laboratory and the pop pantheon</h2>\n\n<p class=\"post-paragraph essay-paragraph\">Once you start paying attention to this lineage, the official history of popular and electronic music looks upside down. We are used to a narrative where mainstream cis icons sit at the center of culture, occasionally inviting an underground producer into the studio for a trendy remix. The historical record says the exact opposite: trans women have repeatedly built the instruments, the syntax, and the emotional architecture that mainstream pop only learns to speak years later.</p>\n\n<p class=\"post-paragraph essay-paragraph\">Go back to 1968. Before <strong>Wendy Carlos</strong> released <em>Switched-On Bach</em>, the Moog modular synthesizer was widely viewed by the audio establishment as a novelty box for generating weird laboratory bleeps and radiophonic sound effects. Working closely with Robert Moog, Wendy suggested crucial hardware improvements, including touch-sensitive keyboards and portamento controls, and painstakingly multitracked Bach inventions line by line. She proved that voltage-controlled oscillators could breathe, phrase, and ache like an orchestra. Then she scored Stanley Kubrick's <em>A Clockwork Orange</em> and <em>The Shining</em>. Every synth-pop record of the 1980s and every modern electronic film score lives inside a house Wendy Carlos wired while navigating her transition in a hostile, voyeuristic media climate.</p>\n\n<p class=\"post-paragraph essay-paragraph\">Four decades later, the same dynamic played out with <strong>SOPHIE</strong> and <strong>Arca</strong>.</p>\n\n<p class=\"post-paragraph essay-paragraph\">In the early 2010s, big-room EDM and commercial pop had calcified into predictable four-on-the-floor drops. Working from underground club nights and PC Music releases like <em>\"Bipp\"</em> and <em>\"Lemonade\"</em>, SOPHIE treated plastic, artificiality, and hyper-feminine consumer aesthetics with total seriousness. People initially misread her early work as irony or satire of pop music. In truth, she was stripping away pop's rockist shame and showing what it could sound like when it stopped apologizing for being synthetic.</p>\n\n<p class=\"post-paragraph essay-paragraph\">The biggest cis icons in the world heard it immediately:</p>\n\n<ul class=\"post-list essay-list\"><li><strong>Madonna</strong> brought SOPHIE in to co-produce <em>\"Bitch I'm Madonna\"</em> in 2015, injecting the metallic, rubberized bounce of the queer underground straight into the bloodstream of legacy pop royalty.</li><li><strong>Charli XCX</strong> met SOPHIE and found the collaborator who unlocked her entire artistic second life. From the <em>Vroom Vroom</em> EP in 2016 through <em>\"Out of My Head\"</em> and <em>\"Tears\"</em>, SOPHIE gave Charli the vocabulary of hyperpop: a space where a club track could be simultaneously abrasive, glossy, and heartbroken. When Charli XCX conquered global culture with <em>BRAT</em> in 2024, its emotional center was <em>\"So I\"</em>, a quiet, devastated apology and thank-you note to SOPHIE. The entire <em>BRAT</em> phenomenon grew out of soil SOPHIE tilled.</li><li><strong>Arca</strong>, meanwhile, became the secret engine behind the most daring pivots of the 2010s. <strong>Kanye West</strong> pulled her into the <em>Yeezus</em> sessions in 2013 to tear holes in his production; <strong>FKA twigs</strong> built <em>EP2</em> and <em>LP1</em> with her; <strong>Björk</strong> co-produced <em>Vulnicura</em> and <em>Utopia</em> alongside Arca, crediting her with helping stitch her heart back together after a devastating breakup.</li></ul>\n\n<p class=\"post-paragraph essay-paragraph\">Trans women did the heavy structural engineering in the dark so that pop music at large could have a future.</p>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">04. From \"Another World\" to a \"Whole New World\": bedrooms, compilers, and learning to touch</h2>\n\n<p class=\"post-paragraph essay-paragraph\">In 2008, <strong>ANOHNI</strong> released <em>\"Another World\"</em>, a devastating piano elegy that begins with a quiet confession of exhaustion: <em>\"I need another world / This one's nearly gone.\"</em> She sings of mourning the sea, the snow, the bees, and the things that grow, grieving an earth and a social order that have become uninhabitable. Ten years later, <strong>SOPHIE</strong> closed <em>OIL OF EVERY PEARL'S UN-INSIDES</em> with <em>\"Whole New World/Pretend World\"</em>, answering ANOHNI's grief with nine minutes of seismic, piston-driven synthesis: <em>\"I looked into your eyes / I thought that I could see a whole new world.\"</em></p>\n\n<p class=\"post-paragraph essay-paragraph\">Between ANOHNI's plea for <em>Another World</em> and SOPHIE's eruption lies the entire secret of trans creation. SOPHIE's title pairs <em>\"Whole New World\"</em> with <em>\"Pretend World\"</em>. Before another world can exist in the streets or on a club floor, you first have to build it as a pretend world behind a closed bedroom door.</p>\n\n<p class=\"post-paragraph essay-paragraph\">That bedroom is the real answer to the question <strong>Jen Ives</strong> asks in her video, <em>\"Why Are Trans Women So Good At Electronic Music?\"</em>. Anyone who spends five minutes in queer internet culture knows the double stereotype: <em>the trans girl who is either a wizard with a modular synthesizer and Ableton Live, or a senior systems programmer maintaining critical open-source infrastructure in Rust or C++</em>. Usually both. Underneath the affectionate jokes about \"programming socks,\" ThinkPads, and Eurorack cables, Jen Ives names the raw human condition that produced this archetype: <strong>isolation and loneliness</strong>.</p>\n\n<div style=\"display: flex; justify-content: center;\"><iframe data-testid=\"embed-iframe\" style=\"border-radius:2px\" src=\"https://open.spotify.com/embed/track/2rN1ODOsaNfYu782rw36jR?utm_source=generator&si=d82a6acc93e946d1\" width=\"100%\" height=\"152\" frameBorder=\"0\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe></div>\n\n<p class=\"post-paragraph essay-paragraph\"><strong>A compiler and a synthesizer do not care what your body looks like.</strong> In a digital audio workstation or a code editor at two in the morning, nothing has a fixed biological destiny. A sawtooth wave can be modulated into a flute, sheet metal, or a new throat; a programming language offers a universe where every error has a trace and any architecture can be rewritten from scratch.</p>\n\n<p class=\"post-paragraph essay-paragraph\">That exact same bedroom incubator produced <strong>ContraPoints</strong> (Natalie Wynn) and <strong>Philosophy Tube</strong> (Abigail Thorn). I remember watching both of their YouTube channels in the mid-2010s before either of them had transitioned, back when online discourse was overrun by grim \"skeptic\" talking heads lecturing into webcams about biological determinism. Wynn and Thorn started in that same sparse bedroom format, answering bad-faith arguments with academic philosophy.</p>\n\n<p class=\"post-paragraph essay-paragraph\">These audio works of art let you be a beginner in your own skin. SOPHIE took the solitary math of her Monomachine and turned it into a <code>whole new world</code> where ten thousand strangers could sweat, cry, and hold each other in the club. And whenever I hear ANOHNI and Moses Sumney ask <code>\"is it cold in the water?\"</code>, I think of every kid still sitting alone in front of a glowing screen tonight, twisting a filter knob in the dark, getting ready to jump into the blue.</p>"
+  },
+  {
+    "id": "2026-10-29-earthsignchels-daddy-died",
+    "slug": "2026-10-29-earthsignchels-daddy-died",
+    "sys_id": "SYS_2026-10-29-EARTHSIGNCHELS-DADDY-DIED",
+    "title": "Marina Herlop's Dja Dja",
+    "subtitle": "The most incredible sonoric experience",
+    "excerpt": "First piece of music of many more to come. Art is life.",
+    "format": "BOOKMARK",
+    "category": "",
+    "media": "MUSIC",
+    "source": "Marina Herlop - Dja Dja (2026) @ Spotify",
+    "url": "https://open.spotify.com/album/2EzFFqkhvaXUaTzcWwWUDZ?si=_NKv0FV7T7KSWwJf-xvHvA",
+    "pillar": "",
+    "pillar_id": "",
+    "foundations": [
+      "art"
+    ],
+    "subtopic": "",
+    "subtopic_id": "",
+    "theme": "dark",
+    "featured": false,
+    "shareable": true,
+    "allow_embed": true,
+    "in-gallery": true,
+    "gallery": true,
+    "image-in-gallery": true,
+    "status": "published",
+    "date": "2026.10.11",
+    "author": "Juan P. Giusepponi",
+    "read_time": "CURATED LISTENING",
+    "via": "Marina Herlop - Dja Dja (2026) @ Spotify",
+    "image": "assets/images/marina-herlop.jpg",
+    "thumbnail": "assets/images/thumbnails/marina-herlop.webp",
+    "image_alt": "Marina Herlop's album cover for Dja Dja",
+    "aspect_ratio": "h-tall-1",
+    "gallery-images": [],
+    "links": [],
+    "backlinks": [
+      {
+        "slug": "the-music-vault",
+        "title": "[ THE ◪ MUSIC_VAULT ]",
+        "note": "The most beloved sonoric experiences I can share"
+      }
+    ],
+    "tags": [
+      "art",
+      "art-of-the-day",
+      "music",
+      "barcelona",
+      "sounds-from-the-future",
+      "artists",
+      "music-album",
+      "recommendation",
+      "link",
+      "share"
+    ],
+    "entities": null,
+    "content": "<div style=\"text-align: center;\"> <h2>No words would ever be fair to describe:</h1>\n\n<br>\n\n<div class=\"responsive-video\" style=\"display: flex; justify-content: center;\"><iframe src=\"https://www.youtube.com/embed/1ZgSqHvK0-Y?si=HCMdSDBhFNpwCrfN\" title=\"earthsignchels - Daddy Died \" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></div>\n\n<hr class=\"post-divider essay-divider\" />\n\n<h2 class=\"post-section-kicker essay-section-kicker\">01. This is what tickles my ears.</h2>\n\n<h3 class=\"post-subheading essay-subheading\">I constantly crave for music that gives me sounds and auditory experiences I've never met before. This is a great example of that.</div></h3>"
   },
   {
     "id": "2026-10-17-artcraft-the-free-open-source-creative-tools-suite-rip-adobe-cc",
@@ -863,7 +1017,7 @@
     "sys_id": "SYS_202610_BOO",
     "title": "Real AI Failure Story: Deleted a Production Database in 9 Seconds!",
     "subtitle": "This isn't a hacking story. There was no malicious intent, no exploited vulnerability. Just an autonomous AI agent doing what it supposed it had to do.",
-    "excerpt": "If you're building with AI agents, automating infrastructure, or just curious how \"helpful\" AI can go catastrophically wrong — this is a case study you must see",
+    "excerpt": "If you''re building with AI agents, automating infrastructure, or just curious how \"helpful\" AI can go catastrophically wrong — this is a case study you must see",
     "format": "BOOKMARK",
     "category": "",
     "media": "VIDEO",
