@@ -138,7 +138,7 @@ def _resolve_images(meta):
     thumbnail = generate_thumbnail(image) if image else ""
 
     gallery_imgs = []
-    raw_gallery = meta.get("gallery-images") or []
+    raw_gallery = meta.get("gallery-images") or meta.get("gallery_images") or []
     if isinstance(raw_gallery, (dict, str)):
         raw_gallery = [raw_gallery]
     for g in raw_gallery:
@@ -187,15 +187,18 @@ def _resolve_links_and_backlinks(meta):
         for l in (meta.get("links") or [])
         if isinstance(l, dict)
     ]
-    backlinks = [
-        {
-            "slug": b.get("slug", "#"),
+    backlinks = []
+    for b in (meta.get("backlinks") or []):
+        if not isinstance(b, dict):
+            continue
+        raw_b_slug = str(b.get("slug") or "#").strip()
+        if raw_b_slug and not raw_b_slug.startswith(("#", "http://", "https://", "/")):
+            raw_b_slug = f"#{raw_b_slug}"
+        backlinks.append({
+            "slug": raw_b_slug or "#",
             "title": b.get("title", ""),
             "note": b.get("note", ""),
-        }
-        for b in (meta.get("backlinks") or [])
-        if isinstance(b, dict)
-    ]
+        })
     return links, backlinks
 
 

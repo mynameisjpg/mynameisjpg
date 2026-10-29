@@ -33,19 +33,19 @@ shareable: true
 allow_embed: true
 image:
   path: "assets/images/sophie.gif"
-  alt: ""
-  in_gallery: false
+  alt: "SOPHIE performing amidst vibrant electronic light and mist"
+  in-gallery: false
 
-gallery_images:
-- path: "assets/images/arca-1.jpg"
-  alt: ""
-  in_gallery: true
-- path: "assets/images/anohni-1.jpg"
-  alt: ""
-  in_gallery: true
-- path: "assets/images/sophie-1.jpg"
-  alt: ""
-  in_gallery: true
+gallery-images:
+  - path: "assets/images/arca-1.jpg"
+    alt: "Arca"
+    in-gallery: false
+  - path: "assets/images/anohni-1.jpg"
+    alt: "ANOHNI"
+    in-gallery: false
+  - path: "assets/images/sophie-1.jpg"
+    alt: "SOPHIE"
+    in-gallery: false
 
 links:
   - title: "Jen Ives - Why Are Trans Women So Good At Electronic Music?"
@@ -53,7 +53,7 @@ links:
     type: "video"
     description: "Comedian and writer Jen Ives unpacking the cultural phenomenon, isolation, and bedroom mastery connecting trans women to electronic music production."
   - title: "ANOHNI (Antony and the Johnsons) - Cut the World"
-    url: "https://www.youtube.com/watch?v=gX3sVq69vLY"
+    url: "https://www.youtube.com/watch?v=8Xvz3FqRCeo"
     type: "video"
     description: "Live orchestral visual piece from Marina Abramović's 'The Life and Death of Marina Abramović', confronting patriarchal violence and extraction."
   - title: "Moses Sumney & ANOHNI - Is It Cold in the Water? (TRAИƧA, 2024)"
@@ -61,13 +61,13 @@ links:
     type: "video"
     description: "Reimagined chamber-soul rendition of SOPHIE's 2018 centerpiece for the Red Hot Organization's trans compilation album TRAИƧA."
 backlinks:
-  - slug: "the-music-vault"
-    title: "[ THE ◪ MUSIC_VAULT ]"
+  - slug: "#the-music-vault"
+    title: "[ ◪ MUSIC_VAULT ⊳ Untitled.mp3 ]"
     note: "The most beloved sonoric experiences I can share"
-  - slug: "2026-09-25-turing-queer-ai"
+  - slug: "#2026-09-25-turing-queer-ai"
     title: "AI is Queer: Turing and the Violence of the Statistical Mean"
     note: "On defensive camouflage, computers, and queer survival inside formal systems."
-  - slug: "2026-10-03-preciado-pharmacopornographic-episteme-foucault"
+  - slug: "#2026-10-03-preciado-pharmacopornographic-episteme-foucault"
     title: "(I) The Pharmacopornographic Machine: Capitalism Below the Waist"
     note: "On molecular self-design, somatic plasticity, and the technological body."
 media: "music"
@@ -75,7 +75,7 @@ source: "SOPHIE / ANOHNI & Moses Sumney"
 bookmark_url: "https://www.youtube.com/watch?v=KV-GjSXP0u4"
 ---
 
-<div style="display: flex; justify-content: center;"><iframe data-testid="embed-iframe" style="border-radius:2px" src="https://open.spotify.com/embed/track/3KG0YB2FmSuuCSWxlfky7s?utm_source=generator&theme=0&si=76783fcd0d234ad1" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+<div style="display: flex; justify-content: center; margin: 1.5rem 0;"><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3KG0YB2FmSuuCSWxlfky7s?utm_source=generator&theme=0&si=76783fcd0d234ad1" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
 
 ---
 
@@ -85,21 +85,17 @@ The first time I heard SOPHIE's *"Is It Cold in the Water?"* on *OIL OF EVERY PE
 
 > *"I'm freezing / I'm burning / I've left my home / Soft ache, me / Earth shaking / I feel alone / Is it cold in the water?"*
 
-Anyone who has ever stood at the threshold of a bodily or existential transition recognizes that physical contradiction right away. Your skin feels too thin for the room, yet flushed with heat. To step outside the body, role and name you were and keep being assigned, to keep the peace for everyone else- Anyone who left home with no guarantee that the water below would hold their weight.
+Anyone who has ever stood at the threshold of a bodily or existential transition recognizes that physical contradiction right away. Your skin feels too thin for the room, yet flushed with heat. To step outside the body, role and name you were and keep being assigned, to keep the peace for everyone else — anyone who left home with no guarantee that the water below would hold their weight.
 
 In SOPHIE's original arrangement, the synthesizers behave like physics engines. She built every sound on that track from raw waveforms on an Elektron Monomachine, sculpting electricity until it sounded wetter than actual water. By the final verse, the voice stops hesitating on the cliff. It jumps:
 
-<div class="responsive-video" style="display: flex; justify-content: center;"><iframe src="https://www.youtube.com/watch?v=RxyT8PRSDRo" title="SOPHIE - Is It Cold In The Water?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-
-> *"I'm swimming, I'm breathing, evaporating / Is it cold in the water? / I'm liquid, I'm floating into the blue."*
-
-The fear of drowning gives way to a state change. The body stops being a solid, heavy target that society can police, and turns into mist and light.
+<iframe class="responsive-video" src="https://www.youtube.com/embed/RxyT8PRSDRo" title="SOPHIE - Is It Cold In The Water?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 When Moses Sumney and ANOHNI recorded their cover of *"Is It Cold in the Water?"* for the *TRAИƧA* compilation in 2024, three years after SOPHIE died in Athens reaching for the full moon, the song's gravity shifted completely. Sumney and ANOHNI stripped away the blinding digital sheen. In its place, they built a slow, nocturnal liturgy of Rhodes piano, low brass, and trembling vocal harmony.
 
 Hearing ANOHNI's contralto wrap around Sumney's weightless falsetto broke something open in me. Sung by ANOHNI and Sumney, the song became a séance. SOPHIE had already evaporated into the blue, and the elders and kin she left behind were standing at the shoreline, calling across the water to ask her what it feels like on the other side.
 
-ANOHNI called SOPHIE's original a "mistresspiece." When ANOHNI sings *"I've left my home,"* she carries forty years of queer grief in her throat, stretching back to the New York underground of the 1990s, to Marsha P. Johnson and Sylvia Rivera, and to the chamber mourning of her own work. Two generations of trans and non-binary vanguard music meet inside those four minutes.
+ANOHNI called SOPHIE's original a `"mistresspiece"`. When ANOHNI sings *"I've left my home,"* she carries forty years of queer grief in her throat, stretching back to the New York underground of the 1990s, to Marsha P. Johnson and Sylvia Rivera, and to the chamber mourning of her own work. Two generations of trans and non-binary vanguard music meet inside those four minutes.
 
 ---
 
@@ -117,7 +113,7 @@ When I listen to **Arca** stretching a reggaeton dembow rhythm until it sounds l
 
 And when I return to **ANOHNI**'s *"Cut the World"*, I hear the political reason why this vocal frequency matters so much to me:
 
-<div class="responsive-video" style="display: flex; justify-content: center;"><iframe src="https://www.youtube.com/watch?v=8Xvz3FqRCeo" title="ANOHNI - Cut the World" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<iframe class="responsive-video" src="https://www.youtube.com/embed/8Xvz3FqRCeo" title="ANOHNI - Cut the World" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 I am drawn to artists who refuse the butcher's knife of normative categories, who take the scarred, hyper-sensitized body and turn it into a cathedral.
 
@@ -151,7 +147,7 @@ Between ANOHNI's plea for *Another World* and SOPHIE's eruption lies the entire 
 
 That bedroom is the real answer to the question **Jen Ives** asks in her video, *"Why Are Trans Women So Good At Electronic Music?"*. Anyone who spends five minutes in queer internet culture knows the double stereotype: *the trans girl who is either a wizard with a modular synthesizer and Ableton Live, or a senior systems programmer maintaining critical open-source infrastructure in Rust or C++*. Usually both. Underneath the affectionate jokes about "programming socks," ThinkPads, and Eurorack cables, Jen Ives names the raw human condition that produced this archetype: **isolation and loneliness**.
 
-<div style="display: flex; justify-content: center;"><iframe data-testid="embed-iframe" style="border-radius:2px" src="https://open.spotify.com/embed/track/2rN1ODOsaNfYu782rw36jR?utm_source=generator&si=d82a6acc93e946d1" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+<div style="display: flex; justify-content: center; margin: 1.5rem 0;"><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2rN1ODOsaNfYu782rw36jR?utm_source=generator&theme=0&si=d82a6acc93e946d1" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
 
 **A compiler and a synthesizer do not care what your body looks like.** In a digital audio workstation or a code editor at two in the morning, nothing has a fixed biological destiny. A sawtooth wave can be modulated into a flute, sheet metal, or a new throat; a programming language offers a universe where every error has a trace and any architecture can be rewritten from scratch. 
 
